@@ -7,8 +7,8 @@ import React, { useState } from 'react';
 import { ChevronRight, HelpCircle, AlertTriangle, Lightbulb, Flame, Clock, Target, Trophy, X, Sparkles, Info, RefreshCw } from 'lucide-react';
 import { TabType, UserStats } from '../types';
 import { PRO_TIPS } from '../proTips';
-const windyRoadImg = '/src/assets/images/windy_road_exact_match_1780632600693.png';
-const californiaBadgeImg = '/src/assets/images/california_state_flag_badge_1780860429638.png';
+import windyRoadImg from '../assets/images/windy_road_exact_match_1780632600693.png';
+import californiaBadgeImg from '../assets/images/california_state_flag_badge_1780860429638.png';
 
 interface DashboardViewProps {
   stats: UserStats;

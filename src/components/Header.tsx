@@ -7,7 +7,7 @@ import React from 'react';
 import { Menu, Award } from 'lucide-react';
 import { TabType, UserStats } from '../types';
 
-const californiaBadgeImg = '/src/assets/images/california_state_flag_badge_1780860429638.png';
+import californiaBadgeImg from '../assets/images/california_state_flag_badge_1780860429638.png';
 
 interface HeaderProps {
   currentTab: TabType;

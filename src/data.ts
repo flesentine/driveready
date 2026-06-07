@@ -4,20 +4,20 @@
  */
 
 import { RoadSign, Question, UserStats } from './types';
-const windingRoadImg = '/src/assets/images/windy_road_exact_match_1780632600693.png';
-const stopSignImg = '/src/assets/images/regulatory_stop_sign_1780669470619.png';
-const yieldSignImg = '/src/assets/images/regulatory_yield_sign_1780671133669.png';
-const doNotEnterSignImg = '/src/assets/images/regulatory_do_not_enter_sign_1780671352265.png';
-const oneWaySignImg = '/src/assets/images/one_way_directional_sign_1780672461259.png';
-const slipperyWhenWetSignImg = '/src/assets/images/slippery_when_wet_sign_1780672624633.png';
-const dividedHighwaySignImg = '/src/assets/images/divided_highway_sign_fixed_1780672963442.png';
-const endDividedHighwaySignImg = '/src/assets/images/end_divided_highway_sign_fixed_1780686058557.png';
-const slowerTrafficImg = '/src/assets/images/slower_traffic_1780679806917.png';
-const mergingTrafficSignImg = '/src/assets/images/merging_lane_sign_v2_1780682173395.png';
-const noLeftTurnSignImg = '/src/assets/images/no_left_turn_sign_1780854597248.png';
-const tIntersectionSignImg = '/src/assets/images/t_intersection_sign_1780854760991.png';
-const laneEndsSignImg = '/src/assets/images/lane_ends_merge_left_sign_1780855031785.png';
-const pedestrianCrossingSignImg = '/src/assets/images/pedestrian_crossing_sign_1780855771452.png';
+import windingRoadImg from './assets/images/windy_road_exact_match_1780632600693.png';
+import stopSignImg from './assets/images/regulatory_stop_sign_1780669470619.png';
+import yieldSignImg from './assets/images/regulatory_yield_sign_1780671133669.png';
+import doNotEnterSignImg from './assets/images/regulatory_do_not_enter_sign_1780671352265.png';
+import oneWaySignImg from './assets/images/one_way_directional_sign_1780672461259.png';
+import slipperyWhenWetSignImg from './assets/images/slippery_when_wet_sign_1780672624633.png';
+import dividedHighwaySignImg from './assets/images/divided_highway_sign_fixed_1780672963442.png';
+import endDividedHighwaySignImg from './assets/images/end_divided_highway_sign_fixed_1780686058557.png';
+import slowerTrafficImg from './assets/images/slower_traffic_1780679806917.png';
+import mergingTrafficSignImg from './assets/images/merging_lane_sign_v2_1780682173395.png';
+import noLeftTurnSignImg from './assets/images/no_left_turn_sign_1780854597248.png';
+import tIntersectionSignImg from './assets/images/t_intersection_sign_1780854760991.png';
+import laneEndsSignImg from './assets/images/lane_ends_merge_left_sign_1780855031785.png';
+import pedestrianCrossingSignImg from './assets/images/pedestrian_crossing_sign_1780855771452.png';
 
 export const INITIAL_USER_STATS: UserStats = {
   readinessScore: 65,
