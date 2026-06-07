@@ -1,0 +1,332 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import React, { useState } from 'react';
+import { Info, AlertCircle, HelpCircle, ArrowRight, Lightbulb } from 'lucide-react';
+import { RoadSign, SignCategory } from '../types';
+
+// High-fidelity vector representation for simulated road signs
+const renderSignVisual = (sign: RoadSign) => {
+  // If we have a real URL or imported asset path, render it
+  if (sign.imageUrl && (sign.imageUrl.startsWith('http://') || sign.imageUrl.startsWith('https://') || sign.imageUrl.includes('/') || sign.imageUrl.includes('.'))) {
+    const isDividedHighway = sign.id === 'divided-highway' || sign.imageUrl.includes('divided_highway');
+    return (
+      <img
+        alt={sign.title}
+        src={sign.imageUrl}
+        className="max-h-full max-w-full object-contain"
+        style={isDividedHighway ? { transform: 'scale(1.45)' } : undefined}
+        referrerPolicy="no-referrer"
+      />
+    );
+  }
+
+  // Otherwise, render a high-fidelity vector representation based on ID
+  switch (sign.id) {
+    case 'no-left-turn':
+      return (
+        <div className="relative w-full h-full flex items-center justify-center p-2 rounded-xl">
+          <svg className="w-16 h-16" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="15" y="15" width="70" height="70" rx="4" fill="white" stroke="#000" strokeWidth="4" />
+            {/* Arrow */}
+            <path d="M55 65 V 45 H 35 L 42 38 M 35 45 L 42 52" stroke="#000" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
+            {/* Red Prohibition Circle and Slash */}
+            <circle cx="50" cy="50" r="24" stroke="#DC2626" strokeWidth="6" fill="transparent" />
+            <line x1="33" y1="33" x2="67" y2="67" stroke="#DC2626" strokeWidth="6" />
+          </svg>
+        </div>
+      );
+    case 'slower-traffic-keep-right':
+      return (
+        <div className="relative w-full h-full flex items-center justify-center p-2 rounded-xl">
+          <div className="border border-black text-center p-1.5 flex flex-col justify-center items-center w-20 h-24 bg-white shadow-xs">
+            <span className="text-[7.5px] font-sans font-black text-black leading-tight tracking-tight uppercase">SLOWER</span>
+            <span className="text-[7.5px] font-sans font-black text-black leading-tight tracking-tight uppercase">TRAFFIC</span>
+            <span className="text-[7.5px] font-sans font-black text-black leading-tight tracking-tight uppercase">KEEP</span>
+            <span className="text-[7.5px] font-sans font-black text-black leading-tight tracking-tight uppercase mt-1">RIGHT</span>
+          </div>
+        </div>
+      );
+    case 'divided-highway':
+      return (
+        <div className="relative w-16 h-16 bg-amber-400 rotate-45 border-2 border-black rounded shadow-xs flex items-center justify-center">
+          <div className="-rotate-45 flex flex-col items-center justify-center w-full h-full">
+            <svg className="w-10 h-10 -mt-1" viewBox="0 0 100 100" fill="none">
+              <path d="M 50 15 L 50 40" stroke="black" strokeWidth="6" strokeLinecap="round" />
+              <path d="M 35 85 L 35 35 Q 35 15 50 15 Q 65 15 65 35 L 65 85" stroke="black" strokeWidth="6" strokeLinecap="round" fill="none" />
+              <rect x="42" y="70" width="16" height="18" rx="3" fill="black" />
+            </svg>
+          </div>
+        </div>
+      );
+    case 'end-divided-highway':
+      return (
+        <div className="relative w-16 h-16 bg-amber-400 rotate-45 border-2 border-black rounded shadow-xs flex items-center justify-center">
+          <div className="-rotate-45 flex flex-col items-center justify-center w-full h-full">
+            <svg className="w-10 h-10 -mt-1" viewBox="0 0 100 100" fill="none">
+              <path d="M 50 85 L 50 60" stroke="black" strokeWidth="6" strokeLinecap="round" />
+              <path d="M 35 15 L 35 65 Q 35 85 50 85 Q 65 85 65 65 L 65 15" stroke="black" strokeWidth="6" strokeLinecap="round" fill="none" />
+              <rect x="42" y="10" width="16" height="18" rx="3" fill="black" />
+            </svg>
+          </div>
+        </div>
+      );
+    case 'two-way-traffic':
+      return (
+        <div className="relative w-16 h-16 bg-amber-400 rotate-45 border-2 border-black rounded shadow-xs flex items-center justify-center">
+          <div className="-rotate-45 flex flex-col items-center justify-center w-full h-full">
+            <svg className="w-10 h-10" viewBox="0 0 100 100" fill="none">
+              <path d="M 35 75 L 35 25 M 35 25 L 25 35 M 35 25 L 45 35" stroke="black" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M 65 25 L 65 75 M 65 75 L 55 65 M 65 75 L 75 65" stroke="black" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+        </div>
+      );
+    case 'merging-traffic':
+      return (
+        <div className="relative w-16 h-16 bg-amber-400 rotate-45 border-2 border-black rounded shadow-xs flex items-center justify-center">
+          <div className="-rotate-45 flex flex-col items-center justify-center w-full h-full">
+            <svg className="w-10 h-10" viewBox="0 0 100 100" fill="none">
+              <path d="M 50 80 L 50 20 M 50 20 L 40 32 M 50 20 L 60 32" stroke="black" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M 75 68 C 65 58 55 52 50 52" stroke="black" strokeWidth="7" strokeLinecap="round" />
+            </svg>
+          </div>
+        </div>
+      );
+    case 'lane-ends':
+      return (
+        <div className="relative w-16 h-16 bg-amber-400 rotate-45 border-2 border-black rounded shadow-xs flex items-center justify-center">
+          <div className="-rotate-45 flex flex-col items-center justify-center w-full h-full">
+            <svg className="w-10 h-10" viewBox="0 0 100 100" fill="none">
+              <path d="M 35 80 L 35 20" stroke="black" strokeWidth="7" strokeLinecap="round" />
+              <path d="M 65 80 L 65 55 L 50 20" stroke="black" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            </svg>
+          </div>
+        </div>
+      );
+    case 'pedestrian-crossing':
+      return (
+        <div className="relative w-16 h-16 bg-amber-400 rotate-45 border-2 border-black rounded shadow-xs flex items-center justify-center">
+          <div className="-rotate-45 flex flex-col items-center justify-center w-full h-full">
+            <svg className="w-10 h-10" viewBox="0 0 100 100" fill="none">
+              <circle cx="50" cy="25" r="7" fill="black" />
+              <path d="M 45 35 C 45 42 55 42 55 35 L 50 55 L 45 78 M 50 55 L 55 78" stroke="black" strokeWidth="8" strokeLinecap="round" fill="none" />
+              <path d="M 35 50 Q 50 42 65 53" stroke="black" strokeWidth="7" strokeLinecap="round" fill="none" />
+            </svg>
+          </div>
+        </div>
+      );
+    case 'stop-ahead':
+      return (
+        <div className="relative w-16 h-16 bg-amber-400 rotate-45 border-2 border-black rounded shadow-xs flex items-center justify-center">
+          <div className="-rotate-45 flex flex-col items-center justify-center w-full h-full">
+            <svg className="w-12 h-12" viewBox="0 0 100 100" fill="none">
+              <path d="M 50 85 L 50 54 M 50 54 L 42 62 M 50 54 L 58 62" stroke="black" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
+              <polygon points="50,15 62,15 71,24 71,36 62,45 50,45 41,36 41,24" fill="#DC2626" />
+              <text x="56" y="34" fontSize="9" fontWeight="black" fill="white" textAnchor="middle" fontFamily="sans-serif">STOP</text>
+            </svg>
+          </div>
+        </div>
+      );
+    case 'yield-ahead':
+      return (
+        <div className="relative w-16 h-16 bg-amber-400 rotate-45 border-2 border-black rounded shadow-xs flex items-center justify-center">
+          <div className="-rotate-45 flex flex-col items-center justify-center w-full h-full">
+            <svg className="w-12 h-12" viewBox="0 0 100 100" fill="none">
+              <path d="M 50 85 L 50 54 M 50 54 L 42 62 M 50 54 L 58 62" stroke="black" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
+              <polygon points="50,40 33,15 67,15" fill="#DC2626" />
+              <polygon points="50,34 38,18 62,18" fill="white" />
+            </svg>
+          </div>
+        </div>
+      );
+    case 'reverse-turn':
+      return (
+        <div className="relative w-16 h-16 bg-amber-400 rotate-45 border-2 border-black rounded shadow-xs flex items-center justify-center">
+          <div className="-rotate-45 flex flex-col items-center justify-center w-full h-full">
+            <svg className="w-10 h-10" viewBox="0 0 100 100" fill="none">
+              <path d="M 50 80 V 55 H 70 V 30 H 45" stroke="black" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+              <path d="M 55 20 L 40 30 L 55 40" stroke="black" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            </svg>
+          </div>
+        </div>
+      );
+    case 't-intersection':
+      return (
+        <div className="relative w-16 h-16 bg-amber-400 rotate-45 border-2 border-black rounded shadow-xs flex items-center justify-center">
+          <div className="-rotate-45 flex flex-col items-center justify-center w-full h-full">
+            <svg className="w-10 h-10" viewBox="0 0 100 100" fill="none">
+              <path d="M 50 80 V 45 M 25 45 H 75" stroke="black" strokeWidth="10" strokeLinecap="round" />
+            </svg>
+          </div>
+        </div>
+      );
+    case 'added-lane':
+      return (
+        <div className="relative w-16 h-16 bg-amber-400 rotate-45 border-2 border-black rounded shadow-xs flex items-center justify-center">
+          <div className="-rotate-45 flex flex-col items-center justify-center w-full h-full">
+            <svg className="w-10 h-10" viewBox="0 0 100 100" fill="none">
+              <path d="M 35 80 L 35 20 M 35 20 L 27 30 M 35 20 L 43 30" stroke="black" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M 65 80 L 65 20 M 65 20 L 57 30 M 65 20 L 73 30" stroke="black" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M 50 80 V 45" stroke="black" strokeWidth="4" strokeDasharray="5,5" />
+            </svg>
+          </div>
+        </div>
+      );
+    case 'speed-limit-50':
+      return (
+        <div className="w-16 h-20 bg-white border-2 border-black p-1 flex flex-col items-center justify-center rounded-sm shadow-xs">
+          <span className="text-[7px] font-sans font-black text-black leading-tight uppercase">SPEED</span>
+          <span className="text-[7px] font-sans font-black text-black leading-tight uppercase -mt-0.5">LIMIT</span>
+          <span className="text-2xl font-sans font-extrabold text-black tracking-tight mt-0.5">50</span>
+        </div>
+      );
+    default:
+      return (
+        <div className="relative w-14 h-14 bg-amber-400 rotate-45 border-2 border-black rounded shadow-xs flex items-center justify-center">
+          <div className="-rotate-45 flex flex-col items-center justify-center w-full h-full">
+            <span className="font-mono text-[7px] font-black text-black leading-none">DIRTY</span>
+            <span className="font-mono text-[7px] font-black text-black leading-none mt-0.5">SIGN</span>
+          </div>
+        </div>
+      );
+  }
+};
+
+interface SignLibraryViewProps {
+  signs: RoadSign[];
+  goToFlashcardsForSign: (signId: string) => void;
+}
+
+export const SignLibraryView: React.FC<SignLibraryViewProps> = ({
+  signs,
+  goToFlashcardsForSign,
+}) => {
+  const [selectedCategory, setSelectedCategory] = useState<SignCategory>('All');
+
+  const categories: SignCategory[] = ['All', 'Regulatory', 'Warning', 'Information', 'Speed'];
+
+  // Filter logic based purely on category
+  const filteredSigns = signs.filter((sign) => {
+    return selectedCategory === 'All' || sign.category === selectedCategory;
+  });
+
+  const getStatusColor = (statusType: string) => {
+    switch (statusType) {
+      case 'Mandatory':
+        return 'text-primary-navy bg-slate-100 hover:bg-slate-200';
+      case 'Priority':
+        return 'text-safety-orange-dark bg-amber-50 hover:bg-amber-100';
+      case 'Prohibitory':
+        return 'text-red-700 bg-red-50 hover:bg-red-100';
+      case 'Limit':
+        return 'text-slate-700 bg-slate-100 hover:bg-slate-200';
+      case 'Warning':
+        return 'text-amber-800 bg-amber-50 hover:bg-amber-100';
+      default:
+        return 'text-text-muted bg-slate-100';
+    }
+  };
+
+  return (
+    <div className="space-y-6 pb-6 select-none">
+      
+      {/* Header Info */}
+      <section className="space-y-2">
+        <h2 className="font-sans font-extrabold text-2xl md:text-3xl text-primary-navy leading-none">
+          Road Sign Library
+        </h2>
+        <p className="text-sm md:text-base text-text-muted">
+          Master the official road signs. Click any sign to study and test yourself with interactive flashcards.
+        </p>
+      </section>
+
+      {/* Sticky Filter Bar Section */}
+      <div className="sticky top-[64px] z-40 bg-[#f7fafc]/95 backdrop-blur-md py-3 border-b border-slate-100">
+        {/* Categories Dynamic Chips */}
+        <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-none scroll-smooth">
+          {categories.map((cat, idx) => (
+            <button
+              key={idx}
+              onClick={() => setSelectedCategory(cat)}
+              className={`whitespace-nowrap px-4 py-2 rounded-full font-sans text-xs font-bold transition-all duration-200 cursor-pointer ${
+                selectedCategory === cat
+                  ? 'bg-primary-navy text-white shadow-xs scale-102 font-heavy'
+                  : 'bg-white border border-border-light text-text-muted hover:bg-slate-50'
+              }`}
+            >
+              {cat === 'All' ? 'All Signs' : cat}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Signs Grid Collection */}
+      {filteredSigns.length === 0 ? (
+        <div className="bg-white rounded-2xl border border-border-light p-10 text-center space-y-2 shadow-xs">
+          <p className="text-sm text-text-muted font-medium">
+            No signs found in this category.
+          </p>
+          <button
+            onClick={() => {
+              setSelectedCategory('All');
+            }}
+            className="text-xs font-bold text-primary-navy hover:underline cursor-pointer"
+          >
+            Show all signs
+          </button>
+        </div>
+      ) : (
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4" id="signs-grid">
+          {filteredSigns.map((sign) => (
+            <div
+              key={sign.id}
+              onClick={() => goToFlashcardsForSign(sign.id)}
+              className="group bg-white border border-border-light rounded-2xl p-4 flex flex-col justify-between hover:shadow-md hover:border-primary-navy transition-all duration-300 cursor-pointer text-center relative"
+            >
+              <div className="space-y-3">
+                 {/* Visual Graphic Representation (with fallbacks if requested limit) */}
+                <div className="aspect-square bg-cool-bg rounded-xl flex items-center justify-center p-3 transition-transform duration-300 group-hover:scale-[1.03] overflow-hidden border border-slate-100">
+                  {renderSignVisual(sign)}
+                </div>
+
+                <div>
+                  <h3 className="font-sans font-extrabold text-sm md:text-base text-primary-navy group-hover:text-primary-navy-light transition-colors text-center">
+                    {sign.title}
+                  </h3>
+                </div>
+              </div>
+
+              {/* Tag / Trigger review */}
+              <div className="mt-3 flex justify-center">
+                <span
+                  className={`text-[9px] md:text-[10px] font-extrabold tracking-wider uppercase px-2.5 py-1 rounded-md transition-colors ${getStatusColor(
+                    sign.statusType
+                  )}`}
+                >
+                  {sign.status}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Featured Shape Meaning Alert block */}
+      <section className="bg-safety-orange/5 border-l-4 border-safety-orange rounded-r-2xl p-5 border-y border-r border-[#faece2] flex items-start gap-3.5">
+        <Lightbulb className="w-6 h-6 text-safety-orange-dark shrink-0 mt-0.5 stroke-[2.5px]" />
+        <div className="space-y-1">
+          <h4 className="font-sans font-black text-xs text-safety-orange-dark tracking-widest uppercase">
+            Key Rule: Shape Meaning
+          </h4>
+          <p className="text-sm text-text-dark leading-relaxed font-semibold">
+            Triangles provide warnings, circles give orders (mandatory or prohibitory), and rectangles provide information. Understanding sign shapes helps you react faster!
+          </p>
+        </div>
+      </section>
+
+    </div>
+  );
+};

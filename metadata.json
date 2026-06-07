@@ -1,0 +1,6 @@
+{
+  "name": "DriveReady",
+  "description": "Master road rules, practice tests, study official road signs, and track your driving test readiness with Atkinson Hyperlegible typography.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

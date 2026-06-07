@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Atkinson Hyperlegible", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Atkinson Hyperlegible", sans-serif;
+  
+  --color-primary-navy: #002045;
+  --color-primary-navy-light: #1a365d;
+  --color-safety-orange: #fe9743;
+  --color-safety-orange-dark: #944b00;
+  --color-accent-peach: #ffdcc5;
+  --color-cool-bg: #f7fafc;
+  --color-text-dark: #181c1e;
+  --color-text-muted: #43474e;
+  --color-border-light: #e0e3e5;
+  --color-border-strong: #74777f;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cool-bg);
+  color: var(--color-text-dark);
+}
+
+/* Animations and helpers */
+.circular-progress-conic {
+  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
+              conic-gradient(#fe9743 65%, #ebeef0 0);
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
