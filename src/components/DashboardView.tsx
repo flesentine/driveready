@@ -5,7 +5,7 @@
 
 import React, { useState } from 'react';
 import { ChevronRight, HelpCircle, AlertTriangle, Lightbulb, Flame, Clock, Target, Trophy, X, Sparkles, Info, RefreshCw } from 'lucide-react';
-import { TabType, UserStats } from '../types';
+import { TabType, UserStats, getUserLevelInfo } from '../types';
 import { PRO_TIPS } from '../proTips';
 import windyRoadImg from '../assets/images/windy_road_exact_match_1780632600693.png';
 
@@ -123,16 +123,30 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           Hello, {stats.userName || 'California Driver'}.
         </h2>
         <p className="text-base md:text-lg text-text-muted">
-          {stats.testDaysLeft !== undefined ? (
-            <>
-              You're making steady progress. Your test is in{' '}
-              <span className="font-bold text-primary-navy">{stats.testDaysLeft} days</span>.
-            </>
+          {stats.hasActualActivity ? (
+            stats.testDaysLeft !== undefined ? (
+              <>
+                You're making steady progress. Your test is in{' '}
+                <span className="font-bold text-primary-navy">{stats.testDaysLeft} days</span>.
+              </>
+            ) : (
+              <>
+                You're making steady progress.{' '}
+                <span className="text-primary-navy font-semibold">Set your target exam date</span> in Profile to track your countdown.
+              </>
+            )
           ) : (
-            <>
-              You're making steady progress.{' '}
-              <span className="text-primary-navy font-semibold">Set your target exam date</span> in Profile to track your countdown.
-            </>
+            stats.testDaysLeft !== undefined ? (
+              <>
+                Welcome to your DMV prep! Your test is in{' '}
+                <span className="font-bold text-primary-navy">{stats.testDaysLeft} days</span>. Let's make today count!
+              </>
+            ) : (
+              <>
+                Ready to secure your driver's permit?{' '}
+                <span className="text-primary-navy font-semibold">Set your target exam date</span> in Profile to track your journey.
+              </>
+            )
           )}
         </p>
       </section>
@@ -326,10 +340,10 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 
             <div className="p-3 bg-cool-bg rounded-xl border border-slate-100 hover:border-accent-peach/50 transition-colors flex flex-col justify-between">
               <span className="text-[10px] font-bold text-text-muted block tracking-wider uppercase mb-1 flex items-center gap-1">
-                <Trophy className="w-3.5 h-3.5 text-yellow-500 stroke-2" /> RANK
+                <Trophy className="w-3.5 h-3.5 text-yellow-500 stroke-2" /> LEVEL
               </span>
-              <span className="font-sans font-extrabold text-base lg:text-lg text-primary-navy truncate">
-                {stats.rankText}
+              <span className="font-sans font-extrabold text-[#002045] text-xs leading-none mt-1" title={`Lvl ${getUserLevelInfo(stats).level}: ${getUserLevelInfo(stats).levelName}`}>
+                Lvl {getUserLevelInfo(stats).level}: {getUserLevelInfo(stats).levelName}
               </span>
             </div>
           </div>

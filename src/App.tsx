@@ -12,7 +12,7 @@ import { StatsView } from './components/StatsView';
 import { SignLibraryView } from './components/SignLibraryView';
 import { FlashcardsView } from './components/FlashcardsView';
 import { ProfileView } from './components/ProfileView';
-import { TabType, UserStats, Question } from './types';
+import { TabType, UserStats, Question, getUserLevelInfo } from './types';
 import { ROAD_SIGNS, PRACTICE_QUESTIONS, INITIAL_USER_STATS } from './data';
 import { ClipboardList, ShieldAlert, Award, FileText, CheckCircle2, X, Home, BookOpen, Zap, TrendingUp, User, Flame, Trophy } from 'lucide-react';
 
@@ -67,7 +67,18 @@ export default function App() {
     
     if (saved) {
       try {
-        const parsed = JSON.parse(saved);
+        let parsed = JSON.parse(saved);
+
+        // --- LOCAL STORAGE MIGRATION ---
+        // If the user has no recorded actual activity, but has non-zero stats, reset to clean INITIAL_USER_STATS
+        if (!parsed.hasActualActivity && (parsed.readinessScore > 0 || parsed.totalTestsTaken > 0 || parsed.practiceTimeMin > 0 || parsed.accuracyPercent > 0 || parsed.masteredSignsCount > 0)) {
+          parsed = {
+            ...INITIAL_USER_STATS,
+            testDaysLeft: parsed.testDaysLeft,
+            userName: parsed.userName || INITIAL_USER_STATS.userName
+          };
+        }
+
         if (parsed.testDaysLeft === 12) {
           delete parsed.testDaysLeft;
         }
@@ -123,23 +134,18 @@ export default function App() {
 
   const saveStats = (newStats: UserStats) => {
     const recalculatedScore = computeReadinessScore(newStats);
-    let rank = 'Novice';
-    if (recalculatedScore >= 90) {
-      rank = 'Expert (Top 5%)';
-    } else if (recalculatedScore >= 80) {
-      rank = 'Advanced (Top 15%)';
-    } else if (recalculatedScore >= 60) {
-      rank = 'Intermediate (Top 35%)';
-    } else if (recalculatedScore >= 30) {
-      rank = 'Beginner (Top 65%)';
-    } else {
-      rank = 'Novice';
-    }
+    // Determine level info dynamically based on updated scores
+    const tempStatsForLvl = {
+      ...newStats,
+      readinessScore: recalculatedScore
+    };
+    const lvlInfo = getUserLevelInfo(tempStatsForLvl);
+    const levelStr = `Level ${lvlInfo.level}: ${lvlInfo.levelName}`;
     const todayStr = new Date().toDateString();
     const updatedStats = { 
       ...newStats, 
       readinessScore: recalculatedScore, 
-      rankText: rank,
+      rankText: levelStr,
       lastActiveDate: newStats.lastActiveDate || todayStr
     };
     setStats(updatedStats);
@@ -264,7 +270,7 @@ export default function App() {
       streakDays: 0,
       practiceTimeMin: 0,
       accuracyPercent: 0,
-      rankText: 'Novice',
+      rankText: 'Level 1: Permit Seeker',
       testDaysLeft: stats.testDaysLeft,
       totalTestsTaken: 0,
       masteredSignsCount: 0,
@@ -1366,8 +1372,8 @@ export default function App() {
                   <h4 className="font-bold text-sm text-slate-100 font-sans tracking-tight leading-snug">
                     {stats.userName || 'Future Driver'}
                   </h4>
-                  <p className="text-xs text-slate-400 font-medium">
-                    {stats.rankText || 'Permit Candidate'}
+                  <p className="text-xs text-slate-450 font-semibold uppercase tracking-wider text-[10px]">
+                    Lvl {getUserLevelInfo(stats).level}: {getUserLevelInfo(stats).levelName}
                   </p>
                 </div>
               </div>

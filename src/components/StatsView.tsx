@@ -37,12 +37,6 @@ export const StatsView: React.FC<StatsViewProps> = ({
     : categoriesList.reduce((prev, curr) => (prev.score < curr.score ? prev : curr));
 
   const weeklyData = [
-    { day: 'Mon', score: !stats.hasActualActivity ? 0 : 65 },
-    { day: 'Tue', score: !stats.hasActualActivity ? 0 : 40 },
-    { day: 'Wed', score: !stats.hasActualActivity ? 0 : 85 },
-    { day: 'Thu', score: !stats.hasActualActivity ? 0 : 55 },
-    { day: 'Fri', score: !stats.hasActualActivity ? 0 : 92 },
-    { day: 'Sat', score: !stats.hasActualActivity ? 0 : 70 },
     { day: 'Today', score: !stats.hasActualActivity ? 0 : stats.accuracyPercent, isToday: true },
   ];
 
@@ -69,7 +63,7 @@ export const StatsView: React.FC<StatsViewProps> = ({
               </p>
             </div>
           ) : (
-            <div className="flex justify-between items-end h-48 gap-3 sm:gap-4 mb-6 pt-6 select-none relative">
+            <div className="flex justify-center items-end h-48 gap-3 sm:gap-4 mb-6 pt-6 select-none relative max-w-[125px] mx-auto">
               
               {/* Horizontal Grid lines */}
               <div className="absolute inset-0 flex flex-col justify-between pointer-events-none select-none">

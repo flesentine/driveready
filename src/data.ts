@@ -26,7 +26,7 @@ export const INITIAL_USER_STATS: UserStats = {
   streakDays: 0,
   practiceTimeMin: 0,
   accuracyPercent: 0,
-  rankText: 'Novice',
+  rankText: 'Level 1: Permit Seeker',
   totalTestsTaken: 0,
   masteredSignsCount: 0,
   userName: 'California Driver',

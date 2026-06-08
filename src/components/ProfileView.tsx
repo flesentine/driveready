@@ -105,22 +105,34 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
           <Shield className="w-5 h-5 text-[#fe9743]" />
         </div>
 
-        <div className="grid grid-cols-2 gap-4 text-xs">
+        <div className="grid grid-cols-2 gap-x-4 gap-y-3.5 text-xs">
           <div>
             <p className="text-[#86a0cd] text-[10px] uppercase font-bold">Study Profile</p>
-            <p className="font-semibold text-sm">{currentName}</p>
+            <p className="font-semibold text-sm truncate">{currentName}</p>
           </div>
           <div>
             <p className="text-[#86a0cd] text-[10px] uppercase font-bold">Study Class</p>
             <p className="font-semibold text-sm">Class C (Simulated)</p>
           </div>
           <div>
-            <p className="text-[#86a0cd] text-[10px] uppercase font-bold">Study Record ID</p>
-            <p className="font-mono font-medium">CADL{stats.readinessScore}XKK{(stats.totalTestsTaken * 423) % 2000}</p>
+            <p className="text-[#86a0cd] text-[10px] uppercase font-bold">Tests Taken</p>
+            <p className="font-bold text-sm text-white">{stats.totalTestsTaken}</p>
           </div>
           <div>
-            <p className="text-[#86a0cd] text-[10px] uppercase font-bold">Target Date</p>
-            <p className="font-semibold">Dec 18, 2026</p>
+            <p className="text-[#86a0cd] text-[10px] uppercase font-bold">Signs Mastered</p>
+            <p className="font-bold text-sm text-white">{stats.masteredSignsCount || 0}</p>
+          </div>
+          <div>
+            <p className="text-[#86a0cd] text-[10px] uppercase font-bold">Target Exam</p>
+            <p className="font-bold text-sm text-white">
+              {stats.testDaysLeft !== undefined ? `${stats.testDaysLeft} days away` : 'Not set'}
+            </p>
+          </div>
+          <div>
+            <p className="text-[#86a0cd] text-[10px] uppercase font-bold">Current Streak</p>
+            <p className="font-bold text-sm text-white">
+              {stats.streakDays} {stats.streakDays === 1 ? 'day' : 'days'} 🔥
+            </p>
           </div>
         </div>
 
