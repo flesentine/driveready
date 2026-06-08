@@ -29,7 +29,7 @@ export const Header: React.FC<HeaderProps> = ({
   stats,
 }) => {
   const currentName = stats?.userName || 'California Driver';
-  const currentStreak = stats?.streakDays ?? 3;
+  const currentStreak = stats?.streakDays ?? 0;
 
   return (
     <header className="bg-white border-b border-border-light fixed top-0 left-0 w-full z-50 h-16 shadow-xs select-none">

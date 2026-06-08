@@ -88,7 +88,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
         </div>
       </section>
 
-      {/* Mock Driving Permit Learner Identity Card */}
+      {/* Independent Study Progress Tracker Card */}
       <section className="bg-gradient-to-br from-primary-navy to-primary-navy-light text-white rounded-2xl p-6 shadow-sm space-y-4 relative overflow-hidden">
         {/* Subtle decorative watermark */}
         <div className="absolute right-0 bottom-0 opacity-10 select-none pointer-events-none translate-x-4 translate-y-4">
@@ -111,8 +111,8 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
             <p className="font-semibold text-sm truncate">{currentName}</p>
           </div>
           <div>
-            <p className="text-[#86a0cd] text-[10px] uppercase font-bold">Study Class</p>
-            <p className="font-semibold text-sm">Class C (Simulated)</p>
+            <p className="text-[#86a0cd] text-[10px] uppercase font-bold text-[#86a0cd]">Study Focus</p>
+            <p className="font-semibold text-sm">Class C Permit</p>
           </div>
           <div>
             <p className="text-[#86a0cd] text-[10px] uppercase font-bold">Tests Taken</p>
@@ -174,7 +174,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
 
           {profileSuccess && (
             <p className="text-xs text-green-600 font-bold animate-fade-in flex items-center gap-1 py-1">
-              <Check className="w-4 h-4" /> Profile credentials successfully updated!
+              <Check className="w-4 h-4" /> Profile details successfully updated!
             </p>
           )}
         </form>
