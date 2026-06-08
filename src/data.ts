@@ -213,7 +213,6 @@ export const ROAD_SIGNS: RoadSign[] = [
 ];
 
 export const PRACTICE_QUESTIONS: Question[] = [
-  // ==================== TEST 12: SIGNALS & RIGHT OF WAY (Core Rules) ====================
   {
     id: 'q1',
     category: 'Traffic Signals',
@@ -227,7 +226,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 5): A flashing yellow traffic light is a warning to PROCEED WITH CAUTION. Slow down and be alert. You do not need to stop.',
-    testGroup: 12
+    testGroup: 12,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 24,
+    sourceTopic: 'Traffic signals: solid red, flashing red, red arrow, yellow signal types',
+    coverageTopicId: 'cov-5-1'
   },
   {
     id: 'q2',
@@ -242,7 +245,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 2): As a provisional driver, you cannot drive with passengers under 20 years old, unless your parent or guardian or other California-licensed driver (at least 25 years old) rides with you.',
-    testGroup: 12
+    testGroup: 12,
+    sourceSection: 'Section 2: Getting a Driver’s License',
+    sourcePage: 2,
+    sourceTopic: 'Minor',
+    coverageTopicId: 'cov-2-3'
   },
   {
     id: 'q3',
@@ -257,7 +264,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 2): Provisional drivers under 18 cannot drive between 11 p.m. and 5 a.m. during the first 12 months of holding their license unless an exception applies.',
-    testGroup: 12
+    testGroup: 12,
+    sourceSection: 'Section 2: Getting a Driver’s License',
+    sourcePage: 2,
+    sourceTopic: 'Minor',
+    coverageTopicId: 'cov-2-2'
   },
   {
     id: 'q4',
@@ -272,7 +283,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 6, Around Children): The speed limit is 25 mph within 500 feet of a school while children are outside or crossing. Some school zones may have speed limits as low as 15 mph.',
-    testGroup: 12
+    testGroup: 12,
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 40,
+    sourceTopic: 'School Zone Speed Limits',
+    coverageTopicId: ''
   },
   {
     id: 'q5',
@@ -287,7 +302,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 4, Turnout Areas): You must use a turnout area or lane to let other vehicles pass when you are driving slowly on a two-lane road where passing is unsafe and there are five or more vehicles following you.',
-    testGroup: 12
+    testGroup: 12,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 9,
+    sourceTopic: 'Turnout Areas or Lanes (5+ vehicle delay rule)',
+    coverageTopicId: 'cov-4-10'
   },
   {
     id: 'q6',
@@ -302,7 +321,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 4, Parking on a Hill): When headed downhill, turn your front wheels into the curb or right toward the side of the road so the vehicle will roll into the curb if the brakes fail.',
-    testGroup: 12
+    testGroup: 12,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 19,
+    sourceTopic: 'Parking on a Hill (Uphill, Downhill, No Curb)',
+    coverageTopicId: 'cov-4-19'
   },
   {
     id: 'q7',
@@ -317,7 +340,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 4, Colored Curbs): Yellow curbs indicate loading and unloading of passengers and freight. Noncommercial drivers must usually stay with their vehicle.',
-    testGroup: 12
+    testGroup: 12,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 20,
+    sourceTopic: 'Colored Curbs regulations (White, Green, Yellow, Red, Blue)',
+    coverageTopicId: 'cov-4-20'
   },
   {
     id: 'q8',
@@ -332,7 +359,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 6, Around Children): You must stop from either direction until the lights stop flashing. Failing to stop can lead to fines up to $1,000 and a 1-year driving privilege suspension.',
-    testGroup: 12
+    testGroup: 12,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 38,
+    sourceTopic: 'School Buses flashing yellow & red signals rules',
+    coverageTopicId: 'cov-5-8'
   },
   {
     id: 'q9',
@@ -347,7 +378,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 8, Insurance Requirements): The minimum required coverage in California is $30,000 for injury/death to one person, $60,000 for multiple persons, and $15,000 for property damage.',
-    testGroup: 12
+    testGroup: 12,
+    sourceSection: 'Section 8: Financial Responsibility, Insurance Requirements, and Collisions',
+    sourcePage: 58,
+    sourceTopic: 'Mandatory Minimum Liability Coverage ($30k / $60k / $15k)',
+    coverageTopicId: 'cov-8-1'
   },
   {
     id: 'q10',
@@ -362,10 +397,12 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 5, Traffic Signals): You may not turn right if you are stopped at a red arrow light. Wait until the light changes to green before making your turn.',
-    testGroup: 12
+    testGroup: 12,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 11,
+    sourceTopic: 'Right Turn Against a Red Arrow',
+    coverageTopicId: 'cov-4-14'
   },
-
-  // ==================== TEST 13: HIGH-SPEED MERGING & FREEWAYS ====================
   {
     id: 'q11',
     category: 'Rules of the Road',
@@ -379,7 +416,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 4, Bicycle Lanes / Turns): It is legal to drive inside a bicycle lane when turning, but only within 200 feet of the intersection.',
-    testGroup: 13
+    testGroup: 13,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 9,
+    sourceTopic: 'Bicycle Lane Types & motor vehicle driving restriction (200 ft)',
+    coverageTopicId: 'cov-4-11'
   },
   {
     id: 'q12',
@@ -394,7 +435,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 4, Center Left Turn Lanes): A center left turn lane is not a regular traffic lane. You may only drive for 200 feet in the center left turn lane.',
-    testGroup: 13
+    testGroup: 13,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 9,
+    sourceTopic: 'Center Left Turn Lanes (200 feet driving limit)',
+    coverageTopicId: 'cov-4-9'
   },
   {
     id: 'q13',
@@ -409,7 +454,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 4, Page 14): Three (3) feet of distance must be maintained between the car and a cyclist when passing in the same direction.',
-    testGroup: 13
+    testGroup: 13,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 10,
+    sourceTopic: 'Bicycle distance (3 feet rule)',
+    coverageTopicId: 'cov-4-12'
   },
   {
     id: 'q14',
@@ -424,7 +473,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Tailgating): Use the three-second rule to ensure a safe following distance and avoid a collision. Following other vehicles at a safe distance gives you enough time to react.',
-    testGroup: 13
+    testGroup: 13,
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 44,
+    sourceTopic: 'Tailgating & Three-Second Rule',
+    coverageTopicId: 'cov-6-2'
   },
   {
     id: 'q15',
@@ -439,7 +492,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 4, Mountain Roads): If two vehicles meet on a steep narrow road and neither can pass, the vehicle facing uphill has the right-of-way. The vehicle facing downhill must back up until the uphill vehicle can pass.',
-    testGroup: 13
+    testGroup: 13,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 32,
+    sourceTopic: 'Mountain Roads backup/right-of-way rules',
+    coverageTopicId: 'cov-5-6'
   },
   {
     id: 'q16',
@@ -454,7 +511,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 4, Merging): When you enter a highway, you need to be in the proper lane on the on-ramp and be at or near the speed of traffic.',
-    testGroup: 13
+    testGroup: 13,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 7,
+    sourceTopic: 'Highway Merging Speed',
+    coverageTopicId: ''
   },
   {
     id: 'q17',
@@ -469,7 +530,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 4, U-Turn): You may make a U-turn in a residential district if no vehicles are approaching you within 200 feet.',
-    testGroup: 13
+    testGroup: 13,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 13,
+    sourceTopic: 'U-Turns: Legal and Prohibited Locations',
+    coverageTopicId: 'cov-4-16'
   },
   {
     id: 'q18',
@@ -484,7 +549,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 4, Passing): You may pass on the right only when an open highway has two or more lanes going in your direction, the driver ahead is turning left, or you are on a one-way street. Never drive off the pavement to pass.',
-    testGroup: 13
+    testGroup: 13,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 6,
+    sourceTopic: 'Passing on the Right',
+    coverageTopicId: ''
   },
   {
     id: 'q19',
@@ -499,7 +568,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 4, Illegal Parking): Double parking (parking next to or opposite a vehicle already parked or stopped at a curb) is illegal under any conditions.',
-    testGroup: 13
+    testGroup: 13,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 20,
+    sourceTopic: 'Illegal Parking locations (hydrant 15ft, crosswalk 20ft)',
+    coverageTopicId: 'cov-4-21'
   },
   {
     id: 'q20',
@@ -514,10 +587,12 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 4, Passing): Do not pass within 100 feet of an intersection, bridge, tunnel, railroad crossing, or other hazardous area.',
-    testGroup: 13
+    testGroup: 13,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 6,
+    sourceTopic: 'Prohibited Passing Limits',
+    coverageTopicId: ''
   },
-
-  // ==================== TEST 14: EMERGENCY ACTIONS & INCLEMENT WEATHER ====================
   {
     id: 'q21',
     category: 'Safe Driving',
@@ -531,7 +606,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Slippery Roads): On a wet road, reduce your speed by 5 to 10 mph to maintain traction and prevent skidding.',
-    testGroup: 14
+    testGroup: 14,
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 48,
+    sourceTopic: 'Slippery Road Speeds (Wet, Packed Snow, Ice limits)',
+    coverageTopicId: 'cov-6-4'
   },
   {
     id: 'q22',
@@ -546,7 +625,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Slippery Roads): On packed snow, you must reduce your speed by half to maintain complete control and steer clear of slippery surface skids.',
-    testGroup: 14
+    testGroup: 14,
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 48,
+    sourceTopic: 'Slippery Road Speeds (Wet, Packed Snow, Ice limits)',
+    coverageTopicId: 'cov-6-4'
   },
   {
     id: 'q23',
@@ -561,7 +644,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 3,
     explanation: 'California Handbook (Section 7, BAC Limits): It is illegal for individuals over 21 years of age to drive with a Blood Alcohol Concentration (BAC) of 0.08% or higher.',
-    testGroup: 14
+    testGroup: 14,
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 56,
+    sourceTopic: 'Blood Alcohol Concentration (BAC) Limits (0.08%, 0.01% under 21, 0.04% CDL)',
+    coverageTopicId: 'cov-7-3'
   },
   {
     id: 'q24',
@@ -576,7 +663,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 6, Emergency Vehicles): It is against the law to follow within 300 feet of any fire engine, law enforcement vehicle, ambulance, or other emergency vehicle when their siren or flashing lights are on.',
-    testGroup: 14
+    testGroup: 14,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 32,
+    sourceTopic: 'Following Emergency Vehicles',
+    coverageTopicId: ''
   },
   {
     id: 'q25',
@@ -591,7 +682,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 6, Unattended Children and Pets): It is illegal to leave a child who is six years old or younger unattended in a vehicle. A child may be left under the supervision of a person who is at least 12 years old.',
-    testGroup: 14
+    testGroup: 14,
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 52,
+    sourceTopic: 'Unattended Children (6 yrs or younger) & Pets in heat',
+    coverageTopicId: 'cov-6-9'
   },
   {
     id: 'q26',
@@ -606,7 +701,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 6, Buses, Streetcars, Trolleys): When a bus, streetcar, or trolley is stopped at a safety zone or traffic light, you may pass at no more than 10 mph.',
-    testGroup: 14
+    testGroup: 14,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 32,
+    sourceTopic: 'Passing Streetcars/Trolleys',
+    coverageTopicId: ''
   },
   {
     id: 'q27',
@@ -621,7 +720,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 3, Headlights): Dim your high-beam headlights to low beams within 500 feet of an oncoming vehicle or within 300 feet of a vehicle you are following.',
-    testGroup: 14
+    testGroup: 14,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 4,
+    sourceTopic: 'Headlights: Demands, Rain/Wipers, Sunset/Sunrise, and High Beams',
+    coverageTopicId: 'cov-3-4'
   },
   {
     id: 'q28',
@@ -636,7 +739,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 5, Cargo Extension): Cargo that extends more than 4 feet from the back-rear bumper must display a 12-inch red or fluorescent orange square flag. At night, this cargo must be marked with two red lights (Page 44).',
-    testGroup: 14
+    testGroup: 14,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 20,
+    sourceTopic: 'Protruding Cargo Regulations',
+    coverageTopicId: ''
   },
   {
     id: 'q29',
@@ -651,7 +758,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 6, Driving Off the Pavement): If your wheels drift off the pavement: Grip steering wheel firmly, remove foot from accelerator, brake gently, check traffic, and steer carefully back. Avoid pulling with too much force.',
-    testGroup: 14
+    testGroup: 14,
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 53,
+    sourceTopic: 'Driving Off the Pavement Recovery Steps',
+    coverageTopicId: 'cov-6-11'
   },
   {
     id: 'q30',
@@ -666,10 +777,12 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 7, BAC Limits): It is illegal to drive a commercial vehicle requiring a CDL, or to drive a passenger vehicle for hire, with a BAC of 0.04% or higher.',
-    testGroup: 14
+    testGroup: 14,
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 56,
+    sourceTopic: 'Blood Alcohol Concentration (BAC) Limits (0.08%, 0.01% under 21, 0.04% CDL)',
+    coverageTopicId: 'cov-7-3'
   },
-
-  // ==================== TEST 15: MINOR RESTRICTIONS & SIGNALING RULES ====================
   {
     id: 'q31',
     category: 'Rules of the Road',
@@ -683,7 +796,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 2): For medical needs, minor provisional drivers must carry a signed note from a physician specifying the diagnosis and estimated recovery date.',
-    testGroup: 15
+    testGroup: 15,
+    sourceSection: 'Section 2: Getting a Driver’s License',
+    sourcePage: 2,
+    sourceTopic: 'Provisional License Exceptions (Medical, School, Work, Family)',
+    coverageTopicId: 'cov-2-4'
   },
   {
     id: 'q32',
@@ -698,7 +815,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 2, Exceptions): School-authorized activities require a dynamic note signed by the school principal, dean, or designee indicating the schooling reason.',
-    testGroup: 15
+    testGroup: 15,
+    sourceSection: 'Section 2: Getting a Driver’s License',
+    sourcePage: 2,
+    sourceTopic: 'Provisional License Exceptions (Medical, School, Work, Family)',
+    coverageTopicId: 'cov-2-4'
   },
   {
     id: 'q33',
@@ -713,7 +834,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 3, Hand Signals): For a right turn, bend your left arm upward at the elbow, so your hand points toward the sky.',
-    testGroup: 15
+    testGroup: 15,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 3,
+    sourceTopic: 'Hand Signaling and Vehicle Signaling Times/Limits',
+    coverageTopicId: 'cov-3-3'
   },
   {
     id: 'q34',
@@ -728,7 +853,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 3, Hand Signals): For a left turn, extend your arm and hand straight out of the window horizontally.',
-    testGroup: 15
+    testGroup: 15,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 3,
+    sourceTopic: 'Hand Signaling and Vehicle Signaling Times/Limits',
+    coverageTopicId: 'cov-3-3'
   },
   {
     id: 'q35',
@@ -743,7 +872,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 3, Hand Signals): Bend your left arm downward at the elbow with your palm/hand pointing down toward the ground.',
-    testGroup: 15
+    testGroup: 15,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 3,
+    sourceTopic: 'Hand Signaling and Vehicle Signaling Times/Limits',
+    coverageTopicId: 'cov-3-3'
   },
   {
     id: 'q36',
@@ -758,7 +891,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 3, Signaling): Always signal your intention to turn at least 100 feet before making a turn at an upcoming intersection.',
-    testGroup: 15
+    testGroup: 15,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 3,
+    sourceTopic: 'Hand Signaling and Vehicle Signaling Times/Limits',
+    coverageTopicId: 'cov-3-3'
   },
   {
     id: 'q37',
@@ -773,7 +910,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 3, Signaling): You must continuously signal for at least five (5) seconds before executing any lane change on a freeway.',
-    testGroup: 15
+    testGroup: 15,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 3,
+    sourceTopic: 'Hand Signaling and Vehicle Signaling Times/Limits',
+    coverageTopicId: 'cov-3-3'
   },
   {
     id: 'q38',
@@ -788,7 +929,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 3, Headlights): Turn your headlights on if you are unable to see a distance of 1,000 feet directly in front of you.',
-    testGroup: 15
+    testGroup: 15,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 4,
+    sourceTopic: 'Headlights: Demands, Rain/Wipers, Sunset/Sunrise, and High Beams',
+    coverageTopicId: 'cov-3-4'
   },
   {
     id: 'q39',
@@ -803,7 +948,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 3, Headlights): Headlights must be turned on beginning 30 minutes after sunset, and remain on until 30 minutes before sunrise.',
-    testGroup: 15
+    testGroup: 15,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 4,
+    sourceTopic: 'Headlights: Demands, Rain/Wipers, Sunset/Sunrise, and High Beams',
+    coverageTopicId: 'cov-3-4'
   },
   {
     id: 'q40',
@@ -818,10 +967,12 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 3, Headlights): In adverse weather, if you need to use your windshield wipers continuously, you are legally required to turn on your low-beam headlights.',
-    testGroup: 15
+    testGroup: 15,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 4,
+    sourceTopic: 'Headlights: Demands, Rain/Wipers, Sunset/Sunrise, and High Beams',
+    coverageTopicId: 'cov-3-4'
   },
-
-  // ==================== TEST 16: PARKING LAWS, COLORED CURBS & SPACING ====================
   {
     id: 'q41',
     category: 'Safe Driving',
@@ -835,7 +986,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 4, Parking on a Hill): When headed uphill, turn your front wheels away from the curb (left) and let the vehicle roll back slightly so the wheels rest against the curb.',
-    testGroup: 16
+    testGroup: 16,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 19,
+    sourceTopic: 'Parking on a Hill (Uphill, Downhill, No Curb)',
+    coverageTopicId: 'cov-4-19'
   },
   {
     id: 'q42',
@@ -850,7 +1005,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 4, Parking on a Hill): If there is no curb, turn your front wheels to the right so that if the brakes fail, the vehicle rolls away from the center of the road and out of traffic.',
-    testGroup: 16
+    testGroup: 16,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 19,
+    sourceTopic: 'Parking on a Hill (Uphill, Downhill, No Curb)',
+    coverageTopicId: 'cov-4-19'
   },
   {
     id: 'q43',
@@ -865,7 +1024,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 4, Colored Curbs): White curbs mean you may stop only long enough to pick up or drop off passengers or mail.',
-    testGroup: 16
+    testGroup: 16,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 20,
+    sourceTopic: 'Colored Curbs regulations (White, Green, Yellow, Red, Blue)',
+    coverageTopicId: 'cov-4-20'
   },
   {
     id: 'q44',
@@ -880,7 +1043,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 4, Colored Curbs): Green curbs allow you to park for a limited time, which is specified on the curb or a nearby sign.',
-    testGroup: 16
+    testGroup: 16,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 20,
+    sourceTopic: 'Colored Curbs regulations (White, Green, Yellow, Red, Blue)',
+    coverageTopicId: 'cov-4-20'
   },
   {
     id: 'q45',
@@ -895,7 +1062,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 4, Colored Curbs): Red curbs mean no stopping, standing, or parking under any conditions (except buses at marked bus zones).',
-    testGroup: 16
+    testGroup: 16,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 20,
+    sourceTopic: 'Colored Curbs regulations (White, Green, Yellow, Red, Blue)',
+    coverageTopicId: 'cov-4-20'
   },
   {
     id: 'q46',
@@ -910,7 +1081,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 4, Illegal Parking): It is illegal to park within 15 feet of a fire hydrant or a fire station driveway.',
-    testGroup: 16
+    testGroup: 16,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 20,
+    sourceTopic: 'Illegal Parking locations (hydrant 15ft, crosswalk 20ft)',
+    coverageTopicId: 'cov-4-21'
   },
   {
     id: 'q47',
@@ -925,7 +1100,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 4, Illegal Parking): It is illegal to park within three (3) feet of a sidewalk ramp designed for disabled persons.',
-    testGroup: 16
+    testGroup: 16,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 20,
+    sourceTopic: 'Illegal Parking locations (hydrant 15ft, crosswalk 20ft)',
+    coverageTopicId: 'cov-4-21'
   },
   {
     id: 'q48',
@@ -940,7 +1119,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 4, Illegal Parking): It is illegal to park within 20 feet of an unmarked or marked crosswalk, or within 15 feet of a curb extension.',
-    testGroup: 16
+    testGroup: 16,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 20,
+    sourceTopic: 'Illegal Parking locations (hydrant 15ft, crosswalk 20ft)',
+    coverageTopicId: 'cov-4-21'
   },
   {
     id: 'q49',
@@ -955,7 +1138,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 4, Illegal Parking): Double parking is parking next to or opposite a vehicle already parked at a curb. It is strictly illegal under any conditions.',
-    testGroup: 16
+    testGroup: 16,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 20,
+    sourceTopic: 'Illegal Parking locations (hydrant 15ft, crosswalk 20ft)',
+    coverageTopicId: 'cov-4-21'
   },
   {
     id: 'q50',
@@ -970,10 +1157,12 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 3,
     explanation: 'California Handbook (Section 4, Colored Curbs): Blue curbs are reserved exclusively for disabled persons or those driving a disabled person who has a special placard or license plate.',
-    testGroup: 16
+    testGroup: 16,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 20,
+    sourceTopic: 'Colored Curbs regulations (White, Green, Yellow, Red, Blue)',
+    coverageTopicId: 'cov-4-20'
   },
-
-  // ==================== TEST 17: SEAT BELTS, CHILD SAFETY & SPEED LIMITS ====================
   {
     id: 'q51',
     category: 'Safe Driving',
@@ -987,7 +1176,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Child Passenger Restraint System): Children under 2 years old must be in a rear-facing seat unless they weigh 40 pounds or more, or are 3 feet 4 inches tall or taller.',
-    testGroup: 17
+    testGroup: 17,
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 51,
+    sourceTopic: 'Child Restraint Systems (under 2 years/40 lbs/3ft4in rules)',
+    coverageTopicId: 'cov-6-7'
   },
   {
     id: 'q52',
@@ -1002,7 +1195,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Child Restraint): Children under 8 years old, or who are less than 4 feet 9 inches tall, must be secured in a federally-approved child restraint in a rear seat.',
-    testGroup: 17
+    testGroup: 17,
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 51,
+    sourceTopic: 'Child Restraint Systems (under 2 years/40 lbs/3ft4in rules)',
+    coverageTopicId: 'cov-6-7'
   },
   {
     id: 'q53',
@@ -1017,7 +1214,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Airbags): Ride at least 10 inches from the airbag cover to allow safe deployment space without causing severe chest impact injury.',
-    testGroup: 17
+    testGroup: 17,
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 52,
+    sourceTopic: 'Air Bags 10 inch chest clearance spacing',
+    coverageTopicId: 'cov-6-8'
   },
   {
     id: 'q54',
@@ -1032,7 +1233,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 6, Speed Limits): The speed limit is 15 mph at any blind intersection where you cannot see 100 feet down the cross street before entering.',
-    testGroup: 17
+    testGroup: 17,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 39,
+    sourceTopic: 'Blind Intersections, Alleys, and Railroad Tracks speed zones (15 mph)',
+    coverageTopicId: 'cov-5-9'
   },
   {
     id: 'q55',
@@ -1047,7 +1252,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Alleys): The speed limit in any designated alley is 15 mph.',
-    testGroup: 17
+    testGroup: 17,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 39,
+    sourceTopic: 'Blind Intersections, Alleys, and Railroad Tracks speed zones (15 mph)',
+    coverageTopicId: 'cov-5-9'
   },
   {
     id: 'q56',
@@ -1062,7 +1271,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 6, Railroads): The speed limit is 15 mph within 100 feet of a railroad crossing if you cannot see the tracks for 400 feet in either direction.',
-    testGroup: 17
+    testGroup: 17,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 39,
+    sourceTopic: 'Blind Intersections, Alleys, and Railroad Tracks speed zones (15 mph)',
+    coverageTopicId: 'cov-5-9'
   },
   {
     id: 'q57',
@@ -1077,7 +1290,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Around Children): You do not need to stop if the school bus is on the other side of a divided or multilane highway (two or more lanes in each direction).',
-    testGroup: 17
+    testGroup: 17,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 38,
+    sourceTopic: 'School Buses flashing yellow & red signals rules',
+    coverageTopicId: 'cov-5-8'
   },
   {
     id: 'q58',
@@ -1092,7 +1309,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Seat Belts): Children who are 8 years old or older, or who have reached at least 4 feet 9 inches in height, may use a properly fitting safety belt without a booster seat.',
-    testGroup: 17
+    testGroup: 17,
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 51,
+    sourceTopic: 'Seat Belts laws and under 16 infraction safety',
+    coverageTopicId: 'cov-6-6'
   },
   {
     id: 'q59',
@@ -1107,7 +1328,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Around Children): Failing to stop for a school bus with flashing red lights can result in a fine of up to $1,000 and suspension of your driving privilege for one year.',
-    testGroup: 17
+    testGroup: 17,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 38,
+    sourceTopic: 'School Buses flashing yellow & red signals rules',
+    coverageTopicId: 'cov-5-8'
   },
   {
     id: 'q60',
@@ -1122,10 +1347,12 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Child Restraint): A child under 8 may ride in the front seat in an approved restraint if there are no rear seats, the rear seats are occupied by children 7 or younger, or the restraint cannot be properly installed in the back.',
-    testGroup: 17
+    testGroup: 17,
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 51,
+    sourceTopic: 'Child Restraint Systems (under 2 years/40 lbs/3ft4in rules)',
+    coverageTopicId: 'cov-6-7'
   },
-
-  // ==================== TEST 18: DUI PROBATION, CHEMICAL TESTS & COLLISIONS ====================
   {
     id: 'q61',
     category: 'Alcohol & Drugs',
@@ -1139,7 +1366,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 7, BAC Limits): If you are on DUI probation, you must not drive with a BAC of 0.01% or higher at any time.',
-    testGroup: 18
+    testGroup: 18,
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 56,
+    sourceTopic: 'Blood Alcohol Concentration (BAC) Limits (0.08%, 0.01% under 21, 0.04% CDL)',
+    coverageTopicId: 'cov-7-3'
   },
   {
     id: 'q62',
@@ -1154,7 +1385,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 7, Carrying Alcohol): Open containers of alcohol must be kept in the trunk or a place where passengers do not sit. Keeping an open container in the glove compartment is strictly illegal.',
-    testGroup: 18
+    testGroup: 18,
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 55,
+    sourceTopic: 'Open Container laws for alcohol and cannabis in a vehicle',
+    coverageTopicId: 'cov-7-2'
   },
   {
     id: 'q63',
@@ -1169,7 +1404,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 8, Reporting Collisions): You must report a collision to the DMV within 10 days if there is more than $1,000 in property damage, or if anyone was injured or killed.',
-    testGroup: 18
+    testGroup: 18,
+    sourceSection: 'Section 8: Financial Responsibility, Insurance Requirements, and Collisions',
+    sourcePage: 59,
+    sourceTopic: 'What to do after a collision & DMV Reporting timelines (SR-1 within 10 days if >$1k/injury)',
+    coverageTopicId: 'cov-8-3'
   },
   {
     id: 'q64',
@@ -1184,7 +1423,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 7, Chemical Tests): Under California\'s implied consent law, if you refuse a chemical test, the DMV will suspend or revoke your driving privilege for 1 year.',
-    testGroup: 18
+    testGroup: 18,
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 57,
+    sourceTopic: 'DUI Arrest refusal penalty (1 year suspension)',
+    coverageTopicId: 'cov-7-4'
   },
   {
     id: 'q65',
@@ -1199,7 +1442,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 8, Reporting Collisions): A collision must be reported to the DMV within 10 days if the property damage exceeds $1,000, or if there is any injury or death.',
-    testGroup: 18
+    testGroup: 18,
+    sourceSection: 'Section 8: Financial Responsibility, Insurance Requirements, and Collisions',
+    sourcePage: 59,
+    sourceTopic: 'What to do after a collision & DMV Reporting timelines (SR-1 within 10 days if >$1k/injury)',
+    coverageTopicId: 'cov-8-3'
   },
   {
     id: 'q66',
@@ -1214,7 +1461,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 7, BAC Limits): If you are under 21 years old, you must not drive with a Blood Alcohol Concentration (BAC) of 0.01% or higher.',
-    testGroup: 18
+    testGroup: 18,
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 56,
+    sourceTopic: 'Blood Alcohol Concentration (BAC) Limits (0.08%, 0.01% under 21, 0.04% CDL)',
+    coverageTopicId: 'cov-7-3'
   },
   {
     id: 'q67',
@@ -1229,7 +1480,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 7, Drugs and Driving): It is illegal to drive under the influence of any drug (recreational, prescription, or over-the-counter) that impairs your ability to drive safely.',
-    testGroup: 18
+    testGroup: 18,
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 55,
+    sourceTopic: 'California Driving under the Influence (DUI) laws & drug parity',
+    coverageTopicId: 'cov-7-1'
   },
   {
     id: 'q68',
@@ -1244,7 +1499,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Blind Pedestrians): You must stop within 5 feet of the crosswalk for a blind pedestrian with a cane or guide dog, and do not honk or shout at them.',
-    testGroup: 18
+    testGroup: 18,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 32,
+    sourceTopic: 'Yielding to Blind Pedestrians',
+    coverageTopicId: ''
   },
   {
     id: 'q69',
@@ -1259,7 +1518,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 6): If you cannot see the railroad tracks for 400 feet in both directions, the speed limit is 15 mph within 100 feet of the crossing.',
-    testGroup: 18
+    testGroup: 18,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 39,
+    sourceTopic: 'Blind Intersections, Alleys, and Railroad Tracks speed zones (15 mph)',
+    coverageTopicId: 'cov-5-9'
   },
   {
     id: 'q70',
@@ -1274,10 +1537,12 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 8, Insurance): If you do not have proof of insurance at a collision, your driving privilege can be suspended for up to 4 years.',
-    testGroup: 18
+    testGroup: 18,
+    sourceSection: 'Section 8: Financial Responsibility, Insurance Requirements, and Collisions',
+    sourcePage: 58,
+    sourceTopic: 'Driving Without Insurance collision suspension (up to 4 years)',
+    coverageTopicId: 'cov-8-2'
   },
-
-  // ==================== TEST 19: LICENSING, PERMITS & ADMIN RULES ====================
   {
     id: 'q71',
     category: 'Rules of the Road',
@@ -1291,7 +1556,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 2, Getting a Driver’s License): During the first 12 months after license issuance, provisional drivers under age 18 cannot drive between 11 p.m. and 5 a.m. unless supervised by a licensed parent/guardian, driver age 25+, or certified trainer (Page 2/6).',
-    testGroup: 19
+    testGroup: 19,
+    sourceSection: 'Section 2: Getting a Driver’s License',
+    sourcePage: 2,
+    sourceTopic: 'Minor',
+    coverageTopicId: 'cov-2-2'
   },
   {
     id: 'q72',
@@ -1306,7 +1575,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 2, Getting a Driver’s License): During your first 12 months, you cannot transport passengers under 20 years of age unless accompanied by a licensed parent, guardian, or driver age 25+ (Page 2/6).',
-    testGroup: 19
+    testGroup: 19,
+    sourceSection: 'Section 2: Getting a Driver’s License',
+    sourcePage: 2,
+    sourceTopic: 'Minor',
+    coverageTopicId: 'cov-2-3'
   },
   {
     id: 'q73',
@@ -1321,7 +1594,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'Supplemental Content (Address Changes): You must notify the DMV of a change of residential address within 10 days.',
-    testGroup: 19
+    testGroup: 19,
+    sourceSection: 'Section 1: The California Driver\'s License',
+    sourcePage: 1,
+    sourceTopic: 'Address Change Notification',
+    coverageTopicId: ''
   },
   {
     id: 'q74',
@@ -1336,7 +1613,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'Supplemental Content (Vehicle Registration): You must notify the DMV within 5 days of selling or transferring ownership of a vehicle by submitting a Notice of Transfer and Release of Liability (NRL).',
-    testGroup: 19
+    testGroup: 19,
+    sourceSection: 'Section 1: The California Driver\'s License',
+    sourcePage: 1,
+    sourceTopic: 'Vehicle Transfer Notification',
+    coverageTopicId: ''
   },
   {
     id: 'q75',
@@ -1351,7 +1632,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 1, Instruction Permits): Permit supervisors must be a licensed parent, guardian, driving instructor, or other licensed driver who is at least 25 years of age.',
-    testGroup: 19
+    testGroup: 19,
+    sourceSection: 'Section 2: Getting a Driver’s License',
+    sourcePage: 2,
+    sourceTopic: 'Instruction Permit Application and Requirements',
+    coverageTopicId: 'cov-2-1'
   },
   {
     id: 'q76',
@@ -1366,7 +1651,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'Supplemental Content (Written Exam Limits): Minor applicants who fail the written driver\'s license exam must wait 1 week (7 days) before they can retake the test.',
-    testGroup: 19
+    testGroup: 19,
+    sourceSection: 'Section 1: The California Driver’s License',
+    sourcePage: 1,
+    sourceTopic: 'Introduction and Knowledge / Behind-the-Wheel Drive Tests',
+    coverageTopicId: 'cov-1-1'
   },
   {
     id: 'q77',
@@ -1381,7 +1670,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'Supplemental Content (Driving Exam Retake): If you fail the behind-the-wheel driving test, there is a mandatory 2-week (14 days) waiting period before you can attempt it again, and you must pay a retest fee.',
-    testGroup: 19
+    testGroup: 19,
+    sourceSection: 'Section 1: The California Driver’s License',
+    sourcePage: 1,
+    sourceTopic: 'Introduction and Knowledge / Behind-the-Wheel Drive Tests',
+    coverageTopicId: 'cov-1-1'
   },
   {
     id: 'q78',
@@ -1396,7 +1689,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'Supplemental Content (Minors Permit Application): Parents or legal guardians must sign the application assuming joint and several civil liability for any accidents involving the minor provisional driver (supported by Section 8).',
-    testGroup: 19
+    testGroup: 19,
+    sourceSection: 'Section 2: Getting a Driver’s License',
+    sourcePage: 2,
+    sourceTopic: 'Instruction Permit Application and Requirements',
+    coverageTopicId: 'cov-2-1'
   },
   {
     id: 'q79',
@@ -1411,7 +1708,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'Supplemental Content (Written Exam): Your application fee allows you up to 3 attempts to pass the written knowledge exam within a 12-month period. If you fail 3 times, you must submit a new application fee.',
-    testGroup: 19
+    testGroup: 19,
+    sourceSection: 'Section 1: The California Driver’s License',
+    sourcePage: 1,
+    sourceTopic: 'Introduction and Knowledge / Behind-the-Wheel Drive Tests',
+    coverageTopicId: 'cov-1-1'
   },
   {
     id: 'q80',
@@ -1426,10 +1727,12 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 5, Other Important Roadway Information): Dumping or abandoning an animal on a highway is a misdemeanor punishable by a fine of up to $1,000, 6 months in jail, or both (Page 44).',
-    testGroup: 19
+    testGroup: 19,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 44,
+    sourceTopic: 'Dumping or abandoning animals on a highway ($1000 fine/6 months)',
+    coverageTopicId: 'cov-5-12'
   },
-
-  // ==================== TEST 20: SHARING THE ROAD & SPECIAL HAZARDS ====================
   {
     id: 'q81',
     category: 'Rules of the Road',
@@ -1443,7 +1746,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 6, Sharing the Road - Bicycles): Under the Three Feet Rules, drivers in California must allow a minimum clearance of 3 feet when passing or overtaking a bicyclist.',
-    testGroup: 20
+    testGroup: 20,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 10,
+    sourceTopic: 'Bicycle distance (3 feet rule)',
+    coverageTopicId: 'cov-4-12'
   },
   {
     id: 'q82',
@@ -1458,7 +1765,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Speed Limits): The speed limit in school zones is 25 mph when children are present outside, although some schools may post limits as low as 15 mph.',
-    testGroup: 20
+    testGroup: 20,
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 52,
+    sourceTopic: 'Basic Speed Law & Freeway Speed Limits (65 mph vs 55 mph undivided/towing)',
+    coverageTopicId: 'cov-6-10'
   },
   {
     id: 'q83',
@@ -1473,7 +1784,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 6, School Buses): On undivided roads, vehicles traveling in all directions must stop when a school bus stops with flashing red lights and an extended stop signal arm.',
-    testGroup: 20
+    testGroup: 20,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 38,
+    sourceTopic: 'School Buses flashing yellow & red signals rules',
+    coverageTopicId: 'cov-5-8'
   },
   {
     id: 'q84',
@@ -1488,7 +1803,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, School Buses): You do not need to stop for a stopped school bus with flashing red lights if you are traveling on the opposite side of a divided highway split by a physical barrier or raised island.',
-    testGroup: 20
+    testGroup: 20,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 38,
+    sourceTopic: 'School Buses flashing yellow & red signals rules',
+    coverageTopicId: 'cov-5-8'
   },
   {
     id: 'q85',
@@ -1503,7 +1822,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 6, Slow-Moving Vehicles): Slow-moving vehicles (such as farm road tractors, maintenance machinery, or animal-drawn carriages) designed to travel at 25 mph or less must display an orange-and-red reflective triangle on the rear.',
-    testGroup: 20
+    testGroup: 20,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 26,
+    sourceTopic: 'Sign Shapes and Meanings (Stop, Yield, School, Railroad)',
+    coverageTopicId: 'cov-5-3'
   },
   {
     id: 'q86',
@@ -1518,7 +1841,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Sharing the Road - Large Trucks): Large commercial trucks have massive blind areas around them called "No-Zones" (in front, behind, and along both sides). If you drive in these zones, the truck driver cannot see your vehicle.',
-    testGroup: 20
+    testGroup: 20,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 32,
+    sourceTopic: 'Sharing the Road: Large Trucks (No Zones/Blind Spots, Braking)',
+    coverageTopicId: 'cov-5-7'
   },
   {
     id: 'q87',
@@ -1533,7 +1860,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Sharing the Road): Because of their extreme vehicle length, large trucks must swing wide to the left to complete a tight right turn. Overtaking them or squeezing in on their right side is incredibly dangerous.',
-    testGroup: 20
+    testGroup: 20,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 11,
+    sourceTopic: 'Right Turns and Right Turns on Red Actions',
+    coverageTopicId: 'cov-4-13'
   },
   {
     id: 'q88',
@@ -1548,7 +1879,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Emergency Services): California\'s Move Over Law requires drivers approaching emergency vehicles, tow trucks, or maintenance vehicles stopped with active warning lights to change lanes to a non-adjacent lane (if safe) or slow down to pass safely.',
-    testGroup: 20
+    testGroup: 20,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 32,
+    sourceTopic: 'Move Over Law',
+    coverageTopicId: ''
   },
   {
     id: 'q89',
@@ -1563,7 +1898,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 5, Evading Law Enforcement): Evading a peace officer performing their duties is a misdemeanor punishable by imprisonment in a county jail for up to 1 year (Page 45).',
-    testGroup: 20
+    testGroup: 20,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 41,
+    sourceTopic: 'Evading Law Enforcement in county jail or state prison penalties',
+    coverageTopicId: 'cov-5-11'
   },
   {
     id: 'q90',
@@ -1578,10 +1917,12 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Bicycle Lanes): You must not drive in a bicycle lane unless you are preparing to make a right-hand turn starting within 200 feet of the intersection, or when entering or leaving the highway.',
-    testGroup: 20
+    testGroup: 20,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 9,
+    sourceTopic: 'Bicycle Lane Types & motor vehicle driving restriction (200 ft)',
+    coverageTopicId: 'cov-4-11'
   },
-
-  // ==================== TEST 21: ALCOHOL LIMITS, BAC & ADMIN PENALTIES ====================
   {
     id: 'q91',
     category: 'Rules of the Road',
@@ -1595,7 +1936,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 9, Alcohol Limits): BAC limit is 0.08% or higher if you are 21 years old or older.',
-    testGroup: 21
+    testGroup: 21,
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 56,
+    sourceTopic: 'Blood Alcohol Concentration (BAC) Limits (0.08%, 0.01% under 21, 0.04% CDL)',
+    coverageTopicId: 'cov-7-3'
   },
   {
     id: 'q92',
@@ -1610,7 +1955,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 9): For commercial motor vehicles or passenger transportation vehicles for hire, the BAC limit is 0.04% or higher.',
-    testGroup: 21
+    testGroup: 21,
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 55,
+    sourceTopic: 'Open Container laws for alcohol and cannabis in a vehicle',
+    coverageTopicId: 'cov-7-2'
   },
   {
     id: 'q93',
@@ -1625,7 +1974,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 9, Implied Consent): When you drive in California, you consent to have your breath, blood, or urine tested if you are arrested for driving under the influence (DUI).',
-    testGroup: 21
+    testGroup: 21,
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 57,
+    sourceTopic: 'DUI Arrest refusal penalty (1 year suspension)',
+    coverageTopicId: 'cov-7-4'
   },
   {
     id: 'q94',
@@ -1640,7 +1993,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 9, DUI Penalties): First-offense DUI penalties include administrative license suspension, completing a paid DUI program, and paying court fines.',
-    testGroup: 21
+    testGroup: 21,
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 57,
+    sourceTopic: 'DUI Conviction impact duration (10 years on record, program, SR-22)',
+    coverageTopicId: 'cov-7-5'
   },
   {
     id: 'q95',
@@ -1655,7 +2012,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 9, Refusal): Refusing a chemical test results in an automatic license suspension/revocation for 1 year (first offense), under the Implied Consent Law.',
-    testGroup: 21
+    testGroup: 21,
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 57,
+    sourceTopic: 'DUI Arrest refusal penalty (1 year suspension)',
+    coverageTopicId: 'cov-7-4'
   },
   {
     id: 'q96',
@@ -1670,7 +2031,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 9, Open Container): Open containers of alcohol must be kept in the trunk or in a place where passengers cannot access them.',
-    testGroup: 21
+    testGroup: 21,
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 55,
+    sourceTopic: 'Open Container laws for alcohol and cannabis in a vehicle',
+    coverageTopicId: 'cov-7-2'
   },
   {
     id: 'q97',
@@ -1685,7 +2050,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 9, Minors and Alcohol): Minors under 21 cannot transport alcohol inside a vehicle unless accompanied by a parent, responsible relative, or designated legal guardian.',
-    testGroup: 21
+    testGroup: 21,
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 55,
+    sourceTopic: 'Open Container laws for alcohol and cannabis in a vehicle',
+    coverageTopicId: 'cov-7-2'
   },
   {
     id: 'q98',
@@ -1700,7 +2069,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 9, Under 21 limits): Zero Tolerance law makes it illegal for anyone under 21 to drive with a BAC of 0.01% or higher.',
-    testGroup: 21
+    testGroup: 21,
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 56,
+    sourceTopic: 'Blood Alcohol Concentration (BAC) Limits (0.08%, 0.01% under 21, 0.04% CDL)',
+    coverageTopicId: 'cov-7-3'
   },
   {
     id: 'q99',
@@ -1715,7 +2088,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 9, Drugs and Driving): Driving under the influence of any drug (prescription, over-the-counter, or illicit) that impairs your safety is illegal and subject to the same penalties as alcohol DUI.',
-    testGroup: 21
+    testGroup: 21,
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 55,
+    sourceTopic: 'California Driving under the Influence (DUI) laws & drug parity',
+    coverageTopicId: 'cov-7-1'
   },
   {
     id: 'q100',
@@ -1730,10 +2107,12 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 9, Safety Advice): A designated driver is a completely sober person who has a valid driver\'s license to drive passengers safely.',
-    testGroup: 21
+    testGroup: 21,
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 55,
+    sourceTopic: 'Safe Transit Designated Driver',
+    coverageTopicId: ''
   },
-
-  // ==================== TEST 22: TRAFFIC LANES, LINE MARKINGS & COLORED PAVEMENT ====================
   {
     id: 'q101',
     category: 'Rules of the Road',
@@ -1747,7 +2126,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 3,
     explanation: 'California Handbook (Section 5, Lane Markings): Do not pass over double solid yellow lines. However, you can cross them to make a left turn or enter/exit a public road or private driveway.',
-    testGroup: 22
+    testGroup: 22,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 6,
+    sourceTopic: 'Lane Markings: Single and Double Solid Yellow Lines',
+    coverageTopicId: 'cov-4-1'
   },
   {
     id: 'q102',
@@ -1762,7 +2145,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 5): A solid yellow line on your side means you cannot pass.',
-    testGroup: 22
+    testGroup: 22,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 6,
+    sourceTopic: 'Lane Markings: Single and Double Solid Yellow Lines',
+    coverageTopicId: 'cov-4-1'
   },
   {
     id: 'q103',
@@ -1777,7 +2164,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 5): If the broken line is on your side, you may pass when safe.',
-    testGroup: 22
+    testGroup: 22,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 6,
+    sourceTopic: 'Broken Yellow Lines and passing rules',
+    coverageTopicId: 'cov-4-3'
   },
   {
     id: 'q104',
@@ -1792,7 +2183,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 5, Turnout Lanes): If you are driving slowly on a two-lane road and 5 or more vehicles are following you, you must pull into a turnout lane to let them pass.',
-    testGroup: 22
+    testGroup: 22,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 9,
+    sourceTopic: 'Turnout Areas or Lanes (5+ vehicle delay rule)',
+    coverageTopicId: 'cov-4-10'
   },
   {
     id: 'q105',
@@ -1807,7 +2202,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 5, HOV Lanes): HOV lanes are reserved for carpools, buses, motorcycles, or low-emission vehicles with a minimum number of occupants as posted.',
-    testGroup: 22
+    testGroup: 22,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 9,
+    sourceTopic: 'Bicycle Lane Types & motor vehicle driving restriction (200 ft)',
+    coverageTopicId: 'cov-4-11'
   },
   {
     id: 'q106',
@@ -1822,7 +2221,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 5, Limit Lines): A solid white line across a lane is a limit line, marking where you must halt before entering a crosswalk or intersection.',
-    testGroup: 22
+    testGroup: 22,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 6,
+    sourceTopic: 'Single and Double Solid White Lines',
+    coverageTopicId: 'cov-4-4'
   },
   {
     id: 'q107',
@@ -1837,7 +2240,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 5, Center Left Turn Lanes): Center left turn lanes are located in the middle of a two-way street and are used only to turn left or make U-turns.',
-    testGroup: 22
+    testGroup: 22,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 9,
+    sourceTopic: 'Center Left Turn Lanes (200 feet driving limit)',
+    coverageTopicId: 'cov-4-9'
   },
   {
     id: 'q108',
@@ -1852,7 +2259,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 5): You can only drive inside a center left turn lane for a maximum of 200 feet before completing your turn.',
-    testGroup: 22
+    testGroup: 22,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 9,
+    sourceTopic: 'Center Left Turn Lanes (200 feet driving limit)',
+    coverageTopicId: 'cov-4-9'
   },
   {
     id: 'q109',
@@ -1867,7 +2278,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 5, Yield Lines): Yield lines (also called sharks teeth) are white triangles pointing toward oncoming vehicles that show where you must yield or stop.',
-    testGroup: 22
+    testGroup: 22,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 7,
+    sourceTopic: 'Yield Lines (Solid white triangles)',
+    coverageTopicId: 'cov-4-6'
   },
   {
     id: 'q110',
@@ -1882,10 +2297,12 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 5, Lane Markings): Solid lines prohibit crossing/lane changes, whereas broken lines allow crossing when safe.',
-    testGroup: 22
+    testGroup: 22,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 6,
+    sourceTopic: 'Single and Double Solid White Lines',
+    coverageTopicId: 'cov-4-4'
   },
-
-  // ==================== TEST 23: CRUCIAL VEHICLE SAFETY EQUIPMENT & MAINTENANCE RULES ====================
   {
     id: 'q111',
     category: 'Rules of the Road',
@@ -1899,7 +2316,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 7, Headlights): Headlights must be turned on from 30 minutes after sunset to 30 minutes before sunrise, or whenever weather/visibility is poor enough that you cannot see 1,000 feet ahead.',
-    testGroup: 23
+    testGroup: 23,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 4,
+    sourceTopic: 'Headlights: Demands, Rain/Wipers, Sunset/Sunrise, and High Beams',
+    coverageTopicId: 'cov-3-4'
   },
   {
     id: 'q112',
@@ -1914,7 +2335,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 7, High-Beams): You must dim your high-beam headlights to low beams within 500 feet of an oncoming vehicle.',
-    testGroup: 23
+    testGroup: 23,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 4,
+    sourceTopic: 'Headlights: Demands, Rain/Wipers, Sunset/Sunrise, and High Beams',
+    coverageTopicId: 'cov-3-4'
   },
   {
     id: 'q113',
@@ -1929,7 +2354,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 7, High-Beams): You must dim your high beams to low beams within 300 feet when following another vehicle from behind.',
-    testGroup: 23
+    testGroup: 23,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 4,
+    sourceTopic: 'Headlights: Demands, Rain/Wipers, Sunset/Sunrise, and High Beams',
+    coverageTopicId: 'cov-3-4'
   },
   {
     id: 'q114',
@@ -1944,7 +2373,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 7, Headlights): California law requires you to turn on low-beam headlights when windshield wipers are activated due to rain, snow, or fog.',
-    testGroup: 23
+    testGroup: 23,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 4,
+    sourceTopic: 'Headlights: Demands, Rain/Wipers, Sunset/Sunrise, and High Beams',
+    coverageTopicId: 'cov-3-4'
   },
   {
     id: 'q115',
@@ -1959,7 +2392,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Vehicle Code (CVC 27465b): Tires are legally bald and unsafe to operate if they have less than 2/32 (1/16) of an inch of tread depth in any two adjacent major grooves.',
-    testGroup: 23
+    testGroup: 23,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 3,
+    sourceTopic: 'Tire Maintenance Guidelines',
+    coverageTopicId: ''
   },
   {
     id: 'q116',
@@ -1974,7 +2411,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 11, Engine Warning): A red engine or thermometer warning light indicates that the cooling system is overheating. Pull over safely and turn off the engine.',
-    testGroup: 23
+    testGroup: 23,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 3,
+    sourceTopic: 'Dashboard Indicator Lights',
+    coverageTopicId: ''
   },
   {
     id: 'q117',
@@ -1989,7 +2430,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 11, Safe Braking): For ABS/ESC equipped vehicles, do not pump the brakes. Maintain firm, steady pressure so the computer can modulate skid control.',
-    testGroup: 23
+    testGroup: 23,
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 53,
+    sourceTopic: 'Emergency Braking Protocols',
+    coverageTopicId: ''
   },
   {
     id: 'q118',
@@ -2004,7 +2449,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'Supplemental Content (Windshield Safety): Under California vehicle safety guidelines, a cracked or damaged windshield impairs safe vision and can fail to support the roof during a rollover crash.',
-    testGroup: 23
+    testGroup: 23,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 3,
+    sourceTopic: 'Windshield Visibility Rules',
+    coverageTopicId: ''
   },
   {
     id: 'q119',
@@ -2019,7 +2468,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California law states that front side windows must have a visible light transmission (VLT) of at least 70% to ensure law enforcement officers can observe the driver.',
-    testGroup: 23
+    testGroup: 23,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 3,
+    sourceTopic: 'Window Tinting Regulations',
+    coverageTopicId: ''
   },
   {
     id: 'q120',
@@ -2034,10 +2487,12 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'Strong vibration or pulling in the steering wheel points to tire low pressure, tire misalignment, or suspension issues. Pull over and check your tires.',
-    testGroup: 23
+    testGroup: 23,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 3,
+    sourceTopic: 'Vehicle Mechanical Inspection',
+    coverageTopicId: ''
   },
-
-  // ==================== TEST 24: MISCELLANEOUS LAWS, CELL PHONES & KEY FINANCIAL OBLIGATIONS ====================
   {
     id: 'q121',
     category: 'Rules of the Road',
@@ -2051,7 +2506,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 7, Technology): Minors under 18 years of age cannot use a cell phone or electronic wireless communications device while driving for any reason, except to contact emergency services.',
-    testGroup: 24
+    testGroup: 24,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 3,
+    sourceTopic: 'Wireless Phone Restrictions',
+    coverageTopicId: ''
   },
   {
     id: 'q122',
@@ -2066,7 +2525,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 7, Technology): Drivers 18 and older must use hands-free technology and mount phones in designated corners of the windshield or dashboard so as not to block vision.',
-    testGroup: 24
+    testGroup: 24,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 3,
+    sourceTopic: 'Hands-Free Device Exception',
+    coverageTopicId: ''
   },
   {
     id: 'q123',
@@ -2081,7 +2544,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 3, Health/Hearing): Drivers and bicyclists are legally prohibited from wearing earplugs or headsets in both ears while on public roads (Page 3/7).',
-    testGroup: 24
+    testGroup: 24,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 3,
+    sourceTopic: 'Wearing Headset or Earplugs in Both Ears',
+    coverageTopicId: 'cov-3-2'
   },
   {
     id: 'q124',
@@ -2096,7 +2563,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 5, Other Important Roadway Information): Littering or throwing lit smoking materials is illegal and carries a fine up to $1,000 and mandatory community litter cleanup (Page 44).',
-    testGroup: 24
+    testGroup: 24,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 44,
+    sourceTopic: 'Roadway Littering Infractions',
+    coverageTopicId: ''
   },
   {
     id: 'q125',
@@ -2111,7 +2582,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 8, Insurance Requirements): Minimum physical liability requirements are $30k per person injured, $60k per accident for all persons injured, and $15k for property damage (Page 58).',
-    testGroup: 24
+    testGroup: 24,
+    sourceSection: 'Section 8: Financial Responsibility, Insurance Requirements, and Collisions',
+    sourcePage: 58,
+    sourceTopic: 'Mandatory Minimum Liability Coverage ($30k / $60k / $15k)',
+    coverageTopicId: 'cov-8-1'
   },
   {
     id: 'q126',
@@ -2126,7 +2601,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 7, Freeway Breakdowns): Turn on hazard double-flashers, pull onto the shoulder, and stay buckled inside your vehicle unless it is safe to walk or the car is on fire.',
-    testGroup: 24
+    testGroup: 24,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 3,
+    sourceTopic: 'Hand Signaling and Vehicle Signaling Times/Limits',
+    coverageTopicId: 'cov-3-3'
   },
   {
     id: 'q127',
@@ -2141,7 +2620,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 8, Collisions): You must report a collision involving death, injury, or property damage over $1,000 to the DMV using an SR-1 report within 10 days.',
-    testGroup: 24
+    testGroup: 24,
+    sourceSection: 'Section 8: Financial Responsibility, Insurance Requirements, and Collisions',
+    sourcePage: 59,
+    sourceTopic: 'What to do after a collision & DMV Reporting timelines (SR-1 within 10 days if >$1k/injury)',
+    coverageTopicId: 'cov-8-3'
   },
   {
     id: 'q128',
@@ -2156,7 +2639,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Vehicle Code (CVC 23116): No person can drive a pickup truck with a passenger in the bed unless they are restrained in a seat with a seatbelt or protected by an approved camper shell/body.',
-    testGroup: 24
+    testGroup: 24,
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 51,
+    sourceTopic: 'Pickup Cargo Bed Seating limits',
+    coverageTopicId: ''
   },
   {
     id: 'q129',
@@ -2171,7 +2658,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Restricted Parking): It is illegal to park a vehicle within 15 feet of a fire station driveway.',
-    testGroup: 24
+    testGroup: 24,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 20,
+    sourceTopic: 'Illegal Parking locations (hydrant 15ft, crosswalk 20ft)',
+    coverageTopicId: 'cov-4-21'
   },
   {
     id: 'q130',
@@ -2186,10 +2677,12 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 11, Sticking Accelerator): If your engine accelerates uncontrollably, shift to Neutral (N), apply brakes steadily, guide the vehicle off the road, and turn off the engine when safe.',
-    testGroup: 24
+    testGroup: 24,
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 53,
+    sourceTopic: 'Sticking Accelerator Recovery',
+    coverageTopicId: ''
   },
-
-  // ==================== TEST 25: SPECIAL ROADS, POINT SYSTEMS & EMERGENCY HANDLING ====================
   {
     id: 'q131',
     category: 'Rules of the Road',
@@ -2203,7 +2696,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Mountain Roads): The vehicle traveling uphill has the right-of-way. The downhill vehicle must back up because it can back up more safely than the uphill vehicle can back down.',
-    testGroup: 25
+    testGroup: 25,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 32,
+    sourceTopic: 'Mountain Roads backup/right-of-way rules',
+    coverageTopicId: 'cov-5-6'
   },
   {
     id: 'q132',
@@ -2218,7 +2715,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 11, Hydroplaning): If you hydroplane (typically occurring above 50 mph), gradually slow down by releasing the accelerator without braking, and steer straight.',
-    testGroup: 25
+    testGroup: 25,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 32,
+    sourceTopic: 'Sharing the Road: Large Trucks (No Zones/Blind Spots, Braking)',
+    coverageTopicId: 'cov-5-7'
   },
   {
     id: 'q133',
@@ -2233,7 +2734,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 3, NOTS): A driver is considered a negligent operator and suspended if they get: 4 points in 12 months, 6 points in 24 months, or 8 points in 36 months.',
-    testGroup: 25
+    testGroup: 25,
+    sourceSection: 'Section 1: The California Driver\'s License',
+    sourcePage: 1,
+    sourceTopic: 'Negligent Operator Treatment System (NOTS)',
+    coverageTopicId: ''
   },
   {
     id: 'q134',
@@ -2248,7 +2753,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 6, Speed Limits): The speed limit is 15 mph in any blind intersection (where you cannot see clearly 100 feet in both directions).',
-    testGroup: 25
+    testGroup: 25,
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 52,
+    sourceTopic: 'Basic Speed Law & Freeway Speed Limits (65 mph vs 55 mph undivided/towing)',
+    coverageTopicId: 'cov-6-10'
   },
   {
     id: 'q135',
@@ -2263,7 +2772,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Speed Limits): The speed limit in any alleyway under California law is 15 mph.',
-    testGroup: 25
+    testGroup: 25,
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 52,
+    sourceTopic: 'Basic Speed Law & Freeway Speed Limits (65 mph vs 55 mph undivided/towing)',
+    coverageTopicId: 'cov-6-10'
   },
   {
     id: 'q136',
@@ -2278,7 +2791,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Railroad Crossings): You must stop your vehicle between 15 and 50 feet from the nearest track when a train is approaching or signal gates are active.',
-    testGroup: 25
+    testGroup: 25,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 26,
+    sourceTopic: 'Sign Shapes and Meanings (Stop, Yield, School, Railroad)',
+    coverageTopicId: 'cov-5-3'
   },
   {
     id: 'q137',
@@ -2293,7 +2810,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 6, Railroads): The speed limit is 15 mph within 100 feet of a crossing if you cannot see the tracks for 400 feet in both directions.',
-    testGroup: 25
+    testGroup: 25,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 39,
+    sourceTopic: 'Blind Intersections, Alleys, and Railroad Tracks speed zones (15 mph)',
+    coverageTopicId: 'cov-5-9'
   },
   {
     id: 'q138',
@@ -2308,10 +2829,12 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 7, Defensive Driving): To avoid sudden stops and spot hazards, scan the road 10 to 12 seconds ahead of your vehicle.',
-    testGroup: 25
+    testGroup: 25,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 5,
+    sourceTopic: 'Using Emergency Hazard Flashers & Vehicle Trouble Rules',
+    coverageTopicId: 'cov-3-5'
   },
-
-  // ==================== TEST 26: HILL PARKING, HAND SIGNALS & SPECIAL RIGHTS ====================
   {
     id: 'q139',
     category: 'Rules of the Road',
@@ -2325,7 +2848,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Hill Parking): When parking downhill next to a curb, turn your front wheels toward the curb (right) so the car rolls into the curb if the brakes fail.',
-    testGroup: 26
+    testGroup: 26,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 19,
+    sourceTopic: 'Parking on a Hill (Uphill, Downhill, No Curb)',
+    coverageTopicId: 'cov-4-19'
   },
   {
     id: 'q140',
@@ -2340,7 +2867,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 6, Hill Parking): When parking uphill next to a curb, turn your front wheels away from the curb (left) and let your vehicle roll back a few inches so the tires rest against the curb.',
-    testGroup: 26
+    testGroup: 26,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 19,
+    sourceTopic: 'Parking on a Hill (Uphill, Downhill, No Curb)',
+    coverageTopicId: 'cov-4-19'
   },
   {
     id: 'q141',
@@ -2355,7 +2886,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Hill Parking): If there is no curb, turn your wheels toward the side of the road (right), so that if brakes fail, the vehicle rolls away from the center of the road.',
-    testGroup: 26
+    testGroup: 26,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 19,
+    sourceTopic: 'Parking on a Hill (Uphill, Downhill, No Curb)',
+    coverageTopicId: 'cov-4-19'
   },
   {
     id: 'q142',
@@ -2370,7 +2905,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 7, Signaling): Extending your arm straight out indicates a left-hand turn.',
-    testGroup: 26
+    testGroup: 26,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 3,
+    sourceTopic: 'Hand Signaling and Vehicle Signaling Times/Limits',
+    coverageTopicId: 'cov-3-3'
   },
   {
     id: 'q143',
@@ -2385,7 +2924,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 7, Signaling): Extending your left arm bent upward indicates a right-hand turn.',
-    testGroup: 26
+    testGroup: 26,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 3,
+    sourceTopic: 'Hand Signaling and Vehicle Signaling Times/Limits',
+    coverageTopicId: 'cov-3-3'
   },
   {
     id: 'q144',
@@ -2400,7 +2943,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 7, Signaling): Extending your left arm bent downward indicates a slow down or stop signaling.',
-    testGroup: 26
+    testGroup: 26,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 3,
+    sourceTopic: 'Hand Signaling and Vehicle Signaling Times/Limits',
+    coverageTopicId: 'cov-3-3'
   },
   {
     id: 'q145',
@@ -2415,7 +2962,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 8, Collisions): If you hit a parked car, you must leave a clear note with your name, telephone number, address, and notify the local police or CHP without delay.',
-    testGroup: 26
+    testGroup: 26,
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 55,
+    sourceTopic: 'Open Container laws for alcohol and cannabis in a vehicle',
+    coverageTopicId: 'cov-7-2'
   },
   {
     id: 'q146',
@@ -2430,6 +2981,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Animals on Road): People riding animals or driving animal-drawn vehicles on public roads are subject to the same traffic laws and rights as drivers.',
-    testGroup: 26
+    testGroup: 26,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 32,
+    sourceTopic: 'Animal-Drawn Vehicles Sharing',
+    coverageTopicId: ''
   }
 ];

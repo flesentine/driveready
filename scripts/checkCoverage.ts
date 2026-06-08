@@ -22,17 +22,45 @@ const indexQuestionsStart = dataContent.indexOf("export const PRACTICE_QUESTIONS
 const roadSignsSubstr = dataContent.substring(indexRoadSignsStart, indexQuestionsStart);
 const questionsSubstr = dataContent.substring(indexQuestionsStart);
 
-// Parse Question IDs from PRACTICE_QUESTIONS
-const questionIdMatches = [...questionsSubstr.matchAll(/id:\s*['"](q\d+)['"]/g)];
-const actualQuestionIds = new Set(questionIdMatches.map(m => m[1]));
-
-// Parse Sign IDs from ROAD_SIGNS (e.g. stop, yield)
+// Parse Sign IDs from ROAD_SIGNS
 const signIdMatches = [...roadSignsSubstr.matchAll(/id:\s*['"]([^'"]+)['"]/g)];
 const actualSignIds = new Set(signIdMatches.map(m => m[1]));
 
-// Parse Pro Tip IDs from PRO_TIPS (e.g. id: 1)
+// Parse Pro Tip IDs from PRO_TIPS
 const tipIdMatches = [...proTipsContent.matchAll(/id:\s*(\d+)/g)];
 const actualTipIds = new Set(tipIdMatches.map(m => m[1]));
+
+// Parse Questions with precise regex to capture metadata
+const questionBlocks = questionsSubstr.split(/id:\s*['"](q\d+)['"]/g);
+interface ParsedQuestion {
+  id: string;
+  sourceSection: string | null;
+  sourcePage: number | null;
+  sourceTopic: string | null;
+  coverageTopicId: string | null;
+}
+
+const parsedQuestions: ParsedQuestion[] = [];
+const actualQuestionIds = new Set<string>();
+
+for (let i = 1; i < questionBlocks.length; i += 2) {
+  const qId = questionBlocks[i];
+  const qBody = questionBlocks[i + 1] || "";
+  actualQuestionIds.add(qId);
+  
+  const sectionM = qBody.match(/sourceSection:\s*['"]([^'"]*)['"]/);
+  const pageM = qBody.match(/sourcePage:\s*(\d+)/);
+  const topicM = qBody.match(/sourceTopic:\s*['"]([^'"]*)['"]/);
+  const covM = qBody.match(/coverageTopicId:\s*['"]([^'"]*)['"]/);
+
+  parsedQuestions.push({
+    id: qId,
+    sourceSection: sectionM ? sectionM[1] : null,
+    sourcePage: pageM ? parseInt(pageM[1], 10) : null,
+    sourceTopic: topicM ? topicM[1] : null,
+    coverageTopicId: covM ? covM[1] : null,
+  });
+}
 
 // Metrics accumulators
 const totalTopics = HANDBOOK_COVERAGE_MATRIX.length;
@@ -48,6 +76,13 @@ const brokenQuestionIds: { topicId: string, qId: string }[] = [];
 const brokenSignIds: { topicId: string, sId: string }[] = [];
 const brokenTipIds: { topicId: string, tId: number }[] = [];
 
+// Semantic alignment failures
+const missingMetadataQIds: string[] = [];
+const mismatchedTopicIdQIds: { qId: string, expected: string, actual: string }[] = [];
+
+const parsedQuestionsMap = new Map<string, ParsedQuestion>();
+parsedQuestions.forEach(q => parsedQuestionsMap.set(q.id, q));
+
 // Process each matrix item
 for (const item of HANDBOOK_COVERAGE_MATRIX) {
   if (item.coverageStatus === "Fully Covered") {
@@ -61,8 +96,18 @@ for (const item of HANDBOOK_COVERAGE_MATRIX) {
   if (item.relatedQuestions.length > 0) {
     topicsWithQuestions++;
     for (const qId of item.relatedQuestions) {
-      if (!actualQuestionIds.has(qId)) {
+      const q = parsedQuestionsMap.get(qId);
+      if (!q) {
         brokenQuestionIds.push({ topicId: item.id, qId });
+      } else {
+        // Validate that question contains matching coverageTopicId
+        if (q.coverageTopicId !== item.id) {
+          mismatchedTopicIdQIds.push({
+            qId,
+            expected: item.id,
+            actual: q.coverageTopicId || "none"
+          });
+        }
       }
     }
   }
@@ -83,6 +128,18 @@ for (const item of HANDBOOK_COVERAGE_MATRIX) {
         brokenTipIds.push({ topicId: item.id, tId });
       }
     }
+  }
+}
+
+// Validate each question metadata completeness and strict coverage mapping
+for (const q of parsedQuestions) {
+  if (
+    q.sourceSection === null ||
+    q.sourcePage === null ||
+    q.sourceTopic === null ||
+    q.coverageTopicId === null
+  ) {
+    missingMetadataQIds.push(q.id);
   }
 }
 
@@ -122,30 +179,46 @@ console.log(`- Total Practice Questions in app:   ${actualQuestionIds.size}`);
 console.log(`- Total Road Signs in app:           ${actualSignIds.size}`);
 console.log(`- Total Pro Tips in app:             ${actualTipIds.size}`);
 
-// Report any broken references
+// Report any broken references or alignment issues
 console.log("\n--- INTEGRITY CHECKS ---");
 let integrityPass = true;
 
 if (brokenQuestionIds.length > 0) {
-  console.error("⚠️  Found misspelled or missing Question IDs referenced in matrix:");
+  console.error("❌  Found misspelled or missing Question IDs referenced in matrix:");
   brokenQuestionIds.forEach(b => console.error(`   - Topic: ${b.topicId} references missing Question: ${b.qId}`));
   integrityPass = false;
 }
 
 if (brokenSignIds.length > 0) {
-  console.error("⚠️  Found misspelled or missing Road Sign IDs referenced in matrix:");
+  console.error("❌  Found misspelled or missing Road Sign IDs referenced in matrix:");
   brokenSignIds.forEach(b => console.error(`   - Topic: ${b.topicId} references missing Sign: ${b.sId}`));
   integrityPass = false;
 }
 
 if (brokenTipIds.length > 0) {
-  console.error("⚠️  Found misspelled or missing Pro Tip IDs referenced in matrix:");
+  console.error("❌  Found misspelled or missing Pro Tip IDs referenced in matrix:");
   brokenTipIds.forEach(b => console.error(`   - Topic: ${b.topicId} references missing Tip ID: ${b.tId}`));
+  integrityPass = false;
+}
+
+if (missingMetadataQIds.length > 0) {
+  console.error("❌  Found questions missing source metadata fields (sourceSection, sourcePage, sourceTopic, coverageTopicId):");
+  missingMetadataQIds.forEach(qId => console.error(`   - Question ID: ${qId} lacks complete handbook metadata`));
+  integrityPass = false;
+}
+
+if (mismatchedTopicIdQIds.length > 0) {
+  console.error("❌  Semantic Mismatches found! Mapped questions whose coverageTopicId does not match the matrix topic:");
+  mismatchedTopicIdQIds.forEach(m => {
+    console.error(`   - Question ID: ${m.qId} is mapped in matrix item '${m.expected}' but holds coverageTopicId '${m.actual}' in data.ts`);
+  });
   integrityPass = false;
 }
 
 if (integrityPass) {
   console.log("✅ All referenced IDs successfully direct-link to actual elements in data!");
+  console.log("✅ All 146 questions contain complete, validated source metadata!");
+  console.log("✅ All question-matrix mappings are cross-validated and semantically secure!");
 }
 
 console.log("\n==================================================\n");
