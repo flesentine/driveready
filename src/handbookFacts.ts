@@ -1161,6 +1161,16 @@ export const HANDBOOK_FACTS: HandbookFact[] = [
     mustHaveQuestion: true
   },
   {
+    id: 'fact-railroad-crossing-visibility-speed',
+    section: 'Section 5: Laws and Rules of the Road',
+    page: 39,
+    topic: 'Railroad crossing visibility and speed limit factors',
+    fact: 'If you cannot see the railroad tracks for 400 feet in both directions, the speed limit is 15 mph within 100 feet of the crossing.',
+    priority: 'high',
+    contentType: 'number',
+    mustHaveQuestion: true
+  },
+  {
     id: 'fact-railroad-track-stop-distance',
     section: 'Section 5: Laws and Rules of the Road',
     page: 39,
@@ -1463,6 +1473,16 @@ export const HANDBOOK_FACTS: HandbookFact[] = [
     mustHaveQuestion: true
   },
   {
+    id: 'fact-dashboard-warning-lights',
+    section: 'Section 6: Safe Driving',
+    page: 52,
+    topic: 'Dashboard temperature and engine warning indicators',
+    fact: 'A red engine or thermometer warming indicator on your dashboard indicates the cooling system is overheating or engine oil pressure is low.',
+    priority: 'high',
+    contentType: 'rule',
+    mustHaveQuestion: true
+  },
+  {
     id: 'fact-unattended-child-age6',
     section: 'Section 6: Safe Driving',
     page: 52,
@@ -1650,6 +1670,16 @@ export const HANDBOOK_FACTS: HandbookFact[] = [
     page: 57,
     topic: 'Minor alcohol possession rules',
     fact: 'Drivers under 21 may not carry unopened alcoholic beverages inside their vehicle unless accompanied by a parent, guardian, or relative age 21+. Opened alcohol must be kept in the trunk.',
+    priority: 'high',
+    contentType: 'rule',
+    mustHaveQuestion: true
+  },
+  {
+    id: 'fact-dui-drugs-prescription-impairment',
+    section: 'Section 7: Alcohol and Drugs',
+    page: 55,
+    topic: 'Prescription and over-the-counter medicine driving legality',
+    fact: 'It is illegal to drive under the influence of any drug, including prescription and over-the-counter medications, if they impair your ability to drive safely.',
     priority: 'high',
     contentType: 'rule',
     mustHaveQuestion: true

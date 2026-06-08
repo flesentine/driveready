@@ -224,38 +224,96 @@ parsedQuestions.forEach(q => {
   // 5. Semantic mismatch helper (suspicious-mapping audit)
   if (q.questionText) {
     const qTextLower = q.questionText.toLowerCase();
+    const qCategoryLower = (q.category || '').toLowerCase();
+    const qExplLower = (q.explanation || '').toLowerCase();
 
-    // A. Parked vehicle / collision / accident / hit-and-run with DUI container
-    if (
-      (qTextLower.includes("parked vehicle") || qTextLower.includes("collision") || qTextLower.includes("accident") || qTextLower.includes("hit-and-run") || qTextLower.includes("collide")) &&
-       q.coverageFactIds.some(f => f.includes("dui") || f.includes("open-container") || f.includes("alcohol"))
-    ) {
-      suspiciousMappings.push(`Question [${q.id}]: text mentions parked vehicle/collision/accident but maps to DUI/open-container fact: [${q.coverageFactIds.join(', ')}]`);
+    const hasWord = (text: string, word: string) => {
+      const regex = new RegExp(`\\b${word}\\b`, 'i');
+      return regex.test(text);
+    };
+
+    const hasAnyWord = (text: string, words: string[]) => {
+      return words.some(w => hasWord(text, w));
+    };
+
+    const mentionsAlcoholOrDrugs = 
+      hasAnyWord(qTextLower, ['alcohol', 'drug', 'drugs', 'bac', 'dui', 'prescription', 'otc', 'medication', 'medications', 'impair', 'impairment', 'impaired', 'influence']) ||
+      hasAnyWord(qCategoryLower, ['alcohol', 'drug', 'drugs', 'bac', 'dui', 'prescription', 'otc', 'medication', 'medications', 'impair', 'impairment', 'impaired', 'influence']) ||
+      hasAnyWord(qExplLower, ['alcohol', 'drug', 'drugs', 'bac', 'dui', 'prescription', 'otc', 'medication', 'medications', 'impair', 'impairment', 'impaired', 'influence']);
+
+    const mentionsRailroad = 
+      hasAnyWord(qTextLower, ['railroad', 'train', 'trains', 'tracks', 'railway']) || qTextLower.includes("rail crossing");
+
+    const mentionsPedestrian = 
+      hasAnyWord(qTextLower, ['pedestrian', 'pedestrians', 'white cane', 'guide dog', 'crosswalk', 'crosswalks']);
+
+    const mentionsParking = 
+      (qTextLower.includes("parking uphill") || qTextLower.includes("parking downhill") || hasAnyWord(qTextLower, ['curb', 'wheels', 'wheel', 'uphill', 'downhill'])) &&
+      !qTextLower.includes("steering wheel");
+
+    const mentionsTruck = 
+      hasAnyWord(qTextLower, ['truck', 'trucks', 'no-zone', 'no-zones', 'blind spot', 'blind spots']);
+
+    // Check 1: Alcohol or Drugs vs pedestrian, parking, sign, senior, lane, or hill
+    if (mentionsAlcoholOrDrugs) {
+      const badFacts = q.coverageFactIds.filter(f => 
+        f.includes("pedestrian") || f.includes("ped-") || f.includes("parking") || f.includes("curb") || f.includes("sign-") || f.includes("seniors") || f.includes("lane") || f.includes("hill")
+      );
+      if (badFacts.length > 0) {
+        suspiciousMappings.push(`Question [${q.id}]: alcohol/drugs/DUI query maps to invalid facts: [${badFacts.join(', ')}]`);
+      }
     }
 
-    // B. Horse / animal-drawn with licensing/REAL ID
-    if (
-      (qTextLower.includes("horse") || qTextLower.includes("animal-drawn") || qTextLower.includes("rider")) &&
-       q.coverageFactIds.some(f => f.includes("class-c") || f.includes("real-id") || f.includes("license"))
-    ) {
-      suspiciousMappings.push(`Question [${q.id}]: text mentions horses/animal-drawn but maps to license class or REAL ID fact: [${q.coverageFactIds.join(', ')}]`);
+    // Check 2: Railroad vs parking, DUI, pedestrian, or license
+    if (mentionsRailroad) {
+      const badFacts = q.coverageFactIds.filter(f => 
+        f.includes("parking") || f.includes("curb") || f.includes("dui") || f.includes("alcohol") || f.includes("bac") || f.includes("pedestrian") || f.includes("ped-") || f.includes("license") || f.includes("permit") || f.includes("class-c")
+      );
+      if (badFacts.length > 0) {
+        suspiciousMappings.push(`Question [${q.id}]: railroad query maps to invalid facts: [${badFacts.join(', ')}]`);
+      }
     }
 
-    // C. Alcohol / BAC / DUI / drug / container with parking/sign/senior
-    if (
-      (qTextLower.includes("alcohol") || qTextLower.includes("bac") || qTextLower.includes("dui") || qTextLower.includes("drug") || qTextLower.includes("container")) &&
-       q.coverageFactIds.some(f => f.includes("parking") || f.includes("sign") || f.includes("seniors"))
-    ) {
-      suspiciousMappings.push(`Question [${q.id}]: text mentions alcohol/BAC/DUI but maps to parking/sign/senior fact: [${q.coverageFactIds.join(', ')}]`);
+    // Check 3: Pedestrian vs DUI, parking, license, or railroad
+    if (mentionsPedestrian) {
+      const badFacts = q.coverageFactIds.filter(f => 
+        f.includes("dui") || f.includes("alcohol") || f.includes("bac") || f.includes("parking") || f.includes("curb") || f.includes("license") || f.includes("permit") || f.includes("class-c") || f.includes("railroad") || f.includes("train") || f.includes("track")
+      );
+      if (badFacts.length > 0) {
+        suspiciousMappings.push(`Question [${q.id}]: pedestrian query maps to invalid facts: [${badFacts.join(', ')}]`);
+      }
     }
 
-    // D. Sign / signal / light with licensing/class-c
-    if (
-      (qTextLower.includes("sign") || qTextLower.includes("signal") || qTextLower.includes("red light") || qTextLower.includes("yellow light") || qTextLower.includes("green light")) &&
-       q.coverageFactIds.some(f => f.includes("license") || f.includes("class-c") || f.includes("permit")) &&
-       !qTextLower.includes("hand-signal") // hand-signal rules can match
-    ) {
-      suspiciousMappings.push(`Question [${q.id}]: text mentions sign/signal/light but maps to licensing/class-c/permit fact: [${q.coverageFactIds.join(', ')}]`);
+    // Check 4: Parking uphill/downhill/curb/wheels vs DUI, pedestrian, railroad, or license
+    if (mentionsParking) {
+      const badFacts = q.coverageFactIds.filter(f => 
+        f.includes("dui") || f.includes("alcohol") || f.includes("bac") || f.includes("pedestrian") || f.includes("ped-") || f.includes("railroad") || f.includes("train") || f.includes("track") || f.includes("license") || f.includes("permit") || f.includes("class-c")
+      );
+      if (badFacts.length > 0) {
+        suspiciousMappings.push(`Question [${q.id}]: parking-hill/curb query maps to invalid facts: [${badFacts.join(', ')}]`);
+      }
+    }
+
+    // Check 5: Truck vs BAC/DUI, pedestrian, parking, or license
+    if (mentionsTruck) {
+      const badFacts = q.coverageFactIds.filter(f => 
+        f.includes("bac") || f.includes("dui") || f.includes("alcohol") || f.includes("pedestrian") || f.includes("ped-") || f.includes("parking") || f.includes("curb") || f.includes("license") || f.includes("permit") || f.includes("class-c")
+      );
+      if (badFacts.length > 0) {
+        suspiciousMappings.push(`Question [${q.id}]: truck query maps to invalid facts: [${badFacts.join(', ')}]`);
+      }
+    }
+
+    // Sign/Signal vs Licensing check with verb protection
+    const hasSignWord = hasAnyWord(qTextLower, ['sign', 'signs', 'signal', 'signals', 'light', 'lights']) && 
+                        !qTextLower.includes("indicator light") && 
+                        !qTextLower.includes("warning light");
+    const isSignVerb = qTextLower.includes("must sign") || qTextLower.includes("to sign") || qTextLower.includes("who must sign") || qTextLower.includes("signing") || qTextLower.includes("parents or legal guardians");
+    if (hasSignWord && !isSignVerb && !qTextLower.includes("hand-signal")) {
+      const badFacts = q.coverageFactIds.filter(fId => fId.includes("license") || fId.includes("class-c") || fId.includes("permit"));
+      if (badFacts.length > 0) {
+        suspiciousMappings.push(`Question [${q.id}]: road sign query maps to licensing facts: [${badFacts.join(', ')}]`);
+      }
     }
   }
 });
@@ -404,7 +462,7 @@ if (uncoveredFacts.length > 0) {
     integrityPass = false;
   }
 } else {
-  console.log("🎉 SUCCESS: All 168 / 168 handbook facts are fully covered with at least one practice question!");
+  console.log(`🎉 SUCCESS: All ${totalFacts} / ${totalFacts} handbook facts are fully covered with at least one practice question!`);
 }
 
 // Print suspicious mappings report

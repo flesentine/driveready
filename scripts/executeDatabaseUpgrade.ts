@@ -1633,6 +1633,24 @@ const finalUncoveredAppended = [
     sourcePage: 24,
     sourceTopic: 'Solid Red Light Definition',
     coverageFactIds: ['fact-traffic-light-red']
+  },
+  {
+    id: 'q234',
+    category: 'Safe Driving',
+    questionText: 'Under California law, how close to the curb must a vehicle\'s wheels be when parallel parked?',
+    options: [
+      'Within 18 inches.',
+      'Within 12 inches.',
+      'Within 24 inches.',
+      'Within 6 inches.'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'California Handbook (Section 4): A parallel parked vehicle must have its wheels parallel to and within 18 inches of the curb.',
+    testGroup: 40,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 18,
+    sourceTopic: 'Parallel parking distance limit',
+    coverageFactIds: ['fact-parking-curb-distance']
   }
 ];
 
@@ -1693,7 +1711,7 @@ const fullQMap: { [qId: string]: string[] } = {
   q53: ['fact-restraint-under8-backseat'],
   q54: ['fact-blind-intersection-speed'],
   q55: ['fact-hill-parking-uphill'],
-  q56: ['fact-hill-parking-uphill'],
+  q56: ['fact-railroad-obscured-speed'],
   q57: ['fact-school-bus-divided-highway'],
   q58: ['fact-restraint-height-4ft9-seats'],
   q59: ['fact-school-bus-stop-violations'],
@@ -1704,9 +1722,9 @@ const fullQMap: { [qId: string]: string[] } = {
   q64: ['fact-dui-test-refusal'],
   q65: ['fact-skid-release-accelerator-no-brakes'],
   q66: ['fact-truck-no-zone-blind'],
-  q67: ['fact-pedestrian-white-canes'],
+  q67: ['fact-dui-drugs-prescription-impairment'],
   q68: ['fact-pedestrian-white-canes'],
-  q69: ['fact-hill-parking-uphill'],
+  q69: ['fact-railroad-crossing-visibility-speed'],
   q70: ['fact-tailgate-three-second-rule'],
   q71: ['fact-provisional-curfew'],
   q72: ['fact-provisional-passengers'],
@@ -1723,7 +1741,7 @@ const fullQMap: { [qId: string]: string[] } = {
   q83: ['fact-school-bus-red-flashing'],
   q84: ['fact-school-bus-divided-highway'],
   q85: ['fact-slow-moving-vehicle-speed'],
-  q86: ['fact-parking-curb-distance'],
+  q86: ['fact-truck-no-zone-blind'],
   q87: ['fact-bike-passing-clearance'],
   q88: ['fact-move-over-law-tows'],
   q89: ['fact-colored-curb-white'],
@@ -1753,7 +1771,7 @@ const fullQMap: { [qId: string]: string[] } = {
   q113: ['fact-dim-beams-following-300ft'],
   q114: ['fact-headlights-wipers-running'],
   q115: ['fact-class-c-license'],
-  q116: ['fact-class-c-license'],
+  q116: ['fact-dashboard-warning-lights'],
   q117: ['fact-skid-release-accelerator-no-brakes'],
   q118: ['fact-windshield-lower-corner-passenger'],
   q119: ['fact-windshield-lower-corner-driver'],

@@ -1272,10 +1272,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 6, Railroads): The speed limit is 15 mph within 100 feet of a railroad crossing if you cannot see the tracks for 400 feet in either direction.',
     testGroup: 17,
-    sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 19,
-    sourceTopic: 'Parking uphill wheels with curb',
-    coverageFactIds: ['fact-hill-parking-uphill']
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 39,
+    sourceTopic: 'Railroad crossing speed limit',
+    coverageFactIds: ['fact-railroad-obscured-speed']
   },
   {
     id: 'q57',
@@ -1481,10 +1481,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 7, Drugs and Driving): It is illegal to drive under the influence of any drug (recreational, prescription, or over-the-counter) that impairs your ability to drive safely.',
     testGroup: 18,
-    sourceSection: 'Section 5: Laws and Rules of the Road',
-    sourcePage: 32,
-    sourceTopic: 'Blind pedestrians right-of-way',
-    coverageFactIds: ['fact-pedestrian-white-canes']
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 55,
+    sourceTopic: 'Prescription and over-the-counter medicine driving legality',
+    coverageFactIds: ['fact-dui-drugs-prescription-impairment']
   },
   {
     id: 'q68',
@@ -1519,10 +1519,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 6): If you cannot see the railroad tracks for 400 feet in both directions, the speed limit is 15 mph within 100 feet of the crossing.',
     testGroup: 18,
-    sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 19,
-    sourceTopic: 'Parking uphill wheels with curb',
-    coverageFactIds: ['fact-hill-parking-uphill']
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 39,
+    sourceTopic: 'Railroad crossing visibility and speed limit factors',
+    coverageFactIds: ['fact-railroad-crossing-visibility-speed']
   },
   {
     id: 'q70',
@@ -1842,10 +1842,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Sharing the Road - Large Trucks): Large commercial trucks have massive blind areas around them called "No-Zones" (in front, behind, and along both sides). If you drive in these zones, the truck driver cannot see your vehicle.',
     testGroup: 20,
-    sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 18,
-    sourceTopic: 'Parallel parking distance limit',
-    coverageFactIds: ['fact-parking-curb-distance']
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 32,
+    sourceTopic: 'Large commercial truck blind spots',
+    coverageFactIds: ['fact-truck-no-zone-blind']
   },
   {
     id: 'q87',
@@ -2412,10 +2412,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 11, Engine Warning): A red engine or thermometer warning light indicates that the cooling system is overheating. Pull over safely and turn off the engine.',
     testGroup: 23,
-    sourceSection: 'Section 1: The California Driver\'s License',
-    sourcePage: 1,
-    sourceTopic: 'License classes',
-    coverageFactIds: ['fact-class-c-license']
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 52,
+    sourceTopic: 'Dashboard temperature and engine warning indicators',
+    coverageFactIds: ['fact-dashboard-warning-lights']
   },
   {
     id: 'q117',
@@ -4726,5 +4726,25 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourcePage: 24,
     sourceTopic: 'Solid Red Light Definition',
     coverageFactIds: ['fact-traffic-light-red']
+  },
+  {
+    id: 'q234',
+    category: 'Safe Driving',
+    questionText: 'Under California law, how close to the curb must a vehicle\'s wheels be when parallel parked?',
+    imageUrl: '',
+    options: [
+
+      'Within 18 inches.',
+      'Within 12 inches.',
+      'Within 24 inches.',
+      'Within 6 inches.'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'California Handbook (Section 4): A parallel parked vehicle must have its wheels parallel to and within 18 inches of the curb.',
+    testGroup: 40,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 18,
+    sourceTopic: 'Parallel parking distance limit',
+    coverageFactIds: ['fact-parking-curb-distance']
   }
 ];
