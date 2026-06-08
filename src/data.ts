@@ -29,7 +29,7 @@ export const INITIAL_USER_STATS: UserStats = {
   rankText: 'Top 35%',
   totalTestsTaken: 11,
   masteredSignsCount: 18,
-  userName: 'Chris',
+  userName: 'California Driver',
   hasActualActivity: false,
   categoryScores: {
     rulesOfRoad: 72,

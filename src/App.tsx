@@ -55,6 +55,10 @@ export default function App() {
   // UI state
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [quizNotification, setQuizNotification] = useState<{ text: string; isPassing: boolean } | null>(null);
+  
+  // Profile selection triggers Profile View inside active tabs context
+  const [isProfileTabActive, setIsProfileTabActive] = useState(false);
+  const [showQuitConfirm, setShowQuitConfirm] = useState(false);
 
   // Initialize and load persistent user stats
   useEffect(() => {
@@ -109,6 +113,11 @@ export default function App() {
       localStorage.setItem(LOCAL_STORAGE_STATS_KEY, JSON.stringify(defaultStats));
     }
   }, []);
+
+  // Scroll to top of the window on view transitions (changing tabs, entering quiz, etc.)
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [currentTab, isQuizActive, isFlashcardsActive, isProfileTabActive]);
 
   const saveStats = (newStats: UserStats) => {
     const recalculatedScore = computeReadinessScore(newStats);
@@ -279,10 +288,6 @@ export default function App() {
     };
     saveStats(newStats);
   };
-
-  // Profile selection triggers Profile View inside active tabs context
-  const [isProfileTabActive, setIsProfileTabActive] = useState(false);
-  const [showQuitConfirm, setShowQuitConfirm] = useState(false);
 
   const handleOpenProfileTab = () => {
     setIsProfileTabActive(true);
@@ -1279,7 +1284,7 @@ export default function App() {
       )}
 
       {/* Primary Container Shell */}
-      <main className={`flex-grow pt-24 px-4 max-w-7xl mx-auto w-full transition-all duration-300 ${
+      <main className={`flex-grow pt-20 px-4 max-w-7xl mx-auto w-full transition-all duration-300 ${
         (isQuizActive || isFlashcardsActive) ? 'pb-12' : 'pb-28'
       }`}>
         {isQuizActive ? (

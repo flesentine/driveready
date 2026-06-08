@@ -28,7 +28,7 @@ export const Header: React.FC<HeaderProps> = ({
   onBack,
   stats,
 }) => {
-  const currentName = stats?.userName || 'Chris';
+  const currentName = stats?.userName || 'California Driver';
   const currentStreak = stats?.streakDays ?? 3;
 
   return (

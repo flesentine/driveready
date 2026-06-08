@@ -8,7 +8,6 @@ import { ChevronRight, HelpCircle, AlertTriangle, Lightbulb, Flame, Clock, Targe
 import { TabType, UserStats } from '../types';
 import { PRO_TIPS } from '../proTips';
 import windyRoadImg from '../assets/images/windy_road_exact_match_1780632600693.png';
-import californiaBadgeImg from '../assets/images/california_state_flag_badge_1780860429638.png';
 
 interface DashboardViewProps {
   stats: UserStats;
@@ -119,7 +118,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       {/* Welcome Section */}
       <section className="space-y-1">
         <h2 className="font-sans font-extrabold text-3xl md:text-4xl text-primary-navy tracking-tight animate-fade-in">
-          Hello, {stats.userName || 'Chris'}.
+          Hello, {stats.userName || 'California Driver'}.
         </h2>
         <p className="text-base md:text-lg text-text-muted">
           {stats.testDaysLeft !== undefined ? (
@@ -134,32 +133,6 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             </>
           )}
         </p>
-      </section>
-
-      {/* California State DMV Alignment Banner */}
-      <section className="bg-gradient-to-r from-red-50/20 to-neutral-50/30 border border-slate-200/60 rounded-2xl p-5 flex flex-col sm:flex-row items-center gap-5 shadow-xs relative overflow-hidden select-none animate-fade-in" id="california-state-dmv-alignment-banner">
-        <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/[0.02] rounded-full blur-2xl pointer-events-none" />
-        <div className="w-20 h-12 flex-none border border-slate-200 p-0.5 rounded-lg bg-white shadow-2xs overflow-hidden flex items-center justify-center">
-          <img 
-            src={californiaBadgeImg} 
-            alt="Official California State Flag Badge" 
-            className="w-full h-full object-contain select-none"
-            referrerPolicy="no-referrer"
-          />
-        </div>
-        <div className="space-y-1 text-center sm:text-left flex-1 md:pr-4">
-          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-1">
-            <span className="font-sans font-black text-[9px] uppercase bg-red-600 text-white px-2 py-0.5 rounded tracking-widest leading-none">
-              State Aligned
-            </span>
-            <span className="text-xs text-red-850 font-extrabold font-sans">
-              2026 California DMV Study Guide
-            </span>
-          </div>
-          <p className="text-xs md:text-[13px] text-text-muted leading-relaxed font-semibold">
-            All practice tests, sign libraries, and pro-tips are directly aligned with the official <span className="font-semibold text-primary-navy">2026 California Driver's Handbook</span> rules, speed limits, and alcohol regulations.
-          </p>
-        </div>
       </section>
 
       {/* Main Dashboard Grid (Bento Style) */}

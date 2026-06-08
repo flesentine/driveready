@@ -6,6 +6,7 @@
 import React, { useState } from 'react';
 import { User, Calendar, Shield, Award, MapPin, RefreshCw, Check, AlertTriangle } from 'lucide-react';
 import { UserStats } from '../types';
+import californiaBadgeImg from '../assets/images/california_state_flag_badge_1780860429638.png';
 
 interface ProfileViewProps {
   stats: UserStats;
@@ -20,7 +21,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
   onResetStats,
   onUpdateProfile,
 }) => {
-  const currentName = stats.userName || 'Chris';
+  const currentName = stats.userName || 'California Driver';
 
   const [targetDays, setTargetDays] = useState<number | ''>(
     stats.testDaysLeft !== undefined ? stats.testDaysLeft : ''
@@ -255,6 +256,32 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
               </div>
             </div>
           )}
+        </div>
+      </section>
+
+      {/* California State DMV Alignment Banner */}
+      <section className="bg-gradient-to-r from-red-50/20 to-neutral-50/30 border border-slate-250 border-dashed rounded-2xl p-5 flex items-center gap-4 relative overflow-hidden select-none animate-fade-in" id="california-state-dmv-alignment-banner-bottom">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/[0.02] rounded-full blur-2xl pointer-events-none" />
+        <div className="w-16 h-10 flex-none border border-slate-200 p-0.5 rounded-lg bg-white overflow-hidden flex items-center justify-center">
+          <img 
+            src={californiaBadgeImg} 
+            alt="Official California State Flag Badge" 
+            className="w-full h-full object-contain select-none"
+            referrerPolicy="no-referrer"
+          />
+        </div>
+        <div className="space-y-0.5 flex-1 select-none">
+          <div className="flex flex-wrap items-center gap-1.5 leading-none">
+            <span className="font-sans font-black text-[8px] uppercase bg-red-600 text-white px-1.5 py-0.5 rounded tracking-widest">
+              State Aligned
+            </span>
+            <span className="text-xs text-red-850 font-extrabold font-sans">
+              2026 California DMV Study Guide
+            </span>
+          </div>
+          <p className="text-[11px] text-text-muted leading-relaxed font-semibold">
+            All practice sessions, sign libraries, and tips are directly aligned with the official handbook rules.
+          </p>
         </div>
       </section>
 

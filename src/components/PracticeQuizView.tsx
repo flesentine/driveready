@@ -49,6 +49,11 @@ export const PracticeQuizView: React.FC<PracticeQuizViewProps> = ({
   const [correctCount, setCorrectCount] = useState(0);
   const [spentQuestions, setSpentQuestions] = useState<{ index: number; isCorrect: boolean }[]>([]);
 
+  // Scroll to top of page when a new question becomes active
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [currentIndex]);
+
   // Safety checker
   if (shuffledQuestions.length === 0) {
     return (
