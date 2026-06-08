@@ -36,6 +36,7 @@ export interface Question {
   sourcePage?: number;
   sourceTopic?: string;
   coverageTopicId?: string;
+  coverageFactIds: string[];
 }
 
 export interface UserStats {
@@ -122,4 +123,16 @@ export function getUserLevelInfo(stats: UserStats): LevelInfo {
     };
   }
 }
+
+export interface HandbookFact {
+  id: string;
+  section: string;
+  page: number;
+  topic: string;
+  fact: string;
+  priority: 'high' | 'medium' | 'low';
+  contentType: 'rule' | 'number' | 'exception' | 'definition' | 'sign' | 'penalty' | 'procedure';
+  mustHaveQuestion: boolean;
+}
+
 
