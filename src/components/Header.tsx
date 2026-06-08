@@ -78,11 +78,11 @@ export const Header: React.FC<HeaderProps> = ({
             {!titleOverride && (
               <div 
                 className="flex items-center bg-white border border-slate-200/80 p-0.5 rounded shadow-3xs select-none"
-                title="California DMV 2026 Study Guide Alignment"
+                title="California DMV handbook-based practice"
               >
                 <img 
                   src={californiaBadgeImg} 
-                  alt="California DMV Handbook Aligned" 
+                  alt="California DMV handbook-based practice" 
                   className="w-9 h-5.5 object-cover rounded-xs select-none"
                   referrerPolicy="no-referrer"
                 />

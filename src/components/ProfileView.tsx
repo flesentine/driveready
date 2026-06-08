@@ -5,7 +5,7 @@
 
 import React, { useState } from 'react';
 import { User, Calendar, Shield, Award, MapPin, RefreshCw, Check, AlertTriangle } from 'lucide-react';
-import { UserStats } from '../types';
+import { UserStats, getUserLevelInfo } from '../types';
 import californiaBadgeImg from '../assets/images/california_state_flag_badge_1780860429638.png';
 
 interface ProfileViewProps {
@@ -22,6 +22,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
   onUpdateProfile,
 }) => {
   const currentName = stats.userName || 'California Driver';
+  const lvlInfo = getUserLevelInfo(stats);
 
   const [targetDays, setTargetDays] = useState<number | ''>(
     stats.testDaysLeft !== undefined ? stats.testDaysLeft : ''
@@ -76,8 +77,8 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
             <h3 className="font-sans font-black text-2xl text-primary-navy leading-none">
               {currentName}
             </h3>
-            <span className="sm:inline-block bg-accent-peach/50 text-safety-orange-dark font-extrabold text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider">
-              PRO Learner
+            <span className={`sm:inline-block font-sans font-black text-[10px] px-2.5 py-0.5 rounded-full uppercase tracking-wider ${lvlInfo.badgeBg} ${lvlInfo.badgeText}`}>
+              Level {lvlInfo.level}: {lvlInfo.levelName}
             </span>
           </div>
           
@@ -97,28 +98,28 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
         <div className="flex justify-between items-start border-b border-white/20 pb-2">
           <div>
             <h4 className="text-[10px] uppercase font-black tracking-widest text-[#86a0cd]">
-              California Department of Motor Vehicles
+              California DMV handbook-based practice
             </h4>
-            <p className="text-sm font-bold tracking-tight">Instruction Permit Card</p>
+            <p className="text-sm font-bold tracking-tight">Independent Practice Tracker</p>
           </div>
           <Shield className="w-5 h-5 text-[#fe9743]" />
         </div>
 
         <div className="grid grid-cols-2 gap-4 text-xs">
           <div>
-            <p className="text-[#86a0cd] text-[10px] uppercase font-bold">Permit Holder</p>
+            <p className="text-[#86a0cd] text-[10px] uppercase font-bold">Study Profile</p>
             <p className="font-semibold text-sm">{currentName}</p>
           </div>
           <div>
-            <p className="text-[#86a0cd] text-[10px] uppercase font-bold">License Class</p>
-            <p className="font-semibold text-sm">Class C (Instructional)</p>
+            <p className="text-[#86a0cd] text-[10px] uppercase font-bold">Study Class</p>
+            <p className="font-semibold text-sm">Class C (Simulated)</p>
           </div>
           <div>
-            <p className="text-[#86a0cd] text-[10px] uppercase font-bold">Document Number</p>
+            <p className="text-[#86a0cd] text-[10px] uppercase font-bold">Study Record ID</p>
             <p className="font-mono font-medium">CADL{stats.readinessScore}XKK{(stats.totalTestsTaken * 423) % 2000}</p>
           </div>
           <div>
-            <p className="text-[#86a0cd] text-[10px] uppercase font-bold">Expiration Date</p>
+            <p className="text-[#86a0cd] text-[10px] uppercase font-bold">Target Date</p>
             <p className="font-semibold">Dec 18, 2026</p>
           </div>
         </div>
@@ -177,7 +178,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
         <form onSubmit={handleDaysChangeSubmit} className="space-y-4">
           <div className="space-y-1">
             <label className="block text-[10px] font-bold text-text-muted uppercase tracking-wider">
-              Days left until your Official Exam
+              Days left until your scheduled permit exam
             </label>
             <div className="flex gap-2">
               <input
@@ -207,6 +208,107 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
             </p>
           )}
         </form>
+      </section>
+
+      {/* Driver Level & Progression Scale */}
+      <section className="bg-white border border-border-light rounded-2xl p-5 shadow-xs space-y-4">
+        <div className="flex items-center gap-2 border-b border-slate-100 pb-2.5">
+          <Award className="w-5 h-5 text-[#fe9743] stroke-2" />
+          <h4 className="font-sans font-extrabold text-base text-primary-navy">
+            Permit Study Levels
+          </h4>
+        </div>
+        
+        <p className="text-xs text-text-muted leading-relaxed font-semibold">
+          Your level corresponds to your consistent mileage and handbook familiarity. Clear practice quizzes and master signs to rank up!
+        </p>
+
+        {/* Level List */}
+        <div className="space-y-3 pt-2">
+          {[
+            {
+              lvl: 1,
+              name: "Permit Seeker",
+              criteria: "Starting point / baseline candidate",
+              color: "bg-slate-150 text-slate-700 border-slate-300",
+              desc: "Get started by launching your first practice test or viewing flashcards."
+            },
+            {
+              lvl: 2,
+              name: "Road Apprentice",
+              criteria: "Completed ≥1 test OR Mastered ≥1 sign",
+              color: "bg-blue-100 text-blue-800 border-blue-300",
+              desc: "The safe journey begins. Excellent first milestones completed!"
+            },
+            {
+              lvl: 3,
+              name: "Safe Navigator",
+              criteria: "Completed ≥3 tests AND Readiness ≥50%",
+              color: "bg-amber-100 text-amber-800 border-amber-300",
+              desc: "Building real highway safety knowledge and quick sign recognition."
+            },
+            {
+              lvl: 4,
+              name: "Asphalt Expert",
+              criteria: "Completed ≥7 tests AND Readiness ≥75% AND Mastered ≥5 signs",
+              color: "bg-indigo-100 text-indigo-800 border-indigo-300",
+              desc: "Exceptional mastery of speed rules, permit laws, and warning situations."
+            },
+            {
+              lvl: 5,
+              name: "Master of the Road",
+              criteria: "Completed ≥10 tests AND Readiness ≥90% AND Mastered ≥10 signs",
+              color: "bg-emerald-100 text-emerald-800 border-emerald-300",
+              desc: "Top 5% candidate. You are exceptionally prepared to ace the genuine test."
+            }
+          ].map((item) => {
+            const isActive = lvlInfo.level === item.lvl;
+            return (
+              <div 
+                key={item.lvl} 
+                className={`p-3 rounded-xl border transition-all ${
+                  isActive 
+                    ? 'border-orange-200 bg-orange-50/20 ring-1 ring-orange-100/50' 
+                    : 'border-slate-100 bg-white'
+                }`}
+              >
+                <div className="flex flex-wrap items-center justify-between gap-2.5 mb-1">
+                  <div className="flex items-center gap-2">
+                    <span className={`text-[10px] font-black uppercase px-2 py-0.5 rounded border ${item.color}`}>
+                      Level {item.lvl}: {item.name}
+                    </span>
+                    {isActive && (
+                      <span className="text-[10px] bg-safety-orange text-white px-2 py-0.5 rounded-full font-black animate-pulse uppercase leading-none">
+                        Current Rank
+                      </span>
+                    )}
+                  </div>
+                  <span className="text-[10px] font-bold text-text-muted">
+                    {item.criteria}
+                  </span>
+                </div>
+                <p className="text-[11px] text-[#475569] leading-relaxed font-semibold">
+                  {item.desc}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Current level status pointer */}
+        {lvlInfo.nextLevelCriteria && (
+          <div className="mt-2 bg-[#f8fafc] border border-slate-200/80 rounded-xl p-3 flex gap-2 items-start">
+            <Check className="w-4 h-4 text-safety-orange shrink-0 mt-0.5 stroke-[2.5]" />
+            <div className="text-left">
+              <p className="text-[11px] font-black text-primary-navy uppercase tracking-wide leading-none mb-1">
+                Next Rank Requirement:
+              </p>
+              <p className="text-[11px] text-text-muted font-bold leading-normal">
+                {lvlInfo.nextLevelCriteria}
+              </p>
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Danger Actions segment */}
@@ -259,28 +361,28 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
         </div>
       </section>
 
-      {/* California State DMV Alignment Banner */}
+      {/* California State DMV Handbook Alignment & Disclaimer Banner */}
       <section className="bg-gradient-to-r from-red-50/20 to-neutral-50/30 border border-slate-250 border-dashed rounded-2xl p-5 flex items-center gap-4 relative overflow-hidden select-none animate-fade-in" id="california-state-dmv-alignment-banner-bottom">
         <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/[0.02] rounded-full blur-2xl pointer-events-none" />
         <div className="w-16 h-10 flex-none border border-slate-200 p-0.5 rounded-lg bg-white overflow-hidden flex items-center justify-center">
           <img 
             src={californiaBadgeImg} 
-            alt="Official California State Flag Badge" 
+            alt="California State Flag Badge" 
             className="w-full h-full object-contain select-none"
             referrerPolicy="no-referrer"
           />
         </div>
-        <div className="space-y-0.5 flex-1 select-none">
+        <div className="space-y-1.5 flex-1 select-none">
           <div className="flex flex-wrap items-center gap-1.5 leading-none">
-            <span className="font-sans font-black text-[8px] uppercase bg-red-600 text-white px-1.5 py-0.5 rounded tracking-widest">
-              State Aligned
+            <span className="font-sans font-black text-[8px] uppercase bg-slate-600 text-white px-1.5 py-0.5 rounded tracking-widest">
+              Independent Practice
             </span>
             <span className="text-xs text-red-850 font-extrabold font-sans">
-              2026 California DMV Study Guide
+              Handbook-Based study tool
             </span>
           </div>
           <p className="text-[11px] text-text-muted leading-relaxed font-semibold">
-            All practice sessions, sign libraries, and tips are directly aligned with the official handbook rules.
+            All practice materials are independent study tools based on the California Driver’s Handbook. DriveReady is an independent study tool and is not affiliated with or endorsed by the California DMV.
           </p>
         </div>
       </section>

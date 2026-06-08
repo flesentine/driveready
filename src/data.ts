@@ -20,21 +20,21 @@ import laneEndsSignImg from './assets/images/lane_ends_merge_left_sign_178085503
 import pedestrianCrossingSignImg from './assets/images/pedestrian_crossing_sign_1780855771452.png';
 
 export const INITIAL_USER_STATS: UserStats = {
-  readinessScore: 65,
-  questionsAnsweredToday: 15,
+  readinessScore: 0,
+  questionsAnsweredToday: 0,
   dailyGoal: 30,
-  streakDays: 3,
-  practiceTimeMin: 45,
-  accuracyPercent: 84,
-  rankText: 'Top 35%',
-  totalTestsTaken: 11,
-  masteredSignsCount: 18,
+  streakDays: 0,
+  practiceTimeMin: 0,
+  accuracyPercent: 0,
+  rankText: 'Novice',
+  totalTestsTaken: 0,
+  masteredSignsCount: 0,
   userName: 'California Driver',
   hasActualActivity: false,
   categoryScores: {
-    rulesOfRoad: 72,
-    signsSignals: 68,
-    safeDriving: 78,
+    rulesOfRoad: 0,
+    signsSignals: 0,
+    safeDriving: 0,
   },
 };
 

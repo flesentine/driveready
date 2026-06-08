@@ -14,6 +14,7 @@ interface DashboardViewProps {
   setTab: (tab: TabType) => void;
   startPracticeQuiz: (testGroup?: number) => void;
   startFlashcards: () => void;
+  onUpdateProfile?: (name: string) => void;
 }
 
 interface TestDetail {
@@ -49,6 +50,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
   setTab,
   startPracticeQuiz,
   startFlashcards,
+  onUpdateProfile,
 }) => {
   const [isBreakdownOpen, setIsBreakdownOpen] = useState(false);
   const [activeTipIndex, setActiveTipIndex] = useState(() => Math.floor(Math.random() * PRO_TIPS.length));
@@ -134,6 +136,71 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           )}
         </p>
       </section>
+
+      {/* Optional Name Personalization Card on first launch */}
+      {stats.userName === 'California Driver' && !stats.hasActualActivity && (
+        <section className="bg-white border border-slate-200 rounded-2xl p-5 shadow-xs space-y-3.5 animate-fade-in text-left">
+          <div className="flex items-center gap-2">
+            <Sparkles className="w-5 h-5 text-amber-500 fill-amber-50" />
+            <h3 className="font-sans font-extrabold text-base text-primary-navy leading-none">
+              What should we call you?
+            </h3>
+          </div>
+          <p className="text-xs text-text-muted font-bold leading-normal">
+            Personalize your study experience! Your name will be used on the study progress tracker, custom dashboard greetings, and simulated certificates.
+          </p>
+          <form 
+            onSubmit={(e) => {
+              e.preventDefault();
+              const formData = new FormData(e.currentTarget);
+              const typedName = (formData.get('typedUserName') as string || '').trim();
+              if (typedName && onUpdateProfile) {
+                onUpdateProfile(typedName);
+              }
+            }}
+            className="flex flex-col sm:flex-row gap-2.5 max-w-md pt-1"
+          >
+            <input
+              type="text"
+              name="typedUserName"
+              placeholder="Enter your name..."
+              maxLength={22}
+              required
+              className="flex-1 px-4 py-3 border border-slate-250 bg-slate-50/70 text-slate-800 font-bold text-xs rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-navy/15 focus:border-primary-navy transition-all"
+            />
+            <button
+              type="submit"
+              className="px-5 py-3 bg-primary-navy hover:bg-primary-navy-light text-white font-extrabold rounded-xl text-xs transition-colors active:scale-95 cursor-pointer select-none"
+            >
+              Save Name
+            </button>
+          </form>
+        </section>
+      )}
+
+      {/* First-time User Flow: Diagnostic Test CTA */}
+      {!stats.hasActualActivity && (
+        <section className="bg-gradient-to-r from-[#e36209] to-[#fe9743] hover:to-[#ffb174] text-white rounded-2xl p-6 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden select-none animate-fade-in border border-orange-600/10" id="diagnostic-test-cta-banner">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.12),transparent_55%)] pointer-events-none" />
+          <div className="space-y-1 relative z-10 text-center md:text-left flex-1">
+            <span className="inline-block font-sans font-black text-[9px] uppercase bg-white/20 text-white px-2.5 py-1 rounded-full tracking-wider leading-none">
+              RECOMMENDED START
+            </span>
+            <h3 className="font-sans font-extrabold text-2xl tracking-tight text-white leading-tight mt-2">
+              Start Diagnostic Test
+            </h3>
+            <p className="text-xs md:text-sm text-orange-50/90 font-medium leading-normal max-w-xl">
+              Answer a short practice test to calculate your first readiness score.
+            </p>
+          </div>
+          <button
+            onClick={() => startPracticeQuiz(12)}
+            className="w-full md:w-auto px-6 py-3.5 bg-white text-[#d65100] hover:bg-neutral-50 font-extrabold rounded-xl text-sm transition-all duration-200 shadow-sm active:scale-95 cursor-pointer select-none shrink-0"
+          >
+            Start Diagnostic Test
+          </button>
+        </section>
+      )}
 
       {/* Main Dashboard Grid (Bento Style) */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-5">

@@ -52,6 +52,8 @@ export const PracticeQuizView: React.FC<PracticeQuizViewProps> = ({
   // Scroll to top of page when a new question becomes active
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
   }, [currentIndex]);
 
   // Safety checker
@@ -67,7 +69,7 @@ export const PracticeQuizView: React.FC<PracticeQuizViewProps> = ({
   }
 
   const currentQuestion = shuffledQuestions[currentIndex];
-  const progressPercent = Math.round((currentIndex / shuffledQuestions.length) * 100);
+  const progressPercent = Math.round(((currentIndex + 1) / shuffledQuestions.length) * 100);
 
   const handleSelectOption = (optionIndex: number) => {
     if (isAnswerConfirmed) return;
@@ -116,17 +118,25 @@ export const PracticeQuizView: React.FC<PracticeQuizViewProps> = ({
   return (
     <div className="max-w-2xl mx-auto space-y-6 pb-24 relative">
       
-      {/* Progress Header */}
+      {/* Progress Header with top quit action for easier mobile thumb reach */}
       <div className="space-y-2">
         <div className="flex justify-between items-center text-sm">
-          <span className="font-bold text-text-muted">
+          <span className="font-extrabold text-[#002045] bg-slate-100 px-3 py-1 rounded-lg">
             Question {currentIndex + 1} of {shuffledQuestions.length}
           </span>
-          <span className="font-extrabold text-primary-navy">
-            {progressPercent}% Complete
-          </span>
+          <button 
+            type="button"
+            onClick={onExit}
+            className="text-xs font-bold text-red-650 hover:text-red-700 bg-red-50 hover:bg-red-100/80 px-3 py-1.5 rounded-xl transition-all duration-150 active:scale-95 cursor-pointer flex items-center justify-center font-sans tracking-wide"
+          >
+            Quit Quiz
+          </button>
         </div>
-        <div className="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+        <div className="flex justify-between items-center text-xs text-text-muted pt-1">
+          <span>Progress</span>
+          <span className="font-extrabold text-primary-navy">{progressPercent}% Complete</span>
+        </div>
+        <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
           <div
             className="bg-safety-orange h-full transition-all duration-500 ease-out"
             style={{ width: `${progressPercent}%` }}
@@ -255,36 +265,38 @@ export const PracticeQuizView: React.FC<PracticeQuizViewProps> = ({
         );
       })()}
 
-      {/* Footer Controls Action buttons */}
-      <div className="flex gap-3 items-center sticky bottom-0 pt-4 pb-2 bg-cool-bg border-t border-border-light z-30">
-        <button
-          onClick={onExit}
-          className="px-4 py-3 border-2 border-border-strong text-border-strong hover:bg-slate-100 rounded-full font-bold text-sm cursor-pointer"
-        >
-          Quit
-        </button>
-        
-        {!isAnswerConfirmed && (
+      {/* Sticky Footer Controls with iPhone Safe Area & Generous Touch Targets */}
+      <div className="sticky bottom-0 left-0 right-0 pt-4 pb-[max(1.75rem,env(safe-area-inset-bottom))] px-4 bg-[#f8fafc]/95 backdrop-blur-md border-t border-slate-200/80 z-30 -mx-5 md:-mx-6 flex gap-3 items-center">
+        {!isAnswerConfirmed ? (
+          <>
+            <button
+              onClick={handleSkip}
+              className="w-1/3 min-h-[48px] py-3.5 px-4 rounded-xl border border-slate-350 text-slate-700 hover:bg-slate-50 font-bold text-sm cursor-pointer flex items-center justify-center transition-colors select-none"
+            >
+              Skip
+            </button>
+            <button
+              disabled={selectedOption === null}
+              onClick={handleSubmitOrContinue}
+              className={`flex-1 min-h-[48px] py-3.5 px-6 rounded-xl font-extrabold text-sm flex items-center justify-center gap-1.5 shadow-xs transition-all active:scale-95 select-none ${
+                selectedOption === null
+                  ? 'bg-slate-100 text-slate-400 cursor-not-allowed shadow-none border border-slate-200/60'
+                  : 'bg-primary-navy hover:bg-primary-navy-light text-white cursor-pointer'
+              }`}
+            >
+              Check Answer
+              <ArrowRight className="w-4.5 h-4.5" />
+            </button>
+          </>
+        ) : (
           <button
-            onClick={handleSkip}
-            className="flex-1 py-3 px-6 rounded-full border-2 border-primary-navy text-primary-navy hover:bg-slate-100 font-bold text-sm cursor-pointer"
+            onClick={handleSubmitOrContinue}
+            className="w-full min-h-[48px] py-3.5 px-6 rounded-xl bg-primary-navy hover:bg-primary-navy-light text-white font-extrabold text-sm flex items-center justify-center gap-1.5 shadow-sm transition-all active:scale-95 cursor-pointer select-none"
           >
-            Skip Question
+            Continue
+            <ArrowRight className="w-4.5 h-4.5" />
           </button>
         )}
-
-        <button
-          disabled={selectedOption === null}
-          onClick={handleSubmitOrContinue}
-          className={`flex-1 py-3 px-6 rounded-full font-bold text-sm flex items-center justify-center gap-2 shadow-md transition-all active:scale-95 cursor-pointer ${
-            selectedOption === null
-              ? 'bg-slate-300 text-slate-500 cursor-not-allowed shadow-none'
-              : 'bg-primary-navy hover:bg-primary-navy-light text-white'
-          }`}
-        >
-          {isAnswerConfirmed ? 'Continue' : 'Validate Answer'}
-          <ArrowRight className="w-4 h-4" />
-        </button>
       </div>
 
     </div>

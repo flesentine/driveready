@@ -117,6 +117,8 @@ export default function App() {
   // Scroll to top of the window on view transitions (changing tabs, entering quiz, etc.)
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
   }, [currentTab, isQuizActive, isFlashcardsActive, isProfileTabActive]);
 
   const saveStats = (newStats: UserStats) => {
@@ -326,6 +328,7 @@ export default function App() {
             setTab={handleTabSelection}
             startPracticeQuiz={handleStartPracticeQuiz}
             startFlashcards={handleStartFlashcards}
+            onUpdateProfile={handleUpdateProfile}
           />
         );
       case 'tests':

@@ -58,50 +58,62 @@ export const StatsView: React.FC<StatsViewProps> = ({
         <div className="bg-white border border-border-light rounded-2xl p-6 shadow-xs">
           
           {/* Simple Custom Bar Chart Construction with tooltips */}
-          <div className="flex justify-between items-end h-48 gap-3 sm:gap-4 mb-6 pt-6 select-none relative">
-            
-            {/* Horizontal Grid lines */}
-            <div className="absolute inset-0 flex flex-col justify-between pointer-events-none select-none">
-              <div className="border-b border-dashed border-slate-100 w-full h-0" />
-              <div className="border-b border-dashed border-slate-100 w-full h-0" />
-              <div className="border-b border-dashed border-slate-100 w-full h-0" />
-              <div className="border-b border-dashed border-slate-100 w-full h-0" />
+          {!stats.hasActualActivity ? (
+            <div className="flex flex-col items-center justify-center h-48 border border-dashed border-slate-200/95 rounded-2xl bg-[#f8fafc]/70 p-6 text-center select-none mb-6 animate-fade-in" id="stats-weekly-empty-state">
+              <TrendingUp className="w-10 h-10 text-slate-400 mb-2 stroke-1.5" />
+              <p className="text-sm font-bold text-[#002045] max-w-sm">
+                No practice data yet
+              </p>
+              <p className="text-xs text-text-muted mt-1 max-w-xs leading-relaxed font-semibold">
+                Complete your first test to start tracking weekly progress.
+              </p>
             </div>
-
-            {weeklyData.map((bar, idx) => (
-              <div
-                key={idx}
-                className="flex-1 flex flex-col items-center gap-2 h-full justify-end relative z-10"
-                onMouseEnter={() => setHoveredBarIndex(idx)}
-                onMouseLeave={() => setHoveredBarIndex(null)}
-              >
-                {/* Score Tooltip */}
-                {hoveredBarIndex === idx && (
-                  <div className="absolute -top-7 bg-primary-navy text-white text-[11px] font-bold px-1.5 py-0.5 rounded shadow-sm animate-fade-in whitespace-nowrap z-30">
-                    {bar.score}% Score
-                  </div>
-                )}
-                
-                {/* CSS Bar indicator */}
-                <div
-                  style={{ height: `${bar.score}%` }}
-                  className={`w-full rounded-t-lg transition-all duration-500 cursor-pointer ${
-                    bar.isToday
-                      ? 'bg-primary-navy hover:bg-primary-navy-light'
-                      : 'bg-primary-navy-light/40 hover:bg-primary-navy-light/75'
-                  }`}
-                />
-                
-                <span
-                  className={`text-xs select-none ${
-                    bar.isToday ? 'font-black text-primary-navy' : 'font-bold text-text-muted'
-                  }`}
-                >
-                  {bar.day}
-                </span>
+          ) : (
+            <div className="flex justify-between items-end h-48 gap-3 sm:gap-4 mb-6 pt-6 select-none relative">
+              
+              {/* Horizontal Grid lines */}
+              <div className="absolute inset-0 flex flex-col justify-between pointer-events-none select-none">
+                <div className="border-b border-dashed border-slate-100 w-full h-0" />
+                <div className="border-b border-dashed border-slate-100 w-full h-0" />
+                <div className="border-b border-dashed border-slate-100 w-full h-0" />
+                <div className="border-b border-dashed border-slate-100 w-full h-0" />
               </div>
-            ))}
-          </div>
+
+              {weeklyData.map((bar, idx) => (
+                <div
+                  key={idx}
+                  className="flex-1 flex flex-col items-center gap-2 h-full justify-end relative z-10"
+                  onMouseEnter={() => setHoveredBarIndex(idx)}
+                  onMouseLeave={() => setHoveredBarIndex(null)}
+                >
+                  {/* Score Tooltip */}
+                  {hoveredBarIndex === idx && (
+                    <div className="absolute -top-7 bg-primary-navy text-white text-[11px] font-bold px-1.5 py-0.5 rounded shadow-sm animate-fade-in whitespace-nowrap z-30">
+                      {bar.score}% Score
+                    </div>
+                  )}
+                  
+                  {/* CSS Bar indicator */}
+                  <div
+                    style={{ height: `${bar.score}%` }}
+                    className={`w-full rounded-t-lg transition-all duration-500 cursor-pointer ${
+                      bar.isToday
+                        ? 'bg-primary-navy hover:bg-primary-navy-light'
+                        : 'bg-primary-navy-light/40 hover:bg-primary-navy-light/75'
+                    }`}
+                  />
+                  
+                  <span
+                    className={`text-xs select-none ${
+                      bar.isToday ? 'font-black text-primary-navy' : 'font-bold text-text-muted'
+                    }`}
+                  >
+                    {bar.day}
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
 
           {/* Average metrics divider */}
           <div className="flex justify-between border-t border-border-light pt-4">
