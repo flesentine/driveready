@@ -449,6 +449,16 @@ export const HANDBOOK_FACTS: HandbookFact[] = [
     mustHaveQuestion: true
   },
   {
+    id: 'fact-limit-line-stop-crosswalk',
+    section: 'Section 4: Navigating the Roads',
+    page: 7,
+    topic: 'Limit line stopping rules',
+    fact: 'A solid white line across a lane is a limit line, marking where you must stop before entering a crosswalk or intersection.',
+    priority: 'high',
+    contentType: 'definition',
+    mustHaveQuestion: true
+  },
+  {
     id: 'fact-passing-lane-clostest',
     section: 'Section 4: Navigating the Roads',
     page: 8,
@@ -1483,6 +1493,16 @@ export const HANDBOOK_FACTS: HandbookFact[] = [
     mustHaveQuestion: true
   },
   {
+    id: 'fact-safe-tire-tread-depth',
+    section: 'Section 6: Safe Driving',
+    page: 52,
+    topic: 'Minimum legal tire tread depth',
+    fact: 'Tires are legally bald and unsafe to operate if they have less than 2/32 (1/16) of an inch of tread depth in any two adjacent major grooves.',
+    priority: 'high',
+    contentType: 'number',
+    mustHaveQuestion: true
+  },
+  {
     id: 'fact-unattended-child-age6',
     section: 'Section 6: Safe Driving',
     page: 52,
@@ -1570,6 +1590,16 @@ export const HANDBOOK_FACTS: HandbookFact[] = [
     fact: 'It is strictly illegal for minor provisional drivers to use a cell phone or electronic wireless device for any reason, except to make a call for emergency assistance.',
     priority: 'high',
     contentType: 'rule',
+    mustHaveQuestion: true
+  },
+  {
+    id: 'fact-flat-tire-blowout-safety',
+    section: 'Section 6: Safe Driving',
+    page: 54,
+    topic: 'Tire blowout recovery procedures',
+    fact: 'If you experience a sudden tire blowout or flat tire: hold the steering wheel tightly, steer straight, slowly ease off the accelerator, do not brake, and safely pull off the road.',
+    priority: 'high',
+    contentType: 'procedure',
     mustHaveQuestion: true
   },
 

@@ -237,37 +237,44 @@ parsedQuestions.forEach(q => {
     };
 
     const mentionsAlcoholOrDrugs = 
-      hasAnyWord(qTextLower, ['alcohol', 'drug', 'drugs', 'bac', 'dui', 'prescription', 'otc', 'medication', 'medications', 'impair', 'impairment', 'impaired', 'influence']) ||
-      hasAnyWord(qCategoryLower, ['alcohol', 'drug', 'drugs', 'bac', 'dui', 'prescription', 'otc', 'medication', 'medications', 'impair', 'impairment', 'impaired', 'influence']) ||
-      hasAnyWord(qExplLower, ['alcohol', 'drug', 'drugs', 'bac', 'dui', 'prescription', 'otc', 'medication', 'medications', 'impair', 'impairment', 'impaired', 'influence']);
+      hasAnyWord(qTextLower, ['alcohol', 'drug', 'drugs', 'bac', 'dui', 'prescription', 'otc', 'medication', 'medications', 'impair', 'impairment', 'impaired', 'influence', 'under 21']) ||
+      hasAnyWord(qExplLower, ['alcohol', 'drug', 'drugs', 'bac', 'dui', 'prescription', 'otc', 'medication', 'medications', 'impair', 'impairment', 'impaired', 'influence', 'under 21']);
+
+    const mentionsTruck = 
+      hasAnyWord(qTextLower, ['truck', 'trucks', 'no-zone', 'no-zones', 'blind spot', 'blind spots', 'semi-truck', 'commercial truck', 'large truck']) ||
+      hasAnyWord(qExplLower, ['truck', 'trucks', 'no-zone', 'no-zones', 'blind spot', 'blind spots', 'semi-truck', 'commercial truck', 'large truck']);
+
+    const mentionsMaintenance = 
+      hasAnyWord(qTextLower, ['tire', 'tires', 'tread', 'bald', 'windshield', 'dashboard', 'warning light', 'warning lights', 'coolant', 'abs', 'esc', 'tint', 'maintenance']) ||
+      hasAnyWord(qExplLower, ['tire', 'tires', 'tread', 'bald', 'windshield', 'dashboard', 'warning light', 'warning lights', 'coolant', 'abs', 'esc', 'tint', 'maintenance']);
 
     const mentionsRailroad = 
-      hasAnyWord(qTextLower, ['railroad', 'train', 'trains', 'tracks', 'railway']) || qTextLower.includes("rail crossing");
+      hasAnyWord(qTextLower, ['railroad', 'train', 'trains', 'tracks', 'railway', 'crossing']) ||
+      hasAnyWord(qExplLower, ['railroad', 'train', 'trains', 'tracks', 'railway', 'crossing']);
 
     const mentionsPedestrian = 
-      hasAnyWord(qTextLower, ['pedestrian', 'pedestrians', 'white cane', 'guide dog', 'crosswalk', 'crosswalks']);
+      hasAnyWord(qTextLower, ['pedestrian', 'pedestrians', 'white cane', 'guide dog', 'crosswalk', 'crosswalks', 'blind pedestrian']) ||
+      hasAnyWord(qExplLower, ['pedestrian', 'pedestrians', 'white cane', 'guide dog', 'crosswalk', 'crosswalks', 'blind pedestrian']);
 
     const mentionsParking = 
       (qTextLower.includes("parking uphill") || qTextLower.includes("parking downhill") || hasAnyWord(qTextLower, ['curb', 'wheels', 'wheel', 'uphill', 'downhill'])) &&
       !qTextLower.includes("steering wheel");
 
-    const mentionsTruck = 
-      hasAnyWord(qTextLower, ['truck', 'trucks', 'no-zone', 'no-zones', 'blind spot', 'blind spots']);
-
     // Check 1: Alcohol or Drugs vs pedestrian, parking, sign, senior, lane, or hill
     if (mentionsAlcoholOrDrugs) {
-      const badFacts = q.coverageFactIds.filter(f => 
-        f.includes("pedestrian") || f.includes("ped-") || f.includes("parking") || f.includes("curb") || f.includes("sign-") || f.includes("seniors") || f.includes("lane") || f.includes("hill")
-      );
-      if (badFacts.length > 0) {
-        suspiciousMappings.push(`Question [${q.id}]: alcohol/drugs/DUI query maps to invalid facts: [${badFacts.join(', ')}]`);
+      const nonSec7Facts = q.coverageFactIds.filter(fId => {
+        const f = HANDBOOK_FACTS.find(fact => fact.id === fId);
+        return f && !f.section.includes("Section 7");
+      });
+      if (nonSec7Facts.length > 0) {
+        suspiciousMappings.push(`Question [${q.id}]: alcohol/drugs/DUI query maps to invalid facts: [${nonSec7Facts.join(', ')}]`);
       }
     }
 
     // Check 2: Railroad vs parking, DUI, pedestrian, or license
     if (mentionsRailroad) {
       const badFacts = q.coverageFactIds.filter(f => 
-        f.includes("parking") || f.includes("curb") || f.includes("dui") || f.includes("alcohol") || f.includes("bac") || f.includes("pedestrian") || f.includes("ped-") || f.includes("license") || f.includes("permit") || f.includes("class-c")
+        !f.includes("rail") && !f.includes("train") && !f.includes("track") && !f.includes("crossing")
       );
       if (badFacts.length > 0) {
         suspiciousMappings.push(`Question [${q.id}]: railroad query maps to invalid facts: [${badFacts.join(', ')}]`);
@@ -277,7 +284,7 @@ parsedQuestions.forEach(q => {
     // Check 3: Pedestrian vs DUI, parking, license, or railroad
     if (mentionsPedestrian) {
       const badFacts = q.coverageFactIds.filter(f => 
-        f.includes("dui") || f.includes("alcohol") || f.includes("bac") || f.includes("parking") || f.includes("curb") || f.includes("license") || f.includes("permit") || f.includes("class-c") || f.includes("railroad") || f.includes("train") || f.includes("track")
+        !f.includes("pedestrian") && !f.includes("ped-") && !f.includes("crosswalk") && !f.includes("cane") && !f.includes("guide-dog")
       );
       if (badFacts.length > 0) {
         suspiciousMappings.push(`Question [${q.id}]: pedestrian query maps to invalid facts: [${badFacts.join(', ')}]`);
@@ -297,10 +304,20 @@ parsedQuestions.forEach(q => {
     // Check 5: Truck vs BAC/DUI, pedestrian, parking, or license
     if (mentionsTruck) {
       const badFacts = q.coverageFactIds.filter(f => 
-        f.includes("bac") || f.includes("dui") || f.includes("alcohol") || f.includes("pedestrian") || f.includes("ped-") || f.includes("parking") || f.includes("curb") || f.includes("license") || f.includes("permit") || f.includes("class-c")
+        !f.includes("truck") && !f.includes("no-zone") && !f.includes("pickup") && !f.includes("slow-moving") && !f.includes("move-over")
       );
       if (badFacts.length > 0) {
         suspiciousMappings.push(`Question [${q.id}]: truck query maps to invalid facts: [${badFacts.join(', ')}]`);
+      }
+    }
+
+    // Check 6: Maintenance keywords check
+    if (mentionsMaintenance) {
+      const invalidFacts = q.coverageFactIds.filter(fId => 
+        fId.includes("license") || fId.includes("real-id") || fId.includes("bac") || fId.includes("dui") || fId.includes("alcohol") || fId.includes("pedestrian") || fId.includes("ped-") || fId.includes("railroad") || fId.includes("railway") || fId.includes("track") || fId.includes("parking") || fId.includes("curb")
+      );
+      if (invalidFacts.length > 0) {
+        suspiciousMappings.push(`Question [${q.id}]: maintenance/tire query maps to invalid facts: [${invalidFacts.join(', ')}]`);
       }
     }
 

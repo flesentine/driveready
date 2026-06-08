@@ -551,9 +551,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     explanation: 'California Handbook (Section 4, Passing): You may pass on the right only when an open highway has two or more lanes going in your direction, the driver ahead is turning left, or you are on a one-way street. Never drive off the pavement to pass.',
     testGroup: 13,
     sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 17,
-    sourceTopic: 'Passing on the right conditions',
-    coverageFactIds: ['fact-pass-on-right-allowed']
+    sourcePage: 10,
+    sourceTopic: 'Passing Bicyclist Space Clearance',
+    coverageFactIds: ['fact-bike-passing-clearance']
   },
   {
     id: 'q19',
@@ -588,10 +588,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 4, Passing): Do not pass within 100 feet of an intersection, bridge, tunnel, railroad crossing, or other hazardous area.',
     testGroup: 13,
-    sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 13,
-    sourceTopic: 'Prohibited U-Turns on divided highways',
-    coverageFactIds: ['fact-uturn-divided-highway-barrier']
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 39,
+    sourceTopic: 'Railroad crossing visibility and speed limit factors',
+    coverageFactIds: ['fact-railroad-crossing-visibility-speed']
   },
   {
     id: 'q21',
@@ -1367,10 +1367,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 7, BAC Limits): If you are on DUI probation, you must not drive with a BAC of 0.01% or higher at any time.',
     testGroup: 18,
-    sourceSection: 'Section 5: Laws and Rules of the Road',
-    sourcePage: 32,
-    sourceTopic: 'Large commercial truck blind spots',
-    coverageFactIds: ['fact-truck-no-zone-blind']
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 56,
+    sourceTopic: 'DUI probation blood alcohol limits',
+    coverageFactIds: ['fact-bac-limit-dui-probation']
   },
   {
     id: 'q62',
@@ -1386,10 +1386,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 7, Carrying Alcohol): Open containers of alcohol must be kept in the trunk or a place where passengers do not sit. Keeping an open container in the glove compartment is strictly illegal.',
     testGroup: 18,
-    sourceSection: 'Section 5: Laws and Rules of the Road',
-    sourcePage: 32,
-    sourceTopic: 'Steep road right-of-way rules',
-    coverageFactIds: ['fact-mountain-rightofway']
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 55,
+    sourceTopic: 'Open container laws for alcohol and cannabis',
+    coverageFactIds: ['fact-dui-open-container-vehicle']
   },
   {
     id: 'q63',
@@ -1462,10 +1462,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     correctOptionIndex: 0,
     explanation: 'California Handbook (Section 7, BAC Limits): If you are under 21 years old, you must not drive with a Blood Alcohol Concentration (BAC) of 0.01% or higher.',
     testGroup: 18,
-    sourceSection: 'Section 5: Laws and Rules of the Road',
-    sourcePage: 32,
-    sourceTopic: 'Large commercial truck blind spots',
-    coverageFactIds: ['fact-truck-no-zone-blind']
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 56,
+    sourceTopic: 'Under 21 blood alcohol limits',
+    coverageFactIds: ['fact-bac-limit-under-21']
   },
   {
     id: 'q67',
@@ -1748,9 +1748,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     explanation: 'California Handbook (Section 6, Sharing the Road - Bicycles): Under the Three Feet Rules, drivers in California must allow a minimum clearance of 3 feet when passing or overtaking a bicyclist.',
     testGroup: 20,
     sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 9,
-    sourceTopic: 'Driving in Bicycle Lanes',
-    coverageFactIds: ['fact-drive-bike-lane-limit']
+    sourcePage: 10,
+    sourceTopic: 'Passing Bicyclist Space Clearance',
+    coverageFactIds: ['fact-bike-passing-clearance']
   },
   {
     id: 'q82',
@@ -1861,10 +1861,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Sharing the Road): Because of their extreme vehicle length, large trucks must swing wide to the left to complete a tight right turn. Overtaking them or squeezing in on their right side is incredibly dangerous.',
     testGroup: 20,
-    sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 10,
-    sourceTopic: 'Passing Bicyclist Space Clearance',
-    coverageFactIds: ['fact-bike-passing-clearance']
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 33,
+    sourceTopic: 'Large truck turning behaviors',
+    coverageFactIds: ['fact-truck-swing-wide']
   },
   {
     id: 'q88',
@@ -1937,10 +1937,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 9, Alcohol Limits): BAC limit is 0.08% or higher if you are 21 years old or older.',
     testGroup: 21,
-    sourceSection: 'Section 5: Laws and Rules of the Road',
-    sourcePage: 32,
-    sourceTopic: 'Large commercial truck blind spots',
-    coverageFactIds: ['fact-truck-no-zone-blind']
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 56,
+    sourceTopic: 'Adult maximum blood alcohol bounds',
+    coverageFactIds: ['fact-bac-limit-adult-21']
   },
   {
     id: 'q92',
@@ -1956,10 +1956,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 9): For commercial motor vehicles or passenger transportation vehicles for hire, the BAC limit is 0.04% or higher.',
     testGroup: 21,
-    sourceSection: 'Section 5: Laws and Rules of the Road',
-    sourcePage: 32,
-    sourceTopic: 'Steep road right-of-way rules',
-    coverageFactIds: ['fact-mountain-rightofway']
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 56,
+    sourceTopic: 'Commercial driver blood alcohol bounds',
+    coverageFactIds: ['fact-bac-limit-commercial']
   },
   {
     id: 'q93',
@@ -2224,8 +2224,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     testGroup: 22,
     sourceSection: 'Section 4: Navigating the Roads',
     sourcePage: 7,
-    sourceTopic: 'Double Solid White Lines',
-    coverageFactIds: ['fact-double-solid-white-lines']
+    sourceTopic: 'Limit line stopping rules',
+    coverageFactIds: ['fact-limit-line-stop-crosswalk']
   },
   {
     id: 'q107',
@@ -2393,10 +2393,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     correctOptionIndex: 1,
     explanation: 'California Vehicle Code (CVC 27465b): Tires are legally bald and unsafe to operate if they have less than 2/32 (1/16) of an inch of tread depth in any two adjacent major grooves.',
     testGroup: 23,
-    sourceSection: 'Section 1: The California Driver\'s License',
-    sourcePage: 1,
-    sourceTopic: 'License classes',
-    coverageFactIds: ['fact-class-c-license']
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 52,
+    sourceTopic: 'Minimum legal tire tread depth',
+    coverageFactIds: ['fact-safe-tire-tread-depth']
   },
   {
     id: 'q116',
@@ -2488,10 +2488,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     correctOptionIndex: 1,
     explanation: 'Strong vibration or pulling in the steering wheel points to tire low pressure, tire misalignment, or suspension issues. Pull over and check your tires.',
     testGroup: 23,
-    sourceSection: 'Section 1: The California Driver\'s License',
-    sourcePage: 1,
-    sourceTopic: 'License classes',
-    coverageFactIds: ['fact-class-c-license']
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 54,
+    sourceTopic: 'Tire blowout recovery procedures',
+    coverageFactIds: ['fact-flat-tire-blowout-safety']
   },
   {
     id: 'q121',
