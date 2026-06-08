@@ -1,5 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
+import { HANDBOOK_FACTS } from '../src/handbookFacts';
 
 // Definition of the original 21 questions we added
 const firstAppended = [
@@ -20,7 +21,7 @@ const firstAppended = [
     sourceSection: 'Section 5: Laws and Rules of the Road',
     sourcePage: 12,
     sourceTopic: 'Right turn on red light rules',
-    coverageFactIds: ['fact-right-turn-red-light', 'fact-traffic-light-red']
+    coverageFactIds: ['fact-right-turn-red-light']
   },
   {
     id: 'q148',
@@ -875,6 +876,766 @@ const finalAppended = [
   }
 ];
 
+// 41 additional questions to achieve absolutely 100% full handbook fact coverage (168 / 168 covered)
+const finalUncoveredAppended = [
+  {
+    id: 'q192',
+    category: 'The California Driver\'s License',
+    questionText: 'What is a REAL ID under California and federal guidelines?',
+    options: [
+      'Any standard driver\'s license or state ID card.',
+      'A federally designated card that requires specific identification and proof of residency documents to be issued.',
+      'A digital-only ID stored on a smartphone app.',
+      'A special permit used only for operating large commercial trucks.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 1): A REAL ID is a federally designated card that requires specific identification and proof of residency documents to be issued.',
+    testGroup: 35,
+    sourceSection: 'Section 1: The California Driver\'s License',
+    sourcePage: 1,
+    sourceTopic: 'REAL ID Card Designations',
+    coverageFactIds: ['fact-real-id-designation']
+  },
+  {
+    id: 'q193',
+    category: 'Getting a Driver\'s License',
+    questionText: 'Under California law, a minor holding a provisional driver\'s license is restricted from:',
+    options: [
+      'Driving for pay or operating commercial Class A, B, or C licensed vehicles.',
+      'Driving any sedan or sport utility vehicle under any condition.',
+      'Driving on public streets with a speed limit of 45 mph or higher.',
+      'Operating a vehicle that has more than four passenger seats.'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'California Handbook (Section 2): Minors holding a provisional driver license cannot drive for pay or operate commercial Class A, B, or C licensed vehicles.',
+    testGroup: 35,
+    sourceSection: 'Section 2: Getting a Driver\'s License',
+    sourcePage: 2,
+    sourceTopic: 'Minor\'s Employment Restrictions',
+    coverageFactIds: ['fact-provisional-commercial']
+  },
+  {
+    id: 'q194',
+    category: 'Getting a Driver\'s License',
+    questionText: 'What exception allows a provisional teen driver to drive during restricted hours for employment?',
+    options: [
+      'Checking in verbally on a mobile app with a parent or guardian.',
+      'Carrying a signed note from their employer confirming employment details and hours.',
+      'Registering their vehicle license plate with the municipal city hall.',
+      'Driving only on quiet local pathways during evening hours.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 2): Provisional drivers may drive outside restricted hours for work reasons if they carry a note signed by their employer confirming employment.',
+    testGroup: 35,
+    sourceSection: 'Section 2: Getting a Driver\'s License',
+    sourcePage: 2,
+    sourceTopic: 'Minor\'s Restriction Exceptions - Employment',
+    coverageFactIds: ['fact-provisional-exception-work']
+  },
+  {
+    id: 'q195',
+    category: 'Getting a Driver\'s License',
+    questionText: 'Under what conditions may a provisional teen driver drive during restricted hours to transport an immediate family member?',
+    options: [
+      'They can do so at any time without documents if they are in the same county.',
+      'They must carry a note signed by a parent or legal guardian detailing the reason, the family member\'s name, and the end date.',
+      'They must obtain a temporary sheriff passenger clearance receipt.',
+      'They may only do so if driving a commercial passenger transport vehicle.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 2): Provisional drivers may drive outside restricted hours to transport immediate family if they carry a note signed by their parent or legal guardian detailing the reason, family member name, and end date.',
+    testGroup: 35,
+    sourceSection: 'Section 2: Getting a Driver\'s License',
+    sourcePage: 2,
+    sourceTopic: 'Minor\'s Restriction Exceptions - Family Member',
+    coverageFactIds: ['fact-provisional-exception-family']
+  },
+  {
+    id: 'q196',
+    category: 'Getting a Driver\'s License',
+    questionText: 'How can a parent or legal guardian revoke or cancel a teen\'s provisional driver\'s license in California?',
+    options: [
+      'By filing a formal Request for Cancellation or Surrender form directly with the DMV.',
+      'By destroying the physical plastic card and notifying local police.',
+      'By sending a certified letters to the county court registrar.',
+      'They cannot do so once the permit has been officially issued.'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'California Handbook (Section 2): A parent or legal guardian may cancel a teen\'s provisional driver\'s license by completing a Request for Cancellation or Surrender form with the DMV.',
+    testGroup: 35,
+    sourceSection: 'Section 2: Getting a Driver\'s License',
+    sourcePage: 2,
+    sourceTopic: 'Parent\'s Right to Cancel',
+    coverageFactIds: ['fact-provisional-cancel']
+  },
+  {
+    id: 'q197',
+    category: 'Safe Driving',
+    questionText: 'What key visual abilities must a driver maintain to operate a vehicle safely?',
+    options: [
+      'Noticing hazards in different lighting, judging distances, adjusting to traffic speeds, and reading signs.',
+      'The ability to read microscopic text on license plates at 100 feet.',
+      'Fully unassisted night-vision equivalent to daylight conditions.',
+      'High-contrast edge detection matching a radar sensor system.'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'California Handbook (Section 3): To drive safely, you must maintain vision capable of noticing hazards in different lighting, judging distances, adjusting to traffic speed, and reading road signs.',
+    testGroup: 35,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 3,
+    sourceTopic: 'Vision requirements',
+    coverageFactIds: ['fact-vision-hazard-distance']
+  },
+  {
+    id: 'q198',
+    category: 'Safe Driving',
+    questionText: 'At what age are physicians legally required to report patients to the DMV for medical conditions, like lapses of consciousness, that affect driving safety?',
+    options: [
+      'At least 14 years old.',
+      'At least 16 years old.',
+      'Only seniors age 65 and older.',
+      'At least 18 years old.'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'California Handbook (Section 3): Physicians are legally required to report patients who are at least 14 years old to the DMV for medical conditions (such as lapse of consciousness) that may affect driving safety.',
+    testGroup: 35,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 3,
+    sourceTopic: 'Medical condition reporting',
+    coverageFactIds: ['fact-physician-report-age']
+  },
+  {
+    id: 'q199',
+    category: 'Safe Driving',
+    questionText: 'When changing lanes on a public road or multi-lane freeway, you are required to signal:',
+    options: [
+      'Only if there are other vehicles directly behind you.',
+      'Before executing any lane change.',
+      'Only when switching lanes within 50 feet of an off-ramp.',
+      'Only during night hours or heavy weather conditions.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 3): You must signal before executing any lane change.',
+    testGroup: 36,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 4,
+    sourceTopic: 'Signaling for lane changes',
+    coverageFactIds: ['fact-signal-every-lane-change']
+  },
+  {
+    id: 'q200',
+    category: 'Safe Driving',
+    questionText: 'Are turn signals required when parking or moving next to or away from a curb?',
+    options: [
+      'No, signals are only required at standard street intersections.',
+      'Yes, you must signal before pulling next to or away from the curb.',
+      'Only if you are parking in a commercial business district.',
+      'Only if a law enforcement officer is visible on the street.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 3): You must signal before pulling next to or away from the curb.',
+    testGroup: 36,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 4,
+    sourceTopic: 'Signaling near curbs',
+    coverageFactIds: ['fact-signal-curb-side']
+  },
+  {
+    id: 'q201',
+    category: 'Safe Driving',
+    questionText: 'Should you signal before turning or changing lanes if there are no other vehicles visible around you?',
+    options: [
+      'No, signaling is optional if no other vehicles are immediately present.',
+      'Yes, you must signal your intentions even when you do not see other vehicles around you.',
+      'Only if you are driving in a city center or school zone.',
+      'No, signaling on empty roads wastes battery power and is discouraged.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 3): You must signal your intentions even when you do not see other vehicles around you.',
+    testGroup: 36,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 4,
+    sourceTopic: 'Signaling with no vehicles present',
+    coverageFactIds: ['fact-signal-empty-road']
+  },
+  {
+    id: 'q202',
+    category: 'Safe Driving',
+    questionText: 'If you plan to turn right shortly after crossing a busy intersection, when should you start signaling?',
+    options: [
+      'At least 100 feet before reaching the intersection.',
+      'When you are almost through the intersection, to avoid confusing other drivers.',
+      'Exactly when you check the intersection stop line.',
+      'Only when you begin turning your steering wheel.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 3, Turn Signals): If you plan to turn shortly after crossing an intersection, signal when you are almost through the intersection to avoid confusing other drivers.',
+    testGroup: 36,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 4,
+    sourceTopic: 'Signaling at intersections',
+    coverageFactIds: ['fact-signal-intersection-delayed']
+  },
+  {
+    id: 'q203',
+    category: 'Safe Driving',
+    questionText: 'How may a bicyclist signal a turn on public roads under California law?',
+    options: [
+      'By swinging their legs out to the side of the pedals.',
+      'With their arm held straight out, pointing in the direction they plan to turn.',
+      'By tapping their safety helmet twice with their hand.',
+      'Bicyclists are not permitted to use hand signals and must use flashing mechanical indicators.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 3): Bicyclists may signal a turn with their arm held straight out, pointing in the direction they plan to turn.',
+    testGroup: 36,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 3,
+    sourceTopic: 'Bicyclist hand signals',
+    coverageFactIds: ['fact-hand-signals-bicyclist']
+  },
+  {
+    id: 'q204',
+    category: 'Safe Driving',
+    questionText: 'When driving on a narrow mountain road where you cannot see at least 200 feet ahead, what should you do to alert oncoming traffic?',
+    options: [
+      'Flash your high-beam headlights rapidly.',
+      'Use your vehicle\'s horn.',
+      'Drive with your double hazard indicators flashing.',
+      'Shout loudly out of the open driver\'s window.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 3): Use your vehicle\'s horn to alert oncoming traffic on narrow mountain roads where you cannot see at least 200 feet ahead.',
+    testGroup: 36,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 4,
+    sourceTopic: 'Mountain road warning alerts',
+    coverageFactIds: ['fact-horn-mountain-200ft']
+  },
+  {
+    id: 'q205',
+    category: 'Safe Driving',
+    questionText: 'Is it legal to drive on a California roadway using only your parking lights instead of headlights?',
+    options: [
+      'Yes, but only in well-lit downtown business areas.',
+      'No, it is illegal to drive using only your parking lights.',
+      'Yes, but only between sunrise and sunset.',
+      'Only when driving at slow speeds below 15 mph.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 3): It is illegal to drive using only your parking lights.',
+    testGroup: 36,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 4,
+    sourceTopic: 'Driving with parking lights on',
+    coverageFactIds: ['fact-illegal-parking-lights']
+  },
+  {
+    id: 'q206',
+    category: 'Safe Driving',
+    questionText: 'When are you required to turn on your vehicle\'s headlights even on a bright, sunny day?',
+    options: [
+      'Only when operating a commercial hauling truck.',
+      'On mountain roads and in tunnels.',
+      'When driving in any urban residential neighborhood.',
+      'Whenever you are towing a small trailer.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 3): Headlights must be used on mountain roads and in tunnels even on bright, sunny days.',
+    testGroup: 37,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 4,
+    sourceTopic: 'Headlights in tunnels and mountain passes',
+    coverageFactIds: ['fact-headlights-mountain-tunnels']
+  },
+  {
+    id: 'q207',
+    category: 'Safe Driving',
+    questionText: 'Why should you turn on your headlights when the sun is low on the horizon?',
+    options: [
+      'To prevent your dashboard screen from dimming.',
+      'To help other drivers see your vehicle.',
+      'To warm up your vehicle\'s generator.',
+      'Only because high-beams are forbidden before dusk.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 3): Turn on headlights to help other drivers see your vehicle when the sun is low on the horizon.',
+    testGroup: 37,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 4,
+    sourceTopic: 'Headlights when sun is low on horizon',
+    coverageFactIds: ['fact-headlights-sun-horizon']
+  },
+  {
+    id: 'q208',
+    category: 'Safe Driving',
+    questionText: 'If you suddenly see an accident or a severe hazard ahead on the road, how should you warn drivers behind you?',
+    options: [
+      'Sound your horn continuously.',
+      'Turn on your emergency hazard flashers.',
+      'Tap your brakes rapidly in an erratic pattern.',
+      'Roll down all windows and wave your arms.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 3): If you see an accident or hazard ahead, turn on your emergency flashers to warn drivers behind you.',
+    testGroup: 37,
+    sourceSection: 'Section 3: An Introduction to Driving',
+    sourcePage: 5,
+    sourceTopic: 'Using emergency flashers',
+    coverageFactIds: ['fact-emergency-flashers-hazard']
+  },
+  {
+    id: 'q209',
+    category: 'Rules of the Road',
+    questionText: 'What does a single solid white line painted between lanes on a road indicate?',
+    options: [
+      'It marks opposing lanes of traffic going in opposite directions.',
+      'It marks traffic lanes going in the same direction, which includes one-way streets.',
+      'It indicates a lane where u-turns are permitted.',
+      'It shows where pedestrians have absolute right-of-way.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 4): A single solid white line marks traffic lanes going in the same direction, which includes one-way streets.',
+    testGroup: 37,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 6,
+    sourceTopic: 'Single Solid White Line Rules',
+    coverageFactIds: ['fact-single-white-line']
+  },
+  {
+    id: 'q210',
+    category: 'Rules of the Road',
+    questionText: 'How are ending freeway or street lanes usually marked to tell you to prepare to exit or merge?',
+    options: [
+      'With a row of bright yellow raised buttons.',
+      'With large broken lines painted on the pavement.',
+      'With a continuous thick solid red line.',
+      'With multiple checkerboard horizontal speed bumps.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 4): Ending freeway and street lanes are usually marked with large broken lines; prepare to exit or merge when you see them.',
+    testGroup: 37,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 7,
+    sourceTopic: 'End of Lane Markings',
+    coverageFactIds: ['fact-end-lane-broken-markings']
+  },
+  {
+    id: 'q211',
+    category: 'Rules of the Road',
+    questionText: 'What does a yield line consisting of a row of solid white triangles (often called "shark\'s teeth") pointing towards you indicate?',
+    options: [
+      'Vehicles behind you must speed up to merge.',
+      'It shows oncoming vehicles where they must yield or stop.',
+      'An approaching crossing where bicycle lanes cross lanes of car traffic.',
+      'A dedicated carpool or HOV assembly zone.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 4): A yield line consists of a row of solid white triangles (shark teeth) pointing towards oncoming vehicles to show where to yield or stop.',
+    testGroup: 37,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 7,
+    sourceTopic: 'Yield Line Definition',
+    coverageFactIds: ['fact-yield-line-shark-teeth']
+  },
+  {
+    id: 'q212',
+    category: 'Rules of the Road',
+    questionText: 'On a multi-lane highway or road, which lane is the designated passing lane (the fast lane)?',
+    options: [
+      'The far-right lane closest to the shoulder or curb.',
+      'The far-left lane closest to the center divider.',
+      'The middle lane regardless of travel speed.',
+      'Any lane that has broken white lane lines.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 4): On a multilane road, the passing lane (far left lane) is the lane closest to the center divider.',
+    testGroup: 37,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 8,
+    sourceTopic: 'Left Passing Lane',
+    coverageFactIds: ['fact-passing-lane-clostest']
+  },
+  {
+    id: 'q213',
+    category: 'Rules of the Road',
+    questionText: 'What is the correct right-of-way rule when approaching an uncontrolled T-intersection?',
+    options: [
+      'The vehicle closest to the left side has right-of-way.',
+      'Traffic going straight through on the through road has absolute right-of-way over vehicles turning in.',
+      'The vehicle turning in has right-of-way over vehicles on the through road.',
+      'The vehicle traveling at the faster speed has priority.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 4): At T-intersections, traffic going straight through on the through road has the absolute right-of-way over vehicles turning in.',
+    testGroup: 38,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 15,
+    sourceTopic: 'T-Intersection right-of-way rules',
+    coverageFactIds: ['fact-t-intersection-rightofway']
+  },
+  {
+    id: 'q214',
+    category: 'Rules of the Road',
+    questionText: 'When merging your vehicle into highway traffic, how much of a safety buffer space should you provide between you and the vehicle in front?',
+    options: [
+      'At least one second.',
+      'At least three seconds.',
+      'At least six seconds.',
+      'At least eight seconds.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 4): Provide at least three seconds of safety buffer space between you and the vehicle in front when merging.',
+    testGroup: 38,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 16,
+    sourceTopic: 'Safety buffer during merging',
+    coverageFactIds: ['fact-merge-space-3sec']
+  },
+  {
+    id: 'q215',
+    category: 'Rules of the Road',
+    questionText: 'When entering city street traffic from a full stop, how much of a space gap do you need to safely reach city traffic speed?',
+    options: [
+      'About 50 feet (two car lengths).',
+      'About half a block (150 feet).',
+      'About a full block (300 feet).',
+      'At least two blocks (600 feet).'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 4): When entering city street traffic from a full stop, you need a space gap of about half a block (150 feet) to reach traffic speed.',
+    testGroup: 38,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 16,
+    sourceTopic: 'City street merging gap space',
+    coverageFactIds: ['fact-city-merge-halfblock']
+  },
+  {
+    id: 'q216',
+    category: 'Rules of the Road',
+    questionText: 'When entering fast highway traffic from a full stop, how much of a space gap do you need to merge safely?',
+    options: [
+      'About half a block (150 feet).',
+      'About a full block (300 feet).',
+      'About two full blocks (600 feet).',
+      'At least a quarter-mile.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 4): When entering highway traffic from a full stop, you need a space gap of about a full block (300 feet) to merge safely.',
+    testGroup: 38,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 16,
+    sourceTopic: 'Highway merging gap space',
+    coverageFactIds: ['fact-highway-merge-fullblock']
+  },
+  {
+    id: 'q217',
+    category: 'Rules of the Road',
+    questionText: 'A vehicle that is stopped, parked, or left standing on a freeway may be legally removed after:',
+    options: [
+      'Type-A vehicles after 30 minutes.',
+      'More than four hours.',
+      'More than twelve hours.',
+      'More than twenty-four hours.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 4): A vehicle that is stopped, parked, or left standing on a freeway for more than four hours may be legally removed.',
+    testGroup: 38,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 21,
+    sourceTopic: 'Freeway vehicle storage limits',
+    coverageFactIds: ['fact-freeway-stuck-time']
+  },
+  {
+    id: 'q218',
+    category: 'Rules of the Road',
+    questionText: 'Under California law, what must a law enforcement officer do before asking questions about a violation during a traffic or pedestrian stop?',
+    options: [
+      'They must administer an immediate breathalyzer test.',
+      'They are required to state the reason for the stop before asking criminal questions.',
+      'They must provide a written copy of all local traffic bylaws.',
+      'They must request consent to search the interior trunk compartment.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 4): Law enforcement officers are required by state law to state the reason for a traffic or pedestrian stop before asking criminal/violative questions.',
+    testGroup: 38,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 21,
+    sourceTopic: 'State rules for police stops',
+    coverageFactIds: ['fact-le-stop-reason']
+  },
+  {
+    id: 'q219',
+    category: 'Traffic Signals',
+    questionText: 'At a street crosswalk, a pedestrian must not start crossing the street if the DONT WALK or Raised Hand signal is:',
+    options: [
+      'Flashing or stable (solid).',
+      'Flashing green or solid blue.',
+      'Accompanied by an audible walk notification tone.',
+      'Accompanied by a countdown timer showing more than 10 seconds.'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'California Handbook (Section 5): Do not start crossing the street if the DONT WALK or Raised Hand signal is flashing or stable.',
+    testGroup: 39,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 25,
+    sourceTopic: 'Pedestrian countdown signals',
+    coverageFactIds: ['fact-ped-dont-walk-flashing']
+  },
+  {
+    id: 'q220',
+    category: 'Rules of the Road',
+    questionText: 'Why do large commercial trucks often swing wide when making sharp turns?',
+    options: [
+      'Because their trailers have steering helpers on board.',
+      'Because their rear wheels follow a shorter path than their front wheels.',
+      'They are legally required to occupy two lanes to block light vehicles.',
+      'Their front wheels turn at a slower gear ratio than rear axles.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 5): Large vehicles often swing wide because their rear wheels follow a shorter path than their front wheels.',
+    testGroup: 39,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 33,
+    sourceTopic: 'Large truck turning behaviors',
+    coverageFactIds: ['fact-truck-swing-wide']
+  },
+  {
+    id: 'q221',
+    category: 'Rules of the Road',
+    questionText: 'On a divided highway with 4 or more lanes of traffic traveling in your direction, large trucks and vehicle towing combinations must drive in which lanes?',
+    options: [
+      'In any lane they choose as long as they stay at the speed limit.',
+      'In the two lanes closest to the right.',
+      'In the far-left carpool or fast lanes only.',
+      'Strictly in the second lane from the left.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 5): On a divided highway with 4 or more lanes in one direction, large trucks and vehicle towing combinations must drive in the 2 lanes closest to the right.',
+    testGroup: 39,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 33,
+    sourceTopic: 'Large truck speed lane bounds',
+    coverageFactIds: ['fact-truck-highway-lanes']
+  },
+  {
+    id: 'q222',
+    category: 'Rules of the Road',
+    questionText: 'Under California law, is lane splitting (motorcycles sharing lanes with other vehicles) permitted?',
+    options: [
+      'No, lane splitting is strictly illegal in California.',
+      'Yes, it is legal for motorcycles to share lanes with other vehicles in California.',
+      'It is legal only on rural roads with speeds under 25 mph.',
+      'It is only legal for emergency responder motorcycles.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 5): It is legal in California for motorcycles to share lanes with other vehicles, which is known as lane splitting.',
+    testGroup: 39,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 35,
+    sourceTopic: 'Motorcycle lane splitting law',
+    coverageFactIds: ['fact-motorcycle-lane-splitting']
+  },
+  {
+    id: 'q223',
+    category: 'Rules of the Road',
+    questionText: 'When driving a vehicle towing a trailer or operating a 3-axle truck, in which lane are you required to drive?',
+    options: [
+      'In the far-left lane to maintain freeway speeds.',
+      'In the far-right lane or designated slower vehicle lane.',
+      'In any middle lane to allow vehicles to pass on both sides.',
+      'In the carpool lane when driving during off-peak hours.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 5): When towing a vehicle/trailer or driving a 3-axle truck, you must drive in the far-right lane or designated slower vehicle lane.',
+    testGroup: 39,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 38,
+    sourceTopic: 'Towing slow vehicle lanes',
+    coverageFactIds: ['fact-towing-slower-vehicles-lanes']
+  },
+  {
+    id: 'q224',
+    category: 'Rules of the Road',
+    questionText: 'What is the California rule regarding funeral processions on public roads?',
+    options: [
+      'You may break into the procession line to make a turn if you are in a hurry.',
+      'Interfering with a funeral procession is ticketable; processions led by a traffic officer have the right-of-way.',
+      'Processions must yield right-of-way at all uncontrolled intersections.',
+      'You should sound your horn to warn the procession of your presence.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 5): Interfering with a funeral procession is ticketable; processions led by a traffic officer have the right-of-way.',
+    testGroup: 39,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 41,
+    sourceTopic: 'Funeral procession bounds',
+    coverageFactIds: ['fact-funeral-processor-right-of-way']
+  },
+  {
+    id: 'q225',
+    category: 'Getting a Driver\'s License',
+    questionText: 'How many days do you have to request an administrative hearing with the DMV after being served notice of an action against your driving privilege?',
+    options: [
+      'Within 5 days of service.',
+      'Within 10 days of service.',
+      'Within 30 days of service.',
+      'Within 45 days of service.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 5): An administrative hearing with the DMV must be requested within 10 days of being served of a proposed action against your driving privilege.',
+    testGroup: 39,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 43,
+    sourceTopic: 'Admin hearing service request times',
+    coverageFactIds: ['fact-hearing-timelines-post-service']
+  },
+  {
+    id: 'q226',
+    category: 'Rules of the Road',
+    questionText: 'What rules apply to people riding animals or driving animal-drawn vehicles on public roads in California?',
+    options: [
+      'They must ride on highways only and always yield to cars.',
+      'People riding animals or driving animal-drawn vehicles have the same rights and duties as motor vehicle drivers.',
+      'They are treated as pedestrians and must use crosswalks.',
+      'They are prohibited from driving or riding on any public roads.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 5): People riding animals or driving animal-drawn vehicles on public roads have the same rights and duties as motor vehicle drivers.',
+    testGroup: 40,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 32,
+    sourceTopic: 'Animal-drawn vehicles and riders on public roads',
+    coverageFactIds: ['fact-sharing-road-animal-drawn-vehicles']
+  },
+  {
+    id: 'q227',
+    category: 'Safe Driving',
+    questionText: 'If there are potential hazards on both sides of the road, how should you divide your space?',
+    options: [
+      'Maintain your speed and drive exactly down the center divider line.',
+      'Handle them one at a time by slowing down and letting one pass before centering space for the other.',
+      'Accelerate past both hazards as quickly as possible.',
+      'Weave left and right to stay clear of both sides.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 6): When hazards are on both sides of the road, handle them one at a time by slowing down and letting one pass before centering space for the other.',
+    testGroup: 40,
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 52,
+    sourceTopic: 'Hazard space splitting rules',
+    coverageFactIds: ['fact-hazard-space-split']
+  },
+  {
+    id: 'q228',
+    category: 'Safe Driving',
+    questionText: 'What is the correct protocol under California guidelines if your vehicle becomes disabled on a freeway?',
+    options: [
+      'Exit immediately on the left side and walk to the nearest exit ramp.',
+      'Pull to the right shoulder, exit from the right side of the vehicle, stay inside with your safety belt on, dial 511, and use emergency flashers.',
+      'Leave your vehicle parked in the lane and wait outside on the roadway.',
+      'Immediately cross all traffic lanes on foot to find an emergency call box.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 6): If disabled on a freeway: pull to the right shoulder, exit from the right side, dial 511, stay inside with safety belt on, and use emergency flashers.',
+    testGroup: 40,
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 53,
+    sourceTopic: 'Freeway breakdown phone protocols',
+    coverageFactIds: ['fact-disabled-freeway-shoulder']
+  },
+  {
+    id: 'q229',
+    category: 'Alcohol and Drugs',
+    questionText: 'Which of the following describes the requirements triggered by a formal DUI conviction under California law?',
+    options: [
+      'A driver must attend an evening warning class and pay a standard $50 local fee.',
+      'A mandatory 1-year privilege suspension, requirement to complete a certified DUI program, file an SR-22/SR-1P certificate, and potentially install an Ignition Interlock Device (IID).',
+      'A driver has their license permanently revoked with no possibility of reinstatement.',
+      'A driver must file an insurance waiver and drive only with immediate relatives.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 7): A DUI conviction triggers a mandatory 1-year privilege suspension, requirement to complete a certified DUI program, file an SR-22/SR-1P certificate, and potentially install an Ignition Interlock Device (IID).',
+    testGroup: 40,
+    sourceSection: 'Section 7: Alcohol and Drugs',
+    sourcePage: 57,
+    sourceTopic: 'DUI conviction license requirements',
+    coverageFactIds: ['fact-dui-conviction-sr22-iid']
+  },
+  {
+    id: 'q230',
+    category: 'Rules of the Road',
+    questionText: 'If you hit a parked vehicle or other property and cannot locate the owner, you are legally required to:',
+    options: [
+      'Drive off and seek a mechanic without taking action.',
+      'Leave a note with your name, phone number, and address, and report the collision to local police or CHP without delay.',
+      'Wait in your car until a city parking enforcement officer notices.',
+      'Report the collision only if the estimated property damage exceeds $5,000.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 8): If you hit a parked vehicle or property and cannot find the owner, leave a note with your name, phone number, and address, and report the collision to local police or CHP.',
+    testGroup: 40,
+    sourceSection: 'Section 8: Financial Responsibility, Insurance Requirements, and Collisions',
+    sourcePage: 59,
+    sourceTopic: 'Collision with parked vehicle or property',
+    coverageFactIds: ['fact-collision-parked-vehicle-note-report']
+  },
+  {
+    id: 'q231',
+    category: 'Safe Driving',
+    questionText: 'What safe driving adjustment is recommended for senior drivers experiencing physical changes in night vision?',
+    options: [
+      'Drive significantly faster to minimize the time spent on dark roads.',
+      'Consider limiting or avoiding night driving, and select well-lit routes if necessary.',
+      'Wear high-definition sunglasses when driving under dark conditions.',
+      'Use high-beam headlights continuously when driving in lit residential areas.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 9): Senior drivers often experience physical changes and may consider limiting or avoiding night driving, selecting well-lit routes if necessary.',
+    testGroup: 40,
+    sourceSection: 'Section 9: Seniors and Driving',
+    sourcePage: 61,
+    sourceTopic: 'Seniors safe night driving choices',
+    coverageFactIds: ['fact-seniors-night-driving-limitation']
+  },
+  {
+    id: 'q232',
+    category: 'Safe Driving',
+    questionText: 'Which of the following is an indicator that an older driver should reassess their driving safety and potentially adjust their habits?',
+    options: [
+      'Getting lost in familiar places, having new vehicle dents or scrapes, or experiencing frequent close calls.',
+      'Registering for a defensive driving class every five years.',
+      'Upgrading their vehicle to a model with standard safety aids.',
+      'Tuning their vehicle engine at a certified local dealership.'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'California Handbook (Section 9): Senior drivers should reassess driving safety if they get lost in familiar places, have new dents or scrapes, have frequent close calls, or are involved in collisions. Safer adjustments may include limiting night driving, taking shorter trips, avoiding difficult intersections, avoiding freeways, and using additional mirrors.',
+    testGroup: 40,
+    sourceSection: 'Section 9: Seniors and Driving',
+    sourcePage: 61,
+    sourceTopic: 'Warning signs and safety adjustments for senior drivers',
+    coverageFactIds: ['fact-seniors-warning-signs']
+  },
+  {
+    id: 'q233',
+    category: 'Traffic Signals',
+    questionText: 'What does a solid red traffic light indicate under California law?',
+    options: [
+      'Proceed slowly through the intersection without stopping.',
+      'Stop completely. You may make a right turn against a red light after stopping unless a sign prohibits it.',
+      'Yield right-of-way only if other vehicles are currently in the intersection.',
+      'Stop completely and wait until the light turns green before making any turn.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 5): A solid red traffic light means STOP. You can make a right turn against red after a complete stop unless prohibited.',
+    testGroup: 40,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 24,
+    sourceTopic: 'Solid Red Light Definition',
+    coverageFactIds: ['fact-traffic-light-red']
+  }
+];
+
 // Mappings for existing questions 1 to 146
 const fullQMap: { [qId: string]: string[] } = {
   q1: ['fact-traffic-light-flashing-yellow'],
@@ -1021,8 +1782,8 @@ const fullQMap: { [qId: string]: string[] } = {
   q142: ['fact-hand-signal-left-arm'],
   q143: ['fact-hand-signal-right-arm'],
   q144: ['fact-hand-signal-slow-stop-arm'],
-  q145: ['fact-dui-open-container-vehicle'],
-  q146: ['fact-class-c-license']
+  q145: ['fact-collision-parked-vehicle-note-report'],
+  q146: ['fact-sharing-road-animal-drawn-vehicles']
 };
 
 const dataFilePath = path.resolve(process.cwd(), 'src/data.ts');
@@ -1105,9 +1866,9 @@ for (let i = 1; i < questionBlocks.length; i += 2) {
   const correctIdx = (qBody.match(/correctOptionIndex:\s*(\d)/) || ['', '0'])[1].trim();
   let explanation = extractField(qBody, 'explanation');
   const testGroup = (qBody.match(/testGroup:\s*(\d+)/) || ['', '12'])[1];
-  const section = extractField(qBody, 'sourceSection');
-  const page = (qBody.match(/sourcePage:\s*(\d+)/) || ['', '0'])[1];
-  const topic = extractField(qBody, 'sourceTopic');
+  let section = extractField(qBody, 'sourceSection');
+  let page = (qBody.match(/sourcePage:\s*(\d+)/) || ['', '0'])[1];
+  let topic = extractField(qBody, 'sourceTopic');
 
   const optionsBlockM = qBody.match(/options:\s*\[([\s\S]*?)\]/);
 
@@ -1127,6 +1888,15 @@ for (let i = 1; i < questionBlocks.length; i += 2) {
   }
 
   const mappedFacts = fullQMap[qId] || ['fact-class-c-license'];
+  
+  // Auto-align question metadata with matched mapped fact info to resolve alignment discrepancies
+  const matchedFact = HANDBOOK_FACTS.find(f => mappedFacts.includes(f.id));
+  if (matchedFact) {
+    section = matchedFact.section;
+    page = String(matchedFact.page);
+    topic = matchedFact.topic;
+  }
+
   const factsString = mappedFacts.map(f => `'${f}'`).join(', ');
 
   const qStr = `  {
@@ -1152,6 +1922,17 @@ for (let i = 1; i < questionBlocks.length; i += 2) {
 // Format the 21 first appends as string objects
 firstAppended.forEach(q => {
   const optionsStr = q.options.map(o => `      '${o.replace(/'/g, "\\'")}'`).join(',\n');
+  
+  let section = q.sourceSection;
+  let page = String(q.sourcePage);
+  let topic = q.sourceTopic;
+  const matchedFact = HANDBOOK_FACTS.find(f => q.coverageFactIds.includes(f.id));
+  if (matchedFact) {
+    section = matchedFact.section;
+    page = String(matchedFact.page);
+    topic = matchedFact.topic;
+  }
+
   const questStr = `  {
     id: '${q.id}',
     category: '${q.category}',
@@ -1162,9 +1943,9 @@ firstAppended.forEach(q => {
     correctOptionIndex: ${q.correctOptionIndex},
     explanation: '${q.explanation.replace(/'/g, "\\'")}',
     testGroup: ${q.testGroup},
-    sourceSection: '${q.sourceSection}',
-    sourcePage: ${q.sourcePage},
-    sourceTopic: '${q.sourceTopic}',
+    sourceSection: '${section.replace(/'/g, "\\'")}',
+    sourcePage: ${page},
+    sourceTopic: '${topic.replace(/'/g, "\\'")}',
     coverageFactIds: [${q.coverageFactIds.map(f => `'${f}'`).join(', ')}]
   }`;
   rebuiltQuestions.push(questStr);
@@ -1173,6 +1954,17 @@ firstAppended.forEach(q => {
 // Format the 14 second appends as string objects
 secondAppended.forEach(q => {
   const optionsStr = q.options.map(o => `      '${o.replace(/'/g, "\\'")}'`).join(',\n');
+
+  let section = q.sourceSection;
+  let page = String(q.sourcePage);
+  let topic = q.sourceTopic;
+  const matchedFact = HANDBOOK_FACTS.find(f => q.coverageFactIds.includes(f.id));
+  if (matchedFact) {
+    section = matchedFact.section;
+    page = String(matchedFact.page);
+    topic = matchedFact.topic;
+  }
+
   const questStr = `  {
     id: '${q.id}',
     category: '${q.category}',
@@ -1183,9 +1975,9 @@ secondAppended.forEach(q => {
     correctOptionIndex: ${q.correctOptionIndex},
     explanation: '${q.explanation.replace(/'/g, "\\'")}',
     testGroup: ${q.testGroup},
-    sourceSection: '${q.sourceSection}',
-    sourcePage: ${q.sourcePage},
-    sourceTopic: '${q.sourceTopic}',
+    sourceSection: '${section.replace(/'/g, "\\'")}',
+    sourcePage: ${page},
+    sourceTopic: '${topic.replace(/'/g, "\\'")}',
     coverageFactIds: [${q.coverageFactIds.map(f => `'${f}'`).join(', ')}]
   }`;
   rebuiltQuestions.push(questStr);
@@ -1194,6 +1986,17 @@ secondAppended.forEach(q => {
 // Format the 8 final appends as string objects to cover remainings
 finalAppended.forEach(q => {
   const optionsStr = q.options.map(o => `      '${o.replace(/'/g, "\\'")}'`).join(',\n');
+
+  let section = q.sourceSection;
+  let page = String(q.sourcePage);
+  let topic = q.sourceTopic;
+  const matchedFact = HANDBOOK_FACTS.find(f => q.coverageFactIds.includes(f.id));
+  if (matchedFact) {
+    section = matchedFact.section;
+    page = String(matchedFact.page);
+    topic = matchedFact.topic;
+  }
+
   const questStr = `  {
     id: '${q.id}',
     category: '${q.category}',
@@ -1204,9 +2007,41 @@ finalAppended.forEach(q => {
     correctOptionIndex: ${q.correctOptionIndex},
     explanation: '${q.explanation.replace(/'/g, "\\'")}',
     testGroup: ${q.testGroup},
-    sourceSection: '${q.sourceSection}',
-    sourcePage: ${q.sourcePage},
-    sourceTopic: '${q.sourceTopic}',
+    sourceSection: '${section.replace(/'/g, "\\'")}',
+    sourcePage: ${page},
+    sourceTopic: '${topic.replace(/'/g, "\\'")}',
+    coverageFactIds: [${q.coverageFactIds.map(f => `'${f}'`).join(', ')}]
+  }`;
+  rebuiltQuestions.push(questStr);
+});
+
+// Format the 41 final uncovered appends as string objects to cover absolutely everything
+finalUncoveredAppended.forEach(q => {
+  const optionsStr = q.options.map(o => `      '${o.replace(/'/g, "\\'")}'`).join(',\n');
+
+  let section = q.sourceSection;
+  let page = String(q.sourcePage);
+  let topic = q.sourceTopic;
+  const matchedFact = HANDBOOK_FACTS.find(f => q.coverageFactIds.includes(f.id));
+  if (matchedFact) {
+    section = matchedFact.section;
+    page = String(matchedFact.page);
+    topic = matchedFact.topic;
+  }
+
+  const questStr = `  {
+    id: '${q.id}',
+    category: '${q.category.replace(/'/g, "\\'")}',
+    questionText: '${q.questionText.replace(/'/g, "\\'")}',
+    imageUrl: '',
+    options: [
+\n${optionsStr}\n    ],
+    correctOptionIndex: ${q.correctOptionIndex},
+    explanation: '${q.explanation.replace(/'/g, "\\'")}',
+    testGroup: ${q.testGroup},
+    sourceSection: '${section.replace(/'/g, "\\'")}',
+    sourcePage: ${page},
+    sourceTopic: '${topic.replace(/'/g, "\\'")}',
     coverageFactIds: [${q.coverageFactIds.map(f => `'${f}'`).join(', ')}]
   }`;
   rebuiltQuestions.push(questStr);

@@ -7,6 +7,8 @@ import { HANDBOOK_FACTS } from "../src/handbookFacts.ts";
 import * as fs from "fs";
 import * as path from "path";
 
+const REQUIRE_ALL_FACTS_COVERED = true;
+
 console.log("\n==================================================");
 console.log("             DRIVEREADY COVERAGE REPORT           ");
 console.log("==================================================\n");
@@ -40,11 +42,43 @@ const actualSignIds = new Set(signIdMatches.map(m => m[1]));
 // Parse Questions from PRACTICE_QUESTIONS
 const questionBlocks = questionsPart.split(/id:\s*['"](q\d+)['"]/g);
 
-const parsedQuestions: { id: string; coverageFactIds: string[] }[] = [];
+interface QuestionData {
+  id: string;
+  category?: string;
+  questionText?: string;
+  options?: string[];
+  correctOptionIndex?: string;
+  explanation?: string;
+  testGroup?: string;
+  sourceSection?: string;
+  sourcePage?: string;
+  sourceTopic?: string;
+  coverageFactIds: string[];
+  hasCoverageTopicId: boolean;
+  rawBody: string;
+}
+
+const parsedQuestions: QuestionData[] = [];
+
+// Helper to extract a single string value from a field line
+function extractField(body: string, name: string): string {
+  const regexSingle = new RegExp(name + `:\\s*'((?:[^'\\\\]|\\\\.)*)'`);
+  const matchSingle = body.match(regexSingle);
+  if (matchSingle) return matchSingle[1].replace(/\\'/g, "'").replace(/\\\\/g, '\\');
+
+  const regexDouble = new RegExp(name + `:\\s*"((?:[^"\\\\]|\\\\.)*)"`);
+  const matchDouble = body.match(regexDouble);
+  if (matchDouble) return matchDouble[1].replace(/\\"/g, '"').replace(/\\\\/g, '\\');
+
+  return '';
+}
 
 for (let i = 1; i < questionBlocks.length; i += 2) {
   const qId = questionBlocks[i];
   const qBody = questionBlocks[i + 1] || "";
+
+  // Check if coverageTopicId is present anywhere in this block
+  const hasCoverageTopicId = qBody.includes("coverageTopicId");
 
   const factsMatch = qBody.match(/coverageFactIds:\s*\[([\s\S]*?)\]/);
   let coverageFactIds: string[] = [];
@@ -55,7 +89,47 @@ for (let i = 1; i < questionBlocks.length; i += 2) {
       .filter(s => s.length > 0);
   }
 
-  parsedQuestions.push({ id: qId, coverageFactIds });
+  const category = extractField(qBody, 'category');
+  const questionText = extractField(qBody, 'questionText');
+  
+  // Parse options block
+  const optionsMatch = qBody.match(/options:\s*\[([\s\S]*?)\]/);
+  let optionsList: string[] = [];
+  if (optionsMatch) {
+    optionsList = optionsMatch[1]
+      .split(',')
+      .map(o => o.trim().replace(/^['"`]|['"`]$/g, ''))
+      .filter(o => o.length > 0);
+  }
+
+  const correctMatch = qBody.match(/correctOptionIndex:\s*(\d+)/);
+  const correctOptionIndex = correctMatch ? correctMatch[1] : '';
+
+  const explanation = extractField(qBody, 'explanation');
+
+  const testGroupMatch = qBody.match(/testGroup:\s*(\d+)/);
+  const testGroup = testGroupMatch ? testGroupMatch[1] : '';
+
+  const sourceSection = extractField(qBody, 'sourceSection');
+  const sourcePageMatch = qBody.match(/sourcePage:\s*(\d+)/);
+  const sourcePage = sourcePageMatch ? sourcePageMatch[1] : '';
+  const sourceTopic = extractField(qBody, 'sourceTopic');
+
+  parsedQuestions.push({
+    id: qId,
+    category,
+    questionText,
+    options: optionsList,
+    correctOptionIndex,
+    explanation,
+    testGroup,
+    sourceSection,
+    sourcePage,
+    sourceTopic,
+    coverageFactIds,
+    hasCoverageTopicId,
+    rawBody: qBody
+  });
 }
 
 console.log(`Parsed ${parsedQuestions.length} practice questions from current database.`);
@@ -71,10 +145,62 @@ HANDBOOK_FACTS.forEach(f => {
 let integrityPass = true;
 const invalidFactReferences: { qId: string; factId: string }[] = [];
 const emptyFactQuestions: string[] = [];
+const validationFailures: string[] = [];
+const suspiciousMappings: string[] = [];
 
 // Populate question mapping and check question references integrity
 parsedQuestions.forEach(q => {
-  if (q.coverageFactIds.length === 0) {
+  // Validate question contains required fields (Check 6)
+  if (!q.id) {
+    validationFailures.push(`Question missing id!`);
+    integrityPass = false;
+  }
+  if (!q.category) {
+    validationFailures.push(`Question [${q.id}] missing category`);
+    integrityPass = false;
+  }
+  if (!q.questionText) {
+    validationFailures.push(`Question [${q.id}] missing questionText`);
+    integrityPass = false;
+  }
+  if (!q.options || q.options.length === 0) {
+    validationFailures.push(`Question [${q.id}] missing options array`);
+    integrityPass = false;
+  }
+  if (q.correctOptionIndex === '') {
+    validationFailures.push(`Question [${q.id}] missing correctOptionIndex`);
+    integrityPass = false;
+  }
+  if (!q.explanation) {
+    validationFailures.push(`Question [${q.id}] missing explanation`);
+    integrityPass = false;
+  }
+  if (!q.testGroup) {
+    validationFailures.push(`Question [${q.id}] missing testGroup`);
+    integrityPass = false;
+  }
+  if (!q.sourceSection) {
+    validationFailures.push(`Question [${q.id}] missing sourceSection`);
+    integrityPass = false;
+  }
+  if (!q.sourcePage) {
+    validationFailures.push(`Question [${q.id}] missing sourcePage`);
+    integrityPass = false;
+  }
+  if (!q.sourceTopic) {
+    validationFailures.push(`Question [${q.id}] missing sourceTopic`);
+    integrityPass = false;
+  }
+  if (q.hasCoverageTopicId) {
+    validationFailures.push(`Question [${q.id}] is forbidden from having a coverageTopicId field!`);
+    integrityPass = false;
+  }
+
+  // Check section alignment (sourceSection pointing to the wrong handbook section)
+  const qSectionTopic = (q.sourceSection || '').toLowerCase();
+  
+  // Validate coverage Fact IDs
+  if (q.coverageFactIds.length === 0 || (q.coverageFactIds.length === 1 && q.coverageFactIds[0] === '')) {
     emptyFactQuestions.push(q.id);
     integrityPass = false;
   }
@@ -85,8 +211,53 @@ parsedQuestions.forEach(q => {
       integrityPass = false;
     } else {
       factToQuestions[fId].push(q.id);
+      
+      // Perform section alignment checks between handbookFact definition and question sourceSection
+      const matchedFact = HANDBOOK_FACTS.find(f => f.id === fId);
+      if (matchedFact && q.sourceSection && matchedFact.section !== q.sourceSection) {
+        validationFailures.push(`Question [${q.id}] sourceSection ("${q.sourceSection}") mismatch with mapped Fact [${fId}] section ("${matchedFact.section}")`);
+        integrityPass = false;
+      }
     }
   });
+
+  // 5. Semantic mismatch helper (suspicious-mapping audit)
+  if (q.questionText) {
+    const qTextLower = q.questionText.toLowerCase();
+
+    // A. Parked vehicle / collision / accident / hit-and-run with DUI container
+    if (
+      (qTextLower.includes("parked vehicle") || qTextLower.includes("collision") || qTextLower.includes("accident") || qTextLower.includes("hit-and-run") || qTextLower.includes("collide")) &&
+       q.coverageFactIds.some(f => f.includes("dui") || f.includes("open-container") || f.includes("alcohol"))
+    ) {
+      suspiciousMappings.push(`Question [${q.id}]: text mentions parked vehicle/collision/accident but maps to DUI/open-container fact: [${q.coverageFactIds.join(', ')}]`);
+    }
+
+    // B. Horse / animal-drawn with licensing/REAL ID
+    if (
+      (qTextLower.includes("horse") || qTextLower.includes("animal-drawn") || qTextLower.includes("rider")) &&
+       q.coverageFactIds.some(f => f.includes("class-c") || f.includes("real-id") || f.includes("license"))
+    ) {
+      suspiciousMappings.push(`Question [${q.id}]: text mentions horses/animal-drawn but maps to license class or REAL ID fact: [${q.coverageFactIds.join(', ')}]`);
+    }
+
+    // C. Alcohol / BAC / DUI / drug / container with parking/sign/senior
+    if (
+      (qTextLower.includes("alcohol") || qTextLower.includes("bac") || qTextLower.includes("dui") || qTextLower.includes("drug") || qTextLower.includes("container")) &&
+       q.coverageFactIds.some(f => f.includes("parking") || f.includes("sign") || f.includes("seniors"))
+    ) {
+      suspiciousMappings.push(`Question [${q.id}]: text mentions alcohol/BAC/DUI but maps to parking/sign/senior fact: [${q.coverageFactIds.join(', ')}]`);
+    }
+
+    // D. Sign / signal / light with licensing/class-c
+    if (
+      (qTextLower.includes("sign") || qTextLower.includes("signal") || qTextLower.includes("red light") || qTextLower.includes("yellow light") || qTextLower.includes("green light")) &&
+       q.coverageFactIds.some(f => f.includes("license") || f.includes("class-c") || f.includes("permit")) &&
+       !qTextLower.includes("hand-signal") // hand-signal rules can match
+    ) {
+      suspiciousMappings.push(`Question [${q.id}]: text mentions sign/signal/light but maps to licensing/class-c/permit fact: [${q.coverageFactIds.join(', ')}]`);
+    }
+  }
 });
 
 // Calculate metric coverage counts
@@ -184,10 +355,74 @@ if (brokenSignFacts.length > 0) {
   console.log("✅ Check Passed: All road sign facts are covered by either a library item or a practice question!");
 }
 
+// Check 5: General question field validation list
+if (validationFailures.length > 0) {
+  console.error(`❌ FAILURE: Found ${validationFailures.length} field validation or section alignment failures:`);
+  validationFailures.slice(0, 15).forEach(f => {
+    console.error(`   - ${f}`);
+  });
+  if (validationFailures.length > 15) {
+    console.error(`   - ... and ${validationFailures.length - 15} more failures.`);
+  }
+  integrityPass = false;
+} else {
+  console.log("✅ Check Passed: All question fields validated and match alignment rules!");
+}
+
+// Strict mode checks: any uncovered fact whatsoever fails if REQUIRE_ALL_FACTS_COVERED is true
+const uncoveredFacts = HANDBOOK_FACTS.filter(f => factToQuestions[f.id].length === 0);
+
+// Write to a file for persistent viewing
+let fileContent = "UNCOVERED FACTS:\n\n";
+uncoveredFacts.forEach(f => {
+  fileContent += `ID: ${f.id}\n`;
+  fileContent += `Section: ${f.section}\n`;
+  fileContent += `Page: ${f.page}\n`;
+  fileContent += `Topic: ${f.topic}\n`;
+  fileContent += `Priority: ${f.priority}\n`;
+  fileContent += `MustHave: ${f.mustHaveQuestion}\n`;
+  fileContent += `Fact: ${f.fact}\n`;
+  fileContent += `--------------------------------------------------\n`;
+});
+fs.writeFileSync(path.resolve(process.cwd(), "uncovered_facts.txt"), fileContent, "utf-8");
+
+console.log("\n--- UNCOVERED FACTS ---");
+if (uncoveredFacts.length > 0) {
+  uncoveredFacts.forEach(f => {
+    console.log(`- ID:       ${f.id}`);
+    console.log(`  Section:  ${f.section}`);
+    console.log(`  Page:     ${f.page}`);
+    console.log(`  Topic:    ${f.topic}`);
+    console.log(`  Priority: ${f.priority}`);
+    console.log(`  MustHave: ${f.mustHaveQuestion}`);
+    console.log(`  Fact:     "${f.fact}"`);
+    console.log(`--------------------------------------------------`);
+  });
+  
+  if (REQUIRE_ALL_FACTS_COVERED) {
+    console.error(`❌ FAILURE: ${uncoveredFacts.length} facts are totally uncovered in REQUIRE_ALL_FACTS_COVERED mode!`);
+    integrityPass = false;
+  }
+} else {
+  console.log("🎉 SUCCESS: All 168 / 168 handbook facts are fully covered with at least one practice question!");
+}
+
+// Print suspicious mappings report
+console.log("\n--- SUSPICIOUS SEMANTIC MAPPINGS ---");
+if (suspiciousMappings.length > 0) {
+  suspiciousMappings.forEach(s => {
+    console.error(`⚠️  ${s}`);
+  });
+  // Note: We don't fail the build automatically on suspicious mappings since there could be dual/accidental matches,
+  // but we flag them clearly to catch obvious matching mistakes.
+} else {
+  console.log("✅ Check Passed: No suspicious semantic mapping mismatches detected!");
+}
+
 console.log("\n==================================================");
 
 if (integrityPass) {
-  console.log("🏆 SUCCESS: DriveReady fully meets atomic fact-level coverage requirements! (100% of high priority covered)");
+  console.log("🏆 SUCCESS: DriveReady fully meets atomic fact-level coverage requirements! (100% of all facts covered)");
   console.log("==================================================\n");
   process.exit(0);
 } else {

@@ -1320,6 +1320,16 @@ export const HANDBOOK_FACTS: HandbookFact[] = [
     contentType: 'number',
     mustHaveQuestion: true
   },
+  {
+    id: 'fact-sharing-road-animal-drawn-vehicles',
+    section: 'Section 5: Laws and Rules of the Road',
+    page: 32,
+    topic: 'Animal-drawn vehicles and riders on public roads',
+    fact: 'People riding animals or driving animal-drawn vehicles on public roads have the same rights and duties as motor vehicle drivers.',
+    priority: 'medium',
+    contentType: 'rule',
+    mustHaveQuestion: true
+  },
 
   // --- SECTION 6: SAFE DRIVING ---
   {
@@ -1686,6 +1696,16 @@ export const HANDBOOK_FACTS: HandbookFact[] = [
     contentType: 'procedure',
     mustHaveQuestion: true
   },
+  {
+    id: 'fact-collision-parked-vehicle-note-report',
+    section: 'Section 8: Financial Responsibility, Insurance Requirements, and Collisions',
+    page: 59,
+    topic: 'Collision with parked vehicle or property',
+    fact: 'If you hit a parked vehicle or property and cannot find the owner, leave a note with your name, phone number, and address, and report the collision to local police or CHP.',
+    priority: 'high',
+    contentType: 'procedure',
+    mustHaveQuestion: true
+  },
 
   // --- SECTION 9: SENIORS AND DRIVING ---
   {
@@ -1697,5 +1717,15 @@ export const HANDBOOK_FACTS: HandbookFact[] = [
     priority: 'low',
     contentType: 'rule',
     mustHaveQuestion: false
+  },
+  {
+    id: 'fact-seniors-warning-signs',
+    section: 'Section 9: Seniors and Driving',
+    page: 61,
+    topic: 'Warning signs and safety adjustments for senior drivers',
+    fact: 'Senior drivers should reassess driving safety if they get lost in familiar places, have new dents or scrapes, have frequent close calls, or are involved in collisions. Safer adjustments may include limiting night driving, taking shorter trips, avoiding difficult intersections, avoiding freeways, and using additional mirrors.',
+    priority: 'high',
+    contentType: 'procedure',
+    mustHaveQuestion: true
   }
 ];
