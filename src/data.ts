@@ -635,7 +635,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
       'More than 6 feet'
     ],
     correctOptionIndex: 2,
-    explanation: 'California Handbook (Section 5, Cargo Extension): Cargo that extends more than 4 feet from the back-rear bumper must display a 12-inch red or fluorescent orange square flag, or two red headlights at night.',
+    explanation: 'California Handbook (Section 5, Cargo Extension): Cargo that extends more than 4 feet from the back-rear bumper must display a 12-inch red or fluorescent orange square flag. At night, this cargo must be marked with two red lights (Page 44).',
     testGroup: 14
   },
   {
@@ -1290,7 +1290,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
       'No driving after midnight under any conditions.'
     ],
     correctOptionIndex: 1,
-    explanation: 'California Handbook (Section 1, Provisional License Restrictions): During the first 12 months after license issuance, provisional drivers under age 18 cannot drive between 11 PM and 5 AM unless supervised by a licensed parent/guardian, driver age 25+, or certified trainer.',
+    explanation: 'California Handbook (Section 2, Getting a Driver’s License): During the first 12 months after license issuance, provisional drivers under age 18 cannot drive between 11 p.m. and 5 a.m. unless supervised by a licensed parent/guardian, driver age 25+, or certified trainer (Page 2/6).',
     testGroup: 19
   },
   {
@@ -1305,7 +1305,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
       'Passengers under 25 years of age.'
     ],
     correctOptionIndex: 1,
-    explanation: 'California Handbook (Section 1, Provisional License Restrictions): During your first 12 months, you cannot transport passengers under 20 years of age unless accompanied by a licensed parent, guardian, or driver age 25+.',
+    explanation: 'California Handbook (Section 2, Getting a Driver’s License): During your first 12 months, you cannot transport passengers under 20 years of age unless accompanied by a licensed parent, guardian, or driver age 25+ (Page 2/6).',
     testGroup: 19
   },
   {
@@ -1320,7 +1320,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
       '60 days'
     ],
     correctOptionIndex: 1,
-    explanation: 'California Handbook (Section 4, Address Changes): You must notify the DMV of a change of residential address within 10 days.',
+    explanation: 'Supplemental Content (Address Changes): You must notify the DMV of a change of residential address within 10 days.',
     testGroup: 19
   },
   {
@@ -1335,7 +1335,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
       '30 days'
     ],
     correctOptionIndex: 0,
-    explanation: 'California Handbook (Section 10, Vehicle Registration): You must notify the DMV within 5 days of selling or transferring ownership of a vehicle by submitting a Notice of Transfer and Release of Liability (NRL).',
+    explanation: 'Supplemental Content (Vehicle Registration): You must notify the DMV within 5 days of selling or transferring ownership of a vehicle by submitting a Notice of Transfer and Release of Liability (NRL).',
     testGroup: 19
   },
   {
@@ -1365,7 +1365,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
       '30 days'
     ],
     correctOptionIndex: 1,
-    explanation: 'California Handbook (Section 1, Written Exam Limits): Minor applicants who fail the written driver\'s license exam must wait 1 week (7 days) before they can retake the test.',
+    explanation: 'Supplemental Content (Written Exam Limits): Minor applicants who fail the written driver\'s license exam must wait 1 week (7 days) before they can retake the test.',
     testGroup: 19
   },
   {
@@ -1380,7 +1380,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
       '60 days'
     ],
     correctOptionIndex: 1,
-    explanation: 'California Handbook (Section 1, Driving Exam Retake): If you fail the behind-the-wheel driving test, there is a mandatory 2-week (14 days) waiting period before you can attempt it again, and you must pay a retest fee.',
+    explanation: 'Supplemental Content (Driving Exam Retake): If you fail the behind-the-wheel driving test, there is a mandatory 2-week (14 days) waiting period before you can attempt it again, and you must pay a retest fee.',
     testGroup: 19
   },
   {
@@ -1395,7 +1395,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
       'At least one parent and their high school principal.'
     ],
     correctOptionIndex: 0,
-    explanation: 'California Handbook (Section 1, Minors Permit Application): Parents or legal guardians must sign the application assuming joint and several civil liability for any accidents involving the minor provisional driver.',
+    explanation: 'Supplemental Content (Minors Permit Application): Parents or legal guardians must sign the application assuming joint and several civil liability for any accidents involving the minor provisional driver (supported by Section 8).',
     testGroup: 19
   },
   {
@@ -1410,7 +1410,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
       '4 attempts.'
     ],
     correctOptionIndex: 2,
-    explanation: 'California Handbook (Section 1, Written Exam): Your application fee allows you up to 3 attempts to pass the written knowledge exam within a 12-month period. If you fail 3 times, you must submit a new application fee.',
+    explanation: 'Supplemental Content (Written Exam): Your application fee allows you up to 3 attempts to pass the written knowledge exam within a 12-month period. If you fail 3 times, you must submit a new application fee.',
     testGroup: 19
   },
   {
@@ -1425,7 +1425,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
       'A misdemeanor on your record but no monetary fine.'
     ],
     correctOptionIndex: 1,
-    explanation: 'California Handbook (Section 10, Safe Driving Rules): Dumping or abandoning an animal on a highway is a misdemeanor punishable by a fine of up to $1,000, 6 months in jail, or both.',
+    explanation: 'California Handbook (Section 5, Other Important Roadway Information): Dumping or abandoning an animal on a highway is a misdemeanor punishable by a fine of up to $1,000, 6 months in jail, or both (Page 44).',
     testGroup: 19
   },
 
@@ -1562,7 +1562,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
       'A fine of up to $5,000 and mandatory defensive driving school.'
     ],
     correctOptionIndex: 1,
-    explanation: 'California Handbook (Section 10, Evading Law Enforcement): Evading a peace officer is a misdemeanor punishable by imprisonment in a county jail for up to 1 year.',
+    explanation: 'California Handbook (Section 5, Evading Law Enforcement): Evading a peace officer performing their duties is a misdemeanor punishable by imprisonment in a county jail for up to 1 year (Page 45).',
     testGroup: 20
   },
   {
@@ -2003,7 +2003,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
       'It can cause the safety airbags to deploy unexpectedly.'
     ],
     correctOptionIndex: 1,
-    explanation: 'California Handbook (Section 10, Equipment Rules): A cracked or damaged windshield impairs safe vision and can fail to support the roof during a rollover crash.',
+    explanation: 'Supplemental Content (Windshield Safety): Under California vehicle safety guidelines, a cracked or damaged windshield impairs safe vision and can fail to support the roof during a rollover crash.',
     testGroup: 23
   },
   {
@@ -2080,7 +2080,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
       'Only if listening to active navigation instructions.'
     ],
     correctOptionIndex: 1,
-    explanation: 'California Handbook (Section 10, Safe Driving): Drivers and bicyclists are legally prohibited from wearing earplugs or headsets in both ears while on public roads.',
+    explanation: 'California Handbook (Section 3, Health/Hearing): Drivers and bicyclists are legally prohibited from wearing earplugs or headsets in both ears while on public roads (Page 3/7).',
     testGroup: 24
   },
   {
@@ -2095,7 +2095,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
       'Your insurance premium is doubled for 5 years.'
     ],
     correctOptionIndex: 1,
-    explanation: 'California Handbook (Section 10, Littering): Littering or throwing lit smoking materials is an infraction carrying a fine up to $1,000 and mandatory community litter cleanup.',
+    explanation: 'California Handbook (Section 5, Other Important Roadway Information): Littering or throwing lit smoking materials is illegal and carries a fine up to $1,000 and mandatory community litter cleanup (Page 44).',
     testGroup: 24
   },
   {
@@ -2105,12 +2105,12 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: '',
     options: [
       '$5,000/$10,000/$2,000',
-      '$15,000 for single bodily injury, $30,000 for multiple injury, and $5,000 for property damage.',
+      '$30,000 for single bodily injury, $60,000 for multiple injury, and $15,000 for property damage.',
       '$50,000 for single liability, and $100,000 for complete coverage.',
       'Must carry comprehensive and collision coverage, regardless of vehicle value.'
     ],
     correctOptionIndex: 1,
-    explanation: 'California Handbook (Section 10, Insurance): Minimum physical liability requirements are $15k per person injured, $30k per accident for all persons injured, and $5k for property damage (often annotated as 15/30/5).',
+    explanation: 'California Handbook (Section 8, Insurance Requirements): Minimum physical liability requirements are $30k per person injured, $60k per accident for all persons injured, and $15k for property damage (Page 58).',
     testGroup: 24
   },
   {

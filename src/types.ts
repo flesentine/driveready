@@ -17,6 +17,10 @@ export interface RoadSign {
   imageUrl: string;
   status: string;
   statusType: SignStatusType;
+  sourceSection?: string;
+  sourcePage?: number;
+  sourceTopic?: string;
+  coverageTopicId?: string;
 }
 
 export interface Question {
@@ -28,6 +32,10 @@ export interface Question {
   correctOptionIndex: number;
   explanation: string;
   testGroup?: number;
+  sourceSection?: string;
+  sourcePage?: number;
+  sourceTopic?: string;
+  coverageTopicId?: string;
 }
 
 export interface UserStats {

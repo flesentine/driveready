@@ -391,7 +391,7 @@ export const PRO_TIPS: ProTip[] = [
   },
   {
     id: 96,
-    tip: "California's mandatory minimum liability insurance amounts are $15,000 for single injury, $30,000 for multiple injuries, and $5,000 for property damage."
+    tip: "California's mandatory minimum liability insurance amounts are $30,000 for single injury, $60,000 for multiple injuries, and $15,000 for property damage (Section 8, Page 58)."
   },
   {
     id: 97,
