@@ -1102,9 +1102,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     explanation: 'California Handbook (Section 4, Illegal Parking): It is illegal to park within three (3) feet of a sidewalk ramp designed for disabled persons.',
     testGroup: 16,
     sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 18,
-    sourceTopic: 'Parallel parking distance limit',
-    coverageFactIds: ['fact-parking-curb-distance']
+    sourcePage: 20,
+    sourceTopic: 'Illegal parking near wheelchair sidewalk ramp',
+    coverageFactIds: ['fact-illegal-parking-wheelchair-ramp-distance']
   },
   {
     id: 'q48',
@@ -1216,9 +1216,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     explanation: 'California Handbook (Section 6, Airbags): Ride at least 10 inches from the airbag cover to allow safe deployment space without causing severe chest impact injury.',
     testGroup: 17,
     sourceSection: 'Section 6: Safe Driving',
-    sourcePage: 51,
-    sourceTopic: 'Secure seat child restraint age eight',
-    coverageFactIds: ['fact-restraint-under8-backseat']
+    sourcePage: 52,
+    sourceTopic: 'Airbag safety steering clearance',
+    coverageFactIds: ['fact-airbag-chest-clearance']
   },
   {
     id: 'q54',
@@ -1253,10 +1253,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Alleys): The speed limit in any designated alley is 15 mph.',
     testGroup: 17,
-    sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 19,
-    sourceTopic: 'Parking uphill wheels with curb',
-    coverageFactIds: ['fact-hill-parking-uphill']
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 39,
+    sourceTopic: 'Alley speed limit',
+    coverageFactIds: ['fact-alley-speed-limit']
   },
   {
     id: 'q56',

@@ -312,7 +312,8 @@ parsedQuestions.forEach(q => {
     }
 
     // Check 6: Maintenance keywords check
-    if (mentionsMaintenance) {
+    const isActuallyParkingQ = qTextLower.includes("park") || qExplLower.includes("park") || qTextLower.includes("curb") || qExplLower.includes("curb");
+    if (mentionsMaintenance && !isActuallyParkingQ) {
       const invalidFacts = q.coverageFactIds.filter(fId => 
         fId.includes("license") || fId.includes("real-id") || fId.includes("bac") || fId.includes("dui") || fId.includes("alcohol") || fId.includes("pedestrian") || fId.includes("ped-") || fId.includes("railroad") || fId.includes("railway") || fId.includes("track") || fId.includes("parking") || fId.includes("curb")
       );
@@ -370,11 +371,15 @@ parsedQuestions.forEach(q => {
     }
 
     // 5. Passing within 100 feet check
-    const mentionsPassing100Feet = qTextLower.includes("passing") && qTextLower.includes("100 feet");
+    const mentionsPassing100Feet = qTextLower.includes("pass") && qTextLower.includes("100 feet");
     if (mentionsPassing100Feet) {
       const hasRailroadSpeedFact = q.coverageFactIds.some(fId => fId.includes("railroad") && fId.includes("speed"));
       if (hasRailroadSpeedFact) {
         suspiciousMappings.push(`Question [${q.id}]: mentions passing within 100 feet but incorrectly maps to a railroad speed fact: [${q.coverageFactIds.join(', ')}]`);
+      }
+      const hasCorrectPassingFact = q.coverageFactIds.includes("fact-passing-prohibited-100-feet-hazard");
+      if (!hasCorrectPassingFact) {
+        suspiciousMappings.push(`Question [${q.id}]: mentions passing within 100 feet but is missing fact-passing-prohibited-100-feet-hazard: [${q.coverageFactIds.join(', ')}]`);
       }
     }
 
@@ -385,6 +390,23 @@ parsedQuestions.forEach(q => {
       const hasThreeSecFact = q.coverageFactIds.includes("fact-merge-space-3sec");
       if (hasThreeSecFact) {
         suspiciousMappings.push(`Question [${q.id}]: mentions entering highway at traffic speed but incorrectly maps to three-second buffer: [${q.coverageFactIds.join(', ')}]`);
+      }
+      const hasEntrySpeedFact = q.coverageFactIds.includes("fact-highway-entry-match-traffic-speed");
+      if (!hasEntrySpeedFact) {
+        suspiciousMappings.push(`Question [${q.id}]: mentions entering highway at traffic speed but is missing fact-highway-entry-match-traffic-speed: [${q.coverageFactIds.join(', ')}]`);
+      }
+    }
+
+    // 7. Wheelchair sidewalk ramp check
+    const mentionsWheelchairSidewalkRamp = qTextLower.includes("wheelchair") || qTextLower.includes("sidewalk ramp");
+    if (mentionsWheelchairSidewalkRamp) {
+      const hasCurbDistanceFact = q.coverageFactIds.includes("fact-parking-curb-distance");
+      if (hasCurbDistanceFact) {
+        suspiciousMappings.push(`Question [${q.id}]: mentions wheelchair sidewalk ramp but incorrectly maps to parallel parking curb distance: [${q.coverageFactIds.join(', ')}]`);
+      }
+      const hasWheelchairFact = q.coverageFactIds.includes("fact-illegal-parking-wheelchair-ramp-distance");
+      if (!hasWheelchairFact) {
+        suspiciousMappings.push(`Question [${q.id}]: mentions wheelchair sidewalk ramp but is missing fact-illegal-parking-wheelchair-ramp-distance: [${q.coverageFactIds.join(', ')}]`);
       }
     }
   }

@@ -839,6 +839,16 @@ export const HANDBOOK_FACTS: HandbookFact[] = [
     mustHaveQuestion: true
   },
   {
+    id: 'fact-illegal-parking-wheelchair-ramp-distance',
+    section: 'Section 4: Navigating the Roads',
+    page: 20,
+    topic: 'Illegal parking near wheelchair sidewalk ramp',
+    fact: 'It is illegal to park within 3 feet of a sidewalk ramp for disabled persons.',
+    priority: 'high',
+    contentType: 'number',
+    mustHaveQuestion: true
+  },
+  {
     id: 'fact-freeway-stuck-time',
     section: 'Section 4: Navigating the Roads',
     page: 21,
