@@ -5093,9 +5093,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "A California driver license allows you to drive on public roads.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement."
+      "Minors under 18 may drive unsupervised at any hour during their provisional year.",
+      "A Class C license allows you to operate commercial double-trailer trucks.",
+      "Only consuming hard liquor, not beer or wine, affects driving coordination."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 1: The California Driver's License, page 1, License purpose): A California driver license allows you to drive on public roads.",
@@ -5113,9 +5113,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Drivers must have the correct class of license for the type of vehicle they operate.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays."
+      "A Class C license allows you to operate commercial double-trailer trucks.",
+      "Only consuming hard liquor, not beer or wine, affects driving coordination.",
+      "A blood alcohol concentration (BAC) of 0.15% is legal if you do not feel impaired."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 1: The California Driver's License, page 1, Correct license class): Drivers must have the correct class of license for the type of vehicle they operate.",
@@ -5133,9 +5133,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Commercial vehicles, motorcycles, and other vehicle types require different license classes.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible."
+      "Only consuming hard liquor, not beer or wine, affects driving coordination.",
+      "A blood alcohol concentration (BAC) of 0.15% is legal if you do not feel impaired.",
+      "You are exempt from all DMV medical reporting rules if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 1: The California Driver's License, page 1, Other license classes): Commercial vehicles, motorcycles, and other vehicle types require different license classes.",
@@ -5153,9 +5153,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "A driver license for a driver under 18 has the word provisional.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule."
+      "A blood alcohol concentration (BAC) of 0.15% is legal if you do not feel impaired.",
+      "You are exempt from all DMV medical reporting rules if you have a clean record.",
+      "It is acceptable to drive after drinking if you drink strong coffee first."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 2: Getting a Driver's License, page 2, Minor provisional license designation): A driver license for a driver under 18 has the word provisional.",
@@ -5169,13 +5169,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q244",
     category: "Driving Basics",
-    questionText: "What should a driver know about health and driving to stay safe and compliant?",
+    questionText: "How do vision changes, medication, or general health factor into your driving safety?",
     imageUrl: "",
     options: [
       "A driver’s health can affect safe driving.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones."
+      "You are exempt from all DMV medical reporting rules if you have a clean record.",
+      "It is acceptable to drive after drinking if you drink strong coffee first.",
+      "Prescription medications are always completely safe to use while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 3, Health and driving): A driver’s health can affect safe driving.",
@@ -5189,13 +5189,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q245",
     category: "Driving Basics",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for signals horn and headlights purpose?",
+    questionText: "What is the primary purpose of turn signals, horns, and headlights?",
     imageUrl: "",
     options: [
       "Signals, horns, and headlights communicate with other drivers, pedestrians, and bicyclists.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21."
+      "To customize the aesthetic appearance of your vehicle.",
+      "To increase your vehicle's resale value and safety ratings.",
+      "To demonstrate compliant vehicle parts to emission inspection centers."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 3, Signals horn and headlights purpose): Signals, horns, and headlights communicate with other drivers, pedestrians, and bicyclists.",
@@ -5209,13 +5209,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q246",
     category: "Driving Basics",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for use hand signals if lights fail?",
+    questionText: "What should you do if your turn signals are not working or are hard to see?",
     imageUrl: "",
     options: [
       "If signal lights are not functioning or are hard to see in bright sunlight, drivers should use hand-and-arm signals.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet."
+      "Turn on state-approved passenger cabin light and gesture.",
+      "Rely entirely on your brake lights and lane position.",
+      "Use approved hand-and-arm signals through your window."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 3, Use hand signals if lights fail): If signal lights are not functioning or are hard to see in bright sunlight, drivers should use hand-and-arm signals.",
@@ -5229,13 +5229,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q247",
     category: "Driving Basics",
-    questionText: "How is cancel signal properly handled under California traffic guidelines?",
+    questionText: "Why is it important to turn off (cancel) your turn signal after completing a turn?",
     imageUrl: "",
     options: [
       "Drivers should turn off a signal when it is no longer needed.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult."
+      "Failing to turn off your signal can confuse other drivers and lead to collisions.",
+      "Leaving the signal on will quickly drain your car's main battery.",
+      "It is illegal to have a signal flashing for more than 10 seconds under any condition."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 4, Cancel signal): Drivers should turn off a signal when it is no longer needed.",
@@ -5253,9 +5253,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Drivers may use the horn to let other drivers know they are present or to warn others of a hazard.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance."
+      "Keep your high-beam headlights on continuously for maximum visibility.",
+      "Only use your turn signals when there are vehicles directly behind you.",
+      "Flash your emergency hazard lights continuously to warn other drivers."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 4, Horn use purpose): Drivers may use the horn to let other drivers know they are present or to warn others of a hazard.",
@@ -5273,9 +5273,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Drivers may use the horn to help avoid collisions.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways."
+      "Only use your turn signals when there are vehicles directly behind you.",
+      "Flash your emergency hazard lights continuously to warn other drivers.",
+      "Keep only your parking lights turned on during heavy rain or dense fog."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 4, Horn to avoid collisions): Drivers may use the horn to help avoid collisions.",
@@ -5289,13 +5289,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q250",
     category: "Driving Basics",
-    questionText: "What should a driver know about headlights see and be seen to stay safe and compliant?",
+    questionText: "When or how must you utilize headlights see and be seen according to safety rules?",
     imageUrl: "",
     options: [
       "Headlights help drivers see ahead and help others see the vehicle.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight."
+      "Flash your emergency hazard lights continuously to warn other drivers.",
+      "Keep only your parking lights turned on during heavy rain or dense fog.",
+      "Activate your turn signals exactly 10 feet before commencing any turn."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 4, Headlights see and be seen): Headlights help drivers see ahead and help others see the vehicle.",
@@ -5313,9 +5313,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Use headlights when clouds, dust, smoke, fog, or similar conditions prevent seeing other vehicles.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions."
+      "Keep only your parking lights turned on during heavy rain or dense fog.",
+      "Activate your turn signals exactly 10 feet before commencing any turn.",
+      "Use your turn signals only if requested by passengers or law enforcement."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 4, Headlights when conditions block view): Use headlights when clouds, dust, smoke, fog, or similar conditions prevent seeing other vehicles.",
@@ -5329,13 +5329,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q252",
     category: "Driving Basics",
-    questionText: "What should a driver know about headlights when sign requires to stay safe and compliant?",
+    questionText: "When or how must you utilize headlights when sign requires according to safety rules?",
     imageUrl: "",
     options: [
       "Use headlights when a road sign states they must be on.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous."
+      "Activate your turn signals exactly 10 feet before commencing any turn.",
+      "Use your turn signals only if requested by passengers or law enforcement.",
+      "Sound your horn continuously to warn vehicles that you are about to turn."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 4, Headlights when sign requires): Use headlights when a road sign states they must be on.",
@@ -5353,9 +5353,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If you see a hazard ahead, you can warn drivers behind you by using a hand signal when slowing or stopping.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test."
+      "Accelerate unconditionally to join the nearest travel lane.",
+      "This requirement only applies when driving on high-speed interstate freeways.",
+      "The speed limit is suspended during late-night hours when traffic is light."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 5, Hand signal when slowing or stopping): If you see a hazard ahead, you can warn drivers behind you by using a hand signal when slowing or stopping.",
@@ -5369,13 +5369,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q254",
     category: "Driving Basics",
-    questionText: "What should a driver know about vehicle trouble flashers to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding vehicle trouble flashers?",
     imageUrl: "",
     options: [
       "If you stop because of vehicle trouble, turn on emergency flashers or use turn signals if the vehicle has no flashers.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle."
+      "Sound your horn continuously to warn vehicles that you are about to turn.",
+      "Signal for a turn only when changing directions in a designated construction zone.",
+      "Keep your high-beam headlights on continuously for maximum visibility."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 5, Vehicle trouble flashers): If you stop because of vehicle trouble, turn on emergency flashers or use turn signals if the vehicle has no flashers.",
@@ -5389,13 +5389,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q255",
     category: "Driving Basics",
-    questionText: "What should a driver know about vehicle trouble pull off road to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding vehicle trouble pull off road?",
     imageUrl: "",
     options: [
       "If possible, pull off the road away from all traffic when stopped for vehicle trouble.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck."
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 5, Vehicle trouble pull off road): If possible, pull off the road away from all traffic when stopped for vehicle trouble.",
@@ -5413,9 +5413,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If you cannot get completely off the road, stop where people can see you and your vehicle from behind.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action."
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 5, Vehicle trouble visible stopping place): If you cannot get completely off the road, stop where people can see you and your vehicle from behind.",
@@ -5433,9 +5433,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Do not stop just over a hill or just around a curve when your vehicle has trouble.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings."
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 5, Avoid stopping over hill or curve): Do not stop just over a hill or just around a curve when your vehicle has trouble.",
@@ -5453,9 +5453,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Call for emergency roadside assistance and stay in your vehicle until help arrives.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 5, Roadside assistance wait in vehicle): Call for emergency roadside assistance and stay in your vehicle until help arrives.",
@@ -5473,9 +5473,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "A traffic lane is a section of road for a single line of traffic.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone."
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 6, Traffic lane definition): A traffic lane is a section of road for a single line of traffic.",
@@ -5489,13 +5489,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q260",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for lane markings purpose?",
+    questionText: "What is the primary purpose of lane markings?",
     imageUrl: "",
     options: [
       "Lane markings show drivers which part of the road to use and help explain traffic rules.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section."
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 6, Lane markings purpose): Lane markings show drivers which part of the road to use and help explain traffic rules.",
@@ -5513,9 +5513,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Broken white lines separate traffic lanes moving in the same direction.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations."
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 7, Broken white line): Broken white lines separate traffic lanes moving in the same direction.",
@@ -5533,9 +5533,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The left or fast lane is called the Number 1 lane.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this."
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 7, Number 1 lane definition): The left or fast lane is called the Number 1 lane.",
@@ -5553,9 +5553,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The lane to the right of the Number 1 lane is Number 2, then Number 3, and so on.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems."
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 7, Lane numbers increase rightward): The lane to the right of the Number 1 lane is Number 2, then Number 3, and so on.",
@@ -5573,9 +5573,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Use the left lane to pass or turn left.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours."
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 7, Left lane use): Use the left lane to pass or turn left.",
@@ -5593,9 +5593,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Use the right lane to enter or exit traffic or when entering the road from a curb or shoulder.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog."
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 7, Right lane use): Use the right lane to enter or exit traffic or when entering the road from a curb or shoulder.",
@@ -5609,13 +5609,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q266",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for lane change signal?",
+    questionText: "What is the correct practice or rule concerning lane change signal?",
     imageUrl: "",
     options: [
       "Before changing lanes, signal.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe."
+      "Flash your emergency hazard lights continuously to warn other drivers.",
+      "Keep only your parking lights turned on during heavy rain or dense fog.",
+      "Activate your turn signals exactly 10 feet before commencing any turn."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Lane change signal): Before changing lanes, signal.",
@@ -5633,9 +5633,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Before changing lanes, check your mirrors.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety."
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Lane change mirror check): Before changing lanes, check your mirrors.",
@@ -5649,13 +5649,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q268",
     category: "Rules of the Road",
-    questionText: "What should a driver know about lane change traffic check to stay safe and compliant?",
+    questionText: "What is the proper way to perform a lane change traffic?",
     imageUrl: "",
     options: [
       "Before changing lanes, check traffic behind and beside you.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations."
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Lane change traffic check): Before changing lanes, check traffic behind and beside you.",
@@ -5673,9 +5673,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Before changing lanes, look over your shoulder in the direction you plan to move.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility."
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Lane change shoulder check): Before changing lanes, look over your shoulder in the direction you plan to move.",
@@ -5689,13 +5689,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q270",
     category: "Rules of the Road",
-    questionText: "What should a driver know about lane change blind spots to stay safe and compliant?",
+    questionText: "What is the correct practice or rule concerning lane change blind spots?",
     imageUrl: "",
     options: [
       "Check blind spots for vehicles, motorcycles, and bicyclists before changing lanes.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement."
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Lane change blind spots): Check blind spots for vehicles, motorcycles, and bicyclists before changing lanes.",
@@ -5709,13 +5709,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q271",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for do not drift lanes?",
+    questionText: "Why is keeping your vehicle centered in its travel lane important under California guidelines?",
     imageUrl: "",
     options: [
       "Do not let your vehicle drift into another lane.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays."
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Do not drift lanes): Do not let your vehicle drift into another lane.",
@@ -5733,9 +5733,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Before changing lanes, make sure there is enough space for your vehicle in the next lane.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible."
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Lane change space): Before changing lanes, make sure there is enough space for your vehicle in the next lane.",
@@ -5749,13 +5749,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q273",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for lane change slowing unnecessary?",
+    questionText: "What is the correct practice or rule concerning lane change slowing unnecessary?",
     imageUrl: "",
     options: [
       "It is not necessary to slow down before a lane change.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule."
+      "Always drive at least 5 mph above the posted limit to prevent congestion.",
+      "Slow down to exactly half the posted limit at all times to be safe.",
+      "Increase your speed by 10 mph higher than the prevailing flow of surrounding cars."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Lane change slowing unnecessary): It is not necessary to slow down before a lane change.",
@@ -5769,13 +5769,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q274",
     category: "Rules of the Road",
-    questionText: "What should a driver know about avoid weaving to stay safe and compliant?",
+    questionText: "Why is it important to avoid weaving?",
     imageUrl: "",
     options: [
       "Stay in one lane as much as possible and do not weave in and out of traffic.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Avoid weaving): Stay in one lane as much as possible and do not weave in and out of traffic.",
@@ -5793,9 +5793,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Last-minute lane or direction changes may increase collision risk.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21."
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Avoid last-minute changes): Last-minute lane or direction changes may increase collision risk.",
@@ -5813,9 +5813,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Once you start moving through an intersection, keep going.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet."
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Continue through intersection): Once you start moving through an intersection, keep going.",
@@ -5833,9 +5833,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If you miss a turn, keep driving until you can safely and legally turn around.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult."
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Missed turn procedure): If you miss a turn, keep driving until you can safely and legally turn around.",
@@ -5849,13 +5849,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q278",
     category: "Rules of the Road",
-    questionText: "What should a driver know about center left turn lane location to stay safe and compliant?",
+    questionText: "What is the correct practice or rule concerning center left turn lane location?",
     imageUrl: "",
     options: [
       "A center left turn lane is in the middle of a two-way street and is marked by inner broken and outer solid lines.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance."
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 9, Center left turn lane location): A center left turn lane is in the middle of a two-way street and is marked by inner broken and outer solid lines.",
@@ -5873,9 +5873,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Bicycle lanes are for bicyclists only and run alongside vehicle traffic.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways."
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 9, Bicycle lane purpose): Bicycle lanes are for bicyclists only and run alongside vehicle traffic.",
@@ -5889,13 +5889,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q280",
     category: "Rules of the Road",
-    questionText: "What should a driver know about bicycle lane markings to stay safe and compliant?",
+    questionText: "How are bicycle lane markings used on California roads?",
     imageUrl: "",
     options: [
       "Bicycle lanes are typically marked by a solid white line and signs and may be painted bright green.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight."
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 9, Bicycle lane markings): Bicycle lanes are typically marked by a solid white line and signs and may be painted bright green.",
@@ -5909,13 +5909,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q281",
     category: "Rules of the Road",
-    questionText: "What should a driver know about bike lane types to stay safe and compliant?",
+    questionText: "What is the correct practice or rule concerning bike lane types?",
     imageUrl: "",
     options: [
       "Bike lane markings include standard bike lanes, buffered bike lanes, bike routes, bicycle boulevards, separated bikeways, and shared roadway markings.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions."
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 10, Bike lane types): Bike lane markings include standard bike lanes, buffered bike lanes, bike routes, bicycle boulevards, separated bikeways, and shared roadway markings.",
@@ -5929,13 +5929,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q282",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for shared roadway bicycle markings?",
+    questionText: "How are shared roadway bicycle markings used on California roads?",
     imageUrl: "",
     options: [
       "Shared roadway bicycle markings alert drivers that bicyclists can occupy the lane and help bicyclists maintain a safe lane position.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 10, Shared roadway bicycle markings): Shared roadway bicycle markings alert drivers that bicyclists can occupy the lane and help bicyclists maintain a safe lane position.",
@@ -5953,9 +5953,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Motorized-bicycle riders should use caution, travel at a reasonable speed, and not endanger bicyclists.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test."
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 10, Motorized bicycle caution): Motorized-bicycle riders should use caution, travel at a reasonable speed, and not endanger bicyclists.",
@@ -5969,13 +5969,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q284",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for right turn road position?",
+    questionText: "Under California law, how should you safely perform a right turn road position?",
     imageUrl: "",
     options: [
       "To make a right turn, drive close to the right edge of the road.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle."
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 11, Right turn road position): To make a right turn, drive close to the right edge of the road.",
@@ -5993,9 +5993,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If a designated right turn lane is available, enter at the opening.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck."
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 11, Right turn lane opening): If a designated right turn lane is available, enter at the opening.",
@@ -6009,13 +6009,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q286",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for right turn bike lane use?",
+    questionText: "What is the correct practice or rule concerning right turn bike lane use?",
     imageUrl: "",
     options: [
       "Drivers may drive in a bike lane within 200 feet of a right turn after checking blind spots.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action."
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 11, Right turn bike lane use): Drivers may drive in a bike lane within 200 feet of a right turn after checking blind spots.",
@@ -6029,13 +6029,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q287",
     category: "Rules of the Road",
-    questionText: "What should a driver know about right turn watch vulnerable users to stay safe and compliant?",
+    questionText: "Why must drivers exercise extra caution around vulnerable road users, such as pedestrians and cyclists?",
     imageUrl: "",
     options: [
       "When turning right, watch for pedestrians, bicyclists, or motorcyclists between the vehicle and the curb.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings."
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 11, Right turn watch vulnerable users): When turning right, watch for pedestrians, bicyclists, or motorcyclists between the vehicle and the curb.",
@@ -6049,13 +6049,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q288",
     category: "Rules of the Road",
-    questionText: "What should a driver know about right turn signal distance to stay safe and compliant?",
+    questionText: "What is the required distance under California law for right turn signal?",
     imageUrl: "",
     options: [
       "Start signaling about 100 feet before a right turn.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly."
+      "Keep your high-beam headlights on continuously for maximum visibility.",
+      "Only use your turn signals when there are vehicles directly behind you.",
+      "Flash your emergency hazard lights continuously to warn other drivers."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 11, Right turn signal distance): Start signaling about 100 feet before a right turn.",
@@ -6073,9 +6073,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Before a right turn, look over your right shoulder and reduce speed.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone."
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 11, Right turn shoulder check): Before a right turn, look over your right shoulder and reduce speed.",
@@ -6093,9 +6093,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Stop behind the limit line; if none, before the crosswalk; if no crosswalk, before entering the intersection.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section."
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 11, Right turn stopping position): Stop behind the limit line; if none, before the crosswalk; if no crosswalk, before entering the intersection.",
@@ -6113,9 +6113,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Look left-right-left and turn when safe.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations."
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 11, Right turn scan): Look left-right-left and turn when safe.",
@@ -6133,9 +6133,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Complete a right turn in the right lane and do not turn wide into another lane.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this."
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 11, Complete right turn in right lane): Complete a right turn in the right lane and do not turn wide into another lane.",
@@ -6153,9 +6153,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "A dedicated right turn lane does not merge into another lane and allows a right turn without stopping.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems."
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Dedicated right turn lane no merge): A dedicated right turn lane does not merge into another lane and allows a right turn without stopping.",
@@ -6173,9 +6173,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Drivers may use a dedicated right turn lane even if the light for straight-through traffic is red.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours."
+      "Sound your horn continuously to warn vehicles that you are about to turn.",
+      "Signal for a turn only when changing directions in a designated construction zone.",
+      "Keep your high-beam headlights on continuously for maximum visibility."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Dedicated right turn during red through light): Drivers may use a dedicated right turn lane even if the light for straight-through traffic is red.",
@@ -6193,9 +6193,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If a traffic light or sign is on the right curb of the dedicated right turn lane, obey that light or sign.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog."
+      "Signal for a turn only when changing directions in a designated construction zone.",
+      "Keep your high-beam headlights on continuously for maximum visibility.",
+      "Only use your turn signals when there are vehicles directly behind you."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Dedicated right turn obey curb signal): If a traffic light or sign is on the right curb of the dedicated right turn lane, obey that light or sign.",
@@ -6209,13 +6209,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q296",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for dedicated right turn yield pedestrians?",
+    questionText: "Under California law, how should you safely perform a dedicated right turn yield pedestrians?",
     imageUrl: "",
     options: [
       "Always yield to pedestrians in a crosswalk when turning from a dedicated right turn lane.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe."
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Dedicated right turn yield pedestrians): Always yield to pedestrians in a crosswalk when turning from a dedicated right turn lane.",
@@ -6229,13 +6229,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q297",
     category: "Rules of the Road",
-    questionText: "What should a driver know about left turn lane position to stay safe and compliant?",
+    questionText: "What is the correct practice or rule concerning left turn lane position?",
     imageUrl: "",
     options: [
       "To turn left, drive close to the center divider or into the left turn lane.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety."
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Left turn lane position): To turn left, drive close to the center divider or into the left turn lane.",
@@ -6253,9 +6253,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Enter a designated left turn lane at the opening and do not cross any solid line.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations."
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Left turn lane opening): Enter a designated left turn lane at the opening and do not cross any solid line.",
@@ -6269,13 +6269,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q299",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for left turn center lane distance?",
+    questionText: "What is the required distance under California law for left turn center lane?",
     imageUrl: "",
     options: [
       "Enter a two-way center left turn lane within 200 feet of a left turn.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility."
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Left turn center lane distance): Enter a two-way center left turn lane within 200 feet of a left turn.",
@@ -6289,13 +6289,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q300",
     category: "Rules of the Road",
-    questionText: "What should a driver know about left turn yield in center lane to stay safe and compliant?",
+    questionText: "What is the correct practice or rule concerning left turn yield in center lane?",
     imageUrl: "",
     options: [
       "Respect the right-of-way of vehicles, bicyclists, or motorcyclists already in a center left turn lane and always yield to pedestrians.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement."
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Left turn yield in center lane): Respect the right-of-way of vehicles, bicyclists, or motorcyclists already in a center left turn lane and always yield to pedestrians.",
@@ -6309,13 +6309,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q301",
     category: "Rules of the Road",
-    questionText: "What should a driver know about left turn signal distance to stay safe and compliant?",
+    questionText: "What is the required distance under California law for left turn signal?",
     imageUrl: "",
     options: [
       "Start signaling 100 feet before a left turn.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays."
+      "Use your turn signals only if requested by passengers or law enforcement.",
+      "Sound your horn continuously to warn vehicles that you are about to turn.",
+      "Signal for a turn only when changing directions in a designated construction zone."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Left turn signal distance): Start signaling 100 feet before a left turn.",
@@ -6333,9 +6333,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Before a left turn, look over your left shoulder and reduce speed.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible."
+      "This requirement only applies when driving on high-speed interstate freeways.",
+      "The speed limit is suspended during late-night hours when traffic is light.",
+      "Speed up to match the highest speed of the surrounding traffic."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Left turn shoulder and speed): Before a left turn, look over your left shoulder and reduce speed.",
@@ -6353,9 +6353,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "For a left turn, stop behind the limit line, before the crosswalk, or before the intersection as applicable.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule."
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Left turn stopping position): For a left turn, stop behind the limit line, before the crosswalk, or before the intersection as applicable.",
@@ -6369,13 +6369,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q304",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for left turn scanning?",
+    questionText: "Under California law, how should you safely perform a left turn scanning?",
     imageUrl: "",
     options: [
       "Look left-right-left and begin a left turn when safe.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones."
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Left turn scanning): Look left-right-left and begin a left turn when safe.",
@@ -6393,9 +6393,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Complete a left turn in the left lane.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21."
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Left turn complete in left lane): Complete a left turn in the left lane.",
@@ -6413,9 +6413,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Accelerate smoothly during and after a left turn and allow the steering wheel to straighten.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet."
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Left turn smooth acceleration): Accelerate smoothly during and after a left turn and allow the steering wheel to straighten.",
@@ -6429,13 +6429,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q307",
     category: "Rules of the Road",
-    questionText: "What should a driver know about u-turn definition to stay safe and compliant?",
+    questionText: "Under California law, what is the definition of a u-turn?",
     imageUrl: "",
     options: [
       "A U-turn turns a vehicle around to go back in the direction it came from.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult."
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 13, U-turn definition): A U-turn turns a vehicle around to go back in the direction it came from.",
@@ -6453,9 +6453,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "To make a U-turn, signal and use the left turn lane or far-left lane.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance."
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 13, U-turn lane position): To make a U-turn, signal and use the left turn lane or far-left lane.",
@@ -6473,9 +6473,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Drivers may make a U-turn across a double yellow line when otherwise legal.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways."
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 13, U-turn across double yellow): Drivers may make a U-turn across a double yellow line when otherwise legal.",
@@ -6493,9 +6493,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "A U-turn is allowed at an intersection on a green light or green arrow unless a NO U-TURN sign is posted.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight."
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 13, U-turn at green intersection): A U-turn is allowed at an intersection on a green light or green arrow unless a NO U-TURN sign is posted.",
@@ -6513,9 +6513,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "A U-turn is allowed on a divided highway only if a center divider opening is provided.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions."
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 13, U-turn divided highway opening): A U-turn is allowed on a divided highway only if a center divider opening is provided.",
@@ -6533,9 +6533,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Never make a U-turn where a NO U-TURN sign is posted.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous."
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 13, No U-turn sign): Never make a U-turn where a NO U-TURN sign is posted.",
@@ -6549,13 +6549,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q313",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for no u-turn railroad crossing?",
+    questionText: "Under California law, how should you safely perform a no u-turn railroad crossing?",
     imageUrl: "",
     options: [
       "Never make a U-turn at or on a railroad crossing.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test."
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 13, No U-turn railroad crossing): Never make a U-turn at or on a railroad crossing.",
@@ -6569,13 +6569,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q314",
     category: "Rules of the Road",
-    questionText: "What should a driver know about no u-turn one-way street to stay safe and compliant?",
+    questionText: "Under California law, how should you safely perform a no u-turn one-way street?",
     imageUrl: "",
     options: [
       "Never make a U-turn on a one-way street.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle."
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 13, No U-turn one-way street): Never make a U-turn on a one-way street.",
@@ -6589,13 +6589,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q315",
     category: "Rules of the Road",
-    questionText: "What should a driver know about no u-turn fire station to stay safe and compliant?",
+    questionText: "Under California law, how should you safely perform a no u-turn fire station?",
     imageUrl: "",
     options: [
       "Never make a U-turn in front of a fire station and never use a fire station driveway to turn around.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck."
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 13, No U-turn fire station): Never make a U-turn in front of a fire station and never use a fire station driveway to turn around.",
@@ -6613,9 +6613,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "A left turn from a two-way street should start in the left lane closest to the middle and end in the left lane closest to the middle in the new direction.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action."
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 14, Left turn two-way to two-way): A left turn from a two-way street should start in the left lane closest to the middle and end in the left lane closest to the middle in the new direction.",
@@ -6633,9 +6633,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "A right turn should begin and end in the lane closest to the right edge without swinging wide.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings."
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 14, Right turn lane path): A right turn should begin and end in the lane closest to the right edge without swinging wide.",
@@ -6649,13 +6649,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q318",
     category: "Rules of the Road",
-    questionText: "What should a driver know about left turn two-way to one-way to stay safe and compliant?",
+    questionText: "Under California law, how should you safely perform a left turn two-way to one-way?",
     imageUrl: "",
     options: [
       "A left turn from a two-way street onto a one-way street starts from the far-left lane and may end in any open lane if there are three or more lanes.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly."
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 14, Left turn two-way to one-way): A left turn from a two-way street onto a one-way street starts from the far-left lane and may end in any open lane if there are three or more lanes.",
@@ -6669,13 +6669,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q319",
     category: "Rules of the Road",
-    questionText: "What should a driver know about left turn one-way to two-way to stay safe and compliant?",
+    questionText: "Under California law, how should you safely perform a left turn one-way to two-way?",
     imageUrl: "",
     options: [
       "A left turn from a one-way street onto a two-way street starts from the far-left lane and ends in the lane closest to the middle in the new direction.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone."
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 14, Left turn one-way to two-way): A left turn from a one-way street onto a two-way street starts from the far-left lane and ends in the lane closest to the middle in the new direction.",
@@ -6689,13 +6689,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q320",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for left turn one-way to one-way?",
+    questionText: "Under California law, how should you safely perform a left turn one-way to one-way?",
     imageUrl: "",
     options: [
       "A left turn from one one-way street to another starts from the far-left lane; bicyclists may use the left-turn lane.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section."
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 15, Left turn one-way to one-way): A left turn from one one-way street to another starts from the far-left lane; bicyclists may use the left-turn lane.",
@@ -6709,13 +6709,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q321",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for right turn one-way to one-way?",
+    questionText: "Under California law, how should you safely perform a right turn one-way to one-way?",
     imageUrl: "",
     options: [
       "A right turn from one one-way street to another starts in the far-right lane and may end in any lane if safe.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations."
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 15, Right turn one-way to one-way): A right turn from one one-way street to another starts in the far-right lane and may end in any lane if safe.",
@@ -6729,13 +6729,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q322",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for braking method?",
+    questionText: "What is the correct DMV guideline or safety rule regarding braking method?",
     imageUrl: "",
     options: [
       "To brake, remove your foot from the accelerator, let the vehicle slow, and lightly press the brake until stopped.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 15, Braking method): To brake, remove your foot from the accelerator, let the vehicle slow, and lightly press the brake until stopped.",
@@ -6753,9 +6753,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "When stopping at a limit line, do not cross over it.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems."
+      "Increase your speed by 10 mph higher than the prevailing flow of surrounding cars.",
+      "Always maintain 15 mph in any lane regardless of traffic or road conditions.",
+      "Accelerate unconditionally to join the nearest travel lane."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 15, Limit line stopping): When stopping at a limit line, do not cross over it.",
@@ -6769,13 +6769,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q324",
     category: "Rules of the Road",
-    questionText: "What should a driver know about stopped behind vehicle space to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding stopped behind vehicle space?",
     imageUrl: "",
     options: [
       "When stopping behind another vehicle, leave enough space to see its rear wheels.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours."
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 15, Stopped behind vehicle space): When stopping behind another vehicle, leave enough space to see its rear wheels.",
@@ -6793,9 +6793,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Highway traffic has the right-of-way when merging onto a highway.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog."
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 15, Highway traffic right-of-way): Highway traffic has the right-of-way when merging onto a highway.",
@@ -6809,13 +6809,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q326",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for on-ramp proper lane?",
+    questionText: "What is the correct practice or rule concerning on-ramp proper lane?",
     imageUrl: "",
     options: [
       "When entering a highway, be in the proper lane on the on-ramp.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe."
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 15, On-ramp proper lane): When entering a highway, be in the proper lane on the on-ramp.",
@@ -6833,9 +6833,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Merge into highway traffic when safe and do not stop unless absolutely necessary.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety."
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, Merge when safe no stop): Merge into highway traffic when safe and do not stop unless absolutely necessary.",
@@ -6853,9 +6853,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Merge into a space large enough for your vehicle to safely join the lane.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations."
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, Merge space): Merge into a space large enough for your vehicle to safely join the lane.",
@@ -6869,13 +6869,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q329",
     category: "Rules of the Road",
-    questionText: "What should a driver know about merge mirrors and signals to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding merge mirrors and signals?",
     imageUrl: "",
     options: [
       "Use mirrors and turn signals when merging.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility."
+      "Only use your turn signals when there are vehicles directly behind you.",
+      "Flash your emergency hazard lights continuously to warn other drivers.",
+      "Keep only your parking lights turned on during heavy rain or dense fog."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, Merge mirrors and signals): Use mirrors and turn signals when merging.",
@@ -6889,13 +6889,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q330",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for merge shoulder check?",
+    questionText: "What is the proper way to perform a merge shoulder?",
     imageUrl: "",
     options: [
       "Turn your head quickly to look over your shoulder before changing lanes or merging.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement."
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, Merge shoulder check): Turn your head quickly to look over your shoulder before changing lanes or merging.",
@@ -6913,9 +6913,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Do not cross solid lines when merging or exiting.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays."
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, No solid line merging): Do not cross solid lines when merging or exiting.",
@@ -6933,9 +6933,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "When crossing several lanes, signal and cross one lane at a time, checking blind spots each time.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible."
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, Multiple lane changes): When crossing several lanes, signal and cross one lane at a time, checking blind spots each time.",
@@ -6953,9 +6953,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "To exit a highway safely, know your exit and be aware when it is approaching.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule."
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, Exit preparation): To exit a highway safely, know your exit and be aware when it is approaching.",
@@ -6969,13 +6969,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q334",
     category: "Rules of the Road",
-    questionText: "What should a driver know about exit lane changes to stay safe and compliant?",
+    questionText: "What is the correct practice or rule concerning exit lane changes?",
     imageUrl: "",
     options: [
       "When exiting, change lanes one at a time and check blind spots.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones."
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, Exit lane changes): When exiting, change lanes one at a time and check blind spots.",
@@ -6993,9 +6993,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Make sure you are at a safe speed to exit.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21."
+      "The speed limit is suspended during late-night hours when traffic is light.",
+      "Speed up to match the highest speed of the surrounding traffic.",
+      "Always drive at least 5 mph above the posted limit to prevent congestion."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, Exit speed): Make sure you are at a safe speed to exit.",
@@ -7013,9 +7013,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Even with a green light, do not enter an intersection if pedestrians or vehicles are blocking your path.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet."
+      "Keep your high-beam headlights on continuously for maximum visibility.",
+      "Only use your turn signals when there are vehicles directly behind you.",
+      "Flash your emergency hazard lights continuously to warn other drivers."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, Blocked intersection with green light): Even with a green light, do not enter an intersection if pedestrians or vehicles are blocking your path.",
@@ -7033,9 +7033,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "When turning left, do not assume an oncoming vehicle signaling right will turn before reaching you.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult."
+      "Only use your turn signals when there are vehicles directly behind you.",
+      "Flash your emergency hazard lights continuously to warn other drivers.",
+      "Keep only your parking lights turned on during heavy rain or dense fog."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, Do not trust right signal): When turning left, do not assume an oncoming vehicle signaling right will turn before reaching you.",
@@ -7049,13 +7049,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q338",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for judge passing space?",
+    questionText: "What is the correct DMV guideline or safety rule regarding judge passing space?",
     imageUrl: "",
     options: [
       "Before passing, judge whether you have enough space when approaching oncoming traffic, bicyclists, hills, curves, intersections, or obstructions.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance."
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 17, Judge passing space): Before passing, judge whether you have enough space when approaching oncoming traffic, bicyclists, hills, curves, intersections, or obstructions.",
@@ -7069,13 +7069,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q339",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for passing hill or curve distance?",
+    questionText: "What is the required distance under California law for passing hill or curve?",
     imageUrl: "",
     options: [
       "To pass safely near a hill or curve, the hill or curve should be at least one-third of a mile ahead.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways."
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 17, Passing hill or curve distance): To pass safely near a hill or curve, the hill or curve should be at least one-third of a mile ahead.",
@@ -7089,13 +7089,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q340",
     category: "Rules of the Road",
-    questionText: "What should a driver know about look ahead before passing to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding look ahead before passing?",
     imageUrl: "",
     options: [
       "Before passing, look ahead for road conditions that may cause other vehicles to move into your lane.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight."
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 17, Look ahead before passing): Before passing, look ahead for road conditions that may cause other vehicles to move into your lane.",
@@ -7113,9 +7113,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Do not pass when approaching a hill or curve if you cannot see whether traffic is approaching.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions."
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 17, Do not pass blind hill or curve): Do not pass when approaching a hill or curve if you cannot see whether traffic is approaching.",
@@ -7133,9 +7133,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Do not pass at crossroads or driveways.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous."
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 17, No passing crossroads driveways): Do not pass at crossroads or driveways.",
@@ -7153,9 +7153,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Do not pass unless you have enough space to return to your lane.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test."
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 17, No passing without return space): Do not pass unless you have enough space to return to your lane.",
@@ -7173,9 +7173,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "To pass on an open highway, signal, check blind spots, enter the passing lane, speed up, then signal and return.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle."
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 17, How to pass): To pass on an open highway, signal, check blind spots, enter the passing lane, speed up, then signal and return.",
@@ -7193,9 +7193,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Never drive off the paved or main-traveled part of the road to pass.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck."
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 17, No off-road passing): Never drive off the paved or main-traveled part of the road to pass.",
@@ -7213,9 +7213,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If another vehicle is passing or signaling to pass, allow it, maintain lane position, and maintain speed.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action."
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 17, Being passed): If another vehicle is passing or signaling to pass, allow it, maintain lane position, and maintain speed.",
@@ -7233,9 +7233,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Parallel parking requires a space at least three feet longer than your vehicle.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings."
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 18, Parallel parking space length): Parallel parking requires a space at least three feet longer than your vehicle.",
@@ -7253,9 +7253,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Signal to show you plan to park.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly."
+      "Activate your turn signals exactly 10 feet before commencing any turn.",
+      "Use your turn signals only if requested by passengers or law enforcement.",
+      "Sound your horn continuously to warn vehicles that you are about to turn."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 18, Parallel parking signal): Signal to show you plan to park.",
@@ -7273,9 +7273,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Pull alongside the vehicle in front of the space and leave about two feet between vehicles.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone."
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 18, Parallel parking side distance): Pull alongside the vehicle in front of the space and leave about two feet between vehicles.",
@@ -7293,9 +7293,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Before backing into a parallel parking space, check mirrors and blind spots for vehicles and pedestrians.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section."
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 18, Parallel parking blind spots): Before backing into a parallel parking space, check mirrors and blind spots for vehicles and pedestrians.",
@@ -7309,13 +7309,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q351",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for parallel parking backing angle?",
+    questionText: "What is the correct DMV guideline or safety rule regarding parallel parking backing angle?",
     imageUrl: "",
     options: [
       "Back into a parallel parking space at about a 45-degree angle.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations."
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 18, Parallel parking backing angle): Back into a parallel parking space at about a 45-degree angle.",
@@ -7329,13 +7329,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q352",
     category: "Rules of the Road",
-    questionText: "What should a driver know about parking brake after parallel parking to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding parking brake after parallel parking?",
     imageUrl: "",
     options: [
       "After parallel parking, turn off the vehicle and set the parking brake.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this."
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 18, Parking brake after parallel parking): After parallel parking, turn off the vehicle and set the parking brake.",
@@ -7353,9 +7353,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Before exiting a parked vehicle, look carefully for passing vehicles, bicycles, and motorcycles.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems."
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 18, Look before exiting parked vehicle): Before exiting a parked vehicle, look carefully for passing vehicles, bicycles, and motorcycles.",
@@ -7373,9 +7373,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Before straight-line backing, observe traffic and check blind spots.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours."
+      "Only consuming hard liquor, not beer or wine, affects driving coordination.",
+      "A blood alcohol concentration (BAC) of 0.15% is legal if you do not feel impaired.",
+      "You are exempt from all DMV medical reporting rules if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 19, Straight-line backing traffic check): Before straight-line backing, observe traffic and check blind spots.",
@@ -7393,9 +7393,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Activate the turn signal before pulling up to the curb and cancel it when completed.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog."
+      "Keep only your parking lights turned on during heavy rain or dense fog.",
+      "Activate your turn signals exactly 10 feet before commencing any turn.",
+      "Use your turn signals only if requested by passengers or law enforcement."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 19, Straight-line backing signal): Activate the turn signal before pulling up to the curb and cancel it when completed.",
@@ -7413,9 +7413,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Back in a straight line for three vehicle lengths while remaining within three feet of the curb.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe."
+      "You are exempt from all DMV medical reporting rules if you have a clean record.",
+      "It is acceptable to drive after drinking if you drink strong coffee first.",
+      "Prescription medications are always completely safe to use while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 19, Straight-line backing distance): Back in a straight line for three vehicle lengths while remaining within three feet of the curb.",
@@ -7429,13 +7429,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q357",
     category: "Rules of the Road",
-    questionText: "What should a driver know about straight-line backing control to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding straight-line backing control?",
     imageUrl: "",
     options: [
       "Back at a smooth, safe speed and adjust the steering wheel as needed.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety."
+      "It is acceptable to drive after drinking if you drink strong coffee first.",
+      "Prescription medications are always completely safe to use while driving.",
+      "Minors under 18 may drive unsupervised at any hour during their provisional year."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 19, Straight-line backing control): Back at a smooth, safe speed and adjust the steering wheel as needed.",
@@ -7453,9 +7453,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "When parking on a hill, set the parking brake and leave the vehicle in park or in gear for a manual transmission.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations."
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 19, Hill parking brake): When parking on a hill, set the parking brake and leave the vehicle in park or in gear for a manual transmission.",
@@ -7469,13 +7469,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q359",
     category: "Rules of the Road",
-    questionText: "What should a driver know about sloping driveway parking to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding sloping driveway parking?",
     imageUrl: "",
     options: [
       "On a sloping driveway, turn the wheels so the vehicle will not roll into the street.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility."
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 19, Sloping driveway parking): On a sloping driveway, turn the wheels so the vehicle will not roll into the street.",
@@ -7489,13 +7489,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q360",
     category: "Rules of the Road",
-    questionText: "What should a driver know about no parking sign to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding no parking sign?",
     imageUrl: "",
     options: [
       "Never park where a NO PARKING sign is posted.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement."
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 20, No parking sign): Never park where a NO PARKING sign is posted.",
@@ -7509,13 +7509,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q361",
     category: "Rules of the Road",
-    questionText: "What should a driver know about no parking on crosswalk to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding no parking on crosswalk?",
     imageUrl: "",
     options: [
       "Never park on a marked or unmarked crosswalk.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays."
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 20, No parking on crosswalk): Never park on a marked or unmarked crosswalk.",
@@ -7533,9 +7533,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Never park on a sidewalk, partially blocking a sidewalk, or in front of a driveway.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible."
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 20, No parking on sidewalk driveway): Never park on a sidewalk, partially blocking a sidewalk, or in front of a driveway.",
@@ -7553,9 +7553,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Never park in the crosshatched area next to a designated disabled parking space.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule."
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 20, No parking crosshatched disabled area): Never park in the crosshatched area next to a designated disabled parking space.",
@@ -7573,9 +7573,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Never park in a space designated for parking or fueling zero-emission vehicles unless driving a zero-emission vehicle.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones."
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 20, No parking zero-emission space): Never park in a space designated for parking or fueling zero-emission vehicles unless driving a zero-emission vehicle.",
@@ -7593,9 +7593,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Never park in a tunnel or on a bridge unless signs permit it.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21."
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 20, No parking tunnel or bridge): Never park in a tunnel or on a bridge unless signs permit it.",
@@ -7609,13 +7609,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q366",
     category: "Rules of the Road",
-    questionText: "What should a driver know about no parking safety zone to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding no parking safety zone?",
     imageUrl: "",
     options: [
       "Never park between a safety zone and the curb.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet."
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 20, No parking safety zone): Never park between a safety zone and the curb.",
@@ -7629,13 +7629,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q367",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for freeway parking exception?",
+    questionText: "What is the correct DMV guideline or safety rule regarding freeway parking exception?",
     imageUrl: "",
     options: [
       "Do not stop or park on a freeway except in emergencies, when directed by law enforcement, or where specifically permitted.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult."
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Freeway parking exception): Do not stop or park on a freeway except in emergencies, when directed by law enforcement, or where specifically permitted.",
@@ -7653,9 +7653,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If you must stop on a freeway, park completely off the pavement and stay in the vehicle with doors locked until help arrives.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance."
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Freeway stopped vehicle position): If you must stop on a freeway, park completely off the pavement and stay in the vehicle with doors locked until help arrives.",
@@ -7673,9 +7673,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "During a law enforcement stop, turn on your right turn signal to acknowledge the officer.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways."
+      "Only use your turn signals when there are vehicles directly behind you.",
+      "Flash your emergency hazard lights continuously to warn other drivers.",
+      "Keep only your parking lights turned on during heavy rain or dense fog."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Officer stop right signal): During a law enforcement stop, turn on your right turn signal to acknowledge the officer.",
@@ -7689,13 +7689,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q370",
     category: "Rules of the Road",
-    questionText: "What should a driver know about officer stop right shoulder to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding officer stop right shoulder?",
     imageUrl: "",
     options: [
       "Move completely onto the right shoulder for a law enforcement stop, even if in the carpool or HOV lane.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Officer stop right shoulder): Move completely onto the right shoulder for a law enforcement stop, even if in the carpool or HOV lane.",
@@ -7709,13 +7709,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q371",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for officer stop well-lit?",
+    questionText: "What is the correct DMV guideline or safety rule regarding officer stop well-lit?",
     imageUrl: "",
     options: [
       "Stop in a well-lit area when possible during a law enforcement stop.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions."
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Officer stop well-lit): Stop in a well-lit area when possible during a law enforcement stop.",
@@ -7729,13 +7729,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q372",
     category: "Rules of the Road",
-    questionText: "What should a driver know about officer stop radio off to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding officer stop radio off?",
     imageUrl: "",
     options: [
       "Turn off the radio during a law enforcement stop.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous."
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Officer stop radio off): Turn off the radio during a law enforcement stop.",
@@ -7749,13 +7749,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q373",
     category: "Rules of the Road",
-    questionText: "What should a driver know about officer stop stay in vehicle to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding officer stop stay in vehicle?",
     imageUrl: "",
     options: [
       "Remain inside the vehicle unless directed by the officer to get out.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test."
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Officer stop stay in vehicle): Remain inside the vehicle unless directed by the officer to get out.",
@@ -7773,9 +7773,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Roll down the window after stopping and before the officer contacts you.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle."
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Officer stop roll window): Roll down the window after stopping and before the officer contacts you.",
@@ -7793,9 +7793,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Drivers and passengers should place their hands in clear view before officer contact.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck."
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Officer stop hands visible): Drivers and passengers should place their hands in clear view before officer contact.",
@@ -7809,13 +7809,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q376",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for officer stop reason exception?",
+    questionText: "What is the correct DMV guideline or safety rule regarding officer stop reason exception?",
     imageUrl: "",
     options: [
       "An officer may delay stating the reason for a stop if doing so is necessary to protect life or property from imminent threat.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action."
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Officer stop reason exception): An officer may delay stating the reason for a stop if doing so is necessary to protect life or property from imminent threat.",
@@ -7829,13 +7829,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q377",
     category: "Rules of the Road",
-    questionText: "What should a driver know about officer stop reason documented to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding officer stop reason documented?",
     imageUrl: "",
     options: [
       "The reason for the stop must be documented on the citation or enforcement report.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings."
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Officer stop reason documented): The reason for the stop must be documented on the citation or enforcement report.",
@@ -7849,13 +7849,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q378",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for refusing consent to search?",
+    questionText: "What is the correct DMV guideline or safety rule regarding refusing consent to search?",
     imageUrl: "",
     options: [
       "If an officer requests permission to search, you may clearly say that you do not give permission, but you may not resist or obstruct a lawful search.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 22, Refusing consent to search): If an officer requests permission to search, you may clearly say that you do not give permission, but you may not resist or obstruct a lawful search.",
@@ -7873,9 +7873,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If the driver does not produce required documents, officers may conduct a limited search for them.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone."
+      "Increase your speed by 10 mph higher than the prevailing flow of surrounding cars.",
+      "Always maintain 15 mph in any lane regardless of traffic or road conditions.",
+      "Accelerate unconditionally to join the nearest travel lane."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 22, Limited search for documents): If the driver does not produce required documents, officers may conduct a limited search for them.",
@@ -7889,13 +7889,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q380",
     category: "Rules of the Road",
-    questionText: "What should a driver know about passenger identification request to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding passenger identification request?",
     imageUrl: "",
     options: [
       "Passengers can decline an identification request unless circumstances legally require them to identify themselves.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section."
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 22, Passenger identification request): Passengers can decline an identification request unless circumstances legally require them to identify themselves.",
@@ -7913,9 +7913,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "During a traffic stop, an officer may legally require the driver and passengers to exit or stay inside the vehicle.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations."
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 22, Officer exit or stay order): During a traffic stop, an officer may legally require the driver and passengers to exit or stay inside the vehicle.",
@@ -7933,9 +7933,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Drivers and passengers generally have a First Amendment right to record law enforcement interactions in public spaces.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this."
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 23, Right to record stop): Drivers and passengers generally have a First Amendment right to record law enforcement interactions in public spaces.",
@@ -7953,9 +7953,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If recording a law enforcement stop, you should immediately make that clear.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems."
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 23, Recording disclosure): If recording a law enforcement stop, you should immediately make that clear.",
@@ -7969,13 +7969,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q384",
     category: "Rules of the Road",
-    questionText: "What should a driver know about no concealed reach for device to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding no concealed reach for device?",
     imageUrl: "",
     options: [
       "Do not reach into concealed areas for a recording device without the officer’s permission.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours."
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 23, No concealed reach for device): Do not reach into concealed areas for a recording device without the officer’s permission.",
@@ -7993,9 +7993,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If recording does not interfere with lawful duties, an officer cannot confiscate or delete the recording merely because you are recording.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog."
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 23, Recording device protection): If recording does not interfere with lawful duties, an officer cannot confiscate or delete the recording merely because you are recording.",
@@ -8013,9 +8013,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "In general, you may deny a request to unlock a phone or provide a password, though some circumstances may differ.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 23, Phone unlock refusal): In general, you may deny a request to unlock a phone or provide a password, though some circumstances may differ.",
@@ -8029,13 +8029,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q387",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for no retaliation for public recording?",
+    questionText: "What is the correct DMV guideline or safety rule regarding no retaliation for public recording?",
     imageUrl: "",
     options: [
       "Government employees cannot retaliate just because you recorded something in public.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety."
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 23, No retaliation for public recording): Government employees cannot retaliate just because you recorded something in public.",
@@ -8053,9 +8053,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Even if you believe your rights were violated, do not physically resist or use violence against an officer.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations."
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 23, No physical resistance): Even if you believe your rights were violated, do not physically resist or use violence against an officer.",
@@ -8069,13 +8069,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q389",
     category: "Rules of the Road",
-    questionText: "What should a driver know about complaint right to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding complaint right?",
     imageUrl: "",
     options: [
       "The public has a right to file a complaint against a law enforcement agency, and government retaliation for doing so is illegal.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility."
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 23, Complaint right): The public has a right to file a complaint against a law enforcement agency, and government retaliation for doing so is illegal.",
@@ -8089,13 +8089,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q390",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for protected discrimination categories?",
+    questionText: "What is the correct DMV guideline or safety rule regarding protected discrimination categories?",
     imageUrl: "",
     options: [
       "A person has the right to be free from discrimination based on protected characteristics during law enforcement interactions.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement."
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 23, Protected discrimination categories): A person has the right to be free from discrimination based on protected characteristics during law enforcement interactions.",
@@ -8113,9 +8113,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "At or approaching traffic signals or signs, yield to pedestrians, bicyclists, and other nearby vehicles that may have the right-of-way.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays."
+      "Signal for a turn only when changing directions in a designated construction zone.",
+      "Keep your high-beam headlights on continuously for maximum visibility.",
+      "Only use your turn signals when there are vehicles directly behind you."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 24, Yield at signals and signs): At or approaching traffic signals or signs, yield to pedestrians, bicyclists, and other nearby vehicles that may have the right-of-way.",
@@ -8129,13 +8129,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q392",
     category: "Rules of the Road",
-    questionText: "What should a driver know about right turn at red light to stay safe and compliant?",
+    questionText: "Under California law, how should you safely perform a right turn at red light?",
     imageUrl: "",
     options: [
       "A right turn at a red light is allowed only if no NO TURN ON RED sign is posted, after stopping and yielding when safe.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible."
+      "Keep your high-beam headlights on continuously for maximum visibility.",
+      "Only use your turn signals when there are vehicles directly behind you.",
+      "Flash your emergency hazard lights continuously to warn other drivers."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 24, Right turn at red light): A right turn at a red light is allowed only if no NO TURN ON RED sign is posted, after stopping and yielding when safe.",
@@ -8153,9 +8153,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "A yellow arrow means protected turning time is ending; stop if safe or cautiously complete the turn if already in the intersection.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule."
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 25, Yellow arrow): A yellow arrow means protected turning time is ending; stop if safe or cautiously complete the turn if already in the intersection.",
@@ -8169,13 +8169,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q394",
     category: "Rules of the Road",
-    questionText: "What should a driver know about flashing yellow arrow to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding flashing yellow arrow?",
     imageUrl: "",
     options: [
       "A flashing yellow arrow allows a turn after yielding to oncoming traffic; the turn is not protected.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones."
+      "Flash your emergency hazard lights continuously to warn other drivers.",
+      "Keep only your parking lights turned on during heavy rain or dense fog.",
+      "Activate your turn signals exactly 10 feet before commencing any turn."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 25, Flashing yellow arrow): A flashing yellow arrow allows a turn after yielding to oncoming traffic; the turn is not protected.",
@@ -8189,13 +8189,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q395",
     category: "Rules of the Road",
-    questionText: "What should a driver know about green arrow to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding green arrow?",
     imageUrl: "",
     options: [
       "A green arrow means go in the arrow direction as a protected turn while oncoming vehicles are stopped.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21."
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 25, Green arrow): A green arrow means go in the arrow direction as a protected turn while oncoming vehicles are stopped.",
@@ -8213,9 +8213,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "A WALK or walking person signal means pedestrians may cross the street.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet."
+      "Activate your turn signals exactly 10 feet before commencing any turn.",
+      "Use your turn signals only if requested by passengers or law enforcement.",
+      "Sound your horn continuously to warn vehicles that you are about to turn."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 25, WALK signal): A WALK or walking person signal means pedestrians may cross the street.",
@@ -8233,9 +8233,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "A DON’T WALK or raised hand signal means pedestrians may not cross the street.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult."
+      "Use your turn signals only if requested by passengers or law enforcement.",
+      "Sound your horn continuously to warn vehicles that you are about to turn.",
+      "Signal for a turn only when changing directions in a designated construction zone."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 25, DON’T WALK signal): A DON’T WALK or raised hand signal means pedestrians may not cross the street.",
@@ -8253,9 +8253,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "At a diagonal crossing, pedestrians may cross in any direction only when the WALK signal allows it.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance."
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 26, Diagonal crossing): At a diagonal crossing, pedestrians may cross in any direction only when the WALK signal allows it.",
@@ -8269,13 +8269,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q399",
     category: "Rules of the Road",
-    questionText: "What should a driver know about pedestrian sounds to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding pedestrian sounds?",
     imageUrl: "",
     options: [
       "Sounds such as beeps, chirps, or verbal messages help blind or visually impaired pedestrians cross.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways."
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 25, Pedestrian sounds): Sounds such as beeps, chirps, or verbal messages help blind or visually impaired pedestrians cross.",
@@ -8289,13 +8289,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q400",
     category: "Rules of the Road",
-    questionText: "What should a driver know about pedestrian push button to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding pedestrian push button?",
     imageUrl: "",
     options: [
       "A pedestrian push button activates the WALK or walking person signal.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight."
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 26, Pedestrian push button): A pedestrian push button activates the WALK or walking person signal.",
@@ -8313,9 +8313,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If no pedestrian signals are present, pedestrians should obey vehicle traffic signals.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions."
+      "Only use your turn signals when there are vehicles directly behind you.",
+      "Flash your emergency hazard lights continuously to warn other drivers.",
+      "Keep only your parking lights turned on during heavy rain or dense fog."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 26, No pedestrian signals): If no pedestrian signals are present, pedestrians should obey vehicle traffic signals.",
@@ -8329,13 +8329,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q402",
     category: "Rules of the Road",
-    questionText: "What should a driver know about warning signs obey to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding warning signs obey?",
     imageUrl: "",
     options: [
       "Drivers must obey all warning signs regardless of their shape or color.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous."
+      "Flash your emergency hazard lights continuously to warn other drivers.",
+      "Keep only your parking lights turned on during heavy rain or dense fog.",
+      "Activate your turn signals exactly 10 feet before commencing any turn."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 26, Warning signs obey): Drivers must obey all warning signs regardless of their shape or color.",
@@ -8349,13 +8349,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q403",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for regulatory sign?",
+    questionText: "What is the correct DMV guideline or safety rule regarding regulatory sign?",
     imageUrl: "",
     options: [
       "Red and white regulatory signs communicate instructions drivers must follow.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test."
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 26, Regulatory sign): Red and white regulatory signs communicate instructions drivers must follow.",
@@ -8369,13 +8369,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q404",
     category: "Rules of the Road",
-    questionText: "What should a driver know about do not enter sign to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding do not enter sign?",
     imageUrl: "",
     options: [
       "A DO NOT ENTER sign means do not enter the road or ramp where posted.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle."
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 26, DO NOT ENTER sign): A DO NOT ENTER sign means do not enter the road or ramp where posted.",
@@ -8393,9 +8393,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "A red circle with a slash shows something you cannot do.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck."
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 26, Red circle slash): A red circle with a slash shows something you cannot do.",
@@ -8409,13 +8409,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q406",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for railroad emergency sign?",
+    questionText: "What is the correct DMV guideline or safety rule regarding railroad emergency sign?",
     imageUrl: "",
     options: [
       "Many railroad crossings have a blue-and-white sign explaining what to do for emergencies or a stalled vehicle on the tracks.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action."
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 27, Railroad emergency sign): Many railroad crossings have a blue-and-white sign explaining what to do for emergencies or a stalled vehicle on the tracks.",
@@ -8429,13 +8429,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q407",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for diamond warning sign?",
+    questionText: "What is the correct DMV guideline or safety rule regarding diamond warning sign?",
     imageUrl: "",
     options: [
       "A diamond-shaped sign warns of specific road conditions and dangers ahead.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings."
+      "Signal for a turn only when changing directions in a designated construction zone.",
+      "Keep your high-beam headlights on continuously for maximum visibility.",
+      "Only use your turn signals when there are vehicles directly behind you."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 27, Diamond warning sign): A diamond-shaped sign warns of specific road conditions and dangers ahead.",
@@ -8453,9 +8453,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "A white rectangular sign communicates important rules drivers must obey.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly."
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 27, White rectangular sign): A white rectangular sign communicates important rules drivers must obey.",
@@ -8469,13 +8469,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q409",
     category: "Rules of the Road",
-    questionText: "What should a driver know about road user warning signs to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding road user warning signs?",
     imageUrl: "",
     options: [
       "Warning signs can warn of conditions related to pedestrians, bicyclists, schools, playgrounds, school buses, and loading zones.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone."
+      "Only use your turn signals when there are vehicles directly behind you.",
+      "Flash your emergency hazard lights continuously to warn other drivers.",
+      "Keep only your parking lights turned on during heavy rain or dense fog."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 27, Road user warning signs): Warning signs can warn of conditions related to pedestrians, bicyclists, schools, playgrounds, school buses, and loading zones.",
@@ -8493,9 +8493,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the No U-Turn sign or placard as a sign drivers should recognize.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section."
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, No U-Turn sign chart item): The handbook sign chart includes the No U-Turn sign or placard as a sign drivers should recognize.",
@@ -8513,9 +8513,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the No Left Turn sign or placard as a sign drivers should recognize.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations."
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, No Left Turn sign chart item): The handbook sign chart includes the No Left Turn sign or placard as a sign drivers should recognize.",
@@ -8533,9 +8533,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the No Right Turn sign or placard as a sign drivers should recognize.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this."
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, No Right Turn sign chart item): The handbook sign chart includes the No Right Turn sign or placard as a sign drivers should recognize.",
@@ -8553,9 +8553,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Two Way Traffic sign or placard as a sign drivers should recognize.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems."
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Two Way Traffic sign chart item): The handbook sign chart includes the Two Way Traffic sign or placard as a sign drivers should recognize.",
@@ -8573,9 +8573,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the No Parking Any Time sign or placard as a sign drivers should recognize.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours."
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, No Parking Any Time sign chart item): The handbook sign chart includes the No Parking Any Time sign or placard as a sign drivers should recognize.",
@@ -8593,9 +8593,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Yield to Uphill Traffic sign or placard as a sign drivers should recognize.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog."
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Yield to Uphill Traffic sign chart item): The handbook sign chart includes the Yield to Uphill Traffic sign or placard as a sign drivers should recognize.",
@@ -8613,9 +8613,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the One Way sign or placard as a sign drivers should recognize.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe."
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, One Way sign chart item): The handbook sign chart includes the One Way sign or placard as a sign drivers should recognize.",
@@ -8629,13 +8629,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q417",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for emergency parking only sign chart item?",
+    questionText: "What is the correct DMV guideline or safety rule regarding emergency parking only sign chart item?",
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Emergency Parking Only sign or placard as a sign drivers should recognize.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety."
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Emergency Parking Only sign chart item): The handbook sign chart includes the Emergency Parking Only sign or placard as a sign drivers should recognize.",
@@ -8653,9 +8653,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the No Turns sign or placard as a sign drivers should recognize.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations."
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, No Turns sign chart item): The handbook sign chart includes the No Turns sign or placard as a sign drivers should recognize.",
@@ -8669,13 +8669,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q419",
     category: "Rules of the Road",
-    questionText: "What should a driver know about left turn yield on green sign chart item to stay safe and compliant?",
+    questionText: "Under California law, how should you safely perform a left turn yield on green sign chart item?",
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Left Turn Yield on Green sign or placard as a sign drivers should recognize.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility."
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Left Turn Yield on Green sign chart item): The handbook sign chart includes the Left Turn Yield on Green sign or placard as a sign drivers should recognize.",
@@ -8689,13 +8689,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q420",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for do not pass sign chart item?",
+    questionText: "What is the correct DMV guideline or safety rule regarding do not pass sign chart item?",
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Do Not Pass sign or placard as a sign drivers should recognize.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement."
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Do Not Pass sign chart item): The handbook sign chart includes the Do Not Pass sign or placard as a sign drivers should recognize.",
@@ -8713,9 +8713,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Do Not Block Intersection sign or placard as a sign drivers should recognize.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays."
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Do Not Block Intersection sign chart item): The handbook sign chart includes the Do Not Block Intersection sign or placard as a sign drivers should recognize.",
@@ -8729,13 +8729,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q422",
     category: "Rules of the Road",
-    questionText: "What should a driver know about slower traffic keep right sign chart item to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding slower traffic keep right sign chart item?",
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Slower Traffic Keep Right sign or placard as a sign drivers should recognize.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible."
+      "This requirement only applies when driving on high-speed interstate freeways.",
+      "The speed limit is suspended during late-night hours when traffic is light.",
+      "Speed up to match the highest speed of the surrounding traffic."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Slower Traffic Keep Right sign chart item): The handbook sign chart includes the Slower Traffic Keep Right sign or placard as a sign drivers should recognize.",
@@ -8753,9 +8753,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Keep Right sign or placard as a sign drivers should recognize.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule."
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Keep Right sign chart item): The handbook sign chart includes the Keep Right sign or placard as a sign drivers should recognize.",
@@ -8769,13 +8769,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q424",
     category: "Rules of the Road",
-    questionText: "What should a driver know about 3 tracks sign chart item to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding 3 tracks sign chart item?",
     imageUrl: "",
     options: [
       "The handbook sign chart includes the 3 Tracks sign or placard as a sign drivers should recognize.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones."
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, 3 Tracks sign chart item): The handbook sign chart includes the 3 Tracks sign or placard as a sign drivers should recognize.",
@@ -8793,9 +8793,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Road Closed Ahead sign or placard as a sign drivers should recognize.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21."
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Road Closed Ahead sign chart item): The handbook sign chart includes the Road Closed Ahead sign or placard as a sign drivers should recognize.",
@@ -8809,13 +8809,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q426",
     category: "Rules of the Road",
-    questionText: "What should a driver know about road machinery ahead sign chart item to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding road machinery ahead sign chart item?",
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Road Machinery Ahead sign or placard as a sign drivers should recognize.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Road Machinery Ahead sign chart item): The handbook sign chart includes the Road Machinery Ahead sign or placard as a sign drivers should recognize.",
@@ -8833,9 +8833,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Shoulder Work Ahead sign or placard as a sign drivers should recognize.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult."
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Shoulder Work Ahead sign chart item): The handbook sign chart includes the Shoulder Work Ahead sign or placard as a sign drivers should recognize.",
@@ -8849,13 +8849,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q428",
     category: "Rules of the Road",
-    questionText: "What should a driver know about thru traffic merge left sign chart item to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding thru traffic merge left sign chart item?",
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Thru Traffic Merge Left sign or placard as a sign drivers should recognize.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance."
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Thru Traffic Merge Left sign chart item): The handbook sign chart includes the Thru Traffic Merge Left sign or placard as a sign drivers should recognize.",
@@ -8873,9 +8873,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Guide Sign sign or placard as a sign drivers should recognize.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways."
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Guide Sign sign chart item): The handbook sign chart includes the Guide Sign sign or placard as a sign drivers should recognize.",
@@ -8893,9 +8893,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Hazardous Load Placard sign or placard as a sign drivers should recognize.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight."
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Hazardous Load Placard sign chart item): The handbook sign chart includes the Hazardous Load Placard sign or placard as a sign drivers should recognize.",
@@ -8913,9 +8913,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Slow Moving Vehicle sign or placard as a sign drivers should recognize.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions."
+      "The speed limit is suspended during late-night hours when traffic is light.",
+      "Speed up to match the highest speed of the surrounding traffic.",
+      "Always drive at least 5 mph above the posted limit to prevent congestion."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Slow Moving Vehicle sign chart item): The handbook sign chart includes the Slow Moving Vehicle sign or placard as a sign drivers should recognize.",
@@ -8933,9 +8933,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Slippery When Wet sign or placard as a sign drivers should recognize.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous."
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Slippery When Wet sign chart item): The handbook sign chart includes the Slippery When Wet sign or placard as a sign drivers should recognize.",
@@ -8953,9 +8953,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Merging Traffic sign or placard as a sign drivers should recognize.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test."
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Merging Traffic sign chart item): The handbook sign chart includes the Merging Traffic sign or placard as a sign drivers should recognize.",
@@ -8969,13 +8969,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q434",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for divided highway sign chart item?",
+    questionText: "What is the correct DMV guideline or safety rule regarding divided highway sign chart item?",
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Divided Highway sign or placard as a sign drivers should recognize.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Divided Highway sign chart item): The handbook sign chart includes the Divided Highway sign or placard as a sign drivers should recognize.",
@@ -8989,13 +8989,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q435",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for lane ends sign chart item?",
+    questionText: "What is the correct practice or rule concerning lane ends sign chart item?",
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Lane Ends sign or placard as a sign drivers should recognize.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck."
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Lane Ends sign chart item): The handbook sign chart includes the Lane Ends sign or placard as a sign drivers should recognize.",
@@ -9013,9 +9013,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the End Divided Highway sign or placard as a sign drivers should recognize.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action."
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, End Divided Highway sign chart item): The handbook sign chart includes the End Divided Highway sign or placard as a sign drivers should recognize.",
@@ -9029,13 +9029,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q437",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for traffic signal ahead sign chart item?",
+    questionText: "What is the correct DMV guideline or safety rule regarding traffic signal ahead sign chart item?",
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Traffic Signal Ahead sign or placard as a sign drivers should recognize.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings."
+      "Use your turn signals only if requested by passengers or law enforcement.",
+      "Sound your horn continuously to warn vehicles that you are about to turn.",
+      "Signal for a turn only when changing directions in a designated construction zone."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Traffic Signal Ahead sign chart item): The handbook sign chart includes the Traffic Signal Ahead sign or placard as a sign drivers should recognize.",
@@ -9053,9 +9053,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Pedestrian Crossing sign or placard as a sign drivers should recognize.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly."
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Pedestrian Crossing sign chart item): The handbook sign chart includes the Pedestrian Crossing sign or placard as a sign drivers should recognize.",
@@ -9073,9 +9073,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Added Lane sign or placard as a sign drivers should recognize.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone."
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Added Lane sign chart item): The handbook sign chart includes the Added Lane sign or placard as a sign drivers should recognize.",
@@ -9089,13 +9089,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q440",
     category: "Rules of the Road",
-    questionText: "What should a driver know about crossroad sign chart item to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding crossroad sign chart item?",
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Crossroad sign or placard as a sign drivers should recognize.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section."
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Crossroad sign chart item): The handbook sign chart includes the Crossroad sign or placard as a sign drivers should recognize.",
@@ -9113,9 +9113,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Stop Ahead sign or placard as a sign drivers should recognize.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations."
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Stop Ahead sign chart item): The handbook sign chart includes the Stop Ahead sign or placard as a sign drivers should recognize.",
@@ -9133,9 +9133,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Yield Ahead sign or placard as a sign drivers should recognize.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this."
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Yield Ahead sign chart item): The handbook sign chart includes the Yield Ahead sign or placard as a sign drivers should recognize.",
@@ -9149,13 +9149,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q443",
     category: "Rules of the Road",
-    questionText: "What should a driver know about directional arrow sign chart item to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding directional arrow sign chart item?",
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Directional Arrow sign or placard as a sign drivers should recognize.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems."
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Directional Arrow sign chart item): The handbook sign chart includes the Directional Arrow sign or placard as a sign drivers should recognize.",
@@ -9173,9 +9173,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Curve sign or placard as a sign drivers should recognize.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours."
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Curve sign chart item): The handbook sign chart includes the Curve sign or placard as a sign drivers should recognize.",
@@ -9193,9 +9193,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the T Intersection sign or placard as a sign drivers should recognize.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog."
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, T Intersection sign chart item): The handbook sign chart includes the T Intersection sign or placard as a sign drivers should recognize.",
@@ -9213,9 +9213,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The handbook sign chart includes the Winding Road sign or placard as a sign drivers should recognize.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe."
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Winding Road sign chart item): The handbook sign chart includes the Winding Road sign or placard as a sign drivers should recognize.",
@@ -9233,9 +9233,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The first vehicle to arrive at an intersection has the right-of-way, and others must wait.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety."
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 27, Right-of-way first arrival): The first vehicle to arrive at an intersection has the right-of-way, and others must wait.",
@@ -9253,9 +9253,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Never assume others will give right-of-way; give up right-of-way when it helps prevent collisions.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations."
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 27, Give up right-of-way to avoid collision): Never assume others will give right-of-way; give up right-of-way when it helps prevent collisions.",
@@ -9273,9 +9273,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "An intersection is any place where one road meets another road.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility."
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Intersection definition): An intersection is any place where one road meets another road.",
@@ -9293,9 +9293,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Controlled intersections have signs or signals, while uncontrolled and blind intersections do not.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement."
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Controlled and uncontrolled intersections): Controlled intersections have signs or signals, while uncontrolled and blind intersections do not.",
@@ -9313,9 +9313,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Before entering an intersection, look left, right, and ahead for vehicles, bicyclists, and pedestrians.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays."
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Intersection approach scan): Before entering an intersection, look left, right, and ahead for vehicles, bicyclists, and pedestrians.",
@@ -9333,9 +9333,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Pedestrians always have the right-of-way at intersections.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible."
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Pedestrians always right-of-way): Pedestrians always have the right-of-way at intersections.",
@@ -9353,9 +9353,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "At an intersection without STOP or YIELD signs, the vehicle that arrives first has right-of-way.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule."
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, No sign intersection first arrival): At an intersection without STOP or YIELD signs, the vehicle that arrives first has right-of-way.",
@@ -9369,13 +9369,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q454",
     category: "Rules of the Road",
-    questionText: "What should a driver know about same time yield right to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding same time yield right?",
     imageUrl: "",
     options: [
       "If you arrive at the same time as another vehicle, pedestrian, or bicyclist, yield to the one on your right.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones."
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Same time yield right): If you arrive at the same time as another vehicle, pedestrian, or bicyclist, yield to the one on your right.",
@@ -9393,9 +9393,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "At a four-way stop, stop first and proceed using right-of-way rules. ",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21."
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Four-way stop order): At a four-way stop, stop first and proceed using right-of-way rules. ",
@@ -9409,13 +9409,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q456",
     category: "Rules of the Road",
-    questionText: "What should a driver know about t intersection through road to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding t intersection through road?",
     imageUrl: "",
     options: [
       "At an uncontrolled T intersection, traffic on the through road has the right-of-way.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet."
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, T intersection through road): At an uncontrolled T intersection, traffic on the through road has the right-of-way.",
@@ -9433,9 +9433,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "When turning left, yield to pedestrians and approaching vehicles close enough to be dangerous.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult."
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Left turn right-of-way): When turning left, yield to pedestrians and approaching vehicles close enough to be dangerous.",
@@ -9453,9 +9453,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "When turning right, check for pedestrians, motorcycles, and bicycles next to you.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance."
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Right turn vulnerable road users): When turning right, check for pedestrians, motorcycles, and bicycles next to you.",
@@ -9469,13 +9469,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q459",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for green signal pedestrians?",
+    questionText: "What is the correct DMV guideline or safety rule regarding green signal pedestrians?",
     imageUrl: "",
     options: [
       "At a green light, proceed with caution because pedestrians still have the right-of-way.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways."
+      "Keep only your parking lights turned on during heavy rain or dense fog.",
+      "Activate your turn signals exactly 10 feet before commencing any turn.",
+      "Use your turn signals only if requested by passengers or law enforcement."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Green signal pedestrians): At a green light, proceed with caution because pedestrians still have the right-of-way.",
@@ -9493,9 +9493,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "When entering traffic, proceed with caution and yield to traffic already in the lanes.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight."
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Entering traffic yield): When entering traffic, proceed with caution and yield to traffic already in the lanes.",
@@ -9513,9 +9513,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "It is illegal to stop or block an intersection if there is not enough space to completely cross before the light turns red.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions."
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Do not block intersection): It is illegal to stop or block an intersection if there is not enough space to completely cross before the light turns red.",
@@ -9533,9 +9533,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "In a roundabout, traffic travels in one direction around a central island.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous."
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 31, Roundabout direction): In a roundabout, traffic travels in one direction around a central island.",
@@ -9553,9 +9553,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Slow down as you approach a roundabout.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test."
+      "The speed limit is suspended during late-night hours when traffic is light.",
+      "Speed up to match the highest speed of the surrounding traffic.",
+      "Always drive at least 5 mph above the posted limit to prevent congestion."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 31, Roundabout slow approach): Slow down as you approach a roundabout.",
@@ -9573,9 +9573,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Yield to all traffic already in the roundabout.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle."
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 31, Roundabout yield): Yield to all traffic already in the roundabout.",
@@ -9593,9 +9593,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Enter a roundabout heading to the right when there is a safe gap.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck."
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 31, Roundabout enter right): Enter a roundabout heading to the right when there is a safe gap.",
@@ -9613,9 +9613,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Travel counterclockwise in a roundabout and do not stop or pass.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action."
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 31, Roundabout no stop or pass): Travel counterclockwise in a roundabout and do not stop or pass.",
@@ -9629,13 +9629,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q467",
     category: "Rules of the Road",
-    questionText: "What should a driver know about roundabout signal to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding roundabout signal?",
     imageUrl: "",
     options: [
       "Signal when changing lanes or exiting a roundabout.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings."
+      "Keep only your parking lights turned on during heavy rain or dense fog.",
+      "Activate your turn signals exactly 10 feet before commencing any turn.",
+      "Use your turn signals only if requested by passengers or law enforcement."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 31, Roundabout signal): Signal when changing lanes or exiting a roundabout.",
@@ -9649,13 +9649,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q468",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for roundabout missed exit?",
+    questionText: "What is the correct DMV guideline or safety rule regarding roundabout missed exit?",
     imageUrl: "",
     options: [
       "If you miss your exit in a roundabout, continue around until you return to it.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly."
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 31, Roundabout missed exit): If you miss your exit in a roundabout, continue around until you return to it.",
@@ -9673,9 +9673,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "In a multi-lane roundabout, choose the entry or exit lane based on your destination.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone."
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 31, Roundabout lane choice): In a multi-lane roundabout, choose the entry or exit lane based on your destination.",
@@ -9693,9 +9693,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Pedestrians have the right-of-way, but they must also follow rules of the road.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section."
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 32, Pedestrians right-of-way and rules): Pedestrians have the right-of-way, but they must also follow rules of the road.",
@@ -9709,13 +9709,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q471",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for pedestrian crossing caution?",
+    questionText: "What is the correct DMV guideline or safety rule regarding pedestrian crossing caution?",
     imageUrl: "",
     options: [
       "When a pedestrian is crossing with or without a crosswalk, drivers must use caution, reduce speed, or stop so they can finish crossing safely.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations."
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 32, Pedestrian crossing caution): When a pedestrian is crossing with or without a crosswalk, drivers must use caution, reduce speed, or stop so they can finish crossing safely.",
@@ -9733,9 +9733,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Pedestrians have the right-of-way in marked and unmarked crosswalks.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this."
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk.",
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 32, Crosswalk right-of-way): Pedestrians have the right-of-way in marked and unmarked crosswalks.",
@@ -9753,9 +9753,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If a limit line appears before a crosswalk, stop at the limit line and allow pedestrians to cross.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems."
+      "Always drive at least 5 mph above the posted limit to prevent congestion.",
+      "Slow down to exactly half the posted limit at all times to be safe.",
+      "Increase your speed by 10 mph higher than the prevailing flow of surrounding cars."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 32, Limit line before crosswalk): If a limit line appears before a crosswalk, stop at the limit line and allow pedestrians to cross.",
@@ -9769,13 +9769,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q474",
     category: "Rules of the Road",
-    questionText: "What should a driver know about do not change lanes in front of truck to stay safe and compliant?",
+    questionText: "What is the correct practice or rule concerning do not change lanes in front of truck?",
     imageUrl: "",
     options: [
       "Do not change lanes directly in front of large vehicles to reach an exit or turn.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours."
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 33, Do not change lanes in front of truck): Do not change lanes directly in front of large vehicles to reach an exit or turn.",
@@ -9789,13 +9789,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q475",
     category: "Rules of the Road",
-    questionText: "What should a driver know about pass trucks on left to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding pass trucks on left?",
     imageUrl: "",
     options: [
       "Pass large vehicles on the left and move ahead after passing.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog."
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 33, Pass trucks on left): Pass large vehicles on the left and move ahead after passing.",
@@ -9809,13 +9809,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q476",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for do not drive alongside truck?",
+    questionText: "What is the correct DMV guideline or safety rule regarding do not drive alongside truck?",
     imageUrl: "",
     options: [
       "Do not drive next to a large vehicle longer than necessary.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe."
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 33, Do not drive alongside truck): Do not drive next to a large vehicle longer than necessary.",
@@ -9833,9 +9833,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Do not follow large vehicles too closely.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety."
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 33, Do not tailgate truck): Do not follow large vehicles too closely.",
@@ -9849,13 +9849,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q478",
     category: "Rules of the Road",
-    questionText: "What should a driver know about truck speed appearance to stay safe and compliant?",
+    questionText: "What is the safe or legal speed rule for truck speed appearance?",
     imageUrl: "",
     options: [
       "Do not underestimate a large vehicle’s size or speed because it may appear to travel slower.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations."
+      "This requirement only applies when driving on high-speed interstate freeways.",
+      "The speed limit is suspended during late-night hours when traffic is light.",
+      "Speed up to match the highest speed of the surrounding traffic."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 33, Truck speed appearance): Do not underestimate a large vehicle’s size or speed because it may appear to travel slower.",
@@ -9873,9 +9873,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Safety zones are spaces for pedestrians waiting for buses, streetcars, and trolleys, marked by raised buttons or markers.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility."
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 34, Safety zone definition): Safety zones are spaces for pedestrians waiting for buses, streetcars, and trolleys, marked by raised buttons or markers.",
@@ -9893,9 +9893,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Do not drive through a safety zone under any condition.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement."
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 34, No driving through safety zone): Do not drive through a safety zone under any condition.",
@@ -9913,9 +9913,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Do not pass a light rail vehicle or streetcar on the left unless tracks are too close to the right side, you are on a one-way street, or an officer directs it.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays."
+      "Only use your turn signals when there are vehicles directly behind you.",
+      "Flash your emergency hazard lights continuously to warn other drivers.",
+      "Keep only your parking lights turned on during heavy rain or dense fog."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 34, Do not pass light rail left): Do not pass a light rail vehicle or streetcar on the left unless tracks are too close to the right side, you are on a one-way street, or an officer directs it.",
@@ -9933,9 +9933,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Light rail vehicles on public roads have the same rights and responsibilities as other vehicles.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible."
+      "Flash your emergency hazard lights continuously to warn other drivers.",
+      "Keep only your parking lights turned on during heavy rain or dense fog.",
+      "Activate your turn signals exactly 10 feet before commencing any turn."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 34, Light rail same rights): Light rail vehicles on public roads have the same rights and responsibilities as other vehicles.",
@@ -9953,9 +9953,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Never turn in front of an approaching light rail vehicle.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule."
+      "Keep only your parking lights turned on during heavy rain or dense fog.",
+      "Activate your turn signals exactly 10 feet before commencing any turn.",
+      "Use your turn signals only if requested by passengers or law enforcement."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 34, Never turn in front of light rail): Never turn in front of an approaching light rail vehicle.",
@@ -9973,9 +9973,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Check for approaching light rail vehicles before turning across tracks and complete the turn only when the signal allows.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones."
+      "Activate your turn signals exactly 10 feet before commencing any turn.",
+      "Use your turn signals only if requested by passengers or law enforcement.",
+      "Sound your horn continuously to warn vehicles that you are about to turn."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 34, Check light rail before tracks): Check for approaching light rail vehicles before turning across tracks and complete the turn only when the signal allows.",
@@ -9989,13 +9989,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q485",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for motorcycle same rights?",
+    questionText: "What is the correct DMV guideline or safety rule regarding motorcycle same rights?",
     imageUrl: "",
     options: [
       "Motorcyclists have the same rights and responsibilities as other drivers.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21."
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 34, Motorcycle same rights): Motorcyclists have the same rights and responsibilities as other drivers.",
@@ -10013,9 +10013,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Check for motorcycles and use mirrors when changing lanes or entering a road because they are harder to see.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet."
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 34, Check for motorcycles): Check for motorcycles and use mirrors when changing lanes or entering a road because they are harder to see.",
@@ -10033,9 +10033,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Whenever possible, give a motorcycle the full lane.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult."
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 35, Give motorcycle full lane): Whenever possible, give a motorcycle the full lane.",
@@ -10053,9 +10053,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Never try to pass a motorcycle in the same lane as you.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance."
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning.",
+      "Overtake another vehicle that has stopped at a pedestrian crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 35, Do not pass motorcycle same lane): Never try to pass a motorcycle in the same lane as you.",
@@ -10069,13 +10069,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q489",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for check for motorcycles before door?",
+    questionText: "What is the correct DMV guideline or safety rule regarding check for motorcycles before door?",
     imageUrl: "",
     options: [
       "Check for motorcyclists before opening your door next to traffic.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways."
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 35, Check for motorcycles before door): Check for motorcyclists before opening your door next to traffic.",
@@ -10093,9 +10093,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "When possible, move to one side of your lane to give motorcyclists more room to pass.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 35, Move aside for motorcycles): When possible, move to one side of your lane to give motorcyclists more room to pass.",
@@ -10113,9 +10113,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "When approaching a stationary emergency vehicle with flashing lights, move over and slow down.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions."
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 35, Move over stationary emergency vehicle): When approaching a stationary emergency vehicle with flashing lights, move over and slow down.",
@@ -10133,9 +10133,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If you are in an intersection when an emergency vehicle approaches, continue through, then move right and stop when safe.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous."
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 35, Emergency vehicle in intersection): If you are in an intersection when an emergency vehicle approaches, continue through, then move right and stop when safe.",
@@ -10149,13 +10149,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q493",
     category: "Rules of the Road",
-    questionText: "What should a driver know about obey officers firefighters to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding obey officers firefighters?",
     imageUrl: "",
     options: [
       "Obey any direction from a law enforcement officer or firefighter even if it conflicts with signs, signals, or laws.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test."
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 35, Obey officers firefighters): Obey any direction from a law enforcement officer or firefighter even if it conflicts with signs, signals, or laws.",
@@ -10173,9 +10173,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "You can be arrested for driving to the scene of a fire, collision, or disaster because it interferes with responders.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle."
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 35, Do not drive to emergency scene): You can be arrested for driving to the scene of a fire, collision, or disaster because it interferes with responders.",
@@ -10189,13 +10189,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q495",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for slow-moving vehicle examples?",
+    questionText: "What is the correct DMV guideline or safety rule regarding slow-moving vehicle examples?",
     imageUrl: "",
     options: [
       "Slow-moving motorized vehicles can include scooters, neighborhood electric vehicles, and golf carts.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck."
+      "The speed limit is suspended during late-night hours when traffic is light.",
+      "Speed up to match the highest speed of the surrounding traffic.",
+      "Always drive at least 5 mph above the posted limit to prevent congestion."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 36, Slow-moving vehicle examples): Slow-moving motorized vehicles can include scooters, neighborhood electric vehicles, and golf carts.",
@@ -10213,9 +10213,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Drivers should adjust speed to share the road with slow-moving vehicles.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action."
+      "Speed up to match the highest speed of the surrounding traffic.",
+      "Always drive at least 5 mph above the posted limit to prevent congestion.",
+      "Slow down to exactly half the posted limit at all times to be safe."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 36, Adjust speed for slow vehicles): Drivers should adjust speed to share the road with slow-moving vehicles.",
@@ -10233,9 +10233,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Bicyclists have the same rights and responsibilities as other drivers.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings."
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 36, Bicycles same rights): Bicyclists have the same rights and responsibilities as other drivers.",
@@ -10253,9 +10253,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Bicyclists may legally ride on some freeway sections when no alternate route exists and bicycling is not forbidden.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 36, Bicyclists freeway allowed): Bicyclists may legally ride on some freeway sections when no alternate route exists and bicycling is not forbidden.",
@@ -10269,13 +10269,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q499",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for bicyclists move left hazards?",
+    questionText: "What is the correct DMV guideline or safety rule regarding bicyclists move left hazards?",
     imageUrl: "",
     options: [
       "Bicyclists may move left to avoid hazards such as vehicles, animals, or debris.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone."
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 36, Bicyclists move left hazards): Bicyclists may move left to avoid hazards such as vehicles, animals, or debris.",
@@ -10289,13 +10289,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q500",
     category: "Rules of the Road",
-    questionText: "What should a driver know about bicyclists one-way left to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding bicyclists one-way left?",
     imageUrl: "",
     options: [
       "Bicyclists may choose to ride near the left curb or edge of a one-way street.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section."
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 36, Bicyclists one-way left): Bicyclists may choose to ride near the left curb or edge of a one-way street.",
@@ -10309,13 +10309,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q501",
     category: "Rules of the Road",
-    questionText: "What should a driver know about bicyclists crosswalk pedestrian to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding bicyclists crosswalk pedestrian?",
     imageUrl: "",
     options: [
       "Bicyclists may use crosswalks by stopping and crossing as pedestrians.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations."
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 36, Bicyclists crosswalk pedestrian): Bicyclists may use crosswalks by stopping and crossing as pedestrians.",
@@ -10333,9 +10333,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "To pass a bicyclist in the travel lane, drivers may need to change lanes and then return safely.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this."
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 36, Passing bicyclist lane change): To pass a bicyclist in the travel lane, drivers may need to change lanes and then return safely.",
@@ -10349,13 +10349,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q503",
     category: "Rules of the Road",
-    questionText: "What should a driver know about bicycle passing three feet if no lane change to stay safe and compliant?",
+    questionText: "What is the correct practice or rule concerning bicycle passing three feet if no lane change?",
     imageUrl: "",
     options: [
       "If you cannot change lanes to pass a bicyclist, allow at least three feet of clearance.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems."
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 37, Bicycle passing three feet if no lane change): If you cannot change lanes to pass a bicyclist, allow at least three feet of clearance.",
@@ -10373,9 +10373,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If you cannot give three feet of space, do not pass the cyclist until the clearance can be given.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours."
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 37, Do not pass bicyclist without three feet): If you cannot give three feet of space, do not pass the cyclist until the clearance can be given.",
@@ -10389,13 +10389,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q505",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for bike lane turn entry limit?",
+    questionText: "What is the correct practice or rule concerning bike lane turn entry limit?",
     imageUrl: "",
     options: [
       "Enter a bike lane no more than 200 feet before starting a turn.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog."
+      "Always drive at least 5 mph above the posted limit to prevent congestion.",
+      "Slow down to exactly half the posted limit at all times to be safe.",
+      "Increase your speed by 10 mph higher than the prevailing flow of surrounding cars."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 37, Bike lane turn entry limit): Enter a bike lane no more than 200 feet before starting a turn.",
@@ -10409,13 +10409,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q506",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for work zone slow and space?",
+    questionText: "What is the correct DMV guideline or safety rule regarding work zone slow and space?",
     imageUrl: "",
     options: [
       "In work zones, slow down and allow extra space between vehicles.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe."
+      "Slow down to exactly half the posted limit at all times to be safe.",
+      "Increase your speed by 10 mph higher than the prevailing flow of surrounding cars.",
+      "Always maintain 15 mph in any lane regardless of traffic or road conditions."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 37, Work zone slow and space): In work zones, slow down and allow extra space between vehicles.",
@@ -10433,9 +10433,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "In work zones, expect sudden slowing or stopping and watch for drivers changing lanes.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety."
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 37, Work zone expect sudden stops): In work zones, expect sudden slowing or stopping and watch for drivers changing lanes.",
@@ -10453,9 +10453,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Obey special signs or instructions from workers such as flaggers.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations."
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 37, Work zone obey flaggers): Obey special signs or instructions from workers such as flaggers.",
@@ -10473,9 +10473,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "School bus flashing yellow lights warn drivers to slow down and prepare to stop.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility."
+      "Use your turn signals only if requested by passengers or law enforcement.",
+      "Sound your horn continuously to warn vehicles that you are about to turn.",
+      "Signal for a turn only when changing directions in a designated construction zone."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 38, School bus yellow lights): School bus flashing yellow lights warn drivers to slow down and prepare to stop.",
@@ -10493,9 +10493,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Flashing red railroad warning lights mean you must stop and wait until they stop flashing, even if the gate rises.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement."
+      "Sound your horn continuously to warn vehicles that you are about to turn.",
+      "Signal for a turn only when changing directions in a designated construction zone.",
+      "Keep your high-beam headlights on continuously for maximum visibility."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 39, Railroad flashing red): Flashing red railroad warning lights mean you must stop and wait until they stop flashing, even if the gate rises.",
@@ -10509,13 +10509,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q511",
     category: "Rules of the Road",
-    questionText: "What should a driver know about railroad lowered gates to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding railroad lowered gates?",
     imageUrl: "",
     options: [
       "Do not go under lowering gates or around lowered gates.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays."
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 39, Railroad lowered gates): Do not go under lowering gates or around lowered gates.",
@@ -10533,9 +10533,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If gates are lowered and no train is approaching, call the posted railroad emergency number or 911.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible."
+      "Speed up to match the highest speed of the surrounding traffic.",
+      "Always drive at least 5 mph above the posted limit to prevent congestion.",
+      "Slow down to exactly half the posted limit at all times to be safe."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 39, Railroad no train at lowered gate): If gates are lowered and no train is approaching, call the posted railroad emergency number or 911.",
@@ -10553,9 +10553,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "At railroad crossings, stop, look, and listen; only cross when safe.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule."
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 39, Railroad stop look listen): At railroad crossings, stop, look, and listen; only cross when safe.",
@@ -10569,13 +10569,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q514",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for railroad expect any track?",
+    questionText: "What is the correct DMV guideline or safety rule regarding railroad expect any track?",
     imageUrl: "",
     options: [
       "Expect a train on any track, at any time, traveling in either direction.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 39, Railroad expect any track): Expect a train on any track, at any time, traveling in either direction.",
@@ -10593,9 +10593,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Never stop on railroad tracks or start crossing unless there is room to completely cross.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21."
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 39, Railroad no stopping tracks): Never stop on railroad tracks or start crossing unless there is room to completely cross.",
@@ -10613,9 +10613,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Watch for vehicles that must stop before tracks, including buses, school buses, and vehicles with hazardous materials placards.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet."
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 39, Railroad required-stop vehicles): Watch for vehicles that must stop before tracks, including buses, school buses, and vehicles with hazardous materials placards.",
@@ -10633,9 +10633,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Drivers must not operate a vehicle so overloaded they cannot control it or see ahead or to the sides.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult."
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 40, Overloaded vehicle): Drivers must not operate a vehicle so overloaded they cannot control it or see ahead or to the sides.",
@@ -10649,13 +10649,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q518",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for unsecured load?",
+    questionText: "What is the correct DMV guideline or safety rule regarding unsecured load?",
     imageUrl: "",
     options: [
       "Drivers must not operate a vehicle with an unsecured load that is a safety hazard.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance."
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 40, Unsecured load): Drivers must not operate a vehicle with an unsecured load that is a safety hazard.",
@@ -10673,9 +10673,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "At night, cargo extending more than four feet from the rear bumper must be marked with two red lights.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways."
+      "Signal for a turn only when changing directions in a designated construction zone.",
+      "Keep your high-beam headlights on continuously for maximum visibility.",
+      "Only use your turn signals when there are vehicles directly behind you."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 40, Rear cargo night lights): At night, cargo extending more than four feet from the rear bumper must be marked with two red lights.",
@@ -10689,13 +10689,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q520",
     category: "Rules of the Road",
-    questionText: "What should a driver know about pickup bed animals to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding pickup bed animals?",
     imageUrl: "",
     options: [
       "Animals transported in the back of a pickup or truck must be properly secured to prevent falling, jumping, or being thrown.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight."
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 40, Pickup bed animals): Animals transported in the back of a pickup or truck must be properly secured to prevent falling, jumping, or being thrown.",
@@ -10713,9 +10713,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Drivers may not operate a vehicle with a video monitor visible to the driver unless it displays vehicle information, navigation, media player, or radio.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions."
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 40, Driver visible video monitor): Drivers may not operate a vehicle with a video monitor visible to the driver unless it displays vehicle information, navigation, media player, or radio.",
@@ -10733,9 +10733,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Drivers must not throw cigarettes, cigars, or other flaming or glowing substances from a vehicle.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 40, No throwing burning substances): Drivers must not throw cigarettes, cigars, or other flaming or glowing substances from a vehicle.",
@@ -10753,9 +10753,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Drivers must not put signs or objects on the windshield or side rear windows that block view or hang objects on the mirror.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test."
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 41, Windshield obstruction ban): Drivers must not put signs or objects on the windshield or side rear windows that block view or hang objects on the mirror.",
@@ -10769,13 +10769,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q524",
     category: "Rules of the Road",
-    questionText: "What should a driver know about side windows behind driver to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding side windows behind driver?",
     imageUrl: "",
     options: [
       "Objects may be placed on side windows behind the driver.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle."
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 41, Side windows behind driver): Objects may be placed on side windows behind the driver.",
@@ -10789,13 +10789,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q525",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for license plate legibility?",
+    questionText: "What is the correct DMV guideline or safety rule regarding license plate legibility?",
     imageUrl: "",
     options: [
       "Drivers must not operate a vehicle with an illegible license plate.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck."
+      "It is acceptable to drive after drinking if you drink strong coffee first.",
+      "Prescription medications are always completely safe to use while driving.",
+      "Minors under 18 may drive unsupervised at any hour during their provisional year."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 41, License plate legibility): Drivers must not operate a vehicle with an illegible license plate.",
@@ -10809,13 +10809,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q526",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for license plate alteration?",
+    questionText: "What is the correct DMV guideline or safety rule regarding license plate alteration?",
     imageUrl: "",
     options: [
       "Drivers must not alter a license plate in any way.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action."
+      "Prescription medications are always completely safe to use while driving.",
+      "Minors under 18 may drive unsupervised at any hour during their provisional year.",
+      "A Class C license allows you to operate commercial double-trailer trucks."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 41, License plate alteration): Drivers must not alter a license plate in any way.",
@@ -10829,13 +10829,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q527",
     category: "Rules of the Road",
-    questionText: "What should a driver know about evading serious injury penalty to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding evading serious injury penalty?",
     imageUrl: "",
     options: [
       "Causing serious bodily injury while evading law enforcement can lead to up to seven years in state prison or up to one year in county jail.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings."
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 41, Evading serious injury penalty): Causing serious bodily injury while evading law enforcement can lead to up to seven years in state prison or up to one year in county jail.",
@@ -10853,9 +10853,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Manslaughter resulting from evading law enforcement during a pursuit is punishable by 4 to 10 years in state prison.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly."
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 41, Evading manslaughter penalty): Manslaughter resulting from evading law enforcement during a pursuit is punishable by 4 to 10 years in state prison.",
@@ -10869,13 +10869,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q529",
     category: "Rules of the Road",
-    questionText: "What should a driver know about reckless speed contest injury to stay safe and compliant?",
+    questionText: "What is the safe or legal speed rule for reckless speed contest injury?",
     imageUrl: "",
     options: [
       "A conviction for reckless driving or a speed contest that injures another person can lead to imprisonment, a fine, or both.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone."
+      "Always drive at least 5 mph above the posted limit to prevent congestion.",
+      "Slow down to exactly half the posted limit at all times to be safe.",
+      "Increase your speed by 10 mph higher than the prevailing flow of surrounding cars."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 41, Reckless speed contest injury): A conviction for reckless driving or a speed contest that injures another person can lead to imprisonment, a fine, or both.",
@@ -10889,13 +10889,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q530",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for negligent driver points?",
+    questionText: "What is the correct DMV guideline or safety rule regarding negligent driver points?",
     imageUrl: "",
     options: [
       "Too many points on a driver record can make a person a negligent driver and lead to probation, suspension, or revocation.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 42, Negligent driver points): Too many points on a driver record can make a person a negligent driver and lead to probation, suspension, or revocation.",
@@ -10909,13 +10909,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q531",
     category: "Rules of the Road",
-    questionText: "What should a driver know about suspension hearing right to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding suspension hearing right?",
     imageUrl: "",
     options: [
       "If DMV acts against a driving privilege, the driver has the right to a hearing and will be notified in writing.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations."
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 42, Suspension hearing right): If DMV acts against a driving privilege, the driver has the right to a hearing and will be notified in writing.",
@@ -10933,9 +10933,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "DMV will revoke driving privilege for a hit-and-run or reckless driving conviction that resulted in injury.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this."
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 42, Mandatory revocation hit-and-run injury): DMV will revoke driving privilege for a hit-and-run or reckless driving conviction that resulted in injury.",
@@ -10953,9 +10953,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "After suspension or revocation, a driver may apply for a replacement license and must show proof of financial responsibility such as SR 22 or SR 1P.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems."
+      "Prescription medications are always completely safe to use while driving.",
+      "Minors under 18 may drive unsupervised at any hour during their provisional year.",
+      "A Class C license allows you to operate commercial double-trailer trucks."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 42, Replacement license after suspension): After suspension or revocation, a driver may apply for a replacement license and must show proof of financial responsibility such as SR 22 or SR 1P.",
@@ -10973,9 +10973,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "DMV may act against a minor license after one at-fault collision or traffic violation conviction during the first 12 months.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours."
+      "Minors under 18 may drive unsupervised at any hour during their provisional year.",
+      "A Class C license allows you to operate commercial double-trailer trucks.",
+      "Only consuming hard liquor, not beer or wine, affects driving coordination."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 42, Minor first collision violation): DMV may act against a minor license after one at-fault collision or traffic violation conviction during the first 12 months.",
@@ -10989,13 +10989,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q535",
     category: "Rules of the Road",
-    questionText: "What should a driver know about minor probation repeat violations to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding minor probation repeat violations?",
     imageUrl: "",
     options: [
       "Additional at-fault collisions or convictions while on probation can cause another suspension.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog."
+      "A Class C license allows you to operate commercial double-trailer trucks.",
+      "Only consuming hard liquor, not beer or wine, affects driving coordination.",
+      "A blood alcohol concentration (BAC) of 0.15% is legal if you do not feel impaired."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 42, Minor probation repeat violations): Additional at-fault collisions or convictions while on probation can cause another suspension.",
@@ -11009,13 +11009,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q536",
     category: "Rules of the Road",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for minor alcohol controlled substance suspension?",
+    questionText: "What is the correct DMV guideline or safety rule regarding minor alcohol controlled substance suspension?",
     imageUrl: "",
     options: [
       "A conviction for alcohol or controlled substance use by a person 15 to 20 causes a one-year license suspension or delayed eligibility.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe."
+      "Only consuming hard liquor, not beer or wine, affects driving coordination.",
+      "A blood alcohol concentration (BAC) of 0.15% is legal if you do not feel impaired.",
+      "You are exempt from all DMV medical reporting rules if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 42, Minor alcohol controlled substance suspension): A conviction for alcohol or controlled substance use by a person 15 to 20 causes a one-year license suspension or delayed eligibility.",
@@ -11033,9 +11033,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Turning 18 does not erase or end existing restrictions, suspensions, or probation sentences.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety."
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 42, Turning 18 no erase restrictions): Turning 18 does not erase or end existing restrictions, suspensions, or probation sentences.",
@@ -11049,13 +11049,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q538",
     category: "Safe Driving",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for surrounding areas color map?",
+    questionText: "What is the correct DMV guideline or safety rule regarding surrounding areas color map?",
     imageUrl: "",
     options: [
       "The handbook identifies areas around a vehicle as green ahead, blue beside, yellow blind spots, and red behind.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 44, Surrounding areas color map): The handbook identifies areas around a vehicle as green ahead, blue beside, yellow blind spots, and red behind.",
@@ -11073,9 +11073,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Drivers should scan the road at least 10 seconds ahead to allow time to react and avoid last-minute moves.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility."
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 44, Scan 10 seconds ahead): Drivers should scan the road at least 10 seconds ahead to allow time to react and avoid last-minute moves.",
@@ -11093,9 +11093,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If a vehicle merges too closely in front, take your foot off the accelerator to create space.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement."
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 44, Close merge response): If a vehicle merges too closely in front, take your foot off the accelerator to create space.",
@@ -11113,9 +11113,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If a tailgater is behind you, maintain course and speed, then merge right when safe to let them pass.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays."
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 44, Tailgater response): If a tailgater is behind you, maintain course and speed, then merge right when safe to let them pass.",
@@ -11129,13 +11129,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q542",
     category: "Safe Driving",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for more space for motorcyclists on rough surfaces?",
+    questionText: "What is the correct DMV guideline or safety rule regarding more space for motorcyclists on rough surfaces?",
     imageUrl: "",
     options: [
       "Create more space when following motorcyclists on metal surfaces, bridge gratings, railroad tracks, or gravel.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible."
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 44, More space for motorcyclists on rough surfaces): Create more space when following motorcyclists on metal surfaces, bridge gratings, railroad tracks, or gravel.",
@@ -11153,9 +11153,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Do not stay in another driver’s blind spot.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule."
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 45, Avoid blind spots of others): Do not stay in another driver’s blind spot.",
@@ -11173,9 +11173,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Avoid driving directly alongside other vehicles.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones."
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 45, Avoid driving alongside): Avoid driving directly alongside other vehicles.",
@@ -11189,13 +11189,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q545",
     category: "Safe Driving",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for make space for freeway entrants?",
+    questionText: "What is the correct DMV guideline or safety rule regarding make space for freeway entrants?",
     imageUrl: "",
     options: [
       "Make space for vehicles entering freeways even if you have the right-of-way.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21."
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 45, Make space for freeway entrants): Make space for vehicles entering freeways even if you have the right-of-way.",
@@ -11213,9 +11213,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Keep space between your vehicle and parked vehicles.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet."
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 45, Space from parked vehicles): Keep space between your vehicle and parked vehicles.",
@@ -11229,13 +11229,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q547",
     category: "Safe Driving",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for look both ways at controlled intersections?",
+    questionText: "What is the correct DMV guideline or safety rule regarding look both ways at controlled intersections?",
     imageUrl: "",
     options: [
       "Look both ways even at intersections where traffic has a red light or stop sign.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult."
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 45, Look both ways at controlled intersections): Look both ways even at intersections where traffic has a red light or stop sign.",
@@ -11249,13 +11249,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q548",
     category: "Safe Driving",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for vehicle blind spots definition?",
+    questionText: "Under California law, what is the definition of a vehicle blind spots?",
     imageUrl: "",
     options: [
       "Blind spots are areas around a vehicle that a driver cannot see by looking ahead or using mirrors.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance."
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 45, Vehicle blind spots definition): Blind spots are areas around a vehicle that a driver cannot see by looking ahead or using mirrors.",
@@ -11269,13 +11269,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q549",
     category: "Safe Driving",
-    questionText: "What should a driver know about blind spot shoulder check to stay safe and compliant?",
+    questionText: "What is the proper way to perform a blind spot shoulder?",
     imageUrl: "",
     options: [
       "Check blind spots by looking over your right and left shoulders through the side windows.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways."
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 45, Blind spot shoulder check): Check blind spots by looking over your right and left shoulders through the side windows.",
@@ -11289,13 +11289,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q550",
     category: "Safe Driving",
-    questionText: "What should a driver know about only turn head for blind spot to stay safe and compliant?",
+    questionText: "Under California law, how should you safely perform a only turn head for blind spot?",
     imageUrl: "",
     options: [
       "When checking blind spots, turn only your head, not your body or steering wheel.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight."
+      "Change lanes rapidly and without a signal when you are running late.",
+      "Enter an intersection even if there is not enough space to clear the crosswalk.",
+      "Drive inside a designated bicycle lane for at least half a mile before turning."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 45, Only turn head for blind spot): When checking blind spots, turn only your head, not your body or steering wheel.",
@@ -11313,9 +11313,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Check blind spots before changing lanes, turning, merging, backing up, leaving parking, parallel parking, pulling from curb, or opening a door.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions."
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 45, Blind spot check situations): Check blind spots before changing lanes, turning, merging, backing up, leaving parking, parallel parking, pulling from curb, or opening a door.",
@@ -11329,13 +11329,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q552",
     category: "Safe Driving",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for check behind often?",
+    questionText: "What is the correct DMV guideline or safety rule regarding check behind often?",
     imageUrl: "",
     options: [
       "Check behind often using mirrors and turning your head.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous."
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Check behind often): Check behind often using mirrors and turning your head.",
@@ -11353,9 +11353,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Check behind when changing lanes, reducing speed, turning, parking, pulling to or from curb, or backing up.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test."
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Check behind before actions): Check behind when changing lanes, reducing speed, turning, parking, pulling to or from curb, or backing up.",
@@ -11373,9 +11373,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "At night, use high beams on open country roads or dark city streets when legal.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle."
+      "Flash your emergency hazard lights continuously to warn other drivers.",
+      "Keep only your parking lights turned on during heavy rain or dense fog.",
+      "Activate your turn signals exactly 10 feet before commencing any turn."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Night high beams open roads): At night, use high beams on open country roads or dark city streets when legal.",
@@ -11393,9 +11393,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "At night, make sure you can stop within the distance illuminated by headlights.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck."
+      "Keep only your parking lights turned on during heavy rain or dense fog.",
+      "Activate your turn signals exactly 10 feet before commencing any turn.",
+      "Use your turn signals only if requested by passengers or law enforcement."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Night stop within headlights): At night, make sure you can stop within the distance illuminated by headlights.",
@@ -11413,9 +11413,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "When it is raining, use low-beam headlights, not only parking lights.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action."
+      "Always maintain 15 mph in any lane regardless of traffic or road conditions.",
+      "Accelerate unconditionally to join the nearest travel lane.",
+      "This requirement only applies when driving on high-speed interstate freeways."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Night rain low beams): When it is raining, use low-beam headlights, not only parking lights.",
@@ -11429,13 +11429,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q557",
     category: "Safe Driving",
-    questionText: "What should a driver know about night vulnerable users harder to see to stay safe and compliant?",
+    questionText: "Why must drivers exercise extra caution around vulnerable road users, such as pedestrians and cyclists?",
     imageUrl: "",
     options: [
       "At night, motorcycles, pedestrians, and bicyclists are much harder to see.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings."
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road.",
+      "Change lanes rapidly and without a signal when you are running late."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Night vulnerable users harder to see): At night, motorcycles, pedestrians, and bicyclists are much harder to see.",
@@ -11449,13 +11449,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q558",
     category: "Safe Driving",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for one headlight oncoming?",
+    questionText: "When or how must you utilize one headlight oncoming according to safety rules?",
     imageUrl: "",
     options: [
       "If a vehicle with one light approaches at night, drive as far right as possible because it may be a bicyclist, motorcyclist, or vehicle missing a headlight.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly."
+      "Sound your horn continuously to warn vehicles that you are about to turn.",
+      "Signal for a turn only when changing directions in a designated construction zone.",
+      "Keep your high-beam headlights on continuously for maximum visibility."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, One headlight oncoming): If a vehicle with one light approaches at night, drive as far right as possible because it may be a bicyclist, motorcyclist, or vehicle missing a headlight.",
@@ -11473,9 +11473,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "To manage sun glare, keep the inside and outside of the windshield clean.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone."
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Sun glare clean windshield): To manage sun glare, keep the inside and outside of the windshield clean.",
@@ -11493,9 +11493,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Polarized sunglasses can help manage sun glare.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section."
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Sun glare sunglasses): Polarized sunglasses can help manage sun glare.",
@@ -11509,13 +11509,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q561",
     category: "Safe Driving",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for sun glare following space?",
+    questionText: "What is the correct DMV guideline or safety rule regarding sun glare following space?",
     imageUrl: "",
     options: [
       "Maintain space around the vehicle when dealing with sun glare.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations."
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Sun glare following space): Maintain space around the vehicle when dealing with sun glare.",
@@ -11529,13 +11529,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q562",
     category: "Safe Driving",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for sun glare visor?",
+    questionText: "What is the correct DMV guideline or safety rule regarding sun glare visor?",
     imageUrl: "",
     options: [
       "Make sure the visor works and is not blocked.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Sun glare visor): Make sure the visor works and is not blocked.",
@@ -11553,9 +11553,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Be aware that sun glare may make pedestrians hard to see.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems."
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Sun glare pedestrians): Be aware that sun glare may make pedestrians hard to see.",
@@ -11569,13 +11569,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q564",
     category: "Safe Driving",
-    questionText: "What should a driver know about sunrise sunset avoid to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding sunrise sunset avoid?",
     imageUrl: "",
     options: [
       "Try to avoid driving during sunrise and sunset when glare is worst.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours."
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Sunrise sunset avoid): Try to avoid driving during sunrise and sunset when glare is worst.",
@@ -11593,9 +11593,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "A skid occurs when one or more tires lose traction and the vehicle starts to slip.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog."
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 47, Skid definition): A skid occurs when one or more tires lose traction and the vehicle starts to slip.",
@@ -11609,13 +11609,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q566",
     category: "Safe Driving",
-    questionText: "What should a driver know about prevent slippery skids to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding prevent slippery skids?",
     imageUrl: "",
     options: [
       "To prevent slippery-surface skids, drive slowly, leave space, slow before curves and intersections, avoid quick stops, and use low gear before steep hills.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe."
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 47, Prevent slippery skids): To prevent slippery-surface skids, drive slowly, leave space, slow before curves and intersections, avoid quick stops, and use low gear before steep hills.",
@@ -11629,13 +11629,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q567",
     category: "Safe Driving",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for avoid slippery patches?",
+    questionText: "Why is it important to avoid slippery patches?",
     imageUrl: "",
     options: [
       "Avoid ice patches, wet leaves, oil, and standing water when possible.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety."
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 47, Avoid slippery patches): Avoid ice patches, wet leaves, oil, and standing water when possible.",
@@ -11649,13 +11649,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q568",
     category: "Safe Driving",
-    questionText: "What should a driver know about locked wheel skid cause to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding locked wheel skid cause?",
     imageUrl: "",
     options: [
       "A locked wheel skid is usually caused by braking too hard while going too fast.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations."
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 47, Locked wheel skid cause): A locked wheel skid is usually caused by braking too hard while going too fast.",
@@ -11669,13 +11669,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q569",
     category: "Safe Driving",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for four-wheel abs skid?",
+    questionText: "What is the correct DMV guideline or safety rule regarding four-wheel abs skid?",
     imageUrl: "",
     options: [
       "With four-wheel ABS, apply firm pressure to the brake pedal during a skid.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility."
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 47, Four-wheel ABS skid): With four-wheel ABS, apply firm pressure to the brake pedal during a skid.",
@@ -11693,9 +11693,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "With rear-wheel ABS, ease brake pressure enough for front wheels to roll, then stop braking and steer into the skid.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 47, Rear-wheel ABS skid): With rear-wheel ABS, ease brake pressure enough for front wheels to roll, then stop braking and steer into the skid.",
@@ -11709,13 +11709,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q571",
     category: "Safe Driving",
-    questionText: "What should a driver know about front-wheel abs skid to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding front-wheel abs skid?",
     imageUrl: "",
     options: [
       "With front-wheel ABS, remove your foot from the brake pedal, steer where you want to go, and straighten the front wheels as the vehicle straightens.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays."
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 47, Front-wheel ABS skid): With front-wheel ABS, remove your foot from the brake pedal, steer where you want to go, and straighten the front wheels as the vehicle straightens.",
@@ -11733,9 +11733,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Without ABS, quickly pump the brakes until at a safe speed.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible."
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 48, Non-ABS skid braking): Without ABS, quickly pump the brakes until at a safe speed.",
@@ -11753,9 +11753,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If the brake pedal sinks to the floor, quickly pump the brakes by gently applying and releasing pressure.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule."
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 48, Brake failure sinking pedal): If the brake pedal sinks to the floor, quickly pump the brakes by gently applying and releasing pressure.",
@@ -11773,9 +11773,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If pumping brakes does not work, downshift to lower or neutral and try the emergency brake.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones."
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles.",
+      "Pass other vehicles on the right-hand paved shoulder of the road."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 48, Emergency brake after downshift): If pumping brakes does not work, downshift to lower or neutral and try the emergency brake.",
@@ -11789,13 +11789,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q575",
     category: "Safe Driving",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for dry wet brakes?",
+    questionText: "What is the correct DMV guideline or safety rule regarding dry wet brakes?",
     imageUrl: "",
     options: [
       "If brakes get wet, dry them by lightly pressing accelerator and brake pedals at the same time only until dry.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21."
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 48, Dry wet brakes): If brakes get wet, dry them by lightly pressing accelerator and brake pedals at the same time only until dry.",
@@ -11809,13 +11809,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q576",
     category: "Safe Driving",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for slippery roads slow?",
+    questionText: "What is the correct DMV guideline or safety rule regarding slippery roads slow?",
     imageUrl: "",
     options: [
       "On slippery roads, drive more slowly than on dry roads and allow more following space.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet."
+      "Speed up to match the highest speed of the surrounding traffic.",
+      "Always drive at least 5 mph above the posted limit to prevent congestion.",
+      "Slow down to exactly half the posted limit at all times to be safe."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 48, Slippery roads slow): On slippery roads, drive more slowly than on dry roads and allow more following space.",
@@ -11833,9 +11833,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "When rain starts after dry hot weather, pavement can be very slippery due to oil and dust.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult."
+      "Always drive at least 5 mph above the posted limit to prevent congestion.",
+      "Slow down to exactly half the posted limit at all times to be safe.",
+      "Increase your speed by 10 mph higher than the prevailing flow of surrounding cars."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 48, First rain slippery): When rain starts after dry hot weather, pavement can be very slippery due to oil and dust.",
@@ -11849,13 +11849,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q578",
     category: "Safe Driving",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for hydroplaning definition?",
+    questionText: "Under California law, what is the definition of a hydroplaning?",
     imageUrl: "",
     options: [
       "Hydroplaning occurs when tires lose all contact with the road and ride on water.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 49, Hydroplaning definition): Hydroplaning occurs when tires lose all contact with the road and ride on water.",
@@ -11873,9 +11873,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "To avoid hydroplaning, drive slowly, steer around standing water, and slow for sloshing sounds, lane changes, or direction changes.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways."
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 49, Avoid hydroplaning): To avoid hydroplaning, drive slowly, steer around standing water, and slow for sloshing sounds, lane changes, or direction changes.",
@@ -11893,9 +11893,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If stuck in snow or mud, use low gear, keep wheels straight, accelerate gently, rock forward and reverse, and place traction materials only when stopped.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight."
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 49, Stuck snow mud procedure): If stuck in snow or mud, use low gear, keep wheels straight, accelerate gently, rock forward and reverse, and place traction materials only when stopped.",
@@ -11913,9 +11913,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Flooded roads can sweep vehicles away, hide debris and hazards, collapse, cause vehicle malfunction, or create electrocution risk.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions."
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 49, Flooded road dangers): Flooded roads can sweep vehicles away, hide debris and hazards, collapse, cause vehicle malfunction, or create electrocution risk.",
@@ -11933,9 +11933,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If water depth cannot be determined or the road is too dangerous, find another route.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous."
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 50, Avoid deep flood water): If water depth cannot be determined or the road is too dangerous, find another route.",
@@ -11953,9 +11953,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "In high winds, reduce speed, hold the wheel firmly, watch for debris, and do not use cruise control.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test."
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 50, High wind procedure): In high winds, reduce speed, hold the wheel firmly, watch for debris, and do not use cruise control.",
@@ -11969,13 +11969,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q584",
     category: "Safe Driving",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for heavy fog avoid?",
+    questionText: "What is the correct DMV guideline or safety rule regarding heavy fog avoid?",
     imageUrl: "",
     options: [
       "It is best to avoid driving in heavy fog or smoke and postpone travel until it clears.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle."
+      "Speed up to match the highest speed of the surrounding traffic.",
+      "Always drive at least 5 mph above the posted limit to prevent congestion.",
+      "Slow down to exactly half the posted limit at all times to be safe."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 50, Heavy fog avoid): It is best to avoid driving in heavy fog or smoke and postpone travel until it clears.",
@@ -11993,9 +11993,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If you must drive in heavy fog or smoke, drive slowly, use low beams, increase following distance, use wipers/defroster, avoid passing, and listen for unseen traffic.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck."
+      "Always drive at least 5 mph above the posted limit to prevent congestion.",
+      "Slow down to exactly half the posted limit at all times to be safe.",
+      "Increase your speed by 10 mph higher than the prevailing flow of surrounding cars."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 50, Fog driving procedure): If you must drive in heavy fog or smoke, drive slowly, use low beams, increase following distance, use wipers/defroster, avoid passing, and listen for unseen traffic.",
@@ -12013,9 +12013,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Never drive in fog using only parking or fog lights.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action."
+      "Slow down to exactly half the posted limit at all times to be safe.",
+      "Increase your speed by 10 mph higher than the prevailing flow of surrounding cars.",
+      "Always maintain 15 mph in any lane regardless of traffic or road conditions."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 50, Fog no parking lights only): Never drive in fog using only parking or fog lights.",
@@ -12033,9 +12033,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If fog becomes too thick to drive safely, pull off the road, activate flashers, and wait.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings."
+      "Increase your speed by 10 mph higher than the prevailing flow of surrounding cars.",
+      "Always maintain 15 mph in any lane regardless of traffic or road conditions.",
+      "Accelerate unconditionally to join the nearest travel lane."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 50, Fog too thick pull off): If fog becomes too thick to drive safely, pull off the road, activate flashers, and wait.",
@@ -12049,13 +12049,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q588",
     category: "Safe Driving",
-    questionText: "What should a driver know about traffic break definition to stay safe and compliant?",
+    questionText: "Under California law, what is the definition of a traffic break?",
     imageUrl: "",
     options: [
       "During a traffic break, an officer turns on emergency lights and slowly weaves across lanes.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly."
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 50, Traffic break definition): During a traffic break, an officer turns on emergency lights and slowly weaves across lanes.",
@@ -12073,9 +12073,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Traffic breaks are used to slow or stop traffic for road hazards, heavy fog, unusual traffic, or collision prevention.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone."
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 50, Traffic break purposes): Traffic breaks are used to slow or stop traffic for road hazards, heavy fog, unusual traffic, or collision prevention.",
@@ -12089,13 +12089,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q590",
     category: "Safe Driving",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for seat belt requirement?",
+    questionText: "What is the correct DMV guideline or safety rule regarding seat belt requirement?",
     imageUrl: "",
     options: [
       "Drivers and passengers must wear seat belts, and a ticket can be issued for not wearing one.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section."
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 51, Seat belt requirement): Drivers and passengers must wear seat belts, and a ticket can be issued for not wearing one.",
@@ -12113,9 +12113,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Seat belts and shoulder harnesses increase survival chances and help keep occupants positioned to control the vehicle.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations."
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 51, Seat belt survival): Seat belts and shoulder harnesses increase survival chances and help keep occupants positioned to control the vehicle.",
@@ -12129,13 +12129,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q592",
     category: "Safe Driving",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for rear-facing airbag front seat prohibition?",
+    questionText: "What is the correct DMV guideline or safety rule regarding rear-facing airbag front seat prohibition?",
     imageUrl: "",
     options: [
       "A child in a rear-facing child restraint may not ride in the front seat of an airbag-equipped vehicle.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this."
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 51, Rear-facing airbag front seat prohibition): A child in a rear-facing child restraint may not ride in the front seat of an airbag-equipped vehicle.",
@@ -12153,9 +12153,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If wheels drift off pavement, grip the wheel, ease off accelerator, brake gently, check traffic, and carefully steer back.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems."
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 53, Driving off pavement recovery): If wheels drift off pavement, grip the wheel, ease off accelerator, brake gently, check traffic, and carefully steer back.",
@@ -12173,9 +12173,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Do not pull or turn the wheel too forcefully after driving off pavement because it may send you into oncoming traffic.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 53, Avoid hard steer after pavement drift): Do not pull or turn the wheel too forcefully after driving off pavement because it may send you into oncoming traffic.",
@@ -12193,9 +12193,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If stalled on tracks with no approaching train and no flashing lights, exit, call the posted railroad number, provide crossing number if posted, then call 911.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog."
+      "Increase your speed by 10 mph higher than the prevailing flow of surrounding cars.",
+      "Always maintain 15 mph in any lane regardless of traffic or road conditions.",
+      "Accelerate unconditionally to join the nearest travel lane."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 53, Railroad tracks no train approaching): If stalled on tracks with no approaching train and no flashing lights, exit, call the posted railroad number, provide crossing number if posted, then call 911.",
@@ -12213,9 +12213,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Distractions include looking at a phone, navigation system, children, pets, changing music, applying makeup, or shaving.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe."
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 54, Distracted driving examples): Distractions include looking at a phone, navigation system, children, pets, changing music, applying makeup, or shaving.",
@@ -12229,13 +12229,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q597",
     category: "Safe Driving",
-    questionText: "What should a driver know about do not text while driving to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding do not text while driving?",
     imageUrl: "",
     options: [
       "Drivers must not send or read texts or emails while driving.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety."
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 54, Do not text while driving): Drivers must not send or read texts or emails while driving.",
@@ -12253,9 +12253,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "A phone may be mounted on the windshield, dashboard, or center console if it does not block road view.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations."
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 54, Mounted phone location): A phone may be mounted on the windshield, dashboard, or center console if it does not block road view.",
@@ -12273,9 +12273,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Use only a single swipe or touch feature on a mounted phone while driving.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility."
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 54, Single swipe touch): Use only a single swipe or touch feature on a mounted phone while driving.",
@@ -12289,13 +12289,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q600",
     category: "Safe Driving",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for minor emergency phone exception?",
+    questionText: "What is the correct DMV guideline or safety rule regarding minor emergency phone exception?",
     imageUrl: "",
     options: [
       "A minor may use a cell phone to make a call for emergency assistance.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement."
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead.",
+      "Use the continuous center turn lane for passing slower-moving vehicles."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 54, Minor emergency phone exception): A minor may use a cell phone to make a call for emergency assistance.",
@@ -12313,9 +12313,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Gas-powered vehicles produce carbon monoxide, a deadly odorless gas from the exhaust pipe.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays."
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 54, Carbon monoxide danger): Gas-powered vehicles produce carbon monoxide, a deadly odorless gas from the exhaust pipe.",
@@ -12333,9 +12333,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Never start a vehicle inside a garage with the door closed.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 54, Garage carbon monoxide safety): Never start a vehicle inside a garage with the door closed.",
@@ -12353,9 +12353,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "California DUI laws apply to both alcohol and drugs.",
-      "This requirement does not apply on weekends or state holidays.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule."
+      "Prescription medications are always completely safe to use while driving.",
+      "Minors under 18 may drive unsupervised at any hour during their provisional year.",
+      "A Class C license allows you to operate commercial double-trailer trucks."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 55, DUI laws alcohol and drugs): California DUI laws apply to both alcohol and drugs.",
@@ -12373,9 +12373,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "As people age, alcohol tolerance decreases, increasing alcohol-related driving risk.",
-      "You should speed up to complete the maneuver as quickly as possible.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones."
+      "Minors under 18 may drive unsupervised at any hour during their provisional year.",
+      "A Class C license allows you to operate commercial double-trailer trucks.",
+      "Only consuming hard liquor, not beer or wine, affects driving coordination."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 55, Age reduces alcohol tolerance): As people age, alcohol tolerance decreases, increasing alcohol-related driving risk.",
@@ -12393,9 +12393,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "It is illegal to drive after drinking excessive alcohol in any form, including medications such as cough syrup.",
-      "Drivers with over five years of clean record are exempt from this rule.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21."
+      "A Class C license allows you to operate commercial double-trailer trucks.",
+      "Only consuming hard liquor, not beer or wine, affects driving coordination.",
+      "A blood alcohol concentration (BAC) of 0.15% is legal if you do not feel impaired."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 55, No excessive alcohol before driving): It is illegal to drive after drinking excessive alcohol in any form, including medications such as cough syrup.",
@@ -12413,9 +12413,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "It is illegal to drive after using any alcohol-drug combination that decreases safe driving ability.",
-      "This rule is suspended when driving in designated construction zones.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet."
+      "Only consuming hard liquor, not beer or wine, affects driving coordination.",
+      "A blood alcohol concentration (BAC) of 0.15% is legal if you do not feel impaired.",
+      "You are exempt from all DMV medical reporting rules if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 55, No alcohol drug combination): It is illegal to drive after using any alcohol-drug combination that decreases safe driving ability.",
@@ -12429,13 +12429,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q607",
     category: "Alcohol and Drugs",
-    questionText: "What should a driver know about read medication labels to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding read medication labels?",
     imageUrl: "",
     options: [
       "Drivers should read medication labels and know the effects of any drug they use.",
-      "This guideline applies only to drivers under the age of 21.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult."
+      "A blood alcohol concentration (BAC) of 0.15% is legal if you do not feel impaired.",
+      "You are exempt from all DMV medical reporting rules if you have a clean record.",
+      "It is acceptable to drive after drinking if you drink strong coffee first."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 55, Read medication labels): Drivers should read medication labels and know the effects of any drug they use.",
@@ -12449,13 +12449,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q608",
     category: "Alcohol and Drugs",
-    questionText: "What should a driver know about open container passenger exception to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding open container passenger exception?",
     imageUrl: "",
     options: [
       "Open-container rules do not apply to passengers in a bus, taxi, camper, or motorhome.",
-      "This action is required only when another vehicle is within 50 feet.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance."
+      "Park your vehicle within 5 feet of any active fire hydrant or private driveway.",
+      "Merge immediately to the left-most lane without scanning your blind spots.",
+      "Park headed downhill with your wheels turned straight ahead."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 55, Open container passenger exception): Open-container rules do not apply to passengers in a bus, taxi, camper, or motorhome.",
@@ -12473,9 +12473,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "A driver can be arrested and convicted of DUI even with BAC below the legal limit if impaired.",
-      "The restriction is waived if you are accompanied by a fully licensed adult.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways."
+      "It is acceptable to drive after drinking if you drink strong coffee first.",
+      "Prescription medications are always completely safe to use while driving.",
+      "Minors under 18 may drive unsupervised at any hour during their provisional year."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 56, DUI below BAC possible): A driver can be arrested and convicted of DUI even with BAC below the legal limit if impaired.",
@@ -12489,13 +12489,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q610",
     category: "Alcohol and Drugs",
-    questionText: "What should a driver know about one drink affects driving to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding one drink affects driving?",
     imageUrl: "",
     options: [
       "Even one alcoholic drink can affect safe driving ability.",
-      "Drivers may use their own personal judgment to bypass this guidance.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 56, One drink affects driving): Even one alcoholic drink can affect safe driving ability.",
@@ -12513,9 +12513,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "The BAC table says to subtract 0.01% for each 40 minutes that lapse between drinks.",
-      "This requirement applies only when driving on high-speed interstate freeways.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions."
+      "Minors under 18 may drive unsupervised at any hour during their provisional year.",
+      "A Class C license allows you to operate commercial double-trailer trucks.",
+      "Only consuming hard liquor, not beer or wine, affects driving coordination."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 56, BAC decrease over time): The BAC table says to subtract 0.01% for each 40 minutes that lapse between drinks.",
@@ -12533,9 +12533,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "For the BAC table, one drink equals 1.5 oz 80-proof liquor, 12 oz 5% beer, or 5 oz 12% wine.",
-      "You only need to comply if a law enforcement vehicle is in sight.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous."
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 56, Standard drink definition): For the BAC table, one drink equals 1.5 oz 80-proof liquor, 12 oz 5% beer, or 5 oz 12% wine.",
@@ -12553,9 +12553,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "It is illegal to drink alcohol or take drugs while operating boats, jet skis, water skis, aquaplanes, or similar vessels.",
-      "It is acceptable to ignore this guideline during light traffic conditions.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test."
+      "Only consuming hard liquor, not beer or wine, affects driving coordination.",
+      "A blood alcohol concentration (BAC) of 0.15% is legal if you do not feel impaired.",
+      "You are exempt from all DMV medical reporting rules if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 56, Boating DUI note): It is illegal to drink alcohol or take drugs while operating boats, jet skis, water skis, aquaplanes, or similar vessels.",
@@ -12569,13 +12569,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q614",
     category: "Alcohol and Drugs",
-    questionText: "What should a driver know about implied consent dui arrest to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding implied consent dui arrest?",
     imageUrl: "",
     options: [
       "Driving in California means consenting to breath, blood, or urine testing when suspected of DUI.",
-      "This rule only needs to be followed if weather conditions are hazardous.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle."
+      "A blood alcohol concentration (BAC) of 0.15% is legal if you do not feel impaired.",
+      "You are exempt from all DMV medical reporting rules if you have a clean record.",
+      "It is acceptable to drive after drinking if you drink strong coffee first."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 57, Implied consent DUI arrest): Driving in California means consenting to breath, blood, or urine testing when suspected of DUI.",
@@ -12593,9 +12593,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Taking a preliminary alcohol screening or breath test does not prevent being required to take a blood or urine test for drugs.",
-      "This procedure is only necessary during the practical DMV road test.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck."
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 57, PAS breath still blood urine): Taking a preliminary alcohol screening or breath test does not prevent being required to take a blood or urine test for drugs.",
@@ -12609,13 +12609,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q616",
     category: "Alcohol and Drugs",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for admin per se suspension?",
+    questionText: "What is the correct DMV guideline or safety rule regarding admin per se suspension?",
     imageUrl: "",
     options: [
       "California Administrative Per Se law requires DMV to suspend driving privilege after a DUI arrest.",
-      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action."
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 57, Admin Per Se suspension): California Administrative Per Se law requires DMV to suspend driving privilege after a DUI arrest.",
@@ -12633,9 +12633,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "An under-21 driver working for someone with an off-site liquor sales license may carry closed containers of alcohol.",
-      "This only applies when driving a rented or leased truck.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings."
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 57, Under 21 off-site liquor exception): An under-21 driver working for someone with an off-site liquor sales license may carry closed containers of alcohol.",
@@ -12649,13 +12649,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q618",
     category: "Alcohol and Drugs",
-    questionText: "What should a driver know about under 21 alcohol impound penalty to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding under 21 alcohol impound penalty?",
     imageUrl: "",
     options: [
       "If an under-21 driver is caught with alcohol in the vehicle, law enforcement can impound the vehicle up to 30 days and the court may fine and suspend or delay licensing for one year.",
-      "You should pull over to the left shoulder before beginning this action.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly."
+      "Minors under 18 may drive unsupervised at any hour during their provisional year.",
+      "A Class C license allows you to operate commercial double-trailer trucks.",
+      "Only consuming hard liquor, not beer or wine, affects driving coordination."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 57, Under 21 alcohol impound penalty): If an under-21 driver is caught with alcohol in the vehicle, law enforcement can impound the vehicle up to 30 days and the court may fine and suspend or delay licensing for one year.",
@@ -12673,9 +12673,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Drivers must carry proof of financial responsibility or insurance when driving and for a drive test.",
-      "This rule assumes the right-of-way is ours regardless of sign postings.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone."
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 58, Proof of financial responsibility): Drivers must carry proof of financial responsibility or insurance when driving and for a drive test.",
@@ -12693,9 +12693,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "After a collision, drivers must show proof of financial responsibility to other involved drivers.",
-      "You must signal other drivers using your hazard lights repeatedly.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section."
+      "Only consuming hard liquor, not beer or wine, affects driving coordination.",
+      "A blood alcohol concentration (BAC) of 0.15% is legal if you do not feel impaired.",
+      "You are exempt from all DMV medical reporting rules if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 58, Collision proof of insurance): After a collision, drivers must show proof of financial responsibility to other involved drivers.",
@@ -12713,9 +12713,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Parents or guardians take financial responsibility for drivers under 18 and pay damages if they are in a collision.",
-      "This requirement only applies when navigating through a school zone.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations."
+      "A blood alcohol concentration (BAC) of 0.15% is legal if you do not feel impaired.",
+      "You are exempt from all DMV medical reporting rules if you have a clean record.",
+      "It is acceptable to drive after drinking if you drink strong coffee first."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 58, Parent financial responsibility minor): Parents or guardians take financial responsibility for drivers under 18 and pay damages if they are in a collision.",
@@ -12729,13 +12729,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q622",
     category: "Financial Responsibility",
-    questionText: "What should a driver know about adult financial responsibility to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding adult financial responsibility?",
     imageUrl: "",
     options: [
       "Drivers 18 or older take on their own financial responsibility.",
-      "There is no legal penalty for non-compliance with this section.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this."
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 58, Adult financial responsibility): Drivers 18 or older take on their own financial responsibility.",
@@ -12753,9 +12753,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Common collision causes include distraction, unsafe speed, improper turns, right-of-way mistakes, ignoring signals/signs, wrong-side driving, and speed outside traffic flow.",
-      "This is a general courtesy rule and not enforceable by traffic citations.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems."
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 58, Collision causes): Common collision causes include distraction, unsafe speed, improper turns, right-of-way mistakes, ignoring signals/signs, wrong-side driving, and speed outside traffic flow.",
@@ -12769,13 +12769,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q624",
     category: "Financial Responsibility",
-    questionText: "According to the California Driver's Handbook, what is the proper practice for emergency flashers collision ahead?",
+    questionText: "What is the correct DMV guideline or safety rule regarding emergency flashers collision ahead?",
     imageUrl: "",
     options: [
       "If you see emergency flashers ahead, slow down and pass carefully.",
-      "Only out-of-state license holders are required to follow this.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours."
+      "Keep your high-beam headlights on continuously for maximum visibility.",
+      "Only use your turn signals when there are vehicles directly behind you.",
+      "Flash your emergency hazard lights continuously to warn other drivers."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 59, Emergency flashers collision ahead): If you see emergency flashers ahead, slow down and pass carefully.",
@@ -12793,9 +12793,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Avoid driving near collisions when possible so injured people can get help faster.",
-      "This safety check can be skipped if you are using advanced driver assistance systems.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog."
+      "Adjusting your seat and steering wheel position while driving is recommended.",
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 59, Avoid collision scene): Avoid driving near collisions when possible so injured people can get help faster.",
@@ -12813,9 +12813,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "Call 911 immediately if anyone is hurt in a collision.",
-      "This precaution is only necessary during nighttime hours.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe."
+      "Keep your hands at the 12 o'clock position for optimal steering wheels comfort.",
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 59, Collision call 911 injury): Call 911 immediately if anyone is hurt in a collision.",
@@ -12833,9 +12833,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If no one is hurt, move the vehicle out of traffic and then call 911.",
-      "The guidelines are fully suspended under heavy rain or dense fog.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety."
+      "Only report a minor collision to the DMV if the property damage exceeds $30,000.",
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 59, Collision move vehicle no injuries): If no one is hurt, move the vehicle out of traffic and then call 911.",
@@ -12849,13 +12849,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q628",
     category: "Financial Responsibility",
-    questionText: "What should a driver know about collision exchange information to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding collision exchange information?",
     imageUrl: "",
     options: [
       "After a collision, show driver license, registration, insurance information, and current address to other drivers, officers, and involved persons.",
-      "You should keep your high-beam headlights on constantly to be safe.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations."
+      "Maintain a following distance of less than one second at all highway speeds.",
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 59, Collision exchange information): After a collision, show driver license, registration, insurance information, and current address to other drivers, officers, and involved persons.",
@@ -12869,13 +12869,13 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: "q629",
     category: "Financial Responsibility",
-    questionText: "What should a driver know about collision law enforcement 24 hours to stay safe and compliant?",
+    questionText: "What is the correct DMV guideline or safety rule regarding collision law enforcement 24 hours?",
     imageUrl: "",
     options: [
       "If anyone is injured or killed in a collision, report it to law enforcement within 24 hours.",
-      "This is strictly to save fuel and does not affect roadway safety.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility."
+      "You do not need to carry physical proof of insurance if you have a clean record.",
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 59, Collision law enforcement 24 hours): If anyone is injured or killed in a collision, report it to law enforcement within 24 hours.",
@@ -12893,9 +12893,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "If you kill or injure an animal, call the nearest humane society or law enforcement and do not try to move the injured animal.",
-      "This requirement is only suggested for commercial vehicle operations.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement."
+      "Always look straight ahead and avoid scanning left or right while driving.",
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 59, Animal collision): If you kill or injure an animal, call the nearest humane society or law enforcement and do not try to move the injured animal.",
@@ -12913,9 +12913,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     imageUrl: "",
     options: [
       "A collision involving over $1,000 damage, injury, or death will be added to the driver record regardless of fault.",
-      "You are exempt from this rule when driving during daylight hours with clear visibility.",
-      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
-      "This requirement does not apply on weekends or state holidays."
+      "Only check your tires' tread and pressure once a level year during inspection.",
+      "Checking your mirrors and blind spots is only necessary during your road exam.",
+      "Adjusting your seat and steering wheel position while driving is recommended."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 60, Collision driver record): A collision involving over $1,000 damage, injury, or death will be added to the driver record regardless of fault.",
