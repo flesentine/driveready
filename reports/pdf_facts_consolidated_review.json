@@ -476,7 +476,7 @@
     "appTopic": "Manual hand signal for a Right Turn",
     "appFact": "The hand-and-arm signal for a right turn is your arm bent upward out of the window.",
     "questionIds": [
-      "q35",
+      "q33",
       "q143"
     ],
     "problems": []
@@ -496,7 +496,7 @@
     "appTopic": "Manual hand signal to Slow down or Stop",
     "appFact": "The hand-and-arm signal to slow down or stop is your arm bent downward out of the window.",
     "questionIds": [
-      "q36",
+      "q35",
       "q144"
     ],
     "problems": []
@@ -535,7 +535,7 @@
     "appTopic": "Signaling distance before turning",
     "appFact": "You must signal at least 100 feet before making a turn.",
     "questionIds": [
-      "q33"
+      "q36"
     ],
     "problems": []
   },
@@ -763,7 +763,6 @@
     "appTopic": "Dimming high beams - Following traffic",
     "appFact": "Dim your high-beam headlights to low beams within 300 feet of a vehicle you are following.",
     "questionIds": [
-      "q40",
       "q113"
     ],
     "problems": []
@@ -859,6 +858,7 @@
     "appTopic": "Headlights in adverse weather",
     "appFact": "In adverse weather, if you need to use your windshield wipers due to fog, rain, or snow, you must turn on your low-beam headlights.",
     "questionIds": [
+      "q40",
       "q112",
       "q114"
     ],

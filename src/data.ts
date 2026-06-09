@@ -213,7 +213,7 @@ export const ROAD_SIGNS: RoadSign[] = [
 ];
 
 export const PRACTICE_QUESTIONS: Question[] = [
-  {
+{
     id: 'q1',
     category: 'Traffic Signals',
     questionText: 'What should you do when you see a flashing yellow light at an upcoming intersection?',
@@ -232,7 +232,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Flashing Yellow Light',
     coverageFactIds: ['fact-traffic-light-flashing-yellow']
   },
-  {
+
+{
     id: 'q2',
     category: 'Rules of the Road',
     questionText: 'As a provisional driver under 18 years old, what Passenger restriction applies during the first 12 months with your license?',
@@ -251,7 +252,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Minor\'s Passenger Restrictions',
     coverageFactIds: ['fact-provisional-passengers']
   },
-  {
+
+{
     id: 'q3',
     category: 'Rules of the Road',
     questionText: 'Under minor (under 18) provisional driver restrictions, what hours are you prohibited from driving during the first 12 months?',
@@ -270,7 +272,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Minor\'s Provisional License Curfew Restrictions',
     coverageFactIds: ['fact-provisional-curfew']
   },
-  {
+
+{
     id: 'q4',
     category: 'Rules of the Road',
     questionText: 'What is the speed limit in a California school zone when children are outside or crossing the street?',
@@ -289,7 +292,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'School zone speed limit',
     coverageFactIds: ['fact-school-zone-speed-children']
   },
-  {
+
+{
     id: 'q5',
     category: 'Rules of the Road',
     questionText: 'When driving on a two-lane road where passing is unsafe, what must you do if there are 5 or more vehicles following closely behind you?',
@@ -308,7 +312,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Slow Driver Turnouts',
     coverageFactIds: ['fact-turnout-slow-vehicles']
   },
-  {
+
+{
     id: 'q6',
     category: 'Safe Driving',
     questionText: 'When parking on a hill headed downhill with a curb, in which direction must you turn your front wheels?',
@@ -327,7 +332,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Parking downhill wheels',
     coverageFactIds: ['fact-hill-parking-downhill']
   },
-  {
+
+{
     id: 'q7',
     category: 'Rules of the Road',
     questionText: 'Which parking rule applies to a YELLOW colored curb in California?',
@@ -346,7 +352,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Yellow curb rules',
     coverageFactIds: ['fact-colored-curb-yellow']
   },
-  {
+
+{
     id: 'q8',
     category: 'Safe Driving',
     questionText: 'In California, if a school bus stops on your side of the road with flashing red lights, what are the requirements?',
@@ -365,7 +372,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'School bus violation ticket costs',
     coverageFactIds: ['fact-school-bus-stop-violations']
   },
-  {
+
+{
     id: 'q9',
     category: 'Safe Driving',
     questionText: 'What are the minimum liability vehicle insurance coverage limits required in California?',
@@ -384,7 +392,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Minimum vehicle liability coverage',
     coverageFactIds: ['fact-insurance-minimum-liability-limits']
   },
-  {
+
+{
     id: 'q10',
     category: 'Traffic Signals',
     questionText: 'Which of the following is correct regarding turning right against a RED traffic signal arrow?',
@@ -403,7 +412,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Right Turns on Red Arrows',
     coverageFactIds: ['fact-right-turn-red-arrow']
   },
-  {
+
+{
     id: 'q11',
     category: 'Rules of the Road',
     questionText: 'Within how many feet of an intersection is it legal to enter a designated bicycle lane to prepare for a right turn?',
@@ -422,7 +432,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Driving in Bicycle Lanes',
     coverageFactIds: ['fact-drive-bike-lane-limit']
   },
-  {
+
+{
     id: 'q12',
     category: 'Rules of the Road',
     questionText: 'What is the maximum continuous distance you are permitted to drive inside a center left turn lane?',
@@ -441,7 +452,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Center Left Turn Lane Distance Limit',
     coverageFactIds: ['fact-center-left-turn-distance']
   },
-  {
+
+{
     id: 'q13',
     category: 'Safe Driving',
     questionText: 'When you are passing a bicyclist in a travel lane, how much clearance space must you maintain between your vehicle and the cyclist?',
@@ -460,7 +472,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Passing Bicyclist Space Clearance',
     coverageFactIds: ['fact-bike-passing-clearance']
   },
-  {
+
+{
     id: 'q14',
     category: 'Safe Driving',
     questionText: 'What is the "three-second rule" used to determine under dry, normal road conditions?',
@@ -479,7 +492,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Tailgating safety following distance',
     coverageFactIds: ['fact-tailgate-three-second-rule']
   },
-  {
+
+{
     id: 'q15',
     category: 'Rules of the Road',
     questionText: 'When two vehicles meet on a steep narrow mountain road where neither can pass, which vehicle has the right-of-way?',
@@ -498,7 +512,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Steep road right-of-way rules',
     coverageFactIds: ['fact-mountain-rightofway']
   },
-  {
+
+{
     id: 'q16',
     category: 'Rules of the Road',
     questionText: 'When you want to merge into highway traffic from an on-ramp, you should enter at what speed?',
@@ -517,7 +532,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Highway entry matching traffic speed',
     coverageFactIds: ['fact-highway-entry-match-traffic-speed']
   },
-  {
+
+{
     id: 'q17',
     category: 'Rules of the Road',
     questionText: 'Under what conditions is it legal to make a U-turn in a residential district?',
@@ -536,7 +552,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'U-Turn requirements in residential zones',
     coverageFactIds: ['fact-uturn-residential-clearance']
   },
-  {
+
+{
     id: 'q18',
     category: 'Rules of the Road',
     questionText: 'When is it legal to pass another vehicle on the right side on an open highway?',
@@ -555,7 +572,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Passing on the right conditions',
     coverageFactIds: ['fact-pass-on-right-allowed']
   },
-  {
+
+{
     id: 'q19',
     category: 'Rules of the Road',
     questionText: 'When can you legally double-park your vehicle in California?',
@@ -574,7 +592,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Illegal double parking rules',
     coverageFactIds: ['fact-illegal-parking-double-parking']
   },
-  {
+
+{
     id: 'q20',
     category: 'Rules of the Road',
     questionText: 'To avoid collisions when passing, you are strictly prohibited from passing within how many feet of an intersection, bridge, or railroad crossing?',
@@ -593,7 +612,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Prohibited passing within 100 feet',
     coverageFactIds: ['fact-passing-prohibited-100-feet-hazard']
   },
-  {
+
+{
     id: 'q21',
     category: 'Safe Driving',
     questionText: 'When driving on a WET road surface, how much should you reduce your speed to stay safe?',
@@ -612,7 +632,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Rain road wet speed bounds',
     coverageFactIds: ['fact-slick-roads-wet-speed']
   },
-  {
+
+{
     id: 'q22',
     category: 'Safe Driving',
     questionText: 'How much should you reduce your speed when driving on PACKED SNOW?',
@@ -631,7 +652,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Packed snow speed bounds',
     coverageFactIds: ['fact-slick-roads-snow-speed']
   },
-  {
+
+{
     id: 'q23',
     category: 'Alcohol & Drugs',
     questionText: 'It is illegal for any standard adult driver who is 21 years old or older to operate a vehicle with a Blood Alcohol Concentration (BAC) of:',
@@ -650,7 +672,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Adult maximum blood alcohol bounds',
     coverageFactIds: ['fact-bac-limit-adult-21']
   },
-  {
+
+{
     id: 'q24',
     category: 'Safe Driving',
     questionText: 'It is against California law to follow closely behind any active fire engine, ambulance, or law enforcement vehicle using sirens/lights within how many feet?',
@@ -669,7 +692,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Active emergency vehicle follow bounds',
     coverageFactIds: ['fact-emergency-vehicle-follow-distance']
   },
-  {
+
+{
     id: 'q25',
     category: 'Safe Driving',
     questionText: 'It is dangerous and illegal to leave a child unattended in a stationary vehicle in California. What child age threshold applies?',
@@ -688,7 +712,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Unattended child age limits',
     coverageFactIds: ['fact-unattended-child-age6']
   },
-  {
+
+{
     id: 'q26',
     category: 'Safe Driving',
     questionText: 'If a bus, streetcar, or trolley is stopped at a designated safety zone or traffic light, what is the maximum speed you are permitted to pass them?',
@@ -707,7 +732,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Passing streetcar / safety zone speed limits',
     coverageFactIds: ['fact-streetcar-safety-zone-speed']
   },
-  {
+
+{
     id: 'q27',
     category: 'Safe Driving',
     questionText: 'To prevent blind glare, you must dim your vehicle high-beam headlights to low-beams within how many feet of a vehicle you are following?',
@@ -726,7 +752,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Dimming high beams - Oncoming traffic',
     coverageFactIds: ['fact-dim-beams-oncoming-500ft']
   },
-  {
+
+{
     id: 'q28',
     category: 'Rules of the Road',
     questionText: 'Cargo extending more than how many feet from the back-rear bumper of your vehicle must display a 12-inch red or orange square safety flag?',
@@ -745,7 +772,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Rear bumper cargo flags',
     coverageFactIds: ['fact-flag-bumper-cargo-4feet']
   },
-  {
+
+{
     id: 'q29',
     category: 'Safe Driving',
     questionText: 'If your vehicle wheels drift off the paved pavement onto the road shoulder, what is the safest initial action?',
@@ -764,7 +792,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Slippery skid control steering rules',
     coverageFactIds: ['fact-skid-release-accelerator-no-brakes']
   },
-  {
+
+{
     id: 'q30',
     category: 'Alcohol & Drugs',
     questionText: 'What is the legal Blood Alcohol Concentration (BAC) limit for commercial CDL drivers or passenger-for-hire drivers in California?',
@@ -783,7 +812,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Commercial driver blood alcohol bounds',
     coverageFactIds: ['fact-bac-limit-commercial']
   },
-  {
+
+{
     id: 'q31',
     category: 'Rules of the Road',
     questionText: 'If a provisional minor driver has a medical necessity to drive during curfew hours, what is required?',
@@ -802,7 +832,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Minor\'s Restriction Exceptions - Medical Need',
     coverageFactIds: ['fact-provisional-exception-medical']
   },
-  {
+
+{
     id: 'q32',
     category: 'Rules of the Road',
     questionText: 'Which exception allows a provisional minor driver (under 18) to drive during prohibited hours (11 p.m. to 5 a.m.) for schooling?',
@@ -814,14 +845,15 @@ export const PRACTICE_QUESTIONS: Question[] = [
       'A verbal statement from a high school coach or teacher.'
     ],
     correctOptionIndex: 1,
-    explanation: 'California Handbook (Section 2, Exceptions): School-authorized activities require a dynamic note signed by the school principal, dean, or designee indicating the schooling reason.',
+    explanation: 'California Handbook (Section 2, Exceptions): School-authorized activities require a written note signed by the school principal, dean, or designee indicating the schooling reason.',
     testGroup: 15,
     sourceSection: 'Section 2: Getting a Driver\'s License',
     sourcePage: 2,
     sourceTopic: 'Minor\'s Restriction Exceptions - School Activity',
     coverageFactIds: ['fact-provisional-exception-school']
   },
-  {
+
+{
     id: 'q33',
     category: 'Rules of the Road',
     questionText: 'What is the correct hand signal for a RIGHT turn in California?',
@@ -836,11 +868,12 @@ export const PRACTICE_QUESTIONS: Question[] = [
     explanation: 'California Handbook (Section 3, Hand Signals): For a right turn, bend your left arm upward at the elbow, so your hand points toward the sky.',
     testGroup: 15,
     sourceSection: 'Section 3: An Introduction to Driving',
-    sourcePage: 4,
-    sourceTopic: 'Signaling distance before turning',
-    coverageFactIds: ['fact-signal-turn-100ft']
+    sourcePage: 3,
+    sourceTopic: 'Manual hand signal for a Right Turn',
+    coverageFactIds: ['fact-hand-signal-right-arm']
   },
-  {
+
+{
     id: 'q34',
     category: 'Rules of the Road',
     questionText: 'What is the correct hand signal for a LEFT turn in California?',
@@ -859,7 +892,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Manual hand signal for a Left Turn',
     coverageFactIds: ['fact-hand-signal-left-arm']
   },
-  {
+
+{
     id: 'q35',
     category: 'Rules of the Road',
     questionText: 'What is the correct hand signal to indicate you are STOPPING or SLOWING DOWN?',
@@ -875,29 +909,31 @@ export const PRACTICE_QUESTIONS: Question[] = [
     testGroup: 15,
     sourceSection: 'Section 3: An Introduction to Driving',
     sourcePage: 3,
-    sourceTopic: 'Manual hand signal for a Right Turn',
-    coverageFactIds: ['fact-hand-signal-right-arm']
+    sourceTopic: 'Manual hand signal to Slow down or Stop',
+    coverageFactIds: ['fact-hand-signal-slow-stop-arm']
   },
-  {
+
+{
     id: 'q36',
     category: 'Rules of the Road',
-    questionText: 'How far in advance of making a turn should you continuously activate your electrical turn signals?',
+    questionText: 'How far in advance of making a turn should you continuously activate your turn signal?',
     imageUrl: '',
     options: [
       'At least 50 feet before the turn.',
       'At least 100 feet before the turn.',
       'At least 200 feet before the turn.',
-      'Directly as you begin spinning the steering wheel.'
+      'As you begin turning the steering wheel.'
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 3, Signaling): Always signal your intention to turn at least 100 feet before making a turn at an upcoming intersection.',
     testGroup: 15,
     sourceSection: 'Section 3: An Introduction to Driving',
-    sourcePage: 3,
-    sourceTopic: 'Manual hand signal to Slow down or Stop',
-    coverageFactIds: ['fact-hand-signal-slow-stop-arm']
+    sourcePage: 4,
+    sourceTopic: 'Signaling distance before turning',
+    coverageFactIds: ['fact-signal-turn-100ft']
   },
-  {
+
+{
     id: 'q37',
     category: 'Rules of the Road',
     questionText: 'How many seconds before changing lanes on a high-speed freeway must you activate your turn signal?',
@@ -916,7 +952,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Lane change signaling on freeway',
     coverageFactIds: ['fact-signal-freeway-5seconds']
   },
-  {
+
+{
     id: 'q38',
     category: 'Safe Driving',
     questionText: 'Under what visibility conditions must you turn your vehicle low-beam headlights on?',
@@ -935,7 +972,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Headlights timeframe after sunset',
     coverageFactIds: ['fact-headlights-after-sunset']
   },
-  {
+
+{
     id: 'q39',
     category: 'Safe Driving',
     questionText: 'What is the headlight timeline requirement in California relative to sunset and sunrise?',
@@ -954,7 +992,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Headlights timeframe before sunrise',
     coverageFactIds: ['fact-headlights-before-sunrise']
   },
-  {
+
+{
     id: 'q40',
     category: 'Safe Driving',
     questionText: 'If you are driving in inclement weather that requires continuous use of your windshield wipers, you must also:',
@@ -970,13 +1009,14 @@ export const PRACTICE_QUESTIONS: Question[] = [
     testGroup: 15,
     sourceSection: 'Section 3: An Introduction to Driving',
     sourcePage: 4,
-    sourceTopic: 'Dimming high beams - Following traffic',
-    coverageFactIds: ['fact-dim-beams-following-300ft']
+    sourceTopic: 'Headlights required with windshield wipers',
+    coverageFactIds: ['fact-headlights-wipers-running']
   },
-  {
+
+{
     id: 'q41',
     category: 'Safe Driving',
-    questionText: 'When parking Headed UPHILL on a street with a curb, which direction should you turn your front wheels?',
+    questionText: 'When parking headed uphill on a street with a curb, which direction should you turn your front wheels?',
     imageUrl: '',
     options: [
       'Toward the curb (right).',
@@ -992,7 +1032,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Parking uphill wheels with curb',
     coverageFactIds: ['fact-hill-parking-uphill']
   },
-  {
+
+{
     id: 'q42',
     category: 'Safe Driving',
     questionText: 'When parking headed either uphill or downhill on a street that does NOT have a curb, which way should you turn your wheels?',
@@ -1011,7 +1052,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Parking on hills with no curb',
     coverageFactIds: ['fact-hill-parking-nocurb']
   },
-  {
+
+{
     id: 'q43',
     category: 'Rules of the Road',
     questionText: 'What is the parking restriction for a WHITE colored curb in California?',
@@ -1030,7 +1072,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'White curb rules',
     coverageFactIds: ['fact-colored-curb-white']
   },
-  {
+
+{
     id: 'q44',
     category: 'Rules of the Road',
     questionText: 'What is the parking restriction for a GREEN colored curb in California?',
@@ -1049,7 +1092,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Green curb rules',
     coverageFactIds: ['fact-colored-curb-green']
   },
-  {
+
+{
     id: 'q45',
     category: 'Rules of the Road',
     questionText: 'What is the parking restriction for a RED colored curb in California?',
@@ -1068,7 +1112,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Red curb rules',
     coverageFactIds: ['fact-colored-curb-red']
   },
-  {
+
+{
     id: 'q46',
     category: 'Rules of the Road',
     questionText: 'It is illegal to park your vehicle within how many feet of a fire hydrant or fire station driveway in California?',
@@ -1087,7 +1132,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Illegal parking fire hydrant distance',
     coverageFactIds: ['fact-illegal-parking-hydrant-distance']
   },
-  {
+
+{
     id: 'q47',
     category: 'Rules of the Road',
     questionText: 'In California, how close to a designated wheelchair sidewalk ramp are you legally permitted to park?',
@@ -1106,7 +1152,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Illegal parking near wheelchair sidewalk ramp',
     coverageFactIds: ['fact-illegal-parking-wheelchair-ramp-distance']
   },
-  {
+
+{
     id: 'q48',
     category: 'Rules of the Road',
     questionText: 'To ensure pedestrian visibility, you are prohibited from parking within how many feet of a marked or unmarked crosswalk?',
@@ -1125,7 +1172,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Illegal parking crosswalk distance limit',
     coverageFactIds: ['fact-illegal-parking-crosswalk-distance']
   },
-  {
+
+{
     id: 'q49',
     category: 'Rules of the Road',
     questionText: 'What constitutes "Double Parking" in California, and under what conditions is it permitted?',
@@ -1144,7 +1192,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Illegal double parking rules',
     coverageFactIds: ['fact-illegal-parking-double-parking']
   },
-  {
+
+{
     id: 'q50',
     category: 'Rules of the Road',
     questionText: 'Which colored curb is reserved exclusively for disabled individuals with proper placards or license plates?',
@@ -1163,7 +1212,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Blue curb rules',
     coverageFactIds: ['fact-colored-curb-blue']
   },
-  {
+
+{
     id: 'q51',
     category: 'Safe Driving',
     questionText: 'Under California law, children under 2 years old must be secured in a rear-facing passenger child restraint system unless:',
@@ -1182,7 +1232,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Rear child safety seat limits',
     coverageFactIds: ['fact-restraint-rear-facing-age2']
   },
-  {
+
+{
     id: 'q52',
     category: 'Safe Driving',
     questionText: 'Children under what age or height must be secured in a federally-approved child passenger restraint system in the rear seat of a vehicle?',
@@ -1201,10 +1252,11 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Secure seat child restraint age eight',
     coverageFactIds: ['fact-restraint-under8-backseat']
   },
-  {
+
+{
     id: 'q53',
     category: 'Safe Driving',
-    questionText: 'For maximum safety against rapid impact, how many inches of clearance space should you maintain between your chest and the airbag driver cover?',
+    questionText: 'For maximum safety against rapid impact, how many inches of clearance space should you maintain between your chest and the driver-side airbag cover?',
     imageUrl: '',
     options: [
       'At least 5 inches.',
@@ -1220,7 +1272,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Airbag safety steering clearance',
     coverageFactIds: ['fact-airbag-chest-clearance']
   },
-  {
+
+{
     id: 'q54',
     category: 'Rules of the Road',
     questionText: 'What is the speed limit at a "blind intersection" (where you cannot see 100 feet in either direction during the last 100 feet before crossing)?',
@@ -1239,7 +1292,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Blind intersection speed limit',
     coverageFactIds: ['fact-blind-intersection-speed']
   },
-  {
+
+{
     id: 'q55',
     category: 'Rules of the Road',
     questionText: 'What is the standard legal speed limit inside any designated alley under California law?',
@@ -1258,7 +1312,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Alley speed limit',
     coverageFactIds: ['fact-alley-speed-limit']
   },
-  {
+
+{
     id: 'q56',
     category: 'Rules of the Road',
     questionText: 'What is the speed limit when crossing a railroad track within 100 feet, if you are unable to see the tracks for 400 feet in either direction?',
@@ -1277,7 +1332,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Railroad crossing speed limit',
     coverageFactIds: ['fact-railroad-obscured-speed']
   },
-  {
+
+{
     id: 'q57',
     category: 'Safe Driving',
     questionText: 'If a school bus stops on the opposite side of a divided highway (with a physical median barrier), are you still required to stop?',
@@ -1296,7 +1352,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'School bus stops - divided highways',
     coverageFactIds: ['fact-school-bus-divided-highway']
   },
-  {
+
+{
     id: 'q58',
     category: 'Safe Driving',
     questionText: 'When are minor passengers (at least 8 years old or 4 feet 9 inches tall) permitted to ride using a standard seat belt without a booster?',
@@ -1315,7 +1372,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Height rules for standard seatbelts',
     coverageFactIds: ['fact-restraint-height-4ft9-seats']
   },
-  {
+
+{
     id: 'q59',
     category: 'Safe Driving',
     questionText: 'What penalty applies to a driver who fails to stop for a school bus with flashing red lights in California?',
@@ -1334,7 +1392,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'School bus violation ticket costs',
     coverageFactIds: ['fact-school-bus-stop-violations']
   },
-  {
+
+{
     id: 'q60',
     category: 'Safe Driving',
     questionText: 'Which passenger exception allows a child under 8 years old to ride in the front seat of a vehicle with a booster seat?',
@@ -1353,7 +1412,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Secure seat child restraint age eight',
     coverageFactIds: ['fact-restraint-under8-backseat']
   },
-  {
+
+{
     id: 'q61',
     category: 'Alcohol & Drugs',
     questionText: 'If you are currently on active DUI probation in California, what legal Blood Alcohol Concentration (BAC) limit applies when operating a vehicle?',
@@ -1372,7 +1432,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'DUI probation blood alcohol limits',
     coverageFactIds: ['fact-bac-limit-dui-probation']
   },
-  {
+
+{
     id: 'q62',
     category: 'Alcohol & Drugs',
     questionText: 'Which passive storage condition must be met to transport an OPEN container of alcohol inside your vehicle?',
@@ -1391,7 +1452,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Open container laws for alcohol and cannabis',
     coverageFactIds: ['fact-dui-open-container-vehicle']
   },
-  {
+
+{
     id: 'q63',
     category: 'Financial Responsibility',
     questionText: 'In California, within how many days must you report a collision to the DMV using an SR-1 form?',
@@ -1410,7 +1472,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'DMV SR-1 collision reporting threshold',
     coverageFactIds: ['fact-collision-report-sr1-dmv']
   },
-  {
+
+{
     id: 'q64',
     category: 'Alcohol & Drugs',
     questionText: 'By driving on California roads, you give consent to chemical testing of your blood, breath, or urine. If you refuse this test, what penalty applies?',
@@ -1429,7 +1492,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Chemical test refusal warnings',
     coverageFactIds: ['fact-dui-test-refusal']
   },
-  {
+
+{
     id: 'q65',
     category: 'Financial Responsibility',
     questionText: 'What minimum property damage threshold requires a collision to be reported directly to the DMV using form SR-1?',
@@ -1448,7 +1512,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'DMV SR-1 collision reporting threshold',
     coverageFactIds: ['fact-collision-report-sr1-dmv']
   },
-  {
+
+{
     id: 'q66',
     category: 'Alcohol & Drugs',
     questionText: 'It is strictly illegal for any juvenile driver aged under 21 years old to operate a motor vehicle with a BAC of:',
@@ -1467,7 +1532,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Under 21 blood alcohol limits',
     coverageFactIds: ['fact-bac-limit-under-21']
   },
-  {
+
+{
     id: 'q67',
     category: 'Alcohol & Drugs',
     questionText: 'Does prescription or over-the-counter medicine have any impact on the legality of driving under the influence in California?',
@@ -1486,7 +1552,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Prescription and over-the-counter medicine driving legality',
     coverageFactIds: ['fact-dui-drugs-prescription-impairment']
   },
-  {
+
+{
     id: 'q68',
     category: 'Rules of the Road',
     questionText: 'When pedestrians using guide dogs or white canes are crossing, what must drivers do?',
@@ -1505,14 +1572,15 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Blind pedestrians right-of-way',
     coverageFactIds: ['fact-pedestrian-white-canes']
   },
-  {
+
+{
     id: 'q69',
     category: 'Rules of the Road',
-    questionText: 'What is the speed limit in a designated intersection or railway crossing with active crossing gates?',
+    questionText: 'What is the speed limit within 100 feet of a railroad crossing if you cannot see the tracks for 400 feet in both directions?',
     imageUrl: '',
     options: [
-      '15 mph if visibility is obstructed.',
-      'The speed limit of the matching highway.',
+      '15 mph',
+      'The posted speed limit for that road.',
       '15 mph, but only if the warning bells are actively ringing.',
       '30 mph, provided no train is visible on the tracks.'
     ],
@@ -1524,7 +1592,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Railroad crossing visibility and speed limit factors',
     coverageFactIds: ['fact-railroad-crossing-visibility-speed']
   },
-  {
+
+{
     id: 'q70',
     category: 'Financial Responsibility',
     questionText: 'If you fail to provide proof of financial responsibility (valid insurance) at the scene of a California collision, what are the potential consequences?',
@@ -1543,7 +1612,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Collision without active insurance card',
     coverageFactIds: ['fact-insurance-lack-suspension']
   },
-  {
+
+{
     id: 'q71',
     category: 'Rules of the Road',
     questionText: 'For the first 12 months after receiving a California minor provisional driver\'s license, what is the driving curfew restriction?',
@@ -1562,7 +1632,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Minor\'s Provisional License Curfew Restrictions',
     coverageFactIds: ['fact-provisional-curfew']
   },
-  {
+
+{
     id: 'q72',
     category: 'Rules of the Road',
     questionText: 'During the first 12 months of holding a California minor provisional driver\'s license, you cannot transport passengers of what age unless supervised by an adult over 25?',
@@ -1581,7 +1652,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Minor\'s Passenger Restrictions',
     coverageFactIds: ['fact-provisional-passengers']
   },
-  {
+
+{
     id: 'q73',
     category: 'Rules of the Road',
     questionText: 'If you move and change your home address in California, you are legally required to notify the DMV of your new address within:',
@@ -1600,7 +1672,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Address change notification timelines',
     coverageFactIds: ['fact-address-change-notification']
   },
-  {
+
+{
     id: 'q74',
     category: 'Rules of the Road',
     questionText: 'If you sell or transfer ownership of a vehicle to another individual in California, you must notify the DMV within how many days?',
@@ -1619,7 +1692,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Vehicle sell and transfer notification timeline',
     coverageFactIds: ['fact-vehicle-transfer-notification']
   },
-  {
+
+{
     id: 'q75',
     category: 'Rules of the Road',
     questionText: 'To supervise a minor driver who holds a California Instruction Permit, the accompanying licensed driver must be at least what age?',
@@ -1638,7 +1712,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Instruction permit',
     coverageFactIds: ['fact-instruction-permit-btw']
   },
-  {
+
+{
     id: 'q76',
     category: 'Rules of the Road',
     questionText: 'If you are a minor under 18 and you fail the California DMV written knowledge test, how long must you wait before retaking the exam?',
@@ -1657,7 +1732,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Exam requirements',
     coverageFactIds: ['fact-knowledge-btw-tests']
   },
-  {
+
+{
     id: 'q77',
     category: 'Rules of the Road',
     questionText: 'If you fail the practical in-car driving skills exam in California, what is the mandatory wait time before you are allowed to retake it?',
@@ -1676,7 +1752,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Exam requirements',
     coverageFactIds: ['fact-knowledge-btw-tests']
   },
-  {
+
+{
     id: 'q78',
     category: 'Rules of the Road',
     questionText: 'Who must sign the DMV driver\'s license application for an applicant under the age of 18?',
@@ -1695,7 +1772,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Instruction permit',
     coverageFactIds: ['fact-instruction-permit-btw']
   },
-  {
+
+{
     id: 'q79',
     category: 'Rules of the Road',
     questionText: 'How many times are you allowed to fail the California DMV written knowledge test before your permit application fee expires and you must reapply?',
@@ -1714,7 +1792,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Exam requirements',
     coverageFactIds: ['fact-knowledge-btw-tests']
   },
-  {
+
+{
     id: 'q80',
     category: 'Safe Driving',
     questionText: 'Under California law, abandoning an animal on a highway carries what severe criminal penalty?',
@@ -1733,7 +1812,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Green curb rules',
     coverageFactIds: ['fact-colored-curb-green']
   },
-  {
+
+{
     id: 'q81',
     category: 'Rules of the Road',
     questionText: 'When passing a bicyclist who is riding in the same direction, California law requires you to maintain a minimum clearance of at least:',
@@ -1752,7 +1832,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Passing Bicyclist Space Clearance',
     coverageFactIds: ['fact-bike-passing-clearance']
   },
-  {
+
+{
     id: 'q82',
     category: 'Rules of the Road',
     questionText: 'When driving in a posted school zone where children are outside, what is the speed limit unless otherwise posted?',
@@ -1771,7 +1852,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'School zone speed limit',
     coverageFactIds: ['fact-school-zone-speed-children']
   },
-  {
+
+{
     id: 'q83',
     category: 'Rules of the Road',
     questionText: 'If you are driving on an undivided highway and a school bus stops ahead of you with its red flashing lights and stop arm extended, what is required?',
@@ -1790,7 +1872,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'School bus red flashing stops',
     coverageFactIds: ['fact-school-bus-red-flashing']
   },
-  {
+
+{
     id: 'q84',
     category: 'Rules of the Road',
     questionText: 'When traveling in the opposite direction of a stopped school bus with flashing red lights, you are NOT required to stop if:',
@@ -1809,7 +1892,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'School bus stops - divided highways',
     coverageFactIds: ['fact-school-bus-divided-highway']
   },
-  {
+
+{
     id: 'q85',
     category: 'Rules of the Road',
     questionText: 'What does a large, reflective, orange-and-red triangular sign mounted on the rear of a vehicle signify?',
@@ -1828,7 +1912,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Slow moving road sign speed limits',
     coverageFactIds: ['fact-slow-moving-vehicle-speed']
   },
-  {
+
+{
     id: 'q86',
     category: 'Rules of the Road',
     questionText: 'What does the term "No-Zone" refer to when sharing California roadways with large commercial semi-trucks?',
@@ -1847,7 +1932,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Large commercial truck blind spots',
     coverageFactIds: ['fact-truck-no-zone-blind']
   },
-  {
+
+{
     id: 'q87',
     category: 'Rules of the Road',
     questionText: 'Why should you avoid squeezing inside on the right side of a large truck when it is preparing to make a right-hand turn at an intersection?',
@@ -1866,7 +1952,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Large truck turning behaviors',
     coverageFactIds: ['fact-truck-swing-wide']
   },
-  {
+
+{
     id: 'q88',
     category: 'Rules of the Road',
     questionText: 'Under California\'s "Move Over" Law, what must you do when approaching a stationary emergency vehicle stopped on the highway shoulder with active sirens or lights?',
@@ -1885,7 +1972,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Move Over Law tow trucks',
     coverageFactIds: ['fact-move-over-law-tows']
   },
-  {
+
+{
     id: 'q89',
     category: 'Rules of the Road',
     questionText: 'A motorist convicted of fleeing or willfully evading a peace officer performing their official duties can be sentenced to:',
@@ -1904,7 +1992,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Fleeing law enforcement misdemeanor jail',
     coverageFactIds: ['fact-evade-police-consequences']
   },
-  {
+
+{
     id: 'q90',
     category: 'Rules of the Road',
     questionText: 'Under what specific condition is a motorized passenger vehicle permitted to drive in a painted bicycle lane in California?',
@@ -1923,7 +2012,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Driving in Bicycle Lanes',
     coverageFactIds: ['fact-drive-bike-lane-limit']
   },
-  {
+
+{
     id: 'q91',
     category: 'Rules of the Road',
     questionText: 'It is illegal for any person who is 21 years of age or older to operate a normal passenger vehicle with a Blood Alcohol Concentration (BAC) of:',
@@ -1942,7 +2032,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Adult maximum blood alcohol bounds',
     coverageFactIds: ['fact-bac-limit-adult-21']
   },
-  {
+
+{
     id: 'q92',
     category: 'Rules of the Road',
     questionText: 'If you are operating a commercial vehicle, or a vehicle for hire (such as a taxi, Uber, or Lyft) with passengers, it is illegal to drive with a BAC of:',
@@ -1961,7 +2052,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Commercial driver blood alcohol bounds',
     coverageFactIds: ['fact-bac-limit-commercial']
   },
-  {
+
+{
     id: 'q93',
     category: 'Rules of the Road',
     questionText: 'Under California\'s Implied Consent Law, by driving a motor vehicle on a public roadway, you have automatically agreed to:',
@@ -1980,7 +2072,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Chemical test refusal warnings',
     coverageFactIds: ['fact-dui-test-refusal']
   },
-  {
+
+{
     id: 'q94',
     category: 'Safe Driving',
     questionText: 'If you are convicted of driving under the influence (DUI) for the first time in California, what is a standard administrative penalty imposed?',
@@ -1999,7 +2092,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Open container laws for alcohol and cannabis',
     coverageFactIds: ['fact-dui-open-container-vehicle']
   },
-  {
+
+{
     id: 'q95',
     category: 'Rules of the Road',
     questionText: 'If a law enforcement officer asks you to submit to a breath or blood chemical test to determine your BAC, and you refuse:',
@@ -2018,7 +2112,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Chemical test refusal warnings',
     coverageFactIds: ['fact-dui-test-refusal']
   },
-  {
+
+{
     id: 'q96',
     category: 'Safe Driving',
     questionText: 'It is illegal to carry a container of alcohol inside the passenger area of a motor vehicle in California if:',
@@ -2037,7 +2132,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Open container laws for alcohol and cannabis',
     coverageFactIds: ['fact-dui-open-container-vehicle']
   },
-  {
+
+{
     id: 'q97',
     category: 'Rules of the Road',
     questionText: 'Under California law, a passenger under 21 years of age may carry unopened alcoholic beverages in a vehicle if:',
@@ -2056,7 +2152,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Minor alcohol possession rules',
     coverageFactIds: ['fact-dui-under21-carry-alcohol']
   },
-  {
+
+{
     id: 'q98',
     category: 'Rules of the Road',
     questionText: 'What is the designated Blood Alcohol Concentration (BAC) limit under California\'s "Zero Tolerance" law for drivers under 21 years old?',
@@ -2075,7 +2172,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Under 21 blood alcohol limits',
     coverageFactIds: ['fact-bac-limit-under-21']
   },
-  {
+
+{
     id: 'q99',
     category: 'Safe Driving',
     questionText: 'If you are arrested for driving under the influence (DUI) and a chemical test reveals you have drug levels in your system:',
@@ -2094,7 +2192,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Chemical test refusal warnings',
     coverageFactIds: ['fact-dui-test-refusal']
   },
-  {
+
+{
     id: 'q100',
     category: 'Safe Driving',
     questionText: 'Under what condition can you legally use a designated driver to ensure safe transit after consuming alcohol?',
@@ -2113,7 +2212,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Open container laws for alcohol and cannabis',
     coverageFactIds: ['fact-dui-open-container-vehicle']
   },
-  {
+
+{
     id: 'q101',
     category: 'Rules of the Road',
     questionText: 'Two solid yellow lines painted on the pavement mean:',
@@ -2132,7 +2232,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Double Solid Yellow Line Rules',
     coverageFactIds: ['fact-double-solid-yellow-passing']
   },
-  {
+
+{
     id: 'q102',
     category: 'Rules of the Road',
     questionText: 'What must you do when driving on a two-lane highway when a solid yellow line is on your side of the road?',
@@ -2151,7 +2252,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Single Solid Yellow Line Rules',
     coverageFactIds: ['fact-single-yellow-line']
   },
-  {
+
+{
     id: 'q103',
     category: 'Rules of the Road',
     questionText: 'If a yellow lane divider consists of a broken yellow line on your side and a solid yellow line on the other side:',
@@ -2170,7 +2272,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Solid Double Yellow Barrier Lines',
     coverageFactIds: ['fact-yellow-barrier-lines']
   },
-  {
+
+{
     id: 'q104',
     category: 'Rules of the Road',
     questionText: 'What is the purpose of a "Turnout Lane" on a two-lane mountain highway in California?',
@@ -2189,7 +2292,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Slow Driver Turnouts',
     coverageFactIds: ['fact-turnout-slow-vehicles']
   },
-  {
+
+{
     id: 'q105',
     category: 'Rules of the Road',
     questionText: 'In California, you may drive in a High-Occupancy Vehicle (HOV) lane if:',
@@ -2208,7 +2312,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Motorcycles in HOV Lanes',
     coverageFactIds: ['fact-hov-lane-usage', 'fact-hov-motorcycle-lane']
   },
-  {
+
+{
     id: 'q106',
     category: 'Rules of the Road',
     questionText: 'A solid white line painted across a traffic lane at an intersection indicates:',
@@ -2227,7 +2332,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Limit line stopping rules',
     coverageFactIds: ['fact-limit-line-stop-crosswalk']
   },
-  {
+
+{
     id: 'q107',
     category: 'Rules of the Road',
     questionText: 'What is a "Center Left Turn Lane" used for?',
@@ -2246,7 +2352,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Center Left Turn Lane Distance Limit',
     coverageFactIds: ['fact-center-left-turn-distance']
   },
-  {
+
+{
     id: 'q108',
     category: 'Rules of the Road',
     questionText: 'What is the maximum distance you are legally permitted to drive inside a designated "Center Left Turn Lane" in California?',
@@ -2265,7 +2372,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Center Left Turn Lane Distance Limit',
     coverageFactIds: ['fact-center-left-turn-distance']
   },
-  {
+
+{
     id: 'q109',
     category: 'Rules of the Road',
     questionText: 'What do a series of solid white triangles painted on the pavement pointing towards oncoming vehicles indicate?',
@@ -2284,7 +2392,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Yield Line Definition',
     coverageFactIds: ['fact-yield-line-shark-teeth']
   },
-  {
+
+{
     id: 'q110',
     category: 'Rules of the Road',
     questionText: 'If you see a solid yellow line and a broken white line separating lanes of traffic moving in your direction:',
@@ -2303,7 +2412,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Broken Yellow Line Passing',
     coverageFactIds: ['fact-broken-yellow-line']
   },
-  {
+
+{
     id: 'q111',
     category: 'Rules of the Road',
     questionText: 'Under California law, when must you turn on your vehicle\'s headlights?',
@@ -2322,7 +2432,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Headlight visibility distance',
     coverageFactIds: ['fact-headlights-dark-1000ft']
   },
-  {
+
+{
     id: 'q112',
     category: 'Rules of the Road',
     questionText: 'If you are driving with your vehicle\'s high-beam headlights on, you must dim them to low beams within how many feet of an oncoming vehicle?',
@@ -2341,7 +2452,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Headlights in adverse weather',
     coverageFactIds: ['fact-headlights-wipers-running']
   },
-  {
+
+{
     id: 'q113',
     category: 'Rules of the Road',
     questionText: 'You must dim your high-beam headlights to low beams within how many feet when following directly behind another vehicle?',
@@ -2360,7 +2472,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Dimming high beams - Following traffic',
     coverageFactIds: ['fact-dim-beams-following-300ft']
   },
-  {
+
+{
     id: 'q114',
     category: 'Rules of the Road',
     questionText: 'Under California law, if weather conditions require you to run your windshield wipers continuously, you must also:',
@@ -2379,7 +2492,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Headlights in adverse weather',
     coverageFactIds: ['fact-headlights-wipers-running']
   },
-  {
+
+{
     id: 'q115',
     category: 'Rules of the Road',
     questionText: 'What is the minimum legal thread depth allowed for any passenger car tire in California?',
@@ -2398,7 +2512,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Minimum legal tire tread depth',
     coverageFactIds: ['fact-safe-tire-tread-depth']
   },
-  {
+
+{
     id: 'q116',
     category: 'Safe Driving',
     questionText: 'What does a red warning indicator light shaped like a thermometer or engine on your dashboard represent?',
@@ -2417,7 +2532,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Dashboard temperature and engine warning indicators',
     coverageFactIds: ['fact-dashboard-warning-lights']
   },
-  {
+
+{
     id: 'q117',
     category: 'Safe Driving',
     questionText: 'If your vehicle is equipped with electronic stability control (ESC) or anti-lock brakes (ABS), what should you do in an emergency braking situation on slippery roads?',
@@ -2436,7 +2552,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Slippery skid control steering rules',
     coverageFactIds: ['fact-skid-release-accelerator-no-brakes']
   },
-  {
+
+{
     id: 'q118',
     category: 'Safe Driving',
     questionText: 'It is highly dangerous and illegal to drive with a cracked or severely chipped windshield in California because:',
@@ -2455,7 +2572,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Windshield passenger corner objects',
     coverageFactIds: ['fact-windshield-lower-corner-passenger']
   },
-  {
+
+{
     id: 'q119',
     category: 'Rules of the Road',
     questionText: 'Under California regulations, window tinting is strictly restricted. For the front side driver and passenger windows, tinting must:',
@@ -2474,7 +2592,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Windshield driver corner objects',
     coverageFactIds: ['fact-windshield-lower-corner-driver']
   },
-  {
+
+{
     id: 'q120',
     category: 'Safe Driving',
     questionText: 'If your steering wheel starts vibrating or pulling strongly to one side while driving on a flat, paved highway, it usually indicates:',
@@ -2493,7 +2612,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Tire blowout recovery procedures',
     coverageFactIds: ['fact-flat-tire-blowout-safety']
   },
-  {
+
+{
     id: 'q121',
     category: 'Rules of the Road',
     questionText: 'In California, a driver under the age of 18 is legally permitted to use a wireless cell phone:',
@@ -2512,7 +2632,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Minors cell phone restrictions',
     coverageFactIds: ['fact-distracted-cell-minors-rules']
   },
-  {
+
+{
     id: 'q122',
     category: 'Rules of the Road',
     questionText: 'For drivers 18 years of age or older, a cell phone may be used while driving ONLY if:',
@@ -2531,7 +2652,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Hands-free cell phone rules',
     coverageFactIds: ['fact-distracted-cell-adults-safety']
   },
-  {
+
+{
     id: 'q123',
     category: 'Rules of the Road',
     questionText: 'Is it legal for a motorist to wear headphones, a headset, or earplugs in both ears while driving in California?',
@@ -2550,7 +2672,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Hearing restrictions',
     coverageFactIds: ['fact-hearing-headset-dual-earplug']
   },
-  {
+
+{
     id: 'q124',
     category: 'Safe Driving',
     questionText: 'Is it illegal under California law to dump or abandon any animal on a highway, and what is the maximum penalty?',
@@ -2569,7 +2692,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Animal dumping crimes',
     coverageFactIds: ['fact-animal-abandonment-highway']
   },
-  {
+
+{
     id: 'q125',
     category: 'Rules of the Road',
     questionText: 'In California, every motor vehicle operated on public roadways must meet "Financial Responsibility" insurance requirements. What are the minimum coverage limits?',
@@ -2588,7 +2712,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Minimum vehicle liability coverage',
     coverageFactIds: ['fact-insurance-minimum-liability-limits']
   },
-  {
+
+{
     id: 'q126',
     category: 'Safe Driving',
     questionText: 'What must you do if your vehicle breaks down and stalls in the middle of a high-speed freeway?',
@@ -2607,7 +2732,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Slippery skid control steering rules',
     coverageFactIds: ['fact-skid-release-accelerator-no-brakes']
   },
-  {
+
+{
     id: 'q127',
     category: 'Rules of the Road',
     questionText: 'If you are involved in a collision where someone is injured or killed in California, you or your representative must file an official DMV report within:',
@@ -2626,7 +2752,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'DMV SR-1 collision reporting threshold',
     coverageFactIds: ['fact-collision-report-sr1-dmv']
   },
-  {
+
+{
     id: 'q128',
     category: 'Rules of the Road',
     questionText: 'It is legally prohibited for any passenger under 18 to ride in the bed of a pickup truck in California unless:',
@@ -2645,7 +2772,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Pickup cargo bed seats',
     coverageFactIds: ['fact-pickup-cargo-bed-seats']
   },
-  {
+
+{
     id: 'q129',
     category: 'Rules of the Road',
     questionText: 'Under California law, you may not park a vehicle within how many feet of a fire station driveway?',
@@ -2664,7 +2792,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Illegal parking fire hydrant distance',
     coverageFactIds: ['fact-illegal-parking-hydrant-distance', 'fact-illegal-parking-crosswalk-distance']
   },
-  {
+
+{
     id: 'q130',
     category: 'Safe Driving',
     questionText: 'If you are driving and your gas pedal suddenly sticks to the floor causing uncontrollable acceleration, you should:',
@@ -2683,7 +2812,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Slippery skid control steering rules',
     coverageFactIds: ['fact-skid-release-accelerator-no-brakes']
   },
-  {
+
+{
     id: 'q131',
     category: 'Rules of the Road',
     questionText: 'When two vehicles meet on a steep mountain road where only one vehicle can pass, which vehicle has the right-of-way?',
@@ -2702,7 +2832,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Steep road right-of-way rules',
     coverageFactIds: ['fact-mountain-rightofway']
   },
-  {
+
+{
     id: 'q132',
     category: 'Safe Driving',
     questionText: 'If your vehicle starts to hydroplane on a wet road (tires lose contact with the pavement), you should:',
@@ -2721,7 +2852,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Hydroplane brakes and acceleration',
     coverageFactIds: ['fact-hydroplane-slow-gradual']
   },
-  {
+
+{
     id: 'q133',
     category: 'Rules of the Road',
     questionText: 'Under California\'s Negligent Operator Treatment System (NOTS), a driver\'s license will be suspended if a driver accumulates how many points?',
@@ -2740,7 +2872,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'License classes',
     coverageFactIds: ['fact-class-c-license']
   },
-  {
+
+{
     id: 'q134',
     category: 'Rules of the Road',
     questionText: 'What is the speed limit in a "Blind Intersection" where you cannot see 100 feet in either direction during the last 100 feet before crossing?',
@@ -2759,7 +2892,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Blind intersection speed limit',
     coverageFactIds: ['fact-blind-intersection-speed']
   },
-  {
+
+{
     id: 'q135',
     category: 'Rules of the Road',
     questionText: 'What is the speed limit in any alleyway in California?',
@@ -2778,7 +2912,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Alley speed limit',
     coverageFactIds: ['fact-alley-speed-limit']
   },
-  {
+
+{
     id: 'q136',
     category: 'Rules of the Road',
     questionText: 'When you stop at a railroad crossing, how many feet from the nearest track must you stop?',
@@ -2797,7 +2932,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Distance bounds from railroad tracks',
     coverageFactIds: ['fact-railroad-track-stop-distance']
   },
-  {
+
+{
     id: 'q137',
     category: 'Rules of the Road',
     questionText: 'What is the speed limit within 100 feet of a railroad crossing if you cannot see the tracks for 400 feet in both directions?',
@@ -2816,7 +2952,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Railroad crossing speed limit',
     coverageFactIds: ['fact-railroad-obscured-speed']
   },
-  {
+
+{
     id: 'q138',
     category: 'Safe Driving',
     questionText: 'How far ahead of your vehicle should you scan the road to avoid last-minute emergency braking and hazards?',
@@ -2835,7 +2972,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Visual search scanning times',
     coverageFactIds: ['fact-scan-road-10seconds']
   },
-  {
+
+{
     id: 'q139',
     category: 'Rules of the Road',
     questionText: 'When you park your vehicle on a downhill street next to a curb, in which direction should you turn your front wheels?',
@@ -2854,7 +2992,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Parking downhill wheels',
     coverageFactIds: ['fact-hill-parking-downhill']
   },
-  {
+
+{
     id: 'q140',
     category: 'Rules of the Road',
     questionText: 'When you park your vehicle on an uphill street next to a curb, in which direction should you turn your wheels?',
@@ -2873,7 +3012,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Parking uphill wheels with curb',
     coverageFactIds: ['fact-hill-parking-uphill']
   },
-  {
+
+{
     id: 'q141',
     category: 'Rules of the Road',
     questionText: 'If you are parking uphill or downhill on a street that has NO curb, in which direction should you turn your front wheels?',
@@ -2892,7 +3032,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Parking on hills with no curb',
     coverageFactIds: ['fact-hill-parking-nocurb']
   },
-  {
+
+{
     id: 'q142',
     category: 'Rules of the Road',
     questionText: 'If you extend your left arm straight out of your driver-side window, what hand signal are you indicating?',
@@ -2911,7 +3052,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Manual hand signal for a Left Turn',
     coverageFactIds: ['fact-hand-signal-left-arm']
   },
-  {
+
+{
     id: 'q143',
     category: 'Rules of the Road',
     questionText: 'If you extend your left arm bent upward (90 degrees) out of your driver-side window, what signaling are you indicating?',
@@ -2930,7 +3072,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Manual hand signal for a Right Turn',
     coverageFactIds: ['fact-hand-signal-right-arm']
   },
-  {
+
+{
     id: 'q144',
     category: 'Rules of the Road',
     questionText: 'If you extend your left arm bent downward out of your driver-side window, what signaling are you indicating?',
@@ -2949,7 +3092,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Manual hand signal to Slow down or Stop',
     coverageFactIds: ['fact-hand-signal-slow-stop-arm']
   },
-  {
+
+{
     id: 'q145',
     category: 'Rules of the Road',
     questionText: 'If you collide with a parked vehicle on a public roadway and cannot locate the owner, California law requires you to:',
@@ -2968,7 +3112,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Collision with parked vehicle or property',
     coverageFactIds: ['fact-collision-parked-vehicle-note-report']
   },
-  {
+
+{
     id: 'q146',
     category: 'Rules of the Road',
     questionText: 'Under California law, do riders of horses or horse-drawn vehicles have the same rights and rules as motor vehicle drivers?',
@@ -2987,7 +3132,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Animal-drawn vehicles and riders on public roads',
     coverageFactIds: ['fact-sharing-road-animal-drawn-vehicles']
   },
-  {
+
+{
     id: 'q147',
     category: 'Rules of the Road',
     questionText: 'When can you legally make a right turn after stopping at a solid red light?',
@@ -3007,7 +3153,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Right Turns on Red Lights',
     coverageFactIds: ['fact-right-turn-red-light']
   },
-  {
+
+{
     id: 'q148',
     category: 'Rules of the Road',
     questionText: 'When are you legally permitted to make a left turn against a solid red light in California?',
@@ -3027,7 +3174,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Left Turns on Red Lights',
     coverageFactIds: ['fact-left-turn-red-oneway']
   },
-  {
+
+{
     id: 'q149',
     category: 'Safe Driving',
     questionText: 'During a traffic stop in California, which officers are legally allowed to ask you about your immigration status?',
@@ -3047,7 +3195,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Officer immigration questioning rights',
     coverageFactIds: ['fact-le-stop-immigration']
   },
-  {
+
+{
     id: 'q150',
     category: 'Road Signs',
     questionText: 'If you accidentally drive against traffic at night, how can road reflectors help warn you that you are going the wrong way?',
@@ -3067,7 +3216,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Wrong Way detection on roads',
     coverageFactIds: ['fact-sign-wrong-way-reflectors']
   },
-  {
+
+{
     id: 'q151',
     category: 'Rules of the Road',
     questionText: 'When a railroad crossing alarm or gate warns of an oncoming train, how far from the nearest track must you stop?',
@@ -3087,7 +3237,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Distance bounds from railroad tracks',
     coverageFactIds: ['fact-railroad-track-stop-distance']
   },
-  {
+
+{
     id: 'q152',
     category: 'Safe Driving',
     questionText: 'What is the California law regarding smoking inside a vehicle when a minor is present?',
@@ -3107,7 +3258,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Smoking with passenger minors present',
     coverageFactIds: ['fact-smoke-minor-present']
   },
-  {
+
+{
     id: 'q153',
     category: 'Safe Driving',
     questionText: 'How far can cargo legally extend from the sides of a passenger vehicle in California?',
@@ -3127,7 +3279,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Car side fender extension limits',
     coverageFactIds: ['fact-passenger-cargo-side-limits']
   },
-  {
+
+{
     id: 'q154',
     category: 'Safe Driving',
     questionText: 'Where are you legally allowed to mount an electronic toll payment device on your vehicle’s windshield?',
@@ -3147,7 +3300,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Windshield electronic toll pay location',
     coverageFactIds: ['fact-windshield-electronic-toll-upper']
   },
-  {
+
+{
     id: 'q155',
     category: 'Safe Driving',
     questionText: 'What can happen to your vehicle if you allow an unlicensed driver to drive it and they are caught in California?',
@@ -3167,7 +3321,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Unlicensed vehicle impounds',
     coverageFactIds: ['fact-unlicensed-driver-impound']
   },
-  {
+
+{
     id: 'q156',
     category: 'Safe Driving',
     questionText: 'For provisional drivers, what happens if you get two at-fault collisions or traffic violations within 12 months?',
@@ -3187,7 +3342,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Minor license violation count two',
     coverageFactIds: ['fact-minor-violation-second-action']
   },
-  {
+
+{
     id: 'q157',
     category: 'Safe Driving',
     questionText: 'If a provisional minor driver gets three at-fault collisions or traffic violations within 12 months, what is the mandatory action?',
@@ -3207,7 +3363,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Minor license violation count three',
     coverageFactIds: ['fact-minor-violation-third-action']
   },
-  {
+
+{
     id: 'q158',
     category: 'Safe Driving',
     questionText: 'Why should drivers be extra cautious on bridges and overpasses during cold or damp weather?',
@@ -3227,7 +3384,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Slick bridge freezing order',
     coverageFactIds: ['fact-bridge-overpass-freeze']
   },
-  {
+
+{
     id: 'q159',
     category: 'Safe Driving',
     questionText: 'Why is it highly illegal and dangerous to leave children or animals inside a closed, unattended vehicle in the sun?',
@@ -3247,7 +3405,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Dangerous hot car animal storage',
     coverageFactIds: ['fact-unattended-child-hot-vehicle']
   },
-  {
+
+{
     id: 'q160',
     category: 'Rules of the Road',
     questionText: 'What does California’s Basic Speed Law require of all drivers?',
@@ -3267,7 +3426,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Basic Speed Law',
     coverageFactIds: ['fact-speed-basic-speed-law']
   },
-  {
+
+{
     id: 'q161',
     category: 'Rules of the Road',
     questionText: 'Unless otherwise posted, what is the maximum speed limit on two-lane undivided highways and for vehicles towing in California?',
@@ -3287,7 +3447,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Maximum speed limits',
     coverageFactIds: ['fact-speed-freeway-limit-ideal']
   },
-  {
+
+{
     id: 'q162',
     category: 'Safe Driving',
     questionText: 'If your vehicle stalls on a railroad track and you see a train approaching, what is the safest direction to run after exiting?',
@@ -3307,7 +3468,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Stalled vehicle railroad train hazards',
     coverageFactIds: ['fact-stalled-tracks-train-approaching']
   },
-  {
+
+{
     id: 'q163',
     category: 'Safe Driving',
     questionText: 'What is the California law for adult drivers (21 or older) regarding cell phone use while driving?',
@@ -3327,7 +3489,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Hands-free cell phone rules',
     coverageFactIds: ['fact-distracted-cell-adults-safety']
   },
-  {
+
+{
     id: 'q164',
     category: 'Safe Driving',
     questionText: 'For persons age 13 to 20, what is a consequence of being convicted of operating a bicycle under the influence in California?',
@@ -3347,7 +3510,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Minor cycling DUI suspensions',
     coverageFactIds: ['fact-dui-bike-minor-under21']
   },
-  {
+
+{
     id: 'q165',
     category: 'Safe Driving',
     questionText: 'For how long does a DUI conviction remain on active DMV driving records in California?',
@@ -3367,7 +3531,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Driving record DUI retention timelines',
     coverageFactIds: ['fact-dui-record-retention-years']
   },
-  {
+
+{
     id: 'q166',
     category: 'Safe Driving',
     questionText: 'If you are involved in a collision in California and do not have liability insurance, what is the consequence?',
@@ -3387,7 +3552,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Collision without active insurance card',
     coverageFactIds: ['fact-insurance-lack-suspension']
   },
-  {
+
+{
     id: 'q167',
     category: 'Safe Driving',
     questionText: 'What does California law require of you if you are involved in an accident that causes injury or death?',
@@ -3407,7 +3573,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Fleeing collision sites misdemeanor',
     coverageFactIds: ['fact-hit-and-run-punishment']
   },
-  {
+
+{
     id: 'q168',
     category: 'Safe Driving',
     questionText: 'What should you reduce your speed to when driving on an ICE-COVERED road surface?',
@@ -3427,7 +3594,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Ice road speeds adjustment',
     coverageFactIds: ['fact-slick-roads-ice-speed']
   },
-  {
+
+{
     id: 'q169',
     category: 'Road Signs',
     questionText: 'What does a yellow, five-sided (pentagonal) road sign featuring children silhouettes indicate?',
@@ -3447,7 +3615,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'School zone sign shape',
     coverageFactIds: ['fact-school-zone-sign-5sided']
   },
-  {
+
+{
     id: 'q170',
     category: 'Road Signs',
     questionText: 'What does a circular, yellow-and-black road sign with an "X" and "RR" symbolize?',
@@ -3467,7 +3636,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Railroad crossing circular sign',
     coverageFactIds: ['fact-cross-railroad-yellow-circular']
   },
-  {
+
+{
     id: 'q171',
     category: 'Safe Driving',
     questionText: 'When stopped by a police officer, what mandatory credentials must you present?',
@@ -3487,7 +3657,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Required documents during police stops',
     coverageFactIds: ['fact-le-stop-required-docs']
   },
-  {
+
+{
     id: 'q172',
     category: 'Traffic Signals',
     questionText: 'What should a driver do when encountering a solid yellow traffic light signal?',
@@ -3507,7 +3678,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Solid Yellow Light',
     coverageFactIds: ['fact-traffic-light-solid-yellow']
   },
-  {
+
+{
     id: 'q173',
     category: 'Safe Driving',
     questionText: 'What is the minimum following distance you should maintain when riding behind a motorcyclist?',
@@ -3527,7 +3699,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Motorcycle following safety rule',
     coverageFactIds: ['fact-motorcyclist-following-distance']
   },
-  {
+
+{
     id: 'q174',
     category: 'Safe Driving',
     questionText: 'What is the required reaction when an emergency vehicle with active flashing lights and sirens approaches from behind?',
@@ -3547,7 +3720,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Yielding to emergency vehicles',
     coverageFactIds: ['fact-emergency-vehicle-red-sirens']
   },
-  {
+
+{
     id: 'q175',
     category: 'Safe Driving',
     questionText: 'Which vehicles are legally required to stop completely before crossing railroad tracks?',
@@ -3567,7 +3741,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Hazardous cargo railroad protocols',
     coverageFactIds: ['fact-hazmat-truck-railroad']
   },
-  {
+
+{
     id: 'q176',
     category: 'Safe Driving',
     questionText: 'What is the penalty for using a vehicle to intentionally flee or attempt to evade law enforcement?',
@@ -3587,7 +3762,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Fleeing law enforcement misdemeanor jail',
     coverageFactIds: ['fact-evade-police-consequences']
   },
-  {
+
+{
     id: 'q177',
     category: 'Alcohol & Drugs',
     questionText: 'Under what condition may a driver under 21 years old legally carry unopened alcohol inside a vehicle?',
@@ -3607,7 +3783,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Minor alcohol possession rules',
     coverageFactIds: ['fact-dui-under21-carry-alcohol']
   },
-  {
+
+{
     id: 'q178',
     category: 'Safe Driving',
     questionText: 'What are the minimum California bodily injury and property damage liability insurance limits?',
@@ -3627,7 +3804,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Minimum vehicle liability coverage',
     coverageFactIds: ['fact-insurance-minimum-liability-limits']
   },
-  {
+
+{
     id: 'q179',
     category: 'Safe Driving',
     questionText: 'Who receives a citation if a passenger under the age of 16 is caught in a vehicle without wearing a seatbelt?',
@@ -3647,7 +3825,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Passenger seatbelt violations under 16',
     coverageFactIds: ['fact-seatbelt-passenger-under-16']
   },
-  {
+
+{
     id: 'q180',
     category: 'Safe Driving',
     questionText: 'What is the recommended safe distance to maintain between your breastbone and the center of the steering wheel airbag cover?',
@@ -3667,7 +3846,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Airbag safety steering clearance',
     coverageFactIds: ['fact-airbag-chest-clearance']
   },
-  {
+
+{
     id: 'q181',
     category: 'Alcohol & Drugs',
     questionText: 'If you are on active DUI probation in California, what Blood Alcohol Concentration (BAC) limit applies at any age?',
@@ -3687,7 +3867,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'DUI probation blood alcohol limits',
     coverageFactIds: ['fact-bac-limit-dui-probation']
   },
-  {
+
+{
     id: 'q182',
     category: 'Rules of the Road',
     questionText: 'When waiting to turn left at an intersection, which way should you point your vehicle\'s front wheels?',
@@ -3707,7 +3888,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Wheel positioning before turns',
     coverageFactIds: ['fact-left-turn-wheel-direction']
   },
-  {
+
+{
     id: 'q183',
     category: 'Traffic Signals',
     questionText: 'What does a flashing red traffic light signal require you to do?',
@@ -3727,7 +3909,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Flashing Red Light',
     coverageFactIds: ['fact-traffic-light-flashing-red']
   },
-  {
+
+{
     id: 'q184',
     category: 'Traffic Signals',
     questionText: 'When driving through an intersection controlled by a solid green traffic light, what is required?',
@@ -3747,7 +3930,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Solid Green Light',
     coverageFactIds: ['fact-traffic-light-solid-green']
   },
-  {
+
+{
     id: 'q185',
     category: 'Traffic Signals',
     questionText: 'If all traffic signal lights at an intersection are completely blacked out or not working, how should you proceed?',
@@ -3767,7 +3951,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Blacked out traffic light rule',
     coverageFactIds: ['fact-traffic-light-broken']
   },
-  {
+
+{
     id: 'q186',
     category: 'Road Signs',
     questionText: 'Where must you come to a complete stop when approaching a red hexagonal STOP sign?',
@@ -3787,7 +3972,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'STOP Sign Shape & Meaning',
     coverageFactIds: ['fact-sign-stop']
   },
-  {
+
+{
     id: 'q187',
     category: 'Road Signs',
     questionText: 'What actions must you take when encountering a red-and-white triangular YIELD sign?',
@@ -3807,7 +3993,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'YIELD Sign Meaning',
     coverageFactIds: ['fact-sign-yield']
   },
-  {
+
+{
     id: 'q188',
     category: 'Safe Driving',
     questionText: 'At 55 mph under ideal conditions, how long can it take a fully loaded commercial truck to stop compared to a passenger vehicle?',
@@ -3827,7 +4014,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Large truck stopping distance',
     coverageFactIds: ['fact-truck-stopping-distance-feet']
   },
-  {
+
+{
     id: 'q189',
     category: 'Rules of the Road',
     questionText: 'Unless otherwise posted, what is the speed limit in a California business or residential district?',
@@ -3847,7 +4035,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Business / residential speed limit',
     coverageFactIds: ['fact-business-residential-speed']
   },
-  {
+
+{
     id: 'q190',
     category: 'Rules of the Road',
     questionText: 'When are U-turns permitted in a California business district?',
@@ -3867,7 +4056,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'U-Turns in business districts',
     coverageFactIds: ['fact-uturn-business-districts-rule']
   },
-  {
+
+{
     id: 'q191',
     category: 'Rules of the Road',
     questionText: 'When is it legal to drive in a public transit bus lane in California?',
@@ -3887,7 +4077,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Turns across Public Transit Bus Lanes',
     coverageFactIds: ['fact-right-turn-bus-lane']
   },
-  {
+
+{
     id: 'q192',
     category: 'The California Driver\'s License',
     questionText: 'What is a REAL ID under California and federal guidelines?',
@@ -3907,7 +4098,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'REAL ID Card Designations',
     coverageFactIds: ['fact-real-id-designation']
   },
-  {
+
+{
     id: 'q193',
     category: 'Getting a Driver\'s License',
     questionText: 'Under California law, a minor holding a provisional driver\'s license is restricted from:',
@@ -3927,7 +4119,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Minor\'s Employment Restrictions',
     coverageFactIds: ['fact-provisional-commercial']
   },
-  {
+
+{
     id: 'q194',
     category: 'Getting a Driver\'s License',
     questionText: 'What exception allows a provisional teen driver to drive during restricted hours for employment?',
@@ -3947,7 +4140,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Minor\'s Restriction Exceptions - Employment',
     coverageFactIds: ['fact-provisional-exception-work']
   },
-  {
+
+{
     id: 'q195',
     category: 'Getting a Driver\'s License',
     questionText: 'Under what conditions may a provisional teen driver drive during restricted hours to transport an immediate family member?',
@@ -3967,7 +4161,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Minor\'s Restriction Exceptions - Family Member',
     coverageFactIds: ['fact-provisional-exception-family']
   },
-  {
+
+{
     id: 'q196',
     category: 'Getting a Driver\'s License',
     questionText: 'How can a parent or legal guardian revoke or cancel a teen\'s provisional driver\'s license in California?',
@@ -3987,7 +4182,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Parent\'s Right to Cancel',
     coverageFactIds: ['fact-provisional-cancel']
   },
-  {
+
+{
     id: 'q197',
     category: 'Safe Driving',
     questionText: 'What key visual abilities must a driver maintain to operate a vehicle safely?',
@@ -4007,7 +4203,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Vision requirements',
     coverageFactIds: ['fact-vision-hazard-distance']
   },
-  {
+
+{
     id: 'q198',
     category: 'Safe Driving',
     questionText: 'At what age are physicians legally required to report patients to the DMV for medical conditions, like lapses of consciousness, that affect driving safety?',
@@ -4027,7 +4224,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Medical condition reporting',
     coverageFactIds: ['fact-physician-report-age']
   },
-  {
+
+{
     id: 'q199',
     category: 'Safe Driving',
     questionText: 'When changing lanes on a public road or multi-lane freeway, you are required to signal:',
@@ -4047,7 +4245,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Signaling for lane changes',
     coverageFactIds: ['fact-signal-every-lane-change']
   },
-  {
+
+{
     id: 'q200',
     category: 'Safe Driving',
     questionText: 'Are turn signals required when parking or moving next to or away from a curb?',
@@ -4067,7 +4266,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Signaling near curbs',
     coverageFactIds: ['fact-signal-curb-side']
   },
-  {
+
+{
     id: 'q201',
     category: 'Safe Driving',
     questionText: 'Should you signal before turning or changing lanes if there are no other vehicles visible around you?',
@@ -4087,7 +4287,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Signaling with no vehicles present',
     coverageFactIds: ['fact-signal-empty-road']
   },
-  {
+
+{
     id: 'q202',
     category: 'Safe Driving',
     questionText: 'If you plan to turn right shortly after crossing a busy intersection, when should you start signaling?',
@@ -4107,7 +4308,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Signaling at intersections',
     coverageFactIds: ['fact-signal-intersection-delayed']
   },
-  {
+
+{
     id: 'q203',
     category: 'Safe Driving',
     questionText: 'How may a bicyclist signal a turn on public roads under California law?',
@@ -4127,7 +4329,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Bicyclist hand signals',
     coverageFactIds: ['fact-hand-signals-bicyclist']
   },
-  {
+
+{
     id: 'q204',
     category: 'Safe Driving',
     questionText: 'When driving on a narrow mountain road where you cannot see at least 200 feet ahead, what should you do to alert oncoming traffic?',
@@ -4147,7 +4350,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Mountain road warning alerts',
     coverageFactIds: ['fact-horn-mountain-200ft']
   },
-  {
+
+{
     id: 'q205',
     category: 'Safe Driving',
     questionText: 'Is it legal to drive on a California roadway using only your parking lights instead of headlights?',
@@ -4167,7 +4371,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Driving with parking lights on',
     coverageFactIds: ['fact-illegal-parking-lights']
   },
-  {
+
+{
     id: 'q206',
     category: 'Safe Driving',
     questionText: 'When are you required to turn on your vehicle\'s headlights even on a bright, sunny day?',
@@ -4187,7 +4392,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Headlights in tunnels and mountain passes',
     coverageFactIds: ['fact-headlights-mountain-tunnels']
   },
-  {
+
+{
     id: 'q207',
     category: 'Safe Driving',
     questionText: 'Why should you turn on your headlights when the sun is low on the horizon?',
@@ -4207,7 +4413,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Headlights when sun is low on horizon',
     coverageFactIds: ['fact-headlights-sun-horizon']
   },
-  {
+
+{
     id: 'q208',
     category: 'Safe Driving',
     questionText: 'If you suddenly see an accident or a severe hazard ahead on the road, how should you warn drivers behind you?',
@@ -4227,7 +4434,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Using emergency flashers',
     coverageFactIds: ['fact-emergency-flashers-hazard']
   },
-  {
+
+{
     id: 'q209',
     category: 'Rules of the Road',
     questionText: 'What does a single solid white line painted between lanes on a road indicate?',
@@ -4247,7 +4455,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Single Solid White Line Rules',
     coverageFactIds: ['fact-single-white-line']
   },
-  {
+
+{
     id: 'q210',
     category: 'Rules of the Road',
     questionText: 'How are ending freeway or street lanes usually marked to tell you to prepare to exit or merge?',
@@ -4257,7 +4466,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
       'With a row of bright yellow raised buttons.',
       'With large broken lines painted on the pavement.',
       'With a continuous thick solid red line.',
-      'With multiple checkerboard horizontal speed bumps.'
+      'With a solid red pavement line.'
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 4): Ending freeway and street lanes are usually marked with large broken lines; prepare to exit or merge when you see them.',
@@ -4267,7 +4476,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'End of Lane Markings',
     coverageFactIds: ['fact-end-lane-broken-markings']
   },
-  {
+
+{
     id: 'q211',
     category: 'Rules of the Road',
     questionText: 'What does a yield line consisting of a row of solid white triangles (often called "shark\'s teeth") pointing towards you indicate?',
@@ -4277,7 +4487,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
       'Vehicles behind you must speed up to merge.',
       'It shows oncoming vehicles where they must yield or stop.',
       'An approaching crossing where bicycle lanes cross lanes of car traffic.',
-      'A dedicated carpool or HOV assembly zone.'
+      'A lane reserved only for carpool vehicles.'
     ],
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 4): A yield line consists of a row of solid white triangles (shark teeth) pointing towards oncoming vehicles to show where to yield or stop.',
@@ -4287,7 +4497,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Yield Line Definition',
     coverageFactIds: ['fact-yield-line-shark-teeth']
   },
-  {
+
+{
     id: 'q212',
     category: 'Rules of the Road',
     questionText: 'On a multi-lane highway or road, which lane is the designated passing lane (the fast lane)?',
@@ -4307,7 +4518,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Left Passing Lane',
     coverageFactIds: ['fact-passing-lane-clostest']
   },
-  {
+
+{
     id: 'q213',
     category: 'Rules of the Road',
     questionText: 'What is the correct right-of-way rule when approaching an uncontrolled T-intersection?',
@@ -4315,19 +4527,20 @@ export const PRACTICE_QUESTIONS: Question[] = [
     options: [
 
       'The vehicle closest to the left side has right-of-way.',
-      'Traffic going straight through on the through road has absolute right-of-way over vehicles turning in.',
+      'Traffic going straight through on the through road has right-of-way over vehicles turning in.',
       'The vehicle turning in has right-of-way over vehicles on the through road.',
       'The vehicle traveling at the faster speed has priority.'
     ],
     correctOptionIndex: 1,
-    explanation: 'California Handbook (Section 4): At T-intersections, traffic going straight through on the through road has the absolute right-of-way over vehicles turning in.',
+    explanation: 'California Handbook (Section 4): At T-intersections, traffic going straight through on the through road has the right-of-way over vehicles turning in.',
     testGroup: 38,
     sourceSection: 'Section 4: Navigating the Roads',
     sourcePage: 15,
     sourceTopic: 'T-Intersection right-of-way rules',
     coverageFactIds: ['fact-t-intersection-rightofway']
   },
-  {
+
+{
     id: 'q214',
     category: 'Rules of the Road',
     questionText: 'When merging your vehicle into highway traffic, how much of a safety buffer space should you provide between you and the vehicle in front?',
@@ -4347,7 +4560,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Safety buffer during merging',
     coverageFactIds: ['fact-merge-space-3sec']
   },
-  {
+
+{
     id: 'q215',
     category: 'Rules of the Road',
     questionText: 'When entering city street traffic from a full stop, how much of a space gap do you need to safely reach city traffic speed?',
@@ -4367,7 +4581,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'City street merging gap space',
     coverageFactIds: ['fact-city-merge-halfblock']
   },
-  {
+
+{
     id: 'q216',
     category: 'Rules of the Road',
     questionText: 'When entering fast highway traffic from a full stop, how much of a space gap do you need to merge safely?',
@@ -4387,7 +4602,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Highway merging gap space',
     coverageFactIds: ['fact-highway-merge-fullblock']
   },
-  {
+
+{
     id: 'q217',
     category: 'Rules of the Road',
     questionText: 'A vehicle that is stopped, parked, or left standing on a freeway may be legally removed after:',
@@ -4407,7 +4623,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Freeway vehicle storage limits',
     coverageFactIds: ['fact-freeway-stuck-time']
   },
-  {
+
+{
     id: 'q218',
     category: 'Rules of the Road',
     questionText: 'Under California law, what must a law enforcement officer do before asking questions about a violation during a traffic or pedestrian stop?',
@@ -4427,7 +4644,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'State rules for police stops',
     coverageFactIds: ['fact-le-stop-reason']
   },
-  {
+
+{
     id: 'q219',
     category: 'Traffic Signals',
     questionText: 'At a street crosswalk, a pedestrian must not start crossing the street if the DONT WALK or Raised Hand signal is:',
@@ -4447,7 +4665,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Pedestrian countdown signals',
     coverageFactIds: ['fact-ped-dont-walk-flashing']
   },
-  {
+
+{
     id: 'q220',
     category: 'Rules of the Road',
     questionText: 'Why do large commercial trucks often swing wide when making sharp turns?',
@@ -4467,7 +4686,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Large truck turning behaviors',
     coverageFactIds: ['fact-truck-swing-wide']
   },
-  {
+
+{
     id: 'q221',
     category: 'Rules of the Road',
     questionText: 'On a divided highway with 4 or more lanes of traffic traveling in your direction, large trucks and vehicle towing combinations must drive in which lanes?',
@@ -4487,7 +4707,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Large truck speed lane bounds',
     coverageFactIds: ['fact-truck-highway-lanes']
   },
-  {
+
+{
     id: 'q222',
     category: 'Rules of the Road',
     questionText: 'Under California law, is lane splitting (motorcycles sharing lanes with other vehicles) permitted?',
@@ -4507,7 +4728,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Motorcycle lane splitting law',
     coverageFactIds: ['fact-motorcycle-lane-splitting']
   },
-  {
+
+{
     id: 'q223',
     category: 'Rules of the Road',
     questionText: 'When driving a vehicle towing a trailer or operating a 3-axle truck, in which lane are you required to drive?',
@@ -4527,7 +4749,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Towing slow vehicle lanes',
     coverageFactIds: ['fact-towing-slower-vehicles-lanes']
   },
-  {
+
+{
     id: 'q224',
     category: 'Rules of the Road',
     questionText: 'What is the California rule regarding funeral processions on public roads?',
@@ -4547,7 +4770,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Funeral procession bounds',
     coverageFactIds: ['fact-funeral-processor-right-of-way']
   },
-  {
+
+{
     id: 'q225',
     category: 'Getting a Driver\'s License',
     questionText: 'How many days do you have to request an administrative hearing with the DMV after being served notice of an action against your driving privilege?',
@@ -4567,7 +4791,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Admin hearing service request times',
     coverageFactIds: ['fact-hearing-timelines-post-service']
   },
-  {
+
+{
     id: 'q226',
     category: 'Rules of the Road',
     questionText: 'What rules apply to people riding animals or driving animal-drawn vehicles on public roads in California?',
@@ -4587,7 +4812,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Animal-drawn vehicles and riders on public roads',
     coverageFactIds: ['fact-sharing-road-animal-drawn-vehicles']
   },
-  {
+
+{
     id: 'q227',
     category: 'Safe Driving',
     questionText: 'If there are potential hazards on both sides of the road, how should you divide your space?',
@@ -4607,7 +4833,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Hazard space splitting rules',
     coverageFactIds: ['fact-hazard-space-split']
   },
-  {
+
+{
     id: 'q228',
     category: 'Safe Driving',
     questionText: 'What is the correct protocol under California guidelines if your vehicle becomes disabled on a freeway?',
@@ -4627,7 +4854,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Freeway breakdown phone protocols',
     coverageFactIds: ['fact-disabled-freeway-shoulder']
   },
-  {
+
+{
     id: 'q229',
     category: 'Alcohol and Drugs',
     questionText: 'Which of the following describes the requirements triggered by a formal DUI conviction under California law?',
@@ -4647,7 +4875,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'DUI conviction license requirements',
     coverageFactIds: ['fact-dui-conviction-sr22-iid']
   },
-  {
+
+{
     id: 'q230',
     category: 'Rules of the Road',
     questionText: 'If you hit a parked vehicle or other property and cannot locate the owner, you are legally required to:',
@@ -4667,7 +4896,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Collision with parked vehicle or property',
     coverageFactIds: ['fact-collision-parked-vehicle-note-report']
   },
-  {
+
+{
     id: 'q231',
     category: 'Safe Driving',
     questionText: 'What safe driving adjustment is recommended for senior drivers experiencing physical changes in night vision?',
@@ -4687,7 +4917,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Seniors safe night driving choices',
     coverageFactIds: ['fact-seniors-night-driving-limitation']
   },
-  {
+
+{
     id: 'q232',
     category: 'Safe Driving',
     questionText: 'Which of the following is an indicator that an older driver should reassess their driving safety and potentially adjust their habits?',
@@ -4707,7 +4938,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Warning signs and safety adjustments for senior drivers',
     coverageFactIds: ['fact-seniors-warning-signs']
   },
-  {
+
+{
     id: 'q233',
     category: 'Traffic Signals',
     questionText: 'What does a solid red traffic light indicate under California law?',
@@ -4727,7 +4959,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Solid Red Light Definition',
     coverageFactIds: ['fact-traffic-light-red']
   },
-  {
+
+{
     id: 'q234',
     category: 'Safe Driving',
     questionText: 'Under California law, how close to the curb must a vehicle\'s wheels be when parallel parked?',
@@ -4747,7 +4980,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Parallel parking distance limit',
     coverageFactIds: ['fact-parking-curb-distance']
   },
-  {
+
+{
     id: 'q235',
     category: 'Rules of the Road',
     questionText: 'Double solid white lines painted on the pavement indicate:',
@@ -4767,7 +5001,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Double Solid White Lines',
     coverageFactIds: ['fact-double-solid-white-lines']
   },
-  {
+
+{
     id: 'q236',
     category: 'Rules of the Road',
     questionText: 'Under California law, is it legal to make a U-turn on a divided highway by crossing a dividing barrier or empty physical strip?',
@@ -4787,7 +5022,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Prohibited U-Turns on divided highways',
     coverageFactIds: ['fact-uturn-divided-highway-barrier']
   },
-  {
+
+{
     id: 'q237',
     category: 'Rules of the Road',
     questionText: 'When exiting a highway or freeway, how long must you continuously activate your turn signal before reaching the exit?',
@@ -4807,7 +5043,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Freeway exit signaling time',
     coverageFactIds: ['fact-exit-highway-signal']
   },
-  {
+
+{
     id: 'q238',
     category: 'Traffic Signals',
     questionText: 'Under California law, what does a solid red arrow traffic signal indicate?',
@@ -4827,7 +5064,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: 'Red Arrow Definition',
     coverageFactIds: ['fact-traffic-light-red-arrow']
   },
-  {
+
+{
     id: 'q239',
     category: 'Rules of the Road',
     questionText: 'According to the California Driver Handbook, you must never attempt to make a U-turn when you cannot see clearly in each direction for at least:',
@@ -4848,18 +5086,16 @@ export const PRACTICE_QUESTIONS: Question[] = [
     coverageFactIds: ['fact-uturn-visibility-distance']
   },
 
-
-  // --- CANONICAL PDF GAP-FILL QUESTIONS GENERATED FROM source/pdfFacts.canonical.json ---
   {
     id: "q240",
     category: "Licensing",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on License purpose?",
-    imageUrl: '',
+    questionText: "What authorization does a California driver license provide to a resident?",
+    imageUrl: "",
     options: [
       "A California driver license allows you to drive on public roads.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 1: The California Driver's License, page 1, License purpose): A California driver license allows you to drive on public roads.",
@@ -4869,16 +5105,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "License purpose",
     coverageFactIds: ["pdf-fact-s1-license-purpose-a-california-driver-license-allows-you-to-drive-on-pub"]
   },
+
   {
     id: "q241",
     category: "Licensing",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Correct license class?",
-    imageUrl: '',
+    questionText: "Why does a driver need to obtain the correct class of driver license?",
+    imageUrl: "",
     options: [
       "Drivers must have the correct class of license for the type of vehicle they operate.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 1: The California Driver's License, page 1, Correct license class): Drivers must have the correct class of license for the type of vehicle they operate.",
@@ -4888,16 +5125,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Correct license class",
     coverageFactIds: ["pdf-fact-s1-correct-license-class-drivers-must-have-the-correct-class-of-license-f"]
   },
+
   {
     id: "q242",
     category: "Licensing",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Other license classes?",
-    imageUrl: '',
+    questionText: "When does operating commercial vehicles or motorcycles require a specific driver license class?",
+    imageUrl: "",
     options: [
       "Commercial vehicles, motorcycles, and other vehicle types require different license classes.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 1: The California Driver's License, page 1, Other license classes): Commercial vehicles, motorcycles, and other vehicle types require different license classes.",
@@ -4907,16 +5145,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Other license classes",
     coverageFactIds: ["pdf-fact-s1-other-license-classes-commercial-vehicles-motorcycles-and-other-vehicl"]
   },
+
   {
     id: "q243",
     category: "Licensing",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Minor provisional license designation?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning minor provisional license designation?",
+    imageUrl: "",
     options: [
       "A driver license for a driver under 18 has the word provisional.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 2: Getting a Driver's License, page 2, Minor provisional license designation): A driver license for a driver under 18 has the word provisional.",
@@ -4926,16 +5165,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Minor provisional license designation",
     coverageFactIds: ["pdf-fact-s2-minor-provisional-license-designation-a-driver-license-for-a-driver-un"]
   },
+
   {
     id: "q244",
     category: "Driving Basics",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Health and driving?",
-    imageUrl: '',
+    questionText: "What should a driver know about health and driving to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "A driver’s health can affect safe driving.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 3, Health and driving): A driver’s health can affect safe driving.",
@@ -4945,16 +5185,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Health and driving",
     coverageFactIds: ["pdf-fact-s3-health-and-driving-a-driver-s-health-can-affect-safe-driving"]
   },
+
   {
     id: "q245",
     category: "Driving Basics",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Signals horn and headlights purpose?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for signals horn and headlights purpose?",
+    imageUrl: "",
     options: [
       "Signals, horns, and headlights communicate with other drivers, pedestrians, and bicyclists.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 3, Signals horn and headlights purpose): Signals, horns, and headlights communicate with other drivers, pedestrians, and bicyclists.",
@@ -4964,16 +5205,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Signals horn and headlights purpose",
     coverageFactIds: ["pdf-fact-s3-signals-horn-and-headlights-purpose-signals-horns-and-headlights-commu"]
   },
+
   {
     id: "q246",
     category: "Driving Basics",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Use hand signals if lights fail?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for use hand signals if lights fail?",
+    imageUrl: "",
     options: [
       "If signal lights are not functioning or are hard to see in bright sunlight, drivers should use hand-and-arm signals.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 3, Use hand signals if lights fail): If signal lights are not functioning or are hard to see in bright sunlight, drivers should use hand-and-arm signals.",
@@ -4983,16 +5225,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Use hand signals if lights fail",
     coverageFactIds: ["pdf-fact-s3-use-hand-signals-if-lights-fail-if-signal-lights-are-not-functioning-o"]
   },
+
   {
     id: "q247",
     category: "Driving Basics",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Cancel signal?",
-    imageUrl: '',
+    questionText: "How is cancel signal properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Drivers should turn off a signal when it is no longer needed.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 4, Cancel signal): Drivers should turn off a signal when it is no longer needed.",
@@ -5002,16 +5245,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Cancel signal",
     coverageFactIds: ["pdf-fact-s3-cancel-signal-drivers-should-turn-off-a-signal-when-it-is-no-longer-ne"]
   },
+
   {
     id: "q248",
     category: "Driving Basics",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Horn use purpose?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning horn use purpose?",
+    imageUrl: "",
     options: [
       "Drivers may use the horn to let other drivers know they are present or to warn others of a hazard.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 4, Horn use purpose): Drivers may use the horn to let other drivers know they are present or to warn others of a hazard.",
@@ -5021,16 +5265,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Horn use purpose",
     coverageFactIds: ["pdf-fact-s3-horn-use-purpose-drivers-may-use-the-horn-to-let-other-drivers-know-th"]
   },
+
   {
     id: "q249",
     category: "Driving Basics",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Horn to avoid collisions?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding horn to avoid collisions?",
+    imageUrl: "",
     options: [
       "Drivers may use the horn to help avoid collisions.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 4, Horn to avoid collisions): Drivers may use the horn to help avoid collisions.",
@@ -5040,16 +5285,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Horn to avoid collisions",
     coverageFactIds: ["pdf-fact-s3-horn-to-avoid-collisions-drivers-may-use-the-horn-to-help-avoid-collis"]
   },
+
   {
     id: "q250",
     category: "Driving Basics",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Headlights see and be seen?",
-    imageUrl: '',
+    questionText: "What should a driver know about headlights see and be seen to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Headlights help drivers see ahead and help others see the vehicle.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 4, Headlights see and be seen): Headlights help drivers see ahead and help others see the vehicle.",
@@ -5059,16 +5305,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Headlights see and be seen",
     coverageFactIds: ["pdf-fact-s3-headlights-see-and-be-seen-headlights-help-drivers-see-ahead-and-help"]
   },
+
   {
     id: "q251",
     category: "Driving Basics",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Headlights when conditions block view?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning headlights when conditions block view?",
+    imageUrl: "",
     options: [
       "Use headlights when clouds, dust, smoke, fog, or similar conditions prevent seeing other vehicles.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 4, Headlights when conditions block view): Use headlights when clouds, dust, smoke, fog, or similar conditions prevent seeing other vehicles.",
@@ -5078,16 +5325,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Headlights when conditions block view",
     coverageFactIds: ["pdf-fact-s3-headlights-when-conditions-block-view-use-headlights-when-clouds-dust"]
   },
+
   {
     id: "q252",
     category: "Driving Basics",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Headlights when sign requires?",
-    imageUrl: '',
+    questionText: "What should a driver know about headlights when sign requires to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Use headlights when a road sign states they must be on.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 4, Headlights when sign requires): Use headlights when a road sign states they must be on.",
@@ -5097,16 +5345,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Headlights when sign requires",
     coverageFactIds: ["pdf-fact-s3-headlights-when-sign-requires-use-headlights-when-a-road-sign-states-t"]
   },
+
   {
     id: "q253",
     category: "Driving Basics",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Hand signal when slowing or stopping?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning hand signal when slowing or stopping?",
+    imageUrl: "",
     options: [
       "If you see a hazard ahead, you can warn drivers behind you by using a hand signal when slowing or stopping.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 5, Hand signal when slowing or stopping): If you see a hazard ahead, you can warn drivers behind you by using a hand signal when slowing or stopping.",
@@ -5116,16 +5365,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Hand signal when slowing or stopping",
     coverageFactIds: ["pdf-fact-s3-hand-signal-when-slowing-or-stopping-if-you-see-a-hazard-ahead-you-can"]
   },
+
   {
     id: "q254",
     category: "Driving Basics",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Vehicle trouble flashers?",
-    imageUrl: '',
+    questionText: "What should a driver know about vehicle trouble flashers to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "If you stop because of vehicle trouble, turn on emergency flashers or use turn signals if the vehicle has no flashers.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 5, Vehicle trouble flashers): If you stop because of vehicle trouble, turn on emergency flashers or use turn signals if the vehicle has no flashers.",
@@ -5135,16 +5385,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Vehicle trouble flashers",
     coverageFactIds: ["pdf-fact-s3-vehicle-trouble-flashers-if-you-stop-because-of-vehicle-trouble-turn-o"]
   },
+
   {
     id: "q255",
     category: "Driving Basics",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Vehicle trouble pull off road?",
-    imageUrl: '',
+    questionText: "What should a driver know about vehicle trouble pull off road to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "If possible, pull off the road away from all traffic when stopped for vehicle trouble.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 5, Vehicle trouble pull off road): If possible, pull off the road away from all traffic when stopped for vehicle trouble.",
@@ -5154,16 +5405,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Vehicle trouble pull off road",
     coverageFactIds: ["pdf-fact-s3-vehicle-trouble-pull-off-road-if-possible-pull-off-the-road-away-from"]
   },
+
   {
     id: "q256",
     category: "Driving Basics",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Vehicle trouble visible stopping place?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding vehicle trouble visible stopping place?",
+    imageUrl: "",
     options: [
       "If you cannot get completely off the road, stop where people can see you and your vehicle from behind.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 5, Vehicle trouble visible stopping place): If you cannot get completely off the road, stop where people can see you and your vehicle from behind.",
@@ -5173,16 +5425,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Vehicle trouble visible stopping place",
     coverageFactIds: ["pdf-fact-s3-vehicle-trouble-visible-stopping-place-if-you-cannot-get-completely-of"]
   },
+
   {
     id: "q257",
     category: "Driving Basics",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Avoid stopping over hill or curve?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning avoid stopping over hill or curve?",
+    imageUrl: "",
     options: [
       "Do not stop just over a hill or just around a curve when your vehicle has trouble.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 5, Avoid stopping over hill or curve): Do not stop just over a hill or just around a curve when your vehicle has trouble.",
@@ -5192,16 +5445,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Avoid stopping over hill or curve",
     coverageFactIds: ["pdf-fact-s3-avoid-stopping-over-hill-or-curve-do-not-stop-just-over-a-hill-or-just"]
   },
+
   {
     id: "q258",
     category: "Driving Basics",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Roadside assistance wait in vehicle?",
-    imageUrl: '',
+    questionText: "How is roadside assistance wait in vehicle properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Call for emergency roadside assistance and stay in your vehicle until help arrives.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 3: An Introduction to Driving, page 5, Roadside assistance wait in vehicle): Call for emergency roadside assistance and stay in your vehicle until help arrives.",
@@ -5211,16 +5465,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Roadside assistance wait in vehicle",
     coverageFactIds: ["pdf-fact-s3-roadside-assistance-wait-in-vehicle-call-for-emergency-roadside-assist"]
   },
+
   {
     id: "q259",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Traffic lane definition?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding traffic lane definition?",
+    imageUrl: "",
     options: [
       "A traffic lane is a section of road for a single line of traffic.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 6, Traffic lane definition): A traffic lane is a section of road for a single line of traffic.",
@@ -5230,16 +5485,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Traffic lane definition",
     coverageFactIds: ["pdf-fact-s4-traffic-lane-definition-a-traffic-lane-is-a-section-of-road-for-a-sing"]
   },
+
   {
     id: "q260",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Lane markings purpose?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for lane markings purpose?",
+    imageUrl: "",
     options: [
       "Lane markings show drivers which part of the road to use and help explain traffic rules.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 6, Lane markings purpose): Lane markings show drivers which part of the road to use and help explain traffic rules.",
@@ -5249,16 +5505,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Lane markings purpose",
     coverageFactIds: ["pdf-fact-s4-lane-markings-purpose-lane-markings-show-drivers-which-part-of-the-roa"]
   },
+
   {
     id: "q261",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Broken white line?",
-    imageUrl: '',
+    questionText: "How is broken white line properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Broken white lines separate traffic lanes moving in the same direction.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 7, Broken white line): Broken white lines separate traffic lanes moving in the same direction.",
@@ -5268,16 +5525,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Broken white line",
     coverageFactIds: ["pdf-fact-s4-broken-white-line-broken-white-lines-separate-traffic-lanes-moving-in"]
   },
+
   {
     id: "q262",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Number 1 lane definition?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding number 1 lane definition?",
+    imageUrl: "",
     options: [
       "The left or fast lane is called the Number 1 lane.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 7, Number 1 lane definition): The left or fast lane is called the Number 1 lane.",
@@ -5287,16 +5545,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Number 1 lane definition",
     coverageFactIds: ["pdf-fact-s4-number-1-lane-definition-the-left-or-fast-lane-is-called-the-number-1"]
   },
+
   {
     id: "q263",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Lane numbers increase rightward?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding lane numbers increase rightward?",
+    imageUrl: "",
     options: [
       "The lane to the right of the Number 1 lane is Number 2, then Number 3, and so on.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 7, Lane numbers increase rightward): The lane to the right of the Number 1 lane is Number 2, then Number 3, and so on.",
@@ -5306,16 +5565,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Lane numbers increase rightward",
     coverageFactIds: ["pdf-fact-s4-lane-numbers-increase-rightward-the-lane-to-the-right-of-the-number-1"]
   },
+
   {
     id: "q264",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Left lane use?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding left lane use?",
+    imageUrl: "",
     options: [
       "Use the left lane to pass or turn left.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 7, Left lane use): Use the left lane to pass or turn left.",
@@ -5325,16 +5585,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Left lane use",
     coverageFactIds: ["pdf-fact-s4-left-lane-use-use-the-left-lane-to-pass-or-turn-left"]
   },
+
   {
     id: "q265",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Right lane use?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding right lane use?",
+    imageUrl: "",
     options: [
       "Use the right lane to enter or exit traffic or when entering the road from a curb or shoulder.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 7, Right lane use): Use the right lane to enter or exit traffic or when entering the road from a curb or shoulder.",
@@ -5344,16 +5605,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Right lane use",
     coverageFactIds: ["pdf-fact-s4-right-lane-use-use-the-right-lane-to-enter-or-exit-traffic-or-when-ent"]
   },
+
   {
     id: "q266",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Lane change signal?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for lane change signal?",
+    imageUrl: "",
     options: [
       "Before changing lanes, signal.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Lane change signal): Before changing lanes, signal.",
@@ -5363,16 +5625,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Lane change signal",
     coverageFactIds: ["pdf-fact-s4-lane-change-signal-before-changing-lanes-signal"]
   },
+
   {
     id: "q267",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Lane change mirror check?",
-    imageUrl: '',
+    questionText: "What should you check in your mirrors and surroundings before commencing a lane change?",
+    imageUrl: "",
     options: [
       "Before changing lanes, check your mirrors.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Lane change mirror check): Before changing lanes, check your mirrors.",
@@ -5382,16 +5645,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Lane change mirror check",
     coverageFactIds: ["pdf-fact-s4-lane-change-mirror-check-before-changing-lanes-check-your-mirrors"]
   },
+
   {
     id: "q268",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Lane change traffic check?",
-    imageUrl: '',
+    questionText: "What should a driver know about lane change traffic check to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Before changing lanes, check traffic behind and beside you.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Lane change traffic check): Before changing lanes, check traffic behind and beside you.",
@@ -5401,16 +5665,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Lane change traffic check",
     coverageFactIds: ["pdf-fact-s4-lane-change-traffic-check-before-changing-lanes-check-traffic-behind-a"]
   },
+
   {
     id: "q269",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Lane change shoulder check?",
-    imageUrl: '',
+    questionText: "Why must you perform a shoulder check over your shoulder before changing lanes?",
+    imageUrl: "",
     options: [
       "Before changing lanes, look over your shoulder in the direction you plan to move.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Lane change shoulder check): Before changing lanes, look over your shoulder in the direction you plan to move.",
@@ -5420,16 +5685,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Lane change shoulder check",
     coverageFactIds: ["pdf-fact-s4-lane-change-shoulder-check-before-changing-lanes-look-over-your-should"]
   },
+
   {
     id: "q270",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Lane change blind spots?",
-    imageUrl: '',
+    questionText: "What should a driver know about lane change blind spots to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Check blind spots for vehicles, motorcycles, and bicyclists before changing lanes.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Lane change blind spots): Check blind spots for vehicles, motorcycles, and bicyclists before changing lanes.",
@@ -5439,16 +5705,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Lane change blind spots",
     coverageFactIds: ["pdf-fact-s4-lane-change-blind-spots-check-blind-spots-for-vehicles-motorcycles-and"]
   },
+
   {
     id: "q271",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Do not drift lanes?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for do not drift lanes?",
+    imageUrl: "",
     options: [
       "Do not let your vehicle drift into another lane.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Do not drift lanes): Do not let your vehicle drift into another lane.",
@@ -5458,16 +5725,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Do not drift lanes",
     coverageFactIds: ["pdf-fact-s4-do-not-drift-lanes-do-not-let-your-vehicle-drift-into-another-lane"]
   },
+
   {
     id: "q272",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Lane change space?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning lane change space?",
+    imageUrl: "",
     options: [
       "Before changing lanes, make sure there is enough space for your vehicle in the next lane.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Lane change space): Before changing lanes, make sure there is enough space for your vehicle in the next lane.",
@@ -5477,16 +5745,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Lane change space",
     coverageFactIds: ["pdf-fact-s4-lane-change-space-before-changing-lanes-make-sure-there-is-enough-spac"]
   },
+
   {
     id: "q273",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Lane change slowing unnecessary?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for lane change slowing unnecessary?",
+    imageUrl: "",
     options: [
       "It is not necessary to slow down before a lane change.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Lane change slowing unnecessary): It is not necessary to slow down before a lane change.",
@@ -5496,16 +5765,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Lane change slowing unnecessary",
     coverageFactIds: ["pdf-fact-s4-lane-change-slowing-unnecessary-it-is-not-necessary-to-slow-down-befor"]
   },
+
   {
     id: "q274",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Avoid weaving?",
-    imageUrl: '',
+    questionText: "What should a driver know about avoid weaving to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Stay in one lane as much as possible and do not weave in and out of traffic.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Avoid weaving): Stay in one lane as much as possible and do not weave in and out of traffic.",
@@ -5515,16 +5785,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Avoid weaving",
     coverageFactIds: ["pdf-fact-s4-avoid-weaving-stay-in-one-lane-as-much-as-possible-and-do-not-weave-in"]
   },
+
   {
     id: "q275",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Avoid last-minute changes?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning avoid last-minute changes?",
+    imageUrl: "",
     options: [
       "Last-minute lane or direction changes may increase collision risk.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Avoid last-minute changes): Last-minute lane or direction changes may increase collision risk.",
@@ -5534,16 +5805,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Avoid last-minute changes",
     coverageFactIds: ["pdf-fact-s4-avoid-last-minute-changes-last-minute-lane-or-direction-changes-may-in"]
   },
+
   {
     id: "q276",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Continue through intersection?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding continue through intersection?",
+    imageUrl: "",
     options: [
       "Once you start moving through an intersection, keep going.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Continue through intersection): Once you start moving through an intersection, keep going.",
@@ -5553,16 +5825,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Continue through intersection",
     coverageFactIds: ["pdf-fact-s4-continue-through-intersection-once-you-start-moving-through-an-interse"]
   },
+
   {
     id: "q277",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Missed turn procedure?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding missed turn procedure?",
+    imageUrl: "",
     options: [
       "If you miss a turn, keep driving until you can safely and legally turn around.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 8, Missed turn procedure): If you miss a turn, keep driving until you can safely and legally turn around.",
@@ -5572,16 +5845,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Missed turn procedure",
     coverageFactIds: ["pdf-fact-s4-missed-turn-procedure-if-you-miss-a-turn-keep-driving-until-you-can-sa"]
   },
+
   {
     id: "q278",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Center left turn lane location?",
-    imageUrl: '',
+    questionText: "What should a driver know about center left turn lane location to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "A center left turn lane is in the middle of a two-way street and is marked by inner broken and outer solid lines.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 9, Center left turn lane location): A center left turn lane is in the middle of a two-way street and is marked by inner broken and outer solid lines.",
@@ -5591,16 +5865,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Center left turn lane location",
     coverageFactIds: ["pdf-fact-s4-center-left-turn-lane-location-a-center-left-turn-lane-is-in-the-middl"]
   },
+
   {
     id: "q279",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Bicycle lane purpose?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning bicycle lane purpose?",
+    imageUrl: "",
     options: [
       "Bicycle lanes are for bicyclists only and run alongside vehicle traffic.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 9, Bicycle lane purpose): Bicycle lanes are for bicyclists only and run alongside vehicle traffic.",
@@ -5610,16 +5885,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Bicycle lane purpose",
     coverageFactIds: ["pdf-fact-s4-bicycle-lane-purpose-bicycle-lanes-are-for-bicyclists-only-and-run-alo"]
   },
+
   {
     id: "q280",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Bicycle lane markings?",
-    imageUrl: '',
+    questionText: "What should a driver know about bicycle lane markings to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Bicycle lanes are typically marked by a solid white line and signs and may be painted bright green.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 9, Bicycle lane markings): Bicycle lanes are typically marked by a solid white line and signs and may be painted bright green.",
@@ -5629,16 +5905,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Bicycle lane markings",
     coverageFactIds: ["pdf-fact-s4-bicycle-lane-markings-bicycle-lanes-are-typically-marked-by-a-solid-wh"]
   },
+
   {
     id: "q281",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Bike lane types?",
-    imageUrl: '',
+    questionText: "What should a driver know about bike lane types to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Bike lane markings include standard bike lanes, buffered bike lanes, bike routes, bicycle boulevards, separated bikeways, and shared roadway markings.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 10, Bike lane types): Bike lane markings include standard bike lanes, buffered bike lanes, bike routes, bicycle boulevards, separated bikeways, and shared roadway markings.",
@@ -5648,16 +5925,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Bike lane types",
     coverageFactIds: ["pdf-fact-s4-bike-lane-types-bike-lane-markings-include-standard-bike-lanes-buffere"]
   },
+
   {
     id: "q282",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Shared roadway bicycle markings?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for shared roadway bicycle markings?",
+    imageUrl: "",
     options: [
       "Shared roadway bicycle markings alert drivers that bicyclists can occupy the lane and help bicyclists maintain a safe lane position.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 10, Shared roadway bicycle markings): Shared roadway bicycle markings alert drivers that bicyclists can occupy the lane and help bicyclists maintain a safe lane position.",
@@ -5667,16 +5945,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Shared roadway bicycle markings",
     coverageFactIds: ["pdf-fact-s4-shared-roadway-bicycle-markings-shared-roadway-bicycle-markings-alert"]
   },
+
   {
     id: "q283",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Motorized bicycle caution?",
-    imageUrl: '',
+    questionText: "How is motorized bicycle caution properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Motorized-bicycle riders should use caution, travel at a reasonable speed, and not endanger bicyclists.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 10, Motorized bicycle caution): Motorized-bicycle riders should use caution, travel at a reasonable speed, and not endanger bicyclists.",
@@ -5686,16 +5965,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Motorized bicycle caution",
     coverageFactIds: ["pdf-fact-s4-motorized-bicycle-caution-motorized-bicycle-riders-should-use-caution"]
   },
+
   {
     id: "q284",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Right turn road position?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for right turn road position?",
+    imageUrl: "",
     options: [
       "To make a right turn, drive close to the right edge of the road.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 11, Right turn road position): To make a right turn, drive close to the right edge of the road.",
@@ -5705,16 +5985,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Right turn road position",
     coverageFactIds: ["pdf-fact-s4-right-turn-road-position-to-make-a-right-turn-drive-close-to-the-right"]
   },
+
   {
     id: "q285",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Right turn lane opening?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning right turn lane opening?",
+    imageUrl: "",
     options: [
       "If a designated right turn lane is available, enter at the opening.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 11, Right turn lane opening): If a designated right turn lane is available, enter at the opening.",
@@ -5724,16 +6005,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Right turn lane opening",
     coverageFactIds: ["pdf-fact-s4-right-turn-lane-opening-if-a-designated-right-turn-lane-is-available-e"]
   },
+
   {
     id: "q286",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Right turn bike lane use?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for right turn bike lane use?",
+    imageUrl: "",
     options: [
       "Drivers may drive in a bike lane within 200 feet of a right turn after checking blind spots.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 11, Right turn bike lane use): Drivers may drive in a bike lane within 200 feet of a right turn after checking blind spots.",
@@ -5743,16 +6025,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Right turn bike lane use",
     coverageFactIds: ["pdf-fact-s4-right-turn-bike-lane-use-drivers-may-drive-in-a-bike-lane-within-200-f"]
   },
+
   {
     id: "q287",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Right turn watch vulnerable users?",
-    imageUrl: '',
+    questionText: "What should a driver know about right turn watch vulnerable users to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "When turning right, watch for pedestrians, bicyclists, or motorcyclists between the vehicle and the curb.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 11, Right turn watch vulnerable users): When turning right, watch for pedestrians, bicyclists, or motorcyclists between the vehicle and the curb.",
@@ -5762,16 +6045,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Right turn watch vulnerable users",
     coverageFactIds: ["pdf-fact-s4-right-turn-watch-vulnerable-users-when-turning-right-watch-for-pedestr"]
   },
+
   {
     id: "q288",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Right turn signal distance?",
-    imageUrl: '',
+    questionText: "What should a driver know about right turn signal distance to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Start signaling about 100 feet before a right turn.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 11, Right turn signal distance): Start signaling about 100 feet before a right turn.",
@@ -5781,16 +6065,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Right turn signal distance",
     coverageFactIds: ["pdf-fact-s4-right-turn-signal-distance-start-signaling-about-100-feet-before-a-rig"]
   },
+
   {
     id: "q289",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Right turn shoulder check?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding right turn shoulder check?",
+    imageUrl: "",
     options: [
       "Before a right turn, look over your right shoulder and reduce speed.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 11, Right turn shoulder check): Before a right turn, look over your right shoulder and reduce speed.",
@@ -5800,16 +6085,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Right turn shoulder check",
     coverageFactIds: ["pdf-fact-s4-right-turn-shoulder-check-before-a-right-turn-look-over-your-right-sho"]
   },
+
   {
     id: "q290",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Right turn stopping position?",
-    imageUrl: '',
+    questionText: "How is right turn stopping position properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Stop behind the limit line; if none, before the crosswalk; if no crosswalk, before entering the intersection.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 11, Right turn stopping position): Stop behind the limit line; if none, before the crosswalk; if no crosswalk, before entering the intersection.",
@@ -5819,16 +6105,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Right turn stopping position",
     coverageFactIds: ["pdf-fact-s4-right-turn-stopping-position-stop-behind-the-limit-line-if-none-before"]
   },
+
   {
     id: "q291",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Right turn scan?",
-    imageUrl: '',
+    questionText: "How is right turn scan properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Look left-right-left and turn when safe.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 11, Right turn scan): Look left-right-left and turn when safe.",
@@ -5838,16 +6125,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Right turn scan",
     coverageFactIds: ["pdf-fact-s4-right-turn-scan-look-left-right-left-and-turn-when-safe"]
   },
+
   {
     id: "q292",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Complete right turn in right lane?",
-    imageUrl: '',
+    questionText: "How is complete right turn in right lane properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Complete a right turn in the right lane and do not turn wide into another lane.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 11, Complete right turn in right lane): Complete a right turn in the right lane and do not turn wide into another lane.",
@@ -5857,16 +6145,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Complete right turn in right lane",
     coverageFactIds: ["pdf-fact-s4-complete-right-turn-in-right-lane-complete-a-right-turn-in-the-right-l"]
   },
+
   {
     id: "q293",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Dedicated right turn lane no merge?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning dedicated right turn lane no merge?",
+    imageUrl: "",
     options: [
       "A dedicated right turn lane does not merge into another lane and allows a right turn without stopping.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Dedicated right turn lane no merge): A dedicated right turn lane does not merge into another lane and allows a right turn without stopping.",
@@ -5876,16 +6165,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Dedicated right turn lane no merge",
     coverageFactIds: ["pdf-fact-s4-dedicated-right-turn-lane-no-merge-a-dedicated-right-turn-lane-does-no"]
   },
+
   {
     id: "q294",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Dedicated right turn during red through light?",
-    imageUrl: '',
+    questionText: "How is dedicated right turn during red through light properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Drivers may use a dedicated right turn lane even if the light for straight-through traffic is red.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Dedicated right turn during red through light): Drivers may use a dedicated right turn lane even if the light for straight-through traffic is red.",
@@ -5895,16 +6185,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Dedicated right turn during red through light",
     coverageFactIds: ["pdf-fact-s4-dedicated-right-turn-during-red-through-light-drivers-may-use-a-dedica"]
   },
+
   {
     id: "q295",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Dedicated right turn obey curb signal?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding dedicated right turn obey curb signal?",
+    imageUrl: "",
     options: [
       "If a traffic light or sign is on the right curb of the dedicated right turn lane, obey that light or sign.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Dedicated right turn obey curb signal): If a traffic light or sign is on the right curb of the dedicated right turn lane, obey that light or sign.",
@@ -5914,16 +6205,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Dedicated right turn obey curb signal",
     coverageFactIds: ["pdf-fact-s4-dedicated-right-turn-obey-curb-signal-if-a-traffic-light-or-sign-is-on"]
   },
+
   {
     id: "q296",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Dedicated right turn yield pedestrians?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for dedicated right turn yield pedestrians?",
+    imageUrl: "",
     options: [
       "Always yield to pedestrians in a crosswalk when turning from a dedicated right turn lane.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Dedicated right turn yield pedestrians): Always yield to pedestrians in a crosswalk when turning from a dedicated right turn lane.",
@@ -5933,16 +6225,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Dedicated right turn yield pedestrians",
     coverageFactIds: ["pdf-fact-s4-dedicated-right-turn-yield-pedestrians-always-yield-to-pedestrians-in"]
   },
+
   {
     id: "q297",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Left turn lane position?",
-    imageUrl: '',
+    questionText: "What should a driver know about left turn lane position to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "To turn left, drive close to the center divider or into the left turn lane.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Left turn lane position): To turn left, drive close to the center divider or into the left turn lane.",
@@ -5952,16 +6245,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Left turn lane position",
     coverageFactIds: ["pdf-fact-s4-left-turn-lane-position-to-turn-left-drive-close-to-the-center-divider"]
   },
+
   {
     id: "q298",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Left turn lane opening?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning left turn lane opening?",
+    imageUrl: "",
     options: [
       "Enter a designated left turn lane at the opening and do not cross any solid line.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Left turn lane opening): Enter a designated left turn lane at the opening and do not cross any solid line.",
@@ -5971,16 +6265,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Left turn lane opening",
     coverageFactIds: ["pdf-fact-s4-left-turn-lane-opening-enter-a-designated-left-turn-lane-at-the-openin"]
   },
+
   {
     id: "q299",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Left turn center lane distance?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for left turn center lane distance?",
+    imageUrl: "",
     options: [
       "Enter a two-way center left turn lane within 200 feet of a left turn.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Left turn center lane distance): Enter a two-way center left turn lane within 200 feet of a left turn.",
@@ -5990,16 +6285,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Left turn center lane distance",
     coverageFactIds: ["pdf-fact-s4-left-turn-center-lane-distance-enter-a-two-way-center-left-turn-lane-w"]
   },
+
   {
     id: "q300",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Left turn yield in center lane?",
-    imageUrl: '',
+    questionText: "What should a driver know about left turn yield in center lane to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Respect the right-of-way of vehicles, bicyclists, or motorcyclists already in a center left turn lane and always yield to pedestrians.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Left turn yield in center lane): Respect the right-of-way of vehicles, bicyclists, or motorcyclists already in a center left turn lane and always yield to pedestrians.",
@@ -6009,16 +6305,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Left turn yield in center lane",
     coverageFactIds: ["pdf-fact-s4-left-turn-yield-in-center-lane-respect-the-right-of-way-of-vehicles-bi"]
   },
+
   {
     id: "q301",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Left turn signal distance?",
-    imageUrl: '',
+    questionText: "What should a driver know about left turn signal distance to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Start signaling 100 feet before a left turn.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Left turn signal distance): Start signaling 100 feet before a left turn.",
@@ -6028,16 +6325,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Left turn signal distance",
     coverageFactIds: ["pdf-fact-s4-left-turn-signal-distance-start-signaling-100-feet-before-a-left-turn"]
   },
+
   {
     id: "q302",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Left turn shoulder and speed?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning left turn shoulder and speed?",
+    imageUrl: "",
     options: [
       "Before a left turn, look over your left shoulder and reduce speed.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Left turn shoulder and speed): Before a left turn, look over your left shoulder and reduce speed.",
@@ -6047,16 +6345,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Left turn shoulder and speed",
     coverageFactIds: ["pdf-fact-s4-left-turn-shoulder-and-speed-before-a-left-turn-look-over-your-left-sh"]
   },
+
   {
     id: "q303",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Left turn stopping position?",
-    imageUrl: '',
+    questionText: "How is left turn stopping position properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "For a left turn, stop behind the limit line, before the crosswalk, or before the intersection as applicable.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Left turn stopping position): For a left turn, stop behind the limit line, before the crosswalk, or before the intersection as applicable.",
@@ -6066,16 +6365,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Left turn stopping position",
     coverageFactIds: ["pdf-fact-s4-left-turn-stopping-position-for-a-left-turn-stop-behind-the-limit-line"]
   },
+
   {
     id: "q304",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Left turn scanning?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for left turn scanning?",
+    imageUrl: "",
     options: [
       "Look left-right-left and begin a left turn when safe.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Left turn scanning): Look left-right-left and begin a left turn when safe.",
@@ -6085,16 +6385,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Left turn scanning",
     coverageFactIds: ["pdf-fact-s4-left-turn-scanning-look-left-right-left-and-begin-a-left-turn-when-saf"]
   },
+
   {
     id: "q305",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Left turn complete in left lane?",
-    imageUrl: '',
+    questionText: "How is left turn complete in left lane properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Complete a left turn in the left lane.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Left turn complete in left lane): Complete a left turn in the left lane.",
@@ -6104,16 +6405,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Left turn complete in left lane",
     coverageFactIds: ["pdf-fact-s4-left-turn-complete-in-left-lane-complete-a-left-turn-in-the-left-lane"]
   },
+
   {
     id: "q306",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Left turn smooth acceleration?",
-    imageUrl: '',
+    questionText: "How is left turn smooth acceleration properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Accelerate smoothly during and after a left turn and allow the steering wheel to straighten.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 12, Left turn smooth acceleration): Accelerate smoothly during and after a left turn and allow the steering wheel to straighten.",
@@ -6123,16 +6425,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Left turn smooth acceleration",
     coverageFactIds: ["pdf-fact-s4-left-turn-smooth-acceleration-accelerate-smoothly-during-and-after-a-l"]
   },
+
   {
     id: "q307",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on U-turn definition?",
-    imageUrl: '',
+    questionText: "What should a driver know about u-turn definition to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "A U-turn turns a vehicle around to go back in the direction it came from.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 13, U-turn definition): A U-turn turns a vehicle around to go back in the direction it came from.",
@@ -6142,16 +6445,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "U-turn definition",
     coverageFactIds: ["pdf-fact-s4-u-turn-definition-a-u-turn-turns-a-vehicle-around-to-go-back-in-the-di"]
   },
+
   {
     id: "q308",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on U-turn lane position?",
-    imageUrl: '',
+    questionText: "How is u-turn lane position properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "To make a U-turn, signal and use the left turn lane or far-left lane.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 13, U-turn lane position): To make a U-turn, signal and use the left turn lane or far-left lane.",
@@ -6161,16 +6465,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "U-turn lane position",
     coverageFactIds: ["pdf-fact-s4-u-turn-lane-position-to-make-a-u-turn-signal-and-use-the-left-turn-lan"]
   },
+
   {
     id: "q309",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on U-turn across double yellow?",
-    imageUrl: '',
+    questionText: "How is u-turn across double yellow properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Drivers may make a U-turn across a double yellow line when otherwise legal.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 13, U-turn across double yellow): Drivers may make a U-turn across a double yellow line when otherwise legal.",
@@ -6180,16 +6485,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "U-turn across double yellow",
     coverageFactIds: ["pdf-fact-s4-u-turn-across-double-yellow-drivers-may-make-a-u-turn-across-a-double"]
   },
+
   {
     id: "q310",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on U-turn at green intersection?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding u-turn at green intersection?",
+    imageUrl: "",
     options: [
       "A U-turn is allowed at an intersection on a green light or green arrow unless a NO U-TURN sign is posted.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 13, U-turn at green intersection): A U-turn is allowed at an intersection on a green light or green arrow unless a NO U-TURN sign is posted.",
@@ -6199,16 +6505,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "U-turn at green intersection",
     coverageFactIds: ["pdf-fact-s4-u-turn-at-green-intersection-a-u-turn-is-allowed-at-an-intersection-on"]
   },
+
   {
     id: "q311",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on U-turn divided highway opening?",
-    imageUrl: '',
+    questionText: "How is u-turn divided highway opening properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "A U-turn is allowed on a divided highway only if a center divider opening is provided.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 13, U-turn divided highway opening): A U-turn is allowed on a divided highway only if a center divider opening is provided.",
@@ -6218,16 +6525,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "U-turn divided highway opening",
     coverageFactIds: ["pdf-fact-s4-u-turn-divided-highway-opening-a-u-turn-is-allowed-on-a-divided-highwa"]
   },
+
   {
     id: "q312",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No U-turn sign?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding no u-turn sign?",
+    imageUrl: "",
     options: [
       "Never make a U-turn where a NO U-TURN sign is posted.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 13, No U-turn sign): Never make a U-turn where a NO U-TURN sign is posted.",
@@ -6237,16 +6545,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No U-turn sign",
     coverageFactIds: ["pdf-fact-s4-no-u-turn-sign-never-make-a-u-turn-where-a-no-u-turn-sign-is-posted"]
   },
+
   {
     id: "q313",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No U-turn railroad crossing?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for no u-turn railroad crossing?",
+    imageUrl: "",
     options: [
       "Never make a U-turn at or on a railroad crossing.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 13, No U-turn railroad crossing): Never make a U-turn at or on a railroad crossing.",
@@ -6256,16 +6565,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No U-turn railroad crossing",
     coverageFactIds: ["pdf-fact-s4-no-u-turn-railroad-crossing-never-make-a-u-turn-at-or-on-a-railroad-cr"]
   },
+
   {
     id: "q314",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No U-turn one-way street?",
-    imageUrl: '',
+    questionText: "What should a driver know about no u-turn one-way street to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Never make a U-turn on a one-way street.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 13, No U-turn one-way street): Never make a U-turn on a one-way street.",
@@ -6275,16 +6585,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No U-turn one-way street",
     coverageFactIds: ["pdf-fact-s4-no-u-turn-one-way-street-never-make-a-u-turn-on-a-one-way-street"]
   },
+
   {
     id: "q315",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No U-turn fire station?",
-    imageUrl: '',
+    questionText: "What should a driver know about no u-turn fire station to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Never make a U-turn in front of a fire station and never use a fire station driveway to turn around.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 13, No U-turn fire station): Never make a U-turn in front of a fire station and never use a fire station driveway to turn around.",
@@ -6294,16 +6605,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No U-turn fire station",
     coverageFactIds: ["pdf-fact-s4-no-u-turn-fire-station-never-make-a-u-turn-in-front-of-a-fire-station"]
   },
+
   {
     id: "q316",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Left turn two-way to two-way?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding left turn two-way to two-way?",
+    imageUrl: "",
     options: [
       "A left turn from a two-way street should start in the left lane closest to the middle and end in the left lane closest to the middle in the new direction.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 14, Left turn two-way to two-way): A left turn from a two-way street should start in the left lane closest to the middle and end in the left lane closest to the middle in the new direction.",
@@ -6313,16 +6625,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Left turn two-way to two-way",
     coverageFactIds: ["pdf-fact-s4-left-turn-two-way-to-two-way-a-left-turn-from-a-two-way-street-should"]
   },
+
   {
     id: "q317",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Right turn lane path?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding right turn lane path?",
+    imageUrl: "",
     options: [
       "A right turn should begin and end in the lane closest to the right edge without swinging wide.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 14, Right turn lane path): A right turn should begin and end in the lane closest to the right edge without swinging wide.",
@@ -6332,16 +6645,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Right turn lane path",
     coverageFactIds: ["pdf-fact-s4-right-turn-lane-path-a-right-turn-should-begin-and-end-in-the-lane-clo"]
   },
+
   {
     id: "q318",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Left turn two-way to one-way?",
-    imageUrl: '',
+    questionText: "What should a driver know about left turn two-way to one-way to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "A left turn from a two-way street onto a one-way street starts from the far-left lane and may end in any open lane if there are three or more lanes.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 14, Left turn two-way to one-way): A left turn from a two-way street onto a one-way street starts from the far-left lane and may end in any open lane if there are three or more lanes.",
@@ -6351,16 +6665,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Left turn two-way to one-way",
     coverageFactIds: ["pdf-fact-s4-left-turn-two-way-to-one-way-a-left-turn-from-a-two-way-street-onto-a"]
   },
+
   {
     id: "q319",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Left turn one-way to two-way?",
-    imageUrl: '',
+    questionText: "What should a driver know about left turn one-way to two-way to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "A left turn from a one-way street onto a two-way street starts from the far-left lane and ends in the lane closest to the middle in the new direction.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 14, Left turn one-way to two-way): A left turn from a one-way street onto a two-way street starts from the far-left lane and ends in the lane closest to the middle in the new direction.",
@@ -6370,16 +6685,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Left turn one-way to two-way",
     coverageFactIds: ["pdf-fact-s4-left-turn-one-way-to-two-way-a-left-turn-from-a-one-way-street-onto-a"]
   },
+
   {
     id: "q320",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Left turn one-way to one-way?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for left turn one-way to one-way?",
+    imageUrl: "",
     options: [
       "A left turn from one one-way street to another starts from the far-left lane; bicyclists may use the left-turn lane.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 15, Left turn one-way to one-way): A left turn from one one-way street to another starts from the far-left lane; bicyclists may use the left-turn lane.",
@@ -6389,16 +6705,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Left turn one-way to one-way",
     coverageFactIds: ["pdf-fact-s4-left-turn-one-way-to-one-way-a-left-turn-from-one-one-way-street-to-an"]
   },
+
   {
     id: "q321",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Right turn one-way to one-way?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for right turn one-way to one-way?",
+    imageUrl: "",
     options: [
       "A right turn from one one-way street to another starts in the far-right lane and may end in any lane if safe.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 15, Right turn one-way to one-way): A right turn from one one-way street to another starts in the far-right lane and may end in any lane if safe.",
@@ -6408,16 +6725,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Right turn one-way to one-way",
     coverageFactIds: ["pdf-fact-s4-right-turn-one-way-to-one-way-a-right-turn-from-one-one-way-street-to"]
   },
+
   {
     id: "q322",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Braking method?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for braking method?",
+    imageUrl: "",
     options: [
       "To brake, remove your foot from the accelerator, let the vehicle slow, and lightly press the brake until stopped.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 15, Braking method): To brake, remove your foot from the accelerator, let the vehicle slow, and lightly press the brake until stopped.",
@@ -6427,16 +6745,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Braking method",
     coverageFactIds: ["pdf-fact-s4-braking-method-to-brake-remove-your-foot-from-the-accelerator-let-the"]
   },
+
   {
     id: "q323",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Limit line stopping?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding limit line stopping?",
+    imageUrl: "",
     options: [
       "When stopping at a limit line, do not cross over it.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 15, Limit line stopping): When stopping at a limit line, do not cross over it.",
@@ -6446,16 +6765,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Limit line stopping",
     coverageFactIds: ["pdf-fact-s4-limit-line-stopping-when-stopping-at-a-limit-line-do-not-cross-over-it"]
   },
+
   {
     id: "q324",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Stopped behind vehicle space?",
-    imageUrl: '',
+    questionText: "What should a driver know about stopped behind vehicle space to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "When stopping behind another vehicle, leave enough space to see its rear wheels.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 15, Stopped behind vehicle space): When stopping behind another vehicle, leave enough space to see its rear wheels.",
@@ -6465,16 +6785,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Stopped behind vehicle space",
     coverageFactIds: ["pdf-fact-s4-stopped-behind-vehicle-space-when-stopping-behind-another-vehicle-leav"]
   },
+
   {
     id: "q325",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Highway traffic right-of-way?",
-    imageUrl: '',
+    questionText: "How is right-of-way determined for highway traffic right-of-way?",
+    imageUrl: "",
     options: [
       "Highway traffic has the right-of-way when merging onto a highway.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 15, Highway traffic right-of-way): Highway traffic has the right-of-way when merging onto a highway.",
@@ -6484,16 +6805,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Highway traffic right-of-way",
     coverageFactIds: ["pdf-fact-s4-highway-traffic-right-of-way-highway-traffic-has-the-right-of-way-when"]
   },
+
   {
     id: "q326",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on On-ramp proper lane?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for on-ramp proper lane?",
+    imageUrl: "",
     options: [
       "When entering a highway, be in the proper lane on the on-ramp.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 15, On-ramp proper lane): When entering a highway, be in the proper lane on the on-ramp.",
@@ -6503,16 +6825,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "On-ramp proper lane",
     coverageFactIds: ["pdf-fact-s4-on-ramp-proper-lane-when-entering-a-highway-be-in-the-proper-lane-on-t"]
   },
+
   {
     id: "q327",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Merge when safe no stop?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding merge when safe no stop?",
+    imageUrl: "",
     options: [
       "Merge into highway traffic when safe and do not stop unless absolutely necessary.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, Merge when safe no stop): Merge into highway traffic when safe and do not stop unless absolutely necessary.",
@@ -6522,16 +6845,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Merge when safe no stop",
     coverageFactIds: ["pdf-fact-s4-merge-when-safe-no-stop-merge-into-highway-traffic-when-safe-and-do-no"]
   },
+
   {
     id: "q328",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Merge space?",
-    imageUrl: '',
+    questionText: "How is merge space properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Merge into a space large enough for your vehicle to safely join the lane.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, Merge space): Merge into a space large enough for your vehicle to safely join the lane.",
@@ -6541,16 +6865,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Merge space",
     coverageFactIds: ["pdf-fact-s4-merge-space-merge-into-a-space-large-enough-for-your-vehicle-to-safely"]
   },
+
   {
     id: "q329",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Merge mirrors and signals?",
-    imageUrl: '',
+    questionText: "What should a driver know about merge mirrors and signals to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Use mirrors and turn signals when merging.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, Merge mirrors and signals): Use mirrors and turn signals when merging.",
@@ -6560,16 +6885,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Merge mirrors and signals",
     coverageFactIds: ["pdf-fact-s4-merge-mirrors-and-signals-use-mirrors-and-turn-signals-when-merging"]
   },
+
   {
     id: "q330",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Merge shoulder check?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for merge shoulder check?",
+    imageUrl: "",
     options: [
       "Turn your head quickly to look over your shoulder before changing lanes or merging.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, Merge shoulder check): Turn your head quickly to look over your shoulder before changing lanes or merging.",
@@ -6579,16 +6905,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Merge shoulder check",
     coverageFactIds: ["pdf-fact-s4-merge-shoulder-check-turn-your-head-quickly-to-look-over-your-shoulder"]
   },
+
   {
     id: "q331",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No solid line merging?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding no solid line merging?",
+    imageUrl: "",
     options: [
       "Do not cross solid lines when merging or exiting.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, No solid line merging): Do not cross solid lines when merging or exiting.",
@@ -6598,16 +6925,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No solid line merging",
     coverageFactIds: ["pdf-fact-s4-no-solid-line-merging-do-not-cross-solid-lines-when-merging-or-exiting"]
   },
+
   {
     id: "q332",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Multiple lane changes?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding multiple lane changes?",
+    imageUrl: "",
     options: [
       "When crossing several lanes, signal and cross one lane at a time, checking blind spots each time.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, Multiple lane changes): When crossing several lanes, signal and cross one lane at a time, checking blind spots each time.",
@@ -6617,16 +6945,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Multiple lane changes",
     coverageFactIds: ["pdf-fact-s4-multiple-lane-changes-when-crossing-several-lanes-signal-and-cross-one"]
   },
+
   {
     id: "q333",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Exit preparation?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning exit preparation?",
+    imageUrl: "",
     options: [
       "To exit a highway safely, know your exit and be aware when it is approaching.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, Exit preparation): To exit a highway safely, know your exit and be aware when it is approaching.",
@@ -6636,16 +6965,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Exit preparation",
     coverageFactIds: ["pdf-fact-s4-exit-preparation-to-exit-a-highway-safely-know-your-exit-and-be-aware"]
   },
+
   {
     id: "q334",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Exit lane changes?",
-    imageUrl: '',
+    questionText: "What should a driver know about exit lane changes to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "When exiting, change lanes one at a time and check blind spots.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, Exit lane changes): When exiting, change lanes one at a time and check blind spots.",
@@ -6655,16 +6985,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Exit lane changes",
     coverageFactIds: ["pdf-fact-s4-exit-lane-changes-when-exiting-change-lanes-one-at-a-time-and-check-bl"]
   },
+
   {
     id: "q335",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Exit speed?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning exit speed?",
+    imageUrl: "",
     options: [
       "Make sure you are at a safe speed to exit.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, Exit speed): Make sure you are at a safe speed to exit.",
@@ -6674,16 +7005,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Exit speed",
     coverageFactIds: ["pdf-fact-s4-exit-speed-make-sure-you-are-at-a-safe-speed-to-exit"]
   },
+
   {
     id: "q336",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Blocked intersection with green light?",
-    imageUrl: '',
+    questionText: "How is blocked intersection with green light properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Even with a green light, do not enter an intersection if pedestrians or vehicles are blocking your path.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, Blocked intersection with green light): Even with a green light, do not enter an intersection if pedestrians or vehicles are blocking your path.",
@@ -6693,16 +7025,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Blocked intersection with green light",
     coverageFactIds: ["pdf-fact-s4-blocked-intersection-with-green-light-even-with-a-green-light-do-not-e"]
   },
+
   {
     id: "q337",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Do not trust right signal?",
-    imageUrl: '',
+    questionText: "How is do not trust right signal properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "When turning left, do not assume an oncoming vehicle signaling right will turn before reaching you.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 16, Do not trust right signal): When turning left, do not assume an oncoming vehicle signaling right will turn before reaching you.",
@@ -6712,16 +7045,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Do not trust right signal",
     coverageFactIds: ["pdf-fact-s4-do-not-trust-right-signal-when-turning-left-do-not-assume-an-oncoming"]
   },
+
   {
     id: "q338",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Judge passing space?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for judge passing space?",
+    imageUrl: "",
     options: [
       "Before passing, judge whether you have enough space when approaching oncoming traffic, bicyclists, hills, curves, intersections, or obstructions.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 17, Judge passing space): Before passing, judge whether you have enough space when approaching oncoming traffic, bicyclists, hills, curves, intersections, or obstructions.",
@@ -6731,16 +7065,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Judge passing space",
     coverageFactIds: ["pdf-fact-s4-judge-passing-space-before-passing-judge-whether-you-have-enough-space"]
   },
+
   {
     id: "q339",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Passing hill or curve distance?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for passing hill or curve distance?",
+    imageUrl: "",
     options: [
       "To pass safely near a hill or curve, the hill or curve should be at least one-third of a mile ahead.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 17, Passing hill or curve distance): To pass safely near a hill or curve, the hill or curve should be at least one-third of a mile ahead.",
@@ -6750,16 +7085,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Passing hill or curve distance",
     coverageFactIds: ["pdf-fact-s4-passing-hill-or-curve-distance-to-pass-safely-near-a-hill-or-curve-the"]
   },
+
   {
     id: "q340",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Look ahead before passing?",
-    imageUrl: '',
+    questionText: "What should a driver know about look ahead before passing to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Before passing, look ahead for road conditions that may cause other vehicles to move into your lane.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 17, Look ahead before passing): Before passing, look ahead for road conditions that may cause other vehicles to move into your lane.",
@@ -6769,16 +7105,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Look ahead before passing",
     coverageFactIds: ["pdf-fact-s4-look-ahead-before-passing-before-passing-look-ahead-for-road-condition"]
   },
+
   {
     id: "q341",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Do not pass blind hill or curve?",
-    imageUrl: '',
+    questionText: "How is do not pass blind hill or curve properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Do not pass when approaching a hill or curve if you cannot see whether traffic is approaching.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 17, Do not pass blind hill or curve): Do not pass when approaching a hill or curve if you cannot see whether traffic is approaching.",
@@ -6788,16 +7125,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Do not pass blind hill or curve",
     coverageFactIds: ["pdf-fact-s4-do-not-pass-blind-hill-or-curve-do-not-pass-when-approaching-a-hill-or"]
   },
+
   {
     id: "q342",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No passing crossroads driveways?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding no passing crossroads driveways?",
+    imageUrl: "",
     options: [
       "Do not pass at crossroads or driveways.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 17, No passing crossroads driveways): Do not pass at crossroads or driveways.",
@@ -6807,16 +7145,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No passing crossroads driveways",
     coverageFactIds: ["pdf-fact-s4-no-passing-crossroads-driveways-do-not-pass-at-crossroads-or-driveways"]
   },
+
   {
     id: "q343",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No passing without return space?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding no passing without return space?",
+    imageUrl: "",
     options: [
       "Do not pass unless you have enough space to return to your lane.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 17, No passing without return space): Do not pass unless you have enough space to return to your lane.",
@@ -6826,16 +7165,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No passing without return space",
     coverageFactIds: ["pdf-fact-s4-no-passing-without-return-space-do-not-pass-unless-you-have-enough-spa"]
   },
+
   {
     id: "q344",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on How to pass?",
-    imageUrl: '',
+    questionText: "What is the correct procedure to pass?",
+    imageUrl: "",
     options: [
       "To pass on an open highway, signal, check blind spots, enter the passing lane, speed up, then signal and return.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 17, How to pass): To pass on an open highway, signal, check blind spots, enter the passing lane, speed up, then signal and return.",
@@ -6845,16 +7185,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "How to pass",
     coverageFactIds: ["pdf-fact-s4-how-to-pass-to-pass-on-an-open-highway-signal-check-blind-spots-enter"]
   },
+
   {
     id: "q345",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No off-road passing?",
-    imageUrl: '',
+    questionText: "How is no off-road passing properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Never drive off the paved or main-traveled part of the road to pass.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 17, No off-road passing): Never drive off the paved or main-traveled part of the road to pass.",
@@ -6864,16 +7205,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No off-road passing",
     coverageFactIds: ["pdf-fact-s4-no-off-road-passing-never-drive-off-the-paved-or-main-traveled-part-of"]
   },
+
   {
     id: "q346",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Being passed?",
-    imageUrl: '',
+    questionText: "How is being passed properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "If another vehicle is passing or signaling to pass, allow it, maintain lane position, and maintain speed.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 17, Being passed): If another vehicle is passing or signaling to pass, allow it, maintain lane position, and maintain speed.",
@@ -6883,16 +7225,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Being passed",
     coverageFactIds: ["pdf-fact-s4-being-passed-if-another-vehicle-is-passing-or-signaling-to-pass-allow"]
   },
+
   {
     id: "q347",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Parallel parking space length?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding parallel parking space length?",
+    imageUrl: "",
     options: [
       "Parallel parking requires a space at least three feet longer than your vehicle.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 18, Parallel parking space length): Parallel parking requires a space at least three feet longer than your vehicle.",
@@ -6902,16 +7245,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Parallel parking space length",
     coverageFactIds: ["pdf-fact-s4-parallel-parking-space-length-parallel-parking-requires-a-space-at-lea"]
   },
+
   {
     id: "q348",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Parallel parking signal?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding parallel parking signal?",
+    imageUrl: "",
     options: [
       "Signal to show you plan to park.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 18, Parallel parking signal): Signal to show you plan to park.",
@@ -6921,16 +7265,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Parallel parking signal",
     coverageFactIds: ["pdf-fact-s4-parallel-parking-signal-signal-to-show-you-plan-to-park"]
   },
+
   {
     id: "q349",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Parallel parking side distance?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning parallel parking side distance?",
+    imageUrl: "",
     options: [
       "Pull alongside the vehicle in front of the space and leave about two feet between vehicles.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 18, Parallel parking side distance): Pull alongside the vehicle in front of the space and leave about two feet between vehicles.",
@@ -6940,16 +7285,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Parallel parking side distance",
     coverageFactIds: ["pdf-fact-s4-parallel-parking-side-distance-pull-alongside-the-vehicle-in-front-of"]
   },
+
   {
     id: "q350",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Parallel parking blind spots?",
-    imageUrl: '',
+    questionText: "How is parallel parking blind spots properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Before backing into a parallel parking space, check mirrors and blind spots for vehicles and pedestrians.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 18, Parallel parking blind spots): Before backing into a parallel parking space, check mirrors and blind spots for vehicles and pedestrians.",
@@ -6959,16 +7305,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Parallel parking blind spots",
     coverageFactIds: ["pdf-fact-s4-parallel-parking-blind-spots-before-backing-into-a-parallel-parking-sp"]
   },
+
   {
     id: "q351",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Parallel parking backing angle?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for parallel parking backing angle?",
+    imageUrl: "",
     options: [
       "Back into a parallel parking space at about a 45-degree angle.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 18, Parallel parking backing angle): Back into a parallel parking space at about a 45-degree angle.",
@@ -6978,16 +7325,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Parallel parking backing angle",
     coverageFactIds: ["pdf-fact-s4-parallel-parking-backing-angle-back-into-a-parallel-parking-space-at-a"]
   },
+
   {
     id: "q352",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Parking brake after parallel parking?",
-    imageUrl: '',
+    questionText: "What should a driver know about parking brake after parallel parking to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "After parallel parking, turn off the vehicle and set the parking brake.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 18, Parking brake after parallel parking): After parallel parking, turn off the vehicle and set the parking brake.",
@@ -6997,16 +7345,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Parking brake after parallel parking",
     coverageFactIds: ["pdf-fact-s4-parking-brake-after-parallel-parking-after-parallel-parking-turn-off-t"]
   },
+
   {
     id: "q353",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Look before exiting parked vehicle?",
-    imageUrl: '',
+    questionText: "How is look before exiting parked vehicle properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Before exiting a parked vehicle, look carefully for passing vehicles, bicycles, and motorcycles.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 18, Look before exiting parked vehicle): Before exiting a parked vehicle, look carefully for passing vehicles, bicycles, and motorcycles.",
@@ -7016,16 +7365,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Look before exiting parked vehicle",
     coverageFactIds: ["pdf-fact-s4-look-before-exiting-parked-vehicle-before-exiting-a-parked-vehicle-loo"]
   },
+
   {
     id: "q354",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Straight-line backing traffic check?",
-    imageUrl: '',
+    questionText: "How is straight-line backing traffic check properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Before straight-line backing, observe traffic and check blind spots.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 19, Straight-line backing traffic check): Before straight-line backing, observe traffic and check blind spots.",
@@ -7035,16 +7385,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Straight-line backing traffic check",
     coverageFactIds: ["pdf-fact-s4-straight-line-backing-traffic-check-before-straight-line-backing-obser"]
   },
+
   {
     id: "q355",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Straight-line backing signal?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding straight-line backing signal?",
+    imageUrl: "",
     options: [
       "Activate the turn signal before pulling up to the curb and cancel it when completed.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 19, Straight-line backing signal): Activate the turn signal before pulling up to the curb and cancel it when completed.",
@@ -7054,16 +7405,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Straight-line backing signal",
     coverageFactIds: ["pdf-fact-s4-straight-line-backing-signal-activate-the-turn-signal-before-pulling-u"]
   },
+
   {
     id: "q356",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Straight-line backing distance?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding straight-line backing distance?",
+    imageUrl: "",
     options: [
       "Back in a straight line for three vehicle lengths while remaining within three feet of the curb.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 19, Straight-line backing distance): Back in a straight line for three vehicle lengths while remaining within three feet of the curb.",
@@ -7073,16 +7425,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Straight-line backing distance",
     coverageFactIds: ["pdf-fact-s4-straight-line-backing-distance-back-in-a-straight-line-for-three-vehic"]
   },
+
   {
     id: "q357",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Straight-line backing control?",
-    imageUrl: '',
+    questionText: "What should a driver know about straight-line backing control to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Back at a smooth, safe speed and adjust the steering wheel as needed.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 19, Straight-line backing control): Back at a smooth, safe speed and adjust the steering wheel as needed.",
@@ -7092,16 +7445,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Straight-line backing control",
     coverageFactIds: ["pdf-fact-s4-straight-line-backing-control-back-at-a-smooth-safe-speed-and-adjust-t"]
   },
+
   {
     id: "q358",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Hill parking brake?",
-    imageUrl: '',
+    questionText: "How is hill parking brake properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "When parking on a hill, set the parking brake and leave the vehicle in park or in gear for a manual transmission.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 19, Hill parking brake): When parking on a hill, set the parking brake and leave the vehicle in park or in gear for a manual transmission.",
@@ -7111,16 +7465,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Hill parking brake",
     coverageFactIds: ["pdf-fact-s4-hill-parking-brake-when-parking-on-a-hill-set-the-parking-brake-and-le"]
   },
+
   {
     id: "q359",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Sloping driveway parking?",
-    imageUrl: '',
+    questionText: "What should a driver know about sloping driveway parking to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "On a sloping driveway, turn the wheels so the vehicle will not roll into the street.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 19, Sloping driveway parking): On a sloping driveway, turn the wheels so the vehicle will not roll into the street.",
@@ -7130,16 +7485,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Sloping driveway parking",
     coverageFactIds: ["pdf-fact-s4-sloping-driveway-parking-on-a-sloping-driveway-turn-the-wheels-so-the"]
   },
+
   {
     id: "q360",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No parking sign?",
-    imageUrl: '',
+    questionText: "What should a driver know about no parking sign to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Never park where a NO PARKING sign is posted.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 20, No parking sign): Never park where a NO PARKING sign is posted.",
@@ -7149,16 +7505,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No parking sign",
     coverageFactIds: ["pdf-fact-s4-no-parking-sign-never-park-where-a-no-parking-sign-is-posted"]
   },
+
   {
     id: "q361",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No parking on crosswalk?",
-    imageUrl: '',
+    questionText: "What should a driver know about no parking on crosswalk to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Never park on a marked or unmarked crosswalk.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 20, No parking on crosswalk): Never park on a marked or unmarked crosswalk.",
@@ -7168,16 +7525,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No parking on crosswalk",
     coverageFactIds: ["pdf-fact-s4-no-parking-on-crosswalk-never-park-on-a-marked-or-unmarked-crosswalk"]
   },
+
   {
     id: "q362",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No parking on sidewalk driveway?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding no parking on sidewalk driveway?",
+    imageUrl: "",
     options: [
       "Never park on a sidewalk, partially blocking a sidewalk, or in front of a driveway.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 20, No parking on sidewalk driveway): Never park on a sidewalk, partially blocking a sidewalk, or in front of a driveway.",
@@ -7187,16 +7545,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No parking on sidewalk driveway",
     coverageFactIds: ["pdf-fact-s4-no-parking-on-sidewalk-driveway-never-park-on-a-sidewalk-partially-blo"]
   },
+
   {
     id: "q363",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No parking crosshatched disabled area?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding no parking crosshatched disabled area?",
+    imageUrl: "",
     options: [
       "Never park in the crosshatched area next to a designated disabled parking space.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 20, No parking crosshatched disabled area): Never park in the crosshatched area next to a designated disabled parking space.",
@@ -7206,16 +7565,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No parking crosshatched disabled area",
     coverageFactIds: ["pdf-fact-s4-no-parking-crosshatched-disabled-area-never-park-in-the-crosshatched-a"]
   },
+
   {
     id: "q364",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No parking zero-emission space?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning no parking zero-emission space?",
+    imageUrl: "",
     options: [
       "Never park in a space designated for parking or fueling zero-emission vehicles unless driving a zero-emission vehicle.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 20, No parking zero-emission space): Never park in a space designated for parking or fueling zero-emission vehicles unless driving a zero-emission vehicle.",
@@ -7225,16 +7585,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No parking zero-emission space",
     coverageFactIds: ["pdf-fact-s4-no-parking-zero-emission-space-never-park-in-a-space-designated-for-pa"]
   },
+
   {
     id: "q365",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No parking tunnel or bridge?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding no parking tunnel or bridge?",
+    imageUrl: "",
     options: [
       "Never park in a tunnel or on a bridge unless signs permit it.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 20, No parking tunnel or bridge): Never park in a tunnel or on a bridge unless signs permit it.",
@@ -7244,16 +7605,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No parking tunnel or bridge",
     coverageFactIds: ["pdf-fact-s4-no-parking-tunnel-or-bridge-never-park-in-a-tunnel-or-on-a-bridge-unle"]
   },
+
   {
     id: "q366",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No parking safety zone?",
-    imageUrl: '',
+    questionText: "What should a driver know about no parking safety zone to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Never park between a safety zone and the curb.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 20, No parking safety zone): Never park between a safety zone and the curb.",
@@ -7263,16 +7625,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No parking safety zone",
     coverageFactIds: ["pdf-fact-s4-no-parking-safety-zone-never-park-between-a-safety-zone-and-the-curb"]
   },
+
   {
     id: "q367",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Freeway parking exception?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for freeway parking exception?",
+    imageUrl: "",
     options: [
       "Do not stop or park on a freeway except in emergencies, when directed by law enforcement, or where specifically permitted.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Freeway parking exception): Do not stop or park on a freeway except in emergencies, when directed by law enforcement, or where specifically permitted.",
@@ -7282,16 +7645,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Freeway parking exception",
     coverageFactIds: ["pdf-fact-s4-freeway-parking-exception-do-not-stop-or-park-on-a-freeway-except-in-e"]
   },
+
   {
     id: "q368",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Freeway stopped vehicle position?",
-    imageUrl: '',
+    questionText: "How is freeway stopped vehicle position properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "If you must stop on a freeway, park completely off the pavement and stay in the vehicle with doors locked until help arrives.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Freeway stopped vehicle position): If you must stop on a freeway, park completely off the pavement and stay in the vehicle with doors locked until help arrives.",
@@ -7301,16 +7665,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Freeway stopped vehicle position",
     coverageFactIds: ["pdf-fact-s4-freeway-stopped-vehicle-position-if-you-must-stop-on-a-freeway-park-co"]
   },
+
   {
     id: "q369",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Officer stop right signal?",
-    imageUrl: '',
+    questionText: "How is officer stop right signal properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "During a law enforcement stop, turn on your right turn signal to acknowledge the officer.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Officer stop right signal): During a law enforcement stop, turn on your right turn signal to acknowledge the officer.",
@@ -7320,16 +7685,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Officer stop right signal",
     coverageFactIds: ["pdf-fact-s4-officer-stop-right-signal-during-a-law-enforcement-stop-turn-on-your-r"]
   },
+
   {
     id: "q370",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Officer stop right shoulder?",
-    imageUrl: '',
+    questionText: "What should a driver know about officer stop right shoulder to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Move completely onto the right shoulder for a law enforcement stop, even if in the carpool or HOV lane.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Officer stop right shoulder): Move completely onto the right shoulder for a law enforcement stop, even if in the carpool or HOV lane.",
@@ -7339,16 +7705,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Officer stop right shoulder",
     coverageFactIds: ["pdf-fact-s4-officer-stop-right-shoulder-move-completely-onto-the-right-shoulder-fo"]
   },
+
   {
     id: "q371",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Officer stop well-lit?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for officer stop well-lit?",
+    imageUrl: "",
     options: [
       "Stop in a well-lit area when possible during a law enforcement stop.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Officer stop well-lit): Stop in a well-lit area when possible during a law enforcement stop.",
@@ -7358,16 +7725,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Officer stop well-lit",
     coverageFactIds: ["pdf-fact-s4-officer-stop-well-lit-stop-in-a-well-lit-area-when-possible-during-a-l"]
   },
+
   {
     id: "q372",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Officer stop radio off?",
-    imageUrl: '',
+    questionText: "What should a driver know about officer stop radio off to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Turn off the radio during a law enforcement stop.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Officer stop radio off): Turn off the radio during a law enforcement stop.",
@@ -7377,16 +7745,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Officer stop radio off",
     coverageFactIds: ["pdf-fact-s4-officer-stop-radio-off-turn-off-the-radio-during-a-law-enforcement-sto"]
   },
+
   {
     id: "q373",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Officer stop stay in vehicle?",
-    imageUrl: '',
+    questionText: "What should a driver know about officer stop stay in vehicle to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Remain inside the vehicle unless directed by the officer to get out.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Officer stop stay in vehicle): Remain inside the vehicle unless directed by the officer to get out.",
@@ -7396,16 +7765,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Officer stop stay in vehicle",
     coverageFactIds: ["pdf-fact-s4-officer-stop-stay-in-vehicle-remain-inside-the-vehicle-unless-directed"]
   },
+
   {
     id: "q374",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Officer stop roll window?",
-    imageUrl: '',
+    questionText: "How is officer stop roll window properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Roll down the window after stopping and before the officer contacts you.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Officer stop roll window): Roll down the window after stopping and before the officer contacts you.",
@@ -7415,16 +7785,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Officer stop roll window",
     coverageFactIds: ["pdf-fact-s4-officer-stop-roll-window-roll-down-the-window-after-stopping-and-befor"]
   },
+
   {
     id: "q375",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Officer stop hands visible?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding officer stop hands visible?",
+    imageUrl: "",
     options: [
       "Drivers and passengers should place their hands in clear view before officer contact.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Officer stop hands visible): Drivers and passengers should place their hands in clear view before officer contact.",
@@ -7434,16 +7805,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Officer stop hands visible",
     coverageFactIds: ["pdf-fact-s4-officer-stop-hands-visible-drivers-and-passengers-should-place-their-h"]
   },
+
   {
     id: "q376",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Officer stop reason exception?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for officer stop reason exception?",
+    imageUrl: "",
     options: [
       "An officer may delay stating the reason for a stop if doing so is necessary to protect life or property from imminent threat.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Officer stop reason exception): An officer may delay stating the reason for a stop if doing so is necessary to protect life or property from imminent threat.",
@@ -7453,16 +7825,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Officer stop reason exception",
     coverageFactIds: ["pdf-fact-s4-officer-stop-reason-exception-an-officer-may-delay-stating-the-reason"]
   },
+
   {
     id: "q377",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Officer stop reason documented?",
-    imageUrl: '',
+    questionText: "What should a driver know about officer stop reason documented to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "The reason for the stop must be documented on the citation or enforcement report.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 21, Officer stop reason documented): The reason for the stop must be documented on the citation or enforcement report.",
@@ -7472,16 +7845,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Officer stop reason documented",
     coverageFactIds: ["pdf-fact-s4-officer-stop-reason-documented-the-reason-for-the-stop-must-be-documen"]
   },
+
   {
     id: "q378",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Refusing consent to search?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for refusing consent to search?",
+    imageUrl: "",
     options: [
       "If an officer requests permission to search, you may clearly say that you do not give permission, but you may not resist or obstruct a lawful search.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 22, Refusing consent to search): If an officer requests permission to search, you may clearly say that you do not give permission, but you may not resist or obstruct a lawful search.",
@@ -7491,16 +7865,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Refusing consent to search",
     coverageFactIds: ["pdf-fact-s4-refusing-consent-to-search-if-an-officer-requests-permission-to-search"]
   },
+
   {
     id: "q379",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Limited search for documents?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding limited search for documents?",
+    imageUrl: "",
     options: [
       "If the driver does not produce required documents, officers may conduct a limited search for them.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 22, Limited search for documents): If the driver does not produce required documents, officers may conduct a limited search for them.",
@@ -7510,16 +7885,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Limited search for documents",
     coverageFactIds: ["pdf-fact-s4-limited-search-for-documents-if-the-driver-does-not-produce-required-d"]
   },
+
   {
     id: "q380",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Passenger identification request?",
-    imageUrl: '',
+    questionText: "What should a driver know about passenger identification request to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Passengers can decline an identification request unless circumstances legally require them to identify themselves.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 22, Passenger identification request): Passengers can decline an identification request unless circumstances legally require them to identify themselves.",
@@ -7529,16 +7905,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Passenger identification request",
     coverageFactIds: ["pdf-fact-s4-passenger-identification-request-passengers-can-decline-an-identificat"]
   },
+
   {
     id: "q381",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Officer exit or stay order?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning officer exit or stay order?",
+    imageUrl: "",
     options: [
       "During a traffic stop, an officer may legally require the driver and passengers to exit or stay inside the vehicle.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 22, Officer exit or stay order): During a traffic stop, an officer may legally require the driver and passengers to exit or stay inside the vehicle.",
@@ -7548,16 +7925,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Officer exit or stay order",
     coverageFactIds: ["pdf-fact-s4-officer-exit-or-stay-order-during-a-traffic-stop-an-officer-may-legall"]
   },
+
   {
     id: "q382",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Right to record stop?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning right to record stop?",
+    imageUrl: "",
     options: [
       "Drivers and passengers generally have a First Amendment right to record law enforcement interactions in public spaces.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 23, Right to record stop): Drivers and passengers generally have a First Amendment right to record law enforcement interactions in public spaces.",
@@ -7567,16 +7945,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Right to record stop",
     coverageFactIds: ["pdf-fact-s4-right-to-record-stop-drivers-and-passengers-generally-have-a-first-ame"]
   },
+
   {
     id: "q383",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Recording disclosure?",
-    imageUrl: '',
+    questionText: "How is recording disclosure properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "If recording a law enforcement stop, you should immediately make that clear.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 23, Recording disclosure): If recording a law enforcement stop, you should immediately make that clear.",
@@ -7586,16 +7965,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Recording disclosure",
     coverageFactIds: ["pdf-fact-s4-recording-disclosure-if-recording-a-law-enforcement-stop-you-should-im"]
   },
+
   {
     id: "q384",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No concealed reach for device?",
-    imageUrl: '',
+    questionText: "What should a driver know about no concealed reach for device to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Do not reach into concealed areas for a recording device without the officer’s permission.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 23, No concealed reach for device): Do not reach into concealed areas for a recording device without the officer’s permission.",
@@ -7605,16 +7985,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No concealed reach for device",
     coverageFactIds: ["pdf-fact-s4-no-concealed-reach-for-device-do-not-reach-into-concealed-areas-for-a"]
   },
+
   {
     id: "q385",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Recording device protection?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding recording device protection?",
+    imageUrl: "",
     options: [
       "If recording does not interfere with lawful duties, an officer cannot confiscate or delete the recording merely because you are recording.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 23, Recording device protection): If recording does not interfere with lawful duties, an officer cannot confiscate or delete the recording merely because you are recording.",
@@ -7624,16 +8005,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Recording device protection",
     coverageFactIds: ["pdf-fact-s4-recording-device-protection-if-recording-does-not-interfere-with-lawfu"]
   },
+
   {
     id: "q386",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Phone unlock refusal?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning phone unlock refusal?",
+    imageUrl: "",
     options: [
       "In general, you may deny a request to unlock a phone or provide a password, though some circumstances may differ.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 23, Phone unlock refusal): In general, you may deny a request to unlock a phone or provide a password, though some circumstances may differ.",
@@ -7643,16 +8025,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Phone unlock refusal",
     coverageFactIds: ["pdf-fact-s4-phone-unlock-refusal-in-general-you-may-deny-a-request-to-unlock-a-pho"]
   },
+
   {
     id: "q387",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No retaliation for public recording?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for no retaliation for public recording?",
+    imageUrl: "",
     options: [
       "Government employees cannot retaliate just because you recorded something in public.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 23, No retaliation for public recording): Government employees cannot retaliate just because you recorded something in public.",
@@ -7662,16 +8045,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No retaliation for public recording",
     coverageFactIds: ["pdf-fact-s4-no-retaliation-for-public-recording-government-employees-cannot-retali"]
   },
+
   {
     id: "q388",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No physical resistance?",
-    imageUrl: '',
+    questionText: "How is no physical resistance properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Even if you believe your rights were violated, do not physically resist or use violence against an officer.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 23, No physical resistance): Even if you believe your rights were violated, do not physically resist or use violence against an officer.",
@@ -7681,16 +8065,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No physical resistance",
     coverageFactIds: ["pdf-fact-s4-no-physical-resistance-even-if-you-believe-your-rights-were-violated-d"]
   },
+
   {
     id: "q389",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Complaint right?",
-    imageUrl: '',
+    questionText: "What should a driver know about complaint right to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "The public has a right to file a complaint against a law enforcement agency, and government retaliation for doing so is illegal.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 23, Complaint right): The public has a right to file a complaint against a law enforcement agency, and government retaliation for doing so is illegal.",
@@ -7700,16 +8085,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Complaint right",
     coverageFactIds: ["pdf-fact-s4-complaint-right-the-public-has-a-right-to-file-a-complaint-against-a-l"]
   },
+
   {
     id: "q390",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Protected discrimination categories?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for protected discrimination categories?",
+    imageUrl: "",
     options: [
       "A person has the right to be free from discrimination based on protected characteristics during law enforcement interactions.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 4: Navigating the Roads, page 23, Protected discrimination categories): A person has the right to be free from discrimination based on protected characteristics during law enforcement interactions.",
@@ -7719,16 +8105,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Protected discrimination categories",
     coverageFactIds: ["pdf-fact-s4-protected-discrimination-categories-a-person-has-the-right-to-be-free"]
   },
+
   {
     id: "q391",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Yield at signals and signs?",
-    imageUrl: '',
+    questionText: "How is yield at signals and signs properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "At or approaching traffic signals or signs, yield to pedestrians, bicyclists, and other nearby vehicles that may have the right-of-way.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 24, Yield at signals and signs): At or approaching traffic signals or signs, yield to pedestrians, bicyclists, and other nearby vehicles that may have the right-of-way.",
@@ -7738,16 +8125,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Yield at signals and signs",
     coverageFactIds: ["pdf-fact-s5-yield-at-signals-and-signs-at-or-approaching-traffic-signals-or-signs"]
   },
+
   {
     id: "q392",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Right turn at red light?",
-    imageUrl: '',
+    questionText: "What should a driver know about right turn at red light to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "A right turn at a red light is allowed only if no NO TURN ON RED sign is posted, after stopping and yielding when safe.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 24, Right turn at red light): A right turn at a red light is allowed only if no NO TURN ON RED sign is posted, after stopping and yielding when safe.",
@@ -7757,16 +8145,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Right turn at red light",
     coverageFactIds: ["pdf-fact-s5-right-turn-at-red-light-a-right-turn-at-a-red-light-is-allowed-only-if"]
   },
+
   {
     id: "q393",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Yellow arrow?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding yellow arrow?",
+    imageUrl: "",
     options: [
       "A yellow arrow means protected turning time is ending; stop if safe or cautiously complete the turn if already in the intersection.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 25, Yellow arrow): A yellow arrow means protected turning time is ending; stop if safe or cautiously complete the turn if already in the intersection.",
@@ -7776,16 +8165,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Yellow arrow",
     coverageFactIds: ["pdf-fact-s5-yellow-arrow-a-yellow-arrow-means-protected-turning-time-is-ending-sto"]
   },
+
   {
     id: "q394",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Flashing yellow arrow?",
-    imageUrl: '',
+    questionText: "What should a driver know about flashing yellow arrow to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "A flashing yellow arrow allows a turn after yielding to oncoming traffic; the turn is not protected.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 25, Flashing yellow arrow): A flashing yellow arrow allows a turn after yielding to oncoming traffic; the turn is not protected.",
@@ -7795,16 +8185,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Flashing yellow arrow",
     coverageFactIds: ["pdf-fact-s5-flashing-yellow-arrow-a-flashing-yellow-arrow-allows-a-turn-after-yiel"]
   },
+
   {
     id: "q395",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Green arrow?",
-    imageUrl: '',
+    questionText: "What should a driver know about green arrow to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "A green arrow means go in the arrow direction as a protected turn while oncoming vehicles are stopped.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 25, Green arrow): A green arrow means go in the arrow direction as a protected turn while oncoming vehicles are stopped.",
@@ -7814,16 +8205,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Green arrow",
     coverageFactIds: ["pdf-fact-s5-green-arrow-a-green-arrow-means-go-in-the-arrow-direction-as-a-protect"]
   },
+
   {
     id: "q396",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on WALK signal?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding walk signal?",
+    imageUrl: "",
     options: [
       "A WALK or walking person signal means pedestrians may cross the street.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 25, WALK signal): A WALK or walking person signal means pedestrians may cross the street.",
@@ -7833,16 +8225,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "WALK signal",
     coverageFactIds: ["pdf-fact-s5-walk-signal-a-walk-or-walking-person-signal-means-pedestrians-may-cros"]
   },
+
   {
     id: "q397",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on DON’T WALK signal?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning don’t walk signal?",
+    imageUrl: "",
     options: [
       "A DON’T WALK or raised hand signal means pedestrians may not cross the street.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 25, DON’T WALK signal): A DON’T WALK or raised hand signal means pedestrians may not cross the street.",
@@ -7852,16 +8245,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "DON’T WALK signal",
     coverageFactIds: ["pdf-fact-s5-don-t-walk-signal-a-don-t-walk-or-raised-hand-signal-means-pedestrians"]
   },
+
   {
     id: "q398",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Diagonal crossing?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding diagonal crossing?",
+    imageUrl: "",
     options: [
       "At a diagonal crossing, pedestrians may cross in any direction only when the WALK signal allows it.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 26, Diagonal crossing): At a diagonal crossing, pedestrians may cross in any direction only when the WALK signal allows it.",
@@ -7871,16 +8265,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Diagonal crossing",
     coverageFactIds: ["pdf-fact-s5-diagonal-crossing-at-a-diagonal-crossing-pedestrians-may-cross-in-any"]
   },
+
   {
     id: "q399",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Pedestrian sounds?",
-    imageUrl: '',
+    questionText: "What should a driver know about pedestrian sounds to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Sounds such as beeps, chirps, or verbal messages help blind or visually impaired pedestrians cross.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 25, Pedestrian sounds): Sounds such as beeps, chirps, or verbal messages help blind or visually impaired pedestrians cross.",
@@ -7890,16 +8285,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Pedestrian sounds",
     coverageFactIds: ["pdf-fact-s5-pedestrian-sounds-sounds-such-as-beeps-chirps-or-verbal-messages-help"]
   },
+
   {
     id: "q400",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Pedestrian push button?",
-    imageUrl: '',
+    questionText: "What should a driver know about pedestrian push button to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "A pedestrian push button activates the WALK or walking person signal.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 26, Pedestrian push button): A pedestrian push button activates the WALK or walking person signal.",
@@ -7909,16 +8305,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Pedestrian push button",
     coverageFactIds: ["pdf-fact-s5-pedestrian-push-button-a-pedestrian-push-button-activates-the-walk-or"]
   },
+
   {
     id: "q401",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No pedestrian signals?",
-    imageUrl: '',
+    questionText: "How is no pedestrian signals properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "If no pedestrian signals are present, pedestrians should obey vehicle traffic signals.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 26, No pedestrian signals): If no pedestrian signals are present, pedestrians should obey vehicle traffic signals.",
@@ -7928,16 +8325,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No pedestrian signals",
     coverageFactIds: ["pdf-fact-s5-no-pedestrian-signals-if-no-pedestrian-signals-are-present-pedestrians"]
   },
+
   {
     id: "q402",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Warning signs obey?",
-    imageUrl: '',
+    questionText: "What should a driver know about warning signs obey to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Drivers must obey all warning signs regardless of their shape or color.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 26, Warning signs obey): Drivers must obey all warning signs regardless of their shape or color.",
@@ -7947,16 +8345,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Warning signs obey",
     coverageFactIds: ["pdf-fact-s5-warning-signs-obey-drivers-must-obey-all-warning-signs-regardless-of-t"]
   },
+
   {
     id: "q403",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Regulatory sign?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for regulatory sign?",
+    imageUrl: "",
     options: [
       "Red and white regulatory signs communicate instructions drivers must follow.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 26, Regulatory sign): Red and white regulatory signs communicate instructions drivers must follow.",
@@ -7966,16 +8365,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Regulatory sign",
     coverageFactIds: ["pdf-fact-s5-regulatory-sign-red-and-white-regulatory-signs-communicate-instruction"]
   },
+
   {
     id: "q404",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on DO NOT ENTER sign?",
-    imageUrl: '',
+    questionText: "What should a driver know about do not enter sign to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "A DO NOT ENTER sign means do not enter the road or ramp where posted.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 26, DO NOT ENTER sign): A DO NOT ENTER sign means do not enter the road or ramp where posted.",
@@ -7985,16 +8385,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "DO NOT ENTER sign",
     coverageFactIds: ["pdf-fact-s5-do-not-enter-sign-a-do-not-enter-sign-means-do-not-enter-the-road-or-r"]
   },
+
   {
     id: "q405",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Red circle slash?",
-    imageUrl: '',
+    questionText: "How is red circle slash properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "A red circle with a slash shows something you cannot do.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 26, Red circle slash): A red circle with a slash shows something you cannot do.",
@@ -8004,16 +8405,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Red circle slash",
     coverageFactIds: ["pdf-fact-s5-red-circle-slash-a-red-circle-with-a-slash-shows-something-you-cannot"]
   },
+
   {
     id: "q406",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Railroad emergency sign?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for railroad emergency sign?",
+    imageUrl: "",
     options: [
       "Many railroad crossings have a blue-and-white sign explaining what to do for emergencies or a stalled vehicle on the tracks.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 27, Railroad emergency sign): Many railroad crossings have a blue-and-white sign explaining what to do for emergencies or a stalled vehicle on the tracks.",
@@ -8023,16 +8425,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Railroad emergency sign",
     coverageFactIds: ["pdf-fact-s5-railroad-emergency-sign-many-railroad-crossings-have-a-blue-and-white"]
   },
+
   {
     id: "q407",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Diamond warning sign?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for diamond warning sign?",
+    imageUrl: "",
     options: [
       "A diamond-shaped sign warns of specific road conditions and dangers ahead.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 27, Diamond warning sign): A diamond-shaped sign warns of specific road conditions and dangers ahead.",
@@ -8042,16 +8445,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Diamond warning sign",
     coverageFactIds: ["pdf-fact-s5-diamond-warning-sign-a-diamond-shaped-sign-warns-of-specific-road-cond"]
   },
+
   {
     id: "q408",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on White rectangular sign?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning white rectangular sign?",
+    imageUrl: "",
     options: [
       "A white rectangular sign communicates important rules drivers must obey.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 27, White rectangular sign): A white rectangular sign communicates important rules drivers must obey.",
@@ -8061,16 +8465,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "White rectangular sign",
     coverageFactIds: ["pdf-fact-s5-white-rectangular-sign-a-white-rectangular-sign-communicates-important"]
   },
+
   {
     id: "q409",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Road user warning signs?",
-    imageUrl: '',
+    questionText: "What should a driver know about road user warning signs to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Warning signs can warn of conditions related to pedestrians, bicyclists, schools, playgrounds, school buses, and loading zones.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 27, Road user warning signs): Warning signs can warn of conditions related to pedestrians, bicyclists, schools, playgrounds, school buses, and loading zones.",
@@ -8080,16 +8485,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Road user warning signs",
     coverageFactIds: ["pdf-fact-s5-road-user-warning-signs-warning-signs-can-warn-of-conditions-related-t"]
   },
+
   {
     id: "q410",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No U-Turn sign chart item?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning no u-turn sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the No U-Turn sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, No U-Turn sign chart item): The handbook sign chart includes the No U-Turn sign or placard as a sign drivers should recognize.",
@@ -8099,16 +8505,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No U-Turn sign chart item",
     coverageFactIds: ["pdf-fact-s5-no-u-turn-sign-chart-item-the-handbook-sign-chart-includes-the-no-u-tu"]
   },
+
   {
     id: "q411",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No Left Turn sign chart item?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding no left turn sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the No Left Turn sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, No Left Turn sign chart item): The handbook sign chart includes the No Left Turn sign or placard as a sign drivers should recognize.",
@@ -8118,16 +8525,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No Left Turn sign chart item",
     coverageFactIds: ["pdf-fact-s5-no-left-turn-sign-chart-item-the-handbook-sign-chart-includes-the-no-l"]
   },
+
   {
     id: "q412",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No Right Turn sign chart item?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding no right turn sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the No Right Turn sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, No Right Turn sign chart item): The handbook sign chart includes the No Right Turn sign or placard as a sign drivers should recognize.",
@@ -8137,16 +8545,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No Right Turn sign chart item",
     coverageFactIds: ["pdf-fact-s5-no-right-turn-sign-chart-item-the-handbook-sign-chart-includes-the-no"]
   },
+
   {
     id: "q413",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Two Way Traffic sign chart item?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning two way traffic sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Two Way Traffic sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Two Way Traffic sign chart item): The handbook sign chart includes the Two Way Traffic sign or placard as a sign drivers should recognize.",
@@ -8156,16 +8565,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Two Way Traffic sign chart item",
     coverageFactIds: ["pdf-fact-s5-two-way-traffic-sign-chart-item-the-handbook-sign-chart-includes-the-t"]
   },
+
   {
     id: "q414",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No Parking Any Time sign chart item?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning no parking any time sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the No Parking Any Time sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, No Parking Any Time sign chart item): The handbook sign chart includes the No Parking Any Time sign or placard as a sign drivers should recognize.",
@@ -8175,16 +8585,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No Parking Any Time sign chart item",
     coverageFactIds: ["pdf-fact-s5-no-parking-any-time-sign-chart-item-the-handbook-sign-chart-includes-t"]
   },
+
   {
     id: "q415",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Yield to Uphill Traffic sign chart item?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning yield to uphill traffic sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Yield to Uphill Traffic sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Yield to Uphill Traffic sign chart item): The handbook sign chart includes the Yield to Uphill Traffic sign or placard as a sign drivers should recognize.",
@@ -8194,16 +8605,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Yield to Uphill Traffic sign chart item",
     coverageFactIds: ["pdf-fact-s5-yield-to-uphill-traffic-sign-chart-item-the-handbook-sign-chart-includ"]
   },
+
   {
     id: "q416",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on One Way sign chart item?",
-    imageUrl: '',
+    questionText: "How is one way sign chart item properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the One Way sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, One Way sign chart item): The handbook sign chart includes the One Way sign or placard as a sign drivers should recognize.",
@@ -8213,16 +8625,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "One Way sign chart item",
     coverageFactIds: ["pdf-fact-s5-one-way-sign-chart-item-the-handbook-sign-chart-includes-the-one-way-s"]
   },
+
   {
     id: "q417",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Emergency Parking Only sign chart item?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for emergency parking only sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Emergency Parking Only sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Emergency Parking Only sign chart item): The handbook sign chart includes the Emergency Parking Only sign or placard as a sign drivers should recognize.",
@@ -8232,16 +8645,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Emergency Parking Only sign chart item",
     coverageFactIds: ["pdf-fact-s5-emergency-parking-only-sign-chart-item-the-handbook-sign-chart-include"]
   },
+
   {
     id: "q418",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No Turns sign chart item?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning no turns sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the No Turns sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, No Turns sign chart item): The handbook sign chart includes the No Turns sign or placard as a sign drivers should recognize.",
@@ -8251,16 +8665,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No Turns sign chart item",
     coverageFactIds: ["pdf-fact-s5-no-turns-sign-chart-item-the-handbook-sign-chart-includes-the-no-turns"]
   },
+
   {
     id: "q419",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Left Turn Yield on Green sign chart item?",
-    imageUrl: '',
+    questionText: "What should a driver know about left turn yield on green sign chart item to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Left Turn Yield on Green sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Left Turn Yield on Green sign chart item): The handbook sign chart includes the Left Turn Yield on Green sign or placard as a sign drivers should recognize.",
@@ -8270,16 +8685,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Left Turn Yield on Green sign chart item",
     coverageFactIds: ["pdf-fact-s5-left-turn-yield-on-green-sign-chart-item-the-handbook-sign-chart-inclu"]
   },
+
   {
     id: "q420",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Do Not Pass sign chart item?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for do not pass sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Do Not Pass sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Do Not Pass sign chart item): The handbook sign chart includes the Do Not Pass sign or placard as a sign drivers should recognize.",
@@ -8289,16 +8705,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Do Not Pass sign chart item",
     coverageFactIds: ["pdf-fact-s5-do-not-pass-sign-chart-item-the-handbook-sign-chart-includes-the-do-no"]
   },
+
   {
     id: "q421",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Do Not Block Intersection sign chart item?",
-    imageUrl: '',
+    questionText: "How is do not block intersection sign chart item properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Do Not Block Intersection sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Do Not Block Intersection sign chart item): The handbook sign chart includes the Do Not Block Intersection sign or placard as a sign drivers should recognize.",
@@ -8308,16 +8725,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Do Not Block Intersection sign chart item",
     coverageFactIds: ["pdf-fact-s5-do-not-block-intersection-sign-chart-item-the-handbook-sign-chart-incl"]
   },
+
   {
     id: "q422",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Slower Traffic Keep Right sign chart item?",
-    imageUrl: '',
+    questionText: "What should a driver know about slower traffic keep right sign chart item to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Slower Traffic Keep Right sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Slower Traffic Keep Right sign chart item): The handbook sign chart includes the Slower Traffic Keep Right sign or placard as a sign drivers should recognize.",
@@ -8327,16 +8745,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Slower Traffic Keep Right sign chart item",
     coverageFactIds: ["pdf-fact-s5-slower-traffic-keep-right-sign-chart-item-the-handbook-sign-chart-incl"]
   },
+
   {
     id: "q423",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Keep Right sign chart item?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning keep right sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Keep Right sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Keep Right sign chart item): The handbook sign chart includes the Keep Right sign or placard as a sign drivers should recognize.",
@@ -8346,16 +8765,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Keep Right sign chart item",
     coverageFactIds: ["pdf-fact-s5-keep-right-sign-chart-item-the-handbook-sign-chart-includes-the-keep-r"]
   },
+
   {
     id: "q424",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on 3 Tracks sign chart item?",
-    imageUrl: '',
+    questionText: "What should a driver know about 3 tracks sign chart item to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the 3 Tracks sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, 3 Tracks sign chart item): The handbook sign chart includes the 3 Tracks sign or placard as a sign drivers should recognize.",
@@ -8365,16 +8785,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "3 Tracks sign chart item",
     coverageFactIds: ["pdf-fact-s5-3-tracks-sign-chart-item-the-handbook-sign-chart-includes-the-3-tracks"]
   },
+
   {
     id: "q425",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Road Closed Ahead sign chart item?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding road closed ahead sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Road Closed Ahead sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Road Closed Ahead sign chart item): The handbook sign chart includes the Road Closed Ahead sign or placard as a sign drivers should recognize.",
@@ -8384,16 +8805,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Road Closed Ahead sign chart item",
     coverageFactIds: ["pdf-fact-s5-road-closed-ahead-sign-chart-item-the-handbook-sign-chart-includes-the"]
   },
+
   {
     id: "q426",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Road Machinery Ahead sign chart item?",
-    imageUrl: '',
+    questionText: "What should a driver know about road machinery ahead sign chart item to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Road Machinery Ahead sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Road Machinery Ahead sign chart item): The handbook sign chart includes the Road Machinery Ahead sign or placard as a sign drivers should recognize.",
@@ -8403,16 +8825,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Road Machinery Ahead sign chart item",
     coverageFactIds: ["pdf-fact-s5-road-machinery-ahead-sign-chart-item-the-handbook-sign-chart-includes"]
   },
+
   {
     id: "q427",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Shoulder Work Ahead sign chart item?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding shoulder work ahead sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Shoulder Work Ahead sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Shoulder Work Ahead sign chart item): The handbook sign chart includes the Shoulder Work Ahead sign or placard as a sign drivers should recognize.",
@@ -8422,16 +8845,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Shoulder Work Ahead sign chart item",
     coverageFactIds: ["pdf-fact-s5-shoulder-work-ahead-sign-chart-item-the-handbook-sign-chart-includes-t"]
   },
+
   {
     id: "q428",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Thru Traffic Merge Left sign chart item?",
-    imageUrl: '',
+    questionText: "What should a driver know about thru traffic merge left sign chart item to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Thru Traffic Merge Left sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Thru Traffic Merge Left sign chart item): The handbook sign chart includes the Thru Traffic Merge Left sign or placard as a sign drivers should recognize.",
@@ -8441,16 +8865,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Thru Traffic Merge Left sign chart item",
     coverageFactIds: ["pdf-fact-s5-thru-traffic-merge-left-sign-chart-item-the-handbook-sign-chart-includ"]
   },
+
   {
     id: "q429",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Guide Sign sign chart item?",
-    imageUrl: '',
+    questionText: "How is guide sign sign chart item properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Guide Sign sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Guide Sign sign chart item): The handbook sign chart includes the Guide Sign sign or placard as a sign drivers should recognize.",
@@ -8460,16 +8885,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Guide Sign sign chart item",
     coverageFactIds: ["pdf-fact-s5-guide-sign-sign-chart-item-the-handbook-sign-chart-includes-the-guide"]
   },
+
   {
     id: "q430",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Hazardous Load Placard sign chart item?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding hazardous load placard sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Hazardous Load Placard sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Hazardous Load Placard sign chart item): The handbook sign chart includes the Hazardous Load Placard sign or placard as a sign drivers should recognize.",
@@ -8479,16 +8905,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Hazardous Load Placard sign chart item",
     coverageFactIds: ["pdf-fact-s5-hazardous-load-placard-sign-chart-item-the-handbook-sign-chart-include"]
   },
+
   {
     id: "q431",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Slow Moving Vehicle sign chart item?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding slow moving vehicle sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Slow Moving Vehicle sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 28, Slow Moving Vehicle sign chart item): The handbook sign chart includes the Slow Moving Vehicle sign or placard as a sign drivers should recognize.",
@@ -8498,16 +8925,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Slow Moving Vehicle sign chart item",
     coverageFactIds: ["pdf-fact-s5-slow-moving-vehicle-sign-chart-item-the-handbook-sign-chart-includes-t"]
   },
+
   {
     id: "q432",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Slippery When Wet sign chart item?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning slippery when wet sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Slippery When Wet sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Slippery When Wet sign chart item): The handbook sign chart includes the Slippery When Wet sign or placard as a sign drivers should recognize.",
@@ -8517,16 +8945,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Slippery When Wet sign chart item",
     coverageFactIds: ["pdf-fact-s5-slippery-when-wet-sign-chart-item-the-handbook-sign-chart-includes-the"]
   },
+
   {
     id: "q433",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Merging Traffic sign chart item?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding merging traffic sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Merging Traffic sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Merging Traffic sign chart item): The handbook sign chart includes the Merging Traffic sign or placard as a sign drivers should recognize.",
@@ -8536,16 +8965,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Merging Traffic sign chart item",
     coverageFactIds: ["pdf-fact-s5-merging-traffic-sign-chart-item-the-handbook-sign-chart-includes-the-m"]
   },
+
   {
     id: "q434",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Divided Highway sign chart item?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for divided highway sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Divided Highway sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Divided Highway sign chart item): The handbook sign chart includes the Divided Highway sign or placard as a sign drivers should recognize.",
@@ -8555,16 +8985,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Divided Highway sign chart item",
     coverageFactIds: ["pdf-fact-s5-divided-highway-sign-chart-item-the-handbook-sign-chart-includes-the-d"]
   },
+
   {
     id: "q435",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Lane Ends sign chart item?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for lane ends sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Lane Ends sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Lane Ends sign chart item): The handbook sign chart includes the Lane Ends sign or placard as a sign drivers should recognize.",
@@ -8574,16 +9005,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Lane Ends sign chart item",
     coverageFactIds: ["pdf-fact-s5-lane-ends-sign-chart-item-the-handbook-sign-chart-includes-the-lane-en"]
   },
+
   {
     id: "q436",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on End Divided Highway sign chart item?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning end divided highway sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the End Divided Highway sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, End Divided Highway sign chart item): The handbook sign chart includes the End Divided Highway sign or placard as a sign drivers should recognize.",
@@ -8593,16 +9025,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "End Divided Highway sign chart item",
     coverageFactIds: ["pdf-fact-s5-end-divided-highway-sign-chart-item-the-handbook-sign-chart-includes-t"]
   },
+
   {
     id: "q437",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Traffic Signal Ahead sign chart item?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for traffic signal ahead sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Traffic Signal Ahead sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Traffic Signal Ahead sign chart item): The handbook sign chart includes the Traffic Signal Ahead sign or placard as a sign drivers should recognize.",
@@ -8612,16 +9045,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Traffic Signal Ahead sign chart item",
     coverageFactIds: ["pdf-fact-s5-traffic-signal-ahead-sign-chart-item-the-handbook-sign-chart-includes"]
   },
+
   {
     id: "q438",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Pedestrian Crossing sign chart item?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning pedestrian crossing sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Pedestrian Crossing sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Pedestrian Crossing sign chart item): The handbook sign chart includes the Pedestrian Crossing sign or placard as a sign drivers should recognize.",
@@ -8631,16 +9065,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Pedestrian Crossing sign chart item",
     coverageFactIds: ["pdf-fact-s5-pedestrian-crossing-sign-chart-item-the-handbook-sign-chart-includes-t"]
   },
+
   {
     id: "q439",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Added Lane sign chart item?",
-    imageUrl: '',
+    questionText: "How is added lane sign chart item properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Added Lane sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Added Lane sign chart item): The handbook sign chart includes the Added Lane sign or placard as a sign drivers should recognize.",
@@ -8650,16 +9085,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Added Lane sign chart item",
     coverageFactIds: ["pdf-fact-s5-added-lane-sign-chart-item-the-handbook-sign-chart-includes-the-added"]
   },
+
   {
     id: "q440",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Crossroad sign chart item?",
-    imageUrl: '',
+    questionText: "What should a driver know about crossroad sign chart item to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Crossroad sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Crossroad sign chart item): The handbook sign chart includes the Crossroad sign or placard as a sign drivers should recognize.",
@@ -8669,16 +9105,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Crossroad sign chart item",
     coverageFactIds: ["pdf-fact-s5-crossroad-sign-chart-item-the-handbook-sign-chart-includes-the-crossro"]
   },
+
   {
     id: "q441",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Stop Ahead sign chart item?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning stop ahead sign chart item?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Stop Ahead sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Stop Ahead sign chart item): The handbook sign chart includes the Stop Ahead sign or placard as a sign drivers should recognize.",
@@ -8688,16 +9125,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Stop Ahead sign chart item",
     coverageFactIds: ["pdf-fact-s5-stop-ahead-sign-chart-item-the-handbook-sign-chart-includes-the-stop-a"]
   },
+
   {
     id: "q442",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Yield Ahead sign chart item?",
-    imageUrl: '',
+    questionText: "How is yield ahead sign chart item properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Yield Ahead sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Yield Ahead sign chart item): The handbook sign chart includes the Yield Ahead sign or placard as a sign drivers should recognize.",
@@ -8707,16 +9145,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Yield Ahead sign chart item",
     coverageFactIds: ["pdf-fact-s5-yield-ahead-sign-chart-item-the-handbook-sign-chart-includes-the-yield"]
   },
+
   {
     id: "q443",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Directional Arrow sign chart item?",
-    imageUrl: '',
+    questionText: "What should a driver know about directional arrow sign chart item to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Directional Arrow sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Directional Arrow sign chart item): The handbook sign chart includes the Directional Arrow sign or placard as a sign drivers should recognize.",
@@ -8726,16 +9165,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Directional Arrow sign chart item",
     coverageFactIds: ["pdf-fact-s5-directional-arrow-sign-chart-item-the-handbook-sign-chart-includes-the"]
   },
+
   {
     id: "q444",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Curve sign chart item?",
-    imageUrl: '',
+    questionText: "How is curve sign chart item properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Curve sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Curve sign chart item): The handbook sign chart includes the Curve sign or placard as a sign drivers should recognize.",
@@ -8745,16 +9185,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Curve sign chart item",
     coverageFactIds: ["pdf-fact-s5-curve-sign-chart-item-the-handbook-sign-chart-includes-the-curve-sign"]
   },
+
   {
     id: "q445",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on T Intersection sign chart item?",
-    imageUrl: '',
+    questionText: "How is t intersection sign chart item properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the T Intersection sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, T Intersection sign chart item): The handbook sign chart includes the T Intersection sign or placard as a sign drivers should recognize.",
@@ -8764,16 +9205,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "T Intersection sign chart item",
     coverageFactIds: ["pdf-fact-s5-t-intersection-sign-chart-item-the-handbook-sign-chart-includes-the-t"]
   },
+
   {
     id: "q446",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Winding Road sign chart item?",
-    imageUrl: '',
+    questionText: "How is winding road sign chart item properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "The handbook sign chart includes the Winding Road sign or placard as a sign drivers should recognize.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 29, Winding Road sign chart item): The handbook sign chart includes the Winding Road sign or placard as a sign drivers should recognize.",
@@ -8783,16 +9225,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Winding Road sign chart item",
     coverageFactIds: ["pdf-fact-s5-winding-road-sign-chart-item-the-handbook-sign-chart-includes-the-wind"]
   },
+
   {
     id: "q447",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Right-of-way first arrival?",
-    imageUrl: '',
+    questionText: "How is right-of-way determined for right-of-way first arrival?",
+    imageUrl: "",
     options: [
       "The first vehicle to arrive at an intersection has the right-of-way, and others must wait.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 27, Right-of-way first arrival): The first vehicle to arrive at an intersection has the right-of-way, and others must wait.",
@@ -8802,16 +9245,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Right-of-way first arrival",
     coverageFactIds: ["pdf-fact-s5-right-of-way-first-arrival-the-first-vehicle-to-arrive-at-an-intersect"]
   },
+
   {
     id: "q448",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Give up right-of-way to avoid collision?",
-    imageUrl: '',
+    questionText: "How is right-of-way determined for give up right-of-way to avoid collision?",
+    imageUrl: "",
     options: [
       "Never assume others will give right-of-way; give up right-of-way when it helps prevent collisions.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 27, Give up right-of-way to avoid collision): Never assume others will give right-of-way; give up right-of-way when it helps prevent collisions.",
@@ -8821,16 +9265,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Give up right-of-way to avoid collision",
     coverageFactIds: ["pdf-fact-s5-give-up-right-of-way-to-avoid-collision-never-assume-others-will-give"]
   },
+
   {
     id: "q449",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Intersection definition?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding intersection definition?",
+    imageUrl: "",
     options: [
       "An intersection is any place where one road meets another road.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Intersection definition): An intersection is any place where one road meets another road.",
@@ -8840,16 +9285,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Intersection definition",
     coverageFactIds: ["pdf-fact-s5-intersection-definition-an-intersection-is-any-place-where-one-road-me"]
   },
+
   {
     id: "q450",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Controlled and uncontrolled intersections?",
-    imageUrl: '',
+    questionText: "How is controlled and uncontrolled intersections properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Controlled intersections have signs or signals, while uncontrolled and blind intersections do not.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Controlled and uncontrolled intersections): Controlled intersections have signs or signals, while uncontrolled and blind intersections do not.",
@@ -8859,16 +9305,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Controlled and uncontrolled intersections",
     coverageFactIds: ["pdf-fact-s5-controlled-and-uncontrolled-intersections-controlled-intersections-hav"]
   },
+
   {
     id: "q451",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Intersection approach scan?",
-    imageUrl: '',
+    questionText: "How is intersection approach scan properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Before entering an intersection, look left, right, and ahead for vehicles, bicyclists, and pedestrians.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Intersection approach scan): Before entering an intersection, look left, right, and ahead for vehicles, bicyclists, and pedestrians.",
@@ -8878,16 +9325,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Intersection approach scan",
     coverageFactIds: ["pdf-fact-s5-intersection-approach-scan-before-entering-an-intersection-look-left-r"]
   },
+
   {
     id: "q452",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Pedestrians always right-of-way?",
-    imageUrl: '',
+    questionText: "How is right-of-way determined for pedestrians always right-of-way?",
+    imageUrl: "",
     options: [
       "Pedestrians always have the right-of-way at intersections.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Pedestrians always right-of-way): Pedestrians always have the right-of-way at intersections.",
@@ -8897,16 +9345,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Pedestrians always right-of-way",
     coverageFactIds: ["pdf-fact-s5-pedestrians-always-right-of-way-pedestrians-always-have-the-right-of-w"]
   },
+
   {
     id: "q453",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No sign intersection first arrival?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding no sign intersection first arrival?",
+    imageUrl: "",
     options: [
       "At an intersection without STOP or YIELD signs, the vehicle that arrives first has right-of-way.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, No sign intersection first arrival): At an intersection without STOP or YIELD signs, the vehicle that arrives first has right-of-way.",
@@ -8916,16 +9365,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No sign intersection first arrival",
     coverageFactIds: ["pdf-fact-s5-no-sign-intersection-first-arrival-at-an-intersection-without-stop-or"]
   },
+
   {
     id: "q454",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Same time yield right?",
-    imageUrl: '',
+    questionText: "What should a driver know about same time yield right to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "If you arrive at the same time as another vehicle, pedestrian, or bicyclist, yield to the one on your right.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Same time yield right): If you arrive at the same time as another vehicle, pedestrian, or bicyclist, yield to the one on your right.",
@@ -8935,16 +9385,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Same time yield right",
     coverageFactIds: ["pdf-fact-s5-same-time-yield-right-if-you-arrive-at-the-same-time-as-another-vehicl"]
   },
+
   {
     id: "q455",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Four-way stop order?",
-    imageUrl: '',
+    questionText: "How is four-way stop order properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "At a four-way stop, stop first and proceed using right-of-way rules. ",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Four-way stop order): At a four-way stop, stop first and proceed using right-of-way rules. ",
@@ -8954,16 +9405,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Four-way stop order",
     coverageFactIds: ["pdf-fact-s5-four-way-stop-order-at-a-four-way-stop-stop-first-and-proceed-using-ri"]
   },
+
   {
     id: "q456",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on T intersection through road?",
-    imageUrl: '',
+    questionText: "What should a driver know about t intersection through road to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "At an uncontrolled T intersection, traffic on the through road has the right-of-way.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, T intersection through road): At an uncontrolled T intersection, traffic on the through road has the right-of-way.",
@@ -8973,16 +9425,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "T intersection through road",
     coverageFactIds: ["pdf-fact-s5-t-intersection-through-road-at-an-uncontrolled-t-intersection-traffic"]
   },
+
   {
     id: "q457",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Left turn right-of-way?",
-    imageUrl: '',
+    questionText: "How is right-of-way determined for left turn right-of-way?",
+    imageUrl: "",
     options: [
       "When turning left, yield to pedestrians and approaching vehicles close enough to be dangerous.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Left turn right-of-way): When turning left, yield to pedestrians and approaching vehicles close enough to be dangerous.",
@@ -8992,16 +9445,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Left turn right-of-way",
     coverageFactIds: ["pdf-fact-s5-left-turn-right-of-way-when-turning-left-yield-to-pedestrians-and-appr"]
   },
+
   {
     id: "q458",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Right turn vulnerable road users?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning right turn vulnerable road users?",
+    imageUrl: "",
     options: [
       "When turning right, check for pedestrians, motorcycles, and bicycles next to you.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Right turn vulnerable road users): When turning right, check for pedestrians, motorcycles, and bicycles next to you.",
@@ -9011,16 +9465,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Right turn vulnerable road users",
     coverageFactIds: ["pdf-fact-s5-right-turn-vulnerable-road-users-when-turning-right-check-for-pedestri"]
   },
+
   {
     id: "q459",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Green signal pedestrians?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for green signal pedestrians?",
+    imageUrl: "",
     options: [
       "At a green light, proceed with caution because pedestrians still have the right-of-way.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Green signal pedestrians): At a green light, proceed with caution because pedestrians still have the right-of-way.",
@@ -9030,16 +9485,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Green signal pedestrians",
     coverageFactIds: ["pdf-fact-s5-green-signal-pedestrians-at-a-green-light-proceed-with-caution-because"]
   },
+
   {
     id: "q460",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Entering traffic yield?",
-    imageUrl: '',
+    questionText: "How is entering traffic yield properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "When entering traffic, proceed with caution and yield to traffic already in the lanes.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Entering traffic yield): When entering traffic, proceed with caution and yield to traffic already in the lanes.",
@@ -9049,16 +9505,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Entering traffic yield",
     coverageFactIds: ["pdf-fact-s5-entering-traffic-yield-when-entering-traffic-proceed-with-caution-and"]
   },
+
   {
     id: "q461",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Do not block intersection?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding do not block intersection?",
+    imageUrl: "",
     options: [
       "It is illegal to stop or block an intersection if there is not enough space to completely cross before the light turns red.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 30, Do not block intersection): It is illegal to stop or block an intersection if there is not enough space to completely cross before the light turns red.",
@@ -9068,16 +9525,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Do not block intersection",
     coverageFactIds: ["pdf-fact-s5-do-not-block-intersection-it-is-illegal-to-stop-or-block-an-intersecti"]
   },
+
   {
     id: "q462",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Roundabout direction?",
-    imageUrl: '',
+    questionText: "How is roundabout direction properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "In a roundabout, traffic travels in one direction around a central island.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 31, Roundabout direction): In a roundabout, traffic travels in one direction around a central island.",
@@ -9087,16 +9545,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Roundabout direction",
     coverageFactIds: ["pdf-fact-s5-roundabout-direction-in-a-roundabout-traffic-travels-in-one-direction"]
   },
+
   {
     id: "q463",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Roundabout slow approach?",
-    imageUrl: '',
+    questionText: "How is roundabout slow approach properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Slow down as you approach a roundabout.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 31, Roundabout slow approach): Slow down as you approach a roundabout.",
@@ -9106,16 +9565,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Roundabout slow approach",
     coverageFactIds: ["pdf-fact-s5-roundabout-slow-approach-slow-down-as-you-approach-a-roundabout"]
   },
+
   {
     id: "q464",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Roundabout yield?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning roundabout yield?",
+    imageUrl: "",
     options: [
       "Yield to all traffic already in the roundabout.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 31, Roundabout yield): Yield to all traffic already in the roundabout.",
@@ -9125,16 +9585,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Roundabout yield",
     coverageFactIds: ["pdf-fact-s5-roundabout-yield-yield-to-all-traffic-already-in-the-roundabout"]
   },
+
   {
     id: "q465",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Roundabout enter right?",
-    imageUrl: '',
+    questionText: "How is roundabout enter right properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Enter a roundabout heading to the right when there is a safe gap.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 31, Roundabout enter right): Enter a roundabout heading to the right when there is a safe gap.",
@@ -9144,16 +9605,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Roundabout enter right",
     coverageFactIds: ["pdf-fact-s5-roundabout-enter-right-enter-a-roundabout-heading-to-the-right-when-th"]
   },
+
   {
     id: "q466",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Roundabout no stop or pass?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning roundabout no stop or pass?",
+    imageUrl: "",
     options: [
       "Travel counterclockwise in a roundabout and do not stop or pass.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 31, Roundabout no stop or pass): Travel counterclockwise in a roundabout and do not stop or pass.",
@@ -9163,16 +9625,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Roundabout no stop or pass",
     coverageFactIds: ["pdf-fact-s5-roundabout-no-stop-or-pass-travel-counterclockwise-in-a-roundabout-and"]
   },
+
   {
     id: "q467",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Roundabout signal?",
-    imageUrl: '',
+    questionText: "What should a driver know about roundabout signal to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Signal when changing lanes or exiting a roundabout.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 31, Roundabout signal): Signal when changing lanes or exiting a roundabout.",
@@ -9182,16 +9645,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Roundabout signal",
     coverageFactIds: ["pdf-fact-s5-roundabout-signal-signal-when-changing-lanes-or-exiting-a-roundabout"]
   },
+
   {
     id: "q468",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Roundabout missed exit?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for roundabout missed exit?",
+    imageUrl: "",
     options: [
       "If you miss your exit in a roundabout, continue around until you return to it.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 31, Roundabout missed exit): If you miss your exit in a roundabout, continue around until you return to it.",
@@ -9201,16 +9665,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Roundabout missed exit",
     coverageFactIds: ["pdf-fact-s5-roundabout-missed-exit-if-you-miss-your-exit-in-a-roundabout-continue"]
   },
+
   {
     id: "q469",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Roundabout lane choice?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding roundabout lane choice?",
+    imageUrl: "",
     options: [
       "In a multi-lane roundabout, choose the entry or exit lane based on your destination.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 31, Roundabout lane choice): In a multi-lane roundabout, choose the entry or exit lane based on your destination.",
@@ -9220,16 +9685,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Roundabout lane choice",
     coverageFactIds: ["pdf-fact-s5-roundabout-lane-choice-in-a-multi-lane-roundabout-choose-the-entry-or"]
   },
+
   {
     id: "q470",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Pedestrians right-of-way and rules?",
-    imageUrl: '',
+    questionText: "How is right-of-way determined for pedestrians right-of-way and rules?",
+    imageUrl: "",
     options: [
       "Pedestrians have the right-of-way, but they must also follow rules of the road.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 32, Pedestrians right-of-way and rules): Pedestrians have the right-of-way, but they must also follow rules of the road.",
@@ -9239,16 +9705,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Pedestrians right-of-way and rules",
     coverageFactIds: ["pdf-fact-s5-pedestrians-right-of-way-and-rules-pedestrians-have-the-right-of-way-b"]
   },
+
   {
     id: "q471",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Pedestrian crossing caution?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for pedestrian crossing caution?",
+    imageUrl: "",
     options: [
       "When a pedestrian is crossing with or without a crosswalk, drivers must use caution, reduce speed, or stop so they can finish crossing safely.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 32, Pedestrian crossing caution): When a pedestrian is crossing with or without a crosswalk, drivers must use caution, reduce speed, or stop so they can finish crossing safely.",
@@ -9258,16 +9725,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Pedestrian crossing caution",
     coverageFactIds: ["pdf-fact-s5-pedestrian-crossing-caution-when-a-pedestrian-is-crossing-with-or-with"]
   },
+
   {
     id: "q472",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Crosswalk right-of-way?",
-    imageUrl: '',
+    questionText: "How is right-of-way determined for crosswalk right-of-way?",
+    imageUrl: "",
     options: [
       "Pedestrians have the right-of-way in marked and unmarked crosswalks.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 32, Crosswalk right-of-way): Pedestrians have the right-of-way in marked and unmarked crosswalks.",
@@ -9277,16 +9745,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Crosswalk right-of-way",
     coverageFactIds: ["pdf-fact-s5-crosswalk-right-of-way-pedestrians-have-the-right-of-way-in-marked-and"]
   },
+
   {
     id: "q473",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Limit line before crosswalk?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding limit line before crosswalk?",
+    imageUrl: "",
     options: [
       "If a limit line appears before a crosswalk, stop at the limit line and allow pedestrians to cross.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 32, Limit line before crosswalk): If a limit line appears before a crosswalk, stop at the limit line and allow pedestrians to cross.",
@@ -9296,16 +9765,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Limit line before crosswalk",
     coverageFactIds: ["pdf-fact-s5-limit-line-before-crosswalk-if-a-limit-line-appears-before-a-crosswalk"]
   },
+
   {
     id: "q474",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Do not change lanes in front of truck?",
-    imageUrl: '',
+    questionText: "What should a driver know about do not change lanes in front of truck to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Do not change lanes directly in front of large vehicles to reach an exit or turn.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 33, Do not change lanes in front of truck): Do not change lanes directly in front of large vehicles to reach an exit or turn.",
@@ -9315,16 +9785,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Do not change lanes in front of truck",
     coverageFactIds: ["pdf-fact-s5-do-not-change-lanes-in-front-of-truck-do-not-change-lanes-directly-in"]
   },
+
   {
     id: "q475",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Pass trucks on left?",
-    imageUrl: '',
+    questionText: "What should a driver know about pass trucks on left to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Pass large vehicles on the left and move ahead after passing.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 33, Pass trucks on left): Pass large vehicles on the left and move ahead after passing.",
@@ -9334,16 +9805,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Pass trucks on left",
     coverageFactIds: ["pdf-fact-s5-pass-trucks-on-left-pass-large-vehicles-on-the-left-and-move-ahead-aft"]
   },
+
   {
     id: "q476",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Do not drive alongside truck?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for do not drive alongside truck?",
+    imageUrl: "",
     options: [
       "Do not drive next to a large vehicle longer than necessary.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 33, Do not drive alongside truck): Do not drive next to a large vehicle longer than necessary.",
@@ -9353,16 +9825,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Do not drive alongside truck",
     coverageFactIds: ["pdf-fact-s5-do-not-drive-alongside-truck-do-not-drive-next-to-a-large-vehicle-long"]
   },
+
   {
     id: "q477",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Do not tailgate truck?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding do not tailgate truck?",
+    imageUrl: "",
     options: [
       "Do not follow large vehicles too closely.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 33, Do not tailgate truck): Do not follow large vehicles too closely.",
@@ -9372,16 +9845,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Do not tailgate truck",
     coverageFactIds: ["pdf-fact-s5-do-not-tailgate-truck-do-not-follow-large-vehicles-too-closely"]
   },
+
   {
     id: "q478",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Truck speed appearance?",
-    imageUrl: '',
+    questionText: "What should a driver know about truck speed appearance to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Do not underestimate a large vehicle’s size or speed because it may appear to travel slower.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 33, Truck speed appearance): Do not underestimate a large vehicle’s size or speed because it may appear to travel slower.",
@@ -9391,16 +9865,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Truck speed appearance",
     coverageFactIds: ["pdf-fact-s5-truck-speed-appearance-do-not-underestimate-a-large-vehicle-s-size-or"]
   },
+
   {
     id: "q479",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Safety zone definition?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding safety zone definition?",
+    imageUrl: "",
     options: [
       "Safety zones are spaces for pedestrians waiting for buses, streetcars, and trolleys, marked by raised buttons or markers.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 34, Safety zone definition): Safety zones are spaces for pedestrians waiting for buses, streetcars, and trolleys, marked by raised buttons or markers.",
@@ -9410,16 +9885,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Safety zone definition",
     coverageFactIds: ["pdf-fact-s5-safety-zone-definition-safety-zones-are-spaces-for-pedestrians-waiting"]
   },
+
   {
     id: "q480",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No driving through safety zone?",
-    imageUrl: '',
+    questionText: "How is no driving through safety zone properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Do not drive through a safety zone under any condition.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 34, No driving through safety zone): Do not drive through a safety zone under any condition.",
@@ -9429,16 +9905,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No driving through safety zone",
     coverageFactIds: ["pdf-fact-s5-no-driving-through-safety-zone-do-not-drive-through-a-safety-zone-unde"]
   },
+
   {
     id: "q481",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Do not pass light rail left?",
-    imageUrl: '',
+    questionText: "How is do not pass light rail left properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Do not pass a light rail vehicle or streetcar on the left unless tracks are too close to the right side, you are on a one-way street, or an officer directs it.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 34, Do not pass light rail left): Do not pass a light rail vehicle or streetcar on the left unless tracks are too close to the right side, you are on a one-way street, or an officer directs it.",
@@ -9448,16 +9925,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Do not pass light rail left",
     coverageFactIds: ["pdf-fact-s5-do-not-pass-light-rail-left-do-not-pass-a-light-rail-vehicle-or-street"]
   },
+
   {
     id: "q482",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Light rail same rights?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding light rail same rights?",
+    imageUrl: "",
     options: [
       "Light rail vehicles on public roads have the same rights and responsibilities as other vehicles.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 34, Light rail same rights): Light rail vehicles on public roads have the same rights and responsibilities as other vehicles.",
@@ -9467,16 +9945,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Light rail same rights",
     coverageFactIds: ["pdf-fact-s5-light-rail-same-rights-light-rail-vehicles-on-public-roads-have-the-sa"]
   },
+
   {
     id: "q483",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Never turn in front of light rail?",
-    imageUrl: '',
+    questionText: "How is never turn in front of light rail properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Never turn in front of an approaching light rail vehicle.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 34, Never turn in front of light rail): Never turn in front of an approaching light rail vehicle.",
@@ -9486,16 +9965,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Never turn in front of light rail",
     coverageFactIds: ["pdf-fact-s5-never-turn-in-front-of-light-rail-never-turn-in-front-of-an-approachin"]
   },
+
   {
     id: "q484",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Check light rail before tracks?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning check light rail before tracks?",
+    imageUrl: "",
     options: [
       "Check for approaching light rail vehicles before turning across tracks and complete the turn only when the signal allows.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 34, Check light rail before tracks): Check for approaching light rail vehicles before turning across tracks and complete the turn only when the signal allows.",
@@ -9505,16 +9985,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Check light rail before tracks",
     coverageFactIds: ["pdf-fact-s5-check-light-rail-before-tracks-check-for-approaching-light-rail-vehicl"]
   },
+
   {
     id: "q485",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Motorcycle same rights?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for motorcycle same rights?",
+    imageUrl: "",
     options: [
       "Motorcyclists have the same rights and responsibilities as other drivers.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 34, Motorcycle same rights): Motorcyclists have the same rights and responsibilities as other drivers.",
@@ -9524,16 +10005,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Motorcycle same rights",
     coverageFactIds: ["pdf-fact-s5-motorcycle-same-rights-motorcyclists-have-the-same-rights-and-responsi"]
   },
+
   {
     id: "q486",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Check for motorcycles?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding check for motorcycles?",
+    imageUrl: "",
     options: [
       "Check for motorcycles and use mirrors when changing lanes or entering a road because they are harder to see.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 34, Check for motorcycles): Check for motorcycles and use mirrors when changing lanes or entering a road because they are harder to see.",
@@ -9543,16 +10025,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Check for motorcycles",
     coverageFactIds: ["pdf-fact-s5-check-for-motorcycles-check-for-motorcycles-and-use-mirrors-when-chang"]
   },
+
   {
     id: "q487",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Give motorcycle full lane?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning give motorcycle full lane?",
+    imageUrl: "",
     options: [
       "Whenever possible, give a motorcycle the full lane.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 35, Give motorcycle full lane): Whenever possible, give a motorcycle the full lane.",
@@ -9562,16 +10045,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Give motorcycle full lane",
     coverageFactIds: ["pdf-fact-s5-give-motorcycle-full-lane-whenever-possible-give-a-motorcycle-the-full"]
   },
+
   {
     id: "q488",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Do not pass motorcycle same lane?",
-    imageUrl: '',
+    questionText: "How is do not pass motorcycle same lane properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Never try to pass a motorcycle in the same lane as you.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 35, Do not pass motorcycle same lane): Never try to pass a motorcycle in the same lane as you.",
@@ -9581,16 +10065,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Do not pass motorcycle same lane",
     coverageFactIds: ["pdf-fact-s5-do-not-pass-motorcycle-same-lane-never-try-to-pass-a-motorcycle-in-the"]
   },
+
   {
     id: "q489",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Check for motorcycles before door?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for check for motorcycles before door?",
+    imageUrl: "",
     options: [
       "Check for motorcyclists before opening your door next to traffic.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 35, Check for motorcycles before door): Check for motorcyclists before opening your door next to traffic.",
@@ -9600,16 +10085,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Check for motorcycles before door",
     coverageFactIds: ["pdf-fact-s5-check-for-motorcycles-before-door-check-for-motorcyclists-before-openi"]
   },
+
   {
     id: "q490",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Move aside for motorcycles?",
-    imageUrl: '',
+    questionText: "How is move aside for motorcycles properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "When possible, move to one side of your lane to give motorcyclists more room to pass.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 35, Move aside for motorcycles): When possible, move to one side of your lane to give motorcyclists more room to pass.",
@@ -9619,16 +10105,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Move aside for motorcycles",
     coverageFactIds: ["pdf-fact-s5-move-aside-for-motorcycles-when-possible-move-to-one-side-of-your-lane"]
   },
+
   {
     id: "q491",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Move over stationary emergency vehicle?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning move over stationary emergency vehicle?",
+    imageUrl: "",
     options: [
       "When approaching a stationary emergency vehicle with flashing lights, move over and slow down.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 35, Move over stationary emergency vehicle): When approaching a stationary emergency vehicle with flashing lights, move over and slow down.",
@@ -9638,16 +10125,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Move over stationary emergency vehicle",
     coverageFactIds: ["pdf-fact-s5-move-over-stationary-emergency-vehicle-when-approaching-a-stationary-e"]
   },
+
   {
     id: "q492",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Emergency vehicle in intersection?",
-    imageUrl: '',
+    questionText: "How is emergency vehicle in intersection properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "If you are in an intersection when an emergency vehicle approaches, continue through, then move right and stop when safe.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 35, Emergency vehicle in intersection): If you are in an intersection when an emergency vehicle approaches, continue through, then move right and stop when safe.",
@@ -9657,16 +10145,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Emergency vehicle in intersection",
     coverageFactIds: ["pdf-fact-s5-emergency-vehicle-in-intersection-if-you-are-in-an-intersection-when-a"]
   },
+
   {
     id: "q493",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Obey officers firefighters?",
-    imageUrl: '',
+    questionText: "What should a driver know about obey officers firefighters to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Obey any direction from a law enforcement officer or firefighter even if it conflicts with signs, signals, or laws.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 35, Obey officers firefighters): Obey any direction from a law enforcement officer or firefighter even if it conflicts with signs, signals, or laws.",
@@ -9676,16 +10165,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Obey officers firefighters",
     coverageFactIds: ["pdf-fact-s5-obey-officers-firefighters-obey-any-direction-from-a-law-enforcement-o"]
   },
+
   {
     id: "q494",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Do not drive to emergency scene?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning do not drive to emergency scene?",
+    imageUrl: "",
     options: [
       "You can be arrested for driving to the scene of a fire, collision, or disaster because it interferes with responders.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 35, Do not drive to emergency scene): You can be arrested for driving to the scene of a fire, collision, or disaster because it interferes with responders.",
@@ -9695,16 +10185,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Do not drive to emergency scene",
     coverageFactIds: ["pdf-fact-s5-do-not-drive-to-emergency-scene-you-can-be-arrested-for-driving-to-the"]
   },
+
   {
     id: "q495",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Slow-moving vehicle examples?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for slow-moving vehicle examples?",
+    imageUrl: "",
     options: [
       "Slow-moving motorized vehicles can include scooters, neighborhood electric vehicles, and golf carts.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 36, Slow-moving vehicle examples): Slow-moving motorized vehicles can include scooters, neighborhood electric vehicles, and golf carts.",
@@ -9714,16 +10205,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Slow-moving vehicle examples",
     coverageFactIds: ["pdf-fact-s5-slow-moving-vehicle-examples-slow-moving-motorized-vehicles-can-includ"]
   },
+
   {
     id: "q496",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Adjust speed for slow vehicles?",
-    imageUrl: '',
+    questionText: "How is adjust speed for slow vehicles properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Drivers should adjust speed to share the road with slow-moving vehicles.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 36, Adjust speed for slow vehicles): Drivers should adjust speed to share the road with slow-moving vehicles.",
@@ -9733,16 +10225,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Adjust speed for slow vehicles",
     coverageFactIds: ["pdf-fact-s5-adjust-speed-for-slow-vehicles-drivers-should-adjust-speed-to-share-th"]
   },
+
   {
     id: "q497",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Bicycles same rights?",
-    imageUrl: '',
+    questionText: "How is bicycles same rights properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Bicyclists have the same rights and responsibilities as other drivers.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 36, Bicycles same rights): Bicyclists have the same rights and responsibilities as other drivers.",
@@ -9752,16 +10245,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Bicycles same rights",
     coverageFactIds: ["pdf-fact-s5-bicycles-same-rights-bicyclists-have-the-same-rights-and-responsibilit"]
   },
+
   {
     id: "q498",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Bicyclists freeway allowed?",
-    imageUrl: '',
+    questionText: "How is bicyclists freeway allowed properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Bicyclists may legally ride on some freeway sections when no alternate route exists and bicycling is not forbidden.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 36, Bicyclists freeway allowed): Bicyclists may legally ride on some freeway sections when no alternate route exists and bicycling is not forbidden.",
@@ -9771,16 +10265,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Bicyclists freeway allowed",
     coverageFactIds: ["pdf-fact-s5-bicyclists-freeway-allowed-bicyclists-may-legally-ride-on-some-freeway"]
   },
+
   {
     id: "q499",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Bicyclists move left hazards?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for bicyclists move left hazards?",
+    imageUrl: "",
     options: [
       "Bicyclists may move left to avoid hazards such as vehicles, animals, or debris.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 36, Bicyclists move left hazards): Bicyclists may move left to avoid hazards such as vehicles, animals, or debris.",
@@ -9790,16 +10285,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Bicyclists move left hazards",
     coverageFactIds: ["pdf-fact-s5-bicyclists-move-left-hazards-bicyclists-may-move-left-to-avoid-hazards"]
   },
+
   {
     id: "q500",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Bicyclists one-way left?",
-    imageUrl: '',
+    questionText: "What should a driver know about bicyclists one-way left to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Bicyclists may choose to ride near the left curb or edge of a one-way street.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 36, Bicyclists one-way left): Bicyclists may choose to ride near the left curb or edge of a one-way street.",
@@ -9809,16 +10305,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Bicyclists one-way left",
     coverageFactIds: ["pdf-fact-s5-bicyclists-one-way-left-bicyclists-may-choose-to-ride-near-the-left-cu"]
   },
+
   {
     id: "q501",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Bicyclists crosswalk pedestrian?",
-    imageUrl: '',
+    questionText: "What should a driver know about bicyclists crosswalk pedestrian to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Bicyclists may use crosswalks by stopping and crossing as pedestrians.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 36, Bicyclists crosswalk pedestrian): Bicyclists may use crosswalks by stopping and crossing as pedestrians.",
@@ -9828,16 +10325,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Bicyclists crosswalk pedestrian",
     coverageFactIds: ["pdf-fact-s5-bicyclists-crosswalk-pedestrian-bicyclists-may-use-crosswalks-by-stopp"]
   },
+
   {
     id: "q502",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Passing bicyclist lane change?",
-    imageUrl: '',
+    questionText: "How is passing bicyclist lane change properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "To pass a bicyclist in the travel lane, drivers may need to change lanes and then return safely.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 36, Passing bicyclist lane change): To pass a bicyclist in the travel lane, drivers may need to change lanes and then return safely.",
@@ -9847,16 +10345,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Passing bicyclist lane change",
     coverageFactIds: ["pdf-fact-s5-passing-bicyclist-lane-change-to-pass-a-bicyclist-in-the-travel-lane-d"]
   },
+
   {
     id: "q503",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Bicycle passing three feet if no lane change?",
-    imageUrl: '',
+    questionText: "What should a driver know about bicycle passing three feet if no lane change to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "If you cannot change lanes to pass a bicyclist, allow at least three feet of clearance.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 37, Bicycle passing three feet if no lane change): If you cannot change lanes to pass a bicyclist, allow at least three feet of clearance.",
@@ -9866,16 +10365,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Bicycle passing three feet if no lane change",
     coverageFactIds: ["pdf-fact-s5-bicycle-passing-three-feet-if-no-lane-change-if-you-cannot-change-lane"]
   },
+
   {
     id: "q504",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Do not pass bicyclist without three feet?",
-    imageUrl: '',
+    questionText: "How is do not pass bicyclist without three feet properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "If you cannot give three feet of space, do not pass the cyclist until the clearance can be given.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 37, Do not pass bicyclist without three feet): If you cannot give three feet of space, do not pass the cyclist until the clearance can be given.",
@@ -9885,16 +10385,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Do not pass bicyclist without three feet",
     coverageFactIds: ["pdf-fact-s5-do-not-pass-bicyclist-without-three-feet-if-you-cannot-give-three-feet"]
   },
+
   {
     id: "q505",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Bike lane turn entry limit?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for bike lane turn entry limit?",
+    imageUrl: "",
     options: [
       "Enter a bike lane no more than 200 feet before starting a turn.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 37, Bike lane turn entry limit): Enter a bike lane no more than 200 feet before starting a turn.",
@@ -9904,16 +10405,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Bike lane turn entry limit",
     coverageFactIds: ["pdf-fact-s5-bike-lane-turn-entry-limit-enter-a-bike-lane-no-more-than-200-feet-bef"]
   },
+
   {
     id: "q506",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Work zone slow and space?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for work zone slow and space?",
+    imageUrl: "",
     options: [
       "In work zones, slow down and allow extra space between vehicles.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 37, Work zone slow and space): In work zones, slow down and allow extra space between vehicles.",
@@ -9923,16 +10425,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Work zone slow and space",
     coverageFactIds: ["pdf-fact-s5-work-zone-slow-and-space-in-work-zones-slow-down-and-allow-extra-space"]
   },
+
   {
     id: "q507",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Work zone expect sudden stops?",
-    imageUrl: '',
+    questionText: "How is work zone expect sudden stops properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "In work zones, expect sudden slowing or stopping and watch for drivers changing lanes.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 37, Work zone expect sudden stops): In work zones, expect sudden slowing or stopping and watch for drivers changing lanes.",
@@ -9942,16 +10445,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Work zone expect sudden stops",
     coverageFactIds: ["pdf-fact-s5-work-zone-expect-sudden-stops-in-work-zones-expect-sudden-slowing-or-s"]
   },
+
   {
     id: "q508",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Work zone obey flaggers?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding work zone obey flaggers?",
+    imageUrl: "",
     options: [
       "Obey special signs or instructions from workers such as flaggers.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 37, Work zone obey flaggers): Obey special signs or instructions from workers such as flaggers.",
@@ -9961,16 +10465,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Work zone obey flaggers",
     coverageFactIds: ["pdf-fact-s5-work-zone-obey-flaggers-obey-special-signs-or-instructions-from-worker"]
   },
+
   {
     id: "q509",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on School bus yellow lights?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning school bus yellow lights?",
+    imageUrl: "",
     options: [
       "School bus flashing yellow lights warn drivers to slow down and prepare to stop.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 38, School bus yellow lights): School bus flashing yellow lights warn drivers to slow down and prepare to stop.",
@@ -9980,16 +10485,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "School bus yellow lights",
     coverageFactIds: ["pdf-fact-s5-school-bus-yellow-lights-school-bus-flashing-yellow-lights-warn-driver"]
   },
+
   {
     id: "q510",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Railroad flashing red?",
-    imageUrl: '',
+    questionText: "How is railroad flashing red properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Flashing red railroad warning lights mean you must stop and wait until they stop flashing, even if the gate rises.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 39, Railroad flashing red): Flashing red railroad warning lights mean you must stop and wait until they stop flashing, even if the gate rises.",
@@ -9999,16 +10505,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Railroad flashing red",
     coverageFactIds: ["pdf-fact-s5-railroad-flashing-red-flashing-red-railroad-warning-lights-mean-you-mu"]
   },
+
   {
     id: "q511",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Railroad lowered gates?",
-    imageUrl: '',
+    questionText: "What should a driver know about railroad lowered gates to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Do not go under lowering gates or around lowered gates.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 39, Railroad lowered gates): Do not go under lowering gates or around lowered gates.",
@@ -10018,16 +10525,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Railroad lowered gates",
     coverageFactIds: ["pdf-fact-s5-railroad-lowered-gates-do-not-go-under-lowering-gates-or-around-lowere"]
   },
+
   {
     id: "q512",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Railroad no train at lowered gate?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning railroad no train at lowered gate?",
+    imageUrl: "",
     options: [
       "If gates are lowered and no train is approaching, call the posted railroad emergency number or 911.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 39, Railroad no train at lowered gate): If gates are lowered and no train is approaching, call the posted railroad emergency number or 911.",
@@ -10037,16 +10545,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Railroad no train at lowered gate",
     coverageFactIds: ["pdf-fact-s5-railroad-no-train-at-lowered-gate-if-gates-are-lowered-and-no-train-is"]
   },
+
   {
     id: "q513",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Railroad stop look listen?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning railroad stop look listen?",
+    imageUrl: "",
     options: [
       "At railroad crossings, stop, look, and listen; only cross when safe.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 39, Railroad stop look listen): At railroad crossings, stop, look, and listen; only cross when safe.",
@@ -10056,16 +10565,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Railroad stop look listen",
     coverageFactIds: ["pdf-fact-s5-railroad-stop-look-listen-at-railroad-crossings-stop-look-and-listen-o"]
   },
+
   {
     id: "q514",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Railroad expect any track?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for railroad expect any track?",
+    imageUrl: "",
     options: [
       "Expect a train on any track, at any time, traveling in either direction.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 39, Railroad expect any track): Expect a train on any track, at any time, traveling in either direction.",
@@ -10075,16 +10585,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Railroad expect any track",
     coverageFactIds: ["pdf-fact-s5-railroad-expect-any-track-expect-a-train-on-any-track-at-any-time-trav"]
   },
+
   {
     id: "q515",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Railroad no stopping tracks?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding railroad no stopping tracks?",
+    imageUrl: "",
     options: [
       "Never stop on railroad tracks or start crossing unless there is room to completely cross.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 39, Railroad no stopping tracks): Never stop on railroad tracks or start crossing unless there is room to completely cross.",
@@ -10094,16 +10605,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Railroad no stopping tracks",
     coverageFactIds: ["pdf-fact-s5-railroad-no-stopping-tracks-never-stop-on-railroad-tracks-or-start-cro"]
   },
+
   {
     id: "q516",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Railroad required-stop vehicles?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding railroad required-stop vehicles?",
+    imageUrl: "",
     options: [
       "Watch for vehicles that must stop before tracks, including buses, school buses, and vehicles with hazardous materials placards.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 39, Railroad required-stop vehicles): Watch for vehicles that must stop before tracks, including buses, school buses, and vehicles with hazardous materials placards.",
@@ -10113,16 +10625,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Railroad required-stop vehicles",
     coverageFactIds: ["pdf-fact-s5-railroad-required-stop-vehicles-watch-for-vehicles-that-must-stop-befo"]
   },
+
   {
     id: "q517",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Overloaded vehicle?",
-    imageUrl: '',
+    questionText: "How is overloaded vehicle properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Drivers must not operate a vehicle so overloaded they cannot control it or see ahead or to the sides.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 40, Overloaded vehicle): Drivers must not operate a vehicle so overloaded they cannot control it or see ahead or to the sides.",
@@ -10132,16 +10645,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Overloaded vehicle",
     coverageFactIds: ["pdf-fact-s5-overloaded-vehicle-drivers-must-not-operate-a-vehicle-so-overloaded-th"]
   },
+
   {
     id: "q518",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Unsecured load?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for unsecured load?",
+    imageUrl: "",
     options: [
       "Drivers must not operate a vehicle with an unsecured load that is a safety hazard.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 40, Unsecured load): Drivers must not operate a vehicle with an unsecured load that is a safety hazard.",
@@ -10151,16 +10665,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Unsecured load",
     coverageFactIds: ["pdf-fact-s5-unsecured-load-drivers-must-not-operate-a-vehicle-with-an-unsecured-lo"]
   },
+
   {
     id: "q519",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Rear cargo night lights?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding rear cargo night lights?",
+    imageUrl: "",
     options: [
       "At night, cargo extending more than four feet from the rear bumper must be marked with two red lights.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 40, Rear cargo night lights): At night, cargo extending more than four feet from the rear bumper must be marked with two red lights.",
@@ -10170,16 +10685,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Rear cargo night lights",
     coverageFactIds: ["pdf-fact-s5-rear-cargo-night-lights-at-night-cargo-extending-more-than-four-feet-f"]
   },
+
   {
     id: "q520",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Pickup bed animals?",
-    imageUrl: '',
+    questionText: "What should a driver know about pickup bed animals to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Animals transported in the back of a pickup or truck must be properly secured to prevent falling, jumping, or being thrown.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 40, Pickup bed animals): Animals transported in the back of a pickup or truck must be properly secured to prevent falling, jumping, or being thrown.",
@@ -10189,16 +10705,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Pickup bed animals",
     coverageFactIds: ["pdf-fact-s5-pickup-bed-animals-animals-transported-in-the-back-of-a-pickup-or-truc"]
   },
+
   {
     id: "q521",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Driver visible video monitor?",
-    imageUrl: '',
+    questionText: "How is driver visible video monitor properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Drivers may not operate a vehicle with a video monitor visible to the driver unless it displays vehicle information, navigation, media player, or radio.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 40, Driver visible video monitor): Drivers may not operate a vehicle with a video monitor visible to the driver unless it displays vehicle information, navigation, media player, or radio.",
@@ -10208,16 +10725,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Driver visible video monitor",
     coverageFactIds: ["pdf-fact-s5-driver-visible-video-monitor-drivers-may-not-operate-a-vehicle-with-a"]
   },
+
   {
     id: "q522",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No throwing burning substances?",
-    imageUrl: '',
+    questionText: "How is no throwing burning substances properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Drivers must not throw cigarettes, cigars, or other flaming or glowing substances from a vehicle.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 40, No throwing burning substances): Drivers must not throw cigarettes, cigars, or other flaming or glowing substances from a vehicle.",
@@ -10227,16 +10745,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No throwing burning substances",
     coverageFactIds: ["pdf-fact-s5-no-throwing-burning-substances-drivers-must-not-throw-cigarettes-cigar"]
   },
+
   {
     id: "q523",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Windshield obstruction ban?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning windshield obstruction ban?",
+    imageUrl: "",
     options: [
       "Drivers must not put signs or objects on the windshield or side rear windows that block view or hang objects on the mirror.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 41, Windshield obstruction ban): Drivers must not put signs or objects on the windshield or side rear windows that block view or hang objects on the mirror.",
@@ -10246,16 +10765,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Windshield obstruction ban",
     coverageFactIds: ["pdf-fact-s5-windshield-obstruction-ban-drivers-must-not-put-signs-or-objects-on-th"]
   },
+
   {
     id: "q524",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Side windows behind driver?",
-    imageUrl: '',
+    questionText: "What should a driver know about side windows behind driver to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Objects may be placed on side windows behind the driver.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 41, Side windows behind driver): Objects may be placed on side windows behind the driver.",
@@ -10265,16 +10785,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Side windows behind driver",
     coverageFactIds: ["pdf-fact-s5-side-windows-behind-driver-objects-may-be-placed-on-side-windows-behin"]
   },
+
   {
     id: "q525",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on License plate legibility?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for license plate legibility?",
+    imageUrl: "",
     options: [
       "Drivers must not operate a vehicle with an illegible license plate.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 41, License plate legibility): Drivers must not operate a vehicle with an illegible license plate.",
@@ -10284,16 +10805,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "License plate legibility",
     coverageFactIds: ["pdf-fact-s5-license-plate-legibility-drivers-must-not-operate-a-vehicle-with-an-il"]
   },
+
   {
     id: "q526",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on License plate alteration?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for license plate alteration?",
+    imageUrl: "",
     options: [
       "Drivers must not alter a license plate in any way.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 41, License plate alteration): Drivers must not alter a license plate in any way.",
@@ -10303,16 +10825,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "License plate alteration",
     coverageFactIds: ["pdf-fact-s5-license-plate-alteration-drivers-must-not-alter-a-license-plate-in-any"]
   },
+
   {
     id: "q527",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Evading serious injury penalty?",
-    imageUrl: '',
+    questionText: "What should a driver know about evading serious injury penalty to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Causing serious bodily injury while evading law enforcement can lead to up to seven years in state prison or up to one year in county jail.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 41, Evading serious injury penalty): Causing serious bodily injury while evading law enforcement can lead to up to seven years in state prison or up to one year in county jail.",
@@ -10322,16 +10845,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Evading serious injury penalty",
     coverageFactIds: ["pdf-fact-s5-evading-serious-injury-penalty-causing-serious-bodily-injury-while-eva"]
   },
+
   {
     id: "q528",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Evading manslaughter penalty?",
-    imageUrl: '',
+    questionText: "How is evading manslaughter penalty properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Manslaughter resulting from evading law enforcement during a pursuit is punishable by 4 to 10 years in state prison.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 41, Evading manslaughter penalty): Manslaughter resulting from evading law enforcement during a pursuit is punishable by 4 to 10 years in state prison.",
@@ -10341,16 +10865,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Evading manslaughter penalty",
     coverageFactIds: ["pdf-fact-s5-evading-manslaughter-penalty-manslaughter-resulting-from-evading-law-e"]
   },
+
   {
     id: "q529",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Reckless speed contest injury?",
-    imageUrl: '',
+    questionText: "What should a driver know about reckless speed contest injury to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "A conviction for reckless driving or a speed contest that injures another person can lead to imprisonment, a fine, or both.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 41, Reckless speed contest injury): A conviction for reckless driving or a speed contest that injures another person can lead to imprisonment, a fine, or both.",
@@ -10360,16 +10885,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Reckless speed contest injury",
     coverageFactIds: ["pdf-fact-s5-reckless-speed-contest-injury-a-conviction-for-reckless-driving-or-a-s"]
   },
+
   {
     id: "q530",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Negligent driver points?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for negligent driver points?",
+    imageUrl: "",
     options: [
       "Too many points on a driver record can make a person a negligent driver and lead to probation, suspension, or revocation.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 42, Negligent driver points): Too many points on a driver record can make a person a negligent driver and lead to probation, suspension, or revocation.",
@@ -10379,16 +10905,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Negligent driver points",
     coverageFactIds: ["pdf-fact-s5-negligent-driver-points-too-many-points-on-a-driver-record-can-make-a"]
   },
+
   {
     id: "q531",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Suspension hearing right?",
-    imageUrl: '',
+    questionText: "What should a driver know about suspension hearing right to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "If DMV acts against a driving privilege, the driver has the right to a hearing and will be notified in writing.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 42, Suspension hearing right): If DMV acts against a driving privilege, the driver has the right to a hearing and will be notified in writing.",
@@ -10398,16 +10925,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Suspension hearing right",
     coverageFactIds: ["pdf-fact-s5-suspension-hearing-right-if-dmv-acts-against-a-driving-privilege-the-d"]
   },
+
   {
     id: "q532",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Mandatory revocation hit-and-run injury?",
-    imageUrl: '',
+    questionText: "How is mandatory revocation hit-and-run injury properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "DMV will revoke driving privilege for a hit-and-run or reckless driving conviction that resulted in injury.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 42, Mandatory revocation hit-and-run injury): DMV will revoke driving privilege for a hit-and-run or reckless driving conviction that resulted in injury.",
@@ -10417,16 +10945,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Mandatory revocation hit-and-run injury",
     coverageFactIds: ["pdf-fact-s5-mandatory-revocation-hit-and-run-injury-dmv-will-revoke-driving-privil"]
   },
+
   {
     id: "q533",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Replacement license after suspension?",
-    imageUrl: '',
+    questionText: "How is replacement license after suspension properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "After suspension or revocation, a driver may apply for a replacement license and must show proof of financial responsibility such as SR 22 or SR 1P.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 42, Replacement license after suspension): After suspension or revocation, a driver may apply for a replacement license and must show proof of financial responsibility such as SR 22 or SR 1P.",
@@ -10436,16 +10965,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Replacement license after suspension",
     coverageFactIds: ["pdf-fact-s5-replacement-license-after-suspension-after-suspension-or-revocation-a"]
   },
+
   {
     id: "q534",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Minor first collision violation?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding minor first collision violation?",
+    imageUrl: "",
     options: [
       "DMV may act against a minor license after one at-fault collision or traffic violation conviction during the first 12 months.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 42, Minor first collision violation): DMV may act against a minor license after one at-fault collision or traffic violation conviction during the first 12 months.",
@@ -10455,16 +10985,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Minor first collision violation",
     coverageFactIds: ["pdf-fact-s5-minor-first-collision-violation-dmv-may-act-against-a-minor-license-af"]
   },
+
   {
     id: "q535",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Minor probation repeat violations?",
-    imageUrl: '',
+    questionText: "What should a driver know about minor probation repeat violations to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Additional at-fault collisions or convictions while on probation can cause another suspension.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 42, Minor probation repeat violations): Additional at-fault collisions or convictions while on probation can cause another suspension.",
@@ -10474,16 +11005,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Minor probation repeat violations",
     coverageFactIds: ["pdf-fact-s5-minor-probation-repeat-violations-additional-at-fault-collisions-or-co"]
   },
+
   {
     id: "q536",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Minor alcohol controlled substance suspension?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for minor alcohol controlled substance suspension?",
+    imageUrl: "",
     options: [
       "A conviction for alcohol or controlled substance use by a person 15 to 20 causes a one-year license suspension or delayed eligibility.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 42, Minor alcohol controlled substance suspension): A conviction for alcohol or controlled substance use by a person 15 to 20 causes a one-year license suspension or delayed eligibility.",
@@ -10493,16 +11025,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Minor alcohol controlled substance suspension",
     coverageFactIds: ["pdf-fact-s5-minor-alcohol-controlled-substance-suspension-a-conviction-for-alcohol"]
   },
+
   {
     id: "q537",
     category: "Rules of the Road",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Turning 18 no erase restrictions?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning turning 18 no erase restrictions?",
+    imageUrl: "",
     options: [
       "Turning 18 does not erase or end existing restrictions, suspensions, or probation sentences.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 5: Laws and Rules of the Road, page 42, Turning 18 no erase restrictions): Turning 18 does not erase or end existing restrictions, suspensions, or probation sentences.",
@@ -10512,16 +11045,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Turning 18 no erase restrictions",
     coverageFactIds: ["pdf-fact-s5-turning-18-no-erase-restrictions-turning-18-does-not-erase-or-end-exis"]
   },
+
   {
     id: "q538",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Surrounding areas color map?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for surrounding areas color map?",
+    imageUrl: "",
     options: [
       "The handbook identifies areas around a vehicle as green ahead, blue beside, yellow blind spots, and red behind.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 44, Surrounding areas color map): The handbook identifies areas around a vehicle as green ahead, blue beside, yellow blind spots, and red behind.",
@@ -10531,16 +11065,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Surrounding areas color map",
     coverageFactIds: ["pdf-fact-s6-surrounding-areas-color-map-the-handbook-identifies-areas-around-a-veh"]
   },
+
   {
     id: "q539",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Scan 10 seconds ahead?",
-    imageUrl: '',
+    questionText: "How is scan 10 seconds ahead properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Drivers should scan the road at least 10 seconds ahead to allow time to react and avoid last-minute moves.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 44, Scan 10 seconds ahead): Drivers should scan the road at least 10 seconds ahead to allow time to react and avoid last-minute moves.",
@@ -10550,16 +11085,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Scan 10 seconds ahead",
     coverageFactIds: ["pdf-fact-s6-scan-10-seconds-ahead-drivers-should-scan-the-road-at-least-10-seconds"]
   },
+
   {
     id: "q540",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Close merge response?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding close merge response?",
+    imageUrl: "",
     options: [
       "If a vehicle merges too closely in front, take your foot off the accelerator to create space.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 44, Close merge response): If a vehicle merges too closely in front, take your foot off the accelerator to create space.",
@@ -10569,16 +11105,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Close merge response",
     coverageFactIds: ["pdf-fact-s6-close-merge-response-if-a-vehicle-merges-too-closely-in-front-take-you"]
   },
+
   {
     id: "q541",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Tailgater response?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning tailgater response?",
+    imageUrl: "",
     options: [
       "If a tailgater is behind you, maintain course and speed, then merge right when safe to let them pass.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 44, Tailgater response): If a tailgater is behind you, maintain course and speed, then merge right when safe to let them pass.",
@@ -10588,16 +11125,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Tailgater response",
     coverageFactIds: ["pdf-fact-s6-tailgater-response-if-a-tailgater-is-behind-you-maintain-course-and-sp"]
   },
+
   {
     id: "q542",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on More space for motorcyclists on rough surfaces?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for more space for motorcyclists on rough surfaces?",
+    imageUrl: "",
     options: [
       "Create more space when following motorcyclists on metal surfaces, bridge gratings, railroad tracks, or gravel.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 44, More space for motorcyclists on rough surfaces): Create more space when following motorcyclists on metal surfaces, bridge gratings, railroad tracks, or gravel.",
@@ -10607,16 +11145,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "More space for motorcyclists on rough surfaces",
     coverageFactIds: ["pdf-fact-s6-more-space-for-motorcyclists-on-rough-surfaces-create-more-space-when"]
   },
+
   {
     id: "q543",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Avoid blind spots of others?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning avoid blind spots of others?",
+    imageUrl: "",
     options: [
       "Do not stay in another driver’s blind spot.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 45, Avoid blind spots of others): Do not stay in another driver’s blind spot.",
@@ -10626,16 +11165,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Avoid blind spots of others",
     coverageFactIds: ["pdf-fact-s6-avoid-blind-spots-of-others-do-not-stay-in-another-driver-s-blind-spot"]
   },
+
   {
     id: "q544",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Avoid driving alongside?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding avoid driving alongside?",
+    imageUrl: "",
     options: [
       "Avoid driving directly alongside other vehicles.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 45, Avoid driving alongside): Avoid driving directly alongside other vehicles.",
@@ -10645,16 +11185,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Avoid driving alongside",
     coverageFactIds: ["pdf-fact-s6-avoid-driving-alongside-avoid-driving-directly-alongside-other-vehicle"]
   },
+
   {
     id: "q545",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Make space for freeway entrants?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for make space for freeway entrants?",
+    imageUrl: "",
     options: [
       "Make space for vehicles entering freeways even if you have the right-of-way.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 45, Make space for freeway entrants): Make space for vehicles entering freeways even if you have the right-of-way.",
@@ -10664,16 +11205,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Make space for freeway entrants",
     coverageFactIds: ["pdf-fact-s6-make-space-for-freeway-entrants-make-space-for-vehicles-entering-freew"]
   },
+
   {
     id: "q546",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Space from parked vehicles?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning space from parked vehicles?",
+    imageUrl: "",
     options: [
       "Keep space between your vehicle and parked vehicles.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 45, Space from parked vehicles): Keep space between your vehicle and parked vehicles.",
@@ -10683,16 +11225,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Space from parked vehicles",
     coverageFactIds: ["pdf-fact-s6-space-from-parked-vehicles-keep-space-between-your-vehicle-and-parked"]
   },
+
   {
     id: "q547",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Look both ways at controlled intersections?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for look both ways at controlled intersections?",
+    imageUrl: "",
     options: [
       "Look both ways even at intersections where traffic has a red light or stop sign.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 45, Look both ways at controlled intersections): Look both ways even at intersections where traffic has a red light or stop sign.",
@@ -10702,16 +11245,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Look both ways at controlled intersections",
     coverageFactIds: ["pdf-fact-s6-look-both-ways-at-controlled-intersections-look-both-ways-even-at-inte"]
   },
+
   {
     id: "q548",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Vehicle blind spots definition?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for vehicle blind spots definition?",
+    imageUrl: "",
     options: [
       "Blind spots are areas around a vehicle that a driver cannot see by looking ahead or using mirrors.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 45, Vehicle blind spots definition): Blind spots are areas around a vehicle that a driver cannot see by looking ahead or using mirrors.",
@@ -10721,16 +11265,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Vehicle blind spots definition",
     coverageFactIds: ["pdf-fact-s6-vehicle-blind-spots-definition-blind-spots-are-areas-around-a-vehicle"]
   },
+
   {
     id: "q549",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Blind spot shoulder check?",
-    imageUrl: '',
+    questionText: "What should a driver know about blind spot shoulder check to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Check blind spots by looking over your right and left shoulders through the side windows.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 45, Blind spot shoulder check): Check blind spots by looking over your right and left shoulders through the side windows.",
@@ -10740,16 +11285,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Blind spot shoulder check",
     coverageFactIds: ["pdf-fact-s6-blind-spot-shoulder-check-check-blind-spots-by-looking-over-your-right"]
   },
+
   {
     id: "q550",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Only turn head for blind spot?",
-    imageUrl: '',
+    questionText: "What should a driver know about only turn head for blind spot to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "When checking blind spots, turn only your head, not your body or steering wheel.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 45, Only turn head for blind spot): When checking blind spots, turn only your head, not your body or steering wheel.",
@@ -10759,16 +11305,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Only turn head for blind spot",
     coverageFactIds: ["pdf-fact-s6-only-turn-head-for-blind-spot-when-checking-blind-spots-turn-only-your"]
   },
+
   {
     id: "q551",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Blind spot check situations?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning blind spot check situations?",
+    imageUrl: "",
     options: [
       "Check blind spots before changing lanes, turning, merging, backing up, leaving parking, parallel parking, pulling from curb, or opening a door.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 45, Blind spot check situations): Check blind spots before changing lanes, turning, merging, backing up, leaving parking, parallel parking, pulling from curb, or opening a door.",
@@ -10778,16 +11325,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Blind spot check situations",
     coverageFactIds: ["pdf-fact-s6-blind-spot-check-situations-check-blind-spots-before-changing-lanes-tu"]
   },
+
   {
     id: "q552",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Check behind often?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for check behind often?",
+    imageUrl: "",
     options: [
       "Check behind often using mirrors and turning your head.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Check behind often): Check behind often using mirrors and turning your head.",
@@ -10797,16 +11345,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Check behind often",
     coverageFactIds: ["pdf-fact-s6-check-behind-often-check-behind-often-using-mirrors-and-turning-your-h"]
   },
+
   {
     id: "q553",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Check behind before actions?",
-    imageUrl: '',
+    questionText: "How is check behind before actions properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Check behind when changing lanes, reducing speed, turning, parking, pulling to or from curb, or backing up.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Check behind before actions): Check behind when changing lanes, reducing speed, turning, parking, pulling to or from curb, or backing up.",
@@ -10816,16 +11365,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Check behind before actions",
     coverageFactIds: ["pdf-fact-s6-check-behind-before-actions-check-behind-when-changing-lanes-reducing"]
   },
+
   {
     id: "q554",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Night high beams open roads?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning night high beams open roads?",
+    imageUrl: "",
     options: [
       "At night, use high beams on open country roads or dark city streets when legal.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Night high beams open roads): At night, use high beams on open country roads or dark city streets when legal.",
@@ -10835,16 +11385,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Night high beams open roads",
     coverageFactIds: ["pdf-fact-s6-night-high-beams-open-roads-at-night-use-high-beams-on-open-country-ro"]
   },
+
   {
     id: "q555",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Night stop within headlights?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding night stop within headlights?",
+    imageUrl: "",
     options: [
       "At night, make sure you can stop within the distance illuminated by headlights.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Night stop within headlights): At night, make sure you can stop within the distance illuminated by headlights.",
@@ -10854,16 +11405,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Night stop within headlights",
     coverageFactIds: ["pdf-fact-s6-night-stop-within-headlights-at-night-make-sure-you-can-stop-within-th"]
   },
+
   {
     id: "q556",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Night rain low beams?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning night rain low beams?",
+    imageUrl: "",
     options: [
       "When it is raining, use low-beam headlights, not only parking lights.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Night rain low beams): When it is raining, use low-beam headlights, not only parking lights.",
@@ -10873,16 +11425,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Night rain low beams",
     coverageFactIds: ["pdf-fact-s6-night-rain-low-beams-when-it-is-raining-use-low-beam-headlights-not-on"]
   },
+
   {
     id: "q557",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Night vulnerable users harder to see?",
-    imageUrl: '',
+    questionText: "What should a driver know about night vulnerable users harder to see to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "At night, motorcycles, pedestrians, and bicyclists are much harder to see.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Night vulnerable users harder to see): At night, motorcycles, pedestrians, and bicyclists are much harder to see.",
@@ -10892,16 +11445,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Night vulnerable users harder to see",
     coverageFactIds: ["pdf-fact-s6-night-vulnerable-users-harder-to-see-at-night-motorcycles-pedestrians"]
   },
+
   {
     id: "q558",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on One headlight oncoming?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for one headlight oncoming?",
+    imageUrl: "",
     options: [
       "If a vehicle with one light approaches at night, drive as far right as possible because it may be a bicyclist, motorcyclist, or vehicle missing a headlight.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, One headlight oncoming): If a vehicle with one light approaches at night, drive as far right as possible because it may be a bicyclist, motorcyclist, or vehicle missing a headlight.",
@@ -10911,16 +11465,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "One headlight oncoming",
     coverageFactIds: ["pdf-fact-s6-one-headlight-oncoming-if-a-vehicle-with-one-light-approaches-at-night"]
   },
+
   {
     id: "q559",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Sun glare clean windshield?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning sun glare clean windshield?",
+    imageUrl: "",
     options: [
       "To manage sun glare, keep the inside and outside of the windshield clean.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Sun glare clean windshield): To manage sun glare, keep the inside and outside of the windshield clean.",
@@ -10930,16 +11485,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Sun glare clean windshield",
     coverageFactIds: ["pdf-fact-s6-sun-glare-clean-windshield-to-manage-sun-glare-keep-the-inside-and-out"]
   },
+
   {
     id: "q560",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Sun glare sunglasses?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding sun glare sunglasses?",
+    imageUrl: "",
     options: [
       "Polarized sunglasses can help manage sun glare.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Sun glare sunglasses): Polarized sunglasses can help manage sun glare.",
@@ -10949,16 +11505,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Sun glare sunglasses",
     coverageFactIds: ["pdf-fact-s6-sun-glare-sunglasses-polarized-sunglasses-can-help-manage-sun-glare"]
   },
+
   {
     id: "q561",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Sun glare following space?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for sun glare following space?",
+    imageUrl: "",
     options: [
       "Maintain space around the vehicle when dealing with sun glare.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Sun glare following space): Maintain space around the vehicle when dealing with sun glare.",
@@ -10968,16 +11525,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Sun glare following space",
     coverageFactIds: ["pdf-fact-s6-sun-glare-following-space-maintain-space-around-the-vehicle-when-deali"]
   },
+
   {
     id: "q562",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Sun glare visor?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for sun glare visor?",
+    imageUrl: "",
     options: [
       "Make sure the visor works and is not blocked.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Sun glare visor): Make sure the visor works and is not blocked.",
@@ -10987,16 +11545,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Sun glare visor",
     coverageFactIds: ["pdf-fact-s6-sun-glare-visor-make-sure-the-visor-works-and-is-not-blocked"]
   },
+
   {
     id: "q563",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Sun glare pedestrians?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding sun glare pedestrians?",
+    imageUrl: "",
     options: [
       "Be aware that sun glare may make pedestrians hard to see.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Sun glare pedestrians): Be aware that sun glare may make pedestrians hard to see.",
@@ -11006,16 +11565,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Sun glare pedestrians",
     coverageFactIds: ["pdf-fact-s6-sun-glare-pedestrians-be-aware-that-sun-glare-may-make-pedestrians-har"]
   },
+
   {
     id: "q564",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Sunrise sunset avoid?",
-    imageUrl: '',
+    questionText: "What should a driver know about sunrise sunset avoid to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Try to avoid driving during sunrise and sunset when glare is worst.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 46, Sunrise sunset avoid): Try to avoid driving during sunrise and sunset when glare is worst.",
@@ -11025,16 +11585,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Sunrise sunset avoid",
     coverageFactIds: ["pdf-fact-s6-sunrise-sunset-avoid-try-to-avoid-driving-during-sunrise-and-sunset-wh"]
   },
+
   {
     id: "q565",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Skid definition?",
-    imageUrl: '',
+    questionText: "How is skid definition properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "A skid occurs when one or more tires lose traction and the vehicle starts to slip.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 47, Skid definition): A skid occurs when one or more tires lose traction and the vehicle starts to slip.",
@@ -11044,16 +11605,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Skid definition",
     coverageFactIds: ["pdf-fact-s6-skid-definition-a-skid-occurs-when-one-or-more-tires-lose-traction-and"]
   },
+
   {
     id: "q566",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Prevent slippery skids?",
-    imageUrl: '',
+    questionText: "What should a driver know about prevent slippery skids to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "To prevent slippery-surface skids, drive slowly, leave space, slow before curves and intersections, avoid quick stops, and use low gear before steep hills.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 47, Prevent slippery skids): To prevent slippery-surface skids, drive slowly, leave space, slow before curves and intersections, avoid quick stops, and use low gear before steep hills.",
@@ -11063,16 +11625,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Prevent slippery skids",
     coverageFactIds: ["pdf-fact-s6-prevent-slippery-skids-to-prevent-slippery-surface-skids-drive-slowly"]
   },
+
   {
     id: "q567",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Avoid slippery patches?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for avoid slippery patches?",
+    imageUrl: "",
     options: [
       "Avoid ice patches, wet leaves, oil, and standing water when possible.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 47, Avoid slippery patches): Avoid ice patches, wet leaves, oil, and standing water when possible.",
@@ -11082,16 +11645,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Avoid slippery patches",
     coverageFactIds: ["pdf-fact-s6-avoid-slippery-patches-avoid-ice-patches-wet-leaves-oil-and-standing-w"]
   },
+
   {
     id: "q568",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Locked wheel skid cause?",
-    imageUrl: '',
+    questionText: "What should a driver know about locked wheel skid cause to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "A locked wheel skid is usually caused by braking too hard while going too fast.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 47, Locked wheel skid cause): A locked wheel skid is usually caused by braking too hard while going too fast.",
@@ -11101,16 +11665,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Locked wheel skid cause",
     coverageFactIds: ["pdf-fact-s6-locked-wheel-skid-cause-a-locked-wheel-skid-is-usually-caused-by-braki"]
   },
+
   {
     id: "q569",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Four-wheel ABS skid?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for four-wheel abs skid?",
+    imageUrl: "",
     options: [
       "With four-wheel ABS, apply firm pressure to the brake pedal during a skid.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 47, Four-wheel ABS skid): With four-wheel ABS, apply firm pressure to the brake pedal during a skid.",
@@ -11120,16 +11685,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Four-wheel ABS skid",
     coverageFactIds: ["pdf-fact-s6-four-wheel-abs-skid-with-four-wheel-abs-apply-firm-pressure-to-the-bra"]
   },
+
   {
     id: "q570",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Rear-wheel ABS skid?",
-    imageUrl: '',
+    questionText: "How is rear-wheel abs skid properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "With rear-wheel ABS, ease brake pressure enough for front wheels to roll, then stop braking and steer into the skid.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 47, Rear-wheel ABS skid): With rear-wheel ABS, ease brake pressure enough for front wheels to roll, then stop braking and steer into the skid.",
@@ -11139,16 +11705,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Rear-wheel ABS skid",
     coverageFactIds: ["pdf-fact-s6-rear-wheel-abs-skid-with-rear-wheel-abs-ease-brake-pressure-enough-for"]
   },
+
   {
     id: "q571",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Front-wheel ABS skid?",
-    imageUrl: '',
+    questionText: "What should a driver know about front-wheel abs skid to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "With front-wheel ABS, remove your foot from the brake pedal, steer where you want to go, and straighten the front wheels as the vehicle straightens.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 47, Front-wheel ABS skid): With front-wheel ABS, remove your foot from the brake pedal, steer where you want to go, and straighten the front wheels as the vehicle straightens.",
@@ -11158,16 +11725,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Front-wheel ABS skid",
     coverageFactIds: ["pdf-fact-s6-front-wheel-abs-skid-with-front-wheel-abs-remove-your-foot-from-the-br"]
   },
+
   {
     id: "q572",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Non-ABS skid braking?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding non-abs skid braking?",
+    imageUrl: "",
     options: [
       "Without ABS, quickly pump the brakes until at a safe speed.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 48, Non-ABS skid braking): Without ABS, quickly pump the brakes until at a safe speed.",
@@ -11177,16 +11745,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Non-ABS skid braking",
     coverageFactIds: ["pdf-fact-s6-non-abs-skid-braking-without-abs-quickly-pump-the-brakes-until-at-a-sa"]
   },
+
   {
     id: "q573",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Brake failure sinking pedal?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding brake failure sinking pedal?",
+    imageUrl: "",
     options: [
       "If the brake pedal sinks to the floor, quickly pump the brakes by gently applying and releasing pressure.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 48, Brake failure sinking pedal): If the brake pedal sinks to the floor, quickly pump the brakes by gently applying and releasing pressure.",
@@ -11196,16 +11765,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Brake failure sinking pedal",
     coverageFactIds: ["pdf-fact-s6-brake-failure-sinking-pedal-if-the-brake-pedal-sinks-to-the-floor-quic"]
   },
+
   {
     id: "q574",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Emergency brake after downshift?",
-    imageUrl: '',
+    questionText: "How is emergency brake after downshift properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "If pumping brakes does not work, downshift to lower or neutral and try the emergency brake.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 48, Emergency brake after downshift): If pumping brakes does not work, downshift to lower or neutral and try the emergency brake.",
@@ -11215,16 +11785,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Emergency brake after downshift",
     coverageFactIds: ["pdf-fact-s6-emergency-brake-after-downshift-if-pumping-brakes-does-not-work-downsh"]
   },
+
   {
     id: "q575",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Dry wet brakes?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for dry wet brakes?",
+    imageUrl: "",
     options: [
       "If brakes get wet, dry them by lightly pressing accelerator and brake pedals at the same time only until dry.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 48, Dry wet brakes): If brakes get wet, dry them by lightly pressing accelerator and brake pedals at the same time only until dry.",
@@ -11234,16 +11805,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Dry wet brakes",
     coverageFactIds: ["pdf-fact-s6-dry-wet-brakes-if-brakes-get-wet-dry-them-by-lightly-pressing-accelera"]
   },
+
   {
     id: "q576",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Slippery roads slow?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for slippery roads slow?",
+    imageUrl: "",
     options: [
       "On slippery roads, drive more slowly than on dry roads and allow more following space.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 48, Slippery roads slow): On slippery roads, drive more slowly than on dry roads and allow more following space.",
@@ -11253,16 +11825,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Slippery roads slow",
     coverageFactIds: ["pdf-fact-s6-slippery-roads-slow-on-slippery-roads-drive-more-slowly-than-on-dry-ro"]
   },
+
   {
     id: "q577",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on First rain slippery?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding first rain slippery?",
+    imageUrl: "",
     options: [
       "When rain starts after dry hot weather, pavement can be very slippery due to oil and dust.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 48, First rain slippery): When rain starts after dry hot weather, pavement can be very slippery due to oil and dust.",
@@ -11272,16 +11845,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "First rain slippery",
     coverageFactIds: ["pdf-fact-s6-first-rain-slippery-when-rain-starts-after-dry-hot-weather-pavement-ca"]
   },
+
   {
     id: "q578",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Hydroplaning definition?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for hydroplaning definition?",
+    imageUrl: "",
     options: [
       "Hydroplaning occurs when tires lose all contact with the road and ride on water.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 49, Hydroplaning definition): Hydroplaning occurs when tires lose all contact with the road and ride on water.",
@@ -11291,16 +11865,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Hydroplaning definition",
     coverageFactIds: ["pdf-fact-s6-hydroplaning-definition-hydroplaning-occurs-when-tires-lose-all-contac"]
   },
+
   {
     id: "q579",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Avoid hydroplaning?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning avoid hydroplaning?",
+    imageUrl: "",
     options: [
       "To avoid hydroplaning, drive slowly, steer around standing water, and slow for sloshing sounds, lane changes, or direction changes.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 49, Avoid hydroplaning): To avoid hydroplaning, drive slowly, steer around standing water, and slow for sloshing sounds, lane changes, or direction changes.",
@@ -11310,16 +11885,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Avoid hydroplaning",
     coverageFactIds: ["pdf-fact-s6-avoid-hydroplaning-to-avoid-hydroplaning-drive-slowly-steer-around-sta"]
   },
+
   {
     id: "q580",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Stuck snow mud procedure?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding stuck snow mud procedure?",
+    imageUrl: "",
     options: [
       "If stuck in snow or mud, use low gear, keep wheels straight, accelerate gently, rock forward and reverse, and place traction materials only when stopped.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 49, Stuck snow mud procedure): If stuck in snow or mud, use low gear, keep wheels straight, accelerate gently, rock forward and reverse, and place traction materials only when stopped.",
@@ -11329,16 +11905,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Stuck snow mud procedure",
     coverageFactIds: ["pdf-fact-s6-stuck-snow-mud-procedure-if-stuck-in-snow-or-mud-use-low-gear-keep-whe"]
   },
+
   {
     id: "q581",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Flooded road dangers?",
-    imageUrl: '',
+    questionText: "How is flooded road dangers properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Flooded roads can sweep vehicles away, hide debris and hazards, collapse, cause vehicle malfunction, or create electrocution risk.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 49, Flooded road dangers): Flooded roads can sweep vehicles away, hide debris and hazards, collapse, cause vehicle malfunction, or create electrocution risk.",
@@ -11348,16 +11925,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Flooded road dangers",
     coverageFactIds: ["pdf-fact-s6-flooded-road-dangers-flooded-roads-can-sweep-vehicles-away-hide-debris"]
   },
+
   {
     id: "q582",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Avoid deep flood water?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding avoid deep flood water?",
+    imageUrl: "",
     options: [
       "If water depth cannot be determined or the road is too dangerous, find another route.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 50, Avoid deep flood water): If water depth cannot be determined or the road is too dangerous, find another route.",
@@ -11367,16 +11945,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Avoid deep flood water",
     coverageFactIds: ["pdf-fact-s6-avoid-deep-flood-water-if-water-depth-cannot-be-determined-or-the-road"]
   },
+
   {
     id: "q583",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on High wind procedure?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning high wind procedure?",
+    imageUrl: "",
     options: [
       "In high winds, reduce speed, hold the wheel firmly, watch for debris, and do not use cruise control.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 50, High wind procedure): In high winds, reduce speed, hold the wheel firmly, watch for debris, and do not use cruise control.",
@@ -11386,16 +11965,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "High wind procedure",
     coverageFactIds: ["pdf-fact-s6-high-wind-procedure-in-high-winds-reduce-speed-hold-the-wheel-firmly-w"]
   },
+
   {
     id: "q584",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Heavy fog avoid?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for heavy fog avoid?",
+    imageUrl: "",
     options: [
       "It is best to avoid driving in heavy fog or smoke and postpone travel until it clears.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 50, Heavy fog avoid): It is best to avoid driving in heavy fog or smoke and postpone travel until it clears.",
@@ -11405,16 +11985,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Heavy fog avoid",
     coverageFactIds: ["pdf-fact-s6-heavy-fog-avoid-it-is-best-to-avoid-driving-in-heavy-fog-or-smoke-and"]
   },
+
   {
     id: "q585",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Fog driving procedure?",
-    imageUrl: '',
+    questionText: "How is fog driving procedure properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "If you must drive in heavy fog or smoke, drive slowly, use low beams, increase following distance, use wipers/defroster, avoid passing, and listen for unseen traffic.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 50, Fog driving procedure): If you must drive in heavy fog or smoke, drive slowly, use low beams, increase following distance, use wipers/defroster, avoid passing, and listen for unseen traffic.",
@@ -11424,16 +12005,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Fog driving procedure",
     coverageFactIds: ["pdf-fact-s6-fog-driving-procedure-if-you-must-drive-in-heavy-fog-or-smoke-drive-sl"]
   },
+
   {
     id: "q586",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Fog no parking lights only?",
-    imageUrl: '',
+    questionText: "How is fog no parking lights only properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Never drive in fog using only parking or fog lights.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 50, Fog no parking lights only): Never drive in fog using only parking or fog lights.",
@@ -11443,16 +12025,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Fog no parking lights only",
     coverageFactIds: ["pdf-fact-s6-fog-no-parking-lights-only-never-drive-in-fog-using-only-parking-or-fo"]
   },
+
   {
     id: "q587",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Fog too thick pull off?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning fog too thick pull off?",
+    imageUrl: "",
     options: [
       "If fog becomes too thick to drive safely, pull off the road, activate flashers, and wait.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 50, Fog too thick pull off): If fog becomes too thick to drive safely, pull off the road, activate flashers, and wait.",
@@ -11462,16 +12045,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Fog too thick pull off",
     coverageFactIds: ["pdf-fact-s6-fog-too-thick-pull-off-if-fog-becomes-too-thick-to-drive-safely-pull-o"]
   },
+
   {
     id: "q588",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Traffic break definition?",
-    imageUrl: '',
+    questionText: "What should a driver know about traffic break definition to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "During a traffic break, an officer turns on emergency lights and slowly weaves across lanes.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 50, Traffic break definition): During a traffic break, an officer turns on emergency lights and slowly weaves across lanes.",
@@ -11481,16 +12065,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Traffic break definition",
     coverageFactIds: ["pdf-fact-s6-traffic-break-definition-during-a-traffic-break-an-officer-turns-on-em"]
   },
+
   {
     id: "q589",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Traffic break purposes?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning traffic break purposes?",
+    imageUrl: "",
     options: [
       "Traffic breaks are used to slow or stop traffic for road hazards, heavy fog, unusual traffic, or collision prevention.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 50, Traffic break purposes): Traffic breaks are used to slow or stop traffic for road hazards, heavy fog, unusual traffic, or collision prevention.",
@@ -11500,16 +12085,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Traffic break purposes",
     coverageFactIds: ["pdf-fact-s6-traffic-break-purposes-traffic-breaks-are-used-to-slow-or-stop-traffic"]
   },
+
   {
     id: "q590",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Seat belt requirement?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for seat belt requirement?",
+    imageUrl: "",
     options: [
       "Drivers and passengers must wear seat belts, and a ticket can be issued for not wearing one.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 51, Seat belt requirement): Drivers and passengers must wear seat belts, and a ticket can be issued for not wearing one.",
@@ -11519,16 +12105,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Seat belt requirement",
     coverageFactIds: ["pdf-fact-s6-seat-belt-requirement-drivers-and-passengers-must-wear-seat-belts-and"]
   },
+
   {
     id: "q591",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Seat belt survival?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning seat belt survival?",
+    imageUrl: "",
     options: [
       "Seat belts and shoulder harnesses increase survival chances and help keep occupants positioned to control the vehicle.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 51, Seat belt survival): Seat belts and shoulder harnesses increase survival chances and help keep occupants positioned to control the vehicle.",
@@ -11538,16 +12125,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Seat belt survival",
     coverageFactIds: ["pdf-fact-s6-seat-belt-survival-seat-belts-and-shoulder-harnesses-increase-survival"]
   },
+
   {
     id: "q592",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Rear-facing airbag front seat prohibition?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for rear-facing airbag front seat prohibition?",
+    imageUrl: "",
     options: [
       "A child in a rear-facing child restraint may not ride in the front seat of an airbag-equipped vehicle.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 51, Rear-facing airbag front seat prohibition): A child in a rear-facing child restraint may not ride in the front seat of an airbag-equipped vehicle.",
@@ -11557,16 +12145,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Rear-facing airbag front seat prohibition",
     coverageFactIds: ["pdf-fact-s6-rear-facing-airbag-front-seat-prohibition-a-child-in-a-rear-facing-chi"]
   },
+
   {
     id: "q593",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Driving off pavement recovery?",
-    imageUrl: '',
+    questionText: "How is driving off pavement recovery properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "If wheels drift off pavement, grip the wheel, ease off accelerator, brake gently, check traffic, and carefully steer back.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 53, Driving off pavement recovery): If wheels drift off pavement, grip the wheel, ease off accelerator, brake gently, check traffic, and carefully steer back.",
@@ -11576,16 +12165,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Driving off pavement recovery",
     coverageFactIds: ["pdf-fact-s6-driving-off-pavement-recovery-if-wheels-drift-off-pavement-grip-the-wh"]
   },
+
   {
     id: "q594",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Avoid hard steer after pavement drift?",
-    imageUrl: '',
+    questionText: "How is avoid hard steer after pavement drift properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Do not pull or turn the wheel too forcefully after driving off pavement because it may send you into oncoming traffic.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 53, Avoid hard steer after pavement drift): Do not pull or turn the wheel too forcefully after driving off pavement because it may send you into oncoming traffic.",
@@ -11595,16 +12185,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Avoid hard steer after pavement drift",
     coverageFactIds: ["pdf-fact-s6-avoid-hard-steer-after-pavement-drift-do-not-pull-or-turn-the-wheel-to"]
   },
+
   {
     id: "q595",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Railroad tracks no train approaching?",
-    imageUrl: '',
+    questionText: "How is railroad tracks no train approaching properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "If stalled on tracks with no approaching train and no flashing lights, exit, call the posted railroad number, provide crossing number if posted, then call 911.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 53, Railroad tracks no train approaching): If stalled on tracks with no approaching train and no flashing lights, exit, call the posted railroad number, provide crossing number if posted, then call 911.",
@@ -11614,16 +12205,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Railroad tracks no train approaching",
     coverageFactIds: ["pdf-fact-s6-railroad-tracks-no-train-approaching-if-stalled-on-tracks-with-no-appr"]
   },
+
   {
     id: "q596",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Distracted driving examples?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding distracted driving examples?",
+    imageUrl: "",
     options: [
       "Distractions include looking at a phone, navigation system, children, pets, changing music, applying makeup, or shaving.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 54, Distracted driving examples): Distractions include looking at a phone, navigation system, children, pets, changing music, applying makeup, or shaving.",
@@ -11633,16 +12225,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Distracted driving examples",
     coverageFactIds: ["pdf-fact-s6-distracted-driving-examples-distractions-include-looking-at-a-phone-na"]
   },
+
   {
     id: "q597",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Do not text while driving?",
-    imageUrl: '',
+    questionText: "What should a driver know about do not text while driving to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Drivers must not send or read texts or emails while driving.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 54, Do not text while driving): Drivers must not send or read texts or emails while driving.",
@@ -11652,16 +12245,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Do not text while driving",
     coverageFactIds: ["pdf-fact-s6-do-not-text-while-driving-drivers-must-not-send-or-read-texts-or-email"]
   },
+
   {
     id: "q598",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Mounted phone location?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning mounted phone location?",
+    imageUrl: "",
     options: [
       "A phone may be mounted on the windshield, dashboard, or center console if it does not block road view.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 54, Mounted phone location): A phone may be mounted on the windshield, dashboard, or center console if it does not block road view.",
@@ -11671,16 +12265,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Mounted phone location",
     coverageFactIds: ["pdf-fact-s6-mounted-phone-location-a-phone-may-be-mounted-on-the-windshield-dashbo"]
   },
+
   {
     id: "q599",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Single swipe touch?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding single swipe touch?",
+    imageUrl: "",
     options: [
       "Use only a single swipe or touch feature on a mounted phone while driving.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 54, Single swipe touch): Use only a single swipe or touch feature on a mounted phone while driving.",
@@ -11690,16 +12285,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Single swipe touch",
     coverageFactIds: ["pdf-fact-s6-single-swipe-touch-use-only-a-single-swipe-or-touch-feature-on-a-mount"]
   },
+
   {
     id: "q600",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Minor emergency phone exception?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for minor emergency phone exception?",
+    imageUrl: "",
     options: [
       "A minor may use a cell phone to make a call for emergency assistance.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 54, Minor emergency phone exception): A minor may use a cell phone to make a call for emergency assistance.",
@@ -11709,16 +12305,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Minor emergency phone exception",
     coverageFactIds: ["pdf-fact-s6-minor-emergency-phone-exception-a-minor-may-use-a-cell-phone-to-make-a"]
   },
+
   {
     id: "q601",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Carbon monoxide danger?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding carbon monoxide danger?",
+    imageUrl: "",
     options: [
       "Gas-powered vehicles produce carbon monoxide, a deadly odorless gas from the exhaust pipe.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 54, Carbon monoxide danger): Gas-powered vehicles produce carbon monoxide, a deadly odorless gas from the exhaust pipe.",
@@ -11728,16 +12325,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Carbon monoxide danger",
     coverageFactIds: ["pdf-fact-s6-carbon-monoxide-danger-gas-powered-vehicles-produce-carbon-monoxide-a"]
   },
+
   {
     id: "q602",
     category: "Safe Driving",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Garage carbon monoxide safety?",
-    imageUrl: '',
+    questionText: "How is garage carbon monoxide safety properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Never start a vehicle inside a garage with the door closed.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 6: Safe Driving, page 54, Garage carbon monoxide safety): Never start a vehicle inside a garage with the door closed.",
@@ -11747,16 +12345,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Garage carbon monoxide safety",
     coverageFactIds: ["pdf-fact-s6-garage-carbon-monoxide-safety-never-start-a-vehicle-inside-a-garage-wi"]
   },
+
   {
     id: "q603",
     category: "Alcohol and Drugs",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on DUI laws alcohol and drugs?",
-    imageUrl: '',
+    questionText: "How is dui laws alcohol and drugs properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "California DUI laws apply to both alcohol and drugs.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement does not apply on weekends or state holidays.",
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 55, DUI laws alcohol and drugs): California DUI laws apply to both alcohol and drugs.",
@@ -11766,16 +12365,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "DUI laws alcohol and drugs",
     coverageFactIds: ["pdf-fact-s7-dui-laws-alcohol-and-drugs-california-dui-laws-apply-to-both-alcohol-a"]
   },
+
   {
     id: "q604",
     category: "Alcohol and Drugs",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Age reduces alcohol tolerance?",
-    imageUrl: '',
+    questionText: "How is age reduces alcohol tolerance properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "As people age, alcohol tolerance decreases, increasing alcohol-related driving risk.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should speed up to complete the maneuver as quickly as possible.",
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 55, Age reduces alcohol tolerance): As people age, alcohol tolerance decreases, increasing alcohol-related driving risk.",
@@ -11785,16 +12385,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Age reduces alcohol tolerance",
     coverageFactIds: ["pdf-fact-s7-age-reduces-alcohol-tolerance-as-people-age-alcohol-tolerance-decrease"]
   },
+
   {
     id: "q605",
     category: "Alcohol and Drugs",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No excessive alcohol before driving?",
-    imageUrl: '',
+    questionText: "How is no excessive alcohol before driving properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "It is illegal to drive after drinking excessive alcohol in any form, including medications such as cough syrup.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers with over five years of clean record are exempt from this rule.",
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 55, No excessive alcohol before driving): It is illegal to drive after drinking excessive alcohol in any form, including medications such as cough syrup.",
@@ -11804,16 +12405,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No excessive alcohol before driving",
     coverageFactIds: ["pdf-fact-s7-no-excessive-alcohol-before-driving-it-is-illegal-to-drive-after-drink"]
   },
+
   {
     id: "q606",
     category: "Alcohol and Drugs",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on No alcohol drug combination?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding no alcohol drug combination?",
+    imageUrl: "",
     options: [
       "It is illegal to drive after using any alcohol-drug combination that decreases safe driving ability.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule is suspended when driving in designated construction zones.",
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 55, No alcohol drug combination): It is illegal to drive after using any alcohol-drug combination that decreases safe driving ability.",
@@ -11823,16 +12425,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "No alcohol drug combination",
     coverageFactIds: ["pdf-fact-s7-no-alcohol-drug-combination-it-is-illegal-to-drive-after-using-any-alc"]
   },
+
   {
     id: "q607",
     category: "Alcohol and Drugs",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Read medication labels?",
-    imageUrl: '',
+    questionText: "What should a driver know about read medication labels to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Drivers should read medication labels and know the effects of any drug they use.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This guideline applies only to drivers under the age of 21.",
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 55, Read medication labels): Drivers should read medication labels and know the effects of any drug they use.",
@@ -11842,16 +12445,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Read medication labels",
     coverageFactIds: ["pdf-fact-s7-read-medication-labels-drivers-should-read-medication-labels-and-know"]
   },
+
   {
     id: "q608",
     category: "Alcohol and Drugs",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Open container passenger exception?",
-    imageUrl: '',
+    questionText: "What should a driver know about open container passenger exception to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Open-container rules do not apply to passengers in a bus, taxi, camper, or motorhome.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This action is required only when another vehicle is within 50 feet.",
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 55, Open container passenger exception): Open-container rules do not apply to passengers in a bus, taxi, camper, or motorhome.",
@@ -11861,16 +12465,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Open container passenger exception",
     coverageFactIds: ["pdf-fact-s7-open-container-passenger-exception-open-container-rules-do-not-apply-t"]
   },
+
   {
     id: "q609",
     category: "Alcohol and Drugs",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on DUI below BAC possible?",
-    imageUrl: '',
+    questionText: "How is dui below bac possible properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "A driver can be arrested and convicted of DUI even with BAC below the legal limit if impaired.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The restriction is waived if you are accompanied by a fully licensed adult.",
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 56, DUI below BAC possible): A driver can be arrested and convicted of DUI even with BAC below the legal limit if impaired.",
@@ -11880,16 +12485,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "DUI below BAC possible",
     coverageFactIds: ["pdf-fact-s7-dui-below-bac-possible-a-driver-can-be-arrested-and-convicted-of-dui-e"]
   },
+
   {
     id: "q610",
     category: "Alcohol and Drugs",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on One drink affects driving?",
-    imageUrl: '',
+    questionText: "What should a driver know about one drink affects driving to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Even one alcoholic drink can affect safe driving ability.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Drivers may use their own personal judgment to bypass this guidance.",
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 56, One drink affects driving): Even one alcoholic drink can affect safe driving ability.",
@@ -11899,16 +12505,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "One drink affects driving",
     coverageFactIds: ["pdf-fact-s7-one-drink-affects-driving-even-one-alcoholic-drink-can-affect-safe-dri"]
   },
+
   {
     id: "q611",
     category: "Alcohol and Drugs",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on BAC decrease over time?",
-    imageUrl: '',
+    questionText: "How is bac decrease over time properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "The BAC table says to subtract 0.01% for each 40 minutes that lapse between drinks.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement applies only when driving on high-speed interstate freeways.",
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 56, BAC decrease over time): The BAC table says to subtract 0.01% for each 40 minutes that lapse between drinks.",
@@ -11918,16 +12525,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "BAC decrease over time",
     coverageFactIds: ["pdf-fact-s7-bac-decrease-over-time-the-bac-table-says-to-subtract-0-01pct-for-each"]
   },
+
   {
     id: "q612",
     category: "Alcohol and Drugs",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Standard drink definition?",
-    imageUrl: '',
+    questionText: "How is standard drink definition properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "For the BAC table, one drink equals 1.5 oz 80-proof liquor, 12 oz 5% beer, or 5 oz 12% wine.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You only need to comply if a law enforcement vehicle is in sight.",
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 56, Standard drink definition): For the BAC table, one drink equals 1.5 oz 80-proof liquor, 12 oz 5% beer, or 5 oz 12% wine.",
@@ -11937,16 +12545,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Standard drink definition",
     coverageFactIds: ["pdf-fact-s7-standard-drink-definition-for-the-bac-table-one-drink-equals-1-5-oz-80"]
   },
+
   {
     id: "q613",
     category: "Alcohol and Drugs",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Boating DUI note?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning boating dui note?",
+    imageUrl: "",
     options: [
       "It is illegal to drink alcohol or take drugs while operating boats, jet skis, water skis, aquaplanes, or similar vessels.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "It is acceptable to ignore this guideline during light traffic conditions.",
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 56, Boating DUI note): It is illegal to drink alcohol or take drugs while operating boats, jet skis, water skis, aquaplanes, or similar vessels.",
@@ -11956,16 +12565,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Boating DUI note",
     coverageFactIds: ["pdf-fact-s7-boating-dui-note-it-is-illegal-to-drink-alcohol-or-take-drugs-while-op"]
   },
+
   {
     id: "q614",
     category: "Alcohol and Drugs",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Implied consent DUI arrest?",
-    imageUrl: '',
+    questionText: "What should a driver know about implied consent dui arrest to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Driving in California means consenting to breath, blood, or urine testing when suspected of DUI.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule only needs to be followed if weather conditions are hazardous.",
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 57, Implied consent DUI arrest): Driving in California means consenting to breath, blood, or urine testing when suspected of DUI.",
@@ -11975,16 +12585,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Implied consent DUI arrest",
     coverageFactIds: ["pdf-fact-s7-implied-consent-dui-arrest-driving-in-california-means-consenting-to-b"]
   },
+
   {
     id: "q615",
     category: "Alcohol and Drugs",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on PAS breath still blood urine?",
-    imageUrl: '',
+    questionText: "Which of the following is correct regarding pas breath still blood urine?",
+    imageUrl: "",
     options: [
       "Taking a preliminary alcohol screening or breath test does not prevent being required to take a blood or urine test for drugs.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This procedure is only necessary during the practical DMV road test.",
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 57, PAS breath still blood urine): Taking a preliminary alcohol screening or breath test does not prevent being required to take a blood or urine test for drugs.",
@@ -11994,16 +12605,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "PAS breath still blood urine",
     coverageFactIds: ["pdf-fact-s7-pas-breath-still-blood-urine-taking-a-preliminary-alcohol-screening-or"]
   },
+
   {
     id: "q616",
     category: "Alcohol and Drugs",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Admin Per Se suspension?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for admin per se suspension?",
+    imageUrl: "",
     options: [
       "California Administrative Per Se law requires DMV to suspend driving privilege after a DUI arrest.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You may yield this obligation if you are operating a hybrid or electric vehicle.",
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 57, Admin Per Se suspension): California Administrative Per Se law requires DMV to suspend driving privilege after a DUI arrest.",
@@ -12013,16 +12625,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Admin Per Se suspension",
     coverageFactIds: ["pdf-fact-s7-admin-per-se-suspension-california-administrative-per-se-law-requires"]
   },
+
   {
     id: "q617",
     category: "Alcohol and Drugs",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Under 21 off-site liquor exception?",
-    imageUrl: '',
+    questionText: "How is under 21 off-site liquor exception properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "An under-21 driver working for someone with an off-site liquor sales license may carry closed containers of alcohol.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This only applies when driving a rented or leased truck.",
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 57, Under 21 off-site liquor exception): An under-21 driver working for someone with an off-site liquor sales license may carry closed containers of alcohol.",
@@ -12032,16 +12645,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Under 21 off-site liquor exception",
     coverageFactIds: ["pdf-fact-s7-under-21-off-site-liquor-exception-an-under-21-driver-working-for-some"]
   },
+
   {
     id: "q618",
     category: "Alcohol and Drugs",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Under 21 alcohol impound penalty?",
-    imageUrl: '',
+    questionText: "What should a driver know about under 21 alcohol impound penalty to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "If an under-21 driver is caught with alcohol in the vehicle, law enforcement can impound the vehicle up to 30 days and the court may fine and suspend or delay licensing for one year.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should pull over to the left shoulder before beginning this action.",
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 7: Alcohol and Drugs, page 57, Under 21 alcohol impound penalty): If an under-21 driver is caught with alcohol in the vehicle, law enforcement can impound the vehicle up to 30 days and the court may fine and suspend or delay licensing for one year.",
@@ -12051,16 +12665,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Under 21 alcohol impound penalty",
     coverageFactIds: ["pdf-fact-s7-under-21-alcohol-impound-penalty-if-an-under-21-driver-is-caught-with"]
   },
+
   {
     id: "q619",
     category: "Financial Responsibility",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Proof of financial responsibility?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning proof of financial responsibility?",
+    imageUrl: "",
     options: [
       "Drivers must carry proof of financial responsibility or insurance when driving and for a drive test.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This rule assumes the right-of-way is ours regardless of sign postings.",
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 58, Proof of financial responsibility): Drivers must carry proof of financial responsibility or insurance when driving and for a drive test.",
@@ -12070,16 +12685,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Proof of financial responsibility",
     coverageFactIds: ["pdf-fact-s8-proof-of-financial-responsibility-drivers-must-carry-proof-of-financia"]
   },
+
   {
     id: "q620",
     category: "Financial Responsibility",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Collision proof of insurance?",
-    imageUrl: '',
+    questionText: "How is collision proof of insurance properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "After a collision, drivers must show proof of financial responsibility to other involved drivers.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You must signal other drivers using your hazard lights repeatedly.",
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 58, Collision proof of insurance): After a collision, drivers must show proof of financial responsibility to other involved drivers.",
@@ -12089,16 +12705,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Collision proof of insurance",
     coverageFactIds: ["pdf-fact-s8-collision-proof-of-insurance-after-a-collision-drivers-must-show-proof"]
   },
+
   {
     id: "q621",
     category: "Financial Responsibility",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Parent financial responsibility minor?",
-    imageUrl: '',
+    questionText: "How is parent financial responsibility minor properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "Parents or guardians take financial responsibility for drivers under 18 and pay damages if they are in a collision.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement only applies when navigating through a school zone.",
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 58, Parent financial responsibility minor): Parents or guardians take financial responsibility for drivers under 18 and pay damages if they are in a collision.",
@@ -12108,16 +12725,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Parent financial responsibility minor",
     coverageFactIds: ["pdf-fact-s8-parent-financial-responsibility-minor-parents-or-guardians-take-financ"]
   },
+
   {
     id: "q622",
     category: "Financial Responsibility",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Adult financial responsibility?",
-    imageUrl: '',
+    questionText: "What should a driver know about adult financial responsibility to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "Drivers 18 or older take on their own financial responsibility.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "There is no legal penalty for non-compliance with this section.",
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 58, Adult financial responsibility): Drivers 18 or older take on their own financial responsibility.",
@@ -12127,16 +12745,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Adult financial responsibility",
     coverageFactIds: ["pdf-fact-s8-adult-financial-responsibility-drivers-18-or-older-take-on-their-own-f"]
   },
+
   {
     id: "q623",
     category: "Financial Responsibility",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Collision causes?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning collision causes?",
+    imageUrl: "",
     options: [
       "Common collision causes include distraction, unsafe speed, improper turns, right-of-way mistakes, ignoring signals/signs, wrong-side driving, and speed outside traffic flow.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is a general courtesy rule and not enforceable by traffic citations.",
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 58, Collision causes): Common collision causes include distraction, unsafe speed, improper turns, right-of-way mistakes, ignoring signals/signs, wrong-side driving, and speed outside traffic flow.",
@@ -12146,16 +12765,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Collision causes",
     coverageFactIds: ["pdf-fact-s8-collision-causes-common-collision-causes-include-distraction-unsafe-sp"]
   },
+
   {
     id: "q624",
     category: "Financial Responsibility",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Emergency flashers collision ahead?",
-    imageUrl: '',
+    questionText: "According to the California Driver's Handbook, what is the proper practice for emergency flashers collision ahead?",
+    imageUrl: "",
     options: [
       "If you see emergency flashers ahead, slow down and pass carefully.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "Only out-of-state license holders are required to follow this.",
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 59, Emergency flashers collision ahead): If you see emergency flashers ahead, slow down and pass carefully.",
@@ -12165,16 +12785,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Emergency flashers collision ahead",
     coverageFactIds: ["pdf-fact-s8-emergency-flashers-collision-ahead-if-you-see-emergency-flashers-ahead"]
   },
+
   {
     id: "q625",
     category: "Financial Responsibility",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Avoid collision scene?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning avoid collision scene?",
+    imageUrl: "",
     options: [
       "Avoid driving near collisions when possible so injured people can get help faster.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This safety check can be skipped if you are using advanced driver assistance systems.",
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 59, Avoid collision scene): Avoid driving near collisions when possible so injured people can get help faster.",
@@ -12184,16 +12805,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Avoid collision scene",
     coverageFactIds: ["pdf-fact-s8-avoid-collision-scene-avoid-driving-near-collisions-when-possible-so-i"]
   },
+
   {
     id: "q626",
     category: "Financial Responsibility",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Collision call 911 injury?",
-    imageUrl: '',
+    questionText: "What is the correct DMV rule or guidance concerning collision call 911 injury?",
+    imageUrl: "",
     options: [
       "Call 911 immediately if anyone is hurt in a collision.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This precaution is only necessary during nighttime hours.",
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 59, Collision call 911 injury): Call 911 immediately if anyone is hurt in a collision.",
@@ -12203,16 +12825,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Collision call 911 injury",
     coverageFactIds: ["pdf-fact-s8-collision-call-911-injury-call-911-immediately-if-anyone-is-hurt-in-a"]
   },
+
   {
     id: "q627",
     category: "Financial Responsibility",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Collision move vehicle no injuries?",
-    imageUrl: '',
+    questionText: "How is collision move vehicle no injuries properly handled under California traffic guidelines?",
+    imageUrl: "",
     options: [
       "If no one is hurt, move the vehicle out of traffic and then call 911.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "The guidelines are fully suspended under heavy rain or dense fog.",
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 59, Collision move vehicle no injuries): If no one is hurt, move the vehicle out of traffic and then call 911.",
@@ -12222,16 +12845,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Collision move vehicle no injuries",
     coverageFactIds: ["pdf-fact-s8-collision-move-vehicle-no-injuries-if-no-one-is-hurt-move-the-vehicle"]
   },
+
   {
     id: "q628",
     category: "Financial Responsibility",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Collision exchange information?",
-    imageUrl: '',
+    questionText: "What should a driver know about collision exchange information to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "After a collision, show driver license, registration, insurance information, and current address to other drivers, officers, and involved persons.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You should keep your high-beam headlights on constantly to be safe.",
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 59, Collision exchange information): After a collision, show driver license, registration, insurance information, and current address to other drivers, officers, and involved persons.",
@@ -12241,16 +12865,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Collision exchange information",
     coverageFactIds: ["pdf-fact-s8-collision-exchange-information-after-a-collision-show-driver-license-r"]
   },
+
   {
     id: "q629",
     category: "Financial Responsibility",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Collision law enforcement 24 hours?",
-    imageUrl: '',
+    questionText: "What should a driver know about collision law enforcement 24 hours to stay safe and compliant?",
+    imageUrl: "",
     options: [
       "If anyone is injured or killed in a collision, report it to law enforcement within 24 hours.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This is strictly to save fuel and does not affect roadway safety.",
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 59, Collision law enforcement 24 hours): If anyone is injured or killed in a collision, report it to law enforcement within 24 hours.",
@@ -12260,16 +12885,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Collision law enforcement 24 hours",
     coverageFactIds: ["pdf-fact-s8-collision-law-enforcement-24-hours-if-anyone-is-injured-or-killed-in-a"]
   },
+
   {
     id: "q630",
     category: "Financial Responsibility",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Animal collision?",
-    imageUrl: '',
+    questionText: "What is the recommended procedure if you accidentally hit or injure an animal with your vehicle?",
+    imageUrl: "",
     options: [
       "If you kill or injure an animal, call the nearest humane society or law enforcement and do not try to move the injured animal.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "This requirement is only suggested for commercial vehicle operations.",
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 59, Animal collision): If you kill or injure an animal, call the nearest humane society or law enforcement and do not try to move the injured animal.",
@@ -12279,16 +12905,17 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceTopic: "Animal collision",
     coverageFactIds: ["pdf-fact-s8-animal-collision-if-you-kill-or-injure-an-animal-call-the-nearest-huma"]
   },
+
   {
     id: "q631",
     category: "Financial Responsibility",
-    questionText: "Which statement best matches the California Driver's Handbook guidance on Collision driver record?",
-    imageUrl: '',
+    questionText: "Under what circumstance is a collision recorded on your DMV driver record?",
+    imageUrl: "",
     options: [
       "A collision involving over $1,000 damage, injury, or death will be added to the driver record regardless of fault.",
-      "This topic is only a suggestion and never affects safe-driving decisions.",
-      "This rule applies only when a police officer is physically present.",
-      "Drivers may ignore this guidance when traffic seems light."
+      "You are exempt from this rule when driving during daylight hours with clear visibility.",
+      "This protocol operates strictly as an optional recommendation, not a legal requirement.",
+      "This requirement does not apply on weekends or state holidays."
     ],
     correctOptionIndex: 0,
     explanation: "California Handbook (Section 8: Financial Responsibility, Insurance Requirements, and Collisions, page 60, Collision driver record): A collision involving over $1,000 damage, injury, or death will be added to the driver record regardless of fault.",

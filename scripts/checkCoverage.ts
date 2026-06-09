@@ -197,30 +197,42 @@ parsedQuestions.forEach(q => {
   }
 
   // Wording & Punctuation QA Guard
-  if (q.questionText) {
-    if (q.questionText.includes('?),') || q.questionText.includes('??') || q.questionText.includes('.,') || q.questionText.includes(',,')) {
-      validationFailures.push(`Question [${q.id}] has malformed punctuation in questionText ("${q.questionText}")`);
-      integrityPass = false;
-    }
-    if (q.questionText.toLowerCase().includes('twilight speed')) {
-      validationFailures.push(`Question [${q.id}] contains weird "twilight speed" wording: "${q.questionText}"`);
-      integrityPass = false;
-    }
-  }
+  const forbiddenPhrases = [
+    'dynamic note',
+    'matching highway',
+    'checkerboard horizontal speed bumps',
+    'hov assembly zone',
+    'airbag driver cover',
+    'twilight speed'
+  ];
+  const malformedPunctuation = ['?),', '??', '.,', ',,'];
 
-  if (q.explanation) {
-    if (q.explanation.toLowerCase().includes('twilight speed')) {
-      validationFailures.push(`Question [${q.id}] explanation contains weird "twilight speed" wording`);
+  const checkText = (text: string, context: string) => {
+    if (!text) return;
+    const normalized = text.toLowerCase().replace(/’/g, "'");
+    if (normalized.includes("best matches the california driver's handbook guidance on")) {
+      validationFailures.push(`Question [${q.id}] ${context} contains forbidden robotic wording ("best matches the california driver's handbook guidance on")`);
       integrityPass = false;
     }
-  }
-
-  if (q.options) {
-    q.options.forEach((opt, oIdx) => {
-      if (opt.toLowerCase().includes('twilight speed')) {
-        validationFailures.push(`Question [${q.id}] option ${oIdx} contains weird "twilight speed" wording: "${opt}"`);
+    forbiddenPhrases.forEach(phrase => {
+      if (normalized.includes(phrase)) {
+        validationFailures.push(`Question [${q.id}] ${context} contains forbidden phrase "${phrase}"`);
         integrityPass = false;
       }
+    });
+    malformedPunctuation.forEach(p => {
+      if (text.includes(p)) {
+        validationFailures.push(`Question [${q.id}] ${context} contains malformed punctuation "${p}"`);
+        integrityPass = false;
+      }
+    });
+  };
+
+  checkText(q.questionText, 'questionText');
+  checkText(q.explanation, 'explanation');
+  if (q.options) {
+    q.options.forEach((opt, oIdx) => {
+      checkText(opt, `option ${oIdx}`);
     });
   }
 
