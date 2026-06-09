@@ -786,7 +786,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
   {
     id: 'q31',
     category: 'Rules of the Road',
-    questionText: 'If a provisional minor driver has a medical necessity to drive during curfew hours, what is required?),',
+    questionText: 'If a provisional minor driver has a medical necessity to drive during curfew hours, what is required?',
     imageUrl: '',
     options: [
       'A written statement signed by the minor\'s parent or guardian.',
@@ -944,7 +944,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
       'From sunset to sunrise exactly.',
       'Beginning 15 minutes after sunset until 15 minutes before sunrise.',
       'Beginning 30 minutes after sunset, until 30 minutes before sunrise.',
-      'From 6:00 p.m. to 6:00 a.m. regardless of true twilight speeds.'
+      'Only between 6:00 p.m. and 6:00 a.m.'
     ],
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 3, Headlights): Headlights must be turned on beginning 30 minutes after sunset, and remain on until 30 minutes before sunrise.',

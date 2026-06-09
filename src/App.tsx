@@ -679,7 +679,7 @@ export default function App() {
                     disabled
                     className="w-full md:w-auto bg-slate-200 text-slate-500 font-bold py-2.5 px-6 rounded-xl text-xs cursor-default select-none shrink-0"
                   >
-                    Locked (Need 90% Readiness Score)
+                    Locked (Need 35% Readiness Score)
                   </button>
                 </div>
               )}

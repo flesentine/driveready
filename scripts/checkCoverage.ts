@@ -196,6 +196,34 @@ parsedQuestions.forEach(q => {
     integrityPass = false;
   }
 
+  // Wording & Punctuation QA Guard
+  if (q.questionText) {
+    if (q.questionText.includes('?),') || q.questionText.includes('??') || q.questionText.includes('.,') || q.questionText.includes(',,')) {
+      validationFailures.push(`Question [${q.id}] has malformed punctuation in questionText ("${q.questionText}")`);
+      integrityPass = false;
+    }
+    if (q.questionText.toLowerCase().includes('twilight speed')) {
+      validationFailures.push(`Question [${q.id}] contains weird "twilight speed" wording: "${q.questionText}"`);
+      integrityPass = false;
+    }
+  }
+
+  if (q.explanation) {
+    if (q.explanation.toLowerCase().includes('twilight speed')) {
+      validationFailures.push(`Question [${q.id}] explanation contains weird "twilight speed" wording`);
+      integrityPass = false;
+    }
+  }
+
+  if (q.options) {
+    q.options.forEach((opt, oIdx) => {
+      if (opt.toLowerCase().includes('twilight speed')) {
+        validationFailures.push(`Question [${q.id}] option ${oIdx} contains weird "twilight speed" wording: "${opt}"`);
+        integrityPass = false;
+      }
+    });
+  }
+
   // Check section alignment (sourceSection pointing to the wrong handbook section)
   const qSectionTopic = (q.sourceSection || '').toLowerCase();
   

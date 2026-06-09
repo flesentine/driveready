@@ -199,9 +199,9 @@ export const PracticeQuizView: React.FC<PracticeQuizViewProps> = ({
                 key={idx}
                 disabled={isAnswerConfirmed}
                 onClick={() => handleSelectOption(idx)}
-                className={`w-full text-left flex items-center justify-between p-4 border-2 rounded-xl transition-all active:scale-[0.99] min-h-[56px] text-sm md:text-base cursor-pointer ${optionStyles}`}
+                className={`w-full text-left flex items-center justify-between gap-4 p-4 border-2 rounded-xl transition-all active:scale-[0.99] min-h-[56px] text-sm md:text-base cursor-pointer ${optionStyles}`}
               >
-                <span>{option}</span>
+                <span className="flex-1 min-w-0 pr-2">{option}</span>
                 {iconMarker ? (
                   iconMarker
                 ) : (
