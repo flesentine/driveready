@@ -1,5 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
+// Last updated: 2026-06-09T19:08:11Z (Fresh touch to flag for GitHub commit)
 import { HANDBOOK_FACTS } from '../src/handbookFacts';
 
 // Definition of the original 21 questions we added

@@ -1,3 +1,4 @@
+// Last updated: 2026-06-09T19:08:11Z (Fresh touch to flag for GitHub commit)
 import { HandbookFact } from './types';
 
 export const HANDBOOK_FACTS: HandbookFact[] = [
