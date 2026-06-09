@@ -1,7 +1,6 @@
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
- * Last updated: 2026-06-09T19:08:11Z (Strict constraint integrity updates checks)
  */
 
 import { HANDBOOK_FACTS } from "../src/handbookFacts.ts";

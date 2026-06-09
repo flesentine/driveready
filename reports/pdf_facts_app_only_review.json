@@ -1,0 +1,82 @@
+[
+  {
+    "id": "fact-address-change-notification",
+    "section": "Section 1: The California Driver's License",
+    "page": 1,
+    "topic": "Address change notification timelines",
+    "fact": "You must notify the DMV of a change of residential address within 10 days of moving.",
+    "priority": "high",
+    "contentType": "number",
+    "mustHaveQuestion": true
+  },
+  {
+    "id": "fact-vehicle-transfer-notification",
+    "section": "Section 1: The California Driver's License",
+    "page": 1,
+    "topic": "Vehicle sell and transfer notification timeline",
+    "fact": "You must notify the DMV within 5 days of selling or transferring ownership of a vehicle.",
+    "priority": "high",
+    "contentType": "number",
+    "mustHaveQuestion": true
+  },
+  {
+    "id": "fact-limit-line-stop-crosswalk",
+    "section": "Section 4: Navigating the Roads",
+    "page": 7,
+    "topic": "Limit line stopping rules",
+    "fact": "A solid white line across a lane is a limit line, marking where you must stop before entering a crosswalk or intersection.",
+    "priority": "high",
+    "contentType": "definition",
+    "mustHaveQuestion": true
+  },
+  {
+    "id": "fact-sharing-road-animal-drawn-vehicles",
+    "section": "Section 5: Laws and Rules of the Road",
+    "page": 32,
+    "topic": "Animal-drawn vehicles and riders on public roads",
+    "fact": "People riding animals or driving animal-drawn vehicles on public roads have the same rights and duties as motor vehicle drivers.",
+    "priority": "medium",
+    "contentType": "rule",
+    "mustHaveQuestion": true
+  },
+  {
+    "id": "fact-scan-road-10seconds",
+    "section": "Section 6: Safe Driving",
+    "page": 44,
+    "topic": "Visual search scanning times",
+    "fact": "Always keep your eyes moving and scan the road at least 10 seconds ahead of your vehicle.",
+    "priority": "high",
+    "contentType": "number",
+    "mustHaveQuestion": true
+  },
+  {
+    "id": "fact-dashboard-warning-lights",
+    "section": "Section 6: Safe Driving",
+    "page": 52,
+    "topic": "Dashboard temperature and engine warning indicators",
+    "fact": "A red engine or thermometer warming indicator on your dashboard indicates the cooling system is overheating or engine oil pressure is low.",
+    "priority": "high",
+    "contentType": "rule",
+    "mustHaveQuestion": true
+  },
+  {
+    "id": "fact-safe-tire-tread-depth",
+    "section": "Section 6: Safe Driving",
+    "page": 52,
+    "topic": "Minimum legal tire tread depth",
+    "fact": "Tires are legally bald and unsafe to operate if they have less than 2/32 (1/16) of an inch of tread depth in any two adjacent major grooves.",
+    "priority": "high",
+    "contentType": "number",
+    "mustHaveQuestion": true
+  },
+  {
+    "id": "fact-flat-tire-blowout-safety",
+    "section": "Section 6: Safe Driving",
+    "page": 54,
+    "topic": "Tire blowout recovery procedures",
+    "fact": "If you experience a sudden tire blowout or flat tire: hold the steering wheel tightly, steer straight, slowly ease off the accelerator, do not brake, and safely pull off the road.",
+    "priority": "high",
+    "contentType": "procedure",
+    "mustHaveQuestion": true
+  }
+]
