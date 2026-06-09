@@ -419,8 +419,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     testGroup: 13,
     sourceSection: 'Section 4: Navigating the Roads',
     sourcePage: 9,
-    sourceTopic: 'Slow Driver Turnouts',
-    coverageFactIds: ['fact-turnout-slow-vehicles']
+    sourceTopic: 'Driving in Bicycle Lanes',
+    coverageFactIds: ['fact-drive-bike-lane-limit']
   },
   {
     id: 'q12',
@@ -437,9 +437,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     explanation: 'California Handbook (Section 4, Center Left Turn Lanes): A center left turn lane is not a regular traffic lane. You may only drive for 200 feet in the center left turn lane.',
     testGroup: 13,
     sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 8,
-    sourceTopic: 'Motorcycles in HOV Lanes',
-    coverageFactIds: ['fact-hov-motorcycle-lane']
+    sourcePage: 9,
+    sourceTopic: 'Center Left Turn Lane Distance Limit',
+    coverageFactIds: ['fact-center-left-turn-distance']
   },
   {
     id: 'q13',
@@ -456,9 +456,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     explanation: 'California Handbook (Section 4, Page 14): Three (3) feet of distance must be maintained between the car and a cyclist when passing in the same direction.',
     testGroup: 13,
     sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 9,
-    sourceTopic: 'Driving in Bicycle Lanes',
-    coverageFactIds: ['fact-drive-bike-lane-limit']
+    sourcePage: 10,
+    sourceTopic: 'Passing Bicyclist Space Clearance',
+    coverageFactIds: ['fact-bike-passing-clearance']
   },
   {
     id: 'q14',
@@ -493,10 +493,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 4, Mountain Roads): If two vehicles meet on a steep narrow road and neither can pass, the vehicle facing uphill has the right-of-way. The vehicle facing downhill must back up until the uphill vehicle can pass.',
     testGroup: 13,
-    sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 17,
-    sourceTopic: 'Passing on the right conditions',
-    coverageFactIds: ['fact-pass-on-right-allowed']
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 32,
+    sourceTopic: 'Steep road right-of-way rules',
+    coverageFactIds: ['fact-mountain-rightofway']
   },
   {
     id: 'q16',
@@ -514,8 +514,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     testGroup: 13,
     sourceSection: 'Section 4: Navigating the Roads',
     sourcePage: 16,
-    sourceTopic: 'Freeway exit signaling time',
-    coverageFactIds: ['fact-exit-highway-signal']
+    sourceTopic: 'Safety buffer during merging',
+    coverageFactIds: ['fact-merge-space-3sec']
   },
   {
     id: 'q17',
@@ -551,9 +551,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     explanation: 'California Handbook (Section 4, Passing): You may pass on the right only when an open highway has two or more lanes going in your direction, the driver ahead is turning left, or you are on a one-way street. Never drive off the pavement to pass.',
     testGroup: 13,
     sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 10,
-    sourceTopic: 'Passing Bicyclist Space Clearance',
-    coverageFactIds: ['fact-bike-passing-clearance']
+    sourcePage: 17,
+    sourceTopic: 'Passing on the right conditions',
+    coverageFactIds: ['fact-pass-on-right-allowed']
   },
   {
     id: 'q19',
@@ -570,9 +570,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     explanation: 'California Handbook (Section 4, Illegal Parking): Double parking (parking next to or opposite a vehicle already parked or stopped at a curb) is illegal under any conditions.',
     testGroup: 13,
     sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 13,
-    sourceTopic: 'U-Turn visibility distance limit',
-    coverageFactIds: ['fact-uturn-visibility-distance']
+    sourcePage: 18,
+    sourceTopic: 'Parallel parking distance limit',
+    coverageFactIds: ['fact-parking-curb-distance']
   },
   {
     id: 'q20',
@@ -1083,9 +1083,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     explanation: 'California Handbook (Section 4, Illegal Parking): It is illegal to park within 15 feet of a fire hydrant or a fire station driveway.',
     testGroup: 16,
     sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 13,
-    sourceTopic: 'U-Turn visibility distance limit',
-    coverageFactIds: ['fact-uturn-visibility-distance']
+    sourcePage: 20,
+    sourceTopic: 'Illegal parking fire hydrant distance',
+    coverageFactIds: ['fact-illegal-parking-hydrant-distance']
   },
   {
     id: 'q47',
@@ -1102,9 +1102,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     explanation: 'California Handbook (Section 4, Illegal Parking): It is illegal to park within three (3) feet of a sidewalk ramp designed for disabled persons.',
     testGroup: 16,
     sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 13,
-    sourceTopic: 'U-Turn visibility distance limit',
-    coverageFactIds: ['fact-uturn-visibility-distance']
+    sourcePage: 18,
+    sourceTopic: 'Parallel parking distance limit',
+    coverageFactIds: ['fact-parking-curb-distance']
   },
   {
     id: 'q48',
@@ -1121,9 +1121,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     explanation: 'California Handbook (Section 4, Illegal Parking): It is illegal to park within 20 feet of an unmarked or marked crosswalk, or within 15 feet of a curb extension.',
     testGroup: 16,
     sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 13,
-    sourceTopic: 'U-Turn visibility distance limit',
-    coverageFactIds: ['fact-uturn-visibility-distance']
+    sourcePage: 20,
+    sourceTopic: 'Illegal parking crosswalk distance limit',
+    coverageFactIds: ['fact-illegal-parking-crosswalk-distance']
   },
   {
     id: 'q49',
@@ -1140,9 +1140,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     explanation: 'California Handbook (Section 4, Illegal Parking): Double parking is parking next to or opposite a vehicle already parked at a curb. It is strictly illegal under any conditions.',
     testGroup: 16,
     sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 13,
-    sourceTopic: 'U-Turn visibility distance limit',
-    coverageFactIds: ['fact-uturn-visibility-distance']
+    sourcePage: 18,
+    sourceTopic: 'Parallel parking distance limit',
+    coverageFactIds: ['fact-parking-curb-distance']
   },
   {
     id: 'q50',
@@ -2205,8 +2205,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     testGroup: 22,
     sourceSection: 'Section 4: Navigating the Roads',
     sourcePage: 8,
-    sourceTopic: 'HOV lane usage requirements',
-    coverageFactIds: ['fact-hov-lane-usage']
+    sourceTopic: 'Motorcycles in HOV Lanes',
+    coverageFactIds: ['fact-hov-lane-usage', 'fact-hov-motorcycle-lane']
   },
   {
     id: 'q106',
@@ -4725,7 +4725,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceSection: 'Section 5: Laws and Rules of the Road',
     sourcePage: 24,
     sourceTopic: 'Solid Red Light Definition',
-    coverageFactIds: ['fact-traffic-light-red', 'fact-traffic-light-red-arrow']
+    coverageFactIds: ['fact-traffic-light-red']
   },
   {
     id: 'q234',
@@ -4786,5 +4786,65 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourcePage: 13,
     sourceTopic: 'Prohibited U-Turns on divided highways',
     coverageFactIds: ['fact-uturn-divided-highway-barrier']
+  },
+  {
+    id: 'q237',
+    category: 'Rules of the Road',
+    questionText: 'When exiting a highway or freeway, how long must you continuously activate your turn signal before reaching the exit?',
+    imageUrl: '',
+    options: [
+
+      'For at least 3 seconds (approximately 200 feet).',
+      'For at least 5 seconds (approximately 400 feet).',
+      'Only as you begin turning the steering wheel into the exit lane.',
+      'For at least 10 seconds (approximately 800 feet).'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 4): When exiting a highway, signal for at least five seconds (approximately 400 feet) before you reach the exit.',
+    testGroup: 40,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 16,
+    sourceTopic: 'Freeway exit signaling time',
+    coverageFactIds: ['fact-exit-highway-signal']
+  },
+  {
+    id: 'q238',
+    category: 'Traffic Signals',
+    questionText: 'Under California law, what does a solid red arrow traffic signal indicate?',
+    imageUrl: '',
+    options: [
+
+      'You must STOP completely, but you can turn after yielding to pedestrians.',
+      'You must STOP completely and remain stopped; you cannot turn at a red arrow under any circumstances.',
+      'You must slow down and proceed with caution if the intersection is clear.',
+      'You may turn right only after coming to a complete stop and ensuring the way is clear.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 5): A red arrow means STOP. Do not turn at a red arrow; remain stopped until a green light or arrow appears.',
+    testGroup: 40,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 24,
+    sourceTopic: 'Red Arrow Definition',
+    coverageFactIds: ['fact-traffic-light-red-arrow']
+  },
+  {
+    id: 'q239',
+    category: 'Rules of the Road',
+    questionText: 'According to the California Driver Handbook, you must never attempt to make a U-turn when you cannot see clearly in each direction for at least:',
+    imageUrl: '',
+    options: [
+
+      '100 feet',
+      '150 feet',
+      '200 feet',
+      '300 feet'
+    ],
+    correctOptionIndex: 2,
+    explanation: 'California Handbook (Section 4): Never make a U-turn when you cannot see clearly for 200 feet in each direction.',
+    testGroup: 40,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 13,
+    sourceTopic: 'U-Turn visibility distance limit',
+    coverageFactIds: ['fact-uturn-visibility-distance']
   }
 ];

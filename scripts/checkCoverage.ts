@@ -332,6 +332,33 @@ parsedQuestions.forEach(q => {
         suspiciousMappings.push(`Question [${q.id}]: road sign query maps to licensing facts: [${badFacts.join(', ')}]`);
       }
     }
+
+    // 1. Center left turn lane / 200 feet check
+    const mentionsCenterLeftTurn = qTextLower.includes("center left turn lane") || (qTextLower.includes("center") && qTextLower.includes("left turn") && qTextLower.includes("200 feet"));
+    if (mentionsCenterLeftTurn) {
+      const hasCenterLeftTurnFact = q.coverageFactIds.some(fId => fId.includes("center-left-turn"));
+      if (!hasCenterLeftTurnFact) {
+        suspiciousMappings.push(`Question [${q.id}]: mentions center left turn lane but is missing center-left-turn facts: [${q.coverageFactIds.join(', ')}]`);
+      }
+    }
+
+    // 2. Passing bicyclist / cyclist / 3 feet check
+    const mentionsBicyclePassing = (qTextLower.includes("passing") && (qTextLower.includes("bicyclist") || qTextLower.includes("cyclist"))) || (qTextLower.includes("bicyclist") && qTextLower.includes("3 feet"));
+    if (mentionsBicyclePassing) {
+      const hasBikePassingFact = q.coverageFactIds.some(fId => fId.includes("bike-passing-clearance"));
+      if (!hasBikePassingFact) {
+        suspiciousMappings.push(`Question [${q.id}]: mentions bicycle passing/3 feet but is missing bike-passing-clearance facts: [${q.coverageFactIds.join(', ')}]`);
+      }
+    }
+
+    // 3. Solid red light only and does not mention arrow check
+    const mentionsRedLightOnly = (qTextLower.includes("red light") || qTextLower.includes("red traffic light")) && !qTextLower.includes("arrow");
+    if (mentionsRedLightOnly) {
+      const hasRedArrowFact = q.coverageFactIds.some(fId => fId.includes("red-arrow") || fId.includes("arrow-"));
+      if (hasRedArrowFact) {
+        suspiciousMappings.push(`Question [${q.id}]: mentions only solid red light and not arrow but maps to red-arrow facts: [${q.coverageFactIds.join(', ')}]`);
+      }
+    }
   }
 });
 

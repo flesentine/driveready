@@ -1632,7 +1632,7 @@ const finalUncoveredAppended = [
     sourceSection: 'Section 5: Laws and Rules of the Road',
     sourcePage: 24,
     sourceTopic: 'Solid Red Light Definition',
-    coverageFactIds: ['fact-traffic-light-red', 'fact-traffic-light-red-arrow']
+    coverageFactIds: ['fact-traffic-light-red']
   },
   {
     id: 'q234',
@@ -1687,6 +1687,60 @@ const finalUncoveredAppended = [
     sourcePage: 13,
     sourceTopic: 'Prohibited U-Turns on divided highways',
     coverageFactIds: ['fact-uturn-divided-highway-barrier']
+  },
+  {
+    id: 'q237',
+    category: 'Rules of the Road',
+    questionText: 'When exiting a highway or freeway, how long must you continuously activate your turn signal before reaching the exit?',
+    options: [
+      'For at least 3 seconds (approximately 200 feet).',
+      'For at least 5 seconds (approximately 400 feet).',
+      'Only as you begin turning the steering wheel into the exit lane.',
+      'For at least 10 seconds (approximately 800 feet).'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 4): When exiting a highway, signal for at least five seconds (approximately 400 feet) before you reach the exit.',
+    testGroup: 40,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 16,
+    sourceTopic: 'Freeway exit signaling time',
+    coverageFactIds: ['fact-exit-highway-signal']
+  },
+  {
+    id: 'q238',
+    category: 'Traffic Signals',
+    questionText: 'Under California law, what does a solid red arrow traffic signal indicate?',
+    options: [
+      'You must STOP completely, but you can turn after yielding to pedestrians.',
+      'You must STOP completely and remain stopped; you cannot turn at a red arrow under any circumstances.',
+      'You must slow down and proceed with caution if the intersection is clear.',
+      'You may turn right only after coming to a complete stop and ensuring the way is clear.'
+    ],
+    correctOptionIndex: 1,
+    explanation: 'California Handbook (Section 5): A red arrow means STOP. Do not turn at a red arrow; remain stopped until a green light or arrow appears.',
+    testGroup: 40,
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 24,
+    sourceTopic: 'Red Arrow Definition',
+    coverageFactIds: ['fact-traffic-light-red-arrow']
+  },
+  {
+    id: 'q239',
+    category: 'Rules of the Road',
+    questionText: 'According to the California Driver Handbook, you must never attempt to make a U-turn when you cannot see clearly in each direction for at least:',
+    options: [
+      '100 feet',
+      '150 feet',
+      '200 feet',
+      '300 feet'
+    ],
+    correctOptionIndex: 2,
+    explanation: 'California Handbook (Section 4): Never make a U-turn when you cannot see clearly for 200 feet in each direction.',
+    testGroup: 40,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 13,
+    sourceTopic: 'U-Turn visibility distance limit',
+    coverageFactIds: ['fact-uturn-visibility-distance']
   }
 ];
 
@@ -1702,15 +1756,15 @@ const fullQMap: { [qId: string]: string[] } = {
   q8: ['fact-school-bus-stop-violations'],
   q9: ['fact-insurance-minimum-liability-limits'],
   q10: ['fact-right-turn-red-arrow'],
-  q11: ['fact-turnout-slow-vehicles'],
-  q12: ['fact-hov-motorcycle-lane'],
-  q13: ['fact-drive-bike-lane-limit'],
+  q11: ['fact-drive-bike-lane-limit'],
+  q12: ['fact-center-left-turn-distance'],
+  q13: ['fact-bike-passing-clearance'],
   q14: ['fact-tailgate-three-second-rule'],
-  q15: ['fact-pass-on-right-allowed'],
-  q16: ['fact-exit-highway-signal'],
+  q15: ['fact-mountain-rightofway'],
+  q16: ['fact-merge-space-3sec'],
   q17: ['fact-uturn-residential-clearance'],
-  q18: ['fact-bike-passing-clearance'],
-  q19: ['fact-uturn-visibility-distance'],
+  q18: ['fact-pass-on-right-allowed'],
+  q19: ['fact-parking-curb-distance'],
   q20: ['fact-railroad-crossing-visibility-speed'],
   q21: ['fact-slick-roads-wet-speed'],
   q22: ['fact-slick-roads-snow-speed'],
@@ -1737,10 +1791,10 @@ const fullQMap: { [qId: string]: string[] } = {
   q43: ['fact-colored-curb-white'],
   q44: ['fact-colored-curb-green'],
   q45: ['fact-colored-curb-red'],
-  q46: ['fact-uturn-visibility-distance'],
-  q47: ['fact-uturn-visibility-distance'],
-  q48: ['fact-uturn-visibility-distance'],
-  q49: ['fact-uturn-visibility-distance'],
+  q46: ['fact-illegal-parking-hydrant-distance'],
+  q47: ['fact-parking-curb-distance'],
+  q48: ['fact-illegal-parking-crosswalk-distance'],
+  q49: ['fact-parking-curb-distance'],
   q50: ['fact-colored-curb-blue'],
   q51: ['fact-restraint-rear-facing-age2'],
   q52: ['fact-restraint-under8-backseat'],
@@ -1796,7 +1850,7 @@ const fullQMap: { [qId: string]: string[] } = {
   q102: ['fact-single-yellow-line'],
   q103: ['fact-yellow-barrier-lines'],
   q104: ['fact-turnout-slow-vehicles'],
-  q105: ['fact-hov-lane-usage'],
+  q105: ['fact-hov-lane-usage', 'fact-hov-motorcycle-lane'],
   q106: ['fact-limit-line-stop-crosswalk'],
   q107: ['fact-center-left-turn-distance'],
   q108: ['fact-center-left-turn-distance'],
