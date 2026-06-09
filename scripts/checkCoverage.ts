@@ -274,7 +274,7 @@ parsedQuestions.forEach(q => {
     // Check 2: Railroad vs parking, DUI, pedestrian, or license
     if (mentionsRailroad) {
       const badFacts = q.coverageFactIds.filter(f => 
-        !f.includes("rail") && !f.includes("train") && !f.includes("track") && !f.includes("crossing")
+        !f.includes("rail") && !f.includes("train") && !f.includes("track") && !f.includes("crossing") && f !== "fact-passing-prohibited-100-feet-hazard"
       );
       if (badFacts.length > 0) {
         suspiciousMappings.push(`Question [${q.id}]: railroad query maps to invalid facts: [${badFacts.join(', ')}]`);
@@ -357,6 +357,34 @@ parsedQuestions.forEach(q => {
       const hasRedArrowFact = q.coverageFactIds.some(fId => fId.includes("red-arrow") || fId.includes("arrow-"));
       if (hasRedArrowFact) {
         suspiciousMappings.push(`Question [${q.id}]: mentions only solid red light and not arrow but maps to red-arrow facts: [${q.coverageFactIds.join(', ')}]`);
+      }
+    }
+
+    // 4. Double parking vs parallel parking curb distance check
+    const mentionsDoubleParking = qTextLower.includes("double park") || qTextLower.includes("double-parking");
+    if (mentionsDoubleParking) {
+      const hasCurbDistanceFact = q.coverageFactIds.includes("fact-parking-curb-distance");
+      if (hasCurbDistanceFact) {
+        suspiciousMappings.push(`Question [${q.id}]: mentions double parking but incorrectly maps to parallel parking curb distance: [${q.coverageFactIds.join(', ')}]`);
+      }
+    }
+
+    // 5. Passing within 100 feet check
+    const mentionsPassing100Feet = qTextLower.includes("passing") && qTextLower.includes("100 feet");
+    if (mentionsPassing100Feet) {
+      const hasRailroadSpeedFact = q.coverageFactIds.some(fId => fId.includes("railroad") && fId.includes("speed"));
+      if (hasRailroadSpeedFact) {
+        suspiciousMappings.push(`Question [${q.id}]: mentions passing within 100 feet but incorrectly maps to a railroad speed fact: [${q.coverageFactIds.join(', ')}]`);
+      }
+    }
+
+    // 6. Entering highway traffic vs three-second buffer check
+    const mentionsHighwayEntrySpeed = (qTextLower.includes("highway") || qTextLower.includes("freeway") || qTextLower.includes("on-ramp")) &&
+                                      (qTextLower.includes("traffic speed") || qTextLower.includes("speed of traffic") || qTextLower.includes("at or near"));
+    if (mentionsHighwayEntrySpeed) {
+      const hasThreeSecFact = q.coverageFactIds.includes("fact-merge-space-3sec");
+      if (hasThreeSecFact) {
+        suspiciousMappings.push(`Question [${q.id}]: mentions entering highway at traffic speed but incorrectly maps to three-second buffer: [${q.coverageFactIds.join(', ')}]`);
       }
     }
   }

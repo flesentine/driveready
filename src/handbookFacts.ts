@@ -689,6 +689,16 @@ export const HANDBOOK_FACTS: HandbookFact[] = [
     mustHaveQuestion: true
   },
   {
+    id: 'fact-highway-entry-match-traffic-speed',
+    section: 'Section 4: Navigating the Roads',
+    page: 16,
+    topic: 'Highway entry matching traffic speed',
+    fact: 'When entering a highway from an on-ramp, you must enter at or near the speed of traffic.',
+    priority: 'high',
+    contentType: 'rule',
+    mustHaveQuestion: true
+  },
+  {
     id: 'fact-pass-on-right-allowed',
     section: 'Section 4: Navigating the Roads',
     page: 17,
@@ -696,6 +706,16 @@ export const HANDBOOK_FACTS: HandbookFact[] = [
     fact: 'You may pass on the right only when the highway has two or more lanes in your direction, or the driver ahead is turning left and you can do so safely.',
     priority: 'high',
     contentType: 'rule',
+    mustHaveQuestion: true
+  },
+  {
+    id: 'fact-passing-prohibited-100-feet-hazard',
+    section: 'Section 4: Navigating the Roads',
+    page: 17,
+    topic: 'Prohibited passing within 100 feet',
+    fact: 'Do not pass within 100 feet of an intersection, bridge, tunnel, railroad crossing, or other hazardous area.',
+    priority: 'high',
+    contentType: 'number',
     mustHaveQuestion: true
   },
   {
@@ -806,6 +826,16 @@ export const HANDBOOK_FACTS: HandbookFact[] = [
     fact: 'Never park within 20 feet of a marked/unmarked crosswalk, or within 15 feet if a curb extension is present.',
     priority: 'high',
     contentType: 'number',
+    mustHaveQuestion: true
+  },
+  {
+    id: 'fact-illegal-parking-double-parking',
+    section: 'Section 4: Navigating the Roads',
+    page: 20,
+    topic: 'Illegal double parking rules',
+    fact: 'Double parking (parking next to or opposite a vehicle already parked or stopped at a curb) is illegal under any conditions.',
+    priority: 'high',
+    contentType: 'rule',
     mustHaveQuestion: true
   },
   {

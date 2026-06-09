@@ -514,8 +514,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     testGroup: 13,
     sourceSection: 'Section 4: Navigating the Roads',
     sourcePage: 16,
-    sourceTopic: 'Safety buffer during merging',
-    coverageFactIds: ['fact-merge-space-3sec']
+    sourceTopic: 'Highway entry matching traffic speed',
+    coverageFactIds: ['fact-highway-entry-match-traffic-speed']
   },
   {
     id: 'q17',
@@ -570,9 +570,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     explanation: 'California Handbook (Section 4, Illegal Parking): Double parking (parking next to or opposite a vehicle already parked or stopped at a curb) is illegal under any conditions.',
     testGroup: 13,
     sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 18,
-    sourceTopic: 'Parallel parking distance limit',
-    coverageFactIds: ['fact-parking-curb-distance']
+    sourcePage: 20,
+    sourceTopic: 'Illegal double parking rules',
+    coverageFactIds: ['fact-illegal-parking-double-parking']
   },
   {
     id: 'q20',
@@ -588,10 +588,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 4, Passing): Do not pass within 100 feet of an intersection, bridge, tunnel, railroad crossing, or other hazardous area.',
     testGroup: 13,
-    sourceSection: 'Section 5: Laws and Rules of the Road',
-    sourcePage: 39,
-    sourceTopic: 'Railroad crossing visibility and speed limit factors',
-    coverageFactIds: ['fact-railroad-crossing-visibility-speed']
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 17,
+    sourceTopic: 'Prohibited passing within 100 feet',
+    coverageFactIds: ['fact-passing-prohibited-100-feet-hazard']
   },
   {
     id: 'q21',
@@ -1140,9 +1140,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     explanation: 'California Handbook (Section 4, Illegal Parking): Double parking is parking next to or opposite a vehicle already parked at a curb. It is strictly illegal under any conditions.',
     testGroup: 16,
     sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 18,
-    sourceTopic: 'Parallel parking distance limit',
-    coverageFactIds: ['fact-parking-curb-distance']
+    sourcePage: 20,
+    sourceTopic: 'Illegal double parking rules',
+    coverageFactIds: ['fact-illegal-parking-double-parking']
   },
   {
     id: 'q50',
