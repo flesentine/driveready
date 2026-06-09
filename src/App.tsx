@@ -13,32 +13,14 @@ import { SignLibraryView } from './components/SignLibraryView';
 import { FlashcardsView } from './components/FlashcardsView';
 import { ProfileView } from './components/ProfileView';
 import { TabType, UserStats, Question, getUserLevelInfo } from './types';
+import { calculateNewReadinessScore, mapQuestionCategoryToScoreKey, getReadinessLabel } from './utils/scoring';
 import { ROAD_SIGNS, PRACTICE_QUESTIONS, INITIAL_USER_STATS } from './data';
 import { ClipboardList, ShieldAlert, Award, FileText, CheckCircle2, X, Home, BookOpen, Zap, TrendingUp, User, Flame, Trophy } from 'lucide-react';
 
 const LOCAL_STORAGE_STATS_KEY = 'driveready_user_stats';
 
 const computeReadinessScore = (stats: UserStats): number => {
-  const { totalTestsTaken, accuracyPercent, masteredSignsCount, streakDays } = stats;
-  
-  if (totalTestsTaken === 0 && (!masteredSignsCount || masteredSignsCount === 0)) {
-    return 0;
-  }
-
-  const TOTAL_TESTS = 15;
-  const totalSignsMax = ROAD_SIGNS ? ROAD_SIGNS.length : 24;
-
-  const testCoverageRatio = Math.min(totalTestsTaken / TOTAL_TESTS, 1.0);
-  const testComponent = testCoverageRatio * accuracyPercent;
-
-  const masteredCount = typeof masteredSignsCount === 'number' ? masteredSignsCount : 0;
-  const signsCoverageRatio = Math.min(masteredCount / totalSignsMax, 1.0);
-  const signsComponent = signsCoverageRatio * 100;
-
-  const combinedScore = Math.round((0.7 * testComponent) + (0.3 * signsComponent));
-  const streakBonus = streakDays >= 5 ? 5 : streakDays >= 3 ? 3 : 0;
-  
-  return Math.min(Math.max(combinedScore + streakBonus, 0), 100);
+  return calculateNewReadinessScore(stats);
 };
 
 export default function App() {
@@ -108,6 +90,11 @@ export default function App() {
           // If profile first updates to this release, stamp today without clearing preset stats
           parsed.lastActiveDate = todayStr;
         }
+
+        // Recalculate readiness and rank dynamically to apply the latest scoring helper
+        parsed.readinessScore = calculateNewReadinessScore(parsed);
+        const lvlInfo = getUserLevelInfo(parsed);
+        parsed.rankText = `Level ${lvlInfo.level}: ${lvlInfo.levelName}`;
 
         localStorage.setItem(LOCAL_STORAGE_STATS_KEY, JSON.stringify(parsed));
         setStats(parsed);
@@ -182,7 +169,11 @@ export default function App() {
     setQuizNotification(null);
   };
 
-  const handleCompleteQuiz = (correct: number, total: number) => {
+  const handleCompleteQuiz = (
+    correct: number, 
+    total: number, 
+    results?: { question: Question; isCorrect: boolean }[]
+  ) => {
     const accuracy = Math.round((correct / total) * 100);
     
     // Calculate new averages
@@ -191,10 +182,51 @@ export default function App() {
     const currentAccuracy = stats.accuracyPercent;
     const averagedAccuracy = Math.round((currentAccuracy * currentTotalTests + accuracy) / newTotalTests);
 
-    // Category progress scores adjustments based on correct answers
-    const rulesOfRoadBoost = accuracy >= 80 ? 4 : -1;
-    const signsSignalsBoost = accuracy >= 60 ? 6 : 2; // Weakest category gains more
-    const safeDrivingBoost = accuracy >= 50 ? 3 : 0;
+    // Save attempt history
+    const currentAttempts = stats.quizAttempts || [];
+    const updatedAttempts = [...currentAttempts, { correct, total, accuracy, timestamp: Date.now() }];
+
+    // Category progress scores adjustments based on actual question category correctness!
+    const catTotal: { [key in 'rulesOfRoad' | 'signsSignals' | 'safeDriving']: number } = {
+      rulesOfRoad: 0,
+      signsSignals: 0,
+      safeDriving: 0
+    };
+    const catCorrect: { [key in 'rulesOfRoad' | 'signsSignals' | 'safeDriving']: number } = {
+      rulesOfRoad: 0,
+      signsSignals: 0,
+      safeDriving: 0
+    };
+
+    if (results && results.length > 0) {
+      results.forEach(res => {
+        const key = mapQuestionCategoryToScoreKey(res.question.category);
+        catTotal[key]++;
+        if (res.isCorrect) {
+          catCorrect[key]++;
+        }
+      });
+    } else {
+      // Fallback
+      const keyDefault = 'rulesOfRoad';
+      catTotal[keyDefault] = total;
+      catCorrect[keyDefault] = correct;
+    }
+
+    const currentCategoryScores = stats.categoryScores || { rulesOfRoad: 0, signsSignals: 0, safeDriving: 0 };
+    const nextCategoryScores = { ...currentCategoryScores };
+
+    (Object.keys(catTotal) as Array<'rulesOfRoad' | 'signsSignals' | 'safeDriving'>).forEach(key => {
+      if (catTotal[key] > 0) {
+        const catAccuracy = Math.round((catCorrect[key] / catTotal[key]) * 100);
+        const oldScore = currentCategoryScores[key] || 0;
+        if (oldScore === 0) {
+          nextCategoryScores[key] = catAccuracy;
+        } else {
+          nextCategoryScores[key] = Math.max(0, Math.min(100, Math.round(oldScore * 0.6 + catAccuracy * 0.4)));
+        }
+      }
+    });
 
     const interimStats: UserStats = {
       ...stats,
@@ -205,11 +237,8 @@ export default function App() {
       practiceTimeMin: stats.practiceTimeMin + 15, // add simulated duration
       streakDays: stats.streakDays + (stats.questionsAnsweredToday === 0 ? 1 : 0), // Increment streak if first active test today
       hasActualActivity: true,
-      categoryScores: {
-        rulesOfRoad: Math.max(0, Math.min(stats.categoryScores.rulesOfRoad + rulesOfRoadBoost, 100)),
-        signsSignals: Math.max(0, Math.min(stats.categoryScores.signsSignals + signsSignalsBoost, 100)),
-        safeDriving: Math.max(0, Math.min(stats.categoryScores.safeDriving + safeDrivingBoost, 100)),
-      }
+      quizAttempts: updatedAttempts,
+      categoryScores: nextCategoryScores
     };
 
     const finalScore = computeReadinessScore(interimStats);

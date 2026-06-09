@@ -6,6 +6,7 @@
 import React, { useState } from 'react';
 import { ChevronRight, HelpCircle, AlertTriangle, Lightbulb, Flame, Clock, Target, Trophy, X, Sparkles, Info, RefreshCw } from 'lucide-react';
 import { TabType, UserStats, getUserLevelInfo } from '../types';
+import { getReadinessLabel } from '../utils/scoring';
 import { PRO_TIPS } from '../proTips';
 import windyRoadImg from '../assets/images/windy_road_exact_match_1780632600693.png';
 
@@ -58,13 +59,36 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
   const goalPercentage = Math.round((stats.questionsAnsweredToday / stats.dailyGoal) * 100);
 
   // Dynamic formula components calculated live
+  const attempts = stats.quizAttempts || [];
+  let recentQuizPref = stats.accuracyPercent || 0;
+  if (attempts.length > 0) {
+    const lastAttempts = attempts.slice(-5);
+    const sumAccuracy = lastAttempts.reduce((sum, att) => sum + (att.accuracy ?? 0), 0);
+    recentQuizPref = Math.round(sumAccuracy / lastAttempts.length);
+  }
+
+  const recentQuizContribution = Math.round(0.55 * recentQuizPref);
+  const accuracyContribution = Math.round(0.20 * stats.accuracyPercent);
+  
+  const rulesOfRoadScore = stats.categoryScores?.rulesOfRoad || 0;
+  const signsSignalsScore = stats.categoryScores?.signsSignals || 0;
+  const safeDrivingScore = stats.categoryScores?.safeDriving || 0;
+
   const categoryAverage = Math.round(
-    (stats.categoryScores.rulesOfRoad + stats.categoryScores.signsSignals + stats.categoryScores.safeDriving) / 3
+    (rulesOfRoadScore + signsSignalsScore + safeDrivingScore) / 3
   );
-  const categoryContribution = Math.round(0.5 * categoryAverage);
-  const accuracyContribution = Math.round(0.4 * stats.accuracyPercent);
-  const testContribution = Math.min(stats.totalTestsTaken * 1, 10);
-  const streakBonus = stats.streakDays >= 5 ? 5 : stats.streakDays >= 3 ? 3 : 0;
+  const categoryContribution = Math.round(0.15 * categoryAverage);
+  
+  const testCoverageRatio = Math.min(stats.totalTestsTaken / 10, 1.0);
+  const testCoverageContribution = Math.round(testCoverageRatio * 100);
+  const testContribution = Math.round(0.10 * testCoverageContribution);
+
+  const isAnyCategoryDeficient = 
+    rulesOfRoadScore < 50 || 
+    signsSignalsScore < 50 || 
+    safeDrivingScore < 50;
+
+  const penaltyPoints = isAnyCategoryDeficient ? 10 : 0;
 
   // Check if everything is at 0 (e.g., after resetting or freshly loaded with empty stats)
   const allZero =
@@ -263,7 +287,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                 {stats.readinessScore}%
               </span>
               <span className="font-sans font-bold text-[10px] text-text-muted uppercase tracking-wider mt-0.5">
-                {stats.readinessScore >= 85 ? 'Exam Ready' : stats.readinessScore >= 70 ? 'Almost Ready' : 'In Training'}
+                {getReadinessLabel(stats.readinessScore)}
               </span>
             </div>
           </div>
@@ -575,61 +599,85 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                 Calculation Elements
               </h5>
 
-              {/* Pillar 1: Category Mastery */}
+              {/* Pillar 1: Recent Quiz Performance */}
               <div className="bg-slate-50/50 border border-slate-100 p-4 rounded-xl space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="font-bold text-sm text-[#002045] flex items-center gap-1.5">
-                    1. Section Mastery (50% weight)
+                    1. Recent Quiz Performance (55% weight)
                   </span>
                   <span className="text-xs font-black text-[#5c6f84] bg-slate-200/50 px-2 py-0.5 rounded-full">
-                    +{categoryContribution}% / +50%
+                    +{recentQuizContribution}% / +55%
                   </span>
                 </div>
                 <p className="text-[11px] text-text-muted">
-                  Weighed across the three core California DMV subjects. Average of these scores is <strong className="font-extrabold text-[#002045]">{categoryAverage}%</strong>:
+                  Weighted average of up to your 5 most recent quiz attempts (falls back to cumulative accuracy if empty). Current standing: <strong className="font-extrabold text-[#002045]">{recentQuizPref}%</strong>.
+                </p>
+                {attempts.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {attempts.slice(-5).map((att, i) => (
+                      <span key={i} className={`text-[10px] px-2 py-0.5 rounded-md border ${att.accuracy >= 70 ? 'bg-green-50 text-green-700 border-green-200' : 'bg-red-50 text-red-700 border-red-200'}`}>
+                        Quiz #{attempts.length - attempts.slice(-5).length + i + 1}: {att.accuracy}%
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Pillar 2: Cumulative Accuracy */}
+              <div className="bg-slate-50/50 border border-slate-100 p-4 rounded-xl flex items-center justify-between">
+                <div className="space-y-0.5">
+                  <span className="font-bold text-sm text-[#002045] block">
+                    2. Cumulative Practice Accuracy (20% weight)
+                  </span>
+                  <span className="text-xs text-text-muted block">
+                    Overall historical average: <strong className="font-extrabold text-[#002045]">{stats.accuracyPercent}%</strong> Accuracy.
+                  </span>
+                </div>
+                <span className="text-xs font-black text-[#5c6f84] bg-slate-200/50 px-2.5 py-0.5 rounded-full shrink-0">
+                  +{accuracyContribution}% / +20%
+                </span>
+              </div>
+
+              {/* Pillar 3: Category Mastery */}
+              <div className="bg-slate-50/50 border border-slate-100 p-4 rounded-xl space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="font-bold text-sm text-[#002045] flex items-center gap-1.5">
+                    3. Category Mastery (15% weight)
+                  </span>
+                  <span className="text-xs font-black text-[#5c6f84] bg-slate-200/50 px-2 py-0.5 rounded-full">
+                    +{categoryContribution}% / +15%
+                  </span>
+                </div>
+                <p className="text-[11px] text-text-muted">
+                  Measures your concept mastery. Average: <strong className="font-extrabold text-[#002045]">{categoryAverage}%</strong>.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1 font-semibold text-xs">
                   <div className="p-2 bg-white rounded-lg border border-slate-100">
                     <p className="text-[10px] text-text-muted">Rules of the Road</p>
-                    <p className="text-sm font-extrabold text-primary-navy">{stats.categoryScores.rulesOfRoad}%</p>
+                    <p className="text-sm font-extrabold text-primary-navy">{rulesOfRoadScore}%</p>
                   </div>
-                  <div className={`p-2 rounded-lg border ${stats.categoryScores.signsSignals < 60 ? 'bg-red-50/40 border-red-100' : 'bg-white border-slate-100'}`}>
+                  <div className={`p-2 rounded-lg border ${signsSignalsScore < 50 ? 'bg-red-50/40 border-red-100' : 'bg-white border-slate-100'}`}>
                     <p className="text-[10px] text-text-muted">Signs & Signals</p>
                     <div className="flex items-center justify-between">
-                      <p className={`text-sm font-extrabold ${stats.categoryScores.signsSignals < 60 ? 'text-red-700' : 'text-primary-navy'}`}>{stats.categoryScores.signsSignals}%</p>
-                      {stats.categoryScores.signsSignals < 60 && <span className="text-[9px] uppercase font-black text-red-600 bg-red-100 px-1 rounded-sm animate-pulse">Low</span>}
+                      <p className={`text-sm font-extrabold ${signsSignalsScore < 50 ? 'text-red-700' : 'text-primary-navy'}`}>{signsSignalsScore}%</p>
+                      {signsSignalsScore < 50 && <span className="text-[9px] uppercase font-black text-red-600 bg-red-100 px-1 rounded-sm animate-pulse">Low</span>}
                     </div>
                   </div>
                   <div className="p-2 bg-white rounded-lg border border-slate-100">
                     <p className="text-[10px] text-text-muted">Safe Driving</p>
-                    <p className="text-sm font-extrabold text-primary-navy">{stats.categoryScores.safeDriving}%</p>
+                    <p className="text-sm font-extrabold text-primary-navy">{safeDrivingScore}%</p>
                   </div>
                 </div>
               </div>
 
-              {/* Pillar 2: Accuracy */}
+              {/* Pillar 4: Practice Volume / Test Coverage */}
               <div className="bg-slate-50/50 border border-slate-100 p-4 rounded-xl flex items-center justify-between">
                 <div className="space-y-0.5">
                   <span className="font-bold text-sm text-[#002045] block">
-                    2. Cumulative Practice Accuracy (40% weight)
+                    4. Test Coverage Coefficient (10% weight)
                   </span>
                   <span className="text-xs text-text-muted block">
-                    Current historical average: <strong className="font-extrabold text-[#002045]">{stats.accuracyPercent}%</strong> Accuracy.
-                  </span>
-                </div>
-                <span className="text-xs font-black text-[#5c6f84] bg-slate-200/50 px-2.5 py-0.5 rounded-full shrink-0">
-                  +{accuracyContribution}% / +40%
-                </span>
-              </div>
-
-              {/* Pillar 3: Practice volume */}
-              <div className="bg-slate-50/50 border border-slate-100 p-4 rounded-xl flex items-center justify-between">
-                <div className="space-y-0.5">
-                  <span className="font-bold text-sm text-[#002045] block">
-                    3. Experience Coefficient (10% weight)
-                  </span>
-                  <span className="text-xs text-text-muted block">
-                    <strong className="font-extrabold text-[#002045]">{stats.totalTestsTaken} tests</strong> taken (Maxes out at 10 practice runs).
+                    <strong className="font-extrabold text-[#002045]">{stats.totalTestsTaken} tests</strong> taken ({testCoverageContribution}% coverage, max 10 tests).
                   </span>
                 </div>
                 <span className="text-xs font-black text-[#5c6f84] bg-slate-200/50 px-2.5 py-0.5 rounded-full shrink-0">
@@ -637,18 +685,20 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                 </span>
               </div>
 
-              {/* Bonus Term: Consistency */}
-              <div className={`p-4 rounded-xl border flex items-center justify-between ${streakBonus > 0 ? 'bg-orange-50/50 border-[#fad9bc]' : 'bg-slate-50/50 border-slate-100'}`}>
+              {/* Penalty Section */}
+              <div className={`p-4 rounded-xl border flex items-center justify-between ${penaltyPoints > 0 ? 'bg-red-50/50 border-red-200' : 'bg-slate-50/50 border-slate-100'}`}>
                 <div className="space-y-0.5">
                   <span className="font-bold text-sm text-[#002045] flex items-center gap-1">
-                    4. Consistent Streak Bonus {streakBonus > 0 && <Flame className="w-4 h-4 text-safety-orange fill-safety-orange" />}
+                    5. Deficient Category Penalty {penaltyPoints > 0 && <AlertTriangle className="w-4 h-4 text-red-600" />}
                   </span>
                   <span className="text-xs text-text-muted block">
-                    Active streak of <strong className="font-extrabold text-[#002045]">{stats.streakDays} days</strong> ({stats.streakDays >= 5 ? 'Elite +5% Reward applied!' : stats.streakDays >= 3 ? '+3% Reward applied!' : 'Maintain a 3+ day streak for a bonus'}).
+                    {penaltyPoints > 0 
+                      ? 'Penalty of -10 pts active: one or more categories are below 50%' 
+                      : 'No penalties active: all sections are maintained above 50%'}
                   </span>
                 </div>
-                <span className={`text-xs font-black px-2.5 py-0.5 rounded-full shrink-0 ${streakBonus > 0 ? 'bg-safety-orange text-white' : 'bg-slate-200/50 text-[#5c6f84]'}`}>
-                  +{streakBonus}% Bonus
+                <span className={`text-xs font-black px-2.5 py-0.5 rounded-full shrink-0 ${penaltyPoints > 0 ? 'bg-red-600 text-white' : 'bg-slate-200/50 text-[#5c6f84]'}`}>
+                  {penaltyPoints > 0 ? '-10 Penalty' : '0 Penalty'}
                 </span>
               </div>
 

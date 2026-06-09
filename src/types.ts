@@ -39,6 +39,13 @@ export interface Question {
   coverageFactIds: string[];
 }
 
+export interface QuizAttempt {
+  correct: number;
+  total: number;
+  accuracy: number;
+  timestamp: number;
+}
+
 export interface UserStats {
   readinessScore: number;
   questionsAnsweredToday: number;
@@ -53,6 +60,7 @@ export interface UserStats {
   userName?: string;
   hasActualActivity?: boolean;
   lastActiveDate?: string;
+  quizAttempts?: QuizAttempt[];
   categoryScores: {
     rulesOfRoad: number;
     signsSignals: number;

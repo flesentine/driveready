@@ -9,7 +9,7 @@ import { Question } from '../types';
 
 interface PracticeQuizViewProps {
   questions: Question[];
-  onCompleteQuiz: (correctAnswers: number, totalQuestions: number) => void;
+  onCompleteQuiz: (correctAnswers: number, totalQuestions: number, results?: { question: Question; isCorrect: boolean }[]) => void;
   onExit: () => void;
 }
 
@@ -96,7 +96,17 @@ export const PracticeQuizView: React.FC<PracticeQuizViewProps> = ({
       } else {
         // Complete Quiz!
         const finalCorrect = correctCount + (selectedOption === currentQuestion.correctOptionIndex ? 1 : 0);
-        onCompleteQuiz(finalCorrect, shuffledQuestions.length);
+        const finalResults = shuffledQuestions.map((q, idx) => {
+          const spent = spentQuestions.find(s => s.index === idx);
+          if (spent) {
+            return { question: q, isCorrect: spent.isCorrect };
+          }
+          if (idx === currentIndex) {
+            return { question: q, isCorrect: selectedOption === q.correctOptionIndex };
+          }
+          return { question: q, isCorrect: false };
+        });
+        onCompleteQuiz(finalCorrect, shuffledQuestions.length, finalResults);
       }
     }
   };
@@ -104,14 +114,22 @@ export const PracticeQuizView: React.FC<PracticeQuizViewProps> = ({
   const handleSkip = () => {
     if (isAnswerConfirmed) return;
     // Track as skipped / wrong
-    setSpentQuestions((prev) => [...prev, { index: currentIndex, isCorrect: false }]);
+    const updatedSpent = [...spentQuestions, { index: currentIndex, isCorrect: false }];
+    setSpentQuestions(updatedSpent);
     
     if (currentIndex + 1 < shuffledQuestions.length) {
       setCurrentIndex((prev) => prev + 1);
       setSelectedOption(null);
       setIsAnswerConfirmed(false);
     } else {
-      onCompleteQuiz(correctCount, shuffledQuestions.length);
+      const finalResults = shuffledQuestions.map((q, idx) => {
+        const spent = updatedSpent.find(s => s.index === idx);
+        if (spent) {
+          return { question: q, isCorrect: spent.isCorrect };
+        }
+        return { question: q, isCorrect: false };
+      });
+      onCompleteQuiz(correctCount, shuffledQuestions.length, finalResults);
     }
   };
 
