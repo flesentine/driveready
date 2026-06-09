@@ -23,6 +23,26 @@ export const HANDBOOK_FACTS: HandbookFact[] = [
     mustHaveQuestion: false
   },
   {
+    id: 'fact-address-change-notification',
+    section: "Section 1: The California Driver's License",
+    page: 1,
+    topic: 'Address change notification timelines',
+    fact: 'You must notify the DMV of a change of residential address within 10 days of moving.',
+    priority: 'high',
+    contentType: 'number',
+    mustHaveQuestion: true
+  },
+  {
+    id: 'fact-vehicle-transfer-notification',
+    section: "Section 1: The California Driver's License",
+    page: 1,
+    topic: 'Vehicle sell and transfer notification timeline',
+    fact: 'You must notify the DMV within 5 days of selling or transferring ownership of a vehicle.',
+    priority: 'high',
+    contentType: 'number',
+    mustHaveQuestion: true
+  },
+  {
     id: 'fact-knowledge-btw-tests',
     section: "Section 1: The California Driver's License",
     page: 1,
@@ -475,6 +495,16 @@ export const HANDBOOK_FACTS: HandbookFact[] = [
     topic: 'Motorcycles in HOV Lanes',
     fact: 'Motorcyclists are generally permitted to ride in High-Occupancy Vehicle (HOV) carpool lanes.',
     priority: 'medium',
+    contentType: 'rule',
+    mustHaveQuestion: true
+  },
+  {
+    id: 'fact-hov-lane-usage',
+    section: 'Section 4: Navigating the Roads',
+    page: 8,
+    topic: 'HOV lane usage requirements',
+    fact: 'HOV lanes are special lanes reserved for carpools, buses, motorcycles, or low-emission vehicles with a minimum number of occupants as posted.',
+    priority: 'high',
     contentType: 'rule',
     mustHaveQuestion: true
   },
@@ -1750,7 +1780,7 @@ export const HANDBOOK_FACTS: HandbookFact[] = [
     id: 'fact-collision-report-sr1-dmv',
     section: 'Section 8: Financial Responsibility, Insurance Requirements, and Collisions',
     page: 59,
-    topic: 'What to do after a collision & DMV Reporting timelines (SR-1 within 10 days if >$1k/injury)',
+    topic: 'DMV SR-1 collision reporting threshold',
     fact: 'You must report any collision to the DMV on an SR-1 form within 10 days if the property damage exceeds $1,000, or if anyone was injured or killed.',
     priority: 'high',
     contentType: 'procedure',

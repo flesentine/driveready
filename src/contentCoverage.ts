@@ -700,7 +700,7 @@ export const HANDBOOK_COVERAGE_MATRIX: CoverageItem[] = [
   {
     id: 'cov-8-3',
     pdfSection: 'Section 8: Financial Responsibility, Insurance Requirements, and Collisions',
-    topic: 'What to do after a collision & DMV Reporting timelines (SR-1 within 10 days if >$1k/injury)',
+    topic: 'DMV SR-1 collision reporting threshold',
     pageNumber: 59,
     coverageStatus: 'Fully Covered',
     relatedQuestions: ['q63', 'q65', 'q127'],

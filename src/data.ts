@@ -474,10 +474,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 6, Tailgating): Use the three-second rule to ensure a safe following distance and avoid a collision. Following other vehicles at a safe distance gives you enough time to react.',
     testGroup: 13,
-    sourceSection: 'Section 5: Laws and Rules of the Road',
-    sourcePage: 24,
-    sourceTopic: 'Red Arrow Definition',
-    coverageFactIds: ['fact-traffic-light-red-arrow']
+    sourceSection: 'Section 6: Safe Driving',
+    sourcePage: 44,
+    sourceTopic: 'Tailgating safety following distance',
+    coverageFactIds: ['fact-tailgate-three-second-rule']
   },
   {
     id: 'q15',
@@ -1407,7 +1407,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
     testGroup: 18,
     sourceSection: 'Section 8: Financial Responsibility, Insurance Requirements, and Collisions',
     sourcePage: 59,
-    sourceTopic: 'What to do after a collision & DMV Reporting timelines (SR-1 within 10 days if >$1k/injury)',
+    sourceTopic: 'DMV SR-1 collision reporting threshold',
     coverageFactIds: ['fact-collision-report-sr1-dmv']
   },
   {
@@ -1443,10 +1443,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     correctOptionIndex: 2,
     explanation: 'California Handbook (Section 8, Reporting Collisions): A collision must be reported to the DMV within 10 days if the property damage exceeds $1,000, or if there is any injury or death.',
     testGroup: 18,
-    sourceSection: 'Section 6: Safe Driving',
-    sourcePage: 47,
-    sourceTopic: 'Slippery skid control steering rules',
-    coverageFactIds: ['fact-skid-release-accelerator-no-brakes']
+    sourceSection: 'Section 8: Financial Responsibility, Insurance Requirements, and Collisions',
+    sourcePage: 59,
+    sourceTopic: 'DMV SR-1 collision reporting threshold',
+    coverageFactIds: ['fact-collision-report-sr1-dmv']
   },
   {
     id: 'q66',
@@ -1538,10 +1538,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 8, Insurance): If you do not have proof of insurance at a collision, your driving privilege can be suspended for up to 4 years.',
     testGroup: 18,
-    sourceSection: 'Section 6: Safe Driving',
-    sourcePage: 44,
-    sourceTopic: 'Tailgating safety following distance',
-    coverageFactIds: ['fact-tailgate-three-second-rule']
+    sourceSection: 'Section 8: Financial Responsibility, Insurance Requirements, and Collisions',
+    sourcePage: 58,
+    sourceTopic: 'Collision without active insurance card',
+    coverageFactIds: ['fact-insurance-lack-suspension']
   },
   {
     id: 'q71',
@@ -1597,8 +1597,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     testGroup: 19,
     sourceSection: 'Section 1: The California Driver\'s License',
     sourcePage: 1,
-    sourceTopic: 'License classes',
-    coverageFactIds: ['fact-class-c-license']
+    sourceTopic: 'Address change notification timelines',
+    coverageFactIds: ['fact-address-change-notification']
   },
   {
     id: 'q74',
@@ -1616,8 +1616,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     testGroup: 19,
     sourceSection: 'Section 1: The California Driver\'s License',
     sourcePage: 1,
-    sourceTopic: 'License classes',
-    coverageFactIds: ['fact-class-c-license']
+    sourceTopic: 'Vehicle sell and transfer notification timeline',
+    coverageFactIds: ['fact-vehicle-transfer-notification']
   },
   {
     id: 'q75',
@@ -1899,10 +1899,10 @@ export const PRACTICE_QUESTIONS: Question[] = [
     correctOptionIndex: 1,
     explanation: 'California Handbook (Section 5, Evading Law Enforcement): Evading a peace officer performing their duties is a misdemeanor punishable by imprisonment in a county jail for up to 1 year (Page 45).',
     testGroup: 20,
-    sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 20,
-    sourceTopic: 'White curb rules',
-    coverageFactIds: ['fact-colored-curb-white']
+    sourceSection: 'Section 5: Laws and Rules of the Road',
+    sourcePage: 41,
+    sourceTopic: 'Fleeing law enforcement misdemeanor jail',
+    coverageFactIds: ['fact-evade-police-consequences']
   },
   {
     id: 'q90',
@@ -1920,8 +1920,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     testGroup: 20,
     sourceSection: 'Section 4: Navigating the Roads',
     sourcePage: 9,
-    sourceTopic: 'Slow Driver Turnouts',
-    coverageFactIds: ['fact-turnout-slow-vehicles']
+    sourceTopic: 'Driving in Bicycle Lanes',
+    coverageFactIds: ['fact-drive-bike-lane-limit']
   },
   {
     id: 'q91',
@@ -2186,8 +2186,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     testGroup: 22,
     sourceSection: 'Section 4: Navigating the Roads',
     sourcePage: 9,
-    sourceTopic: 'Center Left Turn Lane Distance Limit',
-    coverageFactIds: ['fact-center-left-turn-distance']
+    sourceTopic: 'Slow Driver Turnouts',
+    coverageFactIds: ['fact-turnout-slow-vehicles']
   },
   {
     id: 'q105',
@@ -2204,9 +2204,9 @@ export const PRACTICE_QUESTIONS: Question[] = [
     explanation: 'California Handbook (Section 5, HOV Lanes): HOV lanes are reserved for carpools, buses, motorcycles, or low-emission vehicles with a minimum number of occupants as posted.',
     testGroup: 22,
     sourceSection: 'Section 4: Navigating the Roads',
-    sourcePage: 9,
-    sourceTopic: 'Slow Driver Turnouts',
-    coverageFactIds: ['fact-turnout-slow-vehicles']
+    sourcePage: 8,
+    sourceTopic: 'HOV lane usage requirements',
+    coverageFactIds: ['fact-hov-lane-usage']
   },
   {
     id: 'q106',
@@ -2281,8 +2281,8 @@ export const PRACTICE_QUESTIONS: Question[] = [
     testGroup: 22,
     sourceSection: 'Section 4: Navigating the Roads',
     sourcePage: 7,
-    sourceTopic: 'Double Solid White Lines',
-    coverageFactIds: ['fact-double-solid-white-lines']
+    sourceTopic: 'Yield Line Definition',
+    coverageFactIds: ['fact-yield-line-shark-teeth']
   },
   {
     id: 'q110',
@@ -2623,7 +2623,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
     testGroup: 24,
     sourceSection: 'Section 8: Financial Responsibility, Insurance Requirements, and Collisions',
     sourcePage: 59,
-    sourceTopic: 'What to do after a collision & DMV Reporting timelines (SR-1 within 10 days if >$1k/injury)',
+    sourceTopic: 'DMV SR-1 collision reporting threshold',
     coverageFactIds: ['fact-collision-report-sr1-dmv']
   },
   {
@@ -4725,7 +4725,7 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourceSection: 'Section 5: Laws and Rules of the Road',
     sourcePage: 24,
     sourceTopic: 'Solid Red Light Definition',
-    coverageFactIds: ['fact-traffic-light-red']
+    coverageFactIds: ['fact-traffic-light-red', 'fact-traffic-light-red-arrow']
   },
   {
     id: 'q234',
@@ -4746,5 +4746,45 @@ export const PRACTICE_QUESTIONS: Question[] = [
     sourcePage: 18,
     sourceTopic: 'Parallel parking distance limit',
     coverageFactIds: ['fact-parking-curb-distance']
+  },
+  {
+    id: 'q235',
+    category: 'Rules of the Road',
+    questionText: 'Double solid white lines painted on the pavement indicate:',
+    imageUrl: '',
+    options: [
+
+      'A lane barrier between regular and preferential lanes (such as HOV lanes); you must never change lanes over them.',
+      'A temporary construction zone where speed is halved.',
+      'A designated space where parallel parking is allowed during weekends.',
+      'A crosswalk area where pedestrians have immediate right-of-way.'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'California Handbook (Section 4): Double solid white lines indicate a lane barrier between regular and preferential lanes (such as HOV lanes); you must never change lanes over them.',
+    testGroup: 40,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 7,
+    sourceTopic: 'Double Solid White Lines',
+    coverageFactIds: ['fact-double-solid-white-lines']
+  },
+  {
+    id: 'q236',
+    category: 'Rules of the Road',
+    questionText: 'Under California law, is it legal to make a U-turn on a divided highway by crossing a dividing barrier or empty physical strip?',
+    imageUrl: '',
+    options: [
+
+      'Yes, as long as no police vehicles are in sight.',
+      'Yes, but only if you are executing a turn onto a private driveway.',
+      'No, you must never make a U-turn on a divided highway by crossing a dividing section, curb, strip of land, or double sets of double yellow lines.',
+      'Yes, during night hours when traffic is light.'
+    ],
+    correctOptionIndex: 2,
+    explanation: 'California Handbook (Section 4): Never make a U-turn on a divided highway by crossing a dividing section, curb, strip of land, or two sets of double yellow lines.',
+    testGroup: 40,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 13,
+    sourceTopic: 'Prohibited U-Turns on divided highways',
+    coverageFactIds: ['fact-uturn-divided-highway-barrier']
   }
 ];

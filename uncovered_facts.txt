@@ -1,10 +1,2 @@
 UNCOVERED FACTS:
 
-ID: fact-uturn-divided-highway-barrier
-Section: Section 4: Navigating the Roads
-Page: 13
-Topic: Prohibited U-Turns on divided highways
-Priority: high
-MustHave: true
-Fact: Never make a U-turn on a divided highway by crossing a dividing section, curb, strip of land, or two sets of double yellow lines.
---------------------------------------------------

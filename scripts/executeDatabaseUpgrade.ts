@@ -1632,7 +1632,7 @@ const finalUncoveredAppended = [
     sourceSection: 'Section 5: Laws and Rules of the Road',
     sourcePage: 24,
     sourceTopic: 'Solid Red Light Definition',
-    coverageFactIds: ['fact-traffic-light-red']
+    coverageFactIds: ['fact-traffic-light-red', 'fact-traffic-light-red-arrow']
   },
   {
     id: 'q234',
@@ -1651,6 +1651,42 @@ const finalUncoveredAppended = [
     sourcePage: 18,
     sourceTopic: 'Parallel parking distance limit',
     coverageFactIds: ['fact-parking-curb-distance']
+  },
+  {
+    id: 'q235',
+    category: 'Rules of the Road',
+    questionText: 'Double solid white lines painted on the pavement indicate:',
+    options: [
+      'A lane barrier between regular and preferential lanes (such as HOV lanes); you must never change lanes over them.',
+      'A temporary construction zone where speed is halved.',
+      'A designated space where parallel parking is allowed during weekends.',
+      'A crosswalk area where pedestrians have immediate right-of-way.'
+    ],
+    correctOptionIndex: 0,
+    explanation: 'California Handbook (Section 4): Double solid white lines indicate a lane barrier between regular and preferential lanes (such as HOV lanes); you must never change lanes over them.',
+    testGroup: 40,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 7,
+    sourceTopic: 'Double Solid White Lines',
+    coverageFactIds: ['fact-double-solid-white-lines']
+  },
+  {
+    id: 'q236',
+    category: 'Rules of the Road',
+    questionText: 'Under California law, is it legal to make a U-turn on a divided highway by crossing a dividing barrier or empty physical strip?',
+    options: [
+      'Yes, as long as no police vehicles are in sight.',
+      'Yes, but only if you are executing a turn onto a private driveway.',
+      'No, you must never make a U-turn on a divided highway by crossing a dividing section, curb, strip of land, or double sets of double yellow lines.',
+      'Yes, during night hours when traffic is light.'
+    ],
+    correctOptionIndex: 2,
+    explanation: 'California Handbook (Section 4): Never make a U-turn on a divided highway by crossing a dividing section, curb, strip of land, or two sets of double yellow lines.',
+    testGroup: 40,
+    sourceSection: 'Section 4: Navigating the Roads',
+    sourcePage: 13,
+    sourceTopic: 'Prohibited U-Turns on divided highways',
+    coverageFactIds: ['fact-uturn-divided-highway-barrier']
   }
 ];
 
@@ -1669,7 +1705,7 @@ const fullQMap: { [qId: string]: string[] } = {
   q11: ['fact-turnout-slow-vehicles'],
   q12: ['fact-hov-motorcycle-lane'],
   q13: ['fact-drive-bike-lane-limit'],
-  q14: ['fact-traffic-light-red-arrow'],
+  q14: ['fact-tailgate-three-second-rule'],
   q15: ['fact-pass-on-right-allowed'],
   q16: ['fact-exit-highway-signal'],
   q17: ['fact-uturn-residential-clearance'],
@@ -1720,16 +1756,16 @@ const fullQMap: { [qId: string]: string[] } = {
   q62: ['fact-dui-open-container-vehicle'],
   q63: ['fact-collision-report-sr1-dmv'],
   q64: ['fact-dui-test-refusal'],
-  q65: ['fact-skid-release-accelerator-no-brakes'],
+  q65: ['fact-collision-report-sr1-dmv'],
   q66: ['fact-bac-limit-under-21'],
   q67: ['fact-dui-drugs-prescription-impairment'],
   q68: ['fact-pedestrian-white-canes'],
   q69: ['fact-railroad-crossing-visibility-speed'],
-  q70: ['fact-tailgate-three-second-rule'],
+  q70: ['fact-insurance-lack-suspension'],
   q71: ['fact-provisional-curfew'],
   q72: ['fact-provisional-passengers'],
-  q73: ['fact-class-c-license'],
-  q74: ['fact-class-c-license'],
+  q73: ['fact-address-change-notification'],
+  q74: ['fact-vehicle-transfer-notification'],
   q75: ['fact-instruction-permit-btw'],
   q76: ['fact-knowledge-btw-tests'],
   q77: ['fact-knowledge-btw-tests'],
@@ -1744,8 +1780,8 @@ const fullQMap: { [qId: string]: string[] } = {
   q86: ['fact-truck-no-zone-blind'],
   q87: ['fact-truck-swing-wide'],
   q88: ['fact-move-over-law-tows'],
-  q89: ['fact-colored-curb-white'],
-  q90: ['fact-turnout-slow-vehicles'],
+  q89: ['fact-evade-police-consequences'],
+  q90: ['fact-drive-bike-lane-limit'],
   q91: ['fact-bac-limit-adult-21'],
   q92: ['fact-bac-limit-commercial'],
   q93: ['fact-dui-test-refusal'],
@@ -1759,12 +1795,12 @@ const fullQMap: { [qId: string]: string[] } = {
   q101: ['fact-double-solid-yellow-passing'],
   q102: ['fact-single-yellow-line'],
   q103: ['fact-yellow-barrier-lines'],
-  q104: ['fact-center-left-turn-distance'],
-  q105: ['fact-turnout-slow-vehicles'],
+  q104: ['fact-turnout-slow-vehicles'],
+  q105: ['fact-hov-lane-usage'],
   q106: ['fact-limit-line-stop-crosswalk'],
   q107: ['fact-center-left-turn-distance'],
   q108: ['fact-center-left-turn-distance'],
-  q109: ['fact-double-solid-white-lines'],
+  q109: ['fact-yield-line-shark-teeth'],
   q110: ['fact-broken-yellow-line'],
   q111: ['fact-headlights-dark-1000ft'],
   q112: ['fact-headlights-wipers-running'],
