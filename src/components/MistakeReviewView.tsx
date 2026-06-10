@@ -21,6 +21,7 @@ import {
   Trophy
 } from 'lucide-react';
 import { Question } from '../types';
+import { ProPassModal } from './ProPassModal';
 import { 
   getMistakes, 
   clearMistakes, 
@@ -212,7 +213,7 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
               </div>
               <div className="space-y-1">
                 <h3 className="font-sans font-extrabold text-lg text-primary-navy flex items-center gap-1.5">
-                  Unlock Premium Mistake Review <Sparkles className="w-4 h-4 text-safety-orange fill-safety-orange/25" />
+                  Unlock Mistake Review with Pro Pass <Sparkles className="w-4 h-4 text-safety-orange fill-safety-orange/25" />
                 </h3>
                 <p className="text-xs font-semibold text-[#804200] leading-none uppercase tracking-wider">
                   Targeted Drills • Focused Practice • Confidence Builder
@@ -221,7 +222,7 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
             </div>
 
             <p className="text-sm text-text-dark leading-relaxed pl-1">
-              Turn missed questions into focused practice. Practice the exact questions you missed, isolate your weak areas, and unlock unlimited attempts to study efficiently before test day.
+              Turn missed questions into focused practice. Practice the exact questions you missed, isolate your weak areas, and unlock unlimited attempts to study efficiently before test day with the Pro Pass.
             </p>
 
             {/* Premium feature list benefits */}
@@ -250,7 +251,7 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
                 onClick={() => setShowPurchaseModal(true)}
                 className="flex-1 py-3 px-5 bg-gradient-to-r from-safety-orange to-[#fe9743] hover:from-safety-orange-dark hover:to-safety-orange text-primary-navy font-sans font-black text-xs.5 uppercase tracking-wider rounded-xl transition-all duration-200 active:scale-95 shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
               >
-                <span>Unlock Premium Lifetime - $9.99</span>
+                <span>Unlock Pro Pass - $9.99</span>
                 <ArrowRight className="w-4.5 h-4.5" />
               </button>
               
@@ -285,82 +286,14 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
         </div>
       )}
 
-      {/* Premium Purchase Modal Popup */}
+      {/* Pro Pass Purchase Modal Popup */}
       {showPurchaseModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-          <div 
-            onClick={() => setShowPurchaseModal(false)}
-            className="fixed inset-0 bg-primary-navy/60 backdrop-blur-sm transition-opacity cursor-pointer" 
-          />
-          <div className="bg-white border border-slate-200 shadow-2xl rounded-3xl p-6 max-w-md w-full relative z-10 animate-scale-in text-left">
-            <button 
-              onClick={() => setShowPurchaseModal(false)}
-              className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors p-1"
-            >
-              <XCircle className="w-6 h-6 stroke-[1.5]" />
-            </button>
-
-            <div className="space-y-4">
-              <div className="w-12 h-12 bg-safety-orange/10 text-safety-orange rounded-full flex items-center justify-center border border-safety-orange/20">
-                <Sparkles className="w-6 h-6 fill-safety-orange/10" />
-              </div>
-
-              <div className="space-y-1.5">
-                <h3 className="font-sans font-extrabold text-xl text-primary-navy">
-                  Premium Study Access
-                </h3>
-                <p className="text-xs font-semibold text-safety-orange uppercase tracking-wider">
-                  Lifetime Pass • Stripe Checkout coming soon
-                </p>
-              </div>
-
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Thank you for your interest in the Lifetime Premium membership! Our secure Stripe payment checkout gateway is currently under construction.
-              </p>
-
-              <div className="p-4 bg-slate-50 border border-slate-150 rounded-2xl space-y-2">
-                <h4 className="text-xs font-black text-primary-navy uppercase tracking-wider">
-                  Future Included Premium Features:
-                </h4>
-                <ul className="space-y-1.5 text-xs font-medium text-slate-600">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500 fill-emerald-50" />
-                    <span>Drill unlimited saved mistakes (unlocked from the 3-question preview cap)</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500 fill-emerald-50" />
-                    <span>Isolates and auto-removes solved weaknesses</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500 fill-emerald-50" />
-                    <span>Exclusive badges and priority status trackers</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="space-y-2.5 pt-2">
-                <button
-                  onClick={() => setShowPurchaseModal(false)}
-                  className="w-full py-3 bg-primary-navy hover:bg-primary-navy-light text-white font-sans font-black text-xs uppercase tracking-wider rounded-xl transition-all duration-200 shadow-sm cursor-pointer text-center"
-                >
-                  Close Preview
-                </button>
-                {import.meta.env.DEV && (
-                  <button
-                    onClick={() => {
-                      handleTogglePremium();
-                      setShowPurchaseModal(false);
-                    }}
-                    className="w-full py-2.5 border border-dashed border-amber-400 bg-amber-50/50 hover:bg-amber-50 text-amber-800 font-sans font-bold text-xs uppercase tracking-wider rounded-xl transition-all duration-200 cursor-pointer text-center flex items-center justify-center gap-1.5"
-                  >
-                    <RefreshCw className="w-3.5 h-3.5" />
-                    <span>Dev: Bypass &amp; Purchase via Simulator</span>
-                  </button>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
+        <ProPassModal 
+          onClose={() => setShowPurchaseModal(false)}
+          onUnlocked={() => {
+            loadData();
+          }}
+        />
       )}
 
       {/* Saved Mistakes Question List Preview */}

@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { Menu, Award } from 'lucide-react';
+import { Menu, Award, Sparkles } from 'lucide-react';
 import { TabType, UserStats } from '../types';
 
 import californiaBadgeImg from '../assets/images/california_state_flag_badge_1780860429638.png';
@@ -17,6 +17,7 @@ interface HeaderProps {
   titleOverride?: string;
   onBack?: () => void;
   stats?: UserStats;
+  proPassUnlocked?: boolean;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -27,6 +28,7 @@ export const Header: React.FC<HeaderProps> = ({
   titleOverride,
   onBack,
   stats,
+  proPassUnlocked = false,
 }) => {
   const currentName = stats?.userName || 'California Driver';
   const currentStreak = stats?.streakDays ?? 0;
@@ -76,17 +78,24 @@ export const Header: React.FC<HeaderProps> = ({
               {titleOverride || 'DriveReady'}
             </h1>
             {!titleOverride && (
-              <div 
-                className="flex items-center bg-white border border-slate-200/80 p-0.5 rounded shadow-3xs select-none"
-                title="California DMV handbook-based practice"
-              >
-                <img 
-                  src={californiaBadgeImg} 
-                  alt="California DMV handbook-based practice" 
-                  className="w-9 h-5.5 object-cover rounded-xs select-none"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
+              <>
+                <div 
+                  className="flex items-center bg-white border border-slate-200/80 p-0.5 rounded shadow-3xs select-none"
+                  title="California DMV handbook-based practice"
+                >
+                  <img 
+                    src={californiaBadgeImg} 
+                    alt="California DMV handbook-based practice" 
+                    className="w-9 h-5.5 object-cover rounded-xs select-none"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                {proPassUnlocked && (
+                  <span className="inline-flex items-center gap-0.5 bg-gradient-to-r from-amber-500 to-[#fe9743] text-slate-950 font-black text-[9px] tracking-wider uppercase px-2 py-0.5 rounded-full shadow-3xs border border-amber-600/10">
+                    <Sparkles className="w-2.5 h-2.5 fill-slate-950" /> Pro Pass
+                  </span>
+                )}
+              </>
             )}
           </div>
         </div>

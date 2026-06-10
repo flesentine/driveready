@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { ChevronRight, HelpCircle, AlertTriangle, Lightbulb, Flame, Clock, Target, Trophy, X, Sparkles, Info, RefreshCw, ShieldAlert } from 'lucide-react';
+import { ChevronRight, HelpCircle, AlertTriangle, Lightbulb, Flame, Clock, Target, Trophy, X, Sparkles, Info, RefreshCw, ShieldAlert, CheckCircle2, Lock } from 'lucide-react';
 import { TabType, UserStats, getUserLevelInfo } from '../types';
 import { getReadinessLabel } from '../utils/scoring';
 import { PRO_TIPS } from '../proTips';
@@ -17,6 +17,8 @@ interface DashboardViewProps {
   startPracticeQuiz: (testGroup?: number) => void;
   startFlashcards: () => void;
   onUpdateProfile?: (name: string) => void;
+  proPassUnlocked?: boolean;
+  onTriggerProPass?: () => void;
 }
 
 interface TestDetail {
@@ -53,6 +55,8 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
   startPracticeQuiz,
   startFlashcards,
   onUpdateProfile,
+  proPassUnlocked = false,
+  onTriggerProPass = () => {},
 }) => {
   const [isBreakdownOpen, setIsBreakdownOpen] = useState(false);
   const [activeTipIndex, setActiveTipIndex] = useState(() => Math.floor(Math.random() * PRO_TIPS.length));
@@ -411,6 +415,60 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           <ChevronRight className="w-4 h-4 mt-0.5" />
         </button>
       </section>
+
+      {/* Pro Pass Core feature banner card */}
+      {!proPassUnlocked ? (
+        <section className="bg-gradient-to-r from-slate-900 via-[#1e293b] to-slate-900 border-2 border-dashed border-amber-500 p-5 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden select-none animate-fade-in shadow-md text-left cursor-pointer transition-all hover:bg-slate-850" onClick={onTriggerProPass}>
+          <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl pointer-events-none" />
+          <div className="flex gap-4 items-start relative z-10 text-left">
+            <div className="p-3 bg-amber-500/15 text-amber-400 rounded-xl shrink-0 border border-amber-500/30">
+              <Sparkles className="w-6 h-6 fill-amber-500/10 stroke-[2px]" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex items-center gap-2">
+                <h3 className="font-sans font-extrabold text-base text-white leading-none mb-0.5">
+                  Get DriverReady Pro Pass
+                </h3>
+                <span className="bg-amber-500 text-[#001025] text-[9px] font-black tracking-widest uppercase px-2 py-0.5 rounded leading-none">
+                  LIFETIME ACCESS
+                </span>
+              </div>
+              <p className="text-xs text-slate-300 max-w-xl leading-relaxed">
+                Study smarter with unlimited mistake review, weak spot drilling, specialized cram tools, and locked premium mock tests. Unlock everything for a one-time payment.
+              </p>
+            </div>
+          </div>
+          <button
+            onClick={(e) => { e.stopPropagation(); onTriggerProPass(); }}
+            className="w-full md:w-auto px-5 py-3 bg-amber-500 hover:bg-amber-400 text-[#001025] font-extrabold rounded-xl text-xs shadow-md transition-all active:scale-95 cursor-pointer flex items-center justify-center gap-1 shrink-0 relative z-10 font-sans"
+          >
+            <span>Unlock Pro Pass</span>
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        </section>
+      ) : (
+        <section className="bg-gradient-to-r from-emerald-950/40 via-[#064e3b]/15 to-emerald-950/40 border border-emerald-500/30 p-5 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden select-none animate-fade-in shadow-xs text-left">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none" />
+          <div className="flex gap-4 items-start relative z-10 text-left">
+            <div className="p-3 bg-emerald-500/15 text-emerald-400 rounded-xl shrink-0 border border-emerald-500/30">
+              <CheckCircle2 className="w-6 h-6 text-emerald-400 stroke-[2px]" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex items-center gap-2">
+                <h3 className="font-sans font-extrabold text-base text-emerald-100 leading-none mb-0.5">
+                  Pro Pass Activated
+                </h3>
+                <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[9px] font-black tracking-widest uppercase px-2 py-0.5 rounded leading-none">
+                  ACTIVE
+                </span>
+              </div>
+              <p className="text-xs text-emerald-350 max-w-xl leading-relaxed">
+                Thank you for supporting DriveReady! You have full access to all mock tests, unlimited saved mistakes review, and all premium study features.
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Next Steps Screen Routing Area */}
       <section className="space-y-4">

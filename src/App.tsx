@@ -14,10 +14,12 @@ import { FlashcardsView } from './components/FlashcardsView';
 import { ProfileView } from './components/ProfileView';
 import { MistakeReviewView } from './components/MistakeReviewView';
 import { isMistakeReviewUnlocked, getMistakeReviewQuestions } from './utils/mistakeReview';
+import { isProPassUnlocked } from './utils/proPass';
+import { ProPassModal } from './components/ProPassModal';
 import { TabType, UserStats, Question, getUserLevelInfo } from './types';
 import { calculateNewReadinessScore, mapQuestionCategoryToScoreKey, getReadinessLabel } from './utils/scoring';
 import { ROAD_SIGNS, PRACTICE_QUESTIONS, INITIAL_USER_STATS } from './data';
-import { ClipboardList, ShieldAlert, Award, FileText, CheckCircle2, X, Home, BookOpen, Zap, TrendingUp, User, Flame, Trophy } from 'lucide-react';
+import { ClipboardList, ShieldAlert, Award, FileText, CheckCircle2, X, Home, BookOpen, Zap, TrendingUp, User, Flame, Trophy, Lock, Sparkles } from 'lucide-react';
 
 const LOCAL_STORAGE_STATS_KEY = 'driveready_user_stats';
 
@@ -28,6 +30,10 @@ const computeReadinessScore = (stats: UserStats): number => {
 export default function App() {
   const [currentTab, setCurrentTab] = useState<TabType>('home');
   const [stats, setStats] = useState<UserStats>(INITIAL_USER_STATS);
+  
+  // Pro Pass Lock & Purchase controllers
+  const [proPassUnlocked, setProPassUnlocked] = useState<boolean>(() => isProPassUnlocked());
+  const [showProPassModal, setShowProPassModal] = useState<boolean>(false);
 
   // Active quiz / flashcard controllers
   const [isQuizActive, setIsQuizActive] = useState(false);
@@ -399,6 +405,8 @@ export default function App() {
           onChangeTestDays={handleChangeTestDays}
           onResetStats={handleResetStats}
           onUpdateProfile={handleUpdateProfile}
+          proPassUnlocked={proPassUnlocked}
+          onTriggerProPass={() => setShowProPassModal(true)}
         />
       );
     }
@@ -412,6 +420,8 @@ export default function App() {
             startPracticeQuiz={handleStartPracticeQuiz}
             startFlashcards={handleStartFlashcards}
             onUpdateProfile={handleUpdateProfile}
+            proPassUnlocked={proPassUnlocked}
+            onTriggerProPass={() => setShowProPassModal(true)}
           />
         );
       case 'mistakes':
@@ -1190,36 +1200,70 @@ export default function App() {
 
               {/* Quiz Card 25 */}
               {stats.readinessScore >= 75 ? (
-                <div className="bg-white border-2 border-primary-navy rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary-navy/10 rounded-xl text-primary-navy py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <h4 className="font-sans font-extrabold text-lg text-primary-navy">
-                          Practice Test 14: Special Roads, Point Systems &amp; Emergency Handling
-                        </h4>
-                        <span className="bg-green-100 text-green-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full">
-                          Unlocked
-                        </span>
+                proPassUnlocked ? (
+                  <div className="bg-white border-2 border-primary-navy rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-sm">
+                    <div className="flex items-start gap-4">
+                      <div className="p-3 bg-primary-navy/10 rounded-xl text-primary-navy py-4">
+                        <ClipboardList className="w-7 h-7" />
                       </div>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Mountain road single-lane meetings (uphill right-of-way), hydroplaning recovery, NOTS DMV point milestones, blind intersections, and alley speeds.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 8 Targeted Questions</span>
-                        <span>⏱ Approx 8 min</span>
+                      <div>
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <h4 className="font-sans font-extrabold text-lg text-primary-navy">
+                            Practice Test 14: Special Roads, Point Systems &amp; Emergency Handling
+                          </h4>
+                          <span className="bg-emerald-100 text-emerald-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full flex items-center gap-1 font-sans">
+                            <Sparkles className="w-2.5 h-2.5 fill-emerald-600" /> Pro Pass Active
+                          </span>
+                        </div>
+                        <p className="text-sm text-text-muted mt-1">
+                          Focus: Mountain road single-lane meetings (uphill right-of-way), hydroplaning recovery, NOTS DMV point milestones, blind intersections, and alley speeds.
+                        </p>
+                        <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
+                          <span>✓ 8 Targeted Questions</span>
+                          <span>⏱ Approx 8 min</span>
+                        </div>
                       </div>
                     </div>
+                    <button
+                      onClick={() => handleStartPracticeQuiz(25)}
+                      className="w-full md:w-auto bg-primary-navy hover:bg-primary-navy-light text-white font-bold py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-xs select-none shrink-0"
+                    >
+                      Start Test Now
+                    </button>
                   </div>
-                  <button
-                    onClick={() => handleStartPracticeQuiz(25)}
-                    className="w-full md:w-auto bg-primary-navy hover:bg-primary-navy-light text-white font-bold py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-xs select-none shrink-0"
-                  >
-                    Start Test Now
-                  </button>
-                </div>
+                ) : (
+                  <div className="bg-[#fffdf5] border-2 border-amber-300 rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:border-amber-400">
+                    <div className="flex items-start gap-4 text-left">
+                      <div className="p-3 bg-amber-500/10 rounded-xl text-amber-600 py-4">
+                        <Lock className="w-7 h-7" />
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <h4 className="font-sans font-extrabold text-lg text-primary-navy">
+                            Practice Test 14: Special Roads, Point Systems &amp; Emergency Handling
+                          </h4>
+                          <span className="bg-amber-100 text-amber-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full flex items-center gap-1 font-sans font-bold">
+                            Pro Pass Required
+                          </span>
+                        </div>
+                        <p className="text-sm text-text-muted mt-1">
+                          Focus: Mountain road single-lane meetings (uphill right-of-way), hydroplaning recovery, NOTS DMV point milestones, blind intersections, and alley speeds.
+                        </p>
+                        <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
+                          <span>✓ 8 Targeted Questions</span>
+                          <span>⏱ Approx 8 min</span>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      onClick={() => setShowProPassModal(true)}
+                      className="w-full md:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-md select-none shrink-0 flex items-center justify-center gap-1.5"
+                    >
+                      <Sparkles className="w-4 h-4 fill-slate-955" />
+                      <span>Unlock with Pro Pass</span>
+                    </button>
+                  </div>
+                )
               ) : (
                 <div className="bg-white border border-border-light rounded-2xl p-5 shadow-xs opacity-75 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative overflow-hidden">
                   <div className="flex items-start gap-4">
@@ -1250,36 +1294,70 @@ export default function App() {
 
               {/* Quiz Card 26 */}
               {stats.readinessScore >= 80 ? (
-                <div className="bg-white border-2 border-primary-navy rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary-navy/10 rounded-xl text-primary-navy py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <h4 className="font-sans font-extrabold text-lg text-primary-navy">
-                          Practice Test 15: Hill Parking, Hand Signals &amp; Special Rights
-                        </h4>
-                        <span className="bg-green-100 text-green-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full">
-                          Unlocked
-                        </span>
+                proPassUnlocked ? (
+                  <div className="bg-white border-2 border-primary-navy rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-sm">
+                    <div className="flex items-start gap-4">
+                      <div className="p-3 bg-primary-navy/10 rounded-xl text-primary-navy py-4">
+                        <ClipboardList className="w-7 h-7" />
                       </div>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Uphill/downhill curb-restwheel calculations, arm hand gestures, parked vehicle collision duties, and horse/animal-drawn vehicle rights.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 8 Targeted Questions</span>
-                        <span>⏱ Approx 8 min</span>
+                      <div>
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <h4 className="font-sans font-extrabold text-lg text-primary-navy">
+                            Practice Test 15: Hill Parking, Hand Signals &amp; Special Rights
+                          </h4>
+                          <span className="bg-emerald-100 text-emerald-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full flex items-center gap-1 font-sans">
+                            <Sparkles className="w-2.5 h-2.5 fill-emerald-600" /> Pro Pass Active
+                          </span>
+                        </div>
+                        <p className="text-sm text-text-muted mt-1">
+                          Focus: Uphill/downhill curb-restwheel calculations, arm hand gestures, parked vehicle collision duties, and horse/animal-drawn vehicle rights.
+                        </p>
+                        <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
+                          <span>✓ 8 Targeted Questions</span>
+                          <span>⏱ Approx 8 min</span>
+                        </div>
                       </div>
                     </div>
+                    <button
+                      onClick={() => handleStartPracticeQuiz(26)}
+                      className="w-full md:w-auto bg-primary-navy hover:bg-primary-navy-light text-white font-bold py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-xs select-none shrink-0"
+                    >
+                      Start Test Now
+                    </button>
                   </div>
-                  <button
-                    onClick={() => handleStartPracticeQuiz(26)}
-                    className="w-full md:w-auto bg-primary-navy hover:bg-primary-navy-light text-white font-bold py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-xs select-none shrink-0"
-                  >
-                    Start Test Now
-                  </button>
-                </div>
+                ) : (
+                  <div className="bg-[#fffdf5] border-2 border-amber-300 rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:border-amber-400">
+                    <div className="flex items-start gap-4 text-left">
+                      <div className="p-3 bg-amber-500/10 rounded-xl text-amber-600 py-4">
+                        <Lock className="w-7 h-7" />
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <h4 className="font-sans font-extrabold text-lg text-primary-navy">
+                            Practice Test 15: Hill Parking, Hand Signals &amp; Special Rights
+                          </h4>
+                          <span className="bg-amber-100 text-amber-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full flex items-center gap-1 font-sans font-bold">
+                            Pro Pass Required
+                          </span>
+                        </div>
+                        <p className="text-sm text-text-muted mt-1">
+                          Focus: Uphill/downhill curb-restwheel calculations, arm hand gestures, parked vehicle collision duties, and horse/animal-drawn vehicle rights.
+                        </p>
+                        <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
+                          <span>✓ 8 Targeted Questions</span>
+                          <span>⏱ Approx 8 min</span>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      onClick={() => setShowProPassModal(true)}
+                      className="w-full md:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-md select-none shrink-0 flex items-center justify-center gap-1.5"
+                    >
+                      <Sparkles className="w-4 h-4 fill-slate-955" />
+                      <span>Unlock with Pro Pass</span>
+                    </button>
+                  </div>
+                )
               ) : (
                 <div className="bg-white border border-border-light rounded-2xl p-5 shadow-xs opacity-75 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative overflow-hidden">
                   <div className="flex items-start gap-4">
@@ -1344,6 +1422,7 @@ export default function App() {
         onOpenProfile={handleOpenProfileTab}
         titleOverride={isQuizActive ? 'Practice Session' : isFlashcardsActive ? 'Flashcards Session' : undefined}
         stats={stats}
+        proPassUnlocked={proPassUnlocked}
         onBack={
           isQuizActive
             ? () => setShowQuitConfirm(true)
@@ -1702,6 +1781,17 @@ export default function App() {
             </div>
           </div>
         </div>
+      )}
+
+      {/* Pro Pass Purchase Modal Popup */}
+      {showProPassModal && (
+        <ProPassModal 
+          onClose={() => setShowProPassModal(false)}
+          onUnlocked={() => {
+            setProPassUnlocked(true);
+            // Lock states will reload instantly and reactively
+          }}
+        />
       )}
 
     </div>

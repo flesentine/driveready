@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { User, Calendar, Shield, Award, MapPin, RefreshCw, Check, AlertTriangle } from 'lucide-react';
+import { User, Calendar, Shield, Award, MapPin, RefreshCw, Check, AlertTriangle, Sparkles, Lock, CheckCircle2 } from 'lucide-react';
 import { UserStats, getUserLevelInfo } from '../types';
 import californiaBadgeImg from '../assets/images/california_state_flag_badge_1780860429638.png';
 
@@ -13,6 +13,8 @@ interface ProfileViewProps {
   onChangeTestDays: (days: number | undefined) => void;
   onResetStats: () => void;
   onUpdateProfile?: (name: string) => void;
+  proPassUnlocked?: boolean;
+  onTriggerProPass?: () => void;
 }
 
 export const ProfileView: React.FC<ProfileViewProps> = ({
@@ -20,6 +22,8 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
   onChangeTestDays,
   onResetStats,
   onUpdateProfile,
+  proPassUnlocked = false,
+  onTriggerProPass = () => {},
 }) => {
   const currentName = stats.userName || 'California Driver';
   const lvlInfo = getUserLevelInfo(stats);
@@ -80,6 +84,18 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
             <span className={`sm:inline-block font-sans font-black text-[10px] px-2.5 py-0.5 rounded-full uppercase tracking-wider ${lvlInfo.badgeBg} ${lvlInfo.badgeText}`}>
               Level {lvlInfo.level}: {lvlInfo.levelName}
             </span>
+            {proPassUnlocked ? (
+              <span className="sm:inline-flex items-center gap-1 font-sans font-black text-[10px] bg-amber-500 text-[#001025] px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-xs">
+                <Sparkles className="w-2.5 h-2.5 fill-[#001025]" /> Pro Pass Active
+              </span>
+            ) : (
+              <button 
+                onClick={onTriggerProPass}
+                className="sm:inline-flex items-center gap-1 font-sans font-black text-[10px] bg-slate-100 text-[#002045] hover:bg-amber-100 hover:text-[#001025] px-2.5 py-0.5 rounded-full uppercase tracking-wider transition-colors cursor-pointer border border-[#002045]/10 font-bold"
+              >
+                <Lock className="w-2.5 h-2.5" /> Get Pro Pass
+              </button>
+            )}
           </div>
           
           <p className="text-xs text-text-muted flex items-center justify-center sm:justify-start gap-1 font-medium">
@@ -143,6 +159,54 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
             {stats.readinessScore}% Exam Ready
           </span>
         </div>
+      </section>
+
+      {/* Pro Pass Subscription / Entitlement Trigger Card */}
+      <section className="bg-white border border-border-light rounded-2xl p-5 shadow-xs space-y-4">
+        <h4 className="font-sans font-extrabold text-base text-primary-navy flex items-center gap-2">
+          <Sparkles className="w-4.5 h-4.5 text-amber-500 fill-amber-500/20 stroke-2" />
+          Pro Pass License
+        </h4>
+        
+        {!proPassUnlocked ? (
+          <div className="space-y-3">
+            <p className="text-xs text-text-muted leading-relaxed font-semibold">
+              You are currently on the Free Starter Plan. Unlock the <strong>Pro Pass</strong> for Lifetime Access to ALL study modes. No subscriptions, just a one-time unlock.
+            </p>
+            <div className="bg-orange-50/40 border border-orange-200/50 rounded-xl p-3.5 space-y-1.5 text-left">
+              <span className="block text-[10px] font-black text-safety-orange uppercase tracking-wider">Free Starter Mode Locks:</span>
+              <ul className="text-xs font-bold text-slate-700 space-y-1 pl-1">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-safety-orange" />
+                  <span>Mistake Review limited to 3 questions</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-safety-orange" />
+                  <span>Advanced Test 14 and Test 15 locked</span>
+                </li>
+              </ul>
+            </div>
+            <button
+              onClick={onTriggerProPass}
+              className="w-full bg-gradient-to-r from-amber-500 to-[#fe9743] hover:from-amber-600 hover:to-amber-500 text-slate-950 font-black h-11 px-4 rounded-xl text-xs transition-colors cursor-pointer select-none flex items-center justify-center gap-1.5"
+            >
+              <Sparkles className="w-4.5 h-4.5 fill-slate-950" />
+              <span>Unlock Lifetime Pro Pass — $9.99</span>
+            </button>
+          </div>
+        ) : (
+          <div className="space-y-3">
+            <div className="bg-emerald-50/50 border border-emerald-200 rounded-xl p-4 flex items-start gap-3 text-left">
+              <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+              <div>
+                <p className="text-xs font-black text-emerald-950 uppercase tracking-wider mb-0.5 animate-pulse">Lifetime License Activated</p>
+                <p className="text-xs text-emerald-800 font-semibold leading-relaxed">
+                  Thank you! Your Pro Pass is fully active on this device. You have unlimited access to mock examinations, unlimited mistake list saves, and priority metrics.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Profile Details Personalization Form */}
