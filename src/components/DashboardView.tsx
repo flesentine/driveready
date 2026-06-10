@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { ChevronRight, HelpCircle, AlertTriangle, Lightbulb, Flame, Clock, Target, Trophy, X, Sparkles, Info, RefreshCw, ShieldAlert, CheckCircle2, Lock } from 'lucide-react';
+import { ChevronRight, HelpCircle, AlertTriangle, Lightbulb, Flame, Clock, Target, Trophy, X, Sparkles, Info, RefreshCw, ShieldAlert, CheckCircle2, Lock, Zap } from 'lucide-react';
 import { TabType, UserStats, getUserLevelInfo } from '../types';
 import { getReadinessLabel } from '../utils/scoring';
 import { PRO_TIPS } from '../proTips';
@@ -19,6 +19,7 @@ interface DashboardViewProps {
   onUpdateProfile?: (name: string) => void;
   proPassUnlocked?: boolean;
   onTriggerProPass?: () => void;
+  startCramMode?: () => void;
 }
 
 interface TestDetail {
@@ -57,6 +58,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
   onUpdateProfile,
   proPassUnlocked = false,
   onTriggerProPass = () => {},
+  startCramMode = () => {},
 }) => {
   const [isBreakdownOpen, setIsBreakdownOpen] = useState(false);
   const [activeTipIndex, setActiveTipIndex] = useState(() => Math.floor(Math.random() * PRO_TIPS.length));
@@ -467,6 +469,72 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               </p>
             </div>
           </div>
+        </section>
+      )}
+
+      {/* Cram Mode Premium Study Card */}
+      {!proPassUnlocked ? (
+        <section className="bg-gradient-to-r from-slate-50 to-orange-50/10 border border-slate-200 p-5 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden select-none animate-fade-in shadow-xs text-left cursor-pointer transition-all hover:bg-slate-100/50" onClick={onTriggerProPass}>
+          <div className="absolute inset-y-0 right-0 w-48 opacity-5 pointer-events-none transform translate-x-12">
+            <Lock className="w-full h-full text-slate-400" />
+          </div>
+          <div className="flex gap-4 items-start relative z-10 text-left">
+            <div className="p-3 bg-slate-100 text-slate-500 rounded-xl shrink-0 border border-slate-200">
+              <Lock className="w-6 h-6 stroke-[2.5px]" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex items-center gap-2">
+                <h3 className="font-sans font-extrabold text-base text-slate-800 leading-none mb-0.5">
+                  Cram Mode
+                </h3>
+                <span className="bg-[#fe9743] hover:bg-safety-orange text-primary-navy font-black text-[9px] tracking-widest uppercase px-2 py-0.5 rounded leading-none">
+                  PRO PASS
+                </span>
+              </div>
+              <p className="text-xs text-text-muted max-w-xl leading-relaxed">
+                Short on time? Drill your weakest areas before test day. Complete a high-impact session focusing on missed questions and critical handbook rules.
+              </p>
+            </div>
+          </div>
+          <button
+            onClick={(e) => { e.stopPropagation(); onTriggerProPass(); }}
+            className="w-full md:w-auto px-5 py-3.5 bg-gradient-to-r from-safety-orange to-[#fe9743] hover:from-safety-orange-dark hover:to-safety-orange text-primary-navy font-sans font-black text-xs.5 uppercase tracking-wider rounded-xl transition-all duration-200 active:scale-95 shadow-xs flex items-center justify-center gap-1.5 cursor-pointer shrink-0 relative z-10"
+          >
+            <Lock className="w-4 h-4 shrink-0" />
+            <span>Unlock Pro Pass</span>
+          </button>
+        </section>
+      ) : (
+        <section className="bg-gradient-to-r from-[#faece2]/50 to-orange-50/20 border border-[#fe9743]/30 p-5 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden select-none animate-fade-in shadow-xs text-left">
+          <div className="absolute inset-y-0 right-0 w-48 opacity-10 pointer-events-none transform translate-x-12">
+            <Zap className="w-full h-full text-safety-orange" />
+          </div>
+          <div className="flex gap-4 items-start relative z-10 text-left">
+            <div className="p-3 bg-safety-orange/10 text-safety-orange-dark rounded-xl shrink-0">
+              <Zap className="w-6 h-6 stroke-[2.5px] fill-safety-orange/10 animate-pulse" />
+            </div>
+            <div className="space-y-1">
+              <div className="flex items-center gap-2">
+                <h3 className="font-sans font-extrabold text-base text-[#002045] leading-none mb-0.5">
+                  Cram Mode
+                </h3>
+                <span className="bg-safety-orange/20 text-safety-orange border border-safety-orange/30 text-[9px] font-black tracking-widest uppercase px-2 py-0.5 rounded leading-none">
+                  ACTIVE
+                </span>
+              </div>
+              <p className="text-xs text-text-muted max-w-xl leading-relaxed">
+                Ready when your test is close. Start a focused review session now. Drill your active missed questions and weakest handbook categories immediately.
+              </p>
+            </div>
+          </div>
+          <button
+            onClick={startCramMode}
+            className="w-full md:w-auto px-5 py-3.5 bg-[#002045] hover:bg-[#0d2a4d] text-white font-extrabold rounded-xl text-xs.5 shadow-xs transition-colors active:scale-95 cursor-pointer flex items-center justify-center gap-1.5 shrink-0 relative z-10 font-sans"
+          >
+            <Zap className="w-4 h-4 shrink-0 fill-current" />
+            <span>Start Cram Mode</span>
+            <ChevronRight className="w-4 h-4 mt-0.5" />
+          </button>
         </section>
       )}
 

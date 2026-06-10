@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { Question } from '../types';
+import { Question, UserStats } from '../types';
 
 export interface SavedMistake {
   questionId: string;
@@ -153,3 +153,105 @@ export function getMistakeReviewQuestions(hasPremium: boolean): Question[] {
   }
   return questions;
 }
+
+/**
+ * Build a short focused Cram Mode quiz session of 10-15 questions.
+ * Focus hierarchy:
+ * 1. Active saved mistakes first (not improved)
+ * 2. Questions from the user's weakest category (if weaknesses found)
+ * 3. Rest of existing practice pool as fallback
+ */
+export function getCramModeQuestions(stats: UserStats, allQuestions: Question[]): Question[] {
+  const selectedQuestions: Question[] = [];
+  const selectedIds = new Set<string>();
+
+  // 1. Active saved mistakes first
+  const activeMistakes = getMistakes().filter(m => !m.improved);
+  for (const m of activeMistakes) {
+    if (selectedQuestions.length >= 15) break;
+    if (!selectedIds.has(m.questionId)) {
+      selectedQuestions.push({
+        id: m.questionId,
+        category: m.category || 'Mistake Review',
+        questionText: m.questionText,
+        imageUrl: m.imageUrl || '',
+        options: m.options,
+        correctOptionIndex: m.correctOptionIndex,
+        explanation: m.explanation,
+        sourceSection: m.sourceSection,
+        sourcePage: m.sourcePage,
+        sourceTopic: m.sourceTopic,
+        coverageTopicId: m.coverageTopicId,
+        coverageFactIds: m.coverageFactIds || [],
+      });
+      selectedIds.add(m.questionId);
+    }
+  }
+
+  // If we already have 15 questions from mistakes, just return them
+  if (selectedQuestions.length >= 15) {
+    return selectedQuestions;
+  }
+
+  // 2. Weakest category find
+  const scores = stats.categoryScores || { rulesOfRoad: 0, signsSignals: 0, safeDriving: 0 };
+  let weakestKey: 'rulesOfRoad' | 'signsSignals' | 'safeDriving' = 'rulesOfRoad';
+  let minScore = scores.rulesOfRoad || 0;
+
+  if ((scores.signsSignals || 0) < minScore) {
+    minScore = scores.signsSignals || 0;
+    weakestKey = 'signsSignals';
+  }
+  if ((scores.safeDriving || 0) < minScore) {
+    minScore = scores.safeDriving || 0;
+    weakestKey = 'safeDriving';
+  }
+
+  // Helper matching scoring.ts' mapQuestionCategoryToScoreKey
+  const mapCategory = (qCat: string) => {
+    const cat = (qCat || '').toLowerCase().trim();
+    if (
+      cat.includes('sign') || 
+      cat.includes('signal') || 
+      cat === 'regulatory' || 
+      cat === 'warning' || 
+      cat === 'information'
+    ) {
+      return 'signsSignals';
+    }
+    if (
+      cat.includes('safe') || 
+      cat.includes('alcohol') || 
+      cat.includes('drug')
+    ) {
+      return 'safeDriving';
+    }
+    return 'rulesOfRoad';
+  };
+
+  const weakestQuestions = allQuestions.filter(q => mapCategory(q.category) === weakestKey);
+  
+  // Shuffling weakest questions before picking to introduce variety
+  const shuffledWeakest = [...weakestQuestions].sort(() => 0.5 - Math.random());
+
+  for (const q of shuffledWeakest) {
+    if (selectedQuestions.length >= 15) break;
+    if (!selectedIds.has(q.id)) {
+      selectedQuestions.push(q);
+      selectedIds.add(q.id);
+    }
+  }
+
+  // 3. Fallback to existing practice pool questions if still below 15 (e.g. 10 to 15 is our goal segment)
+  const shuffledAll = [...allQuestions].sort(() => 0.5 - Math.random());
+  for (const q of shuffledAll) {
+    if (selectedQuestions.length >= 15) break;
+    if (!selectedIds.has(q.id)) {
+      selectedQuestions.push(q);
+      selectedIds.add(q.id);
+    }
+  }
+
+  return selectedQuestions;
+}
+

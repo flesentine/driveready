@@ -13,7 +13,7 @@ import { SignLibraryView } from './components/SignLibraryView';
 import { FlashcardsView } from './components/FlashcardsView';
 import { ProfileView } from './components/ProfileView';
 import { MistakeReviewView } from './components/MistakeReviewView';
-import { getMistakeReviewQuestions } from './utils/mistakeReview';
+import { getMistakeReviewQuestions, getCramModeQuestions } from './utils/mistakeReview';
 import { isProPassUnlocked } from './utils/proPass';
 import { ProPassModal } from './components/ProPassModal';
 import { TabType, UserStats, Question, getUserLevelInfo } from './types';
@@ -42,6 +42,7 @@ export default function App() {
   const [activeTestGroup, setActiveTestGroup] = useState<number>(12);
   const [activeQuizQuestions, setActiveQuizQuestions] = useState<Question[]>([]);
   const [isReviewQuiz, setIsReviewQuiz] = useState(false);
+  const [isCramModeQuiz, setIsCramModeQuiz] = useState(false);
 
   // UI state
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -157,6 +158,7 @@ export default function App() {
     setActiveQuizQuestions(filteredQuestions.length > 0 ? filteredQuestions : PRACTICE_QUESTIONS.slice(0, 10));
 
     setIsReviewQuiz(false); // Reset review mode
+    setIsCramModeQuiz(false);
     setIsQuizActive(true);
     setIsFlashcardsActive(false);
     setIsSidebarOpen(false);
@@ -169,6 +171,20 @@ export default function App() {
 
     setActiveQuizQuestions(reviewQuestions);
     setIsReviewQuiz(true);
+    setIsCramModeQuiz(false);
+    setIsQuizActive(true);
+    setIsFlashcardsActive(false);
+    setIsSidebarOpen(false);
+    setQuizNotification(null);
+  };
+
+  const handleStartCramMode = () => {
+    const cramQuestions = getCramModeQuestions(stats, PRACTICE_QUESTIONS);
+    if (cramQuestions.length === 0) return;
+
+    setActiveQuizQuestions(cramQuestions);
+    setIsCramModeQuiz(true);
+    setIsReviewQuiz(false);
     setIsQuizActive(true);
     setIsFlashcardsActive(false);
     setIsSidebarOpen(false);
@@ -224,6 +240,30 @@ export default function App() {
       setQuizNotification({
         text: notificationText,
         isPassing
+      });
+      setCurrentTab('home');
+      return;
+    }
+
+    if (isCramModeQuiz) {
+      setIsCramModeQuiz(false); // reset cram state
+      
+      const todayStr = new Date().toDateString();
+      const updatedStats = {
+        ...stats,
+        questionsAnsweredToday: stats.questionsAnsweredToday + total,
+        hasActualActivity: true,
+        streakDays: stats.streakDays + (stats.questionsAnsweredToday === 0 ? 1 : 0),
+        lastActiveDate: stats.lastActiveDate || todayStr
+      };
+
+      setStats(updatedStats);
+      localStorage.setItem(LOCAL_STORAGE_STATS_KEY, JSON.stringify(updatedStats));
+
+      setIsQuizActive(false);
+      setQuizNotification({
+        text: `Cram Mode complete! You reviewed ${total} high-impact questions. Great work — you focused on your highest-priority weak spots.`,
+        isPassing: true
       });
       setCurrentTab('home');
       return;
@@ -421,6 +461,7 @@ export default function App() {
             onUpdateProfile={handleUpdateProfile}
             proPassUnlocked={proPassUnlocked}
             onTriggerProPass={() => setShowProPassModal(true)}
+            startCramMode={handleStartCramMode}
           />
         );
       case 'mistakes':
@@ -443,6 +484,65 @@ export default function App() {
                 Prepare with our verified state test simulators covering warning indicators, signs, and road maneuvers.
               </p>
             </section>
+
+            {/* Cram Mode Teaser */}
+            {!proPassUnlocked ? (
+              <div className="bg-gradient-to-r from-amber-50 to-orange-50/20 border border-amber-200 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 animate-fade-in text-left">
+                <div className="flex items-center gap-3.5 text-left">
+                  <div className="p-2.5 bg-amber-500/10 text-amber-600 rounded-xl shrink-0">
+                    <Zap className="w-5 h-5 fill-amber-500/10 stroke-[2px]" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <h4 className="font-sans font-extrabold text-[#002045] text-sm">
+                        Cram Mode
+                      </h4>
+                      <span className="bg-[#fe9743] text-primary-navy text-[8px] font-black uppercase px-2 py-0.5 rounded leading-none">
+                        PRO PASS
+                      </span>
+                    </div>
+                    <p className="text-xs text-text-muted mt-0.5">
+                      Short on time? Rapid review for test day. Prepare with an algorithm-guided crash course.
+                    </p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setShowProPassModal(true)}
+                  className="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-[#001025] font-extrabold text-[11px] px-4 py-2 rounded-lg flex items-center justify-center gap-1 cursor-pointer transition-colors shrink-0"
+                >
+                  <Lock className="w-3.5 h-3.5 shrink-0" />
+                  <span>Unlock Pro Pass</span>
+                </button>
+              </div>
+            ) : (
+              <div className="bg-gradient-to-r from-[#faece2]/30 to-orange-50/10 border border-[#fe9743]/20 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 animate-fade-in text-left">
+                <div className="flex items-center gap-3.5 text-left">
+                  <div className="p-2.5 bg-safety-orange/10 text-safety-orange-dark rounded-xl shrink-0">
+                    <Zap className="w-5 h-5 fill-safety-orange/10 stroke-[2px] animate-pulse" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <h4 className="font-sans font-extrabold text-[#002045] text-sm">
+                        Cram Mode
+                      </h4>
+                      <span className="bg-safety-orange/20 text-safety-orange border border-safety-orange/30 text-[8px] font-black uppercase px-2 py-0.5 rounded leading-none">
+                        ACTIVE
+                      </span>
+                    </div>
+                    <p className="text-xs text-text-muted mt-0.5">
+                      Ready for test day. Start your rapid review session now!
+                    </p>
+                  </div>
+                </div>
+                <button
+                  onClick={handleStartCramMode}
+                  className="w-full sm:w-auto bg-[#002045] hover:bg-[#0d2a4d] text-white font-extrabold text-[11px] px-4 py-2 rounded-lg flex items-center justify-center gap-1.5 cursor-pointer transition-colors shrink-0"
+                >
+                  <Zap className="w-3.5 h-3.5 shrink-0 fill-current" />
+                  <span>Start Cramming</span>
+                </button>
+              </div>
+            )}
 
             {/* Test Listing Layout */}
             <div className="space-y-4">
@@ -1465,7 +1565,7 @@ export default function App() {
             questions={activeQuizQuestions}
             onCompleteQuiz={handleCompleteQuiz}
             onExit={() => setShowQuitConfirm(true)}
-            isReviewSession={isReviewQuiz}
+            isReviewSession={isReviewQuiz || isCramModeQuiz}
           />
         ) : isFlashcardsActive ? (
           <FlashcardsView
