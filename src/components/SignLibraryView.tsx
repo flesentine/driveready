@@ -383,6 +383,8 @@ export const SignLibraryView: React.FC<SignLibraryViewProps> = ({
         return 'text-slate-700 bg-slate-100 hover:bg-slate-200';
       case 'Warning':
         return 'text-amber-800 bg-amber-50 hover:bg-amber-100';
+      case 'Information':
+        return 'text-blue-700 bg-blue-50 hover:bg-blue-100';
       default:
         return 'text-text-muted bg-slate-100';
     }

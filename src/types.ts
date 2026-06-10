@@ -7,7 +7,7 @@ export type TabType = 'home' | 'tests' | 'stats' | 'library' | 'flashcards' | 'p
 
 export type SignCategory = 'All' | 'Regulatory' | 'Warning' | 'Information' | 'Speed';
 
-export type SignStatusType = 'Mandatory' | 'Priority' | 'Prohibitory' | 'Limit' | 'Warning';
+export type SignStatusType = 'Mandatory' | 'Priority' | 'Prohibitory' | 'Limit' | 'Warning' | 'Information';
 
 export interface RoadSign {
   id: string;

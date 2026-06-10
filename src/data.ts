@@ -253,7 +253,7 @@ export const ROAD_SIGNS: RoadSign[] = [
     description: 'Blue railroad emergency signs identify the crossing and provide a phone number to report emergencies or stalled vehicles.',
     imageUrl: 'railroad_emergency_info_simulated_visual',
     status: 'Information',
-    statusType: 'Mandatory',
+    statusType: 'Information',
   },
   {
     id: 'school-crossing',

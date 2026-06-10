@@ -84,21 +84,21 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
         </div>
         
         <div className="text-center sm:text-left space-y-1">
-          <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 justify-center sm:justify-start">
+          <div className="flex flex-col items-center sm:flex-row sm:items-center gap-1.5 justify-center sm:justify-start">
             <h3 className="font-sans font-black text-2xl text-primary-navy leading-none">
               {currentName}
             </h3>
-            <span className={`sm:inline-block font-sans font-black text-[10px] px-2.5 py-0.5 rounded-full uppercase tracking-wider ${lvlInfo.badgeBg} ${lvlInfo.badgeText}`}>
+            <span className={`flex items-center justify-center font-sans font-black text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider ${lvlInfo.badgeBg} ${lvlInfo.badgeText}`}>
               Level {lvlInfo.level}: {lvlInfo.levelName}
             </span>
             {proPassUnlocked ? (
-              <span className="sm:inline-flex items-center gap-1 font-sans font-black text-[10px] bg-amber-500 text-[#001025] px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-xs">
+              <span className="flex items-center justify-center gap-1 font-sans font-black text-[10px] bg-amber-500 text-[#001025] px-2.5 py-1 rounded-full uppercase tracking-wider shadow-xs">
                 <Sparkles className="w-2.5 h-2.5 fill-[#001025]" /> Pro Pass Active
               </span>
             ) : (
               <button 
                 onClick={onTriggerProPass}
-                className="sm:inline-flex items-center gap-1 font-sans font-black text-[10px] bg-slate-100 text-[#002045] hover:bg-amber-100 hover:text-[#001025] px-2.5 py-0.5 rounded-full uppercase tracking-wider transition-colors cursor-pointer border border-[#002045]/10 font-bold"
+                className="flex items-center justify-center gap-1 font-sans font-black text-[10px] bg-slate-100 text-[#002045] hover:bg-amber-100 hover:text-[#001025] px-2.5 py-1 rounded-full uppercase tracking-wider transition-colors cursor-pointer border border-[#002045]/10 font-bold"
               >
                 <Lock className="w-2.5 h-2.5" /> Get Pro Pass
               </button>
