@@ -129,7 +129,7 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
       </div>
 
       {/* Floating unlock simulation visual cue */}
-      {successAnimation && (
+      {successAnimation && import.meta.env.DEV && (
         <div className="bg-green-500 text-white p-4 rounded-xl text-center font-extrabold text-sm shadow-lg animate-bounce flex items-center justify-center gap-2">
           <Sparkles className="w-5 h-5 fill-white" />
           SIMULATION SUCCESS: Premium Plan Unlocked! Full Review activated.
@@ -240,7 +240,7 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-safety-orange fill-safety-orange/10 shrink-0" />
-                Mock entitlement testing enabled
+                Unlimited mistake review sessions
               </div>
             </div>
 
