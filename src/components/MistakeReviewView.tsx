@@ -9,18 +9,14 @@ import {
   Trash2, 
   Lock, 
   Sparkles, 
-  ShieldAlert, 
   CheckCircle2, 
   XCircle, 
   ChevronDown, 
   ChevronUp, 
   Info, 
   ArrowRight,
-  Database,
-  RefreshCw,
   Trophy
 } from 'lucide-react';
-import { Question } from '../types';
 import { 
   getMistakes, 
   clearMistakes, 
@@ -80,7 +76,7 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
         <div className="relative z-10 space-y-2">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <span className="bg-safety-orange/20 text-safety-orange border border-safety-orange/30 font-sans font-black text-[10px] tracking-widest uppercase px-3 py-1 rounded-full">
-              PREMIUM STUDY MODULE
+              PRO PASS STUDY MODULE
             </span>
             {proPassUnlocked && (
               <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-[10px] font-black tracking-widest uppercase px-3 py-1 rounded-full flex items-center gap-1 animate-pulse">
@@ -181,7 +177,7 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
         </div>
       )}
 
-      {/* Free Tier Premium Upsell Card */}
+      {/* Free Tier Pro Pass Upsell Card */}
       {!proPassUnlocked && activeMistakes.length > 0 && (
         <div className="p-0.5 bg-gradient-to-r from-safety-orange via-[#fe9743] to-[#ffb174] rounded-2xl shadow-sm border border-safety-orange/15 animate-fade-in">
           <div className="bg-white p-6 rounded-2xl space-y-4">
@@ -203,7 +199,7 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
               Turn missed questions into focused practice. Practice the exact questions you missed, isolate your weak areas, and unlock unlimited attempts to study efficiently before test day with the Pro Pass.
             </p>
 
-            {/* Premium feature list benefits */}
+            {/* Pro Pass feature list benefits */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-1 pt-1.5 text-xs font-bold text-[#3a4f66]">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-safety-orange fill-safety-orange/10 shrink-0" />
@@ -345,7 +341,7 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
                 + {activeMistakes.length - 3} more missed questions locked
               </p>
               <p className="text-xs max-w-sm mx-auto font-medium">
-                To unlock, review, and drill all your saved mistakes, activate Lifetime Premium Access above anytime!
+                To unlock, review, and drill all your saved mistakes, activate the Pro Pass above anytime!
               </p>
             </div>
           )}
