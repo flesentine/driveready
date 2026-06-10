@@ -424,6 +424,14 @@ export default function App() {
     saveStats(newStats);
   };
 
+  const handleUpdateAvatar = (avatar: string | undefined) => {
+    const newStats: UserStats = {
+      ...stats,
+      selectedAvatar: avatar,
+    };
+    saveStats(newStats);
+  };
+
   const handleOpenProfileTab = () => {
     setIsProfileTabActive(true);
     setIsQuizActive(false);
@@ -449,6 +457,7 @@ export default function App() {
           onChangeTestDays={handleChangeTestDays}
           onResetStats={handleResetStats}
           onUpdateProfile={handleUpdateProfile}
+          onUpdateAvatar={handleUpdateAvatar}
           proPassUnlocked={proPassUnlocked}
           onTriggerProPass={() => setShowProPassModal(true)}
         />

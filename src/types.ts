@@ -58,6 +58,7 @@ export interface UserStats {
   totalTestsTaken: number;
   masteredSignsCount: number;
   userName?: string;
+  selectedAvatar?: string;
   hasActualActivity?: boolean;
   lastActiveDate?: string;
   quizAttempts?: QuizAttempt[];

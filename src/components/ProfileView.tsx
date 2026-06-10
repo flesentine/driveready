@@ -13,6 +13,7 @@ interface ProfileViewProps {
   onChangeTestDays: (days: number | undefined) => void;
   onResetStats: () => void;
   onUpdateProfile?: (name: string) => void;
+  onUpdateAvatar?: (avatar: string | undefined) => void;
   proPassUnlocked?: boolean;
   onTriggerProPass?: () => void;
 }
@@ -22,6 +23,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
   onChangeTestDays,
   onResetStats,
   onUpdateProfile,
+  onUpdateAvatar,
   proPassUnlocked = false,
   onTriggerProPass = () => {},
 }) => {
@@ -67,13 +69,18 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
       
       {/* Profile Header card info */}
       <section className="bg-white border border-border-light rounded-2xl p-6 shadow-xs flex flex-col sm:flex-row items-center gap-5">
-        <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-primary-navy shadow-sm relative shrink-0">
-          <img
-            alt={`${currentName} profile avatar photo`}
-            src={`https://api.dicebear.com/7.x/bottts/svg?seed=${currentName}`}
-            className="w-full h-full object-cover bg-slate-50"
-            referrerPolicy="no-referrer"
-          />
+        <div className={`w-20 h-20 rounded-full select-none relative shrink-0 flex items-center justify-center transition-all ${
+          proPassUnlocked 
+            ? "border-[3px] border-amber-400 ring-4 ring-amber-400/25 shadow-md bg-amber-50/50" 
+            : "border-2 border-primary-navy shadow-sm bg-slate-100"
+        }`}>
+          {stats.selectedAvatar && stats.selectedAvatar !== 'initial' ? (
+            <span className="text-4xl leading-none">{stats.selectedAvatar}</span>
+          ) : (
+            <span className="font-sans font-black text-3xl text-primary-navy leading-none">
+              {currentName.trim() ? currentName.trim().charAt(0).toUpperCase() : 'C'}
+            </span>
+          )}
         </div>
         
         <div className="text-center sm:text-left space-y-1">
@@ -207,6 +214,69 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
             </div>
           </div>
         )}
+      </section>
+
+      {/* Choose Avatar Card */}
+      <section className="bg-white border border-border-light rounded-2xl p-5 shadow-xs space-y-4">
+        <div>
+          <h4 className="font-sans font-extrabold text-base text-primary-navy flex items-center gap-2">
+            <Award className="w-5 h-4.5 text-[#fe9743] stroke-2" />
+            Choose Avatar
+          </h4>
+          <p className="text-xs text-text-muted mt-1 font-semibold text-left">
+            Pick a study icon for your DriverReady profile.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-4 gap-3">
+          {[
+            { emoji: '🚗', name: 'Car' },
+            { emoji: '🐻', name: 'California Bear' },
+            { emoji: '🚦', name: 'Traffic Light' },
+            { emoji: '🛣️', name: 'Road' },
+            { emoji: '🪪', name: 'Permit Card' },
+            { emoji: '⭐', name: 'Star' },
+            { emoji: '🧭', name: 'Navigator' },
+            { emoji: '🏁', name: 'Finish Flag' }
+          ].map((item) => {
+            const isSelected = stats.selectedAvatar === item.emoji;
+            return (
+              <button
+                key={item.emoji}
+                type="button"
+                onClick={() => onUpdateAvatar && onUpdateAvatar(item.emoji)}
+                title={item.name}
+                className={`h-14 rounded-xl flex items-center justify-center text-3xl transition-all duration-200 active:scale-95 cursor-pointer relative ${
+                  isSelected
+                    ? "bg-orange-50 border-2 border-safety-orange ring-1 ring-safety-orange/20 scale-105 shadow-sm"
+                    : "bg-slate-50 border border-slate-200 hover:bg-slate-100/70 hover:border-[#fe9743]/50"
+                }`}
+              >
+                <span>{item.emoji}</span>
+                {isSelected && (
+                  <span className="absolute -top-1 -right-1 bg-safety-orange text-white rounded-full p-0.5 shadow-xs scale-90 border border-white">
+                    <Check className="w-2.5 h-2.5 stroke-[3.5]" />
+                  </span>
+                )}
+              </button>
+            );
+          })}
+        </div>
+
+        <button
+          type="button"
+          onClick={() => onUpdateAvatar && onUpdateAvatar(undefined)}
+          className={`w-full h-11 px-4 font-sans font-bold rounded-xl text-xs transition-all flex items-center justify-center gap-1.5 cursor-pointer select-none border border-dashed text-text-muted hover:bg-slate-50 ${
+            !stats.selectedAvatar || stats.selectedAvatar === 'initial'
+              ? 'border-primary-navy text-primary-navy bg-slate-50 font-black'
+              : 'border-slate-300 hover:border-slate-400'
+          }`}
+        >
+          <span>Use Initial</span>
+          {(!stats.selectedAvatar || stats.selectedAvatar === 'initial') && (
+            <span className="bg-primary-navy/10 text-primary-navy text-[9px] px-1.5 py-0.5 rounded uppercase font-black animate-pulse">Active</span>
+          )}
+        </button>
       </section>
 
       {/* Profile Details Personalization Form */}

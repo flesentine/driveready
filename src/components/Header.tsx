@@ -108,15 +108,20 @@ export const Header: React.FC<HeaderProps> = ({
 
           <div 
             onClick={onOpenProfile || (() => setTab('home'))} 
-            className="w-10 h-10 rounded-full overflow-hidden border border-border-light shadow-2xs select-none cursor-pointer hover:opacity-90 active:scale-95 transition-all"
+            className={`w-10 h-10 rounded-full overflow-hidden select-none cursor-pointer hover:opacity-90 active:scale-95 transition-all flex items-center justify-center ${
+              proPassUnlocked 
+                ? "border-2 border-amber-400 ring-2 ring-amber-400/20 shadow-md bg-amber-50/50" 
+                : "border border-border-light shadow-2xs bg-slate-100"
+            }`}
             title="Click to view My Profile"
           >
-            <img
-              alt="User profile photo"
-              src={`https://api.dicebear.com/7.x/bottts/svg?seed=${currentName}`}
-              className="w-full h-full object-cover select-none bg-slate-50"
-              referrerPolicy="no-referrer"
-            />
+            {stats?.selectedAvatar && stats.selectedAvatar !== 'initial' ? (
+              <span className="text-xl leading-none">{stats.selectedAvatar}</span>
+            ) : (
+              <span className="font-sans font-black text-sm text-primary-navy leading-none">
+                {currentName.trim() ? currentName.trim().charAt(0).toUpperCase() : 'C'}
+              </span>
+            )}
           </div>
         </div>
       </div>
