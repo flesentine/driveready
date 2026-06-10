@@ -4,10 +4,11 @@
  */
 
 import React, { useState } from 'react';
-import { ChevronRight, HelpCircle, AlertTriangle, Lightbulb, Flame, Clock, Target, Trophy, X, Sparkles, Info, RefreshCw } from 'lucide-react';
+import { ChevronRight, HelpCircle, AlertTriangle, Lightbulb, Flame, Clock, Target, Trophy, X, Sparkles, Info, RefreshCw, ShieldAlert } from 'lucide-react';
 import { TabType, UserStats, getUserLevelInfo } from '../types';
 import { getReadinessLabel } from '../utils/scoring';
 import { PRO_TIPS } from '../proTips';
+import { getMistakes } from '../utils/mistakeReview';
 import windyRoadImg from '../assets/images/windy_road_exact_match_1780632600693.png';
 
 interface DashboardViewProps {
@@ -55,6 +56,8 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 }) => {
   const [isBreakdownOpen, setIsBreakdownOpen] = useState(false);
   const [activeTipIndex, setActiveTipIndex] = useState(() => Math.floor(Math.random() * PRO_TIPS.length));
+  
+  const activeMistakesCount = getMistakes().filter(m => !m.improved).length;
   
   const goalPercentage = Math.round((stats.questionsAnsweredToday / stats.dailyGoal) * 100);
 
@@ -374,6 +377,40 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         </div>
 
       </div>
+
+      {/* Prominent Premium Feature Onboarding: Mistake Review Entry Card */}
+      <section className="bg-gradient-to-r from-amber-50 to-orange-50/40 border border-amber-200 p-5 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden select-none animate-fade-in shadow-xs text-left">
+        <div className="absolute inset-y-0 right-0 w-48 opacity-10 pointer-events-none transform translate-x-12">
+          <ShieldAlert className="w-full h-full text-safety-orange" />
+        </div>
+        <div className="flex gap-4 items-start relative z-10 text-left">
+          <div className="p-3 bg-safety-orange/15 text-safety-orange-dark rounded-xl shrink-0">
+            <ShieldAlert className="w-6 h-6 stroke-[2.5px]" />
+          </div>
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <h3 className="font-sans font-extrabold text-base text-[#002045] leading-none mb-0.5">
+                Mistake Review
+              </h3>
+              <span className="bg-safety-orange text-white text-[9px] font-black tracking-widest uppercase px-2 py-0.5 rounded leading-none">
+                PRO TOOL
+              </span>
+            </div>
+            <p className="text-xs text-text-muted max-w-xl leading-relaxed">
+              {activeMistakesCount > 0 
+                ? `You missed ${activeMistakesCount} question${activeMistakesCount > 1 ? 's' : ''} on previous practice tests. Drill them now to secure your genuine DMV permit!`
+                : "Automatically locks and tracks any question answered incorrectly. Re-practice them as active custom pools to master your weaknesses."}
+            </p>
+          </div>
+        </div>
+        <button
+          onClick={() => setTab('mistakes')}
+          className="w-full md:w-auto px-5 py-3.5 bg-[#002045] hover:bg-[#0d2a4d] text-white font-extrabold rounded-xl text-xs.5 shadow-xs transition-colors active:scale-95 cursor-pointer flex items-center justify-center gap-1 shrink-0 relative z-10 font-sans"
+        >
+          <span>{activeMistakesCount > 0 ? `Review Mistakes (${activeMistakesCount})` : "Open mistake log"}</span>
+          <ChevronRight className="w-4 h-4 mt-0.5" />
+        </button>
+      </section>
 
       {/* Next Steps Screen Routing Area */}
       <section className="space-y-4">

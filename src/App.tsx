@@ -12,6 +12,8 @@ import { StatsView } from './components/StatsView';
 import { SignLibraryView } from './components/SignLibraryView';
 import { FlashcardsView } from './components/FlashcardsView';
 import { ProfileView } from './components/ProfileView';
+import { MistakeReviewView } from './components/MistakeReviewView';
+import { isMistakeReviewUnlocked, getMistakeReviewQuestions } from './utils/mistakeReview';
 import { TabType, UserStats, Question, getUserLevelInfo } from './types';
 import { calculateNewReadinessScore, mapQuestionCategoryToScoreKey, getReadinessLabel } from './utils/scoring';
 import { ROAD_SIGNS, PRACTICE_QUESTIONS, INITIAL_USER_STATS } from './data';
@@ -33,6 +35,7 @@ export default function App() {
   const [activeSignId, setActiveSignId] = useState<string | null>(null);
   const [activeTestGroup, setActiveTestGroup] = useState<number>(12);
   const [activeQuizQuestions, setActiveQuizQuestions] = useState<Question[]>([]);
+  const [isReviewQuiz, setIsReviewQuiz] = useState(false);
 
   // UI state
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -147,6 +150,20 @@ export default function App() {
     const filteredQuestions = PRACTICE_QUESTIONS.filter(q => q.testGroup === group);
     setActiveQuizQuestions(filteredQuestions.length > 0 ? filteredQuestions : PRACTICE_QUESTIONS.slice(0, 10));
 
+    setIsReviewQuiz(false); // Reset review mode
+    setIsQuizActive(true);
+    setIsFlashcardsActive(false);
+    setIsSidebarOpen(false);
+    setQuizNotification(null);
+  };
+
+  const handleStartMistakeReview = () => {
+    const isPremium = isMistakeReviewUnlocked();
+    const reviewQuestions = getMistakeReviewQuestions(isPremium);
+    if (reviewQuestions.length === 0) return;
+
+    setActiveQuizQuestions(reviewQuestions);
+    setIsReviewQuiz(true);
     setIsQuizActive(true);
     setIsFlashcardsActive(false);
     setIsSidebarOpen(false);
@@ -246,14 +263,23 @@ export default function App() {
 
     const isPassing = accuracy >= 70;
     let notificationText = '';
-    if (isPassing) {
+    if (isReviewQuiz) {
       if (accuracy === 100) {
-        notificationText = `Flawless execution! You scored 100% on Practice Test ${activeTestGroup - 11}! Your exam readiness is now ${finalScore}%. You are exceptionally prepared!`;
+        notificationText = `Mistake Review Perfected! You answered all ${total} of your reviewed mistakes correctly. Your mistake log is looking clean, great job!`;
       } else {
-        notificationText = `Congratulations! You passed Practice Test ${activeTestGroup - 11} with ${correct} out of ${total} correct (${accuracy}%). Your exam readiness is now ${finalScore}%!`;
+        notificationText = `Mistake Review completed! You answered ${correct} out of ${total} mistakes correctly (${accuracy}%). Correctly answered questions have been marked as resolved! Go back to Mistake Review to drill the rest of your incorrect answers.`;
       }
+      setIsReviewQuiz(false); // reset review state
     } else {
-      notificationText = `Practice Test ${activeTestGroup - 11} completed, but you did not pass yet. You got ${correct} out of ${total} correct (${accuracy}%). Target at least 70% to pass. Your exam readiness is ${finalScore}%. Keep studying!`;
+      if (isPassing) {
+        if (accuracy === 100) {
+          notificationText = `Flawless execution! You scored 100% on Practice Test ${activeTestGroup - 11}! Your exam readiness is now ${finalScore}%. You are exceptionally prepared!`;
+        } else {
+          notificationText = `Congratulations! You passed Practice Test ${activeTestGroup - 11} with ${correct} out of ${total} correct (${accuracy}%). Your exam readiness is now ${finalScore}%!`;
+        }
+      } else {
+        notificationText = `Practice Test ${activeTestGroup - 11} completed, but you did not pass yet. You got ${correct} out of ${total} correct (${accuracy}%). Target at least 70% to pass. Your exam readiness is ${finalScore}%. Keep studying!`;
+      }
     }
 
     saveStats(newStats);
@@ -364,6 +390,13 @@ export default function App() {
             startPracticeQuiz={handleStartPracticeQuiz}
             startFlashcards={handleStartFlashcards}
             onUpdateProfile={handleUpdateProfile}
+          />
+        );
+      case 'mistakes':
+        return (
+          <MistakeReviewView
+            onStartReview={handleStartMistakeReview}
+            onExit={() => handleTabSelection('home')}
           />
         );
       case 'tests':
@@ -1545,6 +1578,27 @@ export default function App() {
                   <TrendingUp className="w-4.5 h-4.5" />
                 </div>
                 <span>My Progress</span>
+              </button>
+
+              <button
+                onClick={() => handleTabSelection('mistakes')}
+                className={`w-full flex items-center gap-3.5 p-3 rounded-xl font-sans font-semibold text-[15px] transition-all duration-205 select-none cursor-pointer group ${
+                  currentTab === 'mistakes' && !isProfileTabActive && !isFlashcardsActive
+                    ? 'bg-amber-500/10 text-amber-500 border-l-4 border-amber-500 pl-2.5'
+                    : 'text-slate-600 hover:text-slate-905 hover:bg-slate-50'
+                }`}
+              >
+                <div className={`p-2 rounded-lg transition-transform group-hover:scale-105 ${
+                  currentTab === 'mistakes' && !isProfileTabActive && !isFlashcardsActive
+                    ? 'bg-amber-500/15 text-amber-550'
+                    : 'bg-slate-100 text-slate-500 group-hover:bg-slate-200'
+                }`}>
+                  <ShieldAlert className="w-4.5 h-4.5" />
+                </div>
+                <span className="flex items-center gap-1.5 justify-between w-full">
+                  <span>Mistake Review</span>
+                  <span className="bg-red-100 text-red-650 text-[10px] sm:text-[10.5px] font-black px-2 py-0.5 rounded-full select-none leading-none scale-90">New</span>
+                </span>
               </button>
 
               <div className="border-t border-slate-150 my-3.5 pt-3.5">

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-export type TabType = 'home' | 'tests' | 'stats' | 'library' | 'flashcards' | 'profile';
+export type TabType = 'home' | 'tests' | 'stats' | 'library' | 'flashcards' | 'profile' | 'mistakes';
 
 export type SignCategory = 'All' | 'Regulatory' | 'Warning' | 'Information' | 'Speed';
 

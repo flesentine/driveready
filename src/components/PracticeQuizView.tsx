@@ -6,11 +6,13 @@
 import React, { useState } from 'react';
 import { CheckCircle2, XCircle, AlertCircle, RefreshCw, Trophy, ArrowRight, CornerDownRight, Landmark } from 'lucide-react';
 import { Question } from '../types';
+import { recordMistake, markMistakeAsImproved } from '../utils/mistakeReview';
 
 interface PracticeQuizViewProps {
   questions: Question[];
   onCompleteQuiz: (correctAnswers: number, totalQuestions: number, results?: { question: Question; isCorrect: boolean }[]) => void;
   onExit: () => void;
+  isReviewSession?: boolean;
 }
 
 // Helper functions for shuffling questions & options
@@ -41,6 +43,7 @@ export const PracticeQuizView: React.FC<PracticeQuizViewProps> = ({
   questions,
   onCompleteQuiz,
   onExit,
+  isReviewSession = false,
 }) => {
   const [shuffledQuestions] = useState<Question[]>(() => prepareQuizQuestions(questions));
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -84,6 +87,11 @@ export const PracticeQuizView: React.FC<PracticeQuizViewProps> = ({
       const isCorrect = selectedOption === currentQuestion.correctOptionIndex;
       if (isCorrect) {
         setCorrectCount((prev) => prev + 1);
+        if (isReviewSession || currentQuestion.category === 'Mistake Review') {
+          markMistakeAsImproved(currentQuestion.id);
+        }
+      } else {
+        recordMistake(currentQuestion, selectedOption);
       }
       setSpentQuestions((prev) => [...prev, { index: currentIndex, isCorrect }]);
       setIsAnswerConfirmed(true);
@@ -116,6 +124,8 @@ export const PracticeQuizView: React.FC<PracticeQuizViewProps> = ({
     // Track as skipped / wrong
     const updatedSpent = [...spentQuestions, { index: currentIndex, isCorrect: false }];
     setSpentQuestions(updatedSpent);
+    
+    recordMistake(currentQuestion, -1);
     
     if (currentIndex + 1 < shuffledQuestions.length) {
       setCurrentIndex((prev) => prev + 1);
