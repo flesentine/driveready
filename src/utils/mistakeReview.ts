@@ -156,7 +156,7 @@ export function getMistakeReviewQuestions(hasPremium: boolean): Question[] {
 }
 
 /**
- * Check if premium review has been unlocked (either via a mock flag or purchases).
+ * Check if premium review has been unlocked.
  * // TODO: Replace localStorage premium flag with server-verified purchase entitlement before production payments launch.
  */
 export function isMistakeReviewUnlocked(): boolean {
