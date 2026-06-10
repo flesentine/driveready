@@ -13,7 +13,7 @@ import { SignLibraryView } from './components/SignLibraryView';
 import { FlashcardsView } from './components/FlashcardsView';
 import { ProfileView } from './components/ProfileView';
 import { MistakeReviewView } from './components/MistakeReviewView';
-import { isMistakeReviewUnlocked, getMistakeReviewQuestions } from './utils/mistakeReview';
+import { getMistakeReviewQuestions } from './utils/mistakeReview';
 import { isProPassUnlocked } from './utils/proPass';
 import { ProPassModal } from './components/ProPassModal';
 import { TabType, UserStats, Question, getUserLevelInfo } from './types';
@@ -164,8 +164,7 @@ export default function App() {
   };
 
   const handleStartMistakeReview = () => {
-    const isPremium = isMistakeReviewUnlocked();
-    const reviewQuestions = getMistakeReviewQuestions(isPremium);
+    const reviewQuestions = getMistakeReviewQuestions(proPassUnlocked);
     if (reviewQuestions.length === 0) return;
 
     setActiveQuizQuestions(reviewQuestions);
@@ -429,6 +428,8 @@ export default function App() {
           <MistakeReviewView
             onStartReview={handleStartMistakeReview}
             onExit={() => handleTabSelection('home')}
+            proPassUnlocked={proPassUnlocked}
+            onTriggerProPass={() => setShowProPassModal(true)}
           />
         );
       case 'tests':

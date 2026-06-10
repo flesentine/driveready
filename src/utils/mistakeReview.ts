@@ -4,7 +4,6 @@
  */
 
 import { Question } from '../types';
-import { isProPassUnlocked, setProPassUnlocked } from './proPass';
 
 export interface SavedMistake {
   questionId: string;
@@ -26,7 +25,6 @@ export interface SavedMistake {
 }
 
 const LOCAL_STORAGE_MISTAKES_KEY = 'driveready_mistake_review';
-const LOCAL_STORAGE_PREMIUM_KEY = 'driveready_premium_access';
 
 /**
  * Get all saved mistakes from localStorage.
@@ -154,19 +152,4 @@ export function getMistakeReviewQuestions(hasPremium: boolean): Question[] {
     return questions.slice(0, 3);
   }
   return questions;
-}
-
-/**
- * Check if premium review has been unlocked.
- * // TODO: Replace localStorage premium flag with server-verified purchase entitlement before production payments launch.
- */
-export function isMistakeReviewUnlocked(): boolean {
-  return isProPassUnlocked();
-}
-
-/**
- * Set the premium unlock state.
- */
-export function setPremiumUnlocked(unlocked: boolean) {
-  setProPassUnlocked(unlocked);
 }

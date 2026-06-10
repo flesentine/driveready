@@ -21,50 +21,36 @@ import {
   Trophy
 } from 'lucide-react';
 import { Question } from '../types';
-import { ProPassModal } from './ProPassModal';
 import { 
   getMistakes, 
   clearMistakes, 
-  getMistakeReviewQuestions, 
-  isMistakeReviewUnlocked, 
-  setPremiumUnlocked,
   SavedMistake
 } from '../utils/mistakeReview';
 
 interface MistakeReviewViewProps {
   onStartReview: () => void;
   onExit: () => void;
+  proPassUnlocked: boolean;
+  onTriggerProPass: () => void;
 }
 
 export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
   onStartReview,
   onExit,
+  proPassUnlocked,
+  onTriggerProPass,
 }) => {
   const [mistakes, setMistakes] = useState<SavedMistake[]>([]);
-  const [isPremium, setIsPremium] = useState(false);
   const [showClearConfirm, setShowClearConfirm] = useState(false);
   const [expandedExplanation, setExpandedExplanation] = useState<{ [key: string]: boolean }>({});
-  const [successAnimation, setSuccessAnimation] = useState(false);
-  const [showPurchaseModal, setShowPurchaseModal] = useState(false);
 
-  // Load mistakes and premium status on mount
+  // Load mistakes status on mount
   useEffect(() => {
     loadData();
   }, []);
 
   const loadData = () => {
     setMistakes(getMistakes());
-    setIsPremium(isMistakeReviewUnlocked());
-  };
-
-  const handleTogglePremium = () => {
-    const nextState = !isPremium;
-    setPremiumUnlocked(nextState);
-    setIsPremium(nextState);
-    if (nextState) {
-      setSuccessAnimation(true);
-      setTimeout(() => setSuccessAnimation(false), 2000);
-    }
   };
 
   const handleClearAll = () => {
@@ -84,7 +70,7 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
   const resolvedMistakes = mistakes.filter(m => m.improved);
 
   // Question preview subset (free plan limit to 3, premium gets all)
-  const visibleMistakes = isPremium ? activeMistakes : activeMistakes.slice(0, 3);
+  const visibleMistakes = proPassUnlocked ? activeMistakes : activeMistakes.slice(0, 3);
 
   return (
     <div className="space-y-6 max-w-3xl mx-auto pb-24">
@@ -96,7 +82,7 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
             <span className="bg-safety-orange/20 text-safety-orange border border-safety-orange/30 font-sans font-black text-[10px] tracking-widest uppercase px-3 py-1 rounded-full">
               PREMIUM STUDY MODULE
             </span>
-            {isPremium && (
+            {proPassUnlocked && (
               <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-[10px] font-black tracking-widest uppercase px-3 py-1 rounded-full flex items-center gap-1 animate-pulse">
                 <Sparkles className="w-3 h-3 fill-emerald-300 border-none" /> UNLOCKED
               </span>
@@ -129,14 +115,6 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
         </div>
       </div>
 
-      {/* Floating unlock simulation visual cue */}
-      {successAnimation && import.meta.env.DEV && (
-        <div className="bg-green-500 text-white p-4 rounded-xl text-center font-extrabold text-sm shadow-lg animate-bounce flex items-center justify-center gap-2">
-          <Sparkles className="w-5 h-5 fill-white" />
-          SIMULATION SUCCESS: Premium Plan Unlocked! Full Review activated.
-        </div>
-      )}
-
       {/* Primary Actions bar */}
       {activeMistakes.length > 0 && (
         <div className="bg-white border border-border-light p-4 rounded-2xl shadow-xs flex flex-col sm:flex-row gap-3 items-center justify-between">
@@ -145,7 +123,7 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
             className="w-full sm:w-auto px-6 py-4 bg-primary-navy hover:bg-primary-navy-light text-white font-sans font-black text-sm rounded-xl transition-all shadow-xs active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2"
           >
             <Play className="w-5 h-5 fill-white text-white border-none" />
-            Start Mistake Review {activeMistakes.length > 3 && !isPremium ? '(3 Question Preview)' : `(${activeMistakes.length} Questions)`}
+            Start Mistake Review {activeMistakes.length > 3 && !proPassUnlocked ? '(3 Question Preview)' : `(${activeMistakes.length} Questions)`}
           </button>
 
           {!showClearConfirm ? (
@@ -204,7 +182,7 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
       )}
 
       {/* Free Tier Premium Upsell Card */}
-      {!isPremium && activeMistakes.length > 0 && (
+      {!proPassUnlocked && activeMistakes.length > 0 && (
         <div className="p-0.5 bg-gradient-to-r from-safety-orange via-[#fe9743] to-[#ffb174] rounded-2xl shadow-sm border border-safety-orange/15 animate-fade-in">
           <div className="bg-white p-6 rounded-2xl space-y-4">
             <div className="flex items-start gap-3.5">
@@ -248,52 +226,15 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
             {/* Call to Actions with developer simulated bypass */}
             <div className="flex flex-col sm:flex-row gap-2.5 pt-3 border-t border-slate-100">
               <button
-                onClick={() => setShowPurchaseModal(true)}
+                onClick={onTriggerProPass}
                 className="flex-1 py-3 px-5 bg-gradient-to-r from-safety-orange to-[#fe9743] hover:from-safety-orange-dark hover:to-safety-orange text-primary-navy font-sans font-black text-xs.5 uppercase tracking-wider rounded-xl transition-all duration-200 active:scale-95 shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <span>Unlock Pro Pass - $9.99</span>
                 <ArrowRight className="w-4.5 h-4.5" />
               </button>
-              
-              {import.meta.env.DEV && (
-                <button
-                  onClick={handleTogglePremium}
-                  className="py-3 px-5 border border-amber-300 bg-amber-50/50 hover:bg-amber-50 text-amber-800 font-bold text-xs.5 rounded-xl transition-all active:scale-[0.98] cursor-pointer flex items-center justify-center gap-1.5"
-                  title="Dev Only: Bypass payment and simulate premium mode"
-                >
-                  <RefreshCw className="w-3.5 h-3.5 animate-spin-hover" />
-                  <span>Dev Only: Simulate Premium Unlock</span>
-                </button>
-              )}
             </div>
           </div>
         </div>
-      )}
-
-      {/* Simulated Premium Unlocked control bar for premium users */}
-      {isPremium && import.meta.env.DEV && (
-        <div className="bg-slate-50 border border-slate-200/80 p-4 rounded-xl flex items-center justify-between text-xs font-bold text-slate-500 animate-fade-in shadow-xs">
-          <span className="flex items-center gap-1.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping" />
-            <span>Premium Study Access Is Active (Simulated Lifetime License)</span>
-          </span>
-          <button
-            onClick={handleTogglePremium}
-            className="text-red-650 hover:underline cursor-pointer"
-          >
-            Revert to Free Tier
-          </button>
-        </div>
-      )}
-
-      {/* Pro Pass Purchase Modal Popup */}
-      {showPurchaseModal && (
-        <ProPassModal 
-          onClose={() => setShowPurchaseModal(false)}
-          onUnlocked={() => {
-            loadData();
-          }}
-        />
       )}
 
       {/* Saved Mistakes Question List Preview */}
@@ -301,10 +242,10 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="font-sans font-extrabold text-base text-primary-navy tracking-tight pl-1">
-              {isPremium ? 'All Saved Mistakes' : `Question Preview (3 of ${activeMistakes.length} Loaded)`}
+              {proPassUnlocked ? 'All Saved Mistakes' : `Question Preview (3 of ${activeMistakes.length} Loaded)`}
             </h3>
             <span className="text-xs font-semibold text-text-muted">
-              {isPremium ? `${activeMistakes.length} Items Listed` : 'Free Tier Preview'}
+              {proPassUnlocked ? `${activeMistakes.length} Items Listed` : 'Free Tier Preview'}
             </span>
           </div>
 
@@ -397,7 +338,7 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
             })}
           </div>
 
-          {!isPremium && activeMistakes.length > 3 && (
+          {!proPassUnlocked && activeMistakes.length > 3 && (
             <div className="bg-slate-100/60 border border-dashed border-slate-350 p-6 rounded-2xl text-center space-y-2 text-slate-500 animate-pulse">
               <Lock className="w-7 h-7 text-slate-450 mx-auto" />
               <p className="font-bold text-sm tracking-tight text-slate-600">
