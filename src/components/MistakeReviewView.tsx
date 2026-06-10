@@ -44,6 +44,7 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
   const [showClearConfirm, setShowClearConfirm] = useState(false);
   const [expandedExplanation, setExpandedExplanation] = useState<{ [key: string]: boolean }>({});
   const [successAnimation, setSuccessAnimation] = useState(false);
+  const [showPurchaseModal, setShowPurchaseModal] = useState(false);
 
   // Load mistakes and premium status on mount
   useEffect(() => {
@@ -105,7 +106,7 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
           </h2>
           <p className="text-sm md:text-base text-slate-250 font-medium max-w-xl">
             {activeMistakes.length > 0 
-              ? `You have ${activeMistakes.length} active missed questions. Perfecting these guarantees a 95%+ success rate on the DMV permit test.`
+              ? `You have ${activeMistakes.length} active missed questions. Review these weak spots to improve your confidence before test day.`
               : `Flawless progress! You have zero uncorrected mistakes. Take a practice test to monitor your weak areas.`}
           </p>
 
@@ -214,13 +215,13 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
                   Unlock Premium Mistake Review <Sparkles className="w-4 h-4 text-safety-orange fill-safety-orange/25" />
                 </h3>
                 <p className="text-xs font-semibold text-[#804200] leading-none uppercase tracking-wider">
-                  Targeted Drills • 3x Faster Learning • Perfect Retention
+                  Targeted Drills • Focused Practice • Confidence Builder
                 </p>
               </div>
             </div>
 
             <p className="text-sm text-text-dark leading-relaxed pl-1">
-              "Never repeat a mistake on test day. Use Premium Mistake Review to instantly isolate and drill your weak spots, unlock unlimited attempts, and stop guessing. Unlock lifetime premium access today!"
+              Turn missed questions into focused practice. Practice the exact questions you missed, isolate your weak areas, and unlock unlimited attempts to study efficiently before test day.
             </p>
 
             {/* Premium feature list benefits */}
@@ -246,28 +247,30 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
             {/* Call to Actions with developer simulated bypass */}
             <div className="flex flex-col sm:flex-row gap-2.5 pt-3 border-t border-slate-100">
               <button
-                onClick={handleTogglePremium}
+                onClick={() => setShowPurchaseModal(true)}
                 className="flex-1 py-3 px-5 bg-gradient-to-r from-safety-orange to-[#fe9743] hover:from-safety-orange-dark hover:to-safety-orange text-primary-navy font-sans font-black text-xs.5 uppercase tracking-wider rounded-xl transition-all duration-200 active:scale-95 shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <span>Unlock Premium Lifetime - $9.99</span>
                 <ArrowRight className="w-4.5 h-4.5" />
               </button>
               
-              <button
-                onClick={handleTogglePremium}
-                className="py-3 px-5 border border-slate-250 bg-slate-50 hover:bg-slate-100 hover:border-slate-300 text-slate-600 font-bold text-xs.5 rounded-xl transition-all active:scale-[0.98] cursor-pointer flex items-center justify-center gap-1.5"
-                title="Bypass payment and simulate premium mode for grading"
-              >
-                <RefreshCw className="w-3.5 h-3.5 animate-spin-hover" />
-                <span>Simulate Premium Unlock</span>
-              </button>
+              {import.meta.env.DEV && (
+                <button
+                  onClick={handleTogglePremium}
+                  className="py-3 px-5 border border-amber-300 bg-amber-50/50 hover:bg-amber-50 text-amber-800 font-bold text-xs.5 rounded-xl transition-all active:scale-[0.98] cursor-pointer flex items-center justify-center gap-1.5"
+                  title="Dev Only: Bypass payment and simulate premium mode"
+                >
+                  <RefreshCw className="w-3.5 h-3.5 animate-spin-hover" />
+                  <span>Dev Only: Simulate Premium Unlock</span>
+                </button>
+              )}
             </div>
           </div>
         </div>
       )}
 
       {/* Simulated Premium Unlocked control bar for premium users */}
-      {isPremium && (
+      {isPremium && import.meta.env.DEV && (
         <div className="bg-slate-50 border border-slate-200/80 p-4 rounded-xl flex items-center justify-between text-xs font-bold text-slate-500 animate-fade-in shadow-xs">
           <span className="flex items-center gap-1.5">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping" />
@@ -279,6 +282,84 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
           >
             Revert to Free Tier
           </button>
+        </div>
+      )}
+
+      {/* Premium Purchase Modal Popup */}
+      {showPurchaseModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div 
+            onClick={() => setShowPurchaseModal(false)}
+            className="fixed inset-0 bg-primary-navy/60 backdrop-blur-sm transition-opacity cursor-pointer" 
+          />
+          <div className="bg-white border border-slate-200 shadow-2xl rounded-3xl p-6 max-w-md w-full relative z-10 animate-scale-in text-left">
+            <button 
+              onClick={() => setShowPurchaseModal(false)}
+              className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors p-1"
+            >
+              <XCircle className="w-6 h-6 stroke-[1.5]" />
+            </button>
+
+            <div className="space-y-4">
+              <div className="w-12 h-12 bg-safety-orange/10 text-safety-orange rounded-full flex items-center justify-center border border-safety-orange/20">
+                <Sparkles className="w-6 h-6 fill-safety-orange/10" />
+              </div>
+
+              <div className="space-y-1.5">
+                <h3 className="font-sans font-extrabold text-xl text-primary-navy">
+                  Premium Study Access
+                </h3>
+                <p className="text-xs font-semibold text-safety-orange uppercase tracking-wider">
+                  Lifetime Pass • Stripe Checkout coming soon
+                </p>
+              </div>
+
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Thank you for your interest in the Lifetime Premium membership! Our secure Stripe payment checkout gateway is currently under construction.
+              </p>
+
+              <div className="p-4 bg-slate-50 border border-slate-150 rounded-2xl space-y-2">
+                <h4 className="text-xs font-black text-primary-navy uppercase tracking-wider">
+                  Future Included Premium Features:
+                </h4>
+                <ul className="space-y-1.5 text-xs font-medium text-slate-600">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-500 fill-emerald-50" />
+                    <span>Drill unlimited saved mistakes (unlocked from the 3-question preview cap)</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-500 fill-emerald-50" />
+                    <span>Isolates and auto-removes solved weaknesses</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-500 fill-emerald-50" />
+                    <span>Exclusive badges and priority status trackers</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="space-y-2.5 pt-2">
+                <button
+                  onClick={() => setShowPurchaseModal(false)}
+                  className="w-full py-3 bg-primary-navy hover:bg-primary-navy-light text-white font-sans font-black text-xs uppercase tracking-wider rounded-xl transition-all duration-200 shadow-sm cursor-pointer text-center"
+                >
+                  Close Preview
+                </button>
+                {import.meta.env.DEV && (
+                  <button
+                    onClick={() => {
+                      handleTogglePremium();
+                      setShowPurchaseModal(false);
+                    }}
+                    className="w-full py-2.5 border border-dashed border-amber-400 bg-amber-50/50 hover:bg-amber-50 text-amber-800 font-sans font-bold text-xs uppercase tracking-wider rounded-xl transition-all duration-200 cursor-pointer text-center flex items-center justify-center gap-1.5"
+                  >
+                    <RefreshCw className="w-3.5 h-3.5" />
+                    <span>Dev: Bypass &amp; Purchase via Simulator</span>
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
       )}
 

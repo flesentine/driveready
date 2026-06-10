@@ -193,6 +193,37 @@ export default function App() {
   ) => {
     const accuracy = Math.round((correct / total) * 100);
     
+    if (isReviewQuiz) {
+      const isPassing = accuracy >= 70;
+      let notificationText = '';
+      if (accuracy === 100) {
+        notificationText = `Mistake Review Perfected! You answered all ${total} of your reviewed mistakes correctly. Your mistake log is looking clean, great job!`;
+      } else {
+        notificationText = `Mistake Review completed! You answered ${correct} out of ${total} mistakes correctly (${accuracy}%). Correctly answered questions have been marked as resolved! Go back to Mistake Review to drill the rest of your incorrect answers.`;
+      }
+      setIsReviewQuiz(false); // reset review state
+      
+      const todayStr = new Date().toDateString();
+      const updatedStats = {
+        ...stats,
+        questionsAnsweredToday: stats.questionsAnsweredToday + total,
+        hasActualActivity: true,
+        streakDays: stats.streakDays + (stats.questionsAnsweredToday === 0 ? 1 : 0),
+        lastActiveDate: stats.lastActiveDate || todayStr
+      };
+
+      setStats(updatedStats);
+      localStorage.setItem(LOCAL_STORAGE_STATS_KEY, JSON.stringify(updatedStats));
+
+      setIsQuizActive(false);
+      setQuizNotification({
+        text: notificationText,
+        isPassing
+      });
+      setCurrentTab('home');
+      return;
+    }
+    
     // Calculate new averages
     const currentTotalTests = stats.totalTestsTaken;
     const newTotalTests = currentTotalTests + 1;
@@ -263,23 +294,14 @@ export default function App() {
 
     const isPassing = accuracy >= 70;
     let notificationText = '';
-    if (isReviewQuiz) {
+    if (isPassing) {
       if (accuracy === 100) {
-        notificationText = `Mistake Review Perfected! You answered all ${total} of your reviewed mistakes correctly. Your mistake log is looking clean, great job!`;
+        notificationText = `Flawless execution! You scored 100% on Practice Test ${activeTestGroup - 11}! Your exam readiness is now ${finalScore}%. You are exceptionally prepared!`;
       } else {
-        notificationText = `Mistake Review completed! You answered ${correct} out of ${total} mistakes correctly (${accuracy}%). Correctly answered questions have been marked as resolved! Go back to Mistake Review to drill the rest of your incorrect answers.`;
+        notificationText = `Congratulations! You passed Practice Test ${activeTestGroup - 11} with ${correct} out of ${total} correct (${accuracy}%). Your exam readiness is now ${finalScore}%!`;
       }
-      setIsReviewQuiz(false); // reset review state
     } else {
-      if (isPassing) {
-        if (accuracy === 100) {
-          notificationText = `Flawless execution! You scored 100% on Practice Test ${activeTestGroup - 11}! Your exam readiness is now ${finalScore}%. You are exceptionally prepared!`;
-        } else {
-          notificationText = `Congratulations! You passed Practice Test ${activeTestGroup - 11} with ${correct} out of ${total} correct (${accuracy}%). Your exam readiness is now ${finalScore}%!`;
-        }
-      } else {
-        notificationText = `Practice Test ${activeTestGroup - 11} completed, but you did not pass yet. You got ${correct} out of ${total} correct (${accuracy}%). Target at least 70% to pass. Your exam readiness is ${finalScore}%. Keep studying!`;
-      }
+      notificationText = `Practice Test ${activeTestGroup - 11} completed, but you did not pass yet. You got ${correct} out of ${total} correct (${accuracy}%). Target at least 70% to pass. Your exam readiness is ${finalScore}%. Keep studying!`;
     }
 
     saveStats(newStats);
@@ -1363,6 +1385,7 @@ export default function App() {
             questions={activeQuizQuestions}
             onCompleteQuiz={handleCompleteQuiz}
             onExit={() => setShowQuitConfirm(true)}
+            isReviewSession={isReviewQuiz}
           />
         ) : isFlashcardsActive ? (
           <FlashcardsView

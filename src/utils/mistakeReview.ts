@@ -15,6 +15,13 @@ export interface SavedMistake {
   timestamp: number;
   missedCount: number;
   improved?: boolean;
+  category?: string;
+  imageUrl?: string;
+  sourceSection?: string;
+  sourcePage?: number;
+  sourceTopic?: string;
+  coverageTopicId?: string;
+  coverageFactIds?: string[];
 }
 
 const LOCAL_STORAGE_MISTAKES_KEY = 'driveready_mistake_review';
@@ -59,6 +66,15 @@ export function recordMistake(question: Question, selectedAnswerIndex: number) {
     mistakes[existingIdx].userWrongOptionIndex = selectedAnswerIndex;
     // Reset improved flag if they missed it again
     mistakes[existingIdx].improved = false;
+
+    // Preserve or refresh metadata
+    mistakes[existingIdx].category = question.category;
+    mistakes[existingIdx].imageUrl = question.imageUrl || '';
+    mistakes[existingIdx].sourceSection = question.sourceSection;
+    mistakes[existingIdx].sourcePage = question.sourcePage;
+    mistakes[existingIdx].sourceTopic = question.sourceTopic;
+    mistakes[existingIdx].coverageTopicId = question.coverageTopicId;
+    mistakes[existingIdx].coverageFactIds = question.coverageFactIds;
   } else {
     // Add new entry
     mistakes.push({
@@ -71,6 +87,13 @@ export function recordMistake(question: Question, selectedAnswerIndex: number) {
       timestamp: Date.now(),
       missedCount: 1,
       improved: false,
+      category: question.category,
+      imageUrl: question.imageUrl || '',
+      sourceSection: question.sourceSection,
+      sourcePage: question.sourcePage,
+      sourceTopic: question.sourceTopic,
+      coverageTopicId: question.coverageTopicId,
+      coverageFactIds: question.coverageFactIds,
     });
   }
 
@@ -113,13 +136,17 @@ export function getMistakeReviewQuestions(hasPremium: boolean): Question[] {
   const mistakes = getMistakes().filter(m => !m.improved);
   const questions: Question[] = mistakes.map(m => ({
     id: m.questionId,
-    category: 'Mistake Review',
+    category: m.category || 'Mistake Review',
     questionText: m.questionText,
-    imageUrl: '', // We don't save imageUrl but can default to empty
+    imageUrl: m.imageUrl || '',
     options: m.options,
     correctOptionIndex: m.correctOptionIndex,
     explanation: m.explanation,
-    coverageFactIds: [],
+    sourceSection: m.sourceSection,
+    sourcePage: m.sourcePage,
+    sourceTopic: m.sourceTopic,
+    coverageTopicId: m.coverageTopicId,
+    coverageFactIds: m.coverageFactIds || [],
   }));
 
   if (!hasPremium) {

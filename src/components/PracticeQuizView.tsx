@@ -87,7 +87,7 @@ export const PracticeQuizView: React.FC<PracticeQuizViewProps> = ({
       const isCorrect = selectedOption === currentQuestion.correctOptionIndex;
       if (isCorrect) {
         setCorrectCount((prev) => prev + 1);
-        if (isReviewSession || currentQuestion.category === 'Mistake Review') {
+        if (isReviewSession) {
           markMistakeAsImproved(currentQuestion.id);
         }
       } else {
