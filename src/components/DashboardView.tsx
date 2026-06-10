@@ -120,8 +120,11 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 
   // Calculate recommended test dynamically
   const getRecommendedTest = (): TestDetail => {
-    // 1. Get all unlocked tests
-    const unlocked = ALL_TESTS.filter(t => stats.readinessScore >= t.threshold);
+    // 1. Get all unlocked tests (Test 1 / group 12 is always free; all other tests require Pro Pass)
+    const unlocked = ALL_TESTS.filter(t => {
+      const isFreeTest = t.group === 12;
+      return isFreeTest || proPassUnlocked;
+    });
     if (unlocked.length === 0) return ALL_TESTS[0]; // fallback safety
 
     // Map name to category key

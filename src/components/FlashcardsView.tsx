@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { HelpCircle, RefreshCw, Check, Info, Landmark, HelpCircle as HelpIcon, ArrowRight, RotateCw } from 'lucide-react';
+import { HelpCircle, RefreshCw, Check, Info, Landmark, HelpCircle as HelpIcon, ArrowRight, RotateCw, Lock, Sparkles } from 'lucide-react';
 import { RoadSign } from '../types';
 
 interface FlashcardsViewProps {
@@ -432,20 +432,40 @@ const renderFlashcardSignVisual = (sign: RoadSign) => {
   }
 };
 
+interface FlashcardsViewProps {
+  signs: RoadSign[];
+  startSignId?: string | null;
+  onExit: () => void;
+  onMasteredCard: () => void;
+  proPassUnlocked?: boolean;
+  onTriggerProPass?: () => void;
+  freeLimit?: number;
+}
+
 export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
   signs,
   startSignId,
   onExit,
   onMasteredCard,
+  proPassUnlocked = false,
+  onTriggerProPass = () => {},
+  freeLimit = 12,
 }) => {
+  // Under Free plan, only show up to local freeLimit (12) signs of the library
+  const allowedSigns = useMemo(() => {
+    return proPassUnlocked ? signs : signs.slice(0, freeLimit);
+  }, [signs, proPassUnlocked, freeLimit]);
+
   // Extract warning/practiceable signs
   const deck = useMemo(() => {
-    return signs.filter((s) => s.imageUrl && s.imageUrl.trim() !== '');
-  }, [signs]);
+    return allowedSigns.filter((s) => s.imageUrl && s.imageUrl.trim() !== '');
+  }, [allowedSigns]);
 
   const [deckIdx, setDeckIdx] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [swipeDir, setSwipeDir] = useState<'left' | 'right' | null>(null);
+  const [showLockedNotice, setShowLockedNotice] = useState(false);
+  const [showEndUpsell, setShowEndUpsell] = useState(false);
 
   // If startSignId was supplied, locate it in the deck
   useEffect(() => {
@@ -454,11 +474,81 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
       if (idx !== -1) {
         setDeckIdx(idx);
         setIsFlipped(false);
+        setShowLockedNotice(false);
+      } else {
+        // startSignId not found in our subset deck! It must be a locked sign for free users.
+        setShowLockedNotice(true);
+        // Start current free deck at 0
+        setDeckIdx(0);
+        setIsFlipped(false);
       }
+    } else {
+      setShowLockedNotice(false);
     }
   }, [startSignId, deck]);
 
   const currentSign = deck[deckIdx] || deck[0];
+
+  if (showEndUpsell) {
+    return (
+      <div className="max-w-md mx-auto bg-white border border-border-light rounded-3xl p-6 md:p-8 text-center space-y-6 shadow-md select-none">
+        <div className="p-4 bg-amber-500/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto text-amber-500">
+          <Sparkles className="w-8 h-8 fill-amber-500" />
+        </div>
+        <div className="space-y-2">
+          <h3 className="font-sans font-black text-2xl text-primary-navy">
+            Practice Deck Completed!
+          </h3>
+          <p className="text-sm text-text-muted leading-relaxed">
+            You have successfully completed the free practice set. Unlock the full deck of flashcards and all official California DMV road signs with Pro Pass.
+          </p>
+        </div>
+
+        <div className="bg-slate-50 border border-slate-100 p-4 rounded-xl text-left space-y-2.5 text-xs font-semibold text-text-dark">
+          <div className="flex items-start gap-2">
+            <span className="text-amber-500 font-bold">✓</span>
+            <span>Study all road signs & handbook samples</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <span className="text-amber-500 font-bold">✓</span>
+            <span>Access full adaptive cram session flashcards</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <span className="text-amber-500 font-bold">✓</span>
+            <span>Review weak categories with smart feedback</span>
+          </div>
+        </div>
+
+        <div className="space-y-3 pt-2">
+          <button
+            onClick={onTriggerProPass}
+            className="w-full bg-amber-500 hover:bg-amber-400 text-[#001025] font-black py-3 rounded-xl text-xs uppercase tracking-wider transition-all cursor-pointer shadow-md flex items-center justify-center gap-1.5"
+          >
+            <Sparkles className="w-4 h-4 fill-[#001025]" />
+            <span>Unlock all flashcards</span>
+          </button>
+          
+          <button
+            onClick={() => {
+              setDeckIdx(0);
+              setShowEndUpsell(false);
+              setIsFlipped(false);
+            }}
+            className="w-full border border-slate-200 hover:bg-slate-50 text-text-muted font-bold py-2.5 rounded-xl text-xs transition-all cursor-pointer"
+          >
+            Restart Free Set
+          </button>
+        </div>
+
+        <button
+          onClick={onExit}
+          className="text-xs font-bold text-text-muted hover:text-primary-navy underline block mx-auto cursor-pointer"
+        >
+          Return to Dashboard
+        </button>
+      </div>
+    );
+  }
 
   if (!currentSign) {
     return (
@@ -486,9 +576,14 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
     }
 
     setTimeout(() => {
-      // Advance to next index circularly
-      setDeckIdx((prev) => (prev + 1) % deck.length);
-      setIsFlipped(false);
+      if (!proPassUnlocked && deckIdx === deck.length - 1) {
+        // Instead of cycling, show the end-of-deck upsell!
+        setShowEndUpsell(true);
+      } else {
+        // Advance to next index circularly
+        setDeckIdx((prev) => (prev + 1) % deck.length);
+        setIsFlipped(false);
+      }
       setSwipeDir(null);
     }, 350);
   };
@@ -496,6 +591,33 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
   return (
     <div className="max-w-md mx-auto space-y-5 select-none pb-8">
       
+      {/* Locked notice if they came through deep linking to a locked card */}
+      {showLockedNotice && (
+        <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 flex items-start gap-3 text-left animate-fade-in relative z-50">
+          <Lock className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+          <div className="flex-1">
+            <p className="text-xs font-black text-amber-800">
+              Selected Sign Requires Pro Pass
+            </p>
+            <p className="text-[10px] text-amber-700 leading-snug mt-0.5">
+              The road sign you selected is locked in the free plan. We have loaded the free practice deck instead.
+            </p>
+            <button
+              onClick={onTriggerProPass}
+              className="text-[10px] font-extrabold text-amber-800 underline mt-1.5 hover:text-amber-900 block"
+            >
+              Get Pro Pass to Unlock All Signs
+            </button>
+          </div>
+          <button 
+            onClick={() => setShowLockedNotice(false)}
+            className="text-[10px] text-amber-500 hover:text-amber-700 font-bold shrink-0 px-1"
+          >
+            ✕
+          </button>
+        </div>
+      )}
+
       {/* Session Progress Tracks */}
       <div className="space-y-2">
         <div className="flex justify-between items-center text-xs font-bold text-text-muted uppercase tracking-wider">
@@ -548,17 +670,17 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
                 </div>
 
                 <div className="space-y-2 flex-1 flex flex-col justify-center pointer-events-none">
-                  <span className="text-[11px] font-black text-safety-orange-dark uppercase tracking-widest block">
+                  <span className="text-[11px] font-black text-safety-orange-dark uppercase tracking-widest block font-bold">
                     ROAD RECALL
                   </span>
-                  <h3 className="font-sans font-extrabold text-lg text-primary-navy px-1">
+                  <h3 className="font-sans font-extrabold text-lg text-primary-navy px-1 font-bold">
                     What does this sign indicate?
                   </h3>
                 </div>
 
                 <div className="flex flex-col items-center gap-1 shrink-0 pointer-events-none">
                   <RotateCw className="w-5 h-5 text-slate-300 animate-spin-slow" />
-                  <p className="text-[11px] font-bold text-text-muted italic">
+                  <p className="text-[11px] font-bold text-text-muted italic animate-pulse">
                     Tap card to reveal rule &amp; details
                   </p>
                 </div>
@@ -572,13 +694,13 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
                   
                   <div className="flex items-center gap-2">
                     <Info className="w-5 h-5 text-safety-orange-dark stroke-[2.5px]" />
-                    <span className="text-[11px] font-black text-safety-orange-dark uppercase tracking-widest">
+                    <span className="text-[11px] font-black text-safety-orange-dark uppercase tracking-widest font-bold">
                       Official Road Rule
                     </span>
                   </div>
 
                   <div className="space-y-2">
-                    <h3 className="font-sans font-extrabold text-xl text-primary-navy leading-none">
+                    <h3 className="font-sans font-extrabold text-xl text-primary-navy leading-none font-bold">
                       {currentSign.title}
                     </h3>
                     <p className="text-sm md:text-base text-text-dark leading-relaxed font-semibold">
@@ -588,7 +710,7 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
 
                   {/* Fact box block */}
                   <div className="bg-safety-orange bg-opacity-[0.05] border-l-4 border-safety-orange p-4 rounded-r-xl border-y border-r border-[#faece2]">
-                    <span className="text-[11px] font-black text-safety-orange-dark block uppercase tracking-wider mb-0.5">
+                    <span className="text-[11px] font-black text-safety-orange-dark block uppercase tracking-wider mb-0.5 font-bold">
                       Key Practical Tip
                     </span>
                     <p className="text-xs text-text-muted italic leading-relaxed">

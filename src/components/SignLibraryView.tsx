@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { Info, AlertCircle, HelpCircle, ArrowRight, Lightbulb } from 'lucide-react';
+import { Info, AlertCircle, HelpCircle, ArrowRight, Lightbulb, Lock, Sparkles } from 'lucide-react';
 import { RoadSign, SignCategory } from '../types';
 
 // High-fidelity vector representation for simulated road signs
@@ -356,18 +356,27 @@ const renderSignVisual = (sign: RoadSign) => {
 interface SignLibraryViewProps {
   signs: RoadSign[];
   goToFlashcardsForSign: (signId: string) => void;
+  proPassUnlocked?: boolean;
+  onTriggerProPass?: () => void;
+  freeLimit?: number;
 }
 
 export const SignLibraryView: React.FC<SignLibraryViewProps> = ({
   signs,
   goToFlashcardsForSign,
+  proPassUnlocked = false,
+  onTriggerProPass = () => {},
+  freeLimit = 12,
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<SignCategory>('All');
 
   const categories: SignCategory[] = ['All', 'Regulatory', 'Warning', 'Information', 'Speed'];
 
+  // Under Free plan, only show up to local freeLimit (12) signs of the library
+  const allowedSigns = proPassUnlocked ? signs : signs.slice(0, freeLimit);
+
   // Filter logic based purely on category
-  const filteredSigns = signs.filter((sign) => {
+  const filteredSigns = allowedSigns.filter((sign) => {
     return selectedCategory === 'All' || sign.category === selectedCategory;
   });
 
@@ -425,18 +434,49 @@ export const SignLibraryView: React.FC<SignLibraryViewProps> = ({
 
       {/* Signs Grid Collection */}
       {filteredSigns.length === 0 ? (
-        <div className="bg-white rounded-2xl border border-border-light p-10 text-center space-y-2 shadow-xs">
-          <p className="text-sm text-text-muted font-medium">
-            No signs found in this category.
-          </p>
-          <button
-            onClick={() => {
-              setSelectedCategory('All');
-            }}
-            className="text-xs font-bold text-primary-navy hover:underline cursor-pointer"
-          >
-            Show all signs
-          </button>
+        <div className="space-y-4">
+          <div className="bg-white rounded-2xl border border-border-light p-10 text-center space-y-2 shadow-xs">
+            <p className="text-sm text-text-muted font-medium">
+              No signs found in this category.
+            </p>
+            <button
+              onClick={() => {
+                setSelectedCategory('All');
+              }}
+              className="text-xs font-bold text-primary-navy hover:underline cursor-pointer"
+            >
+              Show all signs
+            </button>
+          </div>
+          
+          {/* Always show Pro up-sell if results from category are empty due to Free limits */}
+          {!proPassUnlocked && (
+            <div
+              onClick={onTriggerProPass}
+              className="bg-[#fffdf5] border-2 border-dashed border-amber-300 rounded-3xl p-8 hover:border-amber-500 transition-all duration-300 cursor-pointer text-center relative max-w-xl mx-auto flex flex-col items-center justify-center space-y-4"
+            >
+              <div className="p-3 bg-amber-500/10 rounded-full text-amber-500">
+                <Sparkles className="w-8 h-8 fill-amber-500" />
+              </div>
+              <div>
+                <h3 className="font-sans font-black text-base text-primary-navy">
+                  Unlock the Complete Road Sign Library
+                </h3>
+                <p className="text-xs text-text-muted mt-1 max-w-sm">
+                  Free user access is limited to the first {freeLimit} standard signs. Unlock all California road signs & samples with Pro Pass.
+                </p>
+              </div>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onTriggerProPass();
+                }}
+                className="bg-amber-500 hover:bg-amber-400 text-[#001025] font-black py-2.5 px-6 rounded-xl text-xs uppercase tracking-wider transition-all cursor-pointer shadow-md"
+              >
+                Get Pro Pass Now
+              </button>
+            </div>
+          )}
         </div>
       ) : (
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4" id="signs-grid">
@@ -453,7 +493,7 @@ export const SignLibraryView: React.FC<SignLibraryViewProps> = ({
                 </div>
 
                 <div>
-                  <h3 className="font-sans font-extrabold text-sm md:text-base text-primary-navy group-hover:text-primary-navy-light transition-colors text-center">
+                  <h3 className="font-sans font-extrabold text-sm md:text-base text-primary-navy group-hover:text-primary-navy-light transition-colors text-center font-bold">
                     {sign.title}
                   </h3>
                 </div>
@@ -471,6 +511,40 @@ export const SignLibraryView: React.FC<SignLibraryViewProps> = ({
               </div>
             </div>
           ))}
+
+          {/* Inline Grid Upsell Card for Free Users */}
+          {!proPassUnlocked && (
+            <div
+              onClick={onTriggerProPass}
+              className="bg-[#fffdf5] border-2 border-dashed border-amber-300 rounded-2xl p-4 flex flex-col justify-between hover:border-amber-450 transition-all duration-300 cursor-pointer text-center relative overflow-hidden"
+            >
+              <div className="absolute top-2 right-2 bg-amber-550/10 p-1.5 rounded-lg text-amber-600">
+                <Lock className="w-3.5 h-3.5" />
+              </div>
+              <div className="space-y-3 flex-1 flex flex-col justify-center items-center py-4">
+                <div className="p-3 bg-amber-500/10 rounded-full text-amber-500">
+                  <Sparkles className="w-5 h-5 fill-amber-500" />
+                </div>
+                <div>
+                  <h3 className="font-sans font-black text-sm text-[#002045] leading-tight">
+                    Explore All Sample Signs
+                  </h3>
+                  <p className="text-[10px] text-text-muted mt-1 leading-snug">
+                    Unlock the full California road sign library with Pro Pass.
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onTriggerProPass();
+                }}
+                className="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-2 rounded-xl text-[10px] uppercase tracking-wider transition-all cursor-pointer shadow-xs"
+              >
+                Unlock Pro Pass
+              </button>
+            </div>
+          )}
         </div>
       )}
 

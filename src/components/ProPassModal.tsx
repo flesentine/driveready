@@ -81,10 +81,12 @@ export const ProPassModal: React.FC<ProPassModalProps> = ({
             </h4>
             <div className="space-y-2.5">
               {[
-                "Unlimited Mistake Review",
-                "Focused weak spot practice",
-                "Advanced progress insights",
-                "Exam cram tools",
+                "All 15 Practice Tests (No thresholds)",
+                "Full Mistake Review (Unlimited)",
+                "Exam Cram Mode (Algorithm-guided)",
+                "Full California Road Sign Library",
+                "Full Flashcard Practice Deck",
+                "Smart Study Recommendations",
                 "Future premium study modules"
               ].map((bullet, idx) => (
                 <div key={idx} className="flex items-start gap-2.5 text-xs font-bold text-slate-700 leading-normal">

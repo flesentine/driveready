@@ -15,6 +15,7 @@ import { ProfileView } from './components/ProfileView';
 import { MistakeReviewView } from './components/MistakeReviewView';
 import { getMistakeReviewQuestions, getCramModeQuestions } from './utils/mistakeReview';
 import { isProPassUnlocked } from './utils/proPass';
+import { PRACTICE_TESTS, isPracticeTestUnlocked } from './utils/monetization';
 import { ProPassModal } from './components/ProPassModal';
 import { TabType, UserStats, Question, getUserLevelInfo } from './types';
 import { calculateNewReadinessScore, mapQuestionCategoryToScoreKey, getReadinessLabel } from './utils/scoring';
@@ -556,951 +557,93 @@ export default function App() {
                   <span>Start Cramming</span>
                 </button>
               </div>
-            )}
-
-            {/* Test Listing Layout */}
+            )}            {/* Test Listing Layout */}
             <div className="space-y-4">
-              
-              {/* Active Quiz Card 12 */}
-              <div className="bg-white border-2 border-primary-navy rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-sm">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary-navy/10 rounded-xl text-primary-navy py-4">
-                    <ClipboardList className="w-7 h-7" />
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <h4 className="font-sans font-extrabold text-lg text-primary-navy">
-                        Practice Test 1: Signals &amp; Right of Way
-                      </h4>
-                      <span className="bg-safety-orange text-primary-navy text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full">
-                        Recommended
-                      </span>
-                    </div>
-                    <p className="text-sm text-text-muted mt-1">
-                      Focus: Flashing yellow warning signals, provisional minor limitations, intersection yields, and liability insurance.
-                    </p>
-                    <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                      <span>✓ 10 Targeted Questions</span>
-                      <span>⏱ Approx 10 min</span>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  onClick={() => handleStartPracticeQuiz(12)}
-                  className="w-full md:w-auto bg-primary-navy hover:bg-primary-navy-light text-white font-bold py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-xs select-none shrink-0"
-                >
-                  Start Test Now
-                </button>
-              </div>
+              {PRACTICE_TESTS.map((test) => {
+                const isFreeTest = test.group === 12;
+                const isUnlocked = isFreeTest || proPassUnlocked;
 
-              {/* Quiz Card 13 */}
-              {stats.readinessScore >= 15 ? (
-                <div className="bg-white border-2 border-primary-navy rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary-navy/10 rounded-xl text-primary-navy py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <h4 className="font-sans font-extrabold text-lg text-primary-navy">
-                          Practice Test 2: Highway Merging &amp; Lane Laws
-                        </h4>
-                        <span className="bg-green-100 text-green-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full">
-                          Unlocked
-                        </span>
-                      </div>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Bicyclist clearance boundaries, center turn lane rules, steep mountain prioritization, and freeway entries.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Targeted Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => handleStartPracticeQuiz(13)}
-                    className="w-full md:w-auto bg-primary-navy hover:bg-primary-navy-light text-white font-bold py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-xs select-none shrink-0"
-                  >
-                    Start Test Now
-                  </button>
-                </div>
-              ) : (
-                <div className="bg-white border border-border-light rounded-2xl p-5 shadow-xs opacity-75 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative overflow-hidden">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-slate-100 rounded-xl text-text-muted py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <h4 className="font-sans font-extrabold text-lg text-text-muted">
-                        Practice Test 2: Highway Merging &amp; Lane Laws
-                      </h4>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Bicyclist clearance boundaries, center turn lane rules, steep mountain prioritization, and freeway entries.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    disabled
-                    className="w-full md:w-auto bg-slate-200 text-slate-500 font-bold py-2.5 px-6 rounded-xl text-xs cursor-default select-none shrink-0"
-                  >
-                    Locked (Need 15% Readiness Score)
-                  </button>
-                </div>
-              )}
-
-              {/* Quiz Card 14 */}
-              {stats.readinessScore >= 20 ? (
-                <div className="bg-white border-2 border-primary-navy rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary-navy/10 rounded-xl text-primary-navy py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <h4 className="font-sans font-extrabold text-lg text-primary-navy">
-                          Practice Test 3: Emergency Actions &amp; DUI Rules
-                        </h4>
-                        <span className="bg-green-100 text-green-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full">
-                          Unlocked
-                        </span>
-                      </div>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Stopping speeds in adverse wet environments, medical emergency spacing, and standard container/cargo dimensions.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Targeted Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => handleStartPracticeQuiz(14)}
-                    className="w-full md:w-auto bg-primary-navy hover:bg-primary-navy-light text-white font-bold py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-xs select-none shrink-0"
-                  >
-                    Start Test Now
-                  </button>
-                </div>
-              ) : (
-                <div className="bg-white border border-border-light rounded-2xl p-5 shadow-xs opacity-75 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative overflow-hidden">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-slate-100 rounded-xl text-text-muted py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <h4 className="font-sans font-extrabold text-lg text-text-muted">
-                        Practice Test 3: Emergency Actions &amp; DUI Rules
-                      </h4>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Stopping speeds in adverse wet environments, medical emergency spacing, and standard container/cargo dimensions.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    disabled
-                    className="w-full md:w-auto bg-slate-200 text-slate-500 font-bold py-2.5 px-6 rounded-xl text-xs cursor-default select-none shrink-0"
-                  >
-                    Locked (Need 20% Readiness Score)
-                  </button>
-                </div>
-              )}
-
-              {/* Quiz Card 15 */}
-              {stats.readinessScore >= 25 ? (
-                <div className="bg-white border-2 border-primary-navy rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary-navy/10 rounded-xl text-primary-navy py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <h4 className="font-sans font-extrabold text-lg text-primary-navy">
-                          Practice Test 4: Minor Exemptions &amp; Signaling
-                        </h4>
-                        <span className="bg-green-100 text-green-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full">
-                          Unlocked
-                        </span>
-                      </div>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Emergency physician curfews, principal schooling notes, 3-second/5-second lane change signaling, and hand-turn shapes.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Targeted Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => handleStartPracticeQuiz(15)}
-                    className="w-full md:w-auto bg-primary-navy hover:bg-primary-navy-light text-white font-bold py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-xs select-none shrink-0"
-                  >
-                    Start Test Now
-                  </button>
-                </div>
-              ) : (
-                <div className="bg-white border border-border-light rounded-2xl p-5 shadow-xs opacity-75 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative overflow-hidden">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-slate-100 rounded-xl text-text-muted py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <h4 className="font-sans font-extrabold text-lg text-text-muted">
-                        Practice Test 4: Minor Exemptions &amp; Signaling
-                      </h4>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Emergency physician curfews, principal schooling notes, 3-second/5-second lane change signaling, and hand-turn shapes.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    disabled
-                    className="w-full md:w-auto bg-slate-200 text-slate-500 font-bold py-2.5 px-6 rounded-xl text-xs cursor-default select-none shrink-0"
-                  >
-                    Locked (Need 25% Readiness Score)
-                  </button>
-                </div>
-              )}
-
-              {/* Quiz Card 16 */}
-              {stats.readinessScore >= 30 ? (
-                <div className="bg-white border-2 border-primary-navy rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary-navy/10 rounded-xl text-primary-navy py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <h4 className="font-sans font-extrabold text-lg text-primary-navy">
-                          Practice Test 5: Colored Curbs &amp; Parking Altitudes
-                        </h4>
-                        <span className="bg-green-100 text-green-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full">
-                          Unlocked
-                        </span>
-                      </div>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Uphill curbs, downhill curbs, white passenger loading, green limits, blue handicap spaces, and fire station hydrant boundaries.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Targeted Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => handleStartPracticeQuiz(16)}
-                    className="w-full md:w-auto bg-primary-navy hover:bg-primary-navy-light text-white font-bold py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-xs select-none shrink-0"
-                  >
-                    Start Test Now
-                  </button>
-                </div>
-              ) : (
-                <div className="bg-white border border-border-light rounded-2xl p-5 shadow-xs opacity-75 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative overflow-hidden">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-slate-100 rounded-xl text-text-muted py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <h4 className="font-sans font-extrabold text-lg text-text-muted">
-                        Practice Test 5: Colored Curbs &amp; Parking Altitudes
-                      </h4>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Uphill curbs, downhill curbs, white passenger loading, green limits, blue handicap spaces, and fire station hydrant boundaries.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    disabled
-                    className="w-full md:w-auto bg-slate-200 text-slate-500 font-bold py-2.5 px-6 rounded-xl text-xs cursor-default select-none shrink-0"
-                  >
-                    Locked (Need 30% Readiness Score)
-                  </button>
-                </div>
-              )}
-
-              {/* Quiz Card 17 */}
-              {stats.readinessScore >= 35 ? (
-                <div className="bg-white border-2 border-primary-navy rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary-navy/10 rounded-xl text-primary-navy py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <h4 className="font-sans font-extrabold text-lg text-primary-navy">
-                          Practice Test 6: Seatbelts, Safety &amp; Speed Limits
-                        </h4>
-                        <span className="bg-green-100 text-green-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full">
-                          Unlocked
-                        </span>
-                      </div>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Rear-seat boosters, under-2 year infant weights, front airbag clearance, blind junctions, alleys, and divided bus stops.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Targeted Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => handleStartPracticeQuiz(17)}
-                    className="w-full md:w-auto bg-primary-navy hover:bg-primary-navy-light text-white font-bold py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-xs select-none shrink-0"
-                  >
-                    Start Test Now
-                  </button>
-                </div>
-              ) : (
-                <div className="bg-white border border-border-light rounded-2xl p-5 shadow-xs opacity-75 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative overflow-hidden">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-slate-100 rounded-xl text-text-muted py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <h4 className="font-sans font-extrabold text-lg text-text-muted">
-                        Practice Test 6: Seatbelts, Safety &amp; Speed Limits
-                      </h4>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Rear-seat boosters, under-2 year infant weights, front airbag clearance, blind junctions, alleys, and divided bus stops.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    disabled
-                    className="w-full md:w-auto bg-slate-200 text-slate-500 font-bold py-2.5 px-6 rounded-xl text-xs cursor-default select-none shrink-0"
-                  >
-                    Locked (Need 35% Readiness Score)
-                  </button>
-                </div>
-              )}
-
-              {/* Quiz Card 18 */}
-              {stats.readinessScore >= 40 ? (
-                <div className="bg-white border-2 border-primary-navy rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary-navy/10 rounded-xl text-primary-navy py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <h4 className="font-sans font-extrabold text-lg text-primary-navy">
-                          Practice Test 7: DUI Probation, Chemical Tests &amp; Collisions
-                        </h4>
-                        <span className="bg-green-100 text-green-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full">
-                          Unlocked
-                        </span>
-                      </div>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Zero tolerance under 21, sealed bottle trunk guidelines, chemical refusal suspensions, and DMV SR-1 collision parameters.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Targeted Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => handleStartPracticeQuiz(18)}
-                    className="w-full md:w-auto bg-primary-navy hover:bg-primary-navy-light text-white font-bold py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-xs select-none shrink-0"
-                  >
-                    Start Test Now
-                  </button>
-                </div>
-              ) : (
-                <div className="bg-white border border-border-light rounded-2xl p-5 shadow-xs opacity-75 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative overflow-hidden">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-slate-100 rounded-xl text-text-muted py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <h4 className="font-sans font-extrabold text-lg text-text-muted">
-                        Practice Test 7: DUI Probation, Chemical Tests &amp; Collisions
-                      </h4>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Zero tolerance under 21, sealed bottle trunk guidelines, chemical refusal suspensions, and DMV SR-1 collision parameters.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    disabled
-                    className="w-full md:w-auto bg-slate-200 text-slate-500 font-bold py-2.5 px-6 rounded-xl text-xs cursor-default select-none shrink-0"
-                  >
-                    Locked (Need 40% Readiness Score)
-                  </button>
-                </div>
-              )}
-
-              {/* Quiz Card 19 */}
-              {stats.readinessScore >= 45 ? (
-                <div className="bg-white border-2 border-primary-navy rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary-navy/10 rounded-xl text-primary-navy py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <h4 className="font-sans font-extrabold text-lg text-primary-navy">
-                          Practice Test 8: Licensing, Permits &amp; Admin Rules
-                        </h4>
-                        <span className="bg-green-100 text-green-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full">
-                          Unlocked
-                        </span>
-                      </div>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Minor provisional restrictions, driving curfews, permit supervision ages, address changes, and animal abandonment laws.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Targeted Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => handleStartPracticeQuiz(19)}
-                    className="w-full md:w-auto bg-primary-navy hover:bg-primary-navy-light text-white font-bold py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-xs select-none shrink-0"
-                  >
-                    Start Test Now
-                  </button>
-                </div>
-              ) : (
-                <div className="bg-white border border-border-light rounded-2xl p-5 shadow-xs opacity-75 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative overflow-hidden">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-slate-100 rounded-xl text-text-muted py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <h4 className="font-sans font-extrabold text-lg text-text-muted">
-                        Practice Test 8: Licensing, Permits &amp; Admin Rules
-                      </h4>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Minor provisional restrictions, driving curfews, permit supervision ages, address changes, and animal abandonment laws.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    disabled
-                    className="w-full md:w-auto bg-slate-200 text-slate-500 font-bold py-2.5 px-6 rounded-xl text-xs cursor-default select-none shrink-0"
-                  >
-                    Locked (Need 45% Readiness Score)
-                  </button>
-                </div>
-              )}
-
-              {/* Quiz Card 20 */}
-              {stats.readinessScore >= 50 ? (
-                <div className="bg-white border-2 border-primary-navy rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary-navy/10 rounded-xl text-primary-navy py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <h4 className="font-sans font-extrabold text-lg text-primary-navy">
-                          Practice Test 9: Sharing the Road &amp; Special Hazards
-                        </h4>
-                        <span className="bg-green-100 text-green-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full">
-                          Unlocked
-                        </span>
-                      </div>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: 3-foot bicycle clearance, school speed limits, multi-lane bus stopping rules, truck blind spots, and evading law enforcement penalties.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Targeted Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => handleStartPracticeQuiz(20)}
-                    className="w-full md:w-auto bg-primary-navy hover:bg-primary-navy-light text-white font-bold py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-xs select-none shrink-0"
-                  >
-                    Start Test Now
-                  </button>
-                </div>
-              ) : (
-                <div className="bg-white border border-border-light rounded-2xl p-5 shadow-xs opacity-75 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative overflow-hidden">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-slate-100 rounded-xl text-text-muted py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <h4 className="font-sans font-extrabold text-lg text-text-muted">
-                        Practice Test 9: Sharing the Road &amp; Special Hazards
-                      </h4>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: 3-foot bicycle clearance, school speed limits, multi-lane bus stopping rules, truck blind spots, and evading law enforcement penalties.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    disabled
-                    className="w-full md:w-auto bg-slate-200 text-slate-500 font-bold py-2.5 px-6 rounded-xl text-xs cursor-default select-none shrink-0"
-                  >
-                    Locked (Need 50% Readiness Score)
-                  </button>
-                </div>
-              )}
-
-              {/* Quiz Card 21 */}
-              {stats.readinessScore >= 55 ? (
-                <div className="bg-white border-2 border-primary-navy rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary-navy/10 rounded-xl text-primary-navy py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <h4 className="font-sans font-extrabold text-lg text-primary-navy">
-                          Practice Test 10: Alcohol, BAC &amp; Legal Consequences
-                        </h4>
-                        <span className="bg-green-100 text-green-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full">
-                          Unlocked
-                        </span>
-                      </div>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: DUI chemical refusals, passenger open container laws, under-21 zero tolerance (0.01% BAC), and legal blood-alcohol limits (0.08% / 0.04%).
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Targeted Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => handleStartPracticeQuiz(21)}
-                    className="w-full md:w-auto bg-primary-navy hover:bg-primary-navy-light text-white font-bold py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-xs select-none shrink-0"
-                  >
-                    Start Test Now
-                  </button>
-                </div>
-              ) : (
-                <div className="bg-white border border-border-light rounded-2xl p-5 shadow-xs opacity-75 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative overflow-hidden">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-slate-100 rounded-xl text-text-muted py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <h4 className="font-sans font-extrabold text-lg text-text-muted">
-                        Practice Test 10: Alcohol, BAC &amp; Legal Consequences
-                      </h4>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: DUI chemical refusals, passenger open container laws, under-21 zero tolerance (0.01% BAC), and legal blood-alcohol limits (0.08% / 0.04%).
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    disabled
-                    className="w-full md:w-auto bg-slate-200 text-slate-500 font-bold py-2.5 px-6 rounded-xl text-xs cursor-default select-none shrink-0"
-                  >
-                    Locked (Need 55% Readiness Score)
-                  </button>
-                </div>
-              )}
-
-              {/* Quiz Card 22 */}
-              {stats.readinessScore >= 60 ? (
-                <div className="bg-white border-2 border-primary-navy rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary-navy/10 rounded-xl text-primary-navy py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <h4 className="font-sans font-extrabold text-lg text-primary-navy">
-                          Practice Test 11: Traffic Lanes, Markings &amp; Pavement Lines
-                        </h4>
-                        <span className="bg-green-100 text-green-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full">
-                          Unlocked
-                        </span>
-                      </div>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Solid yellow lane boundaries, center left turn lanes, turnout rules for queues of 5+ cars, and yield lines/sharks teeth.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Targeted Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => handleStartPracticeQuiz(22)}
-                    className="w-full md:w-auto bg-primary-navy hover:bg-primary-navy-light text-white font-bold py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-xs select-none shrink-0"
-                  >
-                    Start Test Now
-                  </button>
-                </div>
-              ) : (
-                <div className="bg-white border border-border-light rounded-2xl p-5 shadow-xs opacity-75 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative overflow-hidden">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-slate-100 rounded-xl text-text-muted py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <h4 className="font-sans font-extrabold text-lg text-text-muted">
-                        Practice Test 11: Traffic Lanes, Markings &amp; Pavement Lines
-                      </h4>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Solid yellow lane boundaries, center left turn lanes, turnout rules for queues of 5+ cars, and yield lines/sharks teeth.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    disabled
-                    className="w-full md:w-auto bg-slate-200 text-slate-500 font-bold py-2.5 px-6 rounded-xl text-xs cursor-default select-none shrink-0"
-                  >
-                    Locked (Need 60% Readiness Score)
-                  </button>
-                </div>
-              )}
-
-              {/* Quiz Card 23 */}
-              {stats.readinessScore >= 65 ? (
-                <div className="bg-white border-2 border-primary-navy rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary-navy/10 rounded-xl text-primary-navy py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <h4 className="font-sans font-extrabold text-lg text-primary-navy">
-                          Practice Test 12: Crucial Safety Equipment &amp; Inspection
-                        </h4>
-                        <span className="bg-green-100 text-green-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full">
-                          Unlocked
-                        </span>
-                      </div>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Headlight sunset/sunrise timings, high-beam dimming distances, tire tread levels, ABS braking methods, and window tint regulations.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Targeted Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => handleStartPracticeQuiz(23)}
-                    className="w-full md:w-auto bg-primary-navy hover:bg-primary-navy-light text-white font-bold py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-xs select-none shrink-0"
-                  >
-                    Start Test Now
-                  </button>
-                </div>
-              ) : (
-                <div className="bg-white border border-border-light rounded-2xl p-5 shadow-xs opacity-75 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative overflow-hidden">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-slate-100 rounded-xl text-text-muted py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <h4 className="font-sans font-extrabold text-lg text-text-muted">
-                        Practice Test 12: Crucial Safety Equipment &amp; Inspection
-                      </h4>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Headlight sunset/sunrise timings, high-beam dimming distances, tire tread levels, ABS braking methods, and window tint regulations.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    disabled
-                    className="w-full md:w-auto bg-slate-200 text-slate-500 font-bold py-2.5 px-6 rounded-xl text-xs cursor-default select-none shrink-0"
-                  >
-                    Locked (Need 65% Readiness Score)
-                  </button>
-                </div>
-              )}
-
-              {/* Quiz Card 24 */}
-              {stats.readinessScore >= 70 ? (
-                <div className="bg-white border-2 border-primary-navy rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary-navy/10 rounded-xl text-primary-navy py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <h4 className="font-sans font-extrabold text-lg text-primary-navy">
-                          Practice Test 13: Electronic Devices, Littering &amp; Liability
-                        </h4>
-                        <span className="bg-green-100 text-green-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full">
-                          Unlocked
-                        </span>
-                      </div>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Under-18 cell phone bans, hands-free phone mount placements, earbud regulations, littering fines, and 15/30/5 financial responsibility.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Targeted Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => handleStartPracticeQuiz(24)}
-                    className="w-full md:w-auto bg-primary-navy hover:bg-primary-navy-light text-white font-bold py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-xs select-none shrink-0"
-                  >
-                    Start Test Now
-                  </button>
-                </div>
-              ) : (
-                <div className="bg-white border border-border-light rounded-2xl p-5 shadow-xs opacity-75 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative overflow-hidden">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-slate-100 rounded-xl text-text-muted py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <h4 className="font-sans font-extrabold text-lg text-text-muted">
-                        Practice Test 13: Electronic Devices, Littering &amp; Liability
-                      </h4>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Under-18 cell phone bans, hands-free phone mount placements, earbud regulations, littering fines, and 15/30/5 financial responsibility.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 10 Questions</span>
-                        <span>⏱ Approx 10 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    disabled
-                    className="w-full md:w-auto bg-slate-200 text-slate-500 font-bold py-2.5 px-6 rounded-xl text-xs cursor-default select-none shrink-0"
-                  >
-                    Locked (Need 70% Readiness Score)
-                  </button>
-                </div>
-              )}
-
-              {/* Quiz Card 25 */}
-              {stats.readinessScore >= 75 ? (
-                proPassUnlocked ? (
-                  <div className="bg-white border-2 border-primary-navy rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-sm">
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 bg-primary-navy/10 rounded-xl text-primary-navy py-4">
-                        <ClipboardList className="w-7 h-7" />
-                      </div>
-                      <div>
-                        <div className="flex items-center gap-2 flex-wrap">
-                          <h4 className="font-sans font-extrabold text-lg text-primary-navy">
-                            Practice Test 14: Special Roads, Point Systems &amp; Emergency Handling
-                          </h4>
-                          <span className="bg-emerald-100 text-emerald-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full flex items-center gap-1 font-sans">
-                            <Sparkles className="w-2.5 h-2.5 fill-emerald-600" /> Pro Pass Active
-                          </span>
-                        </div>
-                        <p className="text-sm text-text-muted mt-1">
-                          Focus: Mountain road single-lane meetings (uphill right-of-way), hydroplaning recovery, NOTS DMV point milestones, blind intersections, and alley speeds.
-                        </p>
-                        <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                          <span>✓ 8 Targeted Questions</span>
-                          <span>⏱ Approx 8 min</span>
-                        </div>
-                      </div>
-                    </div>
-                    <button
-                      onClick={() => handleStartPracticeQuiz(25)}
-                      className="w-full md:w-auto bg-primary-navy hover:bg-primary-navy-light text-white font-bold py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-xs select-none shrink-0"
+                if (isUnlocked) {
+                  return (
+                    <div
+                      key={test.group}
+                      className="bg-white border-2 border-primary-navy rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-sm"
                     >
-                      Start Test Now
-                    </button>
-                  </div>
-                ) : (
-                  <div className="bg-[#fffdf5] border-2 border-amber-300 rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:border-amber-400">
-                    <div className="flex items-start gap-4 text-left">
-                      <div className="p-3 bg-amber-500/10 rounded-xl text-amber-600 py-4">
-                        <Lock className="w-7 h-7" />
-                      </div>
-                      <div>
-                        <div className="flex items-center gap-2 flex-wrap">
-                          <h4 className="font-sans font-extrabold text-lg text-primary-navy">
-                            Practice Test 14: Special Roads, Point Systems &amp; Emergency Handling
-                          </h4>
-                          <span className="bg-amber-100 text-amber-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full flex items-center gap-1 font-sans font-bold">
-                            Pro Pass Required
-                          </span>
+                      <div className="flex items-start gap-4">
+                        <div className="p-3 bg-primary-navy/10 rounded-xl text-primary-navy py-4">
+                          <ClipboardList className="w-7 h-7" />
                         </div>
-                        <p className="text-sm text-text-muted mt-1">
-                          Focus: Mountain road single-lane meetings (uphill right-of-way), hydroplaning recovery, NOTS DMV point milestones, blind intersections, and alley speeds.
-                        </p>
-                        <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                          <span>✓ 8 Targeted Questions</span>
-                          <span>⏱ Approx 8 min</span>
+                        <div>
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <h4 className="font-sans font-extrabold text-lg text-primary-navy">
+                              Practice Test {test.testNumber}: {test.title}
+                            </h4>
+                            {isFreeTest ? (
+                              <span className="bg-safety-orange text-primary-navy text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full">
+                                Recommended
+                              </span>
+                            ) : (
+                              <span className="bg-emerald-100 text-emerald-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full flex items-center gap-1 font-sans">
+                                <Sparkles className="w-2.5 h-2.5 fill-emerald-600" /> Pro Pass Active
+                              </span>
+                            )}
+                          </div>
+                          <p className="text-sm text-text-muted mt-1">
+                            Focus: {test.focus}
+                          </p>
+                          <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
+                            <span>✓ {test.qCount} Targeted Questions</span>
+                            <span>⏱ {test.time}</span>
+                          </div>
                         </div>
                       </div>
+                      <button
+                        onClick={() => handleStartPracticeQuiz(test.group)}
+                        className="w-full md:w-auto bg-primary-navy hover:bg-[#082345] text-white font-bold py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-xs select-none shrink-0"
+                      >
+                        Start Test Now
+                      </button>
                     </div>
-                    <button
-                      onClick={() => setShowProPassModal(true)}
-                      className="w-full md:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-md select-none shrink-0 flex items-center justify-center gap-1.5"
+                  );
+                } else {
+                  return (
+                    <div
+                      key={test.group}
+                      className="bg-[#fffdf5] border-2 border-amber-300 rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-[#001025] md:items-center gap-4 transition-all hover:border-amber-450"
                     >
-                      <Sparkles className="w-4 h-4 fill-slate-955" />
-                      <span>Unlock with Pro Pass</span>
-                    </button>
-                  </div>
-                )
-              ) : (
-                <div className="bg-white border border-border-light rounded-2xl p-5 shadow-xs opacity-75 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative overflow-hidden">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-slate-100 rounded-xl text-text-muted py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <h4 className="font-sans font-extrabold text-lg text-text-muted">
-                        Practice Test 14: Special Roads, Point Systems &amp; Emergency Handling
-                      </h4>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Mountain road single-lane meetings (uphill right-of-way), hydroplaning recovery, NOTS DMV point milestones, blind intersections, and alley speeds.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 8 Questions</span>
-                        <span>⏱ Approx 8 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    disabled
-                    className="w-full md:w-auto bg-slate-200 text-slate-500 font-bold py-2.5 px-6 rounded-xl text-xs cursor-default select-none shrink-0"
-                  >
-                    Locked (Need 75% Readiness Score)
-                  </button>
-                </div>
-              )}
-
-              {/* Quiz Card 26 */}
-              {stats.readinessScore >= 80 ? (
-                proPassUnlocked ? (
-                  <div className="bg-white border-2 border-primary-navy rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:shadow-sm">
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 bg-primary-navy/10 rounded-xl text-primary-navy py-4">
-                        <ClipboardList className="w-7 h-7" />
-                      </div>
-                      <div>
-                        <div className="flex items-center gap-2 flex-wrap">
-                          <h4 className="font-sans font-extrabold text-lg text-primary-navy">
-                            Practice Test 15: Hill Parking, Hand Signals &amp; Special Rights
-                          </h4>
-                          <span className="bg-emerald-100 text-emerald-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full flex items-center gap-1 font-sans">
-                            <Sparkles className="w-2.5 h-2.5 fill-emerald-600" /> Pro Pass Active
-                          </span>
+                      <div className="flex items-start gap-4 text-left">
+                        <div className="p-3 bg-amber-500/10 rounded-xl text-amber-600 py-4">
+                          <Lock className="w-7 h-7" />
                         </div>
-                        <p className="text-sm text-text-muted mt-1">
-                          Focus: Uphill/downhill curb-restwheel calculations, arm hand gestures, parked vehicle collision duties, and horse/animal-drawn vehicle rights.
-                        </p>
-                        <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                          <span>✓ 8 Targeted Questions</span>
-                          <span>⏱ Approx 8 min</span>
+                        <div>
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <h4 className="font-sans font-extrabold text-[#002045] text-lg">
+                              Practice Test {test.testNumber}: {test.title}
+                            </h4>
+                            <span className="bg-amber-100 text-amber-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full flex items-center gap-1 font-sans font-bold">
+                              Pro Pass Required
+                            </span>
+                          </div>
+                          <p className="text-sm text-text-muted mt-1">
+                            Focus: {test.focus}
+                          </p>
+                          <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
+                            <span>✓ {test.qCount} Targeted Questions</span>
+                            <span>⏱ {test.time}</span>
+                          </div>
                         </div>
                       </div>
+                      <button
+                        onClick={() => setShowProPassModal(true)}
+                        className="w-full md:w-auto bg-amber-500 hover:bg-amber-400 text-[#001025] font-black py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-md select-none shrink-0 flex items-center justify-center gap-1.5"
+                      >
+                        <Sparkles className="w-4 h-4 fill-[#001025]" />
+                        <span>Unlock with Pro Pass</span>
+                      </button>
                     </div>
-                    <button
-                      onClick={() => handleStartPracticeQuiz(26)}
-                      className="w-full md:w-auto bg-primary-navy hover:bg-primary-navy-light text-white font-bold py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-xs select-none shrink-0"
-                    >
-                      Start Test Now
-                    </button>
-                  </div>
-                ) : (
-                  <div className="bg-[#fffdf5] border-2 border-amber-300 rounded-2xl p-5 shadow-xs flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:border-amber-400">
-                    <div className="flex items-start gap-4 text-left">
-                      <div className="p-3 bg-amber-500/10 rounded-xl text-amber-600 py-4">
-                        <Lock className="w-7 h-7" />
-                      </div>
-                      <div>
-                        <div className="flex items-center gap-2 flex-wrap">
-                          <h4 className="font-sans font-extrabold text-lg text-primary-navy">
-                            Practice Test 15: Hill Parking, Hand Signals &amp; Special Rights
-                          </h4>
-                          <span className="bg-amber-100 text-amber-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full flex items-center gap-1 font-sans font-bold">
-                            Pro Pass Required
-                          </span>
-                        </div>
-                        <p className="text-sm text-text-muted mt-1">
-                          Focus: Uphill/downhill curb-restwheel calculations, arm hand gestures, parked vehicle collision duties, and horse/animal-drawn vehicle rights.
-                        </p>
-                        <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                          <span>✓ 8 Targeted Questions</span>
-                          <span>⏱ Approx 8 min</span>
-                        </div>
-                      </div>
-                    </div>
-                    <button
-                      onClick={() => setShowProPassModal(true)}
-                      className="w-full md:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-md select-none shrink-0 flex items-center justify-center gap-1.5"
-                    >
-                      <Sparkles className="w-4 h-4 fill-slate-955" />
-                      <span>Unlock with Pro Pass</span>
-                    </button>
-                  </div>
-                )
-              ) : (
-                <div className="bg-white border border-border-light rounded-2xl p-5 shadow-xs opacity-75 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative overflow-hidden">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-slate-100 rounded-xl text-text-muted py-4">
-                      <ClipboardList className="w-7 h-7" />
-                    </div>
-                    <div>
-                      <h4 className="font-sans font-extrabold text-lg text-text-muted">
-                        Practice Test 15: Hill Parking, Hand Signals &amp; Special Rights
-                      </h4>
-                      <p className="text-sm text-text-muted mt-1">
-                        Focus: Uphill/downhill curb-restwheel calculations, arm hand gestures, parked vehicle collision duties, and horse/animal-drawn vehicle rights.
-                      </p>
-                      <div className="flex gap-4 mt-2 text-xs font-bold text-text-muted">
-                        <span>✓ 8 Questions</span>
-                        <span>⏱ Approx 8 min</span>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    disabled
-                    className="w-full md:w-auto bg-slate-200 text-slate-500 font-bold py-2.5 px-6 rounded-xl text-xs cursor-default select-none shrink-0"
-                  >
-                    Locked (Need 80% Readiness Score)
-                  </button>
-                </div>
-              )}
-
+                  );
+                }
+              })}
             </div>
 
           </div>
@@ -1519,6 +662,8 @@ export default function App() {
           <SignLibraryView
             signs={ROAD_SIGNS}
             goToFlashcardsForSign={handleGoToFlashcardsForSign}
+            proPassUnlocked={proPassUnlocked}
+            onTriggerProPass={() => setShowProPassModal(true)}
           />
         );
       default:
@@ -1587,6 +732,8 @@ export default function App() {
             startSignId={activeSignId}
             onExit={() => setIsFlashcardsActive(false)}
             onMasteredCard={handleMasteredCard}
+            proPassUnlocked={proPassUnlocked}
+            onTriggerProPass={() => setShowProPassModal(true)}
           />
         ) : (
           renderActiveTabContent()
