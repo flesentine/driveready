@@ -183,6 +183,164 @@ const renderSignVisual = (sign: RoadSign) => {
           <span className="text-2xl font-sans font-extrabold text-black tracking-tight mt-0.5">50</span>
         </div>
       );
+    case 'wrong-way':
+      return (
+        <div className="w-24 h-12 bg-[#DC2626] border-2 border-white p-1 flex flex-col items-center justify-center rounded-xs shadow-xs">
+          <span className="text-[10px] font-sans font-black text-white leading-none uppercase tracking-wider">WRONG</span>
+          <span className="text-[10px] font-sans font-black text-white leading-none uppercase tracking-wider mt-0.5">WAY</span>
+        </div>
+      );
+    case 'no-u-turn':
+      return (
+        <div className="relative w-full h-full flex items-center justify-center p-2 rounded-xl">
+          <svg className="w-16 h-16" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="15" y="15" width="70" height="70" rx="4" fill="white" stroke="#000" strokeWidth="4" />
+            <path d="M 38 65 V 45 Q 38 32 50 32 Q 62 32 62 45 V 65 M 31 55 L 38 65 L 45 55" stroke="#000" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            <circle cx="50" cy="50" r="26" stroke="#DC2626" strokeWidth="6" fill="transparent" />
+            <line x1="31.5" y1="31.5" x2="68.5" y2="68.5" stroke="#DC2626" strokeWidth="6" />
+          </svg>
+        </div>
+      );
+    case 'no-right-turn':
+      return (
+        <div className="relative w-full h-full flex items-center justify-center p-2 rounded-xl">
+          <svg className="w-16 h-16" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="15" y="15" width="70" height="70" rx="4" fill="white" stroke="#000" strokeWidth="4" />
+            <path d="M 40 65 V 45 H 65 M 57 38 L 65 45 L 57 52" stroke="#000" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            <circle cx="50" cy="50" r="26" stroke="#DC2626" strokeWidth="6" fill="transparent" />
+            <line x1="31.5" y1="31.5" x2="68.5" y2="68.5" stroke="#DC2626" strokeWidth="6" />
+          </svg>
+        </div>
+      );
+    case 'railroad-crossing':
+      return (
+        <div className="relative w-full h-full flex items-center justify-center p-2 rounded-xl">
+          <svg className="w-16 h-16" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="38" fill="#FBBF24" stroke="#000" strokeWidth="3" />
+            <line x1="23" y1="23" x2="77" y2="77" stroke="#000" strokeWidth="5" />
+            <line x1="23" y1="77" x2="77" y2="23" stroke="#000" strokeWidth="5" />
+            <text x="31" y="56" fontSize="16" fontWeight="900" fill="black" textAnchor="middle" fontFamily="sans-serif">R</text>
+            <text x="69" y="56" fontSize="16" fontWeight="900" fill="black" textAnchor="middle" fontFamily="sans-serif">R</text>
+          </svg>
+        </div>
+      );
+    case 'railroad-emergency-info':
+      return (
+        <div className="w-18 h-22 bg-[#1E3A8A] border-2 border-white p-2 flex flex-col items-center justify-center rounded-sm shadow-xs text-white">
+          <span className="text-[5px] font-sans font-black leading-tight text-center uppercase tracking-wider">REPORT EMERGENCY</span>
+          <span className="text-[5px] font-sans font-black leading-tight text-center uppercase tracking-wider mt-0.5">OR OBSTRUCTION</span>
+          <span className="text-[6px] font-sans font-extrabold text-amber-300 mt-1.5 leading-none">1-800-555-0199</span>
+          <span className="text-[4px] font-mono font-medium text-slate-200 mt-1 leading-none">CROSSING 123 456 A</span>
+        </div>
+      );
+    case 'school-crossing':
+      return (
+        <div className="relative w-full h-full flex items-center justify-center p-2 rounded-xl">
+          <svg className="w-16 h-16" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,12 85,38 85,82 15,82 15,38" fill="#D9F99D" stroke="#000" strokeWidth="3" />
+            <circle cx="43" cy="38" r="4.5" fill="black" />
+            <path d="M 37 47 C 37 53 49 53 49 47 L 45 61 L 41 75 M 45 61 L 47 75" stroke="black" strokeWidth="5" strokeLinecap="round" />
+            <circle cx="59" cy="44" r="4" fill="black" />
+            <path d="M 54 52 C 54 58 64 58 64 52 L 60 65 L 57 75 M 60 65 L 62 75" stroke="black" strokeWidth="4.5" strokeLinecap="round" />
+          </svg>
+        </div>
+      );
+    case 'traffic-signal-ahead':
+      return (
+        <div className="relative w-16 h-16 bg-amber-400 rotate-45 border-2 border-black rounded shadow-xs flex items-center justify-center">
+          <div className="-rotate-45 flex flex-col items-center justify-center w-full h-full">
+            <div className="w-5 h-11 bg-black rounded-md p-1 flex flex-col justify-between items-center border border-slate-700">
+              <div className="w-2.5 h-2.5 bg-red-600 rounded-full animate-pulse" />
+              <div className="w-2.5 h-2.5 bg-yellow-500 rounded-full" />
+              <div className="w-2.5 h-2.5 bg-green-500 rounded-full" />
+            </div>
+          </div>
+        </div>
+      );
+    case 'crossroad':
+      return (
+        <div className="relative w-16 h-16 bg-amber-400 rotate-45 border-2 border-black rounded shadow-xs flex items-center justify-center">
+          <div className="-rotate-45 flex flex-col items-center justify-center w-full h-full">
+            <svg className="w-10 h-10" viewBox="0 0 100 100" fill="none">
+              <path d="M 50 15 V 85 M 15 50 H 85" stroke="black" strokeWidth="9" strokeLinecap="round" />
+            </svg>
+          </div>
+        </div>
+      );
+    case 'directional-arrow':
+      return (
+        <div className="relative w-16 h-16 bg-amber-400 rotate-45 border-2 border-black rounded shadow-xs flex items-center justify-center">
+          <div className="-rotate-45 flex flex-col items-center justify-center w-full h-full">
+            <svg className="w-10 h-10" viewBox="0 0 100 100" fill="none">
+              <path d="M 20 50 H 80 M 60 30 L 80 50 L 60 70" stroke="black" strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            </svg>
+          </div>
+        </div>
+      );
+    case 'curve':
+      return (
+        <div className="relative w-16 h-16 bg-amber-400 rotate-45 border-2 border-black rounded shadow-xs flex items-center justify-center">
+          <div className="-rotate-45 flex flex-col items-center justify-center w-full h-full">
+            <svg className="w-10 h-10" viewBox="0 0 100 100" fill="none">
+              <path d="M 35 75 V 55 Q 35 35 60 35 H 70 M 55 20 L 70 35 L 55 50" stroke="black" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            </svg>
+          </div>
+        </div>
+      );
+    case 'keep-right':
+      return (
+        <div className="w-16 h-20 bg-white border-2 border-black p-1 flex flex-col items-center justify-center rounded-sm shadow-xs">
+          <svg className="w-14 h-16" viewBox="0 0 100 100" fill="none">
+            <path d="M 40 45 L 50 35 L 60 45 L 50 80 Z" fill="black" />
+            <path d="M 35 80 L 35 55 Q 35 25 50 25 Q 65 25 65 55 L 65 75" stroke="black" strokeWidth="6" strokeLinecap="round" fill="none" />
+            <path d="M 57 65 L 65 75 L 73 65" stroke="black" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+          </svg>
+        </div>
+      );
+    case 'do-not-pass':
+      return (
+        <div className="w-16 h-20 bg-white border-2 border-black p-2 flex flex-col items-center justify-center rounded-sm shadow-xs">
+          <span className="text-[9px] font-sans font-black text-black leading-tight uppercase text-center">DO</span>
+          <span className="text-[9px] font-sans font-black text-black leading-tight uppercase text-center">NOT</span>
+          <span className="text-[9px] font-sans font-black text-black leading-tight uppercase text-center mt-1">PASS</span>
+        </div>
+      );
+    case 'no-parking-any-time':
+      return (
+        <div className="w-16 h-20 bg-white border-2 border-[#DC2626] p-1.5 flex flex-col items-center justify-center rounded-sm shadow-xs">
+          <span className="text-[8px] font-sans font-black text-[#DC2626] leading-none uppercase tracking-tight">NO</span>
+          <span className="text-[8px] font-sans font-black text-[#DC2626] leading-none uppercase tracking-tight mt-0.5">PARKING</span>
+          <span className="text-[6px] font-sans font-extrabold text-[#DC2626] leading-none uppercase mt-1">ANY</span>
+          <span className="text-[6px] font-sans font-extrabold text-[#DC2626] leading-none uppercase mt-0.5">TIME</span>
+          <span className="text-[6px] font-sans font-bold text-[#DC2626] scale-150 mt-1.5">&#8596;</span>
+        </div>
+      );
+    case 'emergency-parking-only':
+      return (
+        <div className="w-16 h-20 bg-white border-2 border-[#16A34A] p-1 flex flex-col items-center justify-center rounded-sm shadow-xs">
+          <span className="text-[6.5px] font-sans font-black text-[#16A34A] leading-tight text-center uppercase">EMERGENCY</span>
+          <span className="text-[6.5px] font-sans font-black text-[#16A34A] leading-tight text-center uppercase">PARKING</span>
+          <span className="text-[6.5px] font-sans font-black text-[#16A34A] leading-tight text-center uppercase mt-1">ONLY</span>
+        </div>
+      );
+    case 'do-not-block-intersection':
+      return (
+        <div className="w-16 h-20 bg-white border-2 border-black p-1 flex flex-col items-center justify-center rounded-sm shadow-xs">
+          <span className="text-[7.5px] font-sans font-black text-black leading-tight text-center uppercase">DO NOT</span>
+          <span className="text-[7.5px] font-sans font-black text-black leading-tight text-center uppercase">BLOCK</span>
+          <span className="text-[5.5px] font-sans font-bold text-slate-800 leading-tight text-center uppercase mt-0.5">INTERSECTION</span>
+        </div>
+      );
+    case 'left-turn-yield-on-green':
+      return (
+        <div className="w-16 h-20 bg-white border-2 border-black p-1 flex flex-col items-center justify-center rounded-sm shadow-xs">
+          <span className="text-[6.5px] font-sans font-black text-black leading-none text-center uppercase">LEFT TURN</span>
+          <span className="text-[6.5px] font-sans font-black text-black leading-none text-center uppercase mt-0.5">YIELD</span>
+          <span className="text-[6.5px] font-sans font-black text-black leading-none text-center uppercase mt-0.5">ON</span>
+          <div className="w-3.5 h-3.5 rounded-full bg-[#22C55E] mt-1 mb-0.5" />
+          <span className="text-[6.5px] font-sans font-black text-[#22C55E] leading-tight text-center uppercase">GREEN</span>
+        </div>
+      );
     default:
       return (
         <div className="relative w-14 h-14 bg-amber-400 rotate-45 border-2 border-black rounded shadow-xs flex items-center justify-center">
