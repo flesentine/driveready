@@ -179,6 +179,11 @@ export default function App() {
   };
 
   const handleStartCramMode = () => {
+    if (!proPassUnlocked) {
+      setShowProPassModal(true);
+      return;
+    }
+
     const cramQuestions = getCramModeQuestions(stats, PRACTICE_QUESTIONS);
     if (cramQuestions.length === 0) return;
 
@@ -1874,6 +1879,8 @@ export default function App() {
                 onClick={() => {
                   setShowQuitConfirm(false);
                   setIsQuizActive(false);
+                  setIsCramModeQuiz(false);
+                  setIsReviewQuiz(false);
                 }}
                 className="flex-1 py-3 px-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl text-xs transition-all active:scale-95 duration-100 cursor-pointer shadow-md"
               >
