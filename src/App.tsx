@@ -14,7 +14,8 @@ import { FlashcardsView } from './components/FlashcardsView';
 import { ProfileView } from './components/ProfileView';
 import { MistakeReviewView } from './components/MistakeReviewView';
 import { getMistakeReviewQuestions, getCramModeQuestions } from './utils/mistakeReview';
-import { isProPassUnlocked } from './utils/proPass';
+import { clearCachedProPassUnlocked, getCachedProPassUnlocked, setCachedProPassUnlocked } from './utils/proPass';
+import { getEntitlements } from './services/purchaseService';
 import { FREE_TEST_GROUPS, PRACTICE_TESTS, isPracticeTestUnlocked } from './utils/monetization';
 import { ProPassModal } from './components/ProPassModal';
 import { trackEvent } from './utils/analytics';
@@ -34,13 +35,42 @@ export default function App() {
   const [stats, setStats] = useState<UserStats>(INITIAL_USER_STATS);
   
   // Pro Pass Lock & Purchase controllers
-  const [proPassUnlocked, setProPassUnlocked] = useState<boolean>(() => isProPassUnlocked());
+  const [proPassUnlocked, setProPassUnlocked] = useState<boolean>(() => getCachedProPassUnlocked());
   const [showProPassModal, setShowProPassModal] = useState<boolean>(false);
 
   const handleOpenPaywall = (source: "locked_test" | "cram_mode" | "sign_library" | "flashcards" | "mistake_review" | string) => {
     trackEvent("pro_paywall_opened", { source });
     setShowProPassModal(true);
   };
+
+  useEffect(() => {
+    let isActive = true;
+
+    getEntitlements()
+      .then((result) => {
+        if (!isActive) {
+          return;
+        }
+
+        if (result.status === 'success' && result.proPassUnlocked) {
+          setCachedProPassUnlocked(true);
+          setProPassUnlocked(true);
+          return;
+        }
+
+        if (result.source === 'store' && result.status === 'success' && !result.proPassUnlocked) {
+          clearCachedProPassUnlocked();
+          setProPassUnlocked(false);
+        }
+      })
+      .catch((error) => {
+        console.warn('Unable to refresh Pro Pass entitlement:', error);
+      });
+
+    return () => {
+      isActive = false;
+    };
+  }, []);
 
   // Active quiz / flashcard controllers
   const [isQuizActive, setIsQuizActive] = useState(false);
@@ -1062,6 +1092,7 @@ export default function App() {
         <ProPassModal 
           onClose={() => setShowProPassModal(false)}
           onUnlocked={() => {
+            setCachedProPassUnlocked(true);
             setProPassUnlocked(true);
             // Lock states will reload instantly and reactively
           }}

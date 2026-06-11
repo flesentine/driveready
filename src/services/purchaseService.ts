@@ -3,67 +3,181 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { isProPassUnlocked, setProPassUnlocked } from '../utils/proPass';
+import { Capacitor, registerPlugin } from '@capacitor/core';
+import {
+  clearCachedProPassUnlocked,
+  getCachedProPassUnlocked,
+  setCachedProPassUnlocked,
+} from '../utils/proPass';
 
 export const PRODUCT_IDS = {
-  PRO_PASS_LIFETIME: "driveready_pro_pass_lifetime"
+  PRO_PASS_LIFETIME: 'driveready_pro_pass_lifetime',
 } as const;
 
-export type PurchaseStatus = "idle" | "loading" | "success" | "cancelled" | "error";
+export type ProPassSource = 'store' | 'cached' | 'dev';
+export type PurchaseStatus = 'success' | 'cancelled' | 'pending' | 'error';
 
-export interface Entitlement {
+export interface ProPassResult {
   proPassUnlocked: boolean;
-  source: "mock" | "store" | "cached";
+  source: ProPassSource;
+  status: PurchaseStatus;
+  errorMessage?: string;
 }
 
-/**
- * Retrieves the current user's entitlements. Uses cached local entitlement state initially.
- */
-export async function getEntitlements(): Promise<Entitlement> {
-  const isUnlocked = isProPassUnlocked();
+interface DriveReadyStoreKitPlugin {
+  getEntitlements(): Promise<ProPassResult>;
+  purchaseProPass(options: { productId: string }): Promise<ProPassResult>;
+  restorePurchases(): Promise<ProPassResult>;
+}
+
+const DriveReadyStoreKit = registerPlugin<DriveReadyStoreKitPlugin>('DriveReadyStoreKit');
+
+function isNativeIosStore(): boolean {
+  return Capacitor.isNativePlatform() && Capacitor.getPlatform() === 'ios';
+}
+
+function normalizeStoreResult(result: Partial<ProPassResult>): ProPassResult {
   return {
-    proPassUnlocked: isUnlocked,
-    source: "cached",
+    proPassUnlocked: result.proPassUnlocked === true,
+    source: result.source === 'dev' || result.source === 'cached' ? result.source : 'store',
+    status: result.status ?? 'error',
+    errorMessage: result.errorMessage,
+  };
+}
+
+function applyStoreResult(result: ProPassResult): ProPassResult {
+  if (result.source !== 'store') {
+    return result;
+  }
+
+  if (result.status === 'success' && result.proPassUnlocked) {
+    setCachedProPassUnlocked(true);
+  } else if (result.status === 'success' && !result.proPassUnlocked) {
+    clearCachedProPassUnlocked();
+  }
+
+  return result;
+}
+
+function storeUnavailableResult(action: 'check' | 'purchase' | 'restore'): ProPassResult {
+  const actionLabel = action === 'check'
+    ? 'Pro Pass entitlement checks'
+    : action === 'purchase'
+      ? 'Purchases'
+      : 'Purchase restore';
+
+  return {
+    proPassUnlocked: false,
+    source: 'store',
+    status: 'error',
+    errorMessage: `${actionLabel} require the iOS App Store build.`,
   };
 }
 
 /**
- * Purchase Pro Pass (Lifetime).
- * Under DEV mode, mocks purchase success after a 1.5s delay.
- * Under production build, fails with a clear error indicating checkout is not yet enabled.
+ * Retrieves store-confirmed entitlements on iOS. In development browser builds,
+ * returns the local cache as a dev convenience only.
  */
-export async function purchaseProPass(): Promise<Entitlement> {
+export async function getEntitlements(): Promise<ProPassResult> {
+  if (isNativeIosStore()) {
+    try {
+      return applyStoreResult(normalizeStoreResult(await DriveReadyStoreKit.getEntitlements()));
+    } catch (error: any) {
+      return {
+        proPassUnlocked: false,
+        source: 'store',
+        status: 'error',
+        errorMessage: error?.message || 'Unable to check Pro Pass entitlement.',
+      };
+    }
+  }
+
   if (import.meta.env.DEV) {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        setProPassUnlocked(true);
-        resolve({
-          proPassUnlocked: true,
-          source: "mock",
-        });
-      }, 1500);
-    });
-  } else {
-    return new Promise((_, reject) => {
-      setTimeout(() => {
-        reject(new Error("Checkout is not enabled yet."));
-      }, 1000);
-    });
+    return {
+      proPassUnlocked: getCachedProPassUnlocked(),
+      source: 'dev',
+      status: 'success',
+    };
+  }
+
+  clearCachedProPassUnlocked();
+  return storeUnavailableResult('check');
+}
+
+/**
+ * Starts the App Store purchase flow for Pro Pass.
+ */
+export async function purchaseProPass(): Promise<ProPassResult> {
+  if (!isNativeIosStore()) {
+    return import.meta.env.DEV
+      ? {
+          proPassUnlocked: false,
+          source: 'dev',
+          status: 'error',
+          errorMessage: 'Use the dev-only unlock button for browser testing.',
+        }
+      : storeUnavailableResult('purchase');
+  }
+
+  try {
+    return applyStoreResult(normalizeStoreResult(await DriveReadyStoreKit.purchaseProPass({
+      productId: PRODUCT_IDS.PRO_PASS_LIFETIME,
+    })));
+  } catch (error: any) {
+    return {
+      proPassUnlocked: false,
+      source: 'store',
+      status: 'error',
+      errorMessage: error?.message || 'Purchase failed. Please try again.',
+    };
   }
 }
 
 /**
- * Restore previously purchased entitlements.
- * Looks for cached entitlements or simulated store state.
+ * Restores App Store purchases and re-checks the Pro Pass entitlement.
  */
-export async function restorePurchases(): Promise<Entitlement> {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      const isUnlocked = isProPassUnlocked();
-      resolve({
-        proPassUnlocked: isUnlocked,
-        source: isUnlocked ? "store" : "cached",
-      });
-    }, 1200);
-  });
+export async function restorePurchases(): Promise<ProPassResult> {
+  if (!isNativeIosStore()) {
+    return import.meta.env.DEV
+      ? {
+          proPassUnlocked: false,
+          source: 'dev',
+          status: 'error',
+          errorMessage: 'Restore purchases is available in the iOS App Store build.',
+        }
+      : storeUnavailableResult('restore');
+  }
+
+  try {
+    return applyStoreResult(normalizeStoreResult(await DriveReadyStoreKit.restorePurchases()));
+  } catch (error: any) {
+    return {
+      proPassUnlocked: false,
+      source: 'store',
+      status: 'error',
+      errorMessage: error?.message || 'Restore failed. Please try again.',
+    };
+  }
+}
+
+/**
+ * Browser-only local bypass for development. This is guarded by Vite DEV and
+ * intentionally separate from production purchase/restore paths.
+ */
+export function devUnlockProPass(): ProPassResult {
+  if (!import.meta.env.DEV) {
+    return {
+      proPassUnlocked: false,
+      source: 'dev',
+      status: 'error',
+      errorMessage: 'Dev unlock is not available in production.',
+    };
+  }
+
+  setCachedProPassUnlocked(true);
+  return {
+    proPassUnlocked: true,
+    source: 'dev',
+    status: 'success',
+  };
 }

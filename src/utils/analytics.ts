@@ -7,9 +7,12 @@ type AnalyticsEvent =
   | "pro_paywall_opened"
   | "pro_purchase_started"
   | "pro_purchase_succeeded"
+  | "pro_purchase_cancelled"
+  | "pro_purchase_pending"
   | "pro_purchase_failed"
   | "pro_restore_started"
   | "pro_restore_succeeded"
+  | "pro_restore_pending"
   | "pro_restore_failed";
 
 interface AnalyticsPayload {

@@ -4,8 +4,10 @@ import path from 'path';
 import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
+  const isNativeBuild = process.env.VITE_NATIVE_BUILD === 'true';
+
   return {
-    base: './',
+    base: isNativeBuild ? './' : '/driveready/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

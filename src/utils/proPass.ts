@@ -4,18 +4,17 @@
  */
 
 /**
- * CAUTION: This local storage state functions solely as a local cached entitlement state
- * for offline availability and performance. It is not the final authority for production subscriptions,
- * which should eventually be verified server-side or via a store API.
- * Keeps backward compatibility with existing keys.
+ * Local storage is only a cache for store-confirmed Pro Pass entitlement.
+ * Production code must verify with the App Store before trusting this value.
  */
 
 const LOCAL_STORAGE_PRO_PASS_KEY = 'driveready_pro_pass_unlocked';
+const LEGACY_PREMIUM_ACCESS_KEY = 'driveready_premium_access';
 
 /**
- * Check if the Pro Pass premium tier has been unlocked (reads from local cache).
+ * Reads the cached Pro Pass entitlement state.
  */
-export function isProPassUnlocked(): boolean {
+export function getCachedProPassUnlocked(): boolean {
   try {
     const value = localStorage.getItem(LOCAL_STORAGE_PRO_PASS_KEY);
     return value === 'true';
@@ -25,22 +24,32 @@ export function isProPassUnlocked(): boolean {
 }
 
 /**
- * Set the Pro Pass unlock state cache.
+ * Stores a store-confirmed Pro Pass entitlement in the local cache.
  */
-export function setProPassUnlocked(unlocked: boolean): void {
+export function setCachedProPassUnlocked(unlocked: boolean): void {
   try {
     localStorage.setItem(LOCAL_STORAGE_PRO_PASS_KEY, String(unlocked));
-    // Also sync the old mistake key for backward compatibility or dual-support
-    localStorage.setItem('driveready_premium_access', String(unlocked));
+    localStorage.setItem(LEGACY_PREMIUM_ACCESS_KEY, String(unlocked));
   } catch (error) {
     console.error('Error setting local cached Pro Pass unlock state:', error);
   }
 }
 
 /**
- * Get Pro Pass status string from cache.
+ * Clears cached entitlement state when the store says the user is locked.
  */
-export function getProPassStatus(): 'locked' | 'unlocked' {
-  return isProPassUnlocked() ? 'unlocked' : 'locked';
+export function clearCachedProPassUnlocked(): void {
+  try {
+    localStorage.removeItem(LOCAL_STORAGE_PRO_PASS_KEY);
+    localStorage.removeItem(LEGACY_PREMIUM_ACCESS_KEY);
+  } catch (error) {
+    console.error('Error clearing local cached Pro Pass unlock state:', error);
+  }
 }
 
+/**
+ * Gets Pro Pass status string from cache.
+ */
+export function getProPassStatus(): 'locked' | 'unlocked' {
+  return getCachedProPassUnlocked() ? 'unlocked' : 'locked';
+}
