@@ -4,8 +4,10 @@
  */
 
 import React, { useState } from 'react';
-import { XCircle, CheckCircle2, Sparkles, RefreshCw, ArrowRight } from 'lucide-react';
+import { XCircle, CheckCircle2, Sparkles, RefreshCw, ArrowRight, Loader2, AlertCircle } from 'lucide-react';
 import { setProPassUnlocked } from '../utils/proPass';
+import { purchaseProPass, restorePurchases, PurchaseStatus } from '../services/purchaseService';
+import { trackEvent } from '../utils/analytics';
 
 interface ProPassModalProps {
   onClose: () => void;
@@ -16,35 +18,97 @@ export const ProPassModal: React.FC<ProPassModalProps> = ({
   onClose,
   onUnlocked,
 }) => {
+  const [purchaseStatus, setPurchaseStatus] = useState<PurchaseStatus>("idle");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [simulationSuccess, setSimulationSuccess] = useState(false);
+
+  const handleCheckout = async () => {
+    try {
+      setPurchaseStatus("loading");
+      setErrorMessage(null);
+      trackEvent("pro_purchase_started");
+
+      const result = await purchaseProPass();
+      
+      if (result.proPassUnlocked) {
+        setPurchaseStatus("success");
+        setSimulationSuccess(true);
+        trackEvent("pro_purchase_succeeded");
+        onUnlocked();
+        setTimeout(() => {
+          onClose();
+        }, 1500);
+      }
+    } catch (error: any) {
+      setPurchaseStatus("error");
+      const msg = error?.message || "Purchase failed. Please try again.";
+      setErrorMessage(msg);
+      trackEvent("pro_purchase_failed", { error: msg });
+    }
+  };
+
+  const handleRestore = async () => {
+    try {
+      setPurchaseStatus("loading");
+      setErrorMessage(null);
+      trackEvent("pro_restore_started");
+
+      const result = await restorePurchases();
+      
+      if (result.proPassUnlocked) {
+        setPurchaseStatus("success");
+        setSimulationSuccess(true);
+        trackEvent("pro_restore_succeeded");
+        onUnlocked();
+        setTimeout(() => {
+          onClose();
+        }, 1500);
+      } else {
+        setPurchaseStatus("error");
+        const msg = "No previous purchases found to restore.";
+        setErrorMessage(msg);
+        trackEvent("pro_restore_failed", { error: msg });
+      }
+    } catch (error: any) {
+      setPurchaseStatus("error");
+      const msg = error?.message || "Restore failed. Please try again.";
+      setErrorMessage(msg);
+      trackEvent("pro_restore_failed", { error: msg });
+    }
+  };
 
   const handleSimulateUnlock = () => {
     setProPassUnlocked(true);
     setSimulationSuccess(true);
+    trackEvent("pro_purchase_succeeded", { source: "dev_simulate" });
     onUnlocked();
     setTimeout(() => {
       onClose();
     }, 1500);
   };
 
+  const isWorking = purchaseStatus === "loading";
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Dark backdrop */}
       <div 
-        onClick={onClose}
+        onClick={isWorking ? undefined : onClose}
         className="fixed inset-0 bg-primary-navy/70 backdrop-blur-sm transition-opacity cursor-pointer" 
       />
 
       {/* Main modal container */}
       <div className="bg-white border border-slate-200 shadow-2xl rounded-3xl p-6 md:p-8 max-w-md w-full relative z-10 animate-scale-in text-left">
         {/* Close Button */}
-        <button 
-          onClick={onClose}
-          className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors p-1"
-          title="Close Modal"
-        >
-          <XCircle className="w-6 h-6 stroke-[1.5]" />
-        </button>
+        {!isWorking && (
+          <button 
+            onClick={onClose}
+            className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors p-1"
+            title="Close Modal"
+          >
+            <XCircle className="w-6 h-6 stroke-[1.5]" />
+          </button>
+        )}
 
         <div className="space-y-6">
           {/* Header Badge */}
@@ -99,18 +163,47 @@ export const ProPassModal: React.FC<ProPassModalProps> = ({
 
           {/* Call to Actions */}
           <div className="space-y-3 pt-2">
-            <div className="space-y-1 bg-slate-50 border border-slate-150 p-3 rounded-2xl text-center">
+            <div className="space-y-2">
               <button
-                disabled
-                className="w-full py-3 px-5 bg-slate-200 text-slate-500 font-sans font-black text-xs uppercase tracking-wider rounded-xl transition-all duration-200 cursor-default flex items-center justify-center gap-1.5"
+                onClick={handleCheckout}
+                disabled={isWorking}
+                className={`w-full py-3 px-5 text-white font-sans font-black text-xs uppercase tracking-wider rounded-xl transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer ${
+                  isWorking
+                    ? "bg-amber-400 cursor-wait opacity-80"
+                    : "bg-amber-500 hover:bg-amber-600 shadow-md active:scale-[0.98]"
+                }`}
               >
-                <span>Continue to Checkout</span>
-                <ArrowRight className="w-4 h-4" />
+                {isWorking && purchaseStatus === "loading" ? (
+                  <>
+                    <RefreshCw className="w-4 h-4 animate-spin" />
+                    <span>Processing...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Unlock Pro Pass Now</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </>
+                )}
               </button>
-              <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">
-                🔒 Checkout Gateway Coming Soon
-              </p>
+
+              {/* Restore Purchases Button */}
+              <button
+                type="button"
+                onClick={handleRestore}
+                disabled={isWorking}
+                className="w-full py-1 text-center text-xs font-bold text-text-muted hover:text-primary-navy transition-colors hover:underline disabled:opacity-50 disabled:no-underline cursor-pointer"
+              >
+                Restore Purchases
+              </button>
             </div>
+
+            {/* Error Message */}
+            {errorMessage && (
+              <div className="bg-rose-50 border border-rose-200 text-rose-800 text-xs font-bold p-3 rounded-xl flex items-start gap-2.5">
+                <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-rose-600" />
+                <span>{errorMessage}</span>
+              </div>
+            )}
 
             {/* Simulated success alert inside modal */}
             {simulationSuccess && (
@@ -123,10 +216,11 @@ export const ProPassModal: React.FC<ProPassModalProps> = ({
             {import.meta.env.DEV && (
               <button
                 onClick={handleSimulateUnlock}
-                className="w-full py-2.5 border border-dashed border-amber-400 bg-amber-50/50 hover:bg-amber-50 text-amber-800 font-sans font-bold text-xs uppercase tracking-wider rounded-xl transition-all duration-200 cursor-pointer text-center flex items-center justify-center gap-1.5"
+                disabled={isWorking}
+                className="w-full py-2 border border-dashed border-amber-400 bg-amber-50/50 hover:bg-amber-50 text-amber-800 font-sans font-bold text-xs uppercase tracking-wider rounded-xl transition-all duration-200 cursor-pointer text-center flex items-center justify-center gap-1.5 disabled:opacity-50"
               >
                 <RefreshCw className="w-3.5 h-3.5" />
-                <span>Dev Only: Simulate Pro Pass</span>
+                <span>Dev Only: Bypass & Complete</span>
               </button>
             )}
           </div>
@@ -135,3 +229,4 @@ export const ProPassModal: React.FC<ProPassModalProps> = ({
     </div>
   );
 };
+

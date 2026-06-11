@@ -17,6 +17,7 @@ import { getMistakeReviewQuestions, getCramModeQuestions } from './utils/mistake
 import { isProPassUnlocked } from './utils/proPass';
 import { PRACTICE_TESTS, isPracticeTestUnlocked } from './utils/monetization';
 import { ProPassModal } from './components/ProPassModal';
+import { trackEvent } from './utils/analytics';
 import { TabType, UserStats, Question, getUserLevelInfo } from './types';
 import { calculateNewReadinessScore, mapQuestionCategoryToScoreKey, getReadinessLabel } from './utils/scoring';
 import { ROAD_SIGNS, PRACTICE_QUESTIONS, INITIAL_USER_STATS } from './data';
@@ -35,6 +36,11 @@ export default function App() {
   // Pro Pass Lock & Purchase controllers
   const [proPassUnlocked, setProPassUnlocked] = useState<boolean>(() => isProPassUnlocked());
   const [showProPassModal, setShowProPassModal] = useState<boolean>(false);
+
+  const handleOpenPaywall = (source: "locked_test" | "cram_mode" | "sign_library" | "flashcards" | "mistake_review" | string) => {
+    trackEvent("pro_paywall_opened", { source });
+    setShowProPassModal(true);
+  };
 
   // Active quiz / flashcard controllers
   const [isQuizActive, setIsQuizActive] = useState(false);
@@ -153,7 +159,7 @@ export default function App() {
   const handleStartPracticeQuiz = (testGroup?: number) => {
     const group = (typeof testGroup === 'number') ? testGroup : 12;
     if (!isPracticeTestUnlocked(group, proPassUnlocked)) {
-      setShowProPassModal(true);
+      handleOpenPaywall("locked_test");
       return;
     }
     setActiveTestGroup(group);
@@ -185,7 +191,7 @@ export default function App() {
 
   const handleStartCramMode = () => {
     if (!proPassUnlocked) {
-      setShowProPassModal(true);
+      handleOpenPaywall("cram_mode");
       return;
     }
 
@@ -464,7 +470,7 @@ export default function App() {
           onUpdateProfile={handleUpdateProfile}
           onUpdateAvatar={handleUpdateAvatar}
           proPassUnlocked={proPassUnlocked}
-          onTriggerProPass={() => setShowProPassModal(true)}
+          onTriggerProPass={() => handleOpenPaywall("profile")}
         />
       );
     }
@@ -479,7 +485,7 @@ export default function App() {
             startFlashcards={handleStartFlashcards}
             onUpdateProfile={handleUpdateProfile}
             proPassUnlocked={proPassUnlocked}
-            onTriggerProPass={() => setShowProPassModal(true)}
+            onTriggerProPass={() => handleOpenPaywall("home")}
             startCramMode={handleStartCramMode}
           />
         );
@@ -489,7 +495,7 @@ export default function App() {
             onStartReview={handleStartMistakeReview}
             onExit={() => handleTabSelection('home')}
             proPassUnlocked={proPassUnlocked}
-            onTriggerProPass={() => setShowProPassModal(true)}
+            onTriggerProPass={() => handleOpenPaywall("mistake_review")}
           />
         );
       case 'tests':
@@ -526,7 +532,7 @@ export default function App() {
                   </div>
                 </div>
                 <button
-                  onClick={() => setShowProPassModal(true)}
+                  onClick={() => handleOpenPaywall("cram_mode")}
                   className="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-[#001025] font-extrabold text-[11px] px-4 py-2 rounded-lg flex items-center justify-center gap-1 cursor-pointer transition-colors shrink-0"
                 >
                   <Lock className="w-3.5 h-3.5 shrink-0" />
@@ -638,7 +644,7 @@ export default function App() {
                         </div>
                       </div>
                       <button
-                        onClick={() => setShowProPassModal(true)}
+                        onClick={() => handleOpenPaywall("locked_test")}
                         className="w-full md:w-auto bg-amber-500 hover:bg-amber-400 text-[#001025] font-black py-2.5 px-6 rounded-xl text-xs transition-transform active:scale-95 cursor-pointer shadow-md select-none shrink-0 flex items-center justify-center gap-1.5"
                       >
                         <Sparkles className="w-4 h-4 fill-[#001025]" />
@@ -667,7 +673,7 @@ export default function App() {
             signs={ROAD_SIGNS}
             goToFlashcardsForSign={handleGoToFlashcardsForSign}
             proPassUnlocked={proPassUnlocked}
-            onTriggerProPass={() => setShowProPassModal(true)}
+            onTriggerProPass={() => handleOpenPaywall("sign_library")}
           />
         );
       default:
@@ -737,7 +743,7 @@ export default function App() {
             onExit={() => setIsFlashcardsActive(false)}
             onMasteredCard={handleMasteredCard}
             proPassUnlocked={proPassUnlocked}
-            onTriggerProPass={() => setShowProPassModal(true)}
+            onTriggerProPass={() => handleOpenPaywall("flashcards")}
           />
         ) : (
           renderActiveTabContent()
