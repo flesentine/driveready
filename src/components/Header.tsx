@@ -34,9 +34,9 @@ export const Header: React.FC<HeaderProps> = ({
   const currentStreak = stats?.streakDays ?? 0;
 
   return (
-    <header className="bg-white border-b border-border-light fixed top-0 left-0 w-full z-50 h-16 shadow-xs select-none">
-      <div className="flex justify-between items-center w-full h-full px-4 max-w-7xl mx-auto">
-        <div className="flex items-center gap-3">
+    <header className="app-header bg-white border-b border-border-light fixed top-0 left-0 w-full z-50 shadow-xs select-none">
+      <div className="app-header__inner flex justify-between items-center w-full px-4 max-w-7xl mx-auto">
+        <div className="flex items-center gap-2.5 min-w-0">
           {onBack ? (
             <button
               onClick={onBack}
@@ -69,10 +69,10 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
           )}
 
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-1.5 min-w-0">
             <h1
               onClick={() => setTab('home')}
-              className="font-sans font-extrabold text-2xl tracking-tight text-primary-navy cursor-pointer select-none"
+              className="font-sans font-extrabold text-2xl tracking-tight text-primary-navy cursor-pointer select-none truncate max-w-[44vw] sm:max-w-none"
               id="brandTitle"
             >
               {titleOverride || 'DriveReady'}

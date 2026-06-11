@@ -704,7 +704,7 @@ export default function App() {
 
       {/* Floating alert celebrating completed quiz highlights */}
       {quizNotification && (
-        <div className={`fixed top-18 left-1/2 -translate-x-1/2 z-40 max-w-lg w-[calc(100%-2rem)] border-2 rounded-xl p-4 shadow-md animate-fade-in text-xs font-semibold flex items-start gap-2.5 ${
+        <div className={`app-floating-alert fixed left-1/2 -translate-x-1/2 z-40 max-w-lg w-[calc(100%-2rem)] border-2 rounded-xl p-4 shadow-md animate-fade-in text-xs font-semibold flex items-start gap-2.5 ${
           quizNotification.isPassing 
             ? 'bg-green-50 border-green-600 text-green-900' 
             : 'bg-amber-50 border-amber-500 text-amber-900'
@@ -726,7 +726,7 @@ export default function App() {
       )}
 
       {/* Primary Container Shell */}
-      <main className={`flex-grow pt-20 px-4 max-w-7xl mx-auto w-full transition-all duration-300 ${
+      <main className={`app-main flex-grow px-4 max-w-7xl mx-auto w-full transition-all duration-300 ${
         (isQuizActive || isFlashcardsActive) ? 'pb-12' : 'pb-28'
       }`}>
         {isQuizActive ? (

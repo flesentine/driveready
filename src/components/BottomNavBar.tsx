@@ -19,12 +19,12 @@ export const BottomNavBar: React.FC<BottomNavBarProps> = ({
   onOpenProfile,
 }) => {
   return (
-    <nav className="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center pt-2 pb-safe bg-white border-t border-border-light shadow-lg h-16 select-none">
+    <nav className="app-bottom-nav fixed bottom-0 left-0 w-full z-50 bg-white border-t border-border-light shadow-lg select-none">
       <button
         onClick={() => setTab('home')}
-        className={`flex flex-col items-center justify-center px-4 py-1.5 rounded-full transition-all cursor-pointer ${
+        className={`app-bottom-nav__item flex flex-col items-center justify-center py-1.5 rounded-full transition-all cursor-pointer ${
           currentTab === 'home'
-            ? 'bg-primary-navy-light text-white font-bold px-5 scale-102 shadow-xs'
+            ? 'bg-primary-navy-light text-white font-bold scale-102 shadow-xs'
             : 'text-text-muted hover:bg-cool-bg'
         }`}
         id="navbar-home"
@@ -35,9 +35,9 @@ export const BottomNavBar: React.FC<BottomNavBarProps> = ({
 
       <button
         onClick={() => setTab('tests')}
-        className={`flex flex-col items-center justify-center px-4 py-1.5 rounded-full transition-all cursor-pointer ${
+        className={`app-bottom-nav__item flex flex-col items-center justify-center py-1.5 rounded-full transition-all cursor-pointer ${
           currentTab === 'tests'
-            ? 'bg-primary-navy-light text-white font-bold px-5 scale-102 shadow-xs'
+            ? 'bg-primary-navy-light text-white font-bold scale-102 shadow-xs'
             : 'text-text-muted hover:bg-cool-bg'
         }`}
         id="navbar-tests"
@@ -48,9 +48,9 @@ export const BottomNavBar: React.FC<BottomNavBarProps> = ({
 
       <button
         onClick={() => setTab('stats')}
-        className={`flex flex-col items-center justify-center px-4 py-1.5 rounded-full transition-all cursor-pointer ${
+        className={`app-bottom-nav__item flex flex-col items-center justify-center py-1.5 rounded-full transition-all cursor-pointer ${
           currentTab === 'stats'
-            ? 'bg-primary-navy-light text-white font-bold px-5 scale-102 shadow-xs'
+            ? 'bg-primary-navy-light text-white font-bold scale-102 shadow-xs'
             : 'text-text-muted hover:bg-cool-bg'
         }`}
         id="navbar-stats"
@@ -61,9 +61,9 @@ export const BottomNavBar: React.FC<BottomNavBarProps> = ({
 
       <button
         onClick={() => setTab('library')}
-        className={`flex flex-col items-center justify-center px-4 py-1.5 rounded-full transition-all cursor-pointer ${
+        className={`app-bottom-nav__item flex flex-col items-center justify-center py-1.5 rounded-full transition-all cursor-pointer ${
           currentTab === 'library' || currentTab === 'flashcards'
-            ? 'bg-primary-navy-light text-white font-bold px-5 scale-102 shadow-xs'
+            ? 'bg-primary-navy-light text-white font-bold scale-102 shadow-xs'
             : 'text-text-muted hover:bg-cool-bg'
         }`}
         id="navbar-signs"
@@ -74,9 +74,9 @@ export const BottomNavBar: React.FC<BottomNavBarProps> = ({
 
       <button
         onClick={onOpenProfile}
-        className={`flex flex-col items-center justify-center px-4 py-1.5 rounded-full transition-all cursor-pointer ${
+        className={`app-bottom-nav__item flex flex-col items-center justify-center py-1.5 rounded-full transition-all cursor-pointer ${
           currentTab === 'profile'
-            ? 'bg-primary-navy-light text-white font-bold px-5 scale-102 shadow-xs'
+            ? 'bg-primary-navy-light text-white font-bold scale-102 shadow-xs'
             : 'text-text-muted hover:bg-cool-bg'
         }`}
         id="navbar-profile"
