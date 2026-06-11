@@ -152,6 +152,10 @@ export default function App() {
 
   const handleStartPracticeQuiz = (testGroup?: number) => {
     const group = (typeof testGroup === 'number') ? testGroup : 12;
+    if (!isPracticeTestUnlocked(group, proPassUnlocked)) {
+      setShowProPassModal(true);
+      return;
+    }
     setActiveTestGroup(group);
 
     // Filter questions that belong to this test group
@@ -561,7 +565,7 @@ export default function App() {
             <div className="space-y-4">
               {PRACTICE_TESTS.map((test) => {
                 const isFreeTest = test.group === 12;
-                const isUnlocked = isFreeTest || proPassUnlocked;
+                const isUnlocked = isPracticeTestUnlocked(test.group, proPassUnlocked);
 
                 if (isUnlocked) {
                   return (

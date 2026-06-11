@@ -6,6 +6,7 @@
 import React, { useState } from 'react';
 import { Info, AlertCircle, HelpCircle, ArrowRight, Lightbulb, Lock, Sparkles } from 'lucide-react';
 import { RoadSign, SignCategory } from '../types';
+import { FREE_SIGN_LIMIT, getVisibleSigns } from '../utils/monetization';
 
 // High-fidelity vector representation for simulated road signs
 const renderSignVisual = (sign: RoadSign) => {
@@ -366,14 +367,16 @@ export const SignLibraryView: React.FC<SignLibraryViewProps> = ({
   goToFlashcardsForSign,
   proPassUnlocked = false,
   onTriggerProPass = () => {},
-  freeLimit = 12,
+  freeLimit = FREE_SIGN_LIMIT,
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<SignCategory>('All');
 
   const categories: SignCategory[] = ['All', 'Regulatory', 'Warning', 'Information', 'Speed'];
 
-  // Under Free plan, only show up to local freeLimit (12) signs of the library
-  const allowedSigns = proPassUnlocked ? signs : signs.slice(0, freeLimit);
+  // Under Free plan, only show up to local freeLimit signs of the library
+  const allowedSigns = freeLimit !== FREE_SIGN_LIMIT
+    ? (proPassUnlocked ? signs : signs.slice(0, freeLimit))
+    : getVisibleSigns(signs, proPassUnlocked);
 
   // Filter logic based purely on category
   const filteredSigns = allowedSigns.filter((sign) => {

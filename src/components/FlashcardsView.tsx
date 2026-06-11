@@ -6,13 +6,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { HelpCircle, RefreshCw, Check, Info, Landmark, HelpCircle as HelpIcon, ArrowRight, RotateCw, Lock, Sparkles } from 'lucide-react';
 import { RoadSign } from '../types';
-
-interface FlashcardsViewProps {
-  signs: RoadSign[];
-  startSignId?: string | null;
-  onExit: () => void;
-  onMasteredCard: () => void;
-}
+import { FREE_FLASHCARD_LIMIT, getVisibleFlashcardSigns } from '../utils/monetization';
 
 const getPracticalTipForSign = (id: string): string => {
   switch (id) {
@@ -449,11 +443,13 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
   onMasteredCard,
   proPassUnlocked = false,
   onTriggerProPass = () => {},
-  freeLimit = 12,
+  freeLimit = FREE_FLASHCARD_LIMIT,
 }) => {
-  // Under Free plan, only show up to local freeLimit (12) signs of the library
+  // Under Free plan, only show up to local freeLimit signs of the library
   const allowedSigns = useMemo(() => {
-    return proPassUnlocked ? signs : signs.slice(0, freeLimit);
+    return freeLimit !== FREE_FLASHCARD_LIMIT
+      ? (proPassUnlocked ? signs : signs.slice(0, freeLimit))
+      : getVisibleFlashcardSigns(signs, proPassUnlocked);
   }, [signs, proPassUnlocked, freeLimit]);
 
   // Extract warning/practiceable signs
