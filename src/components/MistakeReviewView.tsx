@@ -225,7 +225,7 @@ export const MistakeReviewView: React.FC<MistakeReviewViewProps> = ({
                 onClick={onTriggerProPass}
                 className="flex-1 py-3 px-5 bg-gradient-to-r from-safety-orange to-[#fe9743] hover:from-safety-orange-dark hover:to-safety-orange text-primary-navy font-sans font-black text-xs.5 uppercase tracking-wider rounded-xl transition-all duration-200 active:scale-95 shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
               >
-                <span>Unlock Pro Pass - $9.99</span>
+                <span>Unlock Pro Pass - $4.99</span>
                 <ArrowRight className="w-4.5 h-4.5" />
               </button>
             </div>

@@ -133,7 +133,7 @@ export const ProPassModal: React.FC<ProPassModalProps> = ({
               <span className="font-sans font-black text-lg text-primary-navy">Lifetime Access</span>
             </div>
             <div className="text-right">
-              <span className="font-sans font-black text-2xl text-primary-navy">$9.99</span>
+              <span className="font-sans font-black text-2xl text-primary-navy">$4.99</span>
               <span className="block text-[9px] text-[#804200] font-bold">One-time payment</span>
             </div>
           </div>

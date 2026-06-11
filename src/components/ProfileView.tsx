@@ -198,7 +198,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
               className="w-full bg-gradient-to-r from-amber-500 to-[#fe9743] hover:from-amber-600 hover:to-amber-500 text-slate-950 font-black h-11 px-4 rounded-xl text-xs transition-colors cursor-pointer select-none flex items-center justify-center gap-1.5"
             >
               <Sparkles className="w-4.5 h-4.5 fill-slate-950" />
-              <span>Unlock Lifetime Pro Pass — $9.99</span>
+              <span>Unlock Lifetime Pro Pass — $4.99</span>
             </button>
           </div>
         ) : (
