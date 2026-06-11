@@ -295,7 +295,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
               type="text"
               value={editName}
               onChange={(e) => setEditName(e.target.value)}
-              className="w-full h-11 px-3 bg-white border border-border-light rounded-xl font-bold font-sans text-primary-navy focus:outline-none focus:ring-1 focus:ring-primary-navy text-sm"
+              className="app-no-zoom-input w-full h-11 px-3 bg-white border border-border-light rounded-xl font-bold font-sans text-primary-navy focus:outline-none focus:ring-1 focus:ring-primary-navy"
             />
           </div>
 
@@ -337,7 +337,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
                   setTargetDays(val === '' ? '' : parseInt(val) || 0);
                 }}
                 placeholder="--"
-                className="w-24 h-11 px-3 bg-white border border-border-light rounded-xl font-bold font-sans text-primary-navy focus:outline-none focus:ring-1 focus:ring-primary-navy"
+                className="app-no-zoom-input w-24 h-11 px-3 bg-white border border-border-light rounded-xl font-bold font-sans text-primary-navy focus:outline-none focus:ring-1 focus:ring-primary-navy"
               />
               <button
                 type="submit"

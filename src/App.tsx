@@ -258,22 +258,26 @@ export default function App() {
     total: number, 
     results?: { question: Question; isCorrect: boolean }[]
   ) => {
-    const accuracy = Math.round((correct / total) * 100);
+    const resultTotal = results?.length ?? total;
+    const resultCorrect = results ? results.filter(result => result.isCorrect).length : correct;
+    const safeTotal = Math.max(resultTotal, 1);
+    const safeCorrect = Math.min(resultCorrect, safeTotal);
+    const accuracy = Math.round((safeCorrect / safeTotal) * 100);
     
     if (isReviewQuiz) {
       const isPassing = accuracy >= 70;
       let notificationText = '';
       if (accuracy === 100) {
-        notificationText = `Mistake Review Perfected! You answered all ${total} of your reviewed mistakes correctly. Your mistake log is looking clean, great job!`;
+        notificationText = `Mistake Review Perfected! You answered all ${safeTotal} of your reviewed mistakes correctly. Your mistake log is looking clean, great job!`;
       } else {
-        notificationText = `Mistake Review completed! You answered ${correct} out of ${total} mistakes correctly (${accuracy}%). Correctly answered questions have been marked as resolved! Go back to Mistake Review to drill the rest of your incorrect answers.`;
+        notificationText = `Mistake Review completed! You answered ${safeCorrect} out of ${safeTotal} mistakes correctly (${accuracy}%). Correctly answered questions have been marked as resolved! Go back to Mistake Review to drill the rest of your incorrect answers.`;
       }
       setIsReviewQuiz(false); // reset review state
       
       const todayStr = new Date().toDateString();
       const updatedStats = {
         ...stats,
-        questionsAnsweredToday: stats.questionsAnsweredToday + total,
+        questionsAnsweredToday: stats.questionsAnsweredToday + safeTotal,
         hasActualActivity: true,
         streakDays: stats.streakDays + (stats.questionsAnsweredToday === 0 ? 1 : 0),
         lastActiveDate: stats.lastActiveDate || todayStr
@@ -297,7 +301,7 @@ export default function App() {
       const todayStr = new Date().toDateString();
       const updatedStats = {
         ...stats,
-        questionsAnsweredToday: stats.questionsAnsweredToday + total,
+        questionsAnsweredToday: stats.questionsAnsweredToday + safeTotal,
         hasActualActivity: true,
         streakDays: stats.streakDays + (stats.questionsAnsweredToday === 0 ? 1 : 0),
         lastActiveDate: stats.lastActiveDate || todayStr
@@ -308,7 +312,7 @@ export default function App() {
 
       setIsQuizActive(false);
       setQuizNotification({
-        text: `Cram Mode complete! You reviewed ${total} high-impact questions. Great work — you focused on your highest-priority weak spots.`,
+        text: `Cram Mode complete! You reviewed ${safeTotal} high-impact questions. Great work — you focused on your highest-priority weak spots.`,
         isPassing: true
       });
       setCurrentTab('home');
@@ -323,7 +327,7 @@ export default function App() {
 
     // Save attempt history
     const currentAttempts = stats.quizAttempts || [];
-    const updatedAttempts = [...currentAttempts, { correct, total, accuracy, timestamp: Date.now() }];
+    const updatedAttempts = [...currentAttempts, { correct: safeCorrect, total: safeTotal, accuracy, timestamp: Date.now() }];
 
     // Category progress scores adjustments based on actual question category correctness!
     const catTotal: { [key in 'rulesOfRoad' | 'signsSignals' | 'safeDriving']: number } = {
@@ -348,8 +352,8 @@ export default function App() {
     } else {
       // Fallback
       const keyDefault = 'rulesOfRoad';
-      catTotal[keyDefault] = total;
-      catCorrect[keyDefault] = correct;
+      catTotal[keyDefault] = safeTotal;
+      catCorrect[keyDefault] = safeCorrect;
     }
 
     const currentCategoryScores = stats.categoryScores || { rulesOfRoad: 0, signsSignals: 0, safeDriving: 0 };
@@ -369,7 +373,7 @@ export default function App() {
 
     const interimStats: UserStats = {
       ...stats,
-      questionsAnsweredToday: stats.questionsAnsweredToday + total,
+      questionsAnsweredToday: stats.questionsAnsweredToday + safeTotal,
       totalTestsTaken: newTotalTests,
       accuracyPercent: averagedAccuracy,
       readinessScore: stats.readinessScore, // Will be overridden in saveStats
@@ -389,10 +393,10 @@ export default function App() {
       if (accuracy === 100) {
         notificationText = `Flawless execution! You scored 100% on Practice Test ${activeTestGroup - 11}! Your exam readiness is now ${finalScore}%. You are exceptionally prepared!`;
       } else {
-        notificationText = `Congratulations! You passed Practice Test ${activeTestGroup - 11} with ${correct} out of ${total} correct (${accuracy}%). Your exam readiness is now ${finalScore}%!`;
+        notificationText = `Congratulations! You passed Practice Test ${activeTestGroup - 11} with ${safeCorrect} out of ${safeTotal} correct (${accuracy}%). Your exam readiness is now ${finalScore}%!`;
       }
     } else {
-      notificationText = `Practice Test ${activeTestGroup - 11} completed, but you did not pass yet. You got ${correct} out of ${total} correct (${accuracy}%). Target at least 70% to pass. Your exam readiness is ${finalScore}%. Keep studying!`;
+      notificationText = `Practice Test ${activeTestGroup - 11} completed, but you did not pass yet. You got ${safeCorrect} out of ${safeTotal} correct (${accuracy}%). Target at least 70% to pass. Your exam readiness is ${finalScore}%. Keep studying!`;
     }
 
     saveStats(newStats);

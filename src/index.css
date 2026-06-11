@@ -22,6 +22,17 @@ body {
   color: var(--color-text-dark);
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
 #root {
   min-height: 100vh;
   min-height: 100dvh;
@@ -84,6 +95,11 @@ body {
 
 .app-sidebar-footer {
   padding-bottom: max(1rem, calc(env(safe-area-inset-bottom, 0px) + 0.75rem));
+}
+
+.app-no-zoom-input {
+  font-size: 16px;
+  line-height: 1.25;
 }
 
 /* Animations and helpers */

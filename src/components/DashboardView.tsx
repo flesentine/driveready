@@ -213,7 +213,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               placeholder="Enter your name..."
               maxLength={22}
               required
-              className="flex-1 px-4 py-3 border border-slate-250 bg-slate-50/70 text-slate-800 font-bold text-xs rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-navy/15 focus:border-primary-navy transition-all"
+              className="app-no-zoom-input flex-1 px-4 py-3 border border-slate-250 bg-slate-50/70 text-slate-800 font-bold rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-navy/15 focus:border-primary-navy transition-all"
             />
             <button
               type="submit"

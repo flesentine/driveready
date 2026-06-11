@@ -103,7 +103,6 @@ export const PracticeQuizView: React.FC<PracticeQuizViewProps> = ({
         setIsAnswerConfirmed(false);
       } else {
         // Complete Quiz!
-        const finalCorrect = correctCount + (selectedOption === currentQuestion.correctOptionIndex ? 1 : 0);
         const finalResults = shuffledQuestions.map((q, idx) => {
           const spent = spentQuestions.find(s => s.index === idx);
           if (spent) {
@@ -114,6 +113,7 @@ export const PracticeQuizView: React.FC<PracticeQuizViewProps> = ({
           }
           return { question: q, isCorrect: false };
         });
+        const finalCorrect = finalResults.filter(result => result.isCorrect).length;
         onCompleteQuiz(finalCorrect, shuffledQuestions.length, finalResults);
       }
     }
