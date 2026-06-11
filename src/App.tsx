@@ -15,7 +15,7 @@ import { ProfileView } from './components/ProfileView';
 import { MistakeReviewView } from './components/MistakeReviewView';
 import { getMistakeReviewQuestions, getCramModeQuestions } from './utils/mistakeReview';
 import { isProPassUnlocked } from './utils/proPass';
-import { PRACTICE_TESTS, isPracticeTestUnlocked } from './utils/monetization';
+import { FREE_TEST_GROUPS, PRACTICE_TESTS, isPracticeTestUnlocked } from './utils/monetization';
 import { ProPassModal } from './components/ProPassModal';
 import { trackEvent } from './utils/analytics';
 import { TabType, UserStats, Question, getUserLevelInfo } from './types';
@@ -570,7 +570,7 @@ export default function App() {
             )}            {/* Test Listing Layout */}
             <div className="space-y-4">
               {PRACTICE_TESTS.map((test) => {
-                const isFreeTest = test.group === 12;
+                const isFreeTest = FREE_TEST_GROUPS.includes(test.group);
                 const isUnlocked = isPracticeTestUnlocked(test.group, proPassUnlocked);
 
                 if (isUnlocked) {
@@ -590,7 +590,7 @@ export default function App() {
                             </h4>
                             {isFreeTest ? (
                               <span className="bg-safety-orange text-primary-navy text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full">
-                                Recommended
+                                {test.testNumber === 1 ? "Recommended" : "Free"}
                               </span>
                             ) : (
                               <span className="bg-emerald-100 text-emerald-800 text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full flex items-center gap-1 font-sans">

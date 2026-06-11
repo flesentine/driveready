@@ -9,6 +9,7 @@ import { TabType, UserStats, getUserLevelInfo } from '../types';
 import { getReadinessLabel } from '../utils/scoring';
 import { PRO_TIPS } from '../proTips';
 import { getMistakes } from '../utils/mistakeReview';
+import { isPracticeTestUnlocked } from '../utils/monetization';
 import windyRoadImg from '../assets/images/windy_road_exact_match_1780632600693.png';
 
 interface DashboardViewProps {
@@ -120,11 +121,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 
   // Calculate recommended test dynamically
   const getRecommendedTest = (): TestDetail => {
-    // 1. Get all unlocked tests (Test 1 / group 12 is always free; all other tests require Pro Pass)
-    const unlocked = ALL_TESTS.filter(t => {
-      const isFreeTest = t.group === 12;
-      return isFreeTest || proPassUnlocked;
-    });
+    const unlocked = ALL_TESTS.filter(t => isPracticeTestUnlocked(t.group, proPassUnlocked));
     if (unlocked.length === 0) return ALL_TESTS[0]; // fallback safety
 
     // Map name to category key

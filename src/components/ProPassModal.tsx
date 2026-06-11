@@ -145,7 +145,7 @@ export const ProPassModal: React.FC<ProPassModalProps> = ({
             </h4>
             <div className="space-y-2.5">
               {[
-                "All 15 Practice Tests (No thresholds)",
+                "Practice Tests 3-15 (No thresholds)",
                 "Full Mistake Review (Unlimited)",
                 "Exam Cram Mode (Algorithm-guided)",
                 "Full California Road Sign Library",
@@ -229,4 +229,3 @@ export const ProPassModal: React.FC<ProPassModalProps> = ({
     </div>
   );
 };
-

@@ -5,7 +5,7 @@
 
 import { RoadSign } from '../types';
 
-export const FREE_TEST_GROUPS = [12];
+export const FREE_TEST_GROUPS = [12, 13];
 export const FREE_SIGN_LIMIT = 12;
 export const FREE_FLASHCARD_LIMIT = 12;
 
