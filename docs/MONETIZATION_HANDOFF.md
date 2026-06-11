@@ -39,18 +39,21 @@ Implementation details:
 - Passing `proPassUnlocked = true` returns the full sign and flashcard data sets through the monetization helpers.
 - Pro Pass gates premium dashboard actions and upgrade calls to action throughout the frontend.
 
-## Current Mocked Purchase Behavior
+## Current StoreKit Purchase Behavior
 
-DriveReady does not currently integrate real Apple, Google, RevenueCat, or server-side entitlement verification.
+DriveReady currently uses native iOS StoreKit 2 for the production Pro Pass purchase and restore flow.
 
-The current purchase flow is mocked in `src/services/purchaseService.ts`:
+The current purchase flow is implemented in `src/services/purchaseService.ts` and `ios/App/App/DriveReadyStoreKitPlugin.swift`:
 
 - `PRODUCT_IDS.PRO_PASS_LIFETIME` is set to `driveready_pro_pass_lifetime`.
-- `getEntitlements()` reads the local cached Pro Pass state and returns `source: "cached"`.
-- `purchaseProPass()` simulates a successful purchase only in Vite dev mode.
-- In dev mode, `purchaseProPass()` waits 1.5 seconds, writes the local Pro Pass cache, and returns a mocked unlocked entitlement.
-- In production builds, `purchaseProPass()` waits 1 second and rejects with `Checkout is not enabled yet.`
-- `restorePurchases()` waits 1.2 seconds, checks local cached entitlement state, and returns unlocked only if the cache already says Pro Pass is unlocked.
+- Production iOS `getEntitlements()` calls the native Capacitor plugin and reads verified StoreKit current entitlements.
+- Production iOS `purchaseProPass()` calls StoreKit for the lifetime Pro Pass product.
+- A purchase unlocks Pro Pass only after StoreKit returns a verified transaction for `driveready_pro_pass_lifetime`.
+- Pending purchases return a pending state and do not unlock immediately.
+- Cancelled purchases return a cancelled state, do not unlock, and show non-scary cancellation messaging.
+- `restorePurchases()` calls `AppStore.sync()` and then re-checks verified StoreKit current entitlements.
+- Browser development builds expose a dev-only local unlock behind `import.meta.env.DEV`.
+- Production non-native builds do not trust local storage as purchase authority.
 
 `src/components/ProPassModal.tsx` owns the modal states around this service:
 
@@ -63,23 +66,17 @@ The current purchase flow is mocked in `src/services/purchaseService.ts`:
 
 `src/utils/proPass.ts` is a local cache only. It is not production purchase authority.
 
-## Future Store Replacement
+## App Store Connect Setup
 
-The intended production replacement should keep the same frontend product boundaries while replacing the mocked purchase service with real store-backed entitlement behavior.
+Before App Store review or TestFlight sandbox validation:
 
-Recommended integration options:
-
-- RevenueCat with Capacitor for a shared iOS / Android entitlement layer.
-- Native StoreKit for iOS and Google Play Billing for Android if the app moves to platform-specific purchase code.
-
-Expected production responsibilities:
-
-- Replace mocked `purchaseProPass()` with a real checkout call for the lifetime Pro Pass product.
-- Replace mocked `restorePurchases()` with real restore / sync purchases behavior.
-- Replace cached-only `getEntitlements()` with store-backed entitlement fetches.
-- Treat local storage as a cache for performance and offline availability, not as purchase authority.
-- Verify entitlements with the store SDK, RevenueCat, or a trusted backend before unlocking Pro-only content.
-- Preserve the existing `Entitlement` shape or migrate it intentionally so app-level gating remains centralized.
+- Create a non-consumable in-app purchase named Pro Pass.
+- Set Product ID to `driveready_pro_pass_lifetime`.
+- Set price to `$4.99`.
+- Attach the in-app purchase to the app version before review submission.
+- Add the required in-app purchase screenshot and review notes.
+- Confirm bundle ID `com.flesentine.driveready`.
+- Confirm paid agreements, tax, and banking are active.
 
 ## Monetization Ownership
 
@@ -131,7 +128,7 @@ Do not change the following without explicit product approval:
 
 ### Pro user
 
-- Set Pro Pass unlocked through the dev purchase flow, dev bypass, or local cache.
+- Complete a sandbox purchase, restore a previous sandbox purchase, or use the dev-only local unlock in a Vite dev build.
 - Confirm all 15 practice tests are available.
 - Confirm the full sign library is visible.
 - Confirm the full flashcard deck is visible.
@@ -139,25 +136,46 @@ Do not change the following without explicit product approval:
 - Confirm Exam Cram Mode starts when there are eligible mistake questions.
 - Confirm the header/profile surfaces show Pro Pass status.
 
-### Purchase mock
+### Sandbox purchase
 
-- Run the app in dev mode.
+- Install a TestFlight or sandbox build.
 - Open the Pro Pass modal from a locked feature.
-- Click the purchase call to action.
+- Tap the purchase call to action.
+- Confirm the Apple sandbox purchase sheet appears for Pro Pass at `$4.99`.
+- Complete the sandbox purchase.
+- Confirm Pro Pass unlocks only after the purchase succeeds.
+- Confirm Practice Tests 3-15, full Mistake Review, Exam Cram Mode, full sign library, and full flashcard deck unlock.
+
+### Pending, cancellation, and failure
+
+- Start a purchase and cancel from the Apple sandbox purchase sheet.
+- Confirm Pro Pass does not unlock.
+- Confirm the app shows non-scary cancellation messaging.
+- Test an unavailable or failed purchase condition if possible.
+- Confirm Pro Pass does not unlock after failure.
+- Confirm free-tier limits remain enforced.
+
+### Restore purchase
+
+- Delete and reinstall the app.
+- Use the same sandbox Apple ID that purchased Pro Pass.
+- Open the Pro Pass modal.
+- Tap Restore Purchases.
+- Confirm StoreKit restore/sync completes.
+- Confirm Pro Pass unlocks and premium content is available.
+
+### Dev-only local unlock
+
+- Run the app in Vite dev mode.
+- Open the Pro Pass modal from a locked feature.
+- Click the dev-only local unlock control.
 - Confirm the button enters a loading state.
-- Confirm the mocked purchase succeeds after the delay.
 - Confirm the modal shows success feedback and closes.
-- Confirm Pro-only content unlocks without a full app redesign or navigation change.
-
-### Restore mock
-
-- With no local Pro Pass cache, click Restore Purchases and confirm the "No previous purchases found to restore." error.
-- With local Pro Pass cache already set, click Restore Purchases and confirm restore succeeds.
-- Confirm restore uses the same modal loading, success, and error states as purchase.
+- Confirm Pro-only content unlocks for local development only.
 
 ### Locked content
 
 - Confirm locked tests, Exam Cram, full Mistake Review, full sign library, and full flashcard deck all route to the existing Pro Pass modal.
 - Confirm locked content does not create alternate upgrade screens.
 - Confirm locked states use the existing app visual language and copy style.
-- Confirm production builds do not pretend checkout is live until a real store integration replaces the mock.
+- Confirm production builds use StoreKit on native iOS and do not expose the dev-only local unlock.
