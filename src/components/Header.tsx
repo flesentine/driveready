@@ -32,6 +32,9 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   const currentName = stats?.userName || 'California Driver';
   const currentStreak = stats?.streakDays ?? 0;
+  const titleClassName = titleOverride
+    ? 'font-sans font-extrabold text-2xl tracking-tight text-primary-navy cursor-pointer select-none truncate max-w-[calc(100vw-9.5rem)] sm:max-w-none'
+    : 'font-sans font-extrabold text-2xl tracking-tight text-primary-navy cursor-pointer select-none truncate max-w-[44vw] sm:max-w-none';
 
   return (
     <header className="app-header bg-white border-b border-border-light fixed top-0 left-0 w-full z-50 shadow-xs select-none">
@@ -72,7 +75,7 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="flex items-center gap-1.5 min-w-0">
             <h1
               onClick={() => setTab('home')}
-              className="font-sans font-extrabold text-2xl tracking-tight text-primary-navy cursor-pointer select-none truncate max-w-[44vw] sm:max-w-none"
+              className={titleClassName}
               id="brandTitle"
             >
               {titleOverride || 'DriveReady'}

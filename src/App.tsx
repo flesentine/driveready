@@ -690,7 +690,7 @@ export default function App() {
         setTab={handleTabSelection}
         onOpenMenu={() => setIsSidebarOpen(true)}
         onOpenProfile={handleOpenProfileTab}
-        titleOverride={isQuizActive ? 'Practice Session' : isFlashcardsActive ? 'Flashcards Session' : undefined}
+        titleOverride={isQuizActive ? 'Practice' : isFlashcardsActive ? 'Flashcards' : undefined}
         stats={stats}
         proPassUnlocked={proPassUnlocked}
         onBack={
@@ -769,9 +769,9 @@ export default function App() {
           />
 
           {/* Drawer sheet panel */}
-          <div className="relative flex-1 flex flex-col max-w-sm w-full bg-slate-50 text-text-dark shadow-2xl animate-slide-in border-r border-slate-200" id="drawer-sheet-panel">
+          <div className="app-sidebar-panel relative flex-1 flex flex-col bg-slate-50 text-text-dark shadow-2xl animate-slide-in border-r border-slate-200" id="drawer-sheet-panel">
             {/* Header block with cover (refined to a beautiful slate style with user avatar and stats widget) */}
-            <div className="bg-[#051329] text-white p-6 relative overflow-hidden flex flex-col gap-4">
+            <div className="app-sidebar-header bg-[#051329] text-white relative overflow-hidden flex flex-col gap-4">
               {/* Subtle background glow */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl pointer-events-none" />
               
@@ -997,7 +997,7 @@ export default function App() {
             </nav>
 
             {/* Footer stamp (California Republic CA DMV Edition) */}
-            <div className="p-4 border-t border-slate-100 flex flex-col items-center justify-center gap-1.5 bg-slate-50 select-none">
+            <div className="app-sidebar-footer p-4 border-t border-slate-100 flex flex-col items-center justify-center gap-1.5 bg-slate-50 select-none">
               <div className="flex items-center gap-2 justify-center">
                 <span className="text-[14px]">🐻</span>
                 <span className="font-sans font-black text-[9px] uppercase text-slate-500 tracking-widest">California Republic</span>
