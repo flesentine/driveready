@@ -11,6 +11,9 @@ const files = {
   proPassModal: readFileSync('src/components/ProPassModal.tsx', 'utf8'),
   app: readFileSync('src/App.tsx', 'utf8'),
   swiftPlugin: readFileSync('ios/App/App/DriveReadyStoreKitPlugin.swift', 'utf8'),
+  bridgeViewController: readFileSync('ios/App/App/DriveReadyBridgeViewController.swift', 'utf8'),
+  mainStoryboard: readFileSync('ios/App/App/Base.lproj/Main.storyboard', 'utf8'),
+  xcodeProject: readFileSync('ios/App/App.xcodeproj/project.pbxproj', 'utf8'),
   viteConfig: readFileSync('vite.config.ts', 'utf8'),
   packageJson: readFileSync('package.json', 'utf8'),
 };
@@ -31,6 +34,20 @@ const checks: Check[] = [
       && files.swiftPlugin.includes('import StoreKit')
       && files.swiftPlugin.includes('Product.products')
       && files.swiftPlugin.includes('Transaction.currentEntitlements'),
+  },
+  {
+    label: 'Native iOS app explicitly registers DriveReadyStoreKit at bridge startup',
+    passed: files.bridgeViewController.includes('class DriveReadyBridgeViewController: CAPBridgeViewController')
+      && files.bridgeViewController.includes('override func capacitorDidLoad()')
+      && files.bridgeViewController.includes('registerPluginInstance(DriveReadyStoreKitPlugin())')
+      && files.mainStoryboard.includes('customClass="DriveReadyBridgeViewController"')
+      && files.xcodeProject.includes('DriveReadyBridgeViewController.swift in Sources'),
+  },
+  {
+    label: 'Native plugin registration failures are shown as friendly paywall errors',
+    passed: files.purchaseService.includes('Pro Pass purchase is unavailable in this build. Please update the app or try again later.')
+      && files.purchaseService.includes('plugin is not implemented')
+      && files.purchaseService.includes('getStoreErrorMessage'),
   },
   {
     label: 'Local entitlement helpers are explicitly cache-only',

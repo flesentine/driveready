@@ -31,9 +31,25 @@ interface DriveReadyStoreKitPlugin {
 }
 
 const DriveReadyStoreKit = registerPlugin<DriveReadyStoreKitPlugin>('DriveReadyStoreKit');
+const NATIVE_PLUGIN_UNAVAILABLE_MESSAGE = 'Pro Pass purchase is unavailable in this build. Please update the app or try again later.';
 
 function isNativeIosStore(): boolean {
   return Capacitor.isNativePlatform() && Capacitor.getPlatform() === 'ios';
+}
+
+function getStoreErrorMessage(error: any, fallbackMessage: string): string {
+  const message = String(error?.message || '');
+  const lowerMessage = message.toLowerCase();
+
+  if (
+    lowerMessage.includes('plugin is not implemented')
+    || lowerMessage.includes('not implemented on ios')
+    || lowerMessage.includes('drivereadystorekit')
+  ) {
+    return NATIVE_PLUGIN_UNAVAILABLE_MESSAGE;
+  }
+
+  return message || fallbackMessage;
 }
 
 function normalizeStoreResult(result: Partial<ProPassResult>): ProPassResult {
@@ -87,7 +103,7 @@ export async function getEntitlements(): Promise<ProPassResult> {
         proPassUnlocked: false,
         source: 'store',
         status: 'error',
-        errorMessage: error?.message || 'Unable to check Pro Pass entitlement.',
+        errorMessage: getStoreErrorMessage(error, 'Unable to check Pro Pass entitlement.'),
       };
     }
   }
@@ -128,7 +144,7 @@ export async function purchaseProPass(): Promise<ProPassResult> {
       proPassUnlocked: false,
       source: 'store',
       status: 'error',
-      errorMessage: error?.message || 'Purchase failed. Please try again.',
+      errorMessage: getStoreErrorMessage(error, 'Purchase failed. Please try again.'),
     };
   }
 }
@@ -155,7 +171,7 @@ export async function restorePurchases(): Promise<ProPassResult> {
       proPassUnlocked: false,
       source: 'store',
       status: 'error',
-      errorMessage: error?.message || 'Restore failed. Please try again.',
+      errorMessage: getStoreErrorMessage(error, 'Restore failed. Please try again.'),
     };
   }
 }
