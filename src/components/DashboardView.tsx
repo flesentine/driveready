@@ -10,7 +10,6 @@ import { getReadinessLabel } from '../utils/scoring';
 import { PRO_TIPS } from '../proTips';
 import { getMistakes } from '../utils/mistakeReview';
 import { isPracticeTestUnlocked } from '../utils/monetization';
-import windyRoadImg from '../assets/images/windy_road_exact_match_1780632600693.png';
 
 interface DashboardViewProps {
   stats: UserStats;
@@ -644,7 +643,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             <div className="group bg-white border border-border-light rounded-2xl overflow-hidden shadow-xs hover:border-primary-navy transition-all duration-300 flex">
               <div className="w-24 shrink-0 relative bg-safety-orange-dark flex items-center justify-center text-white group-hover:bg-safety-orange transition-colors overflow-hidden">
                 <img
-                  src={windyRoadImg}
+                  src="/signs/generated/winding-road.png"
                   alt="Winding Road sign on mountain highway"
                   className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-105 transition-all duration-500"
                   referrerPolicy="no-referrer"
