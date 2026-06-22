@@ -8,7 +8,7 @@ DriveReady includes a local StoreKit configuration for Simulator purchase testin
 - Type: Non-Consumable
 - Price: `$4.99`
 
-The shared `App` scheme is configured to use this file for Run with the absolute path `/Users/mcculloughc1/Documents/driveready/repo/ios/App/App/DriverReady.storekit`. A compatibility copy also exists at `ios/App/App.xcodeproj/project.xcworkspace/container:App/DriverReady.storekit` for Xcode sessions that cached the older `container:App/DriverReady.storekit` reference. If Xcode does not pick it up, set it manually:
+The shared `App` scheme intentionally does not commit a machine-specific StoreKit configuration path. Developers who need local StoreKit testing should set it manually in Xcode:
 
 1. Open `ios/App/App.xcworkspace`.
 2. Choose Product > Scheme > Edit Scheme.

@@ -47,6 +47,10 @@ export function clearCachedProPassUnlocked(): void {
   }
 }
 
+export function getEffectiveProPassUnlocked(entitlementsLoaded: boolean, proPassUnlocked: boolean): boolean {
+  return entitlementsLoaded && proPassUnlocked;
+}
+
 /**
  * Gets Pro Pass status string from cache.
  */

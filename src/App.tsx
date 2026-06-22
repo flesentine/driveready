@@ -14,7 +14,7 @@ import { FlashcardsView } from './components/FlashcardsView';
 import { ProfileView } from './components/ProfileView';
 import { MistakeReviewView } from './components/MistakeReviewView';
 import { getMistakeReviewQuestions, getCramModeQuestions } from './utils/mistakeReview';
-import { setCachedProPassUnlocked } from './utils/proPass';
+import { getEffectiveProPassUnlocked, setCachedProPassUnlocked } from './utils/proPass';
 import { getEntitlements } from './services/purchaseService';
 import { FREE_TEST_GROUPS, PRACTICE_TESTS, isPracticeTestUnlocked } from './utils/monetization';
 import { ProPassModal } from './components/ProPassModal';
@@ -82,7 +82,7 @@ export default function App() {
     };
   }, []);
 
-  const effectiveProPassUnlocked = entitlementsLoaded && proPassUnlocked;
+  const effectiveProPassUnlocked = getEffectiveProPassUnlocked(entitlementsLoaded, proPassUnlocked);
 
   // Active quiz / flashcard controllers
   const [isQuizActive, setIsQuizActive] = useState(false);
