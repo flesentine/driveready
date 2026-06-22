@@ -14,7 +14,7 @@ public class DriveReadyStoreKitPlugin: CAPPlugin, CAPBridgedPlugin {
     ]
 
     private let proPassProductId = "driveready_pro_pass_lifetime"
-    private let missingProductMessage = "Pro Pass product was not found. Check that the StoreKit configuration file is selected in the Xcode scheme and that the product ID matches."
+    private let missingProductMessage = "Pro Pass is temporarily unavailable. Please try again later."
 
     @objc func getEntitlements(_ call: CAPPluginCall) {
         Task {
