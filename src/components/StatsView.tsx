@@ -5,19 +5,19 @@
 
 import React, { useState } from 'react';
 import { Award, AlertTriangle, Lightbulb, TrendingUp, CheckCircle2, RefreshCw } from 'lucide-react';
-import { UserStats, TabType } from '../types';
+import { UserStats } from '../types';
 import { PRO_TIPS } from '../proTips';
 
 interface StatsViewProps {
   stats: UserStats;
-  setTab: (tab: TabType) => void;
+  startPracticeQuiz: (testGroup?: number) => void;
   startFlashcards: () => void;
   onResetStats: () => void;
 }
 
 export const StatsView: React.FC<StatsViewProps> = ({
   stats,
-  setTab,
+  startPracticeQuiz,
   startFlashcards,
   onResetStats,
 }) => {
@@ -26,15 +26,26 @@ export const StatsView: React.FC<StatsViewProps> = ({
   const [activeTipIndex, setActiveTipIndex] = useState(() => Math.floor(Math.random() * PRO_TIPS.length));
 
   const categoriesList = [
-    { id: 'rulesOfRoad', name: 'Rules of the Road', score: stats.categoryScores.rulesOfRoad, linkTab: 'home' },
-    { id: 'signsSignals', name: 'Signs & Signals', score: stats.categoryScores.signsSignals, linkTab: 'library' },
-    { id: 'safeDriving', name: 'Safe Driving', score: stats.categoryScores.safeDriving, linkTab: 'home' },
+    { id: 'rulesOfRoad', name: 'Rules of the Road', score: stats.categoryScores.rulesOfRoad },
+    { id: 'signsSignals', name: 'Signs & Signals', score: stats.categoryScores.signsSignals },
+    { id: 'safeDriving', name: 'Safe Driving', score: stats.categoryScores.safeDriving },
   ];
 
   const allZero = categoriesList.every(c => c.score === 0);
   const weakestCategory = allZero
     ? null
     : categoriesList.reduce((prev, curr) => (prev.score < curr.score ? prev : curr));
+
+  const handleRecommendedFocus = () => {
+    if (!weakestCategory) return;
+
+    if (weakestCategory.id === 'signsSignals') {
+      startFlashcards();
+      return;
+    }
+
+    startPracticeQuiz(weakestCategory.id === 'safeDriving' ? 14 : 13);
+  };
 
   const weeklyData = [
     { day: 'Today', score: !stats.hasActualActivity ? 0 : stats.accuracyPercent, isToday: true },
@@ -188,13 +199,7 @@ export const StatsView: React.FC<StatsViewProps> = ({
               </p>
             </div>
             <button
-              onClick={() => {
-                if (weakestCategory.linkTab === 'library') {
-                  setTab('library');
-                } else {
-                  setTab('home');
-                }
-              }}
+              onClick={handleRecommendedFocus}
               className="w-full mt-2 bg-primary-navy hover:bg-primary-navy-light text-white font-bold py-2.5 rounded-xl text-xs flex items-center justify-center gap-1.5 cursor-pointer active:scale-95 transition-transform"
             >
               Review {weakestCategory.name} Now

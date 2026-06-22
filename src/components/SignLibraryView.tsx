@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Info, AlertCircle, HelpCircle, ArrowRight, Lightbulb, Lock, Sparkles } from 'lucide-react';
-import { RoadSign, SignCategory } from '../types';
+import { RoadSign } from '../types';
 import { FREE_SIGN_LIMIT, getVisibleSigns } from '../utils/monetization';
 
 // High-fidelity vector representation for simulated road signs
@@ -367,19 +367,10 @@ export const SignLibraryView: React.FC<SignLibraryViewProps> = ({
   onTriggerProPass = () => {},
   freeLimit = FREE_SIGN_LIMIT,
 }) => {
-  const [selectedCategory, setSelectedCategory] = useState<SignCategory>('All');
-
-  const categories: SignCategory[] = ['All', 'Regulatory', 'Warning', 'Information', 'Speed'];
-
   // Under Free plan, only show up to local freeLimit signs of the library
   const allowedSigns = freeLimit !== FREE_SIGN_LIMIT
     ? (proPassUnlocked ? signs : signs.slice(0, freeLimit))
     : getVisibleSigns(signs, proPassUnlocked);
-
-  // Filter logic based purely on category
-  const filteredSigns = allowedSigns.filter((sign) => {
-    return selectedCategory === 'All' || sign.category === selectedCategory;
-  });
 
   const getStatusColor = (statusType: string) => {
     switch (statusType) {
@@ -413,141 +404,74 @@ export const SignLibraryView: React.FC<SignLibraryViewProps> = ({
         </p>
       </section>
 
-      {/* Sticky Filter Bar Section */}
-      <div className="sticky top-[64px] z-40 bg-[#f7fafc]/95 backdrop-blur-md py-3 border-b border-slate-100">
-        {/* Categories Dynamic Chips */}
-        <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-none scroll-smooth">
-          {categories.map((cat, idx) => (
-            <button
-              key={idx}
-              onClick={() => setSelectedCategory(cat)}
-              className={`whitespace-nowrap px-4 py-2 rounded-full font-sans text-xs font-bold transition-all duration-200 cursor-pointer ${
-                selectedCategory === cat
-                  ? 'bg-primary-navy text-white shadow-xs scale-102 font-heavy'
-                  : 'bg-white border border-border-light text-text-muted hover:bg-slate-50'
-              }`}
-            >
-              {cat === 'All' ? 'All Signs' : cat}
-            </button>
-          ))}
-        </div>
-      </div>
-
       {/* Signs Grid Collection */}
-      {filteredSigns.length === 0 ? (
-        <div className="space-y-4">
-          <div className="bg-white rounded-2xl border border-border-light p-10 text-center space-y-2 shadow-xs">
-            <p className="text-sm text-text-muted font-medium">
-              No signs found in this category.
-            </p>
-            <button
-              onClick={() => {
-                setSelectedCategory('All');
-              }}
-              className="text-xs font-bold text-primary-navy hover:underline cursor-pointer"
-            >
-              Show all signs
-            </button>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4" id="signs-grid">
+        {allowedSigns.map((sign) => (
+          <div
+            key={sign.id}
+            onClick={() => goToFlashcardsForSign(sign.id)}
+            className="group bg-white border border-border-light rounded-2xl p-4 flex flex-col justify-between hover:shadow-md hover:border-primary-navy transition-all duration-300 cursor-pointer text-center relative"
+          >
+            <div className="space-y-3">
+               {/* Visual Graphic Representation (with fallbacks if requested limit) */}
+              <div className="aspect-square bg-cool-bg rounded-xl flex items-center justify-center p-3 transition-transform duration-300 group-hover:scale-[1.03] overflow-hidden border border-slate-100">
+                {renderSignVisual(sign)}
+              </div>
+
+              <div>
+                <h3 className="font-sans font-extrabold text-sm md:text-base text-primary-navy group-hover:text-primary-navy-light transition-colors text-center font-bold">
+                  {sign.title}
+                </h3>
+              </div>
+            </div>
+
+            {/* Tag / Trigger review */}
+            <div className="mt-3 flex justify-center">
+              <span
+                className={`text-[9px] md:text-[10px] font-extrabold tracking-wider uppercase px-2.5 py-1 rounded-md transition-colors ${getStatusColor(
+                  sign.statusType
+                )}`}
+              >
+                {sign.status}
+              </span>
+            </div>
           </div>
-          
-          {/* Always show Pro up-sell if results from category are empty due to Free limits */}
-          {!proPassUnlocked && (
-            <div
-              onClick={onTriggerProPass}
-              className="bg-[#fffdf5] border-2 border-dashed border-amber-300 rounded-3xl p-8 hover:border-amber-500 transition-all duration-300 cursor-pointer text-center relative max-w-xl mx-auto flex flex-col items-center justify-center space-y-4"
-            >
+        ))}
+
+        {/* Inline Grid Upsell Card for Free Users */}
+        {!proPassUnlocked && (
+          <div
+            onClick={onTriggerProPass}
+            className="bg-[#fffdf5] border-2 border-dashed border-amber-300 rounded-2xl p-4 flex flex-col justify-between hover:border-amber-450 transition-all duration-300 cursor-pointer text-center relative overflow-hidden"
+          >
+            <div className="absolute top-2 right-2 bg-amber-550/10 p-1.5 rounded-lg text-amber-600">
+              <Lock className="w-3.5 h-3.5" />
+            </div>
+            <div className="space-y-3 flex-1 flex flex-col justify-center items-center py-4">
               <div className="p-3 bg-amber-500/10 rounded-full text-amber-500">
-                <Sparkles className="w-8 h-8 fill-amber-500" />
+                <Sparkles className="w-5 h-5 fill-amber-500" />
               </div>
               <div>
-                <h3 className="font-sans font-black text-base text-primary-navy">
-                  Unlock the Complete Road Sign Library
+                <h3 className="font-sans font-black text-sm text-[#002045] leading-tight">
+                  Explore All Sample Signs
                 </h3>
-                <p className="text-xs text-text-muted mt-1 max-w-sm">
-                  Free user access is limited to the first {freeLimit} standard signs. Unlock all California road signs & samples with Pro Pass.
+                <p className="text-[10px] text-text-muted mt-1 leading-snug">
+                  Unlock the full California road sign library with Pro Pass.
                 </p>
               </div>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onTriggerProPass();
-                }}
-                className="bg-amber-500 hover:bg-amber-400 text-[#001025] font-black py-2.5 px-6 rounded-xl text-xs uppercase tracking-wider transition-all cursor-pointer shadow-md"
-              >
-                Get Pro Pass Now
-              </button>
             </div>
-          )}
-        </div>
-      ) : (
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4" id="signs-grid">
-          {filteredSigns.map((sign) => (
-            <div
-              key={sign.id}
-              onClick={() => goToFlashcardsForSign(sign.id)}
-              className="group bg-white border border-border-light rounded-2xl p-4 flex flex-col justify-between hover:shadow-md hover:border-primary-navy transition-all duration-300 cursor-pointer text-center relative"
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onTriggerProPass();
+              }}
+              className="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-2 rounded-xl text-[10px] uppercase tracking-wider transition-all cursor-pointer shadow-xs"
             >
-              <div className="space-y-3">
-                 {/* Visual Graphic Representation (with fallbacks if requested limit) */}
-                <div className="aspect-square bg-cool-bg rounded-xl flex items-center justify-center p-3 transition-transform duration-300 group-hover:scale-[1.03] overflow-hidden border border-slate-100">
-                  {renderSignVisual(sign)}
-                </div>
-
-                <div>
-                  <h3 className="font-sans font-extrabold text-sm md:text-base text-primary-navy group-hover:text-primary-navy-light transition-colors text-center font-bold">
-                    {sign.title}
-                  </h3>
-                </div>
-              </div>
-
-              {/* Tag / Trigger review */}
-              <div className="mt-3 flex justify-center">
-                <span
-                  className={`text-[9px] md:text-[10px] font-extrabold tracking-wider uppercase px-2.5 py-1 rounded-md transition-colors ${getStatusColor(
-                    sign.statusType
-                  )}`}
-                >
-                  {sign.status}
-                </span>
-              </div>
-            </div>
-          ))}
-
-          {/* Inline Grid Upsell Card for Free Users */}
-          {!proPassUnlocked && (
-            <div
-              onClick={onTriggerProPass}
-              className="bg-[#fffdf5] border-2 border-dashed border-amber-300 rounded-2xl p-4 flex flex-col justify-between hover:border-amber-450 transition-all duration-300 cursor-pointer text-center relative overflow-hidden"
-            >
-              <div className="absolute top-2 right-2 bg-amber-550/10 p-1.5 rounded-lg text-amber-600">
-                <Lock className="w-3.5 h-3.5" />
-              </div>
-              <div className="space-y-3 flex-1 flex flex-col justify-center items-center py-4">
-                <div className="p-3 bg-amber-500/10 rounded-full text-amber-500">
-                  <Sparkles className="w-5 h-5 fill-amber-500" />
-                </div>
-                <div>
-                  <h3 className="font-sans font-black text-sm text-[#002045] leading-tight">
-                    Explore All Sample Signs
-                  </h3>
-                  <p className="text-[10px] text-text-muted mt-1 leading-snug">
-                    Unlock the full California road sign library with Pro Pass.
-                  </p>
-                </div>
-              </div>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onTriggerProPass();
-                }}
-                className="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-2 rounded-xl text-[10px] uppercase tracking-wider transition-all cursor-pointer shadow-xs"
-              >
-                Unlock Pro Pass
-              </button>
-            </div>
-          )}
-        </div>
-      )}
+              Unlock Pro Pass
+            </button>
+          </div>
+        )}
+      </div>
 
       {/* Featured Shape Meaning Alert block */}
       <section className="bg-safety-orange/5 border-l-4 border-safety-orange rounded-r-2xl p-5 border-y border-r border-[#faece2] flex items-start gap-3.5">

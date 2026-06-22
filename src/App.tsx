@@ -696,7 +696,7 @@ export default function App() {
         return (
           <StatsView
             stats={stats}
-            setTab={handleTabSelection}
+            startPracticeQuiz={handleStartPracticeQuiz}
             startFlashcards={handleStartFlashcards}
             onResetStats={handleResetStats}
           />
