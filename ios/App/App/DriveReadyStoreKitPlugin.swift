@@ -8,11 +8,13 @@ public class DriveReadyStoreKitPlugin: CAPPlugin, CAPBridgedPlugin {
     public let jsName = "DriveReadyStoreKit"
     public let pluginMethods: [CAPPluginMethod] = [
         CAPPluginMethod(name: "getEntitlements", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "getProPassProduct", returnType: CAPPluginReturnPromise),
         CAPPluginMethod(name: "purchaseProPass", returnType: CAPPluginReturnPromise),
         CAPPluginMethod(name: "restorePurchases", returnType: CAPPluginReturnPromise),
     ]
 
     private let proPassProductId = "driveready_pro_pass_lifetime"
+    private let missingProductMessage = "Pro Pass product was not found. Check that the StoreKit configuration file is selected in the Xcode scheme and that the product ID matches."
 
     @objc func getEntitlements(_ call: CAPPluginCall) {
         Task {
@@ -21,13 +23,43 @@ public class DriveReadyStoreKitPlugin: CAPPlugin, CAPBridgedPlugin {
         }
     }
 
+    @objc func getProPassProduct(_ call: CAPPluginCall) {
+        Task {
+            do {
+                guard let product = try await loadProPassProduct() else {
+                    call.resolve([
+                        "available": false,
+                        "productId": proPassProductId,
+                        "displayPrice": "$4.99",
+                        "errorMessage": missingProductMessage,
+                    ])
+                    return
+                }
+
+                call.resolve([
+                    "available": true,
+                    "productId": product.id,
+                    "displayName": product.displayName,
+                    "displayPrice": product.displayPrice,
+                ])
+            } catch {
+                call.resolve([
+                    "available": false,
+                    "productId": proPassProductId,
+                    "displayPrice": "$4.99",
+                    "errorMessage": error.localizedDescription,
+                ])
+            }
+        }
+    }
+
     @objc func purchaseProPass(_ call: CAPPluginCall) {
         let productId = call.getString("productId") ?? proPassProductId
 
         Task {
             do {
-                guard let product = try await Product.products(for: [productId]).first else {
-                    resolve(call, unlocked: false, status: "error", errorMessage: "Pro Pass is not available from the App Store yet.")
+                guard let product = try await loadProduct(id: productId) else {
+                    resolve(call, unlocked: false, status: "error", errorMessage: missingProductMessage)
                     return
                 }
 
@@ -68,6 +100,11 @@ public class DriveReadyStoreKitPlugin: CAPPlugin, CAPBridgedPlugin {
                     errorMessage: unlocked ? nil : "No previous Pro Pass purchase was found for this Apple ID."
                 )
             } catch {
+                if await hasVerifiedProPassEntitlement() {
+                    resolve(call, unlocked: true, status: "success")
+                    return
+                }
+
                 resolve(call, unlocked: false, status: "error", errorMessage: error.localizedDescription)
             }
         }
@@ -85,6 +122,14 @@ public class DriveReadyStoreKitPlugin: CAPPlugin, CAPBridgedPlugin {
         }
 
         return false
+    }
+
+    private func loadProPassProduct() async throws -> Product? {
+        try await loadProduct(id: proPassProductId)
+    }
+
+    private func loadProduct(id: String) async throws -> Product? {
+        try await Product.products(for: [id]).first
     }
 
     private func checkVerified<T>(_ result: VerificationResult<T>) throws -> T {

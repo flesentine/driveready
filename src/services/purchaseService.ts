@@ -24,8 +24,17 @@ export interface ProPassResult {
   errorMessage?: string;
 }
 
+export interface ProPassProductInfo {
+  available: boolean;
+  productId: string;
+  displayName?: string;
+  displayPrice: string;
+  errorMessage?: string;
+}
+
 interface DriveReadyStoreKitPlugin {
   getEntitlements(): Promise<ProPassResult>;
+  getProPassProduct(): Promise<ProPassProductInfo>;
   purchaseProPass(options: { productId: string }): Promise<ProPassResult>;
   restorePurchases(): Promise<ProPassResult>;
 }
@@ -61,6 +70,25 @@ function normalizeStoreResult(result: Partial<ProPassResult>): ProPassResult {
   };
 }
 
+function fallbackProPassProductInfo(errorMessage?: string): ProPassProductInfo {
+  return {
+    available: false,
+    productId: PRODUCT_IDS.PRO_PASS_LIFETIME,
+    displayPrice: '$4.99',
+    errorMessage,
+  };
+}
+
+function normalizeProductInfo(result: Partial<ProPassProductInfo>): ProPassProductInfo {
+  return {
+    available: result.available === true,
+    productId: result.productId || PRODUCT_IDS.PRO_PASS_LIFETIME,
+    displayName: result.displayName,
+    displayPrice: result.displayPrice || '$4.99',
+    errorMessage: result.errorMessage,
+  };
+}
+
 function applyStoreResult(result: ProPassResult): ProPassResult {
   if (result.source !== 'store') {
     return result;
@@ -88,6 +116,18 @@ function storeUnavailableResult(action: 'check' | 'purchase' | 'restore'): ProPa
     status: 'error',
     errorMessage: `${actionLabel} require the iOS App Store build.`,
   };
+}
+
+export async function getProPassProduct(): Promise<ProPassProductInfo> {
+  if (!isNativeIosStore()) {
+    return fallbackProPassProductInfo();
+  }
+
+  try {
+    return normalizeProductInfo(await DriveReadyStoreKit.getProPassProduct());
+  } catch (error: any) {
+    return fallbackProPassProductInfo(getStoreErrorMessage(error, 'Unable to load Pro Pass product.'));
+  }
 }
 
 /**

@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { XCircle, CheckCircle2, Sparkles, RefreshCw, ArrowRight, AlertCircle, Clock3 } from 'lucide-react';
-import { devUnlockProPass, purchaseProPass, restorePurchases, PurchaseStatus } from '../services/purchaseService';
+import { devUnlockProPass, getProPassProduct, purchaseProPass, restorePurchases, PurchaseStatus } from '../services/purchaseService';
 import { trackEvent } from '../utils/analytics';
 
 interface ProPassModalProps {
@@ -23,6 +23,23 @@ export const ProPassModal: React.FC<ProPassModalProps> = ({
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [noticeMessage, setNoticeMessage] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [displayPrice, setDisplayPrice] = useState('$4.99');
+
+  useEffect(() => {
+    let isActive = true;
+
+    getProPassProduct().then((product) => {
+      if (!isActive) {
+        return;
+      }
+
+      setDisplayPrice(product.displayPrice);
+    });
+
+    return () => {
+      isActive = false;
+    };
+  }, []);
 
   const finishUnlockedFlow = (message: string, eventName: 'pro_purchase_succeeded' | 'pro_restore_succeeded') => {
     setPurchaseStatus('success');
@@ -155,7 +172,7 @@ export const ProPassModal: React.FC<ProPassModalProps> = ({
               <span className="font-sans font-black text-lg text-primary-navy">Lifetime Access</span>
             </div>
             <div className="text-right">
-              <span className="font-sans font-black text-2xl text-primary-navy">$4.99</span>
+              <span className="font-sans font-black text-2xl text-primary-navy">{displayPrice}</span>
               <span className="block text-[9px] text-[#804200] font-bold">One-time payment</span>
             </div>
           </div>

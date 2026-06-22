@@ -12,13 +12,11 @@ import { FREE_SIGN_LIMIT, getVisibleSigns } from '../utils/monetization';
 const renderSignVisual = (sign: RoadSign) => {
   // If we have a real URL or imported asset path, render it
   if (sign.imageUrl && (sign.imageUrl.startsWith('http://') || sign.imageUrl.startsWith('https://') || sign.imageUrl.includes('/') || sign.imageUrl.includes('.'))) {
-    const isDividedHighway = sign.id === 'divided-highway' || sign.imageUrl.includes('divided_highway');
     return (
       <img
         alt={sign.title}
         src={sign.imageUrl}
         className="max-h-full max-w-full object-contain"
-        style={isDividedHighway ? { transform: 'scale(1.45)' } : undefined}
         referrerPolicy="no-referrer"
       />
     );

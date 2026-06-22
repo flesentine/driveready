@@ -87,13 +87,11 @@ const getPracticalTipForSign = (id: string): string => {
 
 const renderFlashcardSignVisual = (sign: RoadSign) => {
   if (sign.imageUrl && (sign.imageUrl.startsWith('http://') || sign.imageUrl.startsWith('https://') || sign.imageUrl.includes('/') || sign.imageUrl.includes('.'))) {
-    const isDividedHighway = sign.id === 'divided-highway' || sign.imageUrl.includes('divided_highway');
     return (
       <img
         alt={sign.title}
         src={sign.imageUrl}
         className="max-h-full max-w-full object-contain pointer-events-none select-none"
-        style={isDividedHighway ? { transform: 'scale(1.45)' } : undefined}
         referrerPolicy="no-referrer"
       />
     );
@@ -661,7 +659,7 @@ export const FlashcardsView: React.FC<FlashcardsViewProps> = ({
               }`}>
                 
                 {/* Center graphic representation of current road sign */}
-                <div className="w-full h-44 bg-cool-bg rounded-xl flex items-center justify-center border border-slate-100 p-4 shrink-0 pointer-events-none overflow-hidden">
+                <div className="w-full h-56 sm:h-64 bg-cool-bg rounded-xl flex items-center justify-center border border-slate-100 p-2 shrink-0 pointer-events-none overflow-hidden">
                   {renderFlashcardSignVisual(currentSign)}
                 </div>
 
