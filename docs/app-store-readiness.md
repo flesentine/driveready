@@ -42,3 +42,20 @@ Revisit `ios/App/App/PrivacyInfo.xcprivacy` before release if the app adds netwo
 - Cancelled purchase leaves Pro Pass locked and shows a non-fatal cancellation state.
 - Pending purchase leaves Pro Pass locked until App Store confirmation.
 - Revoked or refunded purchase is locked again after entitlement refresh, and stale local cache is cleared.
+
+## App Store Connect TestFlight checklist
+
+- Confirm the Paid Applications agreement, tax, and banking are active.
+- Confirm the non-consumable Pro Pass in-app purchase exists in App Store Connect.
+- Confirm the in-app purchase Product ID is exactly `driveready_pro_pass_lifetime`.
+- Confirm the in-app purchase status allows sandbox/TestFlight testing.
+- Confirm the App Store privacy answer is "Data Not Collected" only if no user data leaves the device.
+- Upload the archive from Xcode Organizer.
+- Add the processed build to an internal TestFlight group.
+- On a real device through TestFlight, confirm a fresh install starts locked/free.
+- On a real device through TestFlight, confirm purchase success unlocks Pro Pass.
+- On a real device through TestFlight, confirm Restore Purchases unlocks for an owning Apple ID.
+- On a real device through TestFlight, confirm a cancelled purchase remains locked.
+- On a real device through TestFlight, confirm a pending purchase remains locked until App Store confirmation.
+- On a real device through TestFlight, confirm refund or revocation locks Pro Pass after entitlement refresh.
+- On a real device through TestFlight, confirm app restart preserves unlock only after StoreKit entitlement check.
