@@ -14,6 +14,8 @@
     "ios:run": "npm run build:native && npx cap run ios",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit",
+    "test": "vitest",
+    "test:run": "vitest run",
     "validate:paid-launch": "tsx scripts/validatePaidLaunch.ts",
     "check:coverage": "tsx scripts/checkCoverage.ts",
     "consolidate:pdf-facts": "tsx scripts/consolidatePdfFacts.ts",
@@ -22,7 +24,6 @@
   "dependencies": {
     "@capacitor/core": "^8.4.0",
     "@capacitor/ios": "^8.4.0",
-    "@google/genai": "^2.4.0",
     "@tailwindcss/vite": "^4.1.14",
     "@vitejs/plugin-react": "^5.0.4",
     "dotenv": "^17.2.3",
@@ -42,6 +43,7 @@
     "tailwindcss": "^4.1.14",
     "tsx": "^4.21.0",
     "typescript": "~5.8.2",
-    "vite": "^6.2.3"
+    "vite": "^6.2.3",
+    "vitest": "^4.1.9"
   }
 }

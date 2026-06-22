@@ -1,6 +1,6 @@
 /**
  * @license
- * SPDX-License-Identifier: Apache-2.5
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 import React, { useState, useEffect } from 'react';
@@ -14,7 +14,7 @@ import { FlashcardsView } from './components/FlashcardsView';
 import { ProfileView } from './components/ProfileView';
 import { MistakeReviewView } from './components/MistakeReviewView';
 import { getMistakeReviewQuestions, getCramModeQuestions } from './utils/mistakeReview';
-import { clearCachedProPassUnlocked, getCachedProPassUnlocked, setCachedProPassUnlocked } from './utils/proPass';
+import { setCachedProPassUnlocked } from './utils/proPass';
 import { getEntitlements } from './services/purchaseService';
 import { FREE_TEST_GROUPS, PRACTICE_TESTS, isPracticeTestUnlocked } from './utils/monetization';
 import { ProPassModal } from './components/ProPassModal';
@@ -35,7 +35,8 @@ export default function App() {
   const [stats, setStats] = useState<UserStats>(INITIAL_USER_STATS);
   
   // Pro Pass Lock & Purchase controllers
-  const [proPassUnlocked, setProPassUnlocked] = useState<boolean>(() => getCachedProPassUnlocked());
+  const [proPassUnlocked, setProPassUnlocked] = useState<boolean>(false);
+  const [entitlementsLoaded, setEntitlementsLoaded] = useState<boolean>(false);
   const [showProPassModal, setShowProPassModal] = useState<boolean>(false);
 
   const handleOpenPaywall = (source: "locked_test" | "cram_mode" | "sign_library" | "flashcards" | "mistake_review" | string) => {
@@ -46,6 +47,8 @@ export default function App() {
   useEffect(() => {
     let isActive = true;
 
+    setEntitlementsLoaded(false);
+
     getEntitlements()
       .then((result) => {
         if (!isActive) {
@@ -53,24 +56,33 @@ export default function App() {
         }
 
         if (result.status === 'success' && result.proPassUnlocked) {
-          setCachedProPassUnlocked(true);
           setProPassUnlocked(true);
           return;
         }
 
         if (result.source === 'store' && result.status === 'success' && !result.proPassUnlocked) {
-          clearCachedProPassUnlocked();
           setProPassUnlocked(false);
+          return;
         }
+
+        setProPassUnlocked(false);
       })
       .catch((error) => {
         console.warn('Unable to refresh Pro Pass entitlement:', error);
+        setProPassUnlocked(false);
+      })
+      .finally(() => {
+        if (isActive) {
+          setEntitlementsLoaded(true);
+        }
       });
 
     return () => {
       isActive = false;
     };
   }, []);
+
+  const effectiveProPassUnlocked = entitlementsLoaded && proPassUnlocked;
 
   // Active quiz / flashcard controllers
   const [isQuizActive, setIsQuizActive] = useState(false);
@@ -188,7 +200,7 @@ export default function App() {
 
   const handleStartPracticeQuiz = (testGroup?: number) => {
     const group = (typeof testGroup === 'number') ? testGroup : 12;
-    if (!isPracticeTestUnlocked(group, proPassUnlocked)) {
+    if (!isPracticeTestUnlocked(group, effectiveProPassUnlocked)) {
       handleOpenPaywall("locked_test");
       return;
     }
@@ -207,7 +219,7 @@ export default function App() {
   };
 
   const handleStartMistakeReview = () => {
-    const reviewQuestions = getMistakeReviewQuestions(proPassUnlocked);
+    const reviewQuestions = getMistakeReviewQuestions(effectiveProPassUnlocked);
     if (reviewQuestions.length === 0) return;
 
     setActiveQuizQuestions(reviewQuestions);
@@ -220,7 +232,7 @@ export default function App() {
   };
 
   const handleStartCramMode = () => {
-    if (!proPassUnlocked) {
+    if (!effectiveProPassUnlocked) {
       handleOpenPaywall("cram_mode");
       return;
     }
@@ -503,7 +515,7 @@ export default function App() {
           onResetStats={handleResetStats}
           onUpdateProfile={handleUpdateProfile}
           onUpdateAvatar={handleUpdateAvatar}
-          proPassUnlocked={proPassUnlocked}
+          proPassUnlocked={effectiveProPassUnlocked}
           onTriggerProPass={() => handleOpenPaywall("profile")}
         />
       );
@@ -518,7 +530,7 @@ export default function App() {
             startPracticeQuiz={handleStartPracticeQuiz}
             startFlashcards={handleStartFlashcards}
             onUpdateProfile={handleUpdateProfile}
-            proPassUnlocked={proPassUnlocked}
+            proPassUnlocked={effectiveProPassUnlocked}
             onTriggerProPass={() => handleOpenPaywall("home")}
             startCramMode={handleStartCramMode}
           />
@@ -528,7 +540,7 @@ export default function App() {
           <MistakeReviewView
             onStartReview={handleStartMistakeReview}
             onExit={() => handleTabSelection('home')}
-            proPassUnlocked={proPassUnlocked}
+            proPassUnlocked={effectiveProPassUnlocked}
             onTriggerProPass={() => handleOpenPaywall("mistake_review")}
           />
         );
@@ -545,7 +557,7 @@ export default function App() {
             </section>
 
             {/* Cram Mode Teaser */}
-            {!proPassUnlocked ? (
+            {!effectiveProPassUnlocked ? (
               <div className="bg-gradient-to-r from-amber-50 to-orange-50/20 border border-amber-200 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 animate-fade-in text-left">
                 <div className="flex items-center gap-3.5 text-left">
                   <div className="p-2.5 bg-amber-500/10 text-amber-600 rounded-xl shrink-0">
@@ -605,7 +617,7 @@ export default function App() {
             <div className="space-y-4">
               {PRACTICE_TESTS.map((test) => {
                 const isFreeTest = FREE_TEST_GROUPS.includes(test.group);
-                const isUnlocked = isPracticeTestUnlocked(test.group, proPassUnlocked);
+                const isUnlocked = isPracticeTestUnlocked(test.group, effectiveProPassUnlocked);
 
                 if (isUnlocked) {
                   return (
@@ -706,7 +718,7 @@ export default function App() {
           <SignLibraryView
             signs={ROAD_SIGNS}
             goToFlashcardsForSign={handleGoToFlashcardsForSign}
-            proPassUnlocked={proPassUnlocked}
+            proPassUnlocked={effectiveProPassUnlocked}
             onTriggerProPass={() => handleOpenPaywall("sign_library")}
           />
         );
@@ -726,7 +738,7 @@ export default function App() {
         onOpenProfile={handleOpenProfileTab}
         titleOverride={isQuizActive ? 'Practice' : isFlashcardsActive ? 'Flashcards' : undefined}
         stats={stats}
-        proPassUnlocked={proPassUnlocked}
+        proPassUnlocked={effectiveProPassUnlocked}
         onBack={
           isQuizActive
             ? () => setShowQuitConfirm(true)
@@ -776,7 +788,7 @@ export default function App() {
             startSignId={activeSignId}
             onExit={() => setIsFlashcardsActive(false)}
             onMasteredCard={handleMasteredCard}
-            proPassUnlocked={proPassUnlocked}
+            proPassUnlocked={effectiveProPassUnlocked}
             onTriggerProPass={() => handleOpenPaywall("flashcards")}
           />
         ) : (
@@ -1098,6 +1110,7 @@ export default function App() {
           onUnlocked={() => {
             setCachedProPassUnlocked(true);
             setProPassUnlocked(true);
+            setEntitlementsLoaded(true);
             // Lock states will reload instantly and reactively
           }}
         />

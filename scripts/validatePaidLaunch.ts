@@ -57,10 +57,11 @@ const checks: Check[] = [
       && !files.proPass.includes('export function isProPassUnlocked'),
   },
   {
-    label: 'App startup refreshes store entitlements without blocking launch',
-    passed: files.app.includes('getCachedProPassUnlocked')
+    label: 'App startup gates premium UI until entitlements resolve',
+    passed: files.app.includes('entitlementsLoaded')
+      && files.app.includes('effectiveProPassUnlocked')
       && files.app.includes('getEntitlements()')
-      && files.app.includes('clearCachedProPassUnlocked()'),
+      && files.app.includes('setEntitlementsLoaded(true)'),
   },
   {
     label: 'Dev-only unlock is gated behind import.meta.env.DEV',

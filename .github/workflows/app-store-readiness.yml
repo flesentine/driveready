@@ -1,0 +1,82 @@
+name: App Store Readiness
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  web-content:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm run test:run
+
+      - name: Validate paid launch
+        run: npm run validate:paid-launch
+
+      - name: Check coverage
+        run: npm run check:coverage
+
+      - name: Build native web assets
+        run: npm run build:native
+
+  ios-smoke:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build native web assets
+        run: npm run build:native
+
+      - name: Sync Capacitor iOS
+        run: npx cap sync ios
+
+      - name: Select simulator
+        id: simulator
+        shell: bash
+        run: |
+          set -euo pipefail
+          DEVICE_NAME="$(xcrun simctl list devices available | sed -n 's/.*\(iPhone 16[^()]*\) (.*/\1/p' | head -n 1)"
+          if [ -z "$DEVICE_NAME" ]; then
+            DEVICE_NAME="$(xcrun simctl list devices available | sed -n 's/.*\(iPhone 15[^()]*\) (.*/\1/p' | head -n 1)"
+          fi
+          if [ -z "$DEVICE_NAME" ]; then
+            DEVICE_NAME="$(xcrun simctl list devices available | sed -n 's/.*\(iPhone [^()]*\) (.*/\1/p' | head -n 1)"
+          fi
+          if [ -z "$DEVICE_NAME" ]; then
+            echo "No available iPhone simulator found."
+            xcrun simctl list devices available
+            exit 1
+          fi
+          echo "name=$DEVICE_NAME" >> "$GITHUB_OUTPUT"
+
+      - name: Xcode simulator build
+        run: xcodebuild -project ios/App/App.xcodeproj -scheme App -destination "platform=iOS Simulator,name=${{ steps.simulator.outputs.name }}" build
