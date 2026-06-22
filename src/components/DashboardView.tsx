@@ -419,29 +419,32 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 
       {/* Pro Pass Core feature banner card */}
       {!proPassUnlocked ? (
-        <section className="bg-gradient-to-r from-slate-900 via-[#1e293b] to-slate-900 border-2 border-dashed border-amber-500 p-5 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden select-none animate-fade-in shadow-md text-left cursor-pointer transition-all hover:bg-slate-850" onClick={onTriggerProPass}>
-          <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl pointer-events-none" />
+        <section className="bg-gradient-to-r from-slate-900 via-[#1e293b] to-slate-900 border border-amber-500/40 p-5 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden select-none animate-fade-in shadow-xs text-left cursor-pointer transition-all hover:border-amber-500/60" onClick={onTriggerProPass}>
+          <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl pointer-events-none" />
           <div className="flex gap-4 items-start relative z-10 text-left">
-            <div className="p-3 bg-amber-500/15 text-amber-400 rounded-xl shrink-0 border border-amber-500/30">
+            <div className="p-3 bg-amber-500/10 text-amber-400 rounded-xl shrink-0 border border-amber-500/25">
               <Sparkles className="w-6 h-6 fill-amber-500/10 stroke-[2px]" />
             </div>
-            <div className="space-y-1">
-              <div className="flex items-center gap-2">
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 flex-wrap">
                 <h3 className="font-sans font-extrabold text-base text-white leading-none mb-0.5">
-                  Get DriverReady Pro Pass
+                  Unlock full California DMV prep
                 </h3>
-                <span className="bg-amber-500 text-[#001025] text-[9px] font-black tracking-widest uppercase px-2 py-0.5 rounded leading-none">
+                <span className="bg-amber-500/90 text-[#001025] text-[9px] font-black tracking-widest uppercase px-2 py-0.5 rounded leading-none">
                   LIFETIME ACCESS
                 </span>
               </div>
               <p className="text-xs text-slate-300 max-w-xl leading-relaxed">
-                Study smarter with unlimited mistake review, weak spot drilling, specialized cram tools, and locked premium mock tests. Unlock everything for a one-time payment.
+                Get all premium practice tests, Mistake Review, Cram Mode, signs, and flashcards.
+              </p>
+              <p className="text-[11px] font-bold text-amber-200 leading-relaxed">
+                $4.99 one-time • Lifetime access • No subscription
               </p>
             </div>
           </div>
           <button
             onClick={(e) => { e.stopPropagation(); onTriggerProPass(); }}
-            className="w-full md:w-auto px-5 py-3 bg-amber-500 hover:bg-amber-400 text-[#001025] font-extrabold rounded-xl text-xs shadow-md transition-all active:scale-95 cursor-pointer flex items-center justify-center gap-1 shrink-0 relative z-10 font-sans"
+            className="w-full md:w-auto px-5 py-3 bg-amber-500 hover:bg-amber-400 text-[#001025] font-extrabold rounded-xl text-xs shadow-xs transition-all active:scale-95 cursor-pointer flex items-center justify-center gap-1 shrink-0 relative z-10 font-sans"
           >
             <span>Unlock Pro Pass</span>
             <ChevronRight className="w-4 h-4" />
@@ -474,7 +477,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       {/* Cram Mode Premium Study Card */}
       {!proPassUnlocked ? (
         <section className="bg-gradient-to-r from-slate-50 to-orange-50/10 border border-slate-200 p-5 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden select-none animate-fade-in shadow-xs text-left cursor-pointer transition-all hover:bg-slate-100/50" onClick={onTriggerProPass}>
-          <div className="absolute inset-y-0 right-0 w-48 opacity-5 pointer-events-none transform translate-x-12">
+          <div className="absolute inset-y-0 right-0 w-48 opacity-[0.035] pointer-events-none transform translate-x-12">
             <Lock className="w-full h-full text-slate-400" />
           </div>
           <div className="flex gap-4 items-start relative z-10 text-left">
@@ -486,7 +489,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                 <h3 className="font-sans font-extrabold text-base text-slate-800 leading-none mb-0.5">
                   Cram Mode
                 </h3>
-                <span className="bg-[#fe9743] hover:bg-safety-orange text-primary-navy font-black text-[9px] tracking-widest uppercase px-2 py-0.5 rounded leading-none">
+                <span className="bg-slate-100 text-slate-600 border border-slate-200 font-black text-[9px] tracking-widest uppercase px-2 py-0.5 rounded leading-none">
                   PRO PASS
                 </span>
               </div>
@@ -497,10 +500,10 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           </div>
           <button
             onClick={(e) => { e.stopPropagation(); onTriggerProPass(); }}
-            className="w-full md:w-auto px-5 py-3.5 bg-gradient-to-r from-safety-orange to-[#fe9743] hover:from-safety-orange-dark hover:to-safety-orange text-primary-navy font-sans font-black text-xs.5 uppercase tracking-wider rounded-xl transition-all duration-200 active:scale-95 shadow-xs flex items-center justify-center gap-1.5 cursor-pointer shrink-0 relative z-10"
+            className="w-full md:w-auto px-3.5 py-2 border border-slate-300 hover:border-safety-orange/60 text-slate-700 hover:text-primary-navy bg-white/70 hover:bg-orange-50/50 font-sans font-bold text-[11px] rounded-lg transition-colors active:scale-95 flex items-center justify-center gap-1.5 cursor-pointer shrink-0 relative z-10"
           >
-            <Lock className="w-4 h-4 shrink-0" />
-            <span>Unlock Pro Pass</span>
+            <Lock className="w-3.5 h-3.5 shrink-0" />
+            <span>Included with Pro Pass</span>
           </button>
         </section>
       ) : (
