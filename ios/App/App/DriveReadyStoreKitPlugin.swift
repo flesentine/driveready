@@ -15,6 +15,16 @@ public class DriveReadyStoreKitPlugin: CAPPlugin, CAPBridgedPlugin {
 
     private let proPassProductId = "driveready_pro_pass_lifetime"
     private let missingProductMessage = "Pro Pass is temporarily unavailable. Please try again later."
+    private var transactionUpdatesTask: Task<Void, Never>?
+
+    public override func load() {
+        super.load()
+        startTransactionUpdatesListener()
+    }
+
+    deinit {
+        transactionUpdatesTask?.cancel()
+    }
 
     @objc func getEntitlements(_ call: CAPPluginCall) {
         Task {
@@ -106,6 +116,28 @@ public class DriveReadyStoreKitPlugin: CAPPlugin, CAPBridgedPlugin {
                 }
 
                 resolve(call, unlocked: false, status: "error", errorMessage: error.localizedDescription)
+            }
+        }
+    }
+
+    private func startTransactionUpdatesListener() {
+        guard transactionUpdatesTask == nil else {
+            return
+        }
+
+        transactionUpdatesTask = Task {
+            for await update in Transaction.updates {
+                guard !Task.isCancelled else {
+                    return
+                }
+
+                guard let transaction = try? checkVerified(update) else {
+                    continue
+                }
+
+                if transaction.productID == proPassProductId {
+                    await transaction.finish()
+                }
             }
         }
     }
