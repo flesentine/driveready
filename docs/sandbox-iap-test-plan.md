@@ -36,7 +36,7 @@ Use this checklist before submitting DriveReady Pro Pass for App Store review or
 
 ## Successful Purchase Test
 
-- From the Pro Pass paywall, tap `Unlock Pro Pass Now`.
+- From the Pro Pass paywall, tap `Unlock Pro Pass`.
 - Confirm the Apple sandbox purchase sheet appears.
 - Confirm the product shown is `Pro Pass` for `$4.99`.
 - Complete the sandbox purchase.
@@ -74,7 +74,7 @@ Use this checklist before submitting DriveReady Pro Pass for App Store review or
 ## Failure Or Unavailable Product Test
 
 - Test with the App Store Connect IAP unavailable, misconfigured, or a sandbox account that cannot purchase.
-- Tap `Unlock Pro Pass Now`.
+- Tap `Unlock Pro Pass`.
 - Confirm the app shows a friendly error.
 - Confirm Pro Pass does not unlock.
 - Confirm free-tier limits remain enforced.

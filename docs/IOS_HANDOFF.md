@@ -1,14 +1,14 @@
 # iOS Handoff
 
-DriveReady now has a Capacitor iOS wrapper around the existing React/Vite app.
+DriveReady is currently iOS-first with a Capacitor iOS wrapper around the existing React/Vite app.
 
 ## Build the web app
 
 ```sh
-npm run build
+npm run build:native
 ```
 
-This writes the Vite production build to `dist`, which is the Capacitor `webDir`.
+This writes the native-mode Vite production build to `dist`, which is the Capacitor `webDir`. The standard web build remains available as `npm run build`.
 
 ## Sync Capacitor
 
@@ -28,8 +28,12 @@ Use Xcode from there to choose a simulator or device and run the app.
 
 ## Current Status
 
-This milestone is iOS wrapper only. There is no real in-app purchase integration yet, and no RevenueCat, StoreKit, Google Play Billing, ads, Android platform, push notifications, or payment SDK has been added.
+This milestone includes the iOS Capacitor wrapper and a direct native StoreKit 2 purchase path through `ios/App/App/DriveReadyStoreKitPlugin.swift` and `src/services/purchaseService.ts`.
+
+The Pro Pass product is a `$4.99` one-time non-consumable with Product ID `driveready_pro_pass_lifetime`. Local StoreKit Simulator testing uses `ios/App/App/DriverReady.storekit`.
+
+There is no Android platform and no RevenueCat dependency currently. RevenueCat can be considered optional future work, but it is not part of the current implementation.
 
 ## Next Step
 
-The next future milestone is RevenueCat / StoreKit entitlement integration for real Pro Pass ownership.
+The next validation step is local Xcode StoreKit testing, followed by App Store Connect sandbox or TestFlight purchase and restore testing.

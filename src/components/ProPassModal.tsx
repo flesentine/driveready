@@ -161,7 +161,7 @@ export const ProPassModal: React.FC<ProPassModalProps> = ({
               Unlock Pro Pass
             </h3>
             <p className="text-sm font-medium text-text-muted leading-snug">
-              Study smarter with premium DMV prep tools.
+              Unlock full California DMV prep with premium practice tests, Mistake Review, Cram Mode, signs, and flashcards.
             </p>
           </div>
 
@@ -173,7 +173,7 @@ export const ProPassModal: React.FC<ProPassModalProps> = ({
             </div>
             <div className="text-right">
               <span className="font-sans font-black text-2xl text-primary-navy">{displayPrice}</span>
-              <span className="block text-[9px] text-[#804200] font-bold">One-time payment</span>
+              <span className="block text-[9px] text-[#804200] font-bold">One-time payment • No subscription</span>
             </div>
           </div>
 
@@ -219,7 +219,7 @@ export const ProPassModal: React.FC<ProPassModalProps> = ({
                   </>
                 ) : (
                   <>
-                    <span>Unlock Pro Pass Now</span>
+                    <span>Unlock Pro Pass</span>
                     <ArrowRight className="w-4 h-4" />
                   </>
                 )}

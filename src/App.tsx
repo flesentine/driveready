@@ -579,10 +579,10 @@ export default function App() {
                 </div>
                 <button
                   onClick={() => handleOpenPaywall("cram_mode")}
-                  className="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-[#001025] font-extrabold text-[11px] px-4 py-2 rounded-lg flex items-center justify-center gap-1 cursor-pointer transition-colors shrink-0"
+                  className="w-full sm:w-auto bg-white hover:bg-amber-50 text-[#002045] border border-amber-200 font-extrabold text-[10px] px-3 py-1.5 rounded-lg flex items-center justify-center gap-1 cursor-pointer transition-colors shrink-0"
                 >
                   <Lock className="w-3.5 h-3.5 shrink-0" />
-                  <span>Unlock Pro Pass</span>
+                  <span>Included with Pro Pass</span>
                 </button>
               </div>
             ) : (

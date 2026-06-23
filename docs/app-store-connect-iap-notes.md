@@ -23,7 +23,7 @@ Pro Pass permanently unlocks:
 
 DriveReady includes a one-time non-consumable in-app purchase named Pro Pass.
 
-To find the paywall, launch the app and tap a locked premium area such as Practice Test 3, Cram Mode, the full Sign Library, Flashcards, or full Mistake Review. The paywall includes an `Unlock Pro Pass Now` button and a `Restore Purchases` button.
+To find the paywall, launch the app and tap a locked premium area such as Practice Test 3, Cram Mode, the full Sign Library, Flashcards, or full Mistake Review. The paywall includes an `Unlock Pro Pass` button and a `Restore Purchases` button.
 
 The product ID is `driveready_pro_pass_lifetime`. The app bundle ID is `com.flesentine.driveready`.
 

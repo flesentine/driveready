@@ -178,7 +178,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
         {!proPassUnlocked ? (
           <div className="space-y-3">
             <p className="text-xs text-text-muted leading-relaxed font-semibold">
-              You are currently on the Free Starter Plan with two free practice tests. Unlock the <strong>Pro Pass</strong> for Lifetime Access to premium study modes. No subscriptions, just a one-time unlock.
+              You are currently on the Free Starter Plan with two free practice tests. Unlock the <strong>Pro Pass</strong> for Lifetime Access to premium study modes. No subscription, just a one-time unlock.
             </p>
             <div className="bg-orange-50/40 border border-orange-200/50 rounded-xl p-3.5 space-y-1.5 text-left">
               <span className="block text-[10px] font-black text-safety-orange uppercase tracking-wider">Free Starter Mode Locks:</span>

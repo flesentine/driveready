@@ -14,6 +14,6 @@ The shared `App` scheme intentionally does not commit a machine-specific StoreKi
 2. Choose Product > Scheme > Edit Scheme.
 3. Select Run > Options.
 4. Set StoreKit Configuration to `DriverReady.storekit`.
-5. Run the app in Simulator and tap `Unlock Pro Pass Now`.
+5. Run the app in Simulator and tap `Unlock Pro Pass`.
 
 When the scheme uses this configuration, `Product.products(for:)` should return `driveready_pro_pass_lifetime`, and the Simulator should show Xcode's local StoreKit purchase sheet.

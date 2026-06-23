@@ -83,7 +83,7 @@ Before App Store review or TestFlight sandbox validation:
 These files currently own monetization behavior:
 
 - `src/utils/monetization.ts`: Free vs Pro content access constants and helpers for practice tests, sign library, and flashcards.
-- `src/services/purchaseService.ts`: Purchase, restore, product id, and entitlement service abstraction. This is the intended swap point for RevenueCat, StoreKit, or Google Play Billing.
+- `src/services/purchaseService.ts`: Purchase, restore, product id, and entitlement service abstraction for the current native iOS StoreKit path. RevenueCat would be optional future work, not part of the current implementation.
 - `src/utils/proPass.ts`: Local cached Pro Pass unlock state only.
 - `src/components/ProPassModal.tsx`: Upgrade modal UI and purchase / restore state handling.
 - `src/utils/analytics.ts`: Dev-only analytics stub for paywall, purchase, and restore telemetry.
